@@ -1,0 +1,31 @@
+team_name: <name of the team>
+team_abbr: <short name of the team; 15 characters or less, no spaces or hyphens. This is the team name to be used in file and folder names>
+model_contributors:  <FirstName LastName> <email@domain.com>
+institution_affil: <Your institution(s)>
+team_experience: <Brief description of your prior experience in the field>
+team_funding: <Acknowledgement of specific funding>
+
+model_name: <Name of the model, e.g. exampleModel1. Most teams choose this to be the same as model_abbr>
+model_abbr: <Abbreviation of the model name, e.g. exampleModel1. Must be 15 characters or shorter and not contain spaces or hyphens. This is the name to be used in all folder and file names>
+model_output: <link to a website describug the results,if available>
+model_repo: <link to a repository where forecast files are available>
+
+model_targets: <the targets covered by the forecast files (in a human-readable form)>
+target_loc: <the locations and geographcal resoltions for which forecasts are provided>
+Data_format: <type of forecasts submitted, e.g. the quantile levels submitted or the fact that only point forecasts are submitted>
+forecast_startdate: <the first date for which forecasts are available>
+forecast_frequency: <frequency at which forecasts are generated, e.g. once or twice per week>
+
+data_inputs_known: <description of the information used to fit the data, e.g. case/hospitalization/death counts, social media data, ...>
+data_source_known: <specific sources of data, e.g. JHU or ECDC/RKI>
+
+this_model_is_an_ensemble: <Is this forecast generated using an ensemble method, i.e. combining different forecasts?>
+this_model_is_unconditional: <Is this model unconditional wrt poilcy decisions and interventions?>
+
+methods: >-
+    <a brief description of the employed modelling or forecasting method. < 200 words.>
+
+methods_long: >-
+    < a detailed description of the modelling/forecasting method>
+
+citation: <a url or reference to a paper or preprint>
