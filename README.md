@@ -30,7 +30,7 @@ We require some forecast parameters so that we can compare and ensemble forecast
 There is no obligation to submit forecasts for all suggested targets or horizons, and it is up to you to decide which you are comfortable forecasting with your model.
 
 ###### Dates
-We use [epidemiological weeks (EWs)](https://wwwn.cdc.gov/nndss/document/MMWR_Week_overview.pdf) defined by the US CDC. These start on Sunday and end on Saturday. There are standard software packages to convert from dates to epidemic weeks and vice versa. In R this includes the `MMWRweek` package or the `lubridate::epiweek()` function, or the packages  `pymmwr` and `epiweeks` in Python.
+We use ECDC year-weeks, which start on Monday and end on Sunday. For example, _ECDC year-week 2021-01_ started on Monday 4th January and ended on Sunday 10th January. We provide more details [here](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Targets-and-horizons#date-format), and [templates](https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/template) to convert dates to ECDC weeks (and vice versa).
 
 ###### Truth data
 We base evaluations on data from the [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases).
