@@ -1,6 +1,6 @@
 # Key decisions and files affected
 
-## Outstanding decisions
+## Pending decisions
 
 ### Frequency of forecasts
 
