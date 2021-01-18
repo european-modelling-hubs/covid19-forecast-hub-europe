@@ -2,31 +2,35 @@
 
 ## Pending decisions
 
-### Frequency of forecasts
+### Location format
 
-Decision: weekly
+- [ ] FIPS (as in the US and Germany), ISO-3 (as in the ECDC data) or NUTS (as per EU data) - tbc
+
+## Made decisions
 
 ### Submission period
 
-- [ ] Friday to Monday? (data is updated on Thursdays)
+Decision: Thursday to Monday (to be reviewed).
+Rationale: Data is updated on Thursdays
 
 ### Horizons and date ranges
 
-Decision: 4 weeks ahead
+Decision: 4 weeks ahead.
 
 ### Targets
 
-Decisions: Cases and deaths initially
+Decisions: Cases and deaths initially, possibly an indicator of health system burden later.
+Rationale: Hospitalisations not recorded consistently across countries, so this will have to be considered carefully, and is best done so later.
 
 ### Locations
 
-- National only or subnational, too?
+Decision: National only, at least initially.
+Rationale: Unclear whether there is capacity among modelling teams to provide subnational forecasts.
 
-### Location format
+### Frequency of forecasts
 
-- [ ] FIPS (as in the US and Germany), ISO-3 (as in the ECDC data) or NUTS (as per EU data)
-
-## Made decisions
+Decision: Weekly.
+Rationale: No gain from going less often, and this ensures relevance and timeliness, and is in line with the other forecasting hubs.
 
 ### File naming
 
