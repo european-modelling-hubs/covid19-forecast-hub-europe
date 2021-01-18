@@ -4,7 +4,7 @@
 
 ### Frequency of forecasts
 
-- [ ] Weekly, bi-weekly or monthly?
+Decision: weekly
 
 ### Submission period
 
@@ -12,15 +12,15 @@
 
 ### Horizons and date ranges
 
-- [ ] Weekly data up to 4 weeks ahead?
+Decision: 4 weeks ahead
 
 ### Targets
 
-- [ ] Cases and deaths, possibly others
+Decisions: Cases and deaths initially
 
 ### Locations
 
-- [ ] National only or subnational, too?
+- National only or subnational, too?
 
 ### Location format
 
