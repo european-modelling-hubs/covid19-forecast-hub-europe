@@ -34,7 +34,7 @@ Rationale: No gain from going less often, and this ensures relevance and timelin
 
 ### File naming
 
-Decision: Single file, `<date>-<group>-<model>.csv`
+Decision: Single file, `<date>-<group>-<model>.csv`. Date is to be the last day of the submission period (Monday as things stand).
 Rationale: File contents should be self-explaining and as little information as possible in the file name
 
 Files affected:
