@@ -35,6 +35,6 @@ df <-
   group_by(indicator) %>%
   group_walk(~ vroom_write(.x, delim = ",",
                            path = file.path(ecdc_dir,
-                                            paste0(file_base,
+                                            paste0(file_base, " ",
                                                    .y$indicator, ".csv"))))
 

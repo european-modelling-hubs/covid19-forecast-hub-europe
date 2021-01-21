@@ -9,12 +9,18 @@ We are aggregating forecasts of new cases and deaths due to Covid-19 over the ne
 
 ##### README contents
 - [Quick start](#quick-start)
-- [About Covid-19 forecast hubs](#about-covid-19-forecast-hub)
-- [European forecast hub team](#european-forecast-hub-team)
-- [Data license and reuse](#data-license-and-reuse)
+- [About Covid-19 forecast hubs](#about-covid-19-forecasting-hubs)
+   - [European forecast hub team](#european-forecast-hub-team)
+   - [Data license and reuse](#data-license-and-reuse)
 
 ## Quick start
-This is a brief outline for anyone considering contributing a forecast. For a detailed guide on how to structure and submit a forecast, please read the [technical wiki](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki). Before contributing for the first time, please get in touch by opening an [issue](https://github.com/epiforecasts/covid19-forecast-hub-europe/issues).
+This is a brief outline for anyone considering contributing a forecast. For a detailed guide on how to structure and submit a forecast, please read the [technical wiki](../../wiki). 
+
+#### Set up
+Before contributing for the first time:
+* Let us know you are [planning to submit](../../wiki/Preparing-to-submit)
+* Create a [team directory](../../wiki/Creating-a-team-directory)
+* Add your [metadata](../../wiki/Meta-data) and a [license](../../wiki/Licensing)
 
 #### Forecasting
 We require some forecast parameters so that we can compare and ensemble forecasts. All forecasts should use the following structure:
@@ -27,20 +33,21 @@ We require some forecast parameters so that we can compare and ensemble forecast
 | Frequency | Weekly |
 | Horizon | 1 to 4 weeks |
 
-There is no obligation to submit forecasts for all suggested targets or horizons, and it is up to you to decide which you are comfortable forecasting with your model.
+There is no obligation to submit forecasts for all suggested targets or horizons, and it is up to you to decide which you are comfortable forecasting with your model. 
+
+We have written more about forecast targets, horizons, and locations in the [guide](../../wiki/Targets-and-horizons).
 
 ###### Dates
-We use ECDC year-weeks, which start on Monday and end on Sunday. For example, _ECDC year-week 2021-01_ started on Monday 4th January and ended on Sunday 10th January. We provide more details [here](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Targets-and-horizons#date-format), and [templates](https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/template) to convert dates to ECDC weeks (and vice versa).
+We use ECDC year-weeks, which start on Monday and end on Sunday. For example, _ECDC year-week 2021-01_ started on Monday 4th January and ended on Sunday 10th January. We provide more details [here](../../wiki/Targets-and-horizons#date-format), and [templates](../../template) to convert dates to ECDC weeks (and vice versa).
 
 ###### Truth data
 We base evaluations on data from the [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases).
 
-
 #### Submitting
-Forecasts should be submitted between *# start date* and *# end date*. Submit a forecast using a pull request (our wiki contains a detailed [guide](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki)). If you have technical difficulties with submission, get in touch by raising an [issue](https://github.com/epiforecasts/covid19-forecast-hub-europe/issues).
+Forecasts should be submitted between Thursday and Monday by opening a pull request in this repository. So that we can evaluate and ensemble forecasts, we ask for a specific file structure and naming format: our wiki contains a detailed [guide](../../Forecast-format). If you have technical difficulties with submission, get in touch by raising an [issue](../issues).
 
 ###### Evaluating and ensembling
-After teams have submitted their forecasts, we create an ensemble forecast. Note that the ensemble only includes the forecasts that completely match the standard format (for example those with all the specified quantiles). See the [inclusion criteria](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Ensembling-and-evaluation) for more details.
+After teams have submitted their forecasts, we create an ensemble forecast. Note that the ensemble only includes the forecasts that completely match the standard format (for example those with all the specified quantiles). See the [inclusion criteria](../../wiki/Ensembling-and-evaluation) for more details.
 
 We also publish some weekly evaluation across forecasting models.
 
@@ -51,14 +58,16 @@ This effort parallels forecasting hubs in the US and Germany. We follow a simila
 
 - The [German and Polish COVID-19 Forecast Hub](https://github.com/KITmetricslab/covid19-forecast-hub-de) is run by members of the [Karlsruher Institut für Technologie (KIT)](https://statistik.econ.kit.edu/index.ph) and the [Computational Statistics Group at Heidelberg Institute for Theoretical Studies](https://www.h-its.org/research/cst/).
 
-## European forecast hub team
-The following persons have contributed to this repository (in alphabetical order):
+### European forecast hub team
+This repository is based on and supported by members of the US, and German and Polish Forecast Hubs. A small team is adapting this work for the European forecasting hub. We are based at the London School of Hygiene and Tropical Medicine and supported by grant funding from the ECDC. 
 
-- Nikos Bosse
-- Sebastian Funk
-- Katharine Sherratt
+Direct contributors to this repository include (in alphabetical order):
 
-## Data license and reuse
+- Nikos Bosse (@nikosbosse)
+- Sebastian Funk (@sbfnk)
+- Katharine Sherratt (@kathsherratt)
+
+### Data license and reuse
 - The forecasts assembled in this repository have been created by independent teams. Most provide a license in their respective subfolder of `data-processed`.
 - Parts of the processing, analysis and validation code have been taken or adapted from the [US Covid-19 forecast hub](https://github.com/reichlab/covid19-forecast-hub) and the [Germany/Poland Covid-19 forecast hub](https://github.com/KITmetricslab/covid19-forecast-hub-de) both under an [MIT license](https://github.com/reichlab/covid19-forecast-hub/blob/master/LICENSE).
-- All code contained in this repository is under the [MIT license](https://github.com/epiforecasts/covid19-forecast-hub-europe/blob/master/LICENSE). **Please get in touch with us to re-use materials from this repository.**
+- All code contained in this repository is under the [MIT license](/LICENSE). **Please get in touch with us to re-use materials from this repository.**
