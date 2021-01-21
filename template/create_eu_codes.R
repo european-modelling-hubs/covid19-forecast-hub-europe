@@ -1,11 +1,12 @@
-# Get EU + UK country names + codes
+# Get EU + EFTA + UK country names + codes
+# packages: countrycode eurostat dplyr readr
 
-eu28 <- countrycode::codelist
+library(dplyr)
 
-eu28 <- eu28[!is.na(eu28$eu28),]
+countries <- eurostat::eu_countries %>%
+  bind_rows(eurostat::efta_countries) %>%
+  rename(country = name, eurostat = code) %>%
+  mutate(country_code = countrycode::countrycode(eurostat, "eurostat", "iso3c")) %>%
+  select(country, iso3c = country_code)
 
-eu28 <- dplyr::select(eu28, 
-                      eu28, continent, iso.name.en, iso3c, 
-                      country.name.en.regex, eurostat, fips)
-
-readr::write_csv(eu28, "locations_eu.csv")
+readr::write_csv(countries, "template/locations_eu.csv")
