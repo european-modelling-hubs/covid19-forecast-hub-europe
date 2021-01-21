@@ -14,7 +14,13 @@ We are aggregating forecasts of new cases and deaths due to Covid-19 over the ne
 - [Data license and reuse](#data-license-and-reuse)
 
 ## Quick start
-This is a brief outline for anyone considering contributing a forecast. For a detailed guide on how to structure and submit a forecast, please read the [technical wiki](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki). Before contributing for the first time, please get in touch by opening an [issue](https://github.com/epiforecasts/covid19-forecast-hub-europe/issues).
+This is a brief outline for anyone considering contributing a forecast. For a detailed guide on how to structure and submit a forecast, please read the [technical wiki](../wiki). 
+
+#### Set up
+Before contributing for the first time:
+* Let us know you are [planning to submit](../wiki/Preparing-to-submit)
+* Create a [team directory](../wiki/Creating-a-team-directory)
+* Add your [metadata](../wiki/Meta-data) and a [license](../wiki/Licensing)
 
 #### Forecasting
 We require some forecast parameters so that we can compare and ensemble forecasts. All forecasts should use the following structure:
@@ -27,20 +33,21 @@ We require some forecast parameters so that we can compare and ensemble forecast
 | Frequency | Weekly |
 | Horizon | 1 to 4 weeks |
 
-There is no obligation to submit forecasts for all suggested targets or horizons, and it is up to you to decide which you are comfortable forecasting with your model.
+There is no obligation to submit forecasts for all suggested targets or horizons, and it is up to you to decide which you are comfortable forecasting with your model. 
+
+We have written more about forecast targets, horizons, and locations in the [guide](../wiki/Targets-and-horizons).
 
 ###### Dates
-We use ECDC year-weeks, which start on Monday and end on Sunday. For example, _ECDC year-week 2021-01_ started on Monday 4th January and ended on Sunday 10th January. We provide more details [here](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Targets-and-horizons#date-format), and [templates](https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/template) to convert dates to ECDC weeks (and vice versa).
+We use ECDC year-weeks, which start on Monday and end on Sunday. For example, _ECDC year-week 2021-01_ started on Monday 4th January and ended on Sunday 10th January. We provide more details [here](../wiki/Targets-and-horizons#date-format), and [templates](../template) to convert dates to ECDC weeks (and vice versa).
 
 ###### Truth data
 We base evaluations on data from the [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases).
 
-
 #### Submitting
-Forecasts should be submitted between *# start date* and *# end date*. Submit a forecast using a pull request (our wiki contains a detailed [guide](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki)). If you have technical difficulties with submission, get in touch by raising an [issue](https://github.com/epiforecasts/covid19-forecast-hub-europe/issues).
+Forecasts should be submitted between Thursday and Monday by opening a pull request in this repository. So that we can evaluate and ensemble forecasts, we ask for a specific file structure and naming format: our wiki contains a detailed [guide](../Forecast-format). If you have technical difficulties with submission, get in touch by raising an [issue](../issues).
 
 ###### Evaluating and ensembling
-After teams have submitted their forecasts, we create an ensemble forecast. Note that the ensemble only includes the forecasts that completely match the standard format (for example those with all the specified quantiles). See the [inclusion criteria](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Ensembling-and-evaluation) for more details.
+After teams have submitted their forecasts, we create an ensemble forecast. Note that the ensemble only includes the forecasts that completely match the standard format (for example those with all the specified quantiles). See the [inclusion criteria](../wiki/Ensembling-and-evaluation) for more details.
 
 We also publish some weekly evaluation across forecasting models.
 
