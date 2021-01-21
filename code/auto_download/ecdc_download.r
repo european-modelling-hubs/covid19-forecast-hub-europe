@@ -33,7 +33,8 @@ df <-
          location = country_code, location_name = country,
          value = weekly_count) %>%
   group_by(indicator) %>%
-  group_walk(~ write_csv(.x, file = file.path(ecdc_dir,
-                                              paste0(file_base,
-                                                     .y$indicator, ".csv"))))
+  group_walk(~ vroom_write(.x, delim = ",",
+                           path = file.path(ecdc_dir,
+                                            paste0(file_base,
+                                                   .y$indicator, ".csv"))))
 
