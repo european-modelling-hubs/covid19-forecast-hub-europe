@@ -10,8 +10,8 @@ We are aggregating forecasts of new cases and deaths due to Covid-19 over the ne
 ##### README contents
 - [Quick start](#quick-start)
 - [About Covid-19 forecast hubs](#about-covid-19-forecasting-hubs)
-- [European forecast hub team](#european-forecast-hub-team)
-- [Data license and reuse](#data-license-and-reuse)
+   - [European forecast hub team](#european-forecast-hub-team)
+   - [Data license and reuse](#data-license-and-reuse)
 
 ## Quick start
 This is a brief outline for anyone considering contributing a forecast. For a detailed guide on how to structure and submit a forecast, please read the [technical wiki](../../wiki). 
@@ -58,14 +58,16 @@ This effort parallels forecasting hubs in the US and Germany. We follow a simila
 
 - The [German and Polish COVID-19 Forecast Hub](https://github.com/KITmetricslab/covid19-forecast-hub-de) is run by members of the [Karlsruher Institut für Technologie (KIT)](https://statistik.econ.kit.edu/index.ph) and the [Computational Statistics Group at Heidelberg Institute for Theoretical Studies](https://www.h-its.org/research/cst/).
 
-## European forecast hub team
-The following persons have contributed to this repository (in alphabetical order):
+### European forecast hub team
+This repository is based on and supported by members of the US, and German and Polish Forecast Hubs. A small team is adapting this work for the European forecasting hub. We are based at the London School of Hygiene and Tropical Medicine and supported by grant funding from the ECDC. 
 
-- Nikos Bosse
-- Sebastian Funk
-- Katharine Sherratt
+Direct contributors to this repository include (in alphabetical order):
 
-## Data license and reuse
+- Nikos Bosse (@nikosbosse)
+- Sebastian Funk (@sbfnk)
+- Katharine Sherratt (@kathsherratt)
+
+### Data license and reuse
 - The forecasts assembled in this repository have been created by independent teams. Most provide a license in their respective subfolder of `data-processed`.
 - Parts of the processing, analysis and validation code have been taken or adapted from the [US Covid-19 forecast hub](https://github.com/reichlab/covid19-forecast-hub) and the [Germany/Poland Covid-19 forecast hub](https://github.com/KITmetricslab/covid19-forecast-hub-de) both under an [MIT license](https://github.com/reichlab/covid19-forecast-hub/blob/master/LICENSE).
 - All code contained in this repository is under the [MIT license](/LICENSE). **Please get in touch with us to re-use materials from this repository.**
