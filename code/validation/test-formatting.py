@@ -4,7 +4,7 @@ import sys
 import os
 import pandas as pd
 import numpy as np
-from datetime import datetime
+import datetime
 from pathlib import Path
 
 sys.path.append(str(Path.cwd().joinpath("code", "validation")))
@@ -48,7 +48,12 @@ def filename_match_forecast_date(filename):
             return "ERROR %s forecast filename date %s does match forecast_date column %s" % (
                 filename, file_forecast_date, forecast_date_column)
         else:
-            return None
+            today = datetime.date.today()
+            if (forecast_date_column != (str(today))):
+                return "ERROR: %s forecast date is out of date: %s" % (
+                    filename, forecast_date_column)
+            else:
+                return None
 
 
 # Check forecast formatting
