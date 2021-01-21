@@ -15,7 +15,7 @@ jobs:
     - uses: r-lib/actions/setup-r@v1
 
     - name: Install system dependencies
-      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev
+      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
 
     - name: Install R dependencies
       run: Rscript -e 'install.packages(c("here", "vroom", "eurostat", "dplyr", "countrycode", "tidyr", "ISOweek", "stringi"))'
