@@ -1,0 +1,29 @@
+eu28,continent,iso.name.en,iso3c,country.name.en.regex,eurostat,fips
+EU,Europe,Austria,AUT,^(?!.*hungary).*austria|\baustri.*\bemp,AT,AU
+EU,Europe,Belgium,BEL,^(?!.*luxem).*belgium,BE,BE
+EU,Europe,Bulgaria,BGR,bulgaria,BG,BU
+EU,Europe,Croatia,HRV,croatia,HR,HR
+EU,Asia,Cyprus,CYP,cyprus,CY,CY
+EU,Europe,Czechia,CZE,^(?=.*rep).*czech|czechia|bohemia,CZ,EZ
+EU,Europe,Denmark,DNK,denmark,DK,DA
+EU,Europe,Estonia,EST,estonia,EE,EN
+EU,Europe,Finland,FIN,finland,FI,FI
+EU,Europe,France,FRA,^(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul,FR,FR
+EU,Europe,Germany,DEU,^(?!.*east).*germany|^(?=.*\bfed.*\brep).*german,DE,GM
+EU,Europe,Greece,GRC,greece|hellenic|hellas,EL,GR
+EU,Europe,Hungary,HUN,^(?!.*austr).*hungary,HU,HU
+EU,Europe,Ireland,IRL,^(?!.*north).*\bireland,IE,EI
+EU,Europe,Italy,ITA,italy,IT,IT
+EU,Europe,Latvia,LVA,latvia,LV,LG
+EU,Europe,Lithuania,LTU,lithuania,LT,LH
+EU,Europe,Luxembourg,LUX,^(?!.*belg).*luxem,LU,LU
+EU,Europe,Malta,MLT,\bmalta,MT,MT
+EU,Europe,Netherlands (the),NLD,^(?!.*\bant)(?!.*\bcarib).*netherlands,NL,NL
+EU,Europe,Poland,POL,poland,PL,PL
+EU,Europe,Portugal,PRT,portugal,PT,PO
+EU,Europe,Romania,ROU,r(o|u|ou)mania,RO,RO
+EU,Europe,Slovakia,SVK,^(?!.*cze).*slovak,SK,LO
+EU,Europe,Slovenia,SVN,slovenia,SI,SI
+EU,Europe,Spain,ESP,spain,ES,SP
+EU,Europe,Sweden,SWE,sweden,SE,SW
+EU,Europe,United Kingdom,GBR,united.?kingdom|britain|^u\.?k\.?$,UK,UK
