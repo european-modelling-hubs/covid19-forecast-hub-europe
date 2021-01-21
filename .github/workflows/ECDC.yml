@@ -2,7 +2,7 @@ name: "ECDC"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 12 * * *"
 
 jobs:
   get_ecdc:
@@ -18,7 +18,7 @@ jobs:
       run: Rscript -e 'install.packages(c("here", "vroom", "eurostat", "dplyr", "countrycode", "tidyr", "ISOweek", "stringi"))'
 
     - name: ECDC Truth
-      run: Rscript -e 'code/auto_download/ecdc_download.r'
+      run: Rscript 'code/auto_download/ecdc_download.r'
         
     - name: Commit files
       env:
