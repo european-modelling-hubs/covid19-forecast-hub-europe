@@ -1,0 +1,38 @@
+name: "ECDC"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  get_ecdc:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@master
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+    - uses: r-lib/actions/setup-r@v1
+
+    - name: Install dependencies
+      run: Rscript -e 'install.packages(c("here", "vroom", "eurostat", "dplyr", "countrycode", "tidyr", "ISOweek", "stringi"))'
+
+    - name: ECDC Truth
+      run: Rscript -e 'code/auto_download/ecdc_download.r'
+        
+    - name: Commit files
+      env:
+        AUTH: ${{ secrets.GITHUBTOKEN }}
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action - ECDC"
+        git remote rm origin
+        git remote add origin https://${AUTH}@github.com/epiforecasts/covid19-forecast-hub-europe.git > /dev/null 2>&1
+        git pull origin master
+        git add --all
+        git commit -m "ECDC - daily"
+        
+    - name: Push changes
+      run: |
+        git push --quiet --set-upstream origin HEAD:master
+        echo "pushed to github"
