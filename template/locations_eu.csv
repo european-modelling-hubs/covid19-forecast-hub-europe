@@ -1,0 +1,29 @@
+eu28,continent,iso.name.en,iso2c,country.name.en.regex,eurostat,fao,fips,iso3c
+EU,Europe,Austria,AT,^(?!.*hungary).*austria|\baustri.*\bemp,AT,11,AU,AUT
+EU,Europe,Belgium,BE,^(?!.*luxem).*belgium,BE,255,BE,BEL
+EU,Europe,Bulgaria,BG,bulgaria,BG,27,BU,BGR
+EU,Europe,Croatia,HR,croatia,HR,98,HR,HRV
+EU,Asia,Cyprus,CY,cyprus,CY,50,CY,CYP
+EU,Europe,Czechia,CZ,^(?=.*rep).*czech|czechia|bohemia,CZ,167,EZ,CZE
+EU,Europe,Denmark,DK,denmark,DK,54,DA,DNK
+EU,Europe,Estonia,EE,estonia,EE,63,EN,EST
+EU,Europe,Finland,FI,finland,FI,67,FI,FIN
+EU,Europe,France,FR,^(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul,FR,68,FR,FRA
+EU,Europe,Germany,DE,^(?!.*east).*germany|^(?=.*\bfed.*\brep).*german,DE,79,GM,DEU
+EU,Europe,Greece,GR,greece|hellenic|hellas,EL,84,GR,GRC
+EU,Europe,Hungary,HU,^(?!.*austr).*hungary,HU,97,HU,HUN
+EU,Europe,Ireland,IE,^(?!.*north).*\bireland,IE,104,EI,IRL
+EU,Europe,Italy,IT,italy,IT,106,IT,ITA
+EU,Europe,Latvia,LV,latvia,LV,119,LG,LVA
+EU,Europe,Lithuania,LT,lithuania,LT,126,LH,LTU
+EU,Europe,Luxembourg,LU,^(?!.*belg).*luxem,LU,256,LU,LUX
+EU,Europe,Malta,MT,\bmalta,MT,134,MT,MLT
+EU,Europe,Netherlands (the),NL,^(?!.*\bant)(?!.*\bcarib).*netherlands,NL,150,NL,NLD
+EU,Europe,Poland,PL,poland,PL,173,PL,POL
+EU,Europe,Portugal,PT,portugal,PT,174,PO,PRT
+EU,Europe,Romania,RO,r(o|u|ou)mania,RO,183,RO,ROU
+EU,Europe,Slovakia,SK,^(?!.*cze).*slovak,SK,199,LO,SVK
+EU,Europe,Slovenia,SI,slovenia,SI,198,SI,SVN
+EU,Europe,Spain,ES,spain,ES,203,SP,ESP
+EU,Europe,Sweden,SE,sweden,SE,210,SW,SWE
+EU,Europe,United Kingdom,GB,united.?kingdom|britain|^u\.?k\.?$,UK,229,UK,GBR
