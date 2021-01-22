@@ -1,11 +1,20 @@
+"""
+Modified 2021-01-22 by Kath
+
+Original: check_truth.py in Germany/Poland forecast hub repo
+Modifications:
+    - Replace RKI / MZ truth data with ECDC
+    - Replace column name 'date' with 'week_start'
+Note: some unused infrastructure left in to permit adding future truth datasets
+"""
+
 import pandas as pd
 import glob
 from datetime import datetime
 
 # all possible locations
 locations = dict()
-locations['RKI'] = pd.read_csv('../../data-truth/RKI/truth_RKI-Cumulative Deaths_Germany.csv').location_name.unique()
-locations['MZ'] = pd.read_csv('../../data-truth/MZ/truth_MZ-Cumulative Deaths_Poland.csv').location_name.unique()
+locations['ECDC'] = pd.read_csv('../../data-truth/ECDC/truth_ECDC-Incident Deaths.csv').location_name.unique()
 
 with open('check_truth.txt', 'a', encoding='utf-8') as txtfile:
     
@@ -14,14 +23,14 @@ with open('check_truth.txt', 'a', encoding='utf-8') as txtfile:
     
     error_count = 0
 
-    for source in ['RKI', 'MZ']:
+    for source in ['ECDC']:
         list_of_files = glob.glob('../../data-truth/{}/*Incident*.csv'.format(source))
 
         for file in list_of_files:
            
-            df = pd.read_csv(file, parse_dates=['date'])
-            latest_date = df.date.max()
-            latest_data = df[df.date == latest_date]
+            df = pd.read_csv(file, parse_dates=['week_start'])
+            latest_date = df.week_start.max()
+            latest_data = df[df.week_start == latest_date]
 
             missing_locations = [l for l in locations[source] if l not in latest_data.location_name.unique()]
             negative_incidence = latest_data[latest_data.value < 0].location_name.values
