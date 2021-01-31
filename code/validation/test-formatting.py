@@ -10,69 +10,67 @@ from pathlib import Path
 sys.path.append(str(Path.cwd().joinpath("code", "validation")))
 import covid19
 
-COUNTRIES = ["Germany", "Poland"]
-
-
 # Check for metadata file
 def check_for_metadata(my_path, model=None):
-    
-    
+
     if model:
-        paths = glob.iglob(my_path + "/" + model +  "**/", recursive=False)
-        
+        paths = glob.iglob(my_path + "/" + model + "**/", recursive=False)
+
     else:
         paths = glob.iglob(my_path + "**/**/", recursive=False)
-        
 
-        
     for path in paths:
         team_model = os.path.basename(os.path.dirname(path))
         metadata_filename = "metadata-" + team_model + ".txt"
         txt_files = []
+
         for metadata_file in glob.iglob(path + "*.txt", recursive=False):
             txt_files += [os.path.basename(metadata_file)]
+
         if metadata_filename not in txt_files:
             print("MISSING ", metadata_filename)
 
-
+# Check filename date matches forecast date
 def filename_match_forecast_date(filename):
     df = pd.read_csv(filename)
     file_forecast_date = os.path.basename(os.path.basename(filename))[:10]
     forecast_date_column = set(list(df['forecast_date']))
+
     if len(forecast_date_column) > 1:
         return "ERROR: %s has multiple forecast dates: %s. Forecast date must be unique" % (
             filename, forecast_date_column)
     else:
         forecast_date_column = forecast_date_column.pop()
+
         if (file_forecast_date != forecast_date_column):
             return "ERROR %s forecast filename date %s does match forecast_date column %s" % (
                 filename, file_forecast_date, forecast_date_column)
         else:
             today = datetime.date.today()
+
             if (forecast_date_column != (str(today))):
                 return "ERROR: %s forecast date is out of date: %s" % (
                     filename, forecast_date_column)
+
             else:
                 return None
 
 
 # Check forecast formatting
 
-
 def check_formatting(my_path, model=None):
     output_errors = {}
     df = pd.read_csv('code/validation/validated_files.csv')
     previous_checked = list(df['file_path'])
     files_in_repository = []
-    
+
     if model:
-        paths = glob.iglob(my_path + "/" + model +  "**/", recursive=False)
-        
+        paths = glob.iglob(my_path + "/" + model + "**/", recursive=False)
+
     else:
         paths = glob.iglob(my_path + "**/**/", recursive=False)
-        
-        
-    # Iterate through processed csvs
+
+        # Iterate through processed csvs
     for path in paths:
         for filepath in glob.iglob(path + "*.csv", recursive=False):
             files_in_repository += [filepath]
@@ -81,24 +79,11 @@ def check_formatting(my_path, model=None):
             if filepath not in previous_checked:
                 # delete validated file if currrently present
                 df = df[df['file_path'] != filepath]
-                
-                country = ""
-                for cou in COUNTRIES:
-                    if cou in filepath:
-                        country = cou
-                        
-                if "-ICU" in filepath:
-                    mode = "ICU"
-                
-                elif "-case" in filepath:
-                    mode = "case"
-                
-                else:
-                    mode = "deaths"
-                
+
                 # validate file
-                file_error = covid19.validate_quantile_csv_file(filepath, mode, country)
-                #file_error = "no errors"
+                file_error = covid19.validate_quantile_csv_file(
+                    filepath)
+                # file_error = "no errors"
                 # Check forecast file date = forecast_date column
                 forecast_date_error = filename_match_forecast_date(filepath)
                 if forecast_date_error is not None:
@@ -138,11 +123,11 @@ def check_formatting(my_path, model=None):
 
 def main():
     my_path = "./data-processed"
-    
+
     try:
         model = sys.argv[1]
     except IndexError:
-        model=None
+        model = None
 
     check_for_metadata(my_path, model)
     check_formatting(my_path, model)
@@ -150,4 +135,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

@@ -10,9 +10,6 @@ from pathlib import Path
 sys.path.append(str(Path.cwd().joinpath("code", "validation")))
 import covid19
 
-COUNTRIES = ["Germany", "Poland"]
-
-
 # Check for metadata file
 def check_for_metadata(my_path, team=None):
     for path in glob.iglob(my_path + "**/**/", recursive=False):
@@ -43,7 +40,6 @@ def filename_match_forecast_date(filename):
 
 # Check forecast formatting
 
-
 def check_formatting(my_path):
     output_errors = {}
     df = pd.read_csv('code/validation/validated_files.csv')
@@ -58,23 +54,9 @@ def check_formatting(my_path):
             if filepath not in previous_checked:
                 # delete validated file if currrently present
                 df = df[df['file_path'] != filepath]
-                
-                country = ""
-                for cou in COUNTRIES:
-                    if cou in filepath:
-                        country = cou
-                        
-                if "-ICU" in filepath:
-                    mode = "ICU"
-                
-                elif "-case" in filepath:
-                    mode = "case"
-                
-                else:
-                    mode = "deaths"
-                
+
                 # validate file
-                file_error = covid19.validate_quantile_csv_file(filepath, mode, country)
+                file_error = covid19.validate_quantile_csv_file(filepath)
                 #file_error = "no errors"
                 # Check forecast file date = forecast_date column
                 forecast_date_error = filename_match_forecast_date(filepath)
