@@ -6,6 +6,9 @@
 
 - [ ] FIPS (as in the US and Germany), ISO-3 (as in the ECDC data) or NUTS (as per EU data) - tbc
 
+Files affected:
+- `template/locations_eu.csv` [currently using ISO-3]
+
 ## Made decisions
 
 ### Submission period
@@ -17,10 +20,16 @@ Rationale: Data is updated on Thursdays
 
 Decision: 4 weeks ahead.
 
+Files affected:
+- `code/validation/covid19.py`
+
 ### Targets
 
 Decisions: Cases and deaths initially, possibly an indicator of health system burden later.
 Rationale: Hospitalisations not recorded consistently across countries, so this will have to be considered carefully, and is best done so later.
+
+Files affected:
+- `code/validation/covid19.py`
 
 ### Locations
 
@@ -32,13 +41,18 @@ Rationale: Unclear whether there is capacity among modelling teams to provide su
 Decision: Weekly.
 Rationale: No gain from going less often, and this ensures relevance and timeliness, and is in line with the other forecasting hubs.
 
+Files affected:
+- `code/validation/covid19.py`
+
 ### File naming
 
 Decision: Single file, `<date>-<group>-<model>.csv`. Date is to be the last day of the submission period (Monday as things stand).
 Rationale: File contents should be self-explaining and as little information as possible in the file name
 
 Files affected:
-- `code/validaton/validate_filenames.py`
+- `code/validation/validate_filenames.py`
+- `code/validation/test-formatting.py`
+- `code/validation/covid19.py`
 
 ### File format
 
@@ -46,11 +60,19 @@ Decision: As in the US Forecast hub To contain a column called "scenario" which 
 
 Rationale: Consistency with other forecast hubs but desire to possibly add scenarios later. 
 
+Files affected:
+- `code/validation/covid19.py`
+- `code/validation/quantile_io.py`
+
 ### Truth data
 
 Decision: From ECDC (https://www.ecdc.europa.eu/en/covid-19/data).
 
 Rationale: ECDC sponsors this project and therefore it makes sense to use their official data streams. Problem is that the updating schedule is relatively slow so modellers will have to be pointed to other sources.
+
+Files affected:
+- `code/validation/validate_truth.py` [removed]
+- `code/validation/check_truth.py`
 
 ### Quantiles
 
