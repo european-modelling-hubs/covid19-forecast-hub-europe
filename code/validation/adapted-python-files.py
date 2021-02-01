@@ -46,7 +46,7 @@ Files changed:
 
  - [x] test-formatting.py - MODIFIED
          - removed "COUNTRIES" list, "country" and "mode", not used in filename
-         - note: forecast_date column must match date in filename
+         - forecast_date column must match filename and be a Monday
 
  - [x] test-formatting-local.py - MODIFIED
          - removed "COUNTRIES" list, "country" and "mode", not used in filename

@@ -46,10 +46,9 @@ def filename_match_forecast_date(filename):
             return "ERROR %s forecast filename date %s does match forecast_date column %s" % (
                 filename, file_forecast_date, forecast_date_column)
         else:
-            today = datetime.date.today()
-
-            if (forecast_date_column != (str(today))):
-                return "ERROR: %s forecast date is out of date: %s" % (
+            # forecast date should be Monday
+            if (forecast_date_column.weekday() != 0:
+                return "ERROR: %s forecast date is not Monday submission date: %s" % (
                     filename, forecast_date_column)
 
             else:
