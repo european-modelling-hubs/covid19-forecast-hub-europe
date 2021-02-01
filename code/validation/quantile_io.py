@@ -56,6 +56,7 @@ def json_io_dict_from_quantile_csv_file(csv_fp, valid_target_names, codes, row_v
     :param csv_fp: an open quantile csv file-like object. the quantile CSV file format is documented at
         https://docs.zoltardata.com/
     :param valid_target_names: list of strings of valid targets to validate against
+    :param codes: unit codes i.e. location codes (e.g. FIPS in US, ISO-3 in EU)
     :param row_validator: an optional function of these args that is run to perform additional project-specific
         validations. returns a list of `error_messages`.
         - column_index_dict: as returned by _validate_header(): a dict that maps column_name -> its index in header (row)

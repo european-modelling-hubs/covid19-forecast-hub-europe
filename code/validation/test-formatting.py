@@ -42,7 +42,7 @@ def filename_match_forecast_date(filename):
     else:
         forecast_date_column = forecast_date_column.pop()
 
-        if (file_forecast_date != forecast_date_column):
+        if file_forecast_date != forecast_date_column:
             return "ERROR %s forecast filename date %s does match forecast_date column %s" % (
                 filename, file_forecast_date, forecast_date_column)
         else:
