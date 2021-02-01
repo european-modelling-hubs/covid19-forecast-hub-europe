@@ -14,7 +14,7 @@ We are aggregating forecasts of new cases and deaths due to Covid-19 over the ne
    - [Data license and reuse](#data-license-and-reuse)
 
 ## Quick start
-This is a brief outline for anyone considering contributing a forecast. For a detailed guide on how to structure and submit a forecast, please read the [technical wiki](../../wiki). 
+This is a brief outline for anyone considering contributing a forecast. For a detailed guide on how to structure and submit a forecast, please read the [technical wiki](../../wiki).
 
 #### Set up
 Before contributing for the first time:
@@ -33,18 +33,18 @@ We require some forecast parameters so that we can compare and ensemble forecast
 | Frequency | Weekly |
 | Horizon | 1 to 4 weeks |
 
-There is no obligation to submit forecasts for all suggested targets or horizons, and it is up to you to decide which you are comfortable forecasting with your model. 
+There is no obligation to submit forecasts for all suggested targets or horizons, and it is up to you to decide which you are comfortable forecasting with your model.
 
 We have written more about forecast targets, horizons, and locations in the [guide](../../wiki/Targets-and-horizons).
 
 ###### Dates
-We use ECDC year-weeks, which start on Monday and end on Sunday. For example, _ECDC year-week 2021-01_ started on Monday 4th January and ended on Sunday 10th January. We provide more details [here](../../wiki/Targets-and-horizons#date-format), and [templates](../../template) to convert dates to ECDC weeks (and vice versa).
+We use Epidemiological Weeks (EW) defined by the [US CDC](https://wwwn.cdc.gov/nndss/document/MMWR_Week_overview.pdf). Each week starts on Sunday and ends on Saturday. We provide more details [here](../../wiki/Targets-and-horizons#date-format), and [templates](../../template) to convert dates to EW weeks (and vice versa).
 
 ###### Truth data
-We base evaluations on data from the [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases).
+We base evaluations on country level data from [John Hopkins University](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series).
 
 #### Submitting
-Forecasts should be submitted between Thursday and Monday by opening a pull request in this repository. So that we can evaluate and ensemble forecasts, we ask for a specific file structure and naming format: our wiki contains a detailed [guide](../../wiki/Forecast-format). If you have technical difficulties with submission, get in touch by raising an [issue](../issues).
+Forecasts should be submitted on Monday by opening a pull request in this repository. So that we can evaluate and ensemble forecasts, we ask for a specific file structure and naming format: our wiki contains a detailed [guide](../../wiki/Forecast-format). If you have technical difficulties with submission, try [troubleshooting](../..wiki/Troubleshooting-pull-requests) or get in touch by raising an [issue](../issues).
 
 ###### Evaluating and ensembling
 After teams have submitted their forecasts, we create an ensemble forecast. Note that the ensemble only includes the forecasts that completely match the standard format (for example those with all the specified quantiles). See the [inclusion criteria](../../wiki/Ensembling-and-evaluation) for more details.
@@ -59,7 +59,7 @@ This effort parallels forecasting hubs in the US and Germany. We follow a simila
 - The [German and Polish COVID-19 Forecast Hub](https://github.com/KITmetricslab/covid19-forecast-hub-de) is run by members of the [Karlsruher Institut für Technologie (KIT)](https://statistik.econ.kit.edu/index.ph) and the [Computational Statistics Group at Heidelberg Institute for Theoretical Studies](https://www.h-its.org/research/cst/).
 
 ### European forecast hub team
-This repository is based on and supported by members of the US, and German and Polish Forecast Hubs. A small team is adapting this work for the European forecasting hub. We are based at the London School of Hygiene and Tropical Medicine and supported by grant funding from the ECDC. 
+This repository is based on and supported by members of the US, and German and Polish Forecast Hubs. A small team is adapting this work for the European forecasting hub. We are based at the London School of Hygiene and Tropical Medicine and supported by grant funding from the ECDC.
 
 Direct contributors to this repository include (in alphabetical order):
 
