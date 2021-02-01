@@ -120,22 +120,25 @@ def covid19_row_validator(column_index_dict, row, codes):
 
     # 5. Validate date alignment (Monday-Sunday week)
 
-    # for x week ahead targets, weekday(target_end_date) should be a Sun
+    # 5.1 For x week ahead targets, weekday(target_end_date) should be a Sun
     if abs(target_end_date.weekday()) != 6:  # Sunday
         error_messages.append(f"Error > target_end_date was not a Sunday: {target_end_date}. row={row}")
         return error_messages  # terminate - depends on valid target_end_date
 
-    # for x week ahead targets, ensure 1-week ahead forecast is for next Sun
+    # 5.2 Forecast date should always be Mon (0) submission date
+    if abs(forecast_date.weekday()) != 0:
+            error_messages.append(f"Error > forecast_date was not a Monday, row={row}")
+            
+    # 5.2 For x week ahead targets, ensure 1-week ahead forecast is for next Sun
     #   - set exp_target_end_date and then validate it
     weekday_diff = datetime.timedelta(days=(abs(target_end_date.weekday() -
                                                 forecast_date.weekday())))
 
-    # Forecast date should always be Mon (0) submission date
-    if abs(forecast_date.weekday()) != 0:
-        delta_days = weekday_diff + datetime.timedelta(days=(7 * step_ahead_increment))
-        exp_target_end_date = forecast_date + delta_days
+        # step ahead increment is 1 less (submission on Monday for same week end Sunday)        
+    delta_days = weekday_diff + datetime.timedelta(days=(7 * (step_ahead_increment - 1)))
+    exp_target_end_date = forecast_date + delta_days
 
-        if target_end_date != exp_target_end_date:
+    if target_end_date != exp_target_end_date:
             error_messages.append(f"Error > target_end_date was not the expected Sunday. forecast_date = {forecast_date}, "
                                       f"target_end_date={target_end_date}. Expected target end date = {exp_target_end_date}, "
                                       f"row={row}")

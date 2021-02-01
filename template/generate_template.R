@@ -15,13 +15,12 @@ forecast_date <- as.Date("2021-02-01")
 locations <- read.csv("template/locations_eu.csv")
 
 dat <- data.frame(
-  scenario = "invalid example",
+  scenario = "EXAMPLE",
   forecast_date = forecast_date,
-  target = "example target",
-  target_end_date = forecast_date,
-  location = "example location",
-  location_name	= "example country",
-  type = "example type",
+  target = "4 wk ahead inc case",
+  target_end_date = forecast_date + 6,
+  location = "EXAMPLE",
+  type = "point",
   quantile = NA,
   value = 1
 )
@@ -43,7 +42,6 @@ for(loc in 1:nrow(locations)){
                           target = tgs[t],
                           target_end_date = end_dates[t],
                           location = locations$iso3c[loc],
-                          location_name = locations$country[loc],
                           type = c("point", rep("quantile", length(quantiles))),
                           quantile = c(NA, quantiles),
                           value = 1)

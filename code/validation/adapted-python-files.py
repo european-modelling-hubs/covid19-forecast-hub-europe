@@ -34,6 +34,7 @@ Files changed:
                  - replaced epiweek with Mon-Sun week
                      - see commented-out code to change back to Sun-Sat week
                      - Forecast date should be Monday
+                     - exp_target_end_date accounts for -1 in step_ahead_increment
             - adds check on "scenario" column ('forecast' or 'scenario')
 
  - [x] quantile_io.py - MODIFIED
