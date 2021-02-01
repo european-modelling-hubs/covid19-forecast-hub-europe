@@ -44,7 +44,7 @@ We use ECDC year-weeks, which start on Monday and end on Sunday. For example, _E
 We base evaluations on data from the [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases).
 
 #### Submitting
-Forecasts should be submitted between Thursday and Monday by opening a pull request in this repository. So that we can evaluate and ensemble forecasts, we ask for a specific file structure and naming format: our wiki contains a detailed [guide](../../Forecast-format). If you have technical difficulties with submission, get in touch by raising an [issue](../issues).
+Forecasts should be submitted between Thursday and Monday by opening a pull request in this repository. So that we can evaluate and ensemble forecasts, we ask for a specific file structure and naming format: our wiki contains a detailed [guide](../../wiki/Forecast-format). If you have technical difficulties with submission, get in touch by raising an [issue](../issues).
 
 ###### Evaluating and ensembling
 After teams have submitted their forecasts, we create an ensemble forecast. Note that the ensemble only includes the forecasts that completely match the standard format (for example those with all the specified quantiles). See the [inclusion criteria](../../wiki/Ensembling-and-evaluation) for more details.
