@@ -14,7 +14,7 @@ from datetime import datetime
 
 # all possible locations
 locations = dict()
-locations['ECDC'] = pd.read_csv('../../data-truth/ECDC/truth_ECDC-Incident Deaths.csv').location_name.unique()
+locations['ECDC'] = pd.read_csv('././data-truth/ECDC/truth_ECDC-Incident Deaths.csv').location_name.unique()
 
 with open('check_truth.txt', 'a', encoding='utf-8') as txtfile:
     

@@ -41,7 +41,7 @@ def validate_quantile_csv_file(csv_fp):
 
         _, error_messages = json_io_dict_from_quantile_csv_file(
             ecdc_csv_fp, target_names, codes, covid19_row_validator,
-            ['forecast_date', 'target_end_date'])
+            ['scenario', 'forecast_date', 'target_end_date'])
 
         if error_messages:
             return error_messages
@@ -62,6 +62,7 @@ def covid19_row_validator(column_index_dict, row, codes):
     3. forecast_date and target_end_date (terminates if invalid)
     4. integer in "__ week ahead" (terminates if invalid)
     5. date alignment - week starting Monday ending Sunday
+    5. checks "scenario" column is either "forecast" or "scenario"
 
     - Expects these `valid_target_names` passed to
      `json_io_dict_from_quantile_csv_file()`:
@@ -165,6 +166,11 @@ def covid19_row_validator(column_index_dict, row, codes):
                                   f"row={row}")
 
     """
+    # 6. Check "scenario" column
+    scenario = row[column_index_dict['scenario']]
+    valid_scenario = ["forecast", "scenario"]
+    if scenario not in valid_scenario:
+        error_messages.append(f"invalid scenario: must be either 'forecast' or 'scenario': {scenario!r}. row={row}")
 
     # done!
     return error_messages

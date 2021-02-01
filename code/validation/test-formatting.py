@@ -47,7 +47,8 @@ def filename_match_forecast_date(filename):
                 filename, file_forecast_date, forecast_date_column)
         else:
             # forecast date should be Monday
-            if forecast_date_column.weekday() != 0 :
+            forecast_day = datetime.datetime.strptime(forecast_date_column, '%Y-%m-%d').weekday()
+            if forecast_day != 0 :
                 return "ERROR: %s forecast date is not Monday submission date: %s" % (
                     filename, forecast_date_column)
 

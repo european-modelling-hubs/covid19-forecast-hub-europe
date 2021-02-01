@@ -26,23 +26,27 @@ Files changed:
          - validate_quantile_csv_file:
              - replaced fips_codes with 32 ISO-3C
              - removed args for "country" and "mode", not used
-         - covid19_row_validator: dropped daily, icu/hosp, cumulative targets
-         - validate date alignment:
-             - removed daily targets
-             - replaced epiweek with Mon-Sun week
-                 - see commented-out code to change back to Sun-Sat week
-             - Forecast date should be Monday
-        - this is the place to add a check on the "scenario" column if used
+             - add 'scenario' to additional required columns
+         - covid19_row_validator: 
+             - targets: dropped daily, icu/hosp, cumulative
+             - validate date alignment:
+                 - removed daily targets
+                 - replaced epiweek with Mon-Sun week
+                     - see commented-out code to change back to Sun-Sat week
+                     - Forecast date should be Monday
+            - adds check on "scenario" column ('forecast' or 'scenario')
 
  - [x] quantile_io.py - MODIFIED
-         - add "scenario" in required/possible columns
          - replace "fips_code" with "code"
+         - add "scenario" to POSSIBLE_COLUMNS
          - note: if I understand correctly, zoltar is unable to store "scenario" column (https://docs.zoltardata.com/fileformats/#quantile-forecast-format-csv)
             - could we get around this by specifying "forecacst/scenario" as "target units"?
                 - we need to specify this when setting up zoltar: https://docs.zoltardata.com/targets/
                 - this would impact validation:
-                    - covid19.py: VALID_TARGET_NAMES & covid19_row_validator
-                    - quantile_io.py: REQUIRED_COLUMNS
+                    - covid19.py: 
+                        - VALID_TARGET_NAMES
+                        - json_io_dict_from_quantile_csv_file(args)
+                        - covid19_row_validator()
 
  - [x] test-formatting.py - MODIFIED
          - removed "COUNTRIES" list, "country" and "mode", not used in filename

@@ -19,8 +19,8 @@ OBS_PREDICTION_CLASS = "obs"
 
 # quantile csv I/O
 
-REQUIRED_COLUMNS = ('location', 'target', 'type', 'quantile', 'value', 'scenario')
-POSSIBLE_COLUMNS = ['location', 'target', 'type', 'quantile', 'value', 'scenario', 'target_end_date', 'forecast_date', 'location_name']
+REQUIRED_COLUMNS = ('location', 'target', 'type', 'quantile', 'value')
+POSSIBLE_COLUMNS = ['location', 'target', 'type', 'quantile', 'value', 'target_end_date', 'forecast_date', 'location_name', 'scenario']
 
 
 #
