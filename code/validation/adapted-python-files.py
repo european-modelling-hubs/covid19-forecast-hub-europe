@@ -37,7 +37,7 @@ Files changed:
  - [x] quantile_io.py - MODIFIED
          - add "scenario" in required/possible columns
          - replace "fips_code" with "code"
-         - note: if i understand correctly, zoltar is unable to store "scenario" column (https://docs.zoltardata.com/fileformats/#quantile-forecast-format-csv)
+         - note: if I understand correctly, zoltar is unable to store "scenario" column (https://docs.zoltardata.com/fileformats/#quantile-forecast-format-csv)
             - could we get around this by specifying "forecacst/scenario" as "target units"?
                 - we need to specify this when setting up zoltar: https://docs.zoltardata.com/targets/
                 - this would impact validation:
