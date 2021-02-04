@@ -8,7 +8,7 @@ source_dict = {'Deaths': 'https://raw.githubusercontent.com/CSSEGISandData/COVID
                'Cases': 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/' \
                    'csse_covid_19_time_series/time_series_covid19_confirmed_global.csv'}
 
-locs = pd.read_csv('../../viz/location_codes.csv')
+locs = pd.read_csv('viz/location_codes.csv')
 
 # extract data for given targets
 for target in ['Deaths', 'Cases']:
@@ -37,4 +37,4 @@ for target in ['Deaths', 'Cases']:
     df.value = df.value.astype(int)
     
     # export to csv
-    df.to_csv('../../data-truth/JHU/truth_JHU-Incident {}.csv'.format(target), index=False)
+    df.to_csv('data-truth/JHU/truth_JHU-Incident {}.csv'.format(target), index=False)
