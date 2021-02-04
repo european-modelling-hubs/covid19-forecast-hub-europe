@@ -5,12 +5,11 @@ on:
     - cron: "0 12 * * *"
   
 jobs:
-  build:
+  get_jhu:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
       with:
-        persist-credentials: false 
         fetch-depth: 0 
 
     - name: Setup Python
@@ -19,17 +18,17 @@ jobs:
         python-version: '3.x'
 
     - name: Install requirenments
-      run: |
-        pip3 install pandas
+      run: pip3 install pandas
+    
     - name: JHU Truth
-      run: |
-        python3 ./code/auto_download/jhu_download.py
+      run: python3 ./code/auto_download/jhu_download.py
+
     - name: Commit files
       env:
         AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
-        git config --local user.email "actions@github.com"
-        git config --local user.name "GitHub Actions"
+        git config user.email "action@github.com"
+        git config user.name "GitHub Action - JHU"
         git add --all
         git commit -m "JHU - daily"
         git push 
