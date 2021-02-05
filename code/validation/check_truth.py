@@ -3,8 +3,7 @@ Modified 2021-01-22 by Kath
 
 Original: check_truth.py in Germany/Poland forecast hub repo
 Modifications:
-    - Replace RKI / MZ truth data with ECDC
-    - Replace column name 'date' with 'week_start'
+    - Replace RKI / MZ truth data with JHU
 Note: some unused infrastructure left in to permit adding future truth datasets
 """
 
@@ -14,7 +13,7 @@ from datetime import datetime
 
 # all possible locations
 locations = dict()
-locations['ECDC'] = pd.read_csv('././data-truth/ECDC/truth_ECDC-Incident Deaths.csv').location_name.unique()
+locations['JHU'] = pd.read_csv('././data-truth/JHU/truth_JHU-Incident Deaths.csv').location_name.unique()
 
 with open('check_truth.txt', 'a', encoding='utf-8') as txtfile:
     
@@ -28,9 +27,9 @@ with open('check_truth.txt', 'a', encoding='utf-8') as txtfile:
 
         for file in list_of_files:
            
-            df = pd.read_csv(file, parse_dates=['week_start'])
-            latest_date = df.week_start.max()
-            latest_data = df[df.week_start == latest_date]
+            df = pd.read_csv(file, parse_dates=['date'])
+            latest_date = df.date.max()
+            latest_data = df[df.date == latest_date]
 
             missing_locations = [l for l in locations[source] if l not in latest_data.location_name.unique()]
             negative_incidence = latest_data[latest_data.value < 0].location_name.values

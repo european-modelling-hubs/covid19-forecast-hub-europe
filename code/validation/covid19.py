@@ -20,6 +20,10 @@ VALID_QUANTILES = [0.010, 0.025, 0.050, 0.100, 0.150, 0.200, 0.250, 0.300,
                    0.350, 0.400, 0.450, 0.500, 0.550, 0.600, 0.650, 0.700,
                    0.750, 0.800, 0.850, 0.900, 0.950, 0.975, 0.990]
 
+# set range of valid scenario IDs
+VALID_SCENARIO_ID = ["forecast", "scenario1", "scenario2"] # add new scenarios here
+
+
 #
 # validate_quantile_csv_file()
 #
@@ -118,65 +122,34 @@ def covid19_row_validator(column_index_dict, row, codes):
         error_messages.append(f"Error > non-integer number of weeks ahead in 'wk ahead' target: {target!r}. row={row}")
         return error_messages  # terminate - depends on valid step_ahead_increment
 
-    # 5. Validate date alignment (Monday-Sunday week)
-
-    # 5.1 For x week ahead targets, weekday(target_end_date) should be a Sun
-    if abs(target_end_date.weekday()) != 6:  # Sunday
-        error_messages.append(f"Error > target_end_date was not a Sunday: {target_end_date}. row={row}")
-        return error_messages  # terminate - depends on valid target_end_date
-
-    # 5.2 Forecast date should always be Mon (0) submission date
-    if abs(forecast_date.weekday()) != 0:
-            error_messages.append(f"Error > forecast_date was not a Monday, row={row}")
-            
-    # 5.2 For x week ahead targets, ensure 1-week ahead forecast is for next Sun
-    #   - set exp_target_end_date and then validate it
-    weekday_diff = datetime.timedelta(days=(abs(target_end_date.weekday() -
-                                                forecast_date.weekday())))
-
-        # step ahead increment is 1 less (submission on Monday for same week end Sunday)        
-    delta_days = weekday_diff + datetime.timedelta(days=(7 * (step_ahead_increment - 1)))
-    exp_target_end_date = forecast_date + delta_days
-
-    if target_end_date != exp_target_end_date:
-            error_messages.append(f"Error > target_end_date was not the expected Sunday. forecast_date = {forecast_date}, "
-                                      f"target_end_date={target_end_date}. Expected target end date = {exp_target_end_date}, "
-                                      f"row={row}")
-
-
-
-    """
-    # Code to re-base to Sunday week start
-    #    - See equivalent German/Poland hub code, lines 142-153
-
+    # 5. Validate date alignment (Sunday-Saturday epi week)
     weekday_to_sun_based = {i: i + 2 if i != 6 else 1 for i in range(7)}  # Sun=1, Mon=2, ..., Sat=7
 
-    # for x week ahead targets, weekday(target_end_date) should be a Sat
-    if weekday_to_sun_based[target_end_date.weekday()] != 7:  # Sat
+    # 5.1 for x week ahead targets, weekday(target_end_date) should be a Sat
+    if weekday_to_sun_based[target_end_date.weekday()] != 7:
        error_messages.append(f"target_end_date was not a Saturday: {target_end_date}. row={row}")
        return error_messages  # terminate - depends on valid target_end_date
+   
+    # 5.2 Forecast date should always be Mon
+    if abs(weekday_to_sun_based[forecast_date.weekday()]) != 2:
+            error_messages.append(f"Error > forecast_date was not a Monday, row={row}")
 
-    # for x week ahead targets, ensure 1-week ahead forecast is for next Sun
+    # 5.3 For x week ahead targets, ensure 1-week ahead forecast is for next Sat
     #   - set exp_target_end_date and then validate it
     weekday_diff = datetime.timedelta(days=(abs(weekday_to_sun_based[target_end_date.weekday()] -
                                                 weekday_to_sun_based[forecast_date.weekday()])))
-
-    # Forecast date should always be Mon (1) submission date
-    if weekday_to_sun_based[forecast_date.weekday()] != 1:  # Mon
-        delta_days = weekday_diff + datetime.timedelta(days=(7 * step_ahead_increment))
-        exp_target_end_date = forecast_date + delta_days
+    delta_days = weekday_diff + datetime.timedelta(days=(7 * step_ahead_increment))
+    exp_target_end_date = forecast_date + delta_days
 
     if target_end_date != exp_target_end_date:
         error_messages.append(f"Error > target_end_date was not the expected Sunday. forecast_date = {forecast_date}, "
                                   f"target_end_date={target_end_date}. Expected target end date = {exp_target_end_date}, "
                                   f"row={row}")
 
-    """
     # 6. Check "scenario" column
-    scenario = row[column_index_dict['scenario']]
-    valid_scenario = list(["forecast", "scenario"])
-    if scenario not in valid_scenario:
-        error_messages.append(f"Error > invalid scenario: must be either 'forecast' or 'scenario': {scenario!r}. row={row}")
+    scenario_id = row[column_index_dict['scenario_id']]
+    if scenario_id not in VALID_SCENARIO_ID:
+        error_messages.append(f"Error > invalid scenario: must be either 'forecast' or a given scenario ID: {scenario_id!r}. row={row}")
 
     # done!
     return error_messages

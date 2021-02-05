@@ -3,10 +3,9 @@
 # modified: Jan 2021, Kath S
 
 # This file creates a template data frame to store the following quantities:
-# - last two observed values of cumulative and incident deaths on a weekly and daily scale (-1 and 0 day/week ahead "forecasts")
-# - 1 through 30 day and 1 through 4 week ahead forecasts of incident and cumulative deaths.
+# - 1 through 4 week ahead forecasts of incident case + death.
 # 
-# Weekly forecasts are Mon-Sun
+# Weekly forecasts are Sun-Sat with submission (forecast_date) on Mon
 
 
 # define the date on which forecasts are generated:
@@ -15,10 +14,10 @@ forecast_date <- as.Date("2021-02-01")
 locations <- read.csv("template/locations_eu.csv")
 
 dat <- data.frame(
-  scenario = "EXAMPLE",
+  scenario_id = "EXAMPLE",
   forecast_date = forecast_date,
   target = "4 wk ahead inc case",
-  target_end_date = forecast_date + 6,
+  target_end_date = forecast_date + 5, # forecast_date = Mon, target = Sat
   location = "EXAMPLE",
   type = "point",
   quantile = NA,
@@ -37,7 +36,7 @@ weekdays(end_dates)
 
 for(loc in 1:nrow(locations)){
   for(t in seq_along(tgs)){
-    new_dat <- data.frame(scenario = "forecast",
+    new_dat <- data.frame(scenario_id = "forecast",
                           forecast_date = forecast_date,
                           target = tgs[t],
                           target_end_date = end_dates[t],
@@ -54,3 +53,57 @@ dat$target_end_date <- as.Date(dat$target_end_date, origin = "1970-01-01")
 dat$forecast_date <- as.Date(dat$forecast_date, origin = "1970-01-01")
 
 write.csv(dat, file = paste0("data-processed/Template-ExampleModel/", forecast_date, "-Template-ExampleModel.csv"), row.names = FALSE)
+write.csv(dat, file = paste0("template/", forecast_date, "-Template-ExampleModel.csv"), row.names = FALSE)
+
+
+# Submission dates & epiweeks ------------------------------------
+
+forecast_date <- tibble::tibble(
+  forecast_date	= seq.Date(as.Date("2021-02-01"), as.Date("2022-01-02"), by = 7),
+  epidemic_week	= paste0(lubridate::year(forecast_date), "-", "ew", lubridate::epiweek(forecast_date)),
+  forecast_1_wk_ahead_start = forecast_date - 1,
+  forecast_1_wk_ahead_end = forecast_1_wk_ahead_start + 6)
+write.csv(forecast_date, file = paste0("template/forecast-dates.csv"), row.names = FALSE)
+
+
+# Daily to epiweek conversion ---------------------------------------------
+
+library(magrittr)
+
+epiweeks <- tibble::tibble(
+    date = seq.Date(as.Date("2019-12-29"), as.Date("2022-01-08"), by = 1),
+    epi_week	= paste0("ew", lubridate::epiweek(date)),
+    epi_year = ifelse(weekdays(date) == "Sunday", lubridate::year(date), NA)) %>%
+  tidyr::fill(epi_year, .direction = "down") %>%
+  dplyr::mutate(epi_week = paste0(epi_year, "_", epi_week),
+                epi_year = NULL)
+write.csv(epiweeks, file = paste0("template/date-to-epiweek.csv"), row.names = FALSE)
+
+
+# Get EU + EFTA + UK country names + codes ---------------------------------------------
+
+# 
+# packages: countrycode eurostat dplyr readr
+
+library(dplyr)
+
+countries <- eurostat::eu_countries %>%
+  bind_rows(eurostat::efta_countries) %>%
+  rename(country = name, eurostat = code) %>%
+  mutate(country_code = countrycode::countrycode(eurostat, "eurostat", "iso3c")) %>%
+  select(country, iso3c = country_code)
+
+readr::write_csv(countries, "template/locations_eu.csv")
+
+
+
+
+
+
+
+
+
+
+
+
+
