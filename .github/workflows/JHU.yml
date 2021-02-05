@@ -1,0 +1,35 @@
+name: "JHU"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 12 * * *"
+  
+jobs:
+  get_jhu:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        fetch-depth: 0 
+
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install requirenments
+      run: pip3 install pandas
+    
+    - name: JHU Truth
+      run: python3 ./code/auto_download/jhu_download.py
+
+    - name: Commit files
+      env:
+        AUTH: ${{ secrets.GITHUBTOKEN }}
+      run: |
+        git config user.email "action@github.com"
+        git config user.name "GitHub Action - JHU"
+        git add --all
+        git commit -m "JHU - daily"
+        git push 
+        echo "pushed to github"
