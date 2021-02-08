@@ -15,26 +15,26 @@ for target in ['Deaths', 'Cases']:
 
     # contains data from all countries
     df = pd.read_csv(source_dict[target])
-    
-    # EU countries
+
+    # countries
     df = df[df['Country/Region'].isin(locs.location_name)]
-    
+
     # drop provinces etc. (e.g. Bermuda)
     df = df[df['Province/State'].isnull()].copy()
-    
+
     # reformat
     df.drop(columns=['Province/State', 'Lat', 'Long'], inplace=True)
     df.rename(columns={'Country/Region':'location_name'}, inplace=True)
     df = pd.melt(df, id_vars=['location_name'], var_name='date')
     df.date = pd.to_datetime(df.date)
-    
+
     # add location code
     df = locs[['location', 'location_name']].merge(df, how='right')
-    
+
     # compute incidence
     df.value = df.groupby('location').value.diff()
     df.dropna(inplace=True)
     df.value = df.value.astype(int)
-    
+
     # export to csv
     df.to_csv('data-truth/JHU/truth_JHU-Incident {}.csv'.format(target), index=False)
