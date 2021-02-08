@@ -1,0 +1,98 @@
+from pathlib import Path
+import pandas as pd
+import numpy as np
+
+def next_monday(date):
+    return pd.date_range(start=date, end=date + pd.offsets.Day(6), freq='W-MON')[0]
+
+def get_relevant_dates(dates):
+    wds = pd.Series(d.day_name() for d in dates)
+    next_mondays = pd.Series(next_monday(d) for d in dates)
+    relevant_dates = []
+    
+    for day in ['Monday', 'Sunday', 'Saturday', 'Friday', "Thursday", "Wednesday", "Tuesday"]:
+        relevant_dates.extend(dates[(wds == day) &
+                                   ~pd.Series(n in relevant_dates for n in next_mondays) &
+                                   ~pd.Series(n in relevant_dates for n in (next_mondays - pd.offsets.Day(1))) &
+                                   ~pd.Series(n in relevant_dates for n in (next_mondays - pd.offsets.Day(2))) &
+                                   ~pd.Series(n in relevant_dates for n in (next_mondays - pd.offsets.Day(3))) &
+                                   ~pd.Series(n in relevant_dates for n in (next_mondays - pd.offsets.Day(4))) &
+                                   ~pd.Series(n in relevant_dates for n in (next_mondays - pd.offsets.Day(5)))
+                                   ])
+    return [str(r.date()) for r in relevant_dates] # return as strings
+
+path = Path('../data-processed')
+
+# forecasts_to_exclude = pd.read_csv('../data/forecasts_to_exclude.csv').filename.to_list()
+# models_to_exclude = pd.read_csv('../data/models_to_exclude.csv').model.to_list()
+
+models = [f.name for f in path.iterdir() if not f.name.endswith('.csv')]
+# models = [m for m in models if m not in models_to_exclude]
+
+VALID_TARGETS = [f"{_} wk ahead inc death" for _ in range(-1, 5)] + \
+                [f"{_} wk ahead inc case" for _ in range(-1, 5)]
+
+VALID_QUANTILES = [0.025, 0.25, 0.75, 0.975]
+
+dfs = []
+for m in models:
+    p = path/m
+    forecasts = [f.name for f in p.iterdir() if '.csv' in f.name]
+    available_dates = pd.Series(pd.to_datetime(filename[:10]) for filename in forecasts)
+    relevant_dates = get_relevant_dates(available_dates)
+    relevant_forecasts = [f for f in forecasts if f[:10] in relevant_dates]
+    for f in relevant_forecasts:
+        df_temp = pd.read_csv(path/m/f)
+        df_temp['model'] = m
+        dfs.append(df_temp)
+
+df = pd.concat(dfs)
+df.forecast_date = pd.to_datetime(df.forecast_date)
+df.target_end_date = pd.to_datetime(df.target_end_date)
+
+df = df[df.target.isin(VALID_TARGETS) & 
+        (df['quantile'].isin(VALID_QUANTILES) | (df.type=='point') | (df.type=='observed'))].reset_index(drop=True)
+
+df['timezero'] = df.forecast_date.apply(next_monday)
+
+df = df[['scenario','model','location','forecast_date','timezero','target',
+         'target_end_date','type','quantile','value']].sort_values(
+    ['scenario', 'model', 'forecast_date', 'target_end_date', 'location', 'target', 'type', 'quantile']).reset_index(drop=True)
+
+
+### Adding last observations
+
+df['saturday0'] = df.timezero - pd.to_timedelta('2 days')
+df['merge_target'] = 'inc_' + df.target.str.split().str[-1]
+
+truth = pd.read_csv('truth_to_plot.csv')
+truth.date = pd.to_datetime(truth.date)
+
+truth = pd.melt(truth, id_vars=['date', 'location', 'location_name'], value_vars=['inc_death', 'inc_case'], 
+               var_name='merge_target', value_name='truth')[['date', 'location', 'merge_target', 'truth']]
+
+df = df.merge(truth, left_on=['location', 'saturday0', 'merge_target'], 
+              right_on=['location', 'date', 'merge_target'], how='left')
+
+# find 'forecast groups' without 0 wk ahead
+temp = df.groupby(['scenario', 'model', 'location', 'saturday0', 'merge_target']).filter(lambda x: ~x.target.str.startswith('0 wk').any())
+
+# reuse first entry in each 'forecast group'
+temp = temp.groupby(['scenario', 'model', 'location', 'saturday0', 'merge_target']).first().reset_index()
+
+# adjust relevant cells
+temp.type = 'observed'
+temp.loc[:, 'quantile'] = np.nan
+temp.target = '0 wk ahead ' + temp.merge_target.replace('_', ' ', regex=True)
+temp.value = temp.truth
+temp.target_end_date = temp.saturday0
+
+# concat newly added last observed values (0 wk ahead)
+df = pd.concat([df, temp])
+
+df = df.sort_values(['scenario', 'target_end_date', 'location', 'model', 'target', 'type', 'quantile']).reset_index(drop=True)
+
+
+df = df[["scenario", "model", "location", "forecast_date", "timezero", "target", "target_end_date", "type", "quantile", "value"]]
+
+df.to_csv('forecasts_to_plot.csv', index=False)
