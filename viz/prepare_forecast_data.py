@@ -66,7 +66,7 @@ df = df[['scenario','model','location','forecast_date','timezero','target',
 df['saturday0'] = df.timezero - pd.to_timedelta('2 days')
 df['merge_target'] = 'inc_' + df.target.str.split().str[-1]
 
-truth = pd.read_csv('truth_to_plot.csv')
+truth = pd.read_csv('viz/truth_to_plot.csv')
 truth.date = pd.to_datetime(truth.date)
 
 truth = pd.melt(truth, id_vars=['date', 'location', 'location_name'], value_vars=['inc_death', 'inc_case'], 
