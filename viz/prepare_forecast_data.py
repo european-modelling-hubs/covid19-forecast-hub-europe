@@ -1,6 +1,7 @@
 from pathlib import Path
 import pandas as pd
 import numpy as np
+import json
 
 def next_monday(date):
     return pd.date_range(start=date, end=date + pd.offsets.Day(6), freq='W-MON')[0]
@@ -96,3 +97,53 @@ df = df.sort_values(['scenario', 'target_end_date', 'location', 'model', 'target
 df = df[["scenario", "model", "location", "forecast_date", "timezero", "target", "target_end_date", "type", "quantile", "value"]]
 
 df.to_csv('forecasts_to_plot.csv', index=False)
+
+
+### Export to .json
+
+def createForecastDataItem(row):
+    time_ahead, target = row['target'].split(' wk ahead ')
+    target_type = ''
+    if (target == 'inc death'):
+        target_type = 'death'
+    elif (target == 'inc case'):
+        target_type = 'case'
+    else:
+        raise NameError('Invalid target')
+    
+    return {
+        'forecast_date': row['forecast_date'],
+        'location': row['location'],
+        'type': row['type'],
+        'value': row['value'],
+        'timezero': row['timezero'],
+        'model': row['model'],
+        'quantile': row['quantile'],
+        'target': {
+            'type': target_type,
+            'time_ahead': int(time_ahead),
+            'end_date': row['target_end_date']
+        }
+    }
+
+df = df.replace({np.nan: None})
+df.forecast_date = df.forecast_date.astype(str)
+df.target_end_date = df.target_end_date.astype(str)
+df.timezero = df.timezero.astype(str)
+
+result = {}
+for index, row in df.iterrows():
+    item = createForecastDataItem(row)
+    
+    location = item['location']
+    target_type = item['target']['type']
+    if(location not in result):
+        result[location] = {}
+    if(target_type not in result[location]):
+        result[location][target_type] = {'data': [], 'availableDates': []}
+    
+    if(item['forecast_date'] not in result[location][target_type]['availableDates']):
+        result[location][target_type]['availableDates'].append(item['forecast_date'])
+    result[location][target_type]['data'].append(item)
+    
+json.dump(result, open("forecasts_to_plot.json","w"), indent=4, sort_keys=True)
