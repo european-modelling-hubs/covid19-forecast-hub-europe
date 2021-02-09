@@ -143,7 +143,7 @@ for index, row in df.iterrows():
         result[location][target_type] = {'data': [], 'availableDates': []}
     
     if(item['forecast_date'] not in result[location][target_type]['availableDates']):
-        result[location][target_type]['availableDates'].append(item['forecast_date'])
+        result[location][target_type]['availableDates'].append(item['timezero'])
     result[location][target_type]['data'].append(item)
     
 json.dump(result, open("forecasts_to_plot.json","w"), indent=4, sort_keys=True)
