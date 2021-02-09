@@ -792,7 +792,7 @@ forecast,LANL-GrowthRate,AT,2021-01-13,2021-01-18,1 wk ahead inc death,2021-01-2
 forecast,LANL-GrowthRate,AT,2021-01-13,2021-01-18,1 wk ahead inc death,2021-01-23,quantile,0.025,79.975
 forecast,LANL-GrowthRate,AT,2021-01-13,2021-01-18,1 wk ahead inc death,2021-01-23,quantile,0.25,206.0
 forecast,LANL-GrowthRate,AT,2021-01-13,2021-01-18,1 wk ahead inc death,2021-01-23,quantile,0.75,246.0
-forecast,LANL-GrowthRate,AT,2021-01-13,2021-01-18,1 wk ahead inc death,2021-01-23,quantile,0.975,362.14999999999804
+forecast,LANL-GrowthRate,AT,2021-01-13,2021-01-18,1 wk ahead inc death,2021-01-23,quantile,0.975,362.149999999998
 forecast,LANL-GrowthRate,AT,2021-01-06,2021-01-11,2 wk ahead inc case,2021-01-23,point,,12319.0
 forecast,LANL-GrowthRate,AT,2021-01-06,2021-01-11,2 wk ahead inc case,2021-01-23,quantile,0.025,7033.0
 forecast,LANL-GrowthRate,AT,2021-01-06,2021-01-11,2 wk ahead inc case,2021-01-23,quantile,0.25,10239.0
@@ -907,7 +907,7 @@ forecast,LANL-GrowthRate,CY,2021-01-13,2021-01-18,1 wk ahead inc case,2021-01-23
 forecast,LANL-GrowthRate,CY,2021-01-13,2021-01-18,1 wk ahead inc case,2021-01-23,quantile,0.025,272.0
 forecast,LANL-GrowthRate,CY,2021-01-13,2021-01-18,1 wk ahead inc case,2021-01-23,quantile,0.25,1124.0
 forecast,LANL-GrowthRate,CY,2021-01-13,2021-01-18,1 wk ahead inc case,2021-01-23,quantile,0.75,3153.25
-forecast,LANL-GrowthRate,CY,2021-01-13,2021-01-18,1 wk ahead inc case,2021-01-23,quantile,0.975,6517.3999999999905
+forecast,LANL-GrowthRate,CY,2021-01-13,2021-01-18,1 wk ahead inc case,2021-01-23,quantile,0.975,6517.39999999999
 forecast,LANL-GrowthRate,CY,2021-01-13,2021-01-18,1 wk ahead inc death,2021-01-23,point,,16.0
 forecast,LANL-GrowthRate,CY,2021-01-13,2021-01-18,1 wk ahead inc death,2021-01-23,quantile,0.025,7.0
 forecast,LANL-GrowthRate,CY,2021-01-13,2021-01-18,1 wk ahead inc death,2021-01-23,quantile,0.25,12.0
@@ -3389,7 +3389,7 @@ forecast,LANL-GrowthRate,FI,2021-01-13,2021-01-18,3 wk ahead inc case,2021-02-06
 forecast,LANL-GrowthRate,FI,2021-01-13,2021-01-18,3 wk ahead inc case,2021-02-06,quantile,0.75,2303.25
 forecast,LANL-GrowthRate,FI,2021-01-13,2021-01-18,3 wk ahead inc case,2021-02-06,quantile,0.975,3373.1
 forecast,LANL-GrowthRate,FI,2021-01-13,2021-01-18,3 wk ahead inc death,2021-02-06,point,,22.0
-forecast,LANL-GrowthRate,FI,2021-01-13,2021-01-18,3 wk ahead inc death,2021-02-06,quantile,0.025,3.9750000000000094
+forecast,LANL-GrowthRate,FI,2021-01-13,2021-01-18,3 wk ahead inc death,2021-02-06,quantile,0.025,3.97500000000001
 forecast,LANL-GrowthRate,FI,2021-01-13,2021-01-18,3 wk ahead inc death,2021-02-06,quantile,0.25,15.0
 forecast,LANL-GrowthRate,FI,2021-01-13,2021-01-18,3 wk ahead inc death,2021-02-06,quantile,0.75,30.0
 forecast,LANL-GrowthRate,FI,2021-01-13,2021-01-18,3 wk ahead inc death,2021-02-06,quantile,0.975,53.0
@@ -3467,7 +3467,7 @@ forecast,LANL-GrowthRate,GB,2021-01-13,2021-01-18,3 wk ahead inc case,2021-02-06
 forecast,LANL-GrowthRate,GB,2021-01-13,2021-01-18,3 wk ahead inc case,2021-02-06,quantile,0.025,261591.55
 forecast,LANL-GrowthRate,GB,2021-01-13,2021-01-18,3 wk ahead inc case,2021-02-06,quantile,0.25,340275.75
 forecast,LANL-GrowthRate,GB,2021-01-13,2021-01-18,3 wk ahead inc case,2021-02-06,quantile,0.75,493583.25
-forecast,LANL-GrowthRate,GB,2021-01-13,2021-01-18,3 wk ahead inc case,2021-02-06,quantile,0.975,725654.6749999991
+forecast,LANL-GrowthRate,GB,2021-01-13,2021-01-18,3 wk ahead inc case,2021-02-06,quantile,0.975,725654.674999999
 forecast,LANL-GrowthRate,GB,2021-01-13,2021-01-18,3 wk ahead inc death,2021-02-06,point,,7632.0
 forecast,LANL-GrowthRate,GB,2021-01-13,2021-01-18,3 wk ahead inc death,2021-02-06,quantile,0.025,4573.7
 forecast,LANL-GrowthRate,GB,2021-01-13,2021-01-18,3 wk ahead inc death,2021-02-06,quantile,0.25,6433.0
@@ -3872,7 +3872,7 @@ forecast,LANL-GrowthRate,NL,2021-01-13,2021-01-18,3 wk ahead inc death,2021-02-0
 forecast,LANL-GrowthRate,NL,2021-01-13,2021-01-18,3 wk ahead inc death,2021-02-06,quantile,0.025,313.0
 forecast,LANL-GrowthRate,NL,2021-01-13,2021-01-18,3 wk ahead inc death,2021-02-06,quantile,0.25,437.0
 forecast,LANL-GrowthRate,NL,2021-01-13,2021-01-18,3 wk ahead inc death,2021-02-06,quantile,0.75,563.0
-forecast,LANL-GrowthRate,NL,2021-01-13,2021-01-18,3 wk ahead inc death,2021-02-06,quantile,0.975,815.0749999999989
+forecast,LANL-GrowthRate,NL,2021-01-13,2021-01-18,3 wk ahead inc death,2021-02-06,quantile,0.975,815.074999999999
 forecast,LANL-GrowthRate,NL,2021-01-06,2021-01-11,4 wk ahead inc case,2021-02-06,point,,36483.0
 forecast,LANL-GrowthRate,NL,2021-01-06,2021-01-11,4 wk ahead inc case,2021-02-06,quantile,0.025,17438.0
 forecast,LANL-GrowthRate,NL,2021-01-06,2021-01-11,4 wk ahead inc case,2021-02-06,quantile,0.25,28827.0
@@ -4572,7 +4572,7 @@ forecast,LANL-GrowthRate,NL,2021-01-13,2021-01-18,4 wk ahead inc death,2021-02-1
 forecast,LANL-GrowthRate,NL,2021-01-13,2021-01-18,4 wk ahead inc death,2021-02-13,quantile,0.025,276.0
 forecast,LANL-GrowthRate,NL,2021-01-13,2021-01-18,4 wk ahead inc death,2021-02-13,quantile,0.25,408.0
 forecast,LANL-GrowthRate,NL,2021-01-13,2021-01-18,4 wk ahead inc death,2021-02-13,quantile,0.75,568.250000000001
-forecast,LANL-GrowthRate,NL,2021-01-13,2021-01-18,4 wk ahead inc death,2021-02-13,quantile,0.975,971.0749999999989
+forecast,LANL-GrowthRate,NL,2021-01-13,2021-01-18,4 wk ahead inc death,2021-02-13,quantile,0.975,971.074999999999
 forecast,testteam-testmodel,NL,2021-01-13,2021-01-18,4 wk ahead inc case,2021-02-13,point,,44590.0
 forecast,testteam-testmodel,NL,2021-01-13,2021-01-18,4 wk ahead inc case,2021-02-13,quantile,0.025,21313.0
 forecast,testteam-testmodel,NL,2021-01-13,2021-01-18,4 wk ahead inc case,2021-02-13,quantile,0.25,35234.0
