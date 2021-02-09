@@ -107,7 +107,7 @@ def createForecastDataItem(row):
     if (target == 'inc death'):
         target_type = 'death'
     elif (target == 'inc case'):
-        target_type = 'case'
+        target_type = 'cases'
     else:
         raise NameError('Invalid target')
     
