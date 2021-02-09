@@ -26,4 +26,4 @@ df = df[df.date.dt.day_name() == 'Saturday']
 df = df[['date', 'location', 'location_name', 'inc_case', 'inc_death']].sort_values(['date', 'location'])
 
 # export
-df.to_csv('truth_to_plot.csv', index=False)
+df.to_csv('viz/truth_to_plot.csv', index=False)
