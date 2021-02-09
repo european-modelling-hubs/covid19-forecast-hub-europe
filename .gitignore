@@ -1,28 +1,22 @@
 *.DS_Store
+
+# R
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
-.vscode
-# Byte-compiled / optimized / DLL files
-__pycache__/
-covid19-forecast-hub-de.Rproj
-data-raw/IHME/2020_09_02/Reference_hospitalization_all_locs.csv
+*.Rproj
+Rdeps/
 
-#ignore all IHME base files since they are too large
-Reference_hospitalization_all_locs.csv
-Best_mask_hospitalization_all_locs.csv
-Best_masks_hospitalization_all_locs.csv
-Worse_hospitalization_all_locs.csv
-vaccine_fast_elderly_hospitalization_all_locs.csv
-vaccine_fast_hospitalization_all_locs.csv
-no_vaccine_hospitalization_all_locs.csv
-reference_hospitalization_all_locs.csv
-best_mask_hospitalization_all_locs.csv
-best_masks_hospitalization_all_locs.csv
-worse_hospitalization_all_locs.csv
+# python
+__pycache__/
+.here
+env
+*.pyc
+
+# vs
+*.code-workspace
+.vscode
 
 # ignore developement credentials
 /code/auto_download/creds.json
-
-Rdeps/
