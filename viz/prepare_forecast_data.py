@@ -142,7 +142,7 @@ for index, row in df.iterrows():
     if(target_type not in result[location]):
         result[location][target_type] = {'data': [], 'availableDates': []}
     
-    if(item['forecast_date'] not in result[location][target_type]['availableDates']):
+    if(item['timezero'] not in result[location][target_type]['availableDates']):
         result[location][target_type]['availableDates'].append(item['timezero'])
     result[location][target_type]['data'].append(item)
     
