@@ -22,7 +22,7 @@ def get_relevant_dates(dates):
                                    ])
     return [str(r.date()) for r in relevant_dates] # return as strings
 
-path = Path('../data-processed')
+path = Path('data-processed')
 
 # forecasts_to_exclude = pd.read_csv('../data/forecasts_to_exclude.csv').filename.to_list()
 # models_to_exclude = pd.read_csv('../data/models_to_exclude.csv').model.to_list()
