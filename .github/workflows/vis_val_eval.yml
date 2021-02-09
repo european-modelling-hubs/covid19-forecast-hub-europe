@@ -36,11 +36,11 @@ jobs:
         python3 ./viz/prepare_truth_data.py
         python3 ./viz/prepare_forecast_data.py
         
-    - name: Validation
-      run: |
-        cd ./code/validation
-        python3 code/validation/get_commit_dates.py
-        python3 code/validate_truth.py
+#     - name: Validation
+#       run: |
+#         cd ./code/validation
+#         python3 code/validation/get_commit_dates.py
+#         python3 code/validate_truth.py
 
     - name: Commit files
       env:
