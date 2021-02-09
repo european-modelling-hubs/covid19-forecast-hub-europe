@@ -33,40 +33,23 @@ jobs:
 
     - name: Visualization
       run: |
-        cd ./app_forecasts_de/code
-        python3 ./data_preparation.py
-        python3 ./prepare_truth_data.py
-        python3 ./add_last_observed.py
-        cd ../../code/visualization
-        Rscript ./plot_current_forecasts.R	
-        cd ../../
+        # python3 app_forecasts/code/data_preparation.py
+        # python3 app_forecasts/code/prepare_truth_data.py
+        # python3 app_forecasts/code/add_last_observed.py
         
     - name: Validation
       run: |
         cd ./code/validation
-        python3 ./get_commit_dates.py
-        #python3 ./validate_truth.py
-        cd ../../
-
-    - name: Evaluation
-      run: |
-        cd ./evaluation
-        Rscript ./evaluate_forecasts.R
-        cd ../
+        python3 code/validation/get_commit_dates.py
+        python3 code/validate_truth.py
 
     - name: Commit files
       env:
         AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action - Vis/Val/Eval Update"
-        git remote rm origin
-        git remote add origin https://${AUTH}@github.com/KITmetricslab/covid19-forecast-hub-de.git > /dev/null 2>&1
-        git pull origin master
+        git config user.email "action@github.com"
+        git config user.name "GitHub Action - Vis/Val/Eval Update"
         git add --all
         git commit -m "Daily Vis/Val/Eval update"
-        
-    - name: Push changes
-      run: |
-        git push --quiet --set-upstream origin HEAD:master
+        git push
         echo "pushed to github"
