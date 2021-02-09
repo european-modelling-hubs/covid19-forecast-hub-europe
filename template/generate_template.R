@@ -12,8 +12,8 @@ library(dplyr)
 locations <- eurostat::eu_countries %>%
   bind_rows(eurostat::efta_countries) %>%
   rename(country = name, eurostat = code) %>%
-  mutate(country_code = countrycode::countrycode(eurostat, "eurostat", "iso3c")) %>%
-  select(country, iso3c = country_code)
+  mutate(country_code = countrycode::countrycode(eurostat, "eurostat", "iso2c")) %>%
+  select(country, iso2c = country_code)
 
 readr::write_csv(locations, path = here::here("template/locations_eu.csv"), append = FALSE)
 

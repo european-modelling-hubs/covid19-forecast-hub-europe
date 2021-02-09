@@ -10,7 +10,7 @@ from quantile_io import json_io_dict_from_quantile_csv_file
 #
 
 # get location codes as list
-codes = list(pd.read_csv(here('./template/locations_eu.csv'))['iso3c'])
+codes = list(pd.read_csv(here('./template/locations_eu.csv'))['iso2c'])
 
 # set the range of valid targets
 VALID_TARGET_NAMES = [f"{_} wk ahead inc death" for _ in range(0, 5)] + \
@@ -45,9 +45,9 @@ def validate_quantile_csv_file(csv_fp):
         target_names = VALID_TARGET_NAMES
 
         _, error_messages = json_io_dict_from_quantile_csv_file(
-                csv_fp = ecdc_csv_fp, 
-                valid_target_names = target_names, 
-                codes = codes, 
+                csv_fp = ecdc_csv_fp,
+                valid_target_names = target_names,
+                codes = codes,
                 row_validator = covid19_row_validator,
                 addl_req_cols = ['scenario', 'forecast_date', 'target_end_date'])
 
@@ -85,10 +85,10 @@ def covid19_row_validator(column_index_dict, row, codes):
 
     error_messages = []  # returned value. filled next
 
-    # 1. validate location (ISO-3 code)
+    # 1. validate location (ISO-2 code)
     location = row[column_index_dict['location']]
     if location not in codes:
-        error_messages.append(f"Error > invalid ISO-3 location: {location!r}. row={row}")
+        error_messages.append(f"Error > invalid ISO-2 location: {location!r}. row={row}")
 
     row_type = row[column_index_dict['type']]
     if row_type not in ["observed", "point", "quantile"]:
@@ -130,7 +130,7 @@ def covid19_row_validator(column_index_dict, row, codes):
     if weekday_to_sun_based[target_end_date.weekday()] != 7:
        error_messages.append(f"target_end_date was not a Saturday: {target_end_date}. row={row}")
        return error_messages  # terminate - depends on valid target_end_date
-   
+
     # 5.2 Forecast date should always be Mon
     if weekday_to_sun_based[forecast_date.weekday()] != 2:
             error_messages.append(f"Error > forecast_date was not a Monday, row={row}")
