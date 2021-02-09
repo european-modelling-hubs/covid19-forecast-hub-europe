@@ -2,6 +2,7 @@ import datetime
 import click
 import pandas as pd
 from pathlib import Path
+from pyprojroot import here
 from quantile_io import json_io_dict_from_quantile_csv_file
 
 #
@@ -9,7 +10,7 @@ from quantile_io import json_io_dict_from_quantile_csv_file
 #
 
 # get location codes as list
-codes = list(pd.read_csv('././template/locations_eu.csv')['iso3c'])
+codes = list(pd.read_csv(here('./template/locations_eu.csv'))['iso3c'])
 
 # set the range of valid targets
 VALID_TARGET_NAMES = [f"{_} wk ahead inc death" for _ in range(0, 5)] + \
@@ -21,7 +22,7 @@ VALID_QUANTILES = [0.010, 0.025, 0.050, 0.100, 0.150, 0.200, 0.250, 0.300,
                    0.750, 0.800, 0.850, 0.900, 0.950, 0.975, 0.990]
 
 # set range of valid scenario IDs
-VALID_SCENARIO_ID = ["forecast", "scenario1", "scenario2"] # add new scenarios here
+VALID_SCENARIO_ID = ["forecast"] # add new scenarios here
 
 
 #
@@ -131,18 +132,18 @@ def covid19_row_validator(column_index_dict, row, codes):
        return error_messages  # terminate - depends on valid target_end_date
    
     # 5.2 Forecast date should always be Mon
-    if abs(weekday_to_sun_based[forecast_date.weekday()]) != 2:
+    if weekday_to_sun_based[forecast_date.weekday()] != 2:
             error_messages.append(f"Error > forecast_date was not a Monday, row={row}")
 
     # 5.3 For x week ahead targets, ensure 1-week ahead forecast is for next Sat
     #   - set exp_target_end_date and then validate it
-    weekday_diff = datetime.timedelta(days=(abs(weekday_to_sun_based[target_end_date.weekday()] -
-                                                weekday_to_sun_based[forecast_date.weekday()])))
+    weekday_diff = datetime.timedelta(days=(weekday_to_sun_based[target_end_date.weekday()] -
+                                                weekday_to_sun_based[forecast_date.weekday()]))
     delta_days = weekday_diff + datetime.timedelta(days=(7 * step_ahead_increment))
     exp_target_end_date = forecast_date + delta_days
 
     if target_end_date != exp_target_end_date:
-        error_messages.append(f"Error > target_end_date was not the expected Sunday. forecast_date = {forecast_date}, "
+        error_messages.append(f"Error > target_end_date was not the expected Saturday. forecast_date = {forecast_date}, "
                                   f"target_end_date={target_end_date}. Expected target end date = {exp_target_end_date}, "
                                   f"row={row}")
 

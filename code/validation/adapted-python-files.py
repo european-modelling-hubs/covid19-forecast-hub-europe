@@ -52,6 +52,11 @@ Files changed: <code/validation/...>
  - [x] get_commit_dates.py - UNCHANGED
 
  - [x] cdc_io.py - UNCHANGED
-     - note: some functions are modified/used in quantile_io.py / covid19.py
+     - note: functions used (unchanged) in quantile_io.py / covid19.py
+     - quantile_io.py:
+         from cdc_io import CDC_POINT_ROW_TYPE, CDC_OBSERVED_ROW_TYPE, CDC_QUANTILE_ROW_TYPE, _parse_value 
+         from zoltpy.util import csv_rows_from_json_io_dict
+     - covid19.py
+         from cdc_io import _parse_date
 
 """
