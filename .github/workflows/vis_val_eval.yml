@@ -33,9 +33,8 @@ jobs:
 
     - name: Visualization
       run: |
-        # python3 app_forecasts/code/data_preparation.py
-        # python3 app_forecasts/code/prepare_truth_data.py
-        # python3 app_forecasts/code/add_last_observed.py
+        python3 ./viz/prepare_truth_data.py
+        python3 ./viz/prepare_forecast_data.py
         
     - name: Validation
       run: |
