@@ -28,4 +28,4 @@ jobs:
 
     - name: Verify truth data
       run: |
-        python3 code/auto_download/check_truth.py
+        python3 ./code/auto_download/check_truth.py
