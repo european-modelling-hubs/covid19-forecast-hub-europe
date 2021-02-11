@@ -48,6 +48,6 @@ jobs:
         git config user.email "action@github.com"
         git config user.name "GitHub Action - Vis/Val/Eval Update"
         git add --all
-        git commit -m "Daily Vis/Val/Eval update"
+        git diff-index --quiet HEAD || git commit -m "Daily Vis/Val/Eval update"
         git push
         echo "pushed to github"
