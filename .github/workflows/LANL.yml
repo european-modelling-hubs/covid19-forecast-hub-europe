@@ -1,0 +1,32 @@
+name: "LANL"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * TUE"
+
+jobs:
+  get_lanl:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@master
+    - uses: r-lib/actions/setup-r@v1
+
+    - name: Install system dependencies
+      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
+
+    - name: Install R dependencies
+      run: Rscript -e 'install.packages(c("lubridate", "here", "vroom", "dplyr", "tidyr", "readr", "janitor"))'
+
+    - name: LANL forecasts
+      run: Rscript 'code/auto_download/auto-download-lanl-covid19.r'
+
+    - name: Commit files
+      env:
+        AUTH: ${{ secrets.GITHUBTOKEN }}
+      run: |
+        git config user.email "action@github.com"
+        git config user.name "GitHub Action - ECDC"
+        git add --all
+        git commit -m "LANL - daily"
+        git push
+        echo "pushed to github"
