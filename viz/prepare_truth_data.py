@@ -1,10 +1,10 @@
 import pandas as pd
 from epiweeks import Week, Year
 
-df1 = pd.read_csv('../data-truth/JHU/truth_JHU-Incident Deaths.csv')
+df1 = pd.read_csv('data-truth/JHU/truth_JHU-Incident Deaths.csv')
 df1.rename(columns={'value': 'inc_death'}, inplace=True)
 
-df2 = pd.read_csv('../data-truth/JHU/truth_JHU-Incident Cases.csv')
+df2 = pd.read_csv('data-truth/JHU/truth_JHU-Incident Cases.csv')
 df2.rename(columns={'value': 'inc_case'}, inplace=True)
 
 # merge cases and deaths into one dataframe
@@ -26,4 +26,4 @@ df = df[df.date.dt.day_name() == 'Saturday']
 df = df[['date', 'location', 'location_name', 'inc_case', 'inc_death']].sort_values(['date', 'location'])
 
 # export
-df.to_csv('truth_to_plot.csv', index=False)
+df.to_csv('viz/truth_to_plot.csv', index=False)
