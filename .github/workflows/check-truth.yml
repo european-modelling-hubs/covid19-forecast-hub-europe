@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
     steps:
     - uses: actions/checkout@master
       with:

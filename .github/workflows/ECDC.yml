@@ -7,6 +7,7 @@ on:
 jobs:
   get_ecdc:
     runs-on: ubuntu-20.04
+    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
     steps:
     - uses: actions/checkout@master
     - uses: r-lib/actions/setup-r@v1

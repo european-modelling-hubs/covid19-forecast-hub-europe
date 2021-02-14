@@ -10,11 +10,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
     strategy:
       matrix:
         node-version: [10.2]
-
     steps:
     - uses: actions/checkout@v2
 #     - name: Use Node.js ${{ matrix.node-version }}
