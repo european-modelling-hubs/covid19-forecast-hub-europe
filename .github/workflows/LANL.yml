@@ -25,8 +25,8 @@ jobs:
         AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git config user.email "action@github.com"
-        git config user.name "GitHub Action - ECDC"
+        git config user.name "GitHub Action - LANL"
         git add --all
-        git commit -m "LANL - daily"
+        git commit -m "LANL - weekly"
         git push
         echo "pushed to github"
