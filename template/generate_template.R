@@ -29,11 +29,11 @@ readr::write_csv(locations, path = here::here("template/locations_eu.csv"), appe
 forecast_date <- as.Date("2021-02-01")
 
 dat <- data.frame(
-  scenario_id = "EXAMPLE",
+  scenario_id = "forecast",
   forecast_date = forecast_date,
-  target = "4 wk ahead inc case",
+  target = "1 wk ahead inc case",
   target_end_date = forecast_date + 5, # forecast_date = Mon, target = Sat
-  location = "EXAMPLE",
+  location = "BE",
   type = "point",
   quantile = NA,
   value = 1
@@ -42,12 +42,11 @@ dat <- data.frame(
 tgs <- c(paste(1:4, "wk ahead inc case"),
          paste(1:4, "wk ahead inc death"))
 
-end_dates <- c(forecast_date + c(6, 13, 20, 27),
-               forecast_date + c(6, 13, 20, 27))
+end_dates <- c(forecast_date + c(5, 12, 19, 26),
+               forecast_date + c(5, 12, 19, 26))
+weekdays(end_dates)
 
 quantiles <- c(0.01, 0.025, 1:19/20, 0.975, 0.99)
-
-weekdays(end_dates)
 
 for (loc in 1:nrow(locations)) {
   for (t in seq_along(tgs)) {
@@ -55,7 +54,7 @@ for (loc in 1:nrow(locations)) {
                           forecast_date = forecast_date,
                           target = tgs[t],
                           target_end_date = end_dates[t],
-                          location = locations$iso3c[loc],
+                          location = locations$iso2c[loc],
                           type = c("point", rep("quantile", length(quantiles))),
                           quantile = c(NA, quantiles),
                           value = 1)

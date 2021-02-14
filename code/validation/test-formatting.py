@@ -6,29 +6,16 @@ import pandas as pd
 import numpy as np
 import datetime
 from pathlib import Path
+from pyprojroot import here
 
 sys.path.append(str(Path.cwd().joinpath("code", "validation")))
 import covid19
+from metadata import check_for_metadata, get_metadata_model, output_duplicate_models
 
-# Check for metadata file
-def check_for_metadata(my_path, model=None):
+# set range of valid scenario IDs
+VALID_SCENARIO_ID = ["forecast"] # add new scenarios here
 
-    if model:
-        paths = glob.iglob(my_path + "/" + model + "**/", recursive=False)
-
-    else:
-        paths = glob.iglob(my_path + "**/**/", recursive=False)
-
-    for path in paths:
-        team_model = os.path.basename(os.path.dirname(path))
-        metadata_filename = "metadata-" + team_model + ".txt"
-        txt_files = []
-
-        for metadata_file in glob.iglob(path + "*.txt", recursive=False):
-            txt_files += [os.path.basename(metadata_file)]
-
-        if metadata_filename not in txt_files:
-            print("MISSING ", metadata_filename)
+# replace meta data check
 
 # Check filename date matches forecast date
 def filename_match_forecast_date(filename):
@@ -54,8 +41,22 @@ def filename_match_forecast_date(filename):
 
             else:
                 return None
-
-
+            
+# Check scenario column
+def scenario_id_match(filename):
+    df = pd.read_csv(filename)
+    
+    # check if scenario col is present
+    if 'scenario_id' in list(df):
+        scenario_id = set(list(df['scenario_id']))
+        
+        # error if not valid
+        if scenario_id not in VALID_SCENARIO_ID:
+            return "ERROR: scenario_id must be either 'forecast' or a given scenario ID: %s" % (scenario_id)
+    
+    else:
+        return None
+    
 # Check forecast formatting
 
 def check_formatting(my_path, model=None):
@@ -91,6 +92,14 @@ def check_formatting(my_path, model=None):
                         file_error = [forecast_date_error]
                     else:
                         file_error += [forecast_date_error]
+                        
+               # Check scenario ID is valid if present
+                scenario_id_error = scenario_id_match(filepath)
+                if scenario_id_error is not None:
+                    if file_error == 'no errors':
+                        file_error = [scenario_id_error]
+                    else:
+                        file_error += [scenario_id_error]
 
                 if file_error != 'no errors':
                     output_errors[filepath] = file_error
@@ -120,16 +129,15 @@ def check_formatting(my_path, model=None):
     else:
         print("✓ no errors")
 
-
 def main():
-    my_path = "./data-processed"
+    my_path = str(here('data-processed'))
 
     try:
         model = sys.argv[1]
     except IndexError:
         model = None
-
-    check_for_metadata(my_path, model)
+ 
+    # check_metadata(my_path, model)
     check_formatting(my_path, model)
 
 

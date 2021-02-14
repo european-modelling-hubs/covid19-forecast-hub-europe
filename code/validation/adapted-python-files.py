@@ -6,7 +6,7 @@ Note of files modified for Europe Hub from Germany/Poland Forecast Hub
 
 Major modifications:
  - Use JHU data
- - Alter countries + codes (germany/poland > 32 European countries ISO-3)
+ - Alter countries + codes (germany/poland > 32 European countries ISO-2)
  - Add "scenario" column to forecast file format
  - Filename + forecast_date = Monday, last day of submission
  - Filenames = remove country and mode ("-case" / "-icu" etc)
@@ -23,10 +23,10 @@ Files changed: <code/validation/...>
  - [x] covid19.py - MODIFIED
          - replaced VALID_TARGET_NAMES & FIPS_CODES
          - validate_quantile_csv_file:
-             - replaced fips_codes with 32 ISO-3C
+             - replaced fips_codes with 32 ISO-2C
              - removed args for "country" and "mode", not used
              - add 'scenario' to additional required columns
-         - covid19_row_validator: 
+         - covid19_row_validator:
              - targets: dropped daily, icu/hosp, cumulative
              - validate date alignment:
                  - removed daily targets
@@ -54,7 +54,7 @@ Files changed: <code/validation/...>
  - [x] cdc_io.py - UNCHANGED
      - note: functions used (unchanged) in quantile_io.py / covid19.py
      - quantile_io.py:
-         from cdc_io import CDC_POINT_ROW_TYPE, CDC_OBSERVED_ROW_TYPE, CDC_QUANTILE_ROW_TYPE, _parse_value 
+         from cdc_io import CDC_POINT_ROW_TYPE, CDC_OBSERVED_ROW_TYPE, CDC_QUANTILE_ROW_TYPE, _parse_value
          from zoltpy.util import csv_rows_from_json_io_dict
      - covid19.py
          from cdc_io import _parse_date
