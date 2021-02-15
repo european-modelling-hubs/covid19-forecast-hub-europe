@@ -36,6 +36,18 @@ Files affected:
 Decision: National only, at least initially.
 Rationale: Unclear whether there is capacity among modelling teams to provide subnational forecasts.
 
+Files affected:
+- `template/locations_eu.csv`
+
+### Location format
+
+Decision: ISO-2 format
+
+Files affected:
+- `template/locations_eu.csv`
+- `code/auto_download/auto-download-lanl-covid19.r`
+- `code/validation/quantile_io.py`
+
 ### Frequency of forecasts
 
 Decision: Weekly.
@@ -43,6 +55,8 @@ Rationale: No gain from going less often, and this ensures relevance and timelin
 
 Files affected:
 - `code/validation/covid19.py`
+- `code/validation/test-formatting.py`
+- `code/validation/test-formatting-local.py`
 
 ### File naming
 
