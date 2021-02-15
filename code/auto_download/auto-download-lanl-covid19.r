@@ -98,9 +98,9 @@ combined <- df %>%
   arrange(forecast_date, target, target_end_date, location, type, quantile)
 
 forecast_submission_date <-
-  unique(df$forecast_date - 1) %>%
-  ceiling_date(unit = "week", week_start = 7)
+  unique(df$forecast_date) %>%
+  ceiling_date(unit = "week", week_start = 1)
 
 filename <-
   paste0(paste(forecast_submission_date, model_name, sep = "-"), ".csv")
-vroom_write(df, file.path(processed_dir, filename), delim = ",")
+vroom_write(combined, file.path(processed_dir, filename), delim = ",")
