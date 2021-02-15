@@ -83,9 +83,19 @@ df <- lapply(data_types, function(x) {
   mutate(scenario_id = "forecast",
          target = paste(week_ahead, "wk ahead inc", sub("s$", "", type))) %>%
   pivot_longer(starts_with("q."), names_to = "quantile") %>%
-  mutate(quantile = as.numeric(sub("q\\.", "0.", quantile))) %>%
+  mutate(quantile = as.numeric(sub("q\\.", "0.", quantile)),
+         type = "quantile") %>%
   select(scenario_id, forecast_date = fcst_date, target,
          target_end_date = end_date, location = iso2c, type, quantile, value)
+
+point_forecasts <- df %>%
+  filter(quantile == 0.5) %>%
+  mutate(type = "point",
+         quantile = NA_real_)
+
+combined <- df %>%
+  bind_rows(point_forecasts) %>%
+  arrange(forecast_date, target, target_end_date, location, type, quantile)
 
 forecast_submission_date <-
   unique(df$forecast_date) %>%
@@ -93,4 +103,4 @@ forecast_submission_date <-
 
 filename <-
   paste0(paste(forecast_submission_date, model_name, sep = "-"), ".csv")
-vroom_write(df, file.path(processed_dir, filename), delim = ",")
+vroom_write(combined, file.path(processed_dir, filename), delim = ",")

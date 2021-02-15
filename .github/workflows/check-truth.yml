@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
     steps:
     - uses: actions/checkout@master
       with:
@@ -28,4 +28,4 @@ jobs:
 
     - name: Verify truth data
       run: |
-        python3 code/auto_download/check_truth.py
+        python3 code/validation/check_truth.py

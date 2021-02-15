@@ -7,6 +7,7 @@ on:
 jobs:
   get_lanl:
     runs-on: ubuntu-20.04
+    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
     steps:
     - uses: actions/checkout@master
     - uses: r-lib/actions/setup-r@v1
@@ -25,8 +26,8 @@ jobs:
         AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git config user.email "action@github.com"
-        git config user.name "GitHub Action - ECDC"
+        git config user.name "GitHub Action - LANL"
         git add --all
-        git commit -m "LANL - daily"
+        git commit -m "LANL - weekly"
         git push
         echo "pushed to github"

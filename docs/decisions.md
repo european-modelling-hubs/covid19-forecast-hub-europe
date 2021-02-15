@@ -1,16 +1,5 @@
 # Key decisions and files affected
 
-## Pending decisions
-
-### Location format
-
-- [ ] FIPS (as in the US and Germany), ISO-3 (as in the ECDC data) or NUTS (as per EU data) - tbc
-
-Files affected:
-- `template/locations_eu.csv` [currently using ISO-3]
-
-## Made decisions
-
 ### Submission period
 
 Decision: Thursday to Monday (to be reviewed).
@@ -46,7 +35,7 @@ Decision: ISO-2 format
 Files affected:
 - `template/locations_eu.csv`
 - `code/auto_download/auto-download-lanl-covid19.r`
-- `code/validation/quantile_io.py`
+- `code/validation/quantile_io.py` (only in comment)
 
 ### Frequency of forecasts
 
@@ -80,9 +69,9 @@ Files affected:
 
 ### Truth data
 
-Decision: From ECDC (https://www.ecdc.europa.eu/en/covid-19/data).
+Decision: From JHU (https://github.com/CSSEGISandData/COVID-19).
 
-Rationale: ECDC sponsors this project and therefore it makes sense to use their official data streams. Problem is that the updating schedule is relatively slow so modellers will have to be pointed to other sources.
+Rationale: JHU are a trusted data source that supply daily data (which ECDC currently doesn't).
 
 Files affected:
 - `code/validation/validate_truth.py` [removed]
