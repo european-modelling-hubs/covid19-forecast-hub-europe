@@ -13,8 +13,8 @@ from quantile_io import json_io_dict_from_quantile_csv_file
 codes = list(pd.read_csv(here('./template/locations_eu.csv'))['iso2c'])
 
 # set the range of valid targets
-VALID_TARGET_NAMES = [f"{_} wk ahead inc death" for _ in range(0, 5)] + \
-                     [f"{_} wk ahead inc case" for _ in range(0, 5)]
+VALID_TARGET_NAMES = [f"{_} wk ahead inc death" for _ in range(1, 20)] + \
+                     [f"{_} wk ahead inc case" for _ in range(1, 20)]
 
 # set valid quantiles
 VALID_QUANTILES = [0.010, 0.025, 0.050, 0.100, 0.150, 0.200, 0.250, 0.300,
