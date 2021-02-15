@@ -127,9 +127,7 @@ def covid19_row_validator(column_index_dict, row, codes):
        error_messages.append(f"target_end_date was not a Saturday: {target_end_date}. row={row}")
        return error_messages  # terminate - depends on valid target_end_date
 
-    # 5.2 Forecast date should always be Mon
-    if weekday_to_sun_based[forecast_date.weekday()] != 2:
-            error_messages.append(f"Error > forecast_date was not a Monday, row={row}")
+    # 5.2 Forecast date should always be Mon -- no longer checked
 
     # 5.3 For x week ahead targets, ensure x-week ahead forecast is for Sat
     #   - set exp_target_end_date - remove 1 wk (1 wk ahead is actually 0 wk ahead), then validate it
