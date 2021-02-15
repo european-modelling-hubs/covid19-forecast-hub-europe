@@ -24,11 +24,11 @@ with open(here('./code/validation/check_truth.txt'), 'a', encoding='utf-8') as t
     error_count = 0
 
     for source in ['JHU']:
-        list_of_files = glob.glob('./data-truth/{}/*Incident*.csv'.format(source))
+        list_of_files = glob.glob(str(here() / 'data-truth/{}/*Incident*.csv').format(source))
 
         for file in list_of_files:
            
-            df = pd.read_csv(here(file), parse_dates=['date'])
+            df = pd.read_csv(file, parse_dates=['date'])
           
             latest_date = df.date.max()
             latest_data = df[df.date == latest_date]
