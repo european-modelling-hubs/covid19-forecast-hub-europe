@@ -33,7 +33,6 @@ jobs:
         python3 ./viz/prepare_forecast_data.py
     - name: Get commit dates
       run: |
-        cd ./code/validation
         python3 code/validation/get_commit_dates.py
     - name: Commit files
       env:
