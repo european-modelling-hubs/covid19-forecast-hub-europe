@@ -56,9 +56,12 @@ df = df[df.target.isin(VALID_TARGETS) &
 
 df['timezero'] = df.forecast_date.apply(next_monday)
 
-df = df[['scenario','model','location','forecast_date','timezero','target',
+if 'scenario_id' not in df.columns:
+    df['scenario_id'] = 'forecast'
+
+    df = df[['scenario_id','model','location','forecast_date','timezero','target',
          'target_end_date','type','quantile','value']].sort_values(
-    ['scenario', 'model', 'forecast_date', 'target_end_date', 'location', 'target', 'type', 'quantile']).reset_index(drop=True)
+    ['scenario_id', 'model', 'forecast_date', 'target_end_date', 'location', 'target', 'type', 'quantile']).reset_index(drop=True)
 
 
 ### Adding last observations
@@ -76,10 +79,10 @@ df = df.merge(truth, left_on=['location', 'saturday0', 'merge_target'],
               right_on=['location', 'date', 'merge_target'], how='left')
 
 # find 'forecast groups' without 0 wk ahead
-temp = df.groupby(['scenario', 'model', 'location', 'saturday0', 'merge_target']).filter(lambda x: ~x.target.str.startswith('0 wk').any())
+temp = df.groupby(['scenario_id', 'model', 'location', 'saturday0', 'merge_target']).filter(lambda x: ~x.target.str.startswith('0 wk').any())
 
 # reuse first entry in each 'forecast group'
-temp = temp.groupby(['scenario', 'model', 'location', 'saturday0', 'merge_target']).first().reset_index()
+temp = temp.groupby(['scenario_id', 'model', 'location', 'saturday0', 'merge_target']).first().reset_index()
 
 # adjust relevant cells
 temp.type = 'observed'
@@ -91,10 +94,10 @@ temp.target_end_date = temp.saturday0
 # concat newly added last observed values (0 wk ahead)
 df = pd.concat([df, temp])
 
-df = df.sort_values(['scenario', 'target_end_date', 'location', 'model', 'target', 'type', 'quantile']).reset_index(drop=True)
+df = df.sort_values(['scenario_id', 'target_end_date', 'location', 'model', 'target', 'type', 'quantile']).reset_index(drop=True)
 
 
-df = df[["scenario", "model", "location", "forecast_date", "timezero", "target", "target_end_date", "type", "quantile", "value"]]
+df = df[["scenario_id", "model", "location", "forecast_date", "timezero", "target", "target_end_date", "type", "quantile", "value"]]
 
 df.to_csv('viz/forecasts_to_plot.csv', index=False)
 
