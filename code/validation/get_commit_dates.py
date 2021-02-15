@@ -1,7 +1,8 @@
 import git
+from pyprojroot import here
 import pandas as pd
 
-repo = git.Repo("../../")
+repo = git.Repo(str(here()))
 tree = repo.tree()
 
 commit_dates = pd.DataFrame(columns=['filename', 'first_commit', 'latest_commit'])
@@ -13,4 +14,4 @@ for blob in tree.traverse():
                                                str(pd.to_datetime(commits[-1].committed_date, unit='s').date()), # first commit
                                                str(pd.to_datetime(commits[0].committed_date, unit='s').date())] # latest commit
         
-commit_dates.to_csv('commit_dates.csv', index=False)
+commit_dates.to_csv(here('./code/validation/commit_dates.csv'), index=False)
