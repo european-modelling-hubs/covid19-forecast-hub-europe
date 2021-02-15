@@ -42,10 +42,11 @@ def scenario_id_match(filename):
     # check if scenario col is present
     if 'scenario_id' in list(df):
         scenario_id = set(list(df['scenario_id']))
+        unknown_scenarios = scenario_id.difference(VALID_SCENARIO_ID)
         
         # error if not valid
-        if scenario_id not in VALID_SCENARIO_ID:
-            return "ERROR: scenario_id must be either 'forecast' or a given scenario ID: %s" % (scenario_id)
+        if len(unknown_scenarios) > 0:
+            return "ERROR: scenario_id must be either 'forecast' or a given scenario ID. Failing entries: %s" % (unknown_scenarios)
     
     else:
         return None
@@ -98,7 +99,7 @@ def check_formatting(my_path, model=None):
                     output_errors[filepath] = file_error
                 else:
                     # add to previously checked files
-                    current_time = datetime.now()
+                    current_time = datetime.datetime.now()
                     df = df.append({'file_path': filepath,
                                     'validation_date': current_time}, ignore_index=True)
 
