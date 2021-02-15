@@ -1,0 +1,14 @@
+team_name: Template Example COVID-19 Working Group
+model_name: Example-Model
+model_abbr: Template-ExampleModel
+model_contributors: Anon A. Anon(Example Institute)
+website_url: https://github.com/epiforecasts
+license: mit
+team_model_designation: primary
+methods: A line of methods text
+team_funding: ECDC
+data_inputs: JHU CSSE (confirmed cases; reported fatalities)
+citation: 
+methods_long: "This is a county-level metapopulation model with stochastic SEIR disease\
+  \  dynamics. This model incorporates uncertainty in epidemiological parameters \
+  \ and the effectiveness of state-wide intervention policies..."

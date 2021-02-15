@@ -20,7 +20,7 @@ OBS_PREDICTION_CLASS = "obs"
 # quantile csv I/O
 
 REQUIRED_COLUMNS = ('location', 'target', 'type', 'quantile', 'value')
-POSSIBLE_COLUMNS = ['location', 'target', 'type', 'quantile', 'value', 'target_end_date', 'forecast_date', 'location_name']
+POSSIBLE_COLUMNS = ['location', 'target', 'type', 'quantile', 'value', 'target_end_date', 'forecast_date', 'location_name', 'scenario_id']
 
 
 #
@@ -37,7 +37,7 @@ POSSIBLE_COLUMNS = ['location', 'target', 'type', 'quantile', 'value', 'target_e
 # json_io_dict_from_quantile_csv_file()
 #
 
-def json_io_dict_from_quantile_csv_file(csv_fp, valid_target_names, fips_codes, row_validator=None, addl_req_cols=()):
+def json_io_dict_from_quantile_csv_file(csv_fp, valid_target_names, codes, row_validator=None, addl_req_cols=()):
     """
     Utility that validates and extracts the two types of predictions found in quantile CSV files (PointPredictions and
     QuantileDistributions), returning them as a "JSON IO dict" suitable for loading into the database (see
@@ -56,6 +56,7 @@ def json_io_dict_from_quantile_csv_file(csv_fp, valid_target_names, fips_codes, 
     :param csv_fp: an open quantile csv file-like object. the quantile CSV file format is documented at
         https://docs.zoltardata.com/
     :param valid_target_names: list of strings of valid targets to validate against
+    :param codes: unit codes i.e. location codes (e.g. FIPS in US, ISO-2 in EU)
     :param row_validator: an optional function of these args that is run to perform additional project-specific
         validations. returns a list of `error_messages`.
         - column_index_dict: as returned by _validate_header(): a dict that maps column_name -> its index in header (row)
@@ -67,7 +68,7 @@ def json_io_dict_from_quantile_csv_file(csv_fp, valid_target_names, fips_codes, 
         if there were errors
     """
     # load and validate the rows (validation step 1/2). error_messages is one of the the return values (filled next)
-    rows, error_messages = _validated_rows_for_quantile_csv(csv_fp, valid_target_names, fips_codes, row_validator, addl_req_cols)
+    rows, error_messages = _validated_rows_for_quantile_csv(csv_fp, valid_target_names, codes, row_validator, addl_req_cols)
 
     if error_messages:
         return None, error_messages  # terminate processing b/c we can't proceed to step 1/2 with invalid rows
@@ -113,9 +114,9 @@ def json_io_dict_from_quantile_csv_file(csv_fp, valid_target_names, fips_codes, 
     for prediction_dict in prediction_dicts:
         unit_name = prediction_dict['unit']
         target_name = prediction_dict['target']
-        
-        # Hardcodeded way around problem wit -1 and 0
-        
+
+        # Hardcoded way around problem with -1 and 0
+
         prediction_class = prediction_dict['class']
         loc_targ_to_pred_classes[(unit_name, target_name)].append(prediction_class)
         if prediction_dict['class'] == QUANTILE_PREDICTION_CLASS:
@@ -187,7 +188,7 @@ def _validated_rows_for_quantile_csv(csv_fp, valid_target_names, fips_codes,  ro
         is_point_row = (row_type == CDC_POINT_ROW_TYPE.lower())
         is_observed_row = (row_type == CDC_OBSERVED_ROW_TYPE.lower())
         is_quantile_row = (row_type == CDC_QUANTILE_ROW_TYPE.lower())
-        
+
         if is_observed_row:
             is_point_row = is_observed_row
        # print(is_observed_row)
@@ -203,7 +204,7 @@ def _validated_rows_for_quantile_csv(csv_fp, valid_target_names, fips_codes,  ro
                                (isinstance(value, datetime.date)) or
                                (not math.isfinite(value))):  # inf, nan
             error_messages.append(f"entries in the `value` column must be an int or float: {value}. row={row}")
-            
+
         elif is_observed_row and ((value is None) or
                                (isinstance(value, datetime.date)) or
                                (not math.isfinite(value))):   # inf, nan
@@ -233,12 +234,12 @@ def _validate_header(header, addl_req_cols):
     required_columns = list(REQUIRED_COLUMNS)
     required_columns.extend(addl_req_cols)
     counts = [header.count(required_column) == 1 for required_column in required_columns]
-    
+
     for elem in header:
         if elem not in POSSIBLE_COLUMNS:
             raise RuntimeError(f"invalid header. contains invalid column. column={elem}, "
                                 f"possible_columns={POSSIBLE_COLUMNS}")
-    
+
 
     if not all(counts):
         raise RuntimeError(f"invalid header. did not contain the required columns. header={header}, "
