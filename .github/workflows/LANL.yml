@@ -2,7 +2,7 @@ name: "LANL"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * TUE"
+    - cron: "0 0 * * *"
 
 jobs:
   get_lanl:
@@ -28,6 +28,5 @@ jobs:
         git config user.email "action@github.com"
         git config user.name "GitHub Action - LANL"
         git add --all
-        git commit -m "LANL - weekly"
+        git commit -m "LANL - weekly" || echo "No changes to commit"
         git push
-        echo "pushed to github"
