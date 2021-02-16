@@ -3,9 +3,9 @@
 We are aggregating forecasts of new cases and deaths due to Covid-19 over the next four weeks in countries across Europe and the UK.
 
 ##### Latest forecasts
-* See the current forecasts [here //TBC]()
-* We publish an evaluation of current forecasts [here //TBC]()
-* Raw forecast files are in the `data-processed` folder
+* View the [current forecasts](https://covid19forecasthub.eu/visualisation)
+* We publish a weekly [evaluation](https://covid19forecasthub.eu/reports/) of current forecasts
+* Raw forecast files are in the [data-processed](https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/data-processed) folder
 
 ##### README contents
 - [Quick start](#quick-start)
@@ -20,7 +20,7 @@ This is a brief outline for anyone considering contributing a forecast. For a de
 Before contributing for the first time:
 * Let us know you are [planning to submit](../../wiki/Preparing-to-submit)
 * Create a [team directory](../../wiki/Creating-a-team-directory)
-* Add your [metadata](../../wiki/Meta-data) and a [license](../../wiki/Licensing)
+* Add your [metadata](../../wiki/Metadata) and a [license](../../wiki/Licensing)
 
 #### Forecasting
 We require some forecast parameters so that we can compare and ensemble forecasts. All forecasts should use the following structure:
@@ -29,7 +29,7 @@ We require some forecast parameters so that we can compare and ensemble forecast
 | ----------- | ----------- |
 | Target | Cases and/or deaths |
 | Count | Incident |
-| Geography | EU/UK nations (any/all) |
+| Geography | EU/EFTA/UK nations (any/all) |
 | Frequency | Weekly |
 | Horizon | 1 to 4 weeks |
 
