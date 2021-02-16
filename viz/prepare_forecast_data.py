@@ -24,11 +24,7 @@ def get_relevant_dates(dates):
 
 path = Path('data-processed')
 
-# forecasts_to_exclude = pd.read_csv('../data/forecasts_to_exclude.csv').filename.to_list()
-# models_to_exclude = pd.read_csv('../data/models_to_exclude.csv').model.to_list()
-
 models = [f.name for f in path.iterdir() if not f.name.endswith('.csv')]
-# models = [m for m in models if m not in models_to_exclude]
 
 VALID_TARGETS = [f"{_} wk ahead inc death" for _ in range(1, 4)] + \
                 [f"{_} wk ahead inc case" for _ in range(1, 4)]
@@ -52,7 +48,7 @@ df.forecast_date = pd.to_datetime(df.forecast_date)
 df.target_end_date = pd.to_datetime(df.target_end_date)
 
 df = df[df.target.isin(VALID_TARGETS) & 
-        (df['quantile'].isin(VALID_QUANTILES) | (df.type=='point') | (df.type=='observed'))].reset_index(drop=True)
+        (df['quantile'].isin(VALID_QUANTILES) | (df.type=='point'))].reset_index(drop=True)
 
 df['timezero'] = df.forecast_date.apply(next_monday)
 
@@ -78,11 +74,9 @@ truth = pd.melt(truth, id_vars=['date', 'location', 'location_name'], value_vars
 df = df.merge(truth, left_on=['location', 'saturday0', 'merge_target'], 
               right_on=['location', 'date', 'merge_target'], how='left')
 
-# find 'forecast groups' without 0 wk ahead
-temp = df.groupby(['scenario_id', 'model', 'location', 'saturday0', 'merge_target']).filter(lambda x: ~x.target.str.startswith('0 wk').any())
 
 # reuse first entry in each 'forecast group'
-temp = temp.groupby(['scenario_id', 'model', 'location', 'saturday0', 'merge_target']).first().reset_index()
+temp = df.groupby(['scenario_id', 'model', 'location', 'saturday0', 'merge_target']).first().reset_index()
 
 # adjust relevant cells
 temp.type = 'observed'
