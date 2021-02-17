@@ -1,75 +1,8 @@
-# transform inc truth data to weekly scale
-inc_truth_to_weekly <- function(truth_inc0){
-  truth_inc0 <- subset(truth_inc0, nchar(location) == 2)
-  truth_inc0$epi_week <- MMWRweek::MMWRweek(truth_inc0$date)$MMWRweek
-  truth_inc <- aggregate(truth_inc0$value,
-                         by = list(epi_week = truth_inc0$epi_week, location = truth_inc0$location),
-                         FUN = sum)
-  colnames(truth_inc)[3] <- "value"
-  truth_inc <- merge(truth_inc,
-                     truth_inc0[weekdays(truth_inc0$date) == "Saturday", c("date", "epi_week", "location", "location_name")],
-                     by = c("epi_week", "location"))
-  truth_inc <- truth_inc[order(truth_inc$date), ]
-  return(truth_inc)
-}
-
 # read in week-ahead forecasts from a file
 read_week_ahead <- function(file){
   dat <- read.csv(file, colClasses = c(location = "character", forecast_date = "Date", target_end_date = "Date"), stringsAsFactors = FALSE)
   return(subset(dat, target %in% c(paste(1:4, "wk ahead inc death"), paste(1:4, "wk ahead cum death"),
                                    paste(1:4, "wk ahead inc case"), paste(1:4, "wk ahead cum case"))))
-}
-
-# extract the date from a file name in our standardized format
-get_date_from_filename <- function(filename){
-  as.Date(substr(filename, start = 1, stop = 10))
-}
-
-# get the date of the next Monday following after a given date
-next_monday <- function(date){
-  nm <- rep(NA, length(date))
-  for(i in seq_along(date)){
-    nm[i] <- date[i] + (0:6)[weekdays(date[i] + (0:6)) == "Monday"]
-  }
-  return(as.Date(nm, origin = "1970-01-01"))
-}
-
-# among a set of forecast dates: choose those which are Mondays and those which are Sundays,
-# Saturdays or Fridays if no forecast is available from Monday (or a day closer to Monday)
-choose_relevant_dates <- function(dates){
-  wds <- weekdays(dates)
-  next_mondays <- next_monday(dates)
-  relevant_dates <- c()
-  for(day in c("Monday", "Sunday", "Saturday", "Friday")){
-    relevant_dates <- c(relevant_dates, dates[wds == day &
-                                                !(next_mondays %in% relevant_dates) &
-                                                !((next_mondays - 1) %in% relevant_dates) &
-                                                !((next_mondays - 2) %in% relevant_dates)
-                                              ])
-  }
-  relevant_dates <- as.Date(relevant_dates, origin = "1970-01-01")
-  return(as.Date(relevant_dates, origin = "1970-01-01"))
-}
-
-# read all week ahead forecasts from one model (chooses relevant files submitted on Mondays, Sundays and Saturdays)
-read_all_week_ahead <- function(dir){
-  files0 <- list.files(dir)
-  files0 <- files0[grepl("2020-", files0)]
-  dates <- get_date_from_filename(files0)
-  relevant_dates <- choose_relevant_dates(dates)
-  files <- files0[dates %in% relevant_dates]
-
-    dat <- read_week_ahead(paste0(dir, "/", files[1]))
-    cat(paste("Loading file", 1, " / ", length(files), "\n"))
-
-    for (i in 2:length(files)) { #
-      dat <- rbind(dat,
-                   read_week_ahead(paste0(dir, "/", files[i])))
-
-      # Increment the progress bar, and update the detail text.
-      cat(paste("Loading file", i, " / ", length(files), "\n"))
-    }
-  return(dat)
 }
 
 # get the subset of a forecast file needed for plotting:
@@ -80,7 +13,7 @@ subset_forecasts_for_plot <- function(forecasts, forecast_date = NULL, target_ty
     grepl(horizon, forecasts$target) & grepl(target_type, forecasts$target)
   }
   check_forecast_date <- if(is.null(forecast_date)) TRUE else forecasts$forecast_date == forecast_date
-
+  
   forecasts <- forecasts[check_target &
                            check_forecast_date &
                            forecasts$location == location, ]
@@ -88,16 +21,17 @@ subset_forecasts_for_plot <- function(forecasts, forecast_date = NULL, target_ty
   return(forecasts)
 }
 
+# helper function to deterine y-limit
 determine_ylim <- function(forecasts, forecast_date = NULL, target_type, horizon, location, truth, start_at_zero = TRUE){
   forecasts <- subset_forecasts_for_plot(forecasts = forecasts, forecast_date = forecast_date,
                             target_type = target_type, horizon = horizon, location = location)
   lower <- if(start_at_zero){
     0
   }else{
-    0.95*min(c(forecasts$value, truth$value))
+    0.95*min(c(forecasts$value, truth[, target_type]))
   }
   truth <- truth[truth$location == location, ]
-  ylim <- c(lower, 1.05* max(c(forecasts$value, truth$value)))
+  ylim <- c(lower, 1.05* max(c(forecasts$value, truth[, target_type])))
 }
 
 # create an empty plot to which forecasts can be added:
@@ -155,10 +89,10 @@ draw_points <- function(forecasts, target_type, horizon, forecast_date, location
 }
 
 # add smaller points for truths:
-draw_truths <- function(truth, location){
+draw_truths <- function(truth, location, target_type){
   truth <- truth[weekdays(truth$date) == "Saturday" &
                    truth$location == location, ]
-  points(truth$date, truth$value, pch = 20, type = "b")
+  points(truth$date, truth[, target_type], pch = 20, type = "b")
 }
 
 # wrap it all up into one plotting function:
@@ -171,7 +105,7 @@ draw_truths <- function(truth, location){
 # forecast_date: the date at which forecasts were issued; if specified, 1 though 4 wk ahead forecasts are shown
 # Has to be NULL if horizon is specified
 # location: the location for which to plot forecasts
-# truth: a truth data set in the standard format; has to be chosen to match target_type
+# truth: the truth data set
 # levels_coverage: which intervals are to be shown? Defaults to all, c(0.5, 0.95) is a reasonable
 # parsimonious choice.
 # start, end: beginning and end of the time period to plot
@@ -212,5 +146,5 @@ plot_forecast <- function(forecasts,
   draw_points(forecasts = forecasts, target_type = target_type,
               horizon = horizon, forecast_date = forecast_date,
               location = location, col = col_point)
-  draw_truths(truth = truth, location = location)
+  draw_truths(truth = truth, location = location, target_type = target_type)
 }
