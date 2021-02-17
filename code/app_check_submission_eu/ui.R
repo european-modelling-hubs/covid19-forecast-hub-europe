@@ -9,20 +9,17 @@
 
 library(shiny)
 
-# Define UI for application that draws a histogram
+# Define UI
 shinyUI(fluidPage(
 
   # Application title
-  titlePanel("Visualize your forecasts prior to submission (German and Polish COVID19 Forecast Hub)"),
+  titlePanel("Visualize your forecasts prior to submission (European COVID19 Forecast Hub)"),
 
   # Sidebar with a slider input for number of bins
   sidebarLayout(
     sidebarPanel(
       fileInput("file1", "Choose file to upload", accept = ".csv"),
-      radioButtons("truth_source", "Choose used truth data source",
-                   choices = c("ECDC", "JHU")),
-      uiOutput("inp_select_location"),
-      actionButton("run_checks", "Run submission checks")
+      uiOutput("inp_select_location")
     ),
 
     # Show a plot of the generated distribution
@@ -36,15 +33,11 @@ shinyUI(fluidPage(
       tags$div(
         tags$span(style="color:white", ".")
       ),
-      h4("Result of format checks:"),
-      textOutput("result_checks"),
-      h6("Even if your files pass the check here it is possible that they fail on the github platform.",
-         "This is because certain aspects (e.g. that the file is stored in the correct folder) cannot be",
-         "checked here."
-      ),
       tags$div(
         tags$span(style="color:white", ".")
       ),
+      h6(" Even if your files are displayed correctly here it is possible that they fail the format checks on the GitHub platform. The formal evaluation checks are not run on this site, it serves solely for visualization. Information on how to run local
+         validation checks can be found in the Wiki of or github repository."),
       h4("A few things worth checking:"),
       h6("The following are no requirements for submission and will not be checked after your pull request.",
          "This is just a non-exhaustive list of plausibility checks we have found useful in the past."
@@ -71,7 +64,6 @@ shinyUI(fluidPage(
                   "be closer to the lower than the upper end of your forecast intervals.")
         )
       )
-
     )
   )
 ))
