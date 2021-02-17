@@ -28167,6 +28167,20 @@
                     "value": 38091.0
                 },
                 {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-13",
+                        "time_ahead": 0,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "observed",
+                    "value": 38091.0
+                },
+                {
                     "forecast_date": "2021-02-14",
                     "location": "PL",
                     "model": "USC-SIkJalpha",
@@ -28571,6 +28585,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 55271.77403
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "point",
+                    "value": 37118.5419630156
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 28012.5
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 29299.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 44735.75
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 48232.125
                 },
                 {
                     "forecast_date": "2021-02-14",
@@ -29203,6 +29287,76 @@
                     "value": 58857.18574
                 },
                 {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "point",
+                    "value": 36057.3812233286
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 24581.75
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 25881.5
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 46766.75
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 51471.75
+                },
+                {
                     "forecast_date": "2021-02-14",
                     "location": "PL",
                     "model": "USC-SIkJalpha",
@@ -29763,6 +29917,76 @@
                     "value": 61359.0677
                 },
                 {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "point",
+                    "value": 35163.012802276
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 21512.625
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 22778.5
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 49169.25
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 54683.0
+                },
+                {
                     "forecast_date": "2021-02-14",
                     "location": "PL",
                     "model": "USC-SIkJalpha",
@@ -30180,6 +30404,20 @@
                     "forecast_date": "2021-02-15",
                     "location": "PL",
                     "model": "MIT_CovidAnalytics-DELPHI",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-13",
+                        "time_ahead": 0,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "observed",
+                    "value": 1715.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-02-13",
@@ -30609,6 +30847,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 2130.43133894425
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "point",
+                    "value": 1759.61481481482
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1153.93333333333
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1394.66666666667
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1995.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 2855.7
                 },
                 {
                     "forecast_date": "2021-02-14",
@@ -31311,6 +31619,76 @@
                     "value": 2395.04182182752
                 },
                 {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "point",
+                    "value": 1778.83127572016
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1211.26666666667
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1421.33333333333
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 2074.66666666667
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 2710.2
+                },
+                {
                     "forecast_date": "2021-02-14",
                     "location": "PL",
                     "model": "USC-SIkJalpha",
@@ -31939,6 +32317,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 2579.53511411932
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "point",
+                    "value": 1795.15390946502
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1211.26666666667
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1445.66666666667
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 2113.33333333333
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MOCOS-agent1",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 2747.23333333333
                 },
                 {
                     "forecast_date": "2021-02-14",
