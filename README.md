@@ -41,7 +41,7 @@ We have written more about forecast targets, horizons, and locations in the [gui
 We use Epidemiological Weeks (EW) defined by the [US CDC](https://wwwn.cdc.gov/nndss/document/MMWR_Week_overview.pdf). Each week starts on Sunday and ends on Saturday. We provide more details [here](../../wiki/Targets-and-horizons#date-format), and [templates](../../template) to convert dates to EW weeks (and vice versa).
 
 ###### Truth data
-We base evaluations on country level data from [John Hopkins University](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series).
+We base evaluations on country level data from [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series).
 
 #### Submitting
 Forecasts should be submitted on Monday by opening a pull request in this repository. So that we can evaluate and ensemble forecasts, we ask for a specific file structure and naming format: our wiki contains a detailed [guide](../../wiki/Forecast-format). If you have technical difficulties with submission, try [troubleshooting](../..wiki/Troubleshooting-pull-requests) or get in touch by raising an [issue](../issues).
