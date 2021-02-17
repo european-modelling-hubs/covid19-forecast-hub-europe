@@ -64,7 +64,6 @@ shinyUI(fluidPage(
                   "be closer to the lower than the upper end of your forecast intervals.")
         )
       )
-
     )
   )
 ))

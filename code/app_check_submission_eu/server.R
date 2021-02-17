@@ -7,9 +7,7 @@
 #    http://shiny.rstudio.com/
 #
 
-# setwd("/home/johannes/Documents/Projects/covid19-forecast-hub-europe/code/app_check_submission")
 library(shiny)
-# library(reticulate)
 source("plot_functions.R")
 
 # unix command to change language
@@ -18,17 +16,7 @@ Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 # command that should work cross-platform
 # Sys.setlocale(category = "LC_TIME","English")
 
-local <- TRUE # set to FALSE when deploying
-
-# reticulate::virtualenv_create(envname = "myreticulate",
-#                               python= '/usr/bin/python3')
-# reticulate::virtualenv_install("myreticulate", packages = c( 'datetime','click'))
-# reticulate::use_virtualenv("myreticulate", required = TRUE)
-#
-# # get Python functions:
-# reticulate::source_python("covid19.py")
-# reticulate::source_python("quantile_io.py")
-# reticulate::source_python("cdc_io.py")
+local <- FALSE # set to FALSE when deploying
 
 
 
@@ -40,9 +28,10 @@ if(local){
   dat_truth <- read.csv("https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/viz/truth_to_plot.csv",
                            colClasses = list("date" = "Date"), stringsAsFactors = FALSE)
 }
+# adapt column names for matching with targets
+colnames(dat_truth) <- gsub("inc_", "inc ", colnames(dat_truth))
 
-colnames(dat_truth) <- gsub("inc_", "inc ", colnames(dat_truth)) # for matching with targets
-
+# define colors
 cols_legend <- c("#699DAF", "#D3D3D3")
 
 # Define server logic required to draw a histogram
