@@ -28155,6 +28155,20 @@
                 {
                     "forecast_date": "2021-02-15",
                     "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-13",
+                        "time_ahead": 0,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "observed",
+                    "value": 38091.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
                     "model": "MIT_CovidAnalytics-DELPHI",
                     "quantile": null,
                     "target": {
@@ -28515,6 +28529,76 @@
                     "timezero": "2021-02-08",
                     "type": "quantile",
                     "value": 59914.05
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "point",
+                    "value": 37207.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 33160.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 35971.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 38724.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 41252.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -29219,6 +29303,76 @@
                 {
                     "forecast_date": "2021-02-15",
                     "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "point",
+                    "value": 38513.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 34279.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 37031.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 40014.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 43123.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
                     "model": "MIT_CovidAnalytics-DELPHI",
                     "quantile": null,
                     "target": {
@@ -29849,6 +30003,76 @@
                 {
                     "forecast_date": "2021-02-15",
                     "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "point",
+                    "value": 37508.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 33543.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 35927.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 39014.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 41499.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
                     "model": "MIT_CovidAnalytics-DELPHI",
                     "quantile": null,
                     "target": {
@@ -30403,6 +30627,20 @@
                 {
                     "forecast_date": "2021-02-15",
                     "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-13",
+                        "time_ahead": 0,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "observed",
+                    "value": 1715.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
                     "model": "MIT_CovidAnalytics-DELPHI",
                     "quantile": null,
                     "target": {
@@ -30777,6 +31015,76 @@
                     "timezero": "2021-02-08",
                     "type": "quantile",
                     "value": 2217.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "point",
+                    "value": 1644.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1614.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1634.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1653.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1672.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -31551,6 +31859,76 @@
                 {
                     "forecast_date": "2021-02-15",
                     "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "point",
+                    "value": 1750.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1716.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1739.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1763.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1786.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
                     "model": "MIT_CovidAnalytics-DELPHI",
                     "quantile": null,
                     "target": {
@@ -32247,6 +32625,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 2845.1
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "point",
+                    "value": 1769.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1723.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1751.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1784.0
+                },
+                {
+                    "forecast_date": "2021-02-15",
+                    "location": "PL",
+                    "model": "MIMUW-StochSEIR",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-15",
+                    "type": "quantile",
+                    "value": 1814.0
                 },
                 {
                     "forecast_date": "2021-02-15",
