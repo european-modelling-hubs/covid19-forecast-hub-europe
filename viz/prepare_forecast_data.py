@@ -26,8 +26,8 @@ path = Path('data-processed')
 
 models = [f.name for f in path.iterdir() if not f.name.endswith('.csv')]
 
-VALID_TARGETS = [f"{_} wk ahead inc death" for _ in range(1, 4)] + \
-                [f"{_} wk ahead inc case" for _ in range(1, 4)]
+VALID_TARGETS = [f"{_} wk ahead inc death" for _ in range(1, 5)] + \
+                [f"{_} wk ahead inc case" for _ in range(1, 5)]
 
 VALID_QUANTILES = [0.025, 0.25, 0.75, 0.975]
 
