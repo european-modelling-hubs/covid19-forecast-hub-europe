@@ -1,4 +1,4 @@
-# Generate a template file for cumulative and incident death forecasts, national level
+## Generate a template file for cumulative and incident death forecasts, national level,  and locations
 # Johannes Bracher, May 2020
 # modified: Jan 2021, Kath S
 
@@ -8,67 +8,28 @@
 # packages: countrycode eurostat dplyr readr
 
 library(dplyr)
+library(tidyr)
+library(eurostat)
+
+data(world_bank_pop)
+
+pop <- world_bank_pop %>%
+  filter(indicator == "SP.POP.TOTL") %>%
+  select(iso3c = country, population = `2017`)
 
 locations <- eurostat::eu_countries %>%
   bind_rows(eurostat::efta_countries) %>%
   rename(country = name, eurostat = code) %>%
-  mutate(country_code = countrycode::countrycode(eurostat, "eurostat", "iso2c")) %>%
-  select(country, iso2c = country_code)
+  mutate(location =
+           countrycode::countrycode(eurostat, "eurostat", "iso2c"),
+         iso3c =
+           countrycode::countrycode(eurostat, "eurostat", "iso3c")) %>%
+  left_join(pop, by = "iso3c") %>%
+  select(country, location, population)
 
-readr::write_csv(locations, path = here::here("template/locations_eu.csv"), append = FALSE)
-
-# Template dataframe ------------------------------------------------------
-
-# This file creates a template data frame to store the following quantities:
-# - 1 through 4 week ahead forecasts of incident case + death.
-# 
-# Weekly forecasts are Sun-Sat with submission (forecast_date) on Mon
-
-
-# define the date on which forecasts are generated:
-forecast_date <- as.Date("2021-02-01")
-
-dat <- data.frame(
-  scenario_id = "forecast",
-  forecast_date = forecast_date,
-  target = "1 wk ahead inc case",
-  target_end_date = forecast_date + 5, # forecast_date = Mon, target = Sat
-  location = "BE",
-  type = "point",
-  quantile = NA,
-  value = 1
-)
-
-tgs <- c(paste(1:4, "wk ahead inc case"),
-         paste(1:4, "wk ahead inc death"))
-
-end_dates <- c(forecast_date + c(5, 12, 19, 26),
-               forecast_date + c(5, 12, 19, 26))
-weekdays(end_dates)
-
-quantiles <- c(0.01, 0.025, 1:19/20, 0.975, 0.99)
-
-for (loc in 1:nrow(locations)) {
-  for (t in seq_along(tgs)) {
-    new_dat <- data.frame(scenario_id = "forecast",
-                          forecast_date = forecast_date,
-                          target = tgs[t],
-                          target_end_date = end_dates[t],
-                          location = locations$iso2c[loc],
-                          type = c("point", rep("quantile", length(quantiles))),
-                          quantile = c(NA, quantiles),
-                          value = 1)
-    dat <- rbind(dat, new_dat)
-  }
-}
-
-
-dat$target_end_date <- as.Date(dat$target_end_date, origin = "1970-01-01")
-dat$forecast_date <- as.Date(dat$forecast_date, origin = "1970-01-01")
-
-write.csv(dat, file = here::here("data-processed/Template-ExampleModel", paste0(forecast_date, "-Template-ExampleModel.csv")), row.names = FALSE)
-write.csv(dat, file = here::here("template", paste0(forecast_date, "-Template-ExampleModel.csv")), row.names = FALSE)
-
+readr::write_csv(locations,
+                 file = here::here("data-locations", "locations_eu.csv"),
+                 append = FALSE)
 
 # Submission dates & epiweeks ------------------------------------
 

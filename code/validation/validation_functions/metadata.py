@@ -46,20 +46,22 @@ def validate_metadata_contents(metadata, filepath, cache):
     # if `this_model_is_an_emnsemble` is rpesent, show a warning.
     
     # Check for Required Fields
-    required_fields = ['team_name', 'model_name', 'model_abbr', 'team_abbr', 'model_contributors', 'website_url', 'license', 'team_model_designation', 'methods']
-
-    for field in required_fields:
-        if field not in metadata.keys():
-            is_metadata_error = True
-            metadata_error_output += ["METADATA ERROR: %s missing '%s'" % (filepath, field)]
+    required_fields = ['team_name', 'team_abbr', 'model_name', 'model_contributors', 'model_abbr', 'website_url','license', 'team_model_designation', 'methods']
+    # required_fields = ['team_name', 'team_abbr', 'model_name', 'model_abbr',\
+    #                        'methods', 'team_url', 'license', 'include_in_ensemble_and_visualization']
+    
+    # for field in required_fields:
+    #     if field not in metadata.keys():
+    #         is_metadata_error = True
+    #         metadata_error_output += ["METADATA ERROR: %s missing '%s'" % (filepath, field)]
 
     # Check methods character length (warning not error)
-    if 'methods' in metadata.keys():
-        methods_char_lenth = len(metadata['methods'])
-        if methods_char_lenth > 200:
-            metadata_error_output += [
-                "METADATA WARNING: %s methods is too many characters (%i should be less than 200)" %
-                (filepath, methods_char_lenth)]
+    # if 'methods' in metadata.keys():
+    #     methods_char_lenth = len(metadata['methods'])
+    #     if methods_char_lenth > 200:
+    #         metadata_error_output += [
+    #             "METADATA WARNING: %s methods is too many characters (%i should be less than 200)" %
+    #             (filepath, methods_char_lenth)]
 
     # Check if forecast_startdate is date
     if 'forecast_startdate' in metadata.keys():
@@ -96,12 +98,12 @@ def validate_metadata_contents(metadata, filepath, cache):
         r'(?::\d+)?'  # optional port
         r'(?:/?|[/?]\S+)$', re.IGNORECASE)
 
-    if 'team_url' in metadata.keys():
-        if re.match(regex, str(metadata['team_url'])) is None:
-            is_metadata_error = True
-            metadata_error_output += [
-                "METADATA ERROR: %s 'team_url' field must be a full URL (https://www.example.com) '%s'" %
-                (filepath, metadata[field])]
+    # if 'team_url' in metadata.keys():
+    #     if re.match(regex, str(metadata['team_url'])) is None:
+    #         is_metadata_error = True
+    #         metadata_error_output += [
+    #             "METADATA ERROR: %s 'team_url' field must be a full URL (https://www.example.com) '%s'" %
+    #             (filepath, metadata[field])]
 
     # Validate licenses
     license_df = pd.read_csv('./code/validation/accepted-licenses.csv')
