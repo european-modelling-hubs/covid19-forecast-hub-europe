@@ -13,7 +13,7 @@ from github import Github
 from pathlib import Path
 from pyprojroot import here
 
-from metadata import check_for_metadata, get_metadata_model, output_duplicate_models
+from validation_functions.metadata import check_for_metadata, get_metadata_model, output_duplicate_models
 from validation_functions.forecast_filename import validate_forecast_file_name
 from validation_functions.forecast_date import filename_match_forecast_date
 

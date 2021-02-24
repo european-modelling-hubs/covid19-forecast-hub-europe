@@ -17,7 +17,7 @@ def validate_metadata_contents(metadata, filepath, cache):
     is_metadata_error = False
     metadata_error_output = []
 
-    core = Core(source_file=filepath, schema_files=["schema.yml"])
+    core = Core(source_file=filepath, schema_files=[SCHEMA_FILE])
     core.validate(raise_exception=False, silent=True)
 
     if len(core.validation_errors)>0:
