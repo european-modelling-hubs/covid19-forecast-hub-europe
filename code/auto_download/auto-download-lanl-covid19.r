@@ -78,8 +78,8 @@ df <- lapply(data_types, function(x) {
 }) %>%
   bind_rows() %>%
   filter(!is.na(week_ahead)) %>%
-  rename(country = name) %>%
-  inner_join(country_codes, by = "country") %>%
+  rename(location_name = name) %>%
+  inner_join(country_codes, by = "location_name") %>%
   mutate(scenario_id = "forecast",
          target = paste(week_ahead, "wk ahead inc", sub("s$", "", type))) %>%
   pivot_longer(starts_with("q."), names_to = "quantile") %>%
