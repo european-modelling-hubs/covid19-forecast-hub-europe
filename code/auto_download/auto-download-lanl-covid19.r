@@ -86,7 +86,7 @@ df <- lapply(data_types, function(x) {
   mutate(quantile = as.numeric(sub("q\\.", "0.", quantile)),
          type = "quantile") %>%
   select(scenario_id, forecast_date = fcst_date, target,
-         target_end_date = end_date, location = iso2c, type, quantile, value)
+         target_end_date = end_date, location, type, quantile, value)
 
 point_forecasts <- df %>%
   filter(quantile == 0.5) %>%

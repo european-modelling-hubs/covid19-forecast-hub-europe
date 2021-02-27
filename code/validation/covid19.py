@@ -10,7 +10,7 @@ from quantile_io import json_io_dict_from_quantile_csv_file
 #
 
 # get location codes as list
-codes = list(pd.read_csv(here('./data-locations/locations_eu.csv'))['iso2c'])
+codes = list(pd.read_csv(here('./data-locations/locations_eu.csv'))['location'])
 
 # set the range of valid targets
 VALID_TARGET_NAMES = [f"{_} wk ahead inc death" for _ in range(1, 20)] + \
