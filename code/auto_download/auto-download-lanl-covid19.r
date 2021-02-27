@@ -70,7 +70,7 @@ res <- vapply(names(url), function(x) {
 }, 0L)
 
 ## process
-country_codes <- vroom(here::here("template", "locations_eu.csv"))
+country_codes <- vroom(here::here("data-locations", "locations_eu.csv"))
 
 df <- lapply(data_types, function(x) {
   vroom(file.path(raw_dir, filenames[x]), col_types = col_specs) %>%
