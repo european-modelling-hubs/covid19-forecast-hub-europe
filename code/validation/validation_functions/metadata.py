@@ -130,10 +130,12 @@ def check_metadata_file(filepath, cache={}):
         except yaml.YAMLError as exc:
             return True, [
                 "METADATA ERROR: Metadata YAML Fromat Error for %s file. \
-                    \nCommon fixes (if parse error message is unclear):\
+                    \n\nPlease try to read the error message(s) given below (with line numbers corresponding to the metadata file) and fix the problems indicated.\
+                    \n\nCommon fixes (if parse error message is unclear):\
                     \n* Try converting all tabs to spaces \
                     \n* Try copying the example metadata file and follow formatting closely \
-                    \n Parse Error Message:\n%s \n"
+                    \n* Make sure every line starts with a key followed by a colon, e.g. 'team_name:' and there are no line breaks \
+                    \n\n Error Message:\n%s \n"
                 % (filepath, exc)]
 
 
