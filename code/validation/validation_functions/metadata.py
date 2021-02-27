@@ -107,7 +107,7 @@ def check_metadata_file(filepath, cache={}):
                     \n\nCommon fixes (if parse error message is unclear):\
                     \n* Try converting all tabs to spaces \
                     \n* Try copying the example metadata file and follow formatting closely \
-                    \n* Make sure every line starts with a key followed by a colon, e.g. 'team_name:' and there are no line breaks \
+                    \n* Make sure every line starts with a key followed by a colon, e.g. 'team_name:'. If line breaks are needed, the line should end, and the following line begin, with a backslash (\\) \
                     \n* For further details, see the wiki entry about metadata at https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Metadata \
                     \n\n Error Message:\n%s \n"
                 % (filepath, exc)]
