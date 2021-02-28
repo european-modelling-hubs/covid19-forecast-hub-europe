@@ -65,9 +65,14 @@ url <- vapply(c("cases", "deaths"), function(x) {
          "/files/", filenames[x])
 }, "")
 
-res <- vapply(names(url), function(x) {
-  download.file(url[x], file.path(raw_dir, filenames[x]))
-}, 0L)
+out <- tryCatch({
+  vapply(names(url), function(x) {
+    download.file(url[x], file.path(raw_dir, filenames[x]))
+  }, 0L)},
+  error = function(cond) {
+    quit()
+  }
+)
 
 ## process
 country_codes <- vroom(here::here("data-locations", "locations_eu.csv"))
