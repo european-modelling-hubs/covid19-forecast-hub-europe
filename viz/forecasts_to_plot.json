@@ -10708,7 +10708,8 @@
             "availableDates": [
                 "2021-02-08",
                 "2021-02-15",
-                "2021-02-22"
+                "2021-02-22",
+                "2021-03-01"
             ],
             "data": [
                 {
@@ -11888,6 +11889,20 @@
                     "value": 33172.6598163298
                 },
                 {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 0,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "observed",
+                    "value": 55756.0
+                },
+                {
                     "forecast_date": "2021-02-22",
                     "location": "DE",
                     "model": "ITWW-county_repro",
@@ -12518,6 +12533,20 @@
                     "value": 40902.7664952791
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 0,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "observed",
+                    "value": 55756.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "DE",
                     "model": "USC-SIkJalpha",
@@ -12938,6 +12967,20 @@
                     "value": 52652.0
                 },
                 {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 0,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "observed",
+                    "value": 55756.0
+                },
+                {
                     "forecast_date": "2021-02-22",
                     "location": "DE",
                     "model": "itwm-dSEIR",
@@ -13216,6 +13259,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 25238.3048506639
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 70565.1405085995
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 63447.874313585
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 67938.6703284015
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 73306.0430874438
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 79940.0669789052
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -13848,6 +13961,76 @@
                     "value": 36163.4707381045
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 65577.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 52272.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 60936.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 71403.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 79252.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "DE",
                     "model": "USC-SIkJalpha",
@@ -14268,6 +14451,76 @@
                     "value": 55011.0
                 },
                 {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 60366.844427
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 40290.238888
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 53457.806933
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 67275.88192
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 80443.449966
+                },
+                {
                     "forecast_date": "2021-02-22",
                     "location": "DE",
                     "model": "itwm-dSEIR",
@@ -14546,6 +14799,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 19146.4043176463
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 81344.4589110324
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 67158.7818050238
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 76084.0614644026
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 87160.1205646537
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 102734.631373996
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -15108,6 +15431,76 @@
                     "value": 33140.1263109456
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 58675.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 46137.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 53147.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 65583.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 74316.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "DE",
                     "model": "USC-SIkJalpha",
@@ -15528,6 +15921,76 @@
                     "value": 57168.0
                 },
                 {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 65517.809549
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 8678.21705
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 45957.387598
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 85078.231501
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 122357.402049
+                },
+                {
                     "forecast_date": "2021-02-22",
                     "location": "DE",
                     "model": "itwm-dSEIR",
@@ -15736,6 +16199,76 @@
                     "timezero": "2021-02-22",
                     "type": "quantile",
                     "value": 65486.9251438554
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 94615.8838639242
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 73192.382072399
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 86333.3321000235
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 104614.108581406
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 133074.690131771
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -16018,6 +16551,76 @@
                     "value": 52577.79974
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 59593.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 46182.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 54722.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 65674.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 77935.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "DE",
                     "model": "USC-SIkJalpha",
@@ -16228,6 +16831,76 @@
                     "value": 500784.0
                 },
                 {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 70987.671085
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": -47500.649443
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 30211.841353
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 111763.500817
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 189475.991614
+                },
+                {
                     "forecast_date": "2021-02-22",
                     "location": "DE",
                     "model": "itwm-dSEIR",
@@ -16296,6 +16969,216 @@
                     "timezero": "2021-02-22",
                     "type": "quantile",
                     "value": 310701.882142
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 112095.94808011
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 81678.7141705625
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 99900.9165362896
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 127176.603647146
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 176087.339023015
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 60416.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 45430.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 53670.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 65256.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 88436.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 76676.556715
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": -131786.931152
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 4937.2355
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 148415.877929
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 285140.044581
                 }
             ]
         },
@@ -16303,7 +17186,8 @@
             "availableDates": [
                 "2021-02-08",
                 "2021-02-15",
-                "2021-02-22"
+                "2021-02-22",
+                "2021-03-01"
             ],
             "data": [
                 {
@@ -17483,6 +18367,20 @@
                     "value": 2234.35142800001
                 },
                 {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 0,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "observed",
+                    "value": 2209.0
+                },
+                {
                     "forecast_date": "2021-02-22",
                     "location": "DE",
                     "model": "ITWW-county_repro",
@@ -18113,6 +19011,20 @@
                     "value": 5519.94134624711
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 0,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "observed",
+                    "value": 2209.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "DE",
                     "model": "USC-SIkJalpha",
@@ -18533,6 +19445,20 @@
                     "value": 3209.0
                 },
                 {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 0,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "observed",
+                    "value": 2209.0
+                },
+                {
                     "forecast_date": "2021-02-22",
                     "location": "DE",
                     "model": "itwm-dSEIR",
@@ -18811,6 +19737,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 1718.85411432241
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 1328.5
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1251.975
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1303.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1356.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1405.025
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -19443,6 +20439,76 @@
                     "value": 5574.26689159297
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 2180.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1349.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1765.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2450.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2720.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "DE",
                     "model": "USC-SIkJalpha",
@@ -19863,6 +20929,76 @@
                     "value": 3117.0
                 },
                 {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 1660.42733
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 910.595682
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1402.384956
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1918.469705
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2410.258978
+                },
+                {
                     "forecast_date": "2021-02-22",
                     "location": "DE",
                     "model": "itwm-dSEIR",
@@ -20141,6 +21277,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 1320.01610128032
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 1436.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1310.975
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1394.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1481.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1563.0
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -20703,6 +21909,76 @@
                     "value": 5565.81517183775
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 1998.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1111.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1561.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2213.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2495.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "DE",
                     "model": "USC-SIkJalpha",
@@ -21123,6 +22399,76 @@
                     "value": 3019.0
                 },
                 {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 1502.768025
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 691.855517
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1223.705665
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1781.830384
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2313.680532
+                },
+                {
                     "forecast_date": "2021-02-22",
                     "location": "DE",
                     "model": "itwm-dSEIR",
@@ -21331,6 +22677,76 @@
                     "timezero": "2021-02-22",
                     "type": "quantile",
                     "value": 3141.98508860439
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 1606.5
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1391.975
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1531.75
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1692.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1907.1
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -21613,6 +23029,76 @@
                     "value": 5206.78525
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 2135.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1336.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1745.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2421.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2720.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "DE",
                     "model": "USC-SIkJalpha",
@@ -21823,6 +23309,76 @@
                     "value": 2529.0
                 },
                 {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 1394.609872
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 488.481474
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1082.780511
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1706.439233
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2300.73827
+                },
+                {
                     "forecast_date": "2021-02-22",
                     "location": "DE",
                     "model": "itwm-dSEIR",
@@ -21891,6 +23447,216 @@
                     "timezero": "2021-02-22",
                     "type": "quantile",
                     "value": 3467.944938
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 1851.5
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1523.825
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1708.75
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1995.25
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2428.875
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 2175.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1149.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1774.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2372.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "DE",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2800.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 1361.052766
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": -42.621598
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 878.001048
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1844.104485
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "DE",
+                    "model": "itwm-dSEIR",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2764.72713
                 }
             ]
         }
@@ -55796,7 +57562,8 @@
             "availableDates": [
                 "2021-02-08",
                 "2021-02-15",
-                "2021-02-22"
+                "2021-02-22",
+                "2021-03-01"
             ],
             "data": [
                 {
@@ -56976,6 +58743,20 @@
                     "value": 78436.5411716544
                 },
                 {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 0,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "observed",
+                    "value": 65158.0
+                },
+                {
                     "forecast_date": "2021-02-22",
                     "location": "PL",
                     "model": "ITWW-county_repro",
@@ -57746,6 +59527,20 @@
                     "value": 51471.75
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 0,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "observed",
+                    "value": 65158.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "PL",
                     "model": "USC-SIkJalpha",
@@ -58304,6 +60099,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 88001.4410765269
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 102219.5
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 93636.85
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 99063.75
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 105813.75
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 112763.325
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -59076,6 +60941,76 @@
                     "value": 54683.0
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 58942.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 44340.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 53233.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 67933.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 78811.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "PL",
                     "model": "USC-SIkJalpha",
@@ -59634,6 +61569,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 91535.4858522904
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 129941.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 111529.025
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 122464.25
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 138544.25
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 154637.25
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -60336,6 +62341,76 @@
                     "value": 58120.375
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 39105.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 24502.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 32310.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 44149.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 60135.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "PL",
                     "model": "USC-SIkJalpha",
@@ -60826,6 +62901,76 @@
                     "value": 94590.2979509064
                 },
                 {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 167715.5
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 133677.825
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 152903.5
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 185109.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 218607.725
+                },
+                {
                     "forecast_date": "2021-02-22",
                     "location": "PL",
                     "model": "ITWW-county_repro",
@@ -61176,6 +63321,76 @@
                     "value": 88521.0
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 35423.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 21161.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 26981.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 41901.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 58580.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "PL",
                     "model": "USC-SIkJalpha",
@@ -61384,6 +63599,146 @@
                     "timezero": "2021-02-22",
                     "type": "quantile",
                     "value": 410771.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 218913.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 160694.45
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 192131.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 250734.75
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 314867.175
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 32004.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 8036.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 20792.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 36867.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 49328.0
                 }
             ]
         },
@@ -61391,7 +63746,8 @@
             "availableDates": [
                 "2021-02-08",
                 "2021-02-15",
-                "2021-02-22"
+                "2021-02-22",
+                "2021-03-01"
             ],
             "data": [
                 {
@@ -62571,6 +64927,20 @@
                     "value": 2959.9397203268
                 },
                 {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 0,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "observed",
+                    "value": 1579.0
+                },
+                {
                     "forecast_date": "2021-02-22",
                     "location": "PL",
                     "model": "ITWW-county_repro",
@@ -63341,6 +65711,20 @@
                     "value": 2710.2
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 0,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "observed",
+                    "value": 1579.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "PL",
                     "model": "USC-SIkJalpha",
@@ -63899,6 +66283,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 3165.405868644
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 2433.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2312.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2390.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2478.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2558.05
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -64671,6 +67125,76 @@
                     "value": 2747.23333333333
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 1814.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1373.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1651.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1952.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2243.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "PL",
                     "model": "USC-SIkJalpha",
@@ -65229,6 +67753,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 3459.17551454196
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 3247.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2943.975
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 3139.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 3370.25
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 3616.0
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -65931,6 +68525,76 @@
                     "value": 2905.16666666667
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 1816.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1349.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1626.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1928.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2263.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "PL",
                     "model": "USC-SIkJalpha",
@@ -66421,6 +69085,76 @@
                     "value": 3665.17094182236
                 },
                 {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 4227.5
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 3597.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 3976.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 4517.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 5083.35
+                },
+                {
                     "forecast_date": "2021-02-22",
                     "location": "PL",
                     "model": "ITWW-county_repro",
@@ -66771,6 +69505,76 @@
                     "value": 3101.6
                 },
                 {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 1809.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1273.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1623.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1930.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2207.0
+                },
+                {
                     "forecast_date": "2021-02-21",
                     "location": "PL",
                     "model": "USC-SIkJalpha",
@@ -66979,6 +69783,146 @@
                     "timezero": "2021-02-22",
                     "type": "quantile",
                     "value": 2335.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 5481.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 4364.975
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 5010.75
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 6077.0
+                },
+                {
+                    "forecast_date": "2021-03-01",
+                    "location": "PL",
+                    "model": "ITWW-county_repro",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 7243.225
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "point",
+                    "value": 1647.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 400.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1394.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 1774.0
+                },
+                {
+                    "forecast_date": "2021-02-28",
+                    "location": "PL",
+                    "model": "USC-SIkJalpha",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-27",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-03-01",
+                    "type": "quantile",
+                    "value": 2106.0
                 }
             ]
         }
