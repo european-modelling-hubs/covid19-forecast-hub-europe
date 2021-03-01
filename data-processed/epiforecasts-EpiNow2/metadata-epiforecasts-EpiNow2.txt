@@ -7,7 +7,7 @@ repo_url: https://github.com/epiforecasts/covid-german-forecasts
 license: mit
 team_funding: Wellcome Trust via a Senior Research Fellowship to Sebastian Funk (210758/Z/18/Z) and the Health Protection Research Unit (grant code NIHR200908)
 institution_affil: London School of Hygiene and Tropical Medicine
-team_model_designation: primary
+team_model_designation: secondary
 data_inputs: ECDC deaths and cases
 methods: Semi-mechanistic estimation of the time-varying reproduction number for latent infections mapped to reported cases/deaths.
 methods_long: EpiNow2 implements a Bayesian latent variable approach using the probabilistic programming language Stan, which works as follows. For an initial, unobserved, seeding time infections were estimated using an exponential model with priors based on observed growth. For each subsequent time step, previous imputed infections were summed, weighted by an uncertain generation time probability mass function, and combined with an estimate of Rt to give the incidence at that time. The infection trajectories were then mapped to mean reported case counts by convolving over an uncertain incubation period and report delay distribution. Observed reported case counts were then assumed to be generated from a negative binomial observation model with overdispersion, multiplied by a day of the week effect with an independent parameter for each day of the week. Temporal variation was controlled using an approximate Gaussian process with a Matern 3/2 kernel. Rt was assumed to be constant over the forecast horizon although a correction was applied to adjust for the time-varying proportion of the population that was susceptible.
