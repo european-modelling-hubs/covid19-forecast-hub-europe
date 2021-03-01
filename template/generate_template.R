@@ -19,13 +19,13 @@ pop <- world_bank_pop %>%
 
 locations <- eurostat::eu_countries %>%
   bind_rows(eurostat::efta_countries) %>%
-  rename(country = name, eurostat = code) %>%
+  rename(location_name = name, eurostat = code) %>%
   mutate(location =
            countrycode::countrycode(eurostat, "eurostat", "iso2c"),
          iso3c =
            countrycode::countrycode(eurostat, "eurostat", "iso3c")) %>%
   left_join(pop, by = "iso3c") %>%
-  select(country, location, population)
+  select(location_name, location, population)
 
 readr::write_csv(locations,
                  file = here::here("data-locations", "locations_eu.csv"),

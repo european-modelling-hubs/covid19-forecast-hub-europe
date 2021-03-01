@@ -65,12 +65,17 @@ url <- vapply(c("cases", "deaths"), function(x) {
          "/files/", filenames[x])
 }, "")
 
-res <- vapply(names(url), function(x) {
-  download.file(url[x], file.path(raw_dir, filenames[x]))
-}, 0L)
+out <- tryCatch({
+  vapply(names(url), function(x) {
+    download.file(url[x], file.path(raw_dir, filenames[x]))
+  }, 0L)},
+  error = function(cond) {
+    quit()
+  }
+)
 
 ## process
-country_codes <- vroom(here::here("template", "locations_eu.csv"))
+country_codes <- vroom(here::here("data-locations", "locations_eu.csv"))
 
 df <- lapply(data_types, function(x) {
   vroom(file.path(raw_dir, filenames[x]), col_types = col_specs) %>%
@@ -78,15 +83,15 @@ df <- lapply(data_types, function(x) {
 }) %>%
   bind_rows() %>%
   filter(!is.na(week_ahead)) %>%
-  rename(country = name) %>%
-  inner_join(country_codes, by = "country") %>%
+  rename(location_name = name) %>%
+  inner_join(country_codes, by = "location_name") %>%
   mutate(scenario_id = "forecast",
          target = paste(week_ahead, "wk ahead inc", sub("s$", "", type))) %>%
   pivot_longer(starts_with("q."), names_to = "quantile") %>%
   mutate(quantile = as.numeric(sub("q\\.", "0.", quantile)),
          type = "quantile") %>%
   select(scenario_id, forecast_date = fcst_date, target,
-         target_end_date = end_date, location = iso2c, type, quantile, value)
+         target_end_date = end_date, location, type, quantile, value)
 
 point_forecasts <- df %>%
   filter(quantile == 0.5) %>%

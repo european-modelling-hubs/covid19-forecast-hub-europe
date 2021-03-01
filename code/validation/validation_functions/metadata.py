@@ -50,26 +50,6 @@ def validate_metadata_contents(metadata, filepath, cache):
         elif metadata['team_model_designation'] == 'primary':
             cache[DESIGNATED_MODEL_CACHE_KEY].append(metadata['team_abbr'])
     
-    # if `this_model_is_an_emnsemble` is rpesent, show a warning.
-    
-    # Check for Required Fields
-    required_fields = ['team_name', 'team_abbr', 'model_name', 'model_contributors', 'model_abbr', 'website_url','license', 'team_model_designation', 'methods']
-    # required_fields = ['team_name', 'team_abbr', 'model_name', 'model_abbr',\
-    #                        'methods', 'team_url', 'license', 'include_in_ensemble_and_visualization']
-    
-    # for field in required_fields:
-    #     if field not in metadata.keys():
-    #         is_metadata_error = True
-    #         metadata_error_output += ["METADATA ERROR: %s missing '%s'" % (filepath, field)]
-
-    # Check methods character length (warning not error)
-    # if 'methods' in metadata.keys():
-    #     methods_char_lenth = len(metadata['methods'])
-    #     if methods_char_lenth > 200:
-    #         metadata_error_output += [
-    #             "METADATA WARNING: %s methods is too many characters (%i should be less than 200)" %
-    #             (filepath, methods_char_lenth)]
-
     # Check if forecast_startdate is date
     if 'forecast_startdate' in metadata.keys():
         forecast_startdate = str(metadata['forecast_startdate'])
@@ -105,13 +85,6 @@ def validate_metadata_contents(metadata, filepath, cache):
         r'(?::\d+)?'  # optional port
         r'(?:/?|[/?]\S+)$', re.IGNORECASE)
 
-    # if 'team_url' in metadata.keys():
-    #     if re.match(regex, str(metadata['team_url'])) is None:
-    #         is_metadata_error = True
-    #         metadata_error_output += [
-    #             "METADATA ERROR: %s 'team_url' field must be a full URL (https://www.example.com) '%s'" %
-    #             (filepath, metadata[field])]
-
     # Validate licenses
     license_df = pd.read_csv('./code/validation/accepted-licenses.csv')
     accepted_licenses = list(license_df['license'])
@@ -119,7 +92,7 @@ def validate_metadata_contents(metadata, filepath, cache):
         if metadata['license'] not in accepted_licenses:
             is_metadata_error = True
             metadata_error_output += [
-                "METADATA ERROR: %s 'license' field must be in `./code/validations/accepted-licenses.csv` 'license' column '%s'" %
+                "\nMETADATA ERROR: %s 'license' field must be in `./code/validations/accepted-licenses.csv` 'license' column '%s'" %
                 (filepath, metadata['license'])]
     return is_metadata_error, metadata_error_output
 
@@ -136,11 +109,14 @@ def check_metadata_file(filepath, cache={}):
                 return False, "no errors"
         except yaml.YAMLError as exc:
             return True, [
-                "METADATA ERROR: Metadata YAML Format Error for %s file. \
-                    \nCommon fixes (if parse error message is unclear):\
+                "METADATA ERROR: Metadata YAML Fromat Error for %s file. \
+                    \n\nPlease try to read the error message(s) given below (with line numbers corresponding to the metadata file) and fix the problems indicated.\
+                    \n\nCommon fixes (if parse error message is unclear):\
                     \n* Try converting all tabs to spaces \
                     \n* Try copying the example metadata file and follow formatting closely \
-                    \n Parse Error Message:\n%s \n"
+                    \n* Make sure every line starts with a key followed by a colon, e.g. 'team_name:'. If line breaks are needed, the line should end, and the following line begin, with a backslash (\\) \
+                    \n* For further details, see the wiki entry about metadata at https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Metadata \
+                    \n\n Error Message:\n%s \n"
                 % (filepath, exc)]
 
 
@@ -156,7 +132,7 @@ def check_for_metadata(filepath, cache= {}):
         is_metadata_error, metadata_error_output = check_metadata_file(metadata_filepath, cache=cache)
         return is_metadata_error, metadata_error_output
     else:
-        return True, ["METADATA ERROR: Missing Metadata: ", metadata_filename]
+        return True, ["\nMETADATA ERROR: Missing Metadata: ", metadata_filename]
 
 
 def get_metadata_model(filepath):
@@ -183,7 +159,7 @@ def get_metadata_model(filepath):
 def output_duplicate_models(existing_metadata_name, output_errors):
     for mname, mfiledir in existing_metadata_name.items():
         if len(mfiledir) > 1:
-            error_string = ["METADATA ERROR: Found duplicate model abbreviation %s - in %s metadata" %
+            error_string = ["\nMETADATA ERROR: Found duplicate model abbreviation %s - in %s metadata" %
                             (mname, mfiledir)]
             output_errors[mname + "METADATA model_name"] = error_string
     return output_errors

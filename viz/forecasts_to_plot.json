@@ -10896,20 +10896,6 @@
                 {
                     "forecast_date": "2021-02-15",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": null,
-                    "target": {
-                        "end_date": "2021-02-13",
-                        "time_ahead": 0,
-                        "type": "cases"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "observed",
-                    "value": 51903.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
                     "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
@@ -11510,6 +11496,20 @@
                     "value": 57118.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 0,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "observed",
+                    "value": 51515.0
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "DE",
                     "model": "epiforecasts-EpiExpert",
@@ -11580,74 +11580,18 @@
                     "value": 53412.4913584464
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-02-20",
-                        "time_ahead": 1,
+                        "time_ahead": 0,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
-                    "type": "point",
-                    "value": 42370.5
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.025,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "cases"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 33944.425
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.25,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "cases"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 39575.75
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.75,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "cases"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 45622.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.975,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "cases"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 53319.4
+                    "timezero": "2021-02-22",
+                    "type": "observed",
+                    "value": 51515.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -12714,6 +12658,76 @@
                     "value": 53752.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 49533.6783333333
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 39417.3542396564
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 45760.2692269831
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 53654.8033559379
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 62605.6724822615
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "DE",
                     "model": "epiforecasts-EpiExpert",
@@ -12784,74 +12798,74 @@
                     "value": 48989.9084003318
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 34385.5
+                    "value": 56872.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.025,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 25179.8
+                    "value": 44598.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.25,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 30997.75
+                    "value": 50423.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.75,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 37621.25
+                    "value": 65267.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.975,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 46799.05
+                    "value": 78562.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -13974,6 +13988,76 @@
                     "value": 44196.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 49394.07
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 35205.4166995266
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 43924.5440021936
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 55594.0787630691
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 69823.2585599254
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "DE",
                     "model": "epiforecasts-EpiExpert",
@@ -14044,74 +14128,74 @@
                     "value": 50210.1981795106
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 28439.0
+                    "value": 67040.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.025,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 18540.45
+                    "value": 40731.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.25,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 24597.5
+                    "value": 52116.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.75,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 32814.75
+                    "value": 90984.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.975,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 42707.15
+                    "value": 144441.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -15164,6 +15248,76 @@
                     "value": 38618.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 49891.16
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 31622.8528796236
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 42530.085630952
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 58702.657146729
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 80737.0344080446
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "DE",
                     "model": "epiforecasts-EpiExpert",
@@ -15234,74 +15388,74 @@
                     "value": 52931.6867965815
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 23910.0
+                    "value": 79924.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.025,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 13115.65
+                    "value": 36497.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.25,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 19368.5
+                    "value": 53161.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.75,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 29145.0
+                    "value": 128050.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.975,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 43830.6
+                    "value": 275952.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -15936,6 +16090,146 @@
                 {
                     "forecast_date": "2021-02-22",
                     "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 50875.435
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 28696.9523822016
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 41454.8298225394
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 63063.8190798578
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 98226.8819306841
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 92966.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 32624.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 53177.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 185459.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 500784.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
                     "model": "itwm-dSEIR",
                     "quantile": null,
                     "target": {
@@ -16197,35 +16491,7 @@
                 {
                     "forecast_date": "2021-02-15",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": null,
-                    "target": {
-                        "end_date": "2021-02-13",
-                        "time_ahead": 0,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "observed",
-                    "value": 3439.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
                     "model": "epiforecasts-EpiNow2",
-                    "quantile": null,
-                    "target": {
-                        "end_date": "2021-02-13",
-                        "time_ahead": 0,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "observed",
-                    "value": 3439.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-02-13",
@@ -16825,6 +17091,20 @@
                     "value": 5138.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 0,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "observed",
+                    "value": 2893.0
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "DE",
                     "model": "epiforecasts-EpiExpert",
@@ -16895,74 +17175,18 @@
                     "value": 3546.51394170333
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-02-20",
-                        "time_ahead": 1,
+                        "time_ahead": 0,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
-                    "type": "point",
-                    "value": 2897.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.025,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 2511.9
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.25,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 2757.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.75,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 3044.5
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.975,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 3331.05
+                    "timezero": "2021-02-22",
+                    "type": "observed",
+                    "value": 2893.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -17033,76 +17257,6 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 3479.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": null,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "point",
-                    "value": 2878.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.025,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 2440.925
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.25,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 2731.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.75,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 3026.25
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.975,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 3391.2
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -18099,6 +18253,76 @@
                     "value": 4486.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 2628.56857142857
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 2087.82101123721
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 2429.34918470344
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 2843.44301010682
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 3302.41256263302
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "DE",
                     "model": "epiforecasts-EpiExpert",
@@ -18169,74 +18393,74 @@
                     "value": 3186.17592859871
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 2337.5
+                    "value": 2232.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.025,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1936.0
+                    "value": 1824.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.25,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 2196.0
+                    "value": 2043.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.75,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 2462.25
+                    "value": 2466.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.975,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 2733.075
+                    "value": 2812.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -18307,76 +18531,6 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 3209.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": null,
-                    "target": {
-                        "end_date": "2021-02-27",
-                        "time_ahead": 2,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "point",
-                    "value": 2332.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.025,
-                    "target": {
-                        "end_date": "2021-02-27",
-                        "time_ahead": 2,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 1867.95
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.25,
-                    "target": {
-                        "end_date": "2021-02-27",
-                        "time_ahead": 2,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 2193.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.75,
-                    "target": {
-                        "end_date": "2021-02-27",
-                        "time_ahead": 2,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 2492.25
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.975,
-                    "target": {
-                        "end_date": "2021-02-27",
-                        "time_ahead": 2,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 2897.1
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -19429,6 +19583,76 @@
                     "value": 4016.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 2318.18857142857
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1656.42282989422
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 2068.3258010207
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 2595.59410236473
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 3215.26227362702
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "DE",
                     "model": "epiforecasts-EpiExpert",
@@ -19499,74 +19723,74 @@
                     "value": 2866.87793958236
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 1862.5
+                    "value": 1763.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.025,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1454.975
+                    "value": 1232.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.25,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1728.0
+                    "value": 1519.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.75,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 2013.0
+                    "value": 2082.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.975,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 2346.25
+                    "value": 2643.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -19637,76 +19861,6 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 3117.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": null,
-                    "target": {
-                        "end_date": "2021-03-06",
-                        "time_ahead": 3,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "point",
-                    "value": 1881.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.025,
-                    "target": {
-                        "end_date": "2021-03-06",
-                        "time_ahead": 3,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 1154.625
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.25,
-                    "target": {
-                        "end_date": "2021-03-06",
-                        "time_ahead": 3,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 1689.75
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.75,
-                    "target": {
-                        "end_date": "2021-03-06",
-                        "time_ahead": 3,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 2098.5
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.975,
-                    "target": {
-                        "end_date": "2021-03-06",
-                        "time_ahead": 3,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 3281.075
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -20689,6 +20843,76 @@
                     "value": 3714.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 2067.65857142857
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1331.40157260276
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1783.72259392682
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 2391.45335161238
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 3146.88639203517
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "DE",
                     "model": "epiforecasts-EpiExpert",
@@ -20759,74 +20983,74 @@
                     "value": 2713.67996864229
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 1507.0
+                    "value": 1381.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.025,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1059.975
+                    "value": 799.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.25,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1338.5
+                    "value": 1094.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.75,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1678.25
+                    "value": 1784.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "DE",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.975,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 2105.125
+                    "value": 2545.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -20897,76 +21121,6 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 3019.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": null,
-                    "target": {
-                        "end_date": "2021-03-13",
-                        "time_ahead": 4,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "point",
-                    "value": 1485.5
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.025,
-                    "target": {
-                        "end_date": "2021-03-13",
-                        "time_ahead": 4,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 687.675
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.25,
-                    "target": {
-                        "end_date": "2021-03-13",
-                        "time_ahead": 4,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 1213.75
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.75,
-                    "target": {
-                        "end_date": "2021-03-13",
-                        "time_ahead": 4,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 1848.75
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "DE",
-                    "model": "epiforecasts-EpiNow2_secondary",
-                    "quantile": 0.975,
-                    "target": {
-                        "end_date": "2021-03-13",
-                        "time_ahead": 4,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 4555.09999999999
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -21527,6 +21681,146 @@
                     "timezero": "2021-02-22",
                     "type": "quantile",
                     "value": 2906.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 1925.05
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1110.58045509454
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1603.94602534232
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 2302.40115139868
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 3229.16129263052
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 1071.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 491.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 772.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1527.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "DE",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 2529.0
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -55704,7 +55998,7 @@
                 {
                     "forecast_date": "2021-02-15",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-02-13",
@@ -55716,18 +56010,18 @@
                     "value": 38091.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2",
+                    "model": "ICM-agentModel",
                     "quantile": null,
                     "target": {
-                        "end_date": "2021-02-13",
+                        "end_date": "2021-02-20",
                         "time_ahead": 0,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "observed",
-                    "value": 38091.0
+                    "value": 48106.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -56374,6 +56668,20 @@
                     "value": 46003.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 0,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "observed",
+                    "value": 48106.0
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "PL",
                     "model": "epiforecasts-EpiExpert",
@@ -56444,74 +56752,18 @@
                     "value": 48765.7831058161
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-02-20",
-                        "time_ahead": 1,
+                        "time_ahead": 0,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
-                    "type": "point",
-                    "value": 42221.5
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.025,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "cases"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 30823.9
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.25,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "cases"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 37288.75
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.75,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "cases"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 46602.5
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.975,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "cases"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 57265.875
+                    "timezero": "2021-02-22",
+                    "type": "observed",
+                    "value": 48106.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -56582,6 +56834,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 53333.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 32916.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 3890.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 21386.1859772617
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 41497.6435862931
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 59866.2722797028
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -57564,6 +57886,76 @@
                     "value": 44996.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 51809.1
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 37952.4339195909
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 46359.4255370038
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 58192.6060784009
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 73816.6450907461
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "PL",
                     "model": "epiforecasts-EpiExpert",
@@ -57634,74 +58026,74 @@
                     "value": 53967.1956347415
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 45616.5
+                    "value": 62304.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.025,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 29985.75
+                    "value": 52885.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.25,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 39556.25
+                    "value": 57671.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.75,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 52947.5
+                    "value": 67592.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.975,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 71854.5
+                    "value": 75581.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -57772,6 +58164,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 76811.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 38953.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 0.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 23193.0787058705
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 57026.9049233659
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 87709.3637338448
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -58754,6 +59216,76 @@
                     "value": 45139.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 56870.835
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 39266.7737218178
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 49918.7749244652
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 65034.8080855631
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 85035.4149597441
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "PL",
                     "model": "epiforecasts-EpiExpert",
@@ -58824,74 +59356,74 @@
                     "value": 60266.5781583096
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 46659.0
+                    "value": 88380.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.025,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 24267.15
+                    "value": 61471.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.25,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 37876.5
+                    "value": 74760.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.75,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 57796.0
+                    "value": 106153.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.975,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 84744.35
+                    "value": 135614.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -58962,6 +59494,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 116012.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 37762.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 0.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 18242.7430857478
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 56427.3626121995
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 93028.111133015
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -59874,6 +60476,76 @@
                     "value": 46734.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 60393.6516666667
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 38297.8629072468
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 51521.6222473568
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 71000.5168674326
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 97640.090826417
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "PL",
                     "model": "epiforecasts-EpiExpert",
@@ -59944,74 +60616,74 @@
                     "value": 69392.2713861189
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 42602.5
+                    "value": 122192.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.025,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 17951.75
+                    "value": 70204.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.25,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 32415.0
+                    "value": 95172.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.75,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 57766.75
+                    "value": 164572.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.975,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "cases"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 98783.85
+                    "value": 245680.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -60082,6 +60754,76 @@
                     "timezero": "2021-02-15",
                     "type": "quantile",
                     "value": 166403.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 34792.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 0.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 12869.209064984
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 54155.0493920187
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "ICM-agentModel",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 94590.2979509064
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -60502,6 +61244,146 @@
                     "timezero": "2021-02-22",
                     "type": "quantile",
                     "value": 75348.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 66182.9983333334
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 37909.7552846648
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 54409.4919702916
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 80990.1374873396
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 121661.51898066
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 165474.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 77466.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 118425.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 240907.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "cases"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 410771.0
                 }
             ]
         },
@@ -60711,20 +61593,6 @@
                 {
                     "forecast_date": "2021-02-15",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": null,
-                    "target": {
-                        "end_date": "2021-02-13",
-                        "time_ahead": 0,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "observed",
-                    "value": 1715.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "PL",
                     "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
@@ -60737,18 +61605,18 @@
                     "value": 1715.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": null,
                     "target": {
-                        "end_date": "2021-02-13",
+                        "end_date": "2021-02-20",
                         "time_ahead": 0,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "observed",
-                    "value": 1715.0
+                    "value": 1368.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -61395,6 +62263,20 @@
                     "value": 2199.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-20",
+                        "time_ahead": 0,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "observed",
+                    "value": 1368.0
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "PL",
                     "model": "epiforecasts-EpiExpert",
@@ -61465,74 +62347,18 @@
                     "value": 1832.14358291465
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-02-20",
-                        "time_ahead": 1,
+                        "time_ahead": 0,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
-                    "type": "point",
-                    "value": 1787.5
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.025,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 1512.975
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.25,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 1692.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.75,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 1881.0
-                },
-                {
-                    "forecast_date": "2021-02-15",
-                    "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
-                    "quantile": 0.975,
-                    "target": {
-                        "end_date": "2021-02-20",
-                        "time_ahead": 1,
-                        "type": "death"
-                    },
-                    "timezero": "2021-02-15",
-                    "type": "quantile",
-                    "value": 2125.025
+                    "timezero": "2021-02-22",
+                    "type": "observed",
+                    "value": 1368.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -61605,74 +62431,74 @@
                     "value": 2073.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": null,
                     "target": {
-                        "end_date": "2021-02-20",
+                        "end_date": "2021-02-27",
                         "time_ahead": 1,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 1804.5
+                    "value": 1071.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.025,
                     "target": {
-                        "end_date": "2021-02-20",
+                        "end_date": "2021-02-27",
                         "time_ahead": 1,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1511.975
+                    "value": 334.936392608208
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.25,
                     "target": {
-                        "end_date": "2021-02-20",
+                        "end_date": "2021-02-27",
                         "time_ahead": 1,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1713.0
+                    "value": 898.25095734933
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.75,
                     "target": {
-                        "end_date": "2021-02-20",
+                        "end_date": "2021-02-27",
                         "time_ahead": 1,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1901.0
+                    "value": 1519.14016270293
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.975,
                     "target": {
-                        "end_date": "2021-02-20",
+                        "end_date": "2021-02-27",
                         "time_ahead": 1,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 2136.125
+                    "value": 2105.59313976124
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -62655,6 +63481,76 @@
                     "value": 2065.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 1267.85285714286
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1035.3063802361
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1181.12055824702
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1362.73995159686
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-02-27",
+                        "time_ahead": 1,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1569.95157368456
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "PL",
                     "model": "epiforecasts-EpiExpert",
@@ -62725,74 +63621,74 @@
                     "value": 1962.28930771161
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 1932.5
+                    "value": 1336.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.025,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1451.975
+                    "value": 1035.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.25,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1734.5
+                    "value": 1203.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.75,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 2144.25
+                    "value": 1496.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.975,
                     "target": {
                         "end_date": "2021-02-27",
-                        "time_ahead": 2,
+                        "time_ahead": 1,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 2678.0
+                    "value": 1721.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -62865,74 +63761,74 @@
                     "value": 2327.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": null,
                     "target": {
-                        "end_date": "2021-02-27",
+                        "end_date": "2021-03-06",
                         "time_ahead": 2,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 1986.0
+                    "value": 1675.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.025,
                     "target": {
-                        "end_date": "2021-02-27",
+                        "end_date": "2021-03-06",
                         "time_ahead": 2,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1399.0
+                    "value": 219.353631407896
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.25,
                     "target": {
-                        "end_date": "2021-02-27",
+                        "end_date": "2021-03-06",
                         "time_ahead": 2,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1723.75
+                    "value": 1181.13296957357
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.75,
                     "target": {
-                        "end_date": "2021-02-27",
+                        "end_date": "2021-03-06",
                         "time_ahead": 2,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 2284.5
+                    "value": 2197.74543809328
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.975,
                     "target": {
-                        "end_date": "2021-02-27",
+                        "end_date": "2021-03-06",
                         "time_ahead": 2,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 3284.35
+                    "value": 3168.86993040938
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -63915,6 +64811,76 @@
                     "value": 2257.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 1167.38428571429
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 861.121926177745
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1049.88817927921
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1300.07851397818
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-06",
+                        "time_ahead": 2,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1603.82632904367
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "PL",
                     "model": "epiforecasts-EpiExpert",
@@ -63985,74 +64951,74 @@
                     "value": 2128.72659149307
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 2061.5
+                    "value": 1208.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.025,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1353.85
+                    "value": 789.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.25,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1768.75
+                    "value": 996.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.75,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 2412.5
+                    "value": 1447.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.975,
                     "target": {
                         "end_date": "2021-03-06",
-                        "time_ahead": 3,
+                        "time_ahead": 2,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 3331.2
+                    "value": 1831.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -64125,74 +65091,74 @@
                     "value": 2764.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": null,
                     "target": {
-                        "end_date": "2021-03-06",
+                        "end_date": "2021-03-13",
                         "time_ahead": 3,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 2252.0
+                    "value": 1719.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.025,
                     "target": {
-                        "end_date": "2021-03-06",
+                        "end_date": "2021-03-13",
                         "time_ahead": 3,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1112.95
+                    "value": 33.6987493026827
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.25,
                     "target": {
-                        "end_date": "2021-03-06",
+                        "end_date": "2021-03-13",
                         "time_ahead": 3,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1760.75
+                    "value": 1120.03686074565
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.75,
                     "target": {
-                        "end_date": "2021-03-06",
+                        "end_date": "2021-03-13",
                         "time_ahead": 3,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 2920.0
+                    "value": 2321.86674925849
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.975,
                     "target": {
-                        "end_date": "2021-03-06",
+                        "end_date": "2021-03-13",
                         "time_ahead": 3,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 6163.825
+                    "value": 3457.34969737606
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -65105,6 +66071,76 @@
                     "value": 2220.0
                 },
                 {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 1155.99857142857
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 792.142341425367
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1013.46466846617
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1320.78873818808
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-13",
+                        "time_ahead": 3,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1711.05970453284
+                },
+                {
                     "forecast_date": "2021-02-15",
                     "location": "PL",
                     "model": "epiforecasts-EpiExpert",
@@ -65175,74 +66211,74 @@
                     "value": 2337.67412765767
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": null,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 2086.5
+                    "value": 1105.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.025,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1095.925
+                    "value": 554.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.25,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1704.75
+                    "value": 838.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.75,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 2576.75
+                    "value": 1409.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiExpert_Rt",
+                    "model": "epiforecasts-EpiNow2",
                     "quantile": 0.975,
                     "target": {
                         "end_date": "2021-03-13",
-                        "time_ahead": 4,
+                        "time_ahead": 3,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 3913.275
+                    "value": 2034.0
                 },
                 {
                     "forecast_date": "2021-02-15",
@@ -65315,74 +66351,74 @@
                     "value": 3291.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": null,
                     "target": {
-                        "end_date": "2021-03-13",
+                        "end_date": "2021-03-20",
                         "time_ahead": 4,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "point",
-                    "value": 2558.5
+                    "value": 1662.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.025,
                     "target": {
-                        "end_date": "2021-03-13",
+                        "end_date": "2021-03-20",
                         "time_ahead": 4,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 883.725
+                    "value": 0.0
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.25,
                     "target": {
-                        "end_date": "2021-03-13",
+                        "end_date": "2021-03-20",
                         "time_ahead": 4,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 1763.75
+                    "value": 975.896923740678
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.75,
                     "target": {
-                        "end_date": "2021-03-13",
+                        "end_date": "2021-03-20",
                         "time_ahead": 4,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 3959.0
+                    "value": 2340.25393804065
                 },
                 {
-                    "forecast_date": "2021-02-15",
+                    "forecast_date": "2021-02-22",
                     "location": "PL",
-                    "model": "epiforecasts-EpiNow2_secondary",
+                    "model": "ICM-agentModel",
                     "quantile": 0.975,
                     "target": {
-                        "end_date": "2021-03-13",
+                        "end_date": "2021-03-20",
                         "time_ahead": 4,
                         "type": "death"
                     },
-                    "timezero": "2021-02-15",
+                    "timezero": "2021-02-22",
                     "type": "quantile",
-                    "value": 11106.15
+                    "value": 3665.17094182236
                 },
                 {
                     "forecast_date": "2021-02-22",
@@ -65803,6 +66839,146 @@
                     "timezero": "2021-02-22",
                     "type": "quantile",
                     "value": 2775.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 1180.78714285714
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 730.676613359766
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 998.255637929546
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1400.90663378991
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiExpert",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1957.46232055905
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": null,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "point",
+                    "value": 982.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.025,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 377.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.25,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 675.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.75,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 1356.0
+                },
+                {
+                    "forecast_date": "2021-02-22",
+                    "location": "PL",
+                    "model": "epiforecasts-EpiNow2",
+                    "quantile": 0.975,
+                    "target": {
+                        "end_date": "2021-03-20",
+                        "time_ahead": 4,
+                        "type": "death"
+                    },
+                    "timezero": "2021-02-22",
+                    "type": "quantile",
+                    "value": 2335.0
                 }
             ]
         }

@@ -16,10 +16,6 @@ jobs:
         node-version: [10.2]
     steps:
     - uses: actions/checkout@v2
-#     - name: Use Node.js ${{ matrix.node-version }}
-#       uses: actions/setup-node@v1
-#       with:
-#         node-version: ${{ matrix.node-version }}
     - name: Setup Python
       uses: actions/setup-python@v2
       with:
@@ -28,4 +24,4 @@ jobs:
 #     - run: npm install
     - run: pip3 install -r github-actions/pr_requirements.txt
     - run: python3 code/validation/validate_filenames.py
-    - run: python3 code/validation/test-formatting.py
+    - run: python3 code/validation/test_formatting.py

@@ -161,7 +161,7 @@ def check_formatting(my_path):
     """
     purpose: Iterate through every forecast file and metadatadata 
              file and perform validation checks if haven't already.
-    link: https://github.com/reichlab/covid19-forecast-hub/wiki/Validation-Checks#current-validation-checks
+    link: https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Check-submission
 
     params:
     * my_path: string path to folder where forecasts are
