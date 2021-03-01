@@ -1,0 +1,13 @@
+team_name: Faculty of Mathematics, Informatics, and Mechanics, University of Warsaw
+model_name: StochSEIR
+model_abbr: MIMUW-StochSEIR
+model_contributors: Anna Gambin, Krzysztof Gogolewski, Blażej Miasojedow, Ewa Szczurek, Daniel Rabczenko, Magdalena Rosińska
+website_url: https://covid19.mimuw.edu.pl
+license: other
+team_model_designation: primary
+methods: Extended SEIR model
+team_funding: tba
+data_inputs: tba
+citation: https://arxiv.org/abs/2007.07156
+methods_long: "SEIR model with extensions:  introduction of the undiagnosed compartment; testing limits \
+  \ influencing number of diagnosed cases; stochastic perturbations of time-dependent contact rate"
