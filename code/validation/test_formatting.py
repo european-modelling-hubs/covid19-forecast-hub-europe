@@ -19,6 +19,8 @@ from validation_functions.forecast_date import filename_match_forecast_date
 
 metadata_version = 5
 
+#os.chdir('../..')
+
 # this is the root of the repository. 
 root = here()
 pop_df = pd.read_csv(open(root/'data-locations'/'locations_eu.csv')).astype({'location':str})
@@ -173,15 +175,20 @@ def check_formatting(my_path):
     existing_metadata_abbr = collections.defaultdict(list)
     errors_exist = False  # Keep track of errors
     metadata_validation_cache = {}
+    
     # Iterate through processed csvs
     for path in glob.iglob(my_path + "**/**/", recursive=False):
-
+        
+        model_name = None
+        model_abbr = None
+        
         # Check metadata file
         is_metadata_error, metadata_error_output = check_for_metadata(
             path, cache=metadata_validation_cache)
 
         # Check metadata names and abbreviations for duplicates
-        model_name, model_abbr = get_metadata_model(path)
+        if not is_metadata_error:
+            model_name, model_abbr = get_metadata_model(path)
 
         # Add checked model_name and model_abbr to list to keep track of duplicates
         if model_name is not None:

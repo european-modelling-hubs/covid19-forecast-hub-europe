@@ -1,4 +1,3 @@
-
 import dateutil
 import os
 import glob
@@ -24,7 +23,15 @@ def validate_metadata_contents(metadata, filepath, cache):
         metadata_error_output.extend(['METADATA_ERROR: %s' % err for err in core.validation_errors])
         is_metadata_error = True
 
-    folder_name = filepath.split('/')[-2]
+    path = os.path.normpath(filepath)
+    folder_name = path.split(os.sep)[-2]
+    
+    # This is a critical error and hence do not run further checks.
+    if 'model_abbr' not in metadata:
+        metadata_error_output.extend(['METADATA_ERROR: model_abbr key not present in the metadata file'])
+        is_metadata_error = True
+        return is_metadata_error, metadata_error_output
+
     if folder_name != metadata['model_abbr']:
         metadata_error_output.append(f"METADATA_ERROR: Model abreviation in metadata inconsistent with folder name for model_abbr={metadata['model_abbr']} as specified in metadata. NOTE: Folder name is: {folder_name}")
         is_metadata_error = True
@@ -102,7 +109,7 @@ def check_metadata_file(filepath, cache={}):
                 return False, "no errors"
         except yaml.YAMLError as exc:
             return True, [
-                "\nMETADATA ERROR: Metadata YAML Fromat Error for %s file. \
+                "METADATA ERROR: Metadata YAML Fromat Error for %s file. \
                     \n\nPlease try to read the error message(s) given below (with line numbers corresponding to the metadata file) and fix the problems indicated.\
                     \n\nCommon fixes (if parse error message is unclear):\
                     \n* Try converting all tabs to spaces \
@@ -134,6 +141,7 @@ def get_metadata_model(filepath):
     metdata_dir = filepath + metadata_filename
     model_name = None
     model_abbr = None
+    
     with open(metdata_dir, 'r') as stream:
         try:
             metadata = yaml.safe_load(stream)
