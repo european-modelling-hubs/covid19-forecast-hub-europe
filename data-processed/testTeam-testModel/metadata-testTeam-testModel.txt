@@ -1,0 +1,13 @@
+team_name: Seb's test forecast team
+model_name: Seb's test forecast model
+model_abbr: testTeam-testModel
+model_contributors: Sebastian Funk <sebastian.funk@lshtm.ac.uk>
+website_url: https://forecasts.seb.org/
+license: mit
+team_model_designation: primary
+methods: A test model
+team_funding: Funding by the funder XYZ
+data_inputs: JHU cases and deaths, hospitalisation data from Italy
+citation: Seb et al. (2020), ...
+methods_long: A test forecast model. \
+  \ Uses a range of data sources.
