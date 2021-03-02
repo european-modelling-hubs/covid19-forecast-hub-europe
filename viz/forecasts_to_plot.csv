@@ -1921,8 +1921,8 @@ forecast,LANL-GrowthRate,FI,2021-02-07,2021-02-08,3 wk ahead inc death,2021-02-2
 forecast,LANL-GrowthRate,FI,2021-02-07,2021-02-08,3 wk ahead inc death,2021-02-27,quantile,0.975,75.0
 forecast,RobertWalraven-ESG,FI,2021-03-01,2021-03-01,0 wk ahead inc case,2021-02-27,observed,,3767.0
 forecast,RobertWalraven-ESG,FI,2021-03-01,2021-03-01,0 wk ahead inc death,2021-02-27,observed,,16.0
-forecast,LANL-GrowthRate,FR,2021-02-28,2021-03-01,0 wk ahead inc case,2021-02-27,observed,,101343.0
-forecast,LANL-GrowthRate,FR,2021-02-28,2021-03-01,0 wk ahead inc death,2021-02-27,observed,,1448.0
+forecast,LANL-GrowthRate,FR,2021-02-28,2021-03-01,0 wk ahead inc case,2021-02-27,observed,,149767.0
+forecast,LANL-GrowthRate,FR,2021-02-28,2021-03-01,0 wk ahead inc death,2021-02-27,observed,,2165.0
 forecast,LANL-GrowthRate,FR,2021-02-21,2021-02-22,1 wk ahead inc case,2021-02-27,point,,28171.0
 forecast,LANL-GrowthRate,FR,2021-02-21,2021-02-22,1 wk ahead inc case,2021-02-27,quantile,0.025,687.9
 forecast,LANL-GrowthRate,FR,2021-02-21,2021-02-22,1 wk ahead inc case,2021-02-27,quantile,0.25,8410.0
@@ -1953,8 +1953,8 @@ forecast,LANL-GrowthRate,FR,2021-02-07,2021-02-08,3 wk ahead inc death,2021-02-2
 forecast,LANL-GrowthRate,FR,2021-02-07,2021-02-08,3 wk ahead inc death,2021-02-27,quantile,0.25,3166.0
 forecast,LANL-GrowthRate,FR,2021-02-07,2021-02-08,3 wk ahead inc death,2021-02-27,quantile,0.75,3718.25
 forecast,LANL-GrowthRate,FR,2021-02-07,2021-02-08,3 wk ahead inc death,2021-02-27,quantile,0.975,4777.25
-forecast,RobertWalraven-ESG,FR,2021-03-01,2021-03-01,0 wk ahead inc case,2021-02-27,observed,,101343.0
-forecast,RobertWalraven-ESG,FR,2021-03-01,2021-03-01,0 wk ahead inc death,2021-02-27,observed,,1448.0
+forecast,RobertWalraven-ESG,FR,2021-03-01,2021-03-01,0 wk ahead inc case,2021-02-27,observed,,149767.0
+forecast,RobertWalraven-ESG,FR,2021-03-01,2021-03-01,0 wk ahead inc death,2021-02-27,observed,,2165.0
 forecast,LANL-GrowthRate,GB,2021-02-28,2021-03-01,0 wk ahead inc case,2021-02-27,observed,,64844.0
 forecast,LANL-GrowthRate,GB,2021-02-28,2021-03-01,0 wk ahead inc death,2021-02-27,observed,,2340.0
 forecast,LANL-GrowthRate,GB,2021-02-21,2021-02-22,1 wk ahead inc case,2021-02-27,point,,54011.0
