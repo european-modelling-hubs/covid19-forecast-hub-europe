@@ -100,17 +100,24 @@ def covid19_row_validator(column_index_dict, row, codes):
         except ValueError:
             pass  # ignore, caught by `json_io_dict_from_quantile_csv_file()`
 
-    # 3. validate forecast_date and target_end_date date formats
+    # 3. validate forecast_date and target_end_date
     forecast_date = row[column_index_dict['forecast_date']]
     target_end_date = row[column_index_dict['target_end_date']]
+    
+    # 3.1 Expect date formats
     forecast_date = _parse_date(forecast_date)  # None if invalid format
     target_end_date = _parse_date(target_end_date)  # ""
-
     if not forecast_date or not target_end_date:
         error_messages.append(f"Error > invalid forecast_date or target_end_date format. forecast_date={forecast_date!r}. "
                               f"target_end_date={target_end_date}. row={row}")
-        return error_messages  # terminate - depends on valid dates
+        return error_messages
 
+    # 3.2 Expect a minimum 5 days between forecast_date and target_end_date
+    date_diff = target_end_date - forecast_date
+    if date_diff < 5:
+        error_messages.append(f"Error > target_end_date was <5 days after forecast_date: {target_end_date}. row={row}")
+        return error_messages  # terminate - depends on valid target_end_date
+    
     # 4. validate "__ week ahead" increment - must be an int
     target = row[column_index_dict['target']]
     try:
@@ -124,10 +131,10 @@ def covid19_row_validator(column_index_dict, row, codes):
 
     # 5.1 for x week ahead targets, weekday(target_end_date) should be a Sat
     if weekday_to_sun_based[target_end_date.weekday()] != 7:
-       error_messages.append(f"target_end_date was not a Saturday: {target_end_date}. row={row}")
+       error_messages.append(f"Error > target_end_date was not a Saturday: {target_end_date}. row={row}")
        return error_messages  # terminate - depends on valid target_end_date
 
-    # 5.2 Forecast date should always be Mon -- no longer checked
+    # 5.2 Forecast date should always be Mon -- no longer checked   
 
     # 5.3 For x week ahead targets, ensure x-week ahead forecast is for Sat
     #   - set exp_target_end_date - remove 1 wk (1 wk ahead is actually 0 wk ahead), then validate it
