@@ -92,8 +92,7 @@ shinyServer(function(input, output) {
                       truth = dat_truth, target_type = "inc death",
                       levels_coverage = c(0.5, 0.95),
                       start = as.Date(forecast_date) - 37,
-                      end = as.Date(forecast_date) + 28,
-                      start_at_zero = FALSE)
+                      end = as.Date(forecast_date) + 28)
         title(paste0("Incident deaths - ", input$select_location))
         legend("topleft", legend = c("50%PI", "95% PI"), col = cols_legend, pch = 15, bty = "n")
 
