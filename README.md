@@ -18,7 +18,7 @@ This is a brief outline for anyone considering contributing a forecast. For a de
 
 #### Set up
 Before contributing for the first time:
-* Let us know you are [planning to submit](../../wiki/Preparing-to-submit)
+* Read the guide for [preparing to submit](../../wiki/Preparing-to-submit)
 * Create a [team directory](../../wiki/Creating-a-team-directory)
 * Add your [metadata](../../wiki/Metadata) and a [license](../../wiki/Licensing)
 
