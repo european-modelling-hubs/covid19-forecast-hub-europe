@@ -1,0 +1,3 @@
+forecast_date,target,target_end_date,location,type,quantile,value,scenario_id
+2021-03-08,1 wk ahead inc case,2021-03-13,ES,point,NA,24700.0669264721,forecast
+2021-03-08,1 wk ahead inc death,2021-03-13,ES,point,NA,1192.49712187859,forecast
