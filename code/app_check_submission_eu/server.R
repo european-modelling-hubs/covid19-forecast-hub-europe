@@ -35,7 +35,7 @@ colnames(dat_truth) <- gsub("inc_", "inc ", colnames(dat_truth))
 cols_legend <- c("#699DAF", "#D3D3D3")
 
 # Define server logic required to draw a histogram
-shinyServer(function(input, output) {
+shinyServer(function(input, output, session) {
 
 
   dat <- reactiveValues()
@@ -43,11 +43,21 @@ shinyServer(function(input, output) {
   # Handling reading in of files:
   observe({
     inFile <- input$file1
-
-    if (is.null(inFile)){
+    
+    if (is.null(inFile) | input$path1 != ""){
       dat$forecasts <- NULL
     }else{
-      dat$forecasts <- read_week_ahead(inFile$datapath)
+      dat$forecasts <- NULL
+      try(dat$forecasts <- read_week_ahead(inFile$datapath))
+      locations <- unique(dat$forecasts$location)
+      if(!is.null(dat$forecasts$location_name)) names(locations) <- unique(dat$forecasts$location_name)
+      dat$locations <- locations
+      updateTextInput(session, "path1", value = "")
+    }
+    
+    if(input$path1 != ""){
+      dat$forecasts <- NULL
+      try(dat$forecasts <- read_week_ahead(input$path1))
       locations <- unique(dat$forecasts$location)
       if(!is.null(dat$forecasts$location_name)) names(locations) <- unique(dat$forecasts$location_name)
       dat$locations <- locations
@@ -102,9 +112,9 @@ shinyServer(function(input, output) {
       }
 
     }else{
-      # if no file is uploaded: empty plot with "Please select file"
+      # if no file is uploaded: empty plot with "Please select a valid csv file"
       plot(NULL, xlim = 0:1, ylim = 0:1, xlab = "", ylab = "", axes = FALSE)
-      text(0.5, 0.5, "Please select file.")
+      text(0.5, 0.5, "Please select a valid csv file.")
     }
   })
 
