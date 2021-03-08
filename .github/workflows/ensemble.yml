@@ -1,0 +1,33 @@
+name: "Ensemble"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 11 * * 2"
+  
+jobs:
+  ensemble:
+    runs-on: ubuntu-20.04
+    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
+    steps:
+    - uses: actions/checkout@master
+    - uses: r-lib/actions/setup-r@v1
+
+    - name: Install system dependencies
+      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
+
+    - name: Install R dependencies
+      run: Rscript -e 'install.packages(c("here", "vroom", "purrr", "dplyr", "stringr", "lubridate"))'
+
+    - name: Create mean ensemble
+      run: Rscript 'code/ensemble/simple-averages.r'
+        
+    - name: Commit files
+      env:
+        AUTH: ${{ secrets.GITHUBTOKEN }}
+      run: |
+        git config user.email "action@github.com"
+        git config user.name "GitHub Action - mean ensemble"
+        git add --all
+        git commit -m "Build ensemble"
+        git push 
+        echo "pushed to github"
