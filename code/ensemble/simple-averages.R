@@ -8,7 +8,7 @@ library(lubridate)
 team_name <- "EuroCOVIDhub-ensemble"
 forecast_date <- floor_date(today(), "week", 1)
 
-files <- dir(here("data-processed"), pattern = forecast_date,
+files <- dir(here("data-processed"), pattern = as.character(forecast_date),
              include.dirs = TRUE, recursive = TRUE,
              full.names = TRUE)
 
