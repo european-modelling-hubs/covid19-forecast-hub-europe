@@ -9,11 +9,7 @@ institution_affil: University of Pavia, Department of Economics and Management
 team_funding: Pan European Response to the ImpactS of COvid-19 and future Pandemics and Epidemics (PERISCOPE)
 data_inputs: JHU (confirmed cases), OxCGRT (NPI covariates) 
 citation: Giudici, P., Tarantino, B., A Bayesian time-dependent framework to assess the effectiveness of policy measures on COVID-19 counts. Working paper 2021.
-methods_long: Our model accounts for uncertainty via a \
-\ Bayesian framework, for time-dependence on past COVID-19 counts via an INGARCH \
-\ structure and non-linearity via time-varying coefficients. In addition, time-lagged \
-\ NPI covariates have been coded and incorporated into the Bayesian framework to \
-\ assess whether policy measures can effectively reduce positive counts. 
+methods_long: Our model accounts for uncertainty via a Bayesian framework, for time-dependence on past COVID-19 counts via an INGARCH structure and non-linearity via time-varying coefficients. In addition, time-lagged NPI covariates have been coded and incorporated into the Bayesian framework to assess whether policy measures can effectively reduce positive counts. 
 
 
 
