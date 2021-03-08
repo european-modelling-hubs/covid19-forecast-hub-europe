@@ -41,6 +41,11 @@ for m in models:
     for f in relevant_forecasts:
         df_temp = pd.read_csv(path/m/f)
         df_temp['model'] = m
+        if 'scenario_id' not in df_temp.columns:
+            df_temp['scenario_id'] = 'forecast'
+            df_temp = df_temp[['scenario_id','model','location','forecast_date','target',
+                'target_end_date','type','quantile','value']].sort_values(
+                ['scenario_id', 'model', 'forecast_date', 'target_end_date', 'location', 'target', 'type', 'quantile']).reset_index(drop=True)
         dfs.append(df_temp)
 
 df = pd.concat(dfs)
@@ -51,14 +56,6 @@ df = df[df.target.isin(VALID_TARGETS) &
         (df['quantile'].isin(VALID_QUANTILES) | (df.type=='point'))].reset_index(drop=True)
 
 df['timezero'] = df.forecast_date.apply(next_monday)
-
-if 'scenario_id' not in df.columns:
-    df['scenario_id'] = 'forecast'
-
-    df = df[['scenario_id','model','location','forecast_date','timezero','target',
-         'target_end_date','type','quantile','value']].sort_values(
-    ['scenario_id', 'model', 'forecast_date', 'target_end_date', 'location', 'target', 'type', 'quantile']).reset_index(drop=True)
-
 
 ### Adding last observations
 
