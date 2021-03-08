@@ -19,7 +19,7 @@ jobs:
       run: Rscript -e 'install.packages(c("here", "vroom", "purrr", "dplyr", "stringr", "lubridate"))'
 
     - name: Create mean ensemble
-      run: Rscript 'code/ensemble/simple-averages.r'
+      run: Rscript 'code/ensemble/simple-averages.R'
         
     - name: Commit files
       env:
