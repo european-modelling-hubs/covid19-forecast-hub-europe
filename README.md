@@ -18,7 +18,7 @@ This is a brief outline for anyone considering contributing a forecast. For a de
 
 #### Set up
 Before contributing for the first time:
-* Let us know you are [planning to submit](../../wiki/Preparing-to-submit)
+* Read the guide for [preparing to submit](../../wiki/Preparing-to-submit)
 * Create a [team directory](../../wiki/Creating-a-team-directory)
 * Add your [metadata](../../wiki/Metadata) and a [license](../../wiki/Licensing)
 
@@ -59,13 +59,16 @@ This effort parallels forecasting hubs in the US and Germany. We follow a simila
 - The [German and Polish COVID-19 Forecast Hub](https://github.com/KITmetricslab/covid19-forecast-hub-de) is run by members of the [Karlsruher Institut für Technologie (KIT)](https://statistik.econ.kit.edu/index.ph) and the [Computational Statistics Group at Heidelberg Institute for Theoretical Studies](https://www.h-its.org/research/cst/).
 
 ### European forecast hub team
-This repository is based on and supported by members of the US, and German and Polish Forecast Hubs. A small team is adapting this work for the European forecasting hub. We are based at the London School of Hygiene and Tropical Medicine and supported by grant funding from the ECDC.
+This repository is maintained by [Epiforecasts](https://epiforecasts.io). It is based on and supported by members of the US, and German and Polish Forecast Hubs. A small team is adapting this work for the European forecasting hub. We are based at the [London School of Hygiene & Tropical Medicine](https://www.lshtm.ac.uk) and supported by grant funding from the ECDC.
 
 Direct contributors to this repository include (in alphabetical order):
 
-- Nikos Bosse (@nikosbosse)
-- Sebastian Funk (@sbfnk)
-- Katharine Sherratt (@kathsherratt)
+- Daniel Wolffram
+- Jannik Deuschel
+- [Johannes Bracher](https://statistik.econ.kit.edu/mitarbeiter_2902.php)
+- Katharine Sherratt
+- Nikos Bosse
+- [Sebastian Funk](https://www.lshtm.ac.uk/aboutus/people/funk.sebastian)
 
 ### Data license and reuse
 - The forecasts assembled in this repository have been created by independent teams. Most provide a license in their respective subfolder of `data-processed`.
