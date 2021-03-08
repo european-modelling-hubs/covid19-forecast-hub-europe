@@ -3,12 +3,14 @@ library(vroom)
 library(purrr)
 library(dplyr)
 library(stringr)
+library(lubridate)
 
-target_date <- "2021-03-08"
+team_name <- "EuroCOVIDhub-ensemble"
+forecast_date <- floor_date(today(), "week", 1)
 
-files <- dir(here("data-processed"), pattern = target_date, 
+files <- dir(here("data-processed"), pattern = forecast_date,
              include.dirs = TRUE, recursive = TRUE,
-             full.names = TRUE) 
+             full.names = TRUE)
 
 models <- files %>%
   map(~ vroom(.x))
@@ -22,10 +24,35 @@ names(models) <- teams
 
 models <- bind_rows(models, .id = "team")
 
+quantiles <- round(c(0.01, 0.025, seq(0.05, 0.95, by = 0.05), 0.975, 0.99), 3)
+
 ensemble <- models %>%
-  group_by(target, target_end_date, location, quantile) %>%
+  filter(type == "quantile") %>%
+  mutate(type_forecast = sub("^.* ([a-z]+)$", "\\1", target),
+         quantile = round(quantile, 3)) %>%
+  group_by(team, type_forecast) %>%
+  mutate(all_quantiles = length(setdiff(quantiles, quantile)) == 0,
+         four_weeks = any(grepl("^4 wk", target))) %>%
+  ungroup() %>%
+  filter(all_quantiles & four_weeks) %>%
+  select(-all_quantiles, -four_weeks) %>%
+  group_by(target, target_end_date, location, type, quantile) %>%
   summarise(forecasts = n(),
-            mean = mean(value),
-            median = median(value))
+            value = mean(value),
+            .groups = "drop") %>%
+  mutate(forecast_date = forecast_date) %>%
+  select(forecast_date, target, target_end_date,
+         location, type, quantile, value)
 
+ensemble_point <- ensemble %>%
+  filter(quantile == 0.5) %>%
+  mutate(type = "point",
+         quantile = NA_real_)
 
+ensemble_with_point <- ensemble %>%
+  bind_rows(ensemble_point)
+
+vroom_write(ensemble_with_point,
+            here::here("data-processed", team_name,
+                       paste0(forecast_date, "-", team_name, ".csv")),
+            delim = ",")
