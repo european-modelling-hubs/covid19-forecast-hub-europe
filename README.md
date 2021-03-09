@@ -70,6 +70,11 @@ Direct contributors to this repository include (in alphabetical order):
 - Nikos Bosse
 - [Sebastian Funk](https://www.lshtm.ac.uk/aboutus/people/funk.sebastian)
 
+The [interactive visualization tool](https://covid19forecasthub.eu/visualisation/) (code available [here](https://github.com/SignaleRKI/forecast-europe)) has been developed by the [Signale Team at Robert Koch Institute](https://www.rki.de/EN/Content/infections/epidemiology/signals/signals_node.html):
+- Fabian Eckelmann
+- Knut Perseke
+- Alexander Ullrich
+
 ### Data license and reuse
 - The forecasts assembled in this repository have been created by independent teams. Most provide a license in their respective subfolder of `data-processed`.
 - Parts of the processing, analysis and validation code have been taken or adapted from the [US Covid-19 forecast hub](https://github.com/reichlab/covid19-forecast-hub) and the [Germany/Poland Covid-19 forecast hub](https://github.com/KITmetricslab/covid19-forecast-hub-de) both under an [MIT license](https://github.com/reichlab/covid19-forecast-hub/blob/master/LICENSE).
