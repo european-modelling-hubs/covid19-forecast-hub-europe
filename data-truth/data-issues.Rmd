@@ -12,7 +12,7 @@ library(here)
 date <- Sys.time()
 ```
 
-#### Unresolved issues in the last six weeks for European data 
+#### Potential issues in the JHU dataset over the last eight weeks
 As at `r date`
 
 ```{r issues, echo=FALSE, message=FALSE}
@@ -26,14 +26,15 @@ countries <- countrycode::codelist %>%
   mutate(fips = str_to_lower(fips),
          country.name.en = str_to_lower(country.name.en))
 country_ch <- c(countries$fips, countries$country.name.en)
-country_ch <- country_ch[country_ch != "be"]
+country_ch <- country_ch[!country_ch %in% c("be", "no")]
 country_ch <- paste0("\\b", country_ch, "\\b", collapse = "|")
 
 # Get issues in last six weeks
 issues <- gh("GET /repos/CSSEGISandData/COVID-19/issues", 
              username = "CSSEGISandData",
              state = "open",
-             since = Sys.Date() - (7*6), sort = "updated", 
+             since = Sys.Date() - (7*8), 
+             sort = "updated", 
              per_page = 100)
 # Get matching issues
 issues <- tibble::tibble("issue" = vapply(issues, "[[", "", "title"),
