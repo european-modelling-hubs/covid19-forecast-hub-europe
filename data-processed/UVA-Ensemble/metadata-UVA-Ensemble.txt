@@ -1,13 +1,9 @@
 team_name: University of Virginia, Biocomplexity COVID-19 Response Team
 model_name: Ensemble model
 model_abbr: UVA-Ensemble
-model_contributors: Aniruddha Adiga (UVA)<aniruddha@virginia.edu>,  Lijing
-Wang(UVA), Srinivasan Venkatramanan (UVA), Akhil Sai Peddireddy (UVA),
-Benjamin Hurt (UVA), Przemyslaw Porebski, Bryan Lewis (UVA), Madhav Marathe (UVA), Jiangzhou Chen, Anil Vullikanti.
+model_contributors: Aniruddha Adiga (UVA)<aniruddha@virginia.edu>,  Lijing Wang(UVA), Srinivasan Venkatramanan (UVA), Akhil Sai Peddireddy (UVA), Benjamin Hurt (UVA), Przemyslaw Porebski, Bryan Lewis (UVA), Madhav Marathe (UVA), Jiangzhou Chen, Anil Vullikanti.
 website_url: https://biocomplexity.virginia.edu/
 license: cc-by-4.0
 team_model_designation: primary
-methods: An ensemble of multiple methods such as auto-regressive (AR)
-models with exogenous variables, Long short-term memory (lSTM) models,
-Kalman filter and PatchSim (an SEIR model).
+methods: An ensemble of multiple methods such as auto-regressive (AR)models with exogenous variables, Long short-term memory (lSTM) models,Kalman filter and PatchSim (an SEIR model).
 methods_long: "This is a national-level (specific to DE, PL, GB in this round) multi-method model forecasting the new confirmed cases. Multiple methods include AR methods, an LSTM model(not included in this round),Kalman filters, ARIMA(not included in this round), and PatchSim(not included in this round), variant of SEIR(not included in this round). Multimethod forecasts are combined using Bayesian model averaging."
