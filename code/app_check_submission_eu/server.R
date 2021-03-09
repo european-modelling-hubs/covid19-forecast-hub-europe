@@ -23,10 +23,10 @@ local <- FALSE # set to FALSE when deploying
 # get truth data:
 if(local){
   dat_truth <- read.csv("../../viz/truth_to_plot.csv",
-                            colClasses = list("date" = "Date"), stringsAsFactors = FALSE)
+                        colClasses = list("date" = "Date"), stringsAsFactors = FALSE)
 }else{
   dat_truth <- read.csv("https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/viz/truth_to_plot.csv",
-                           colClasses = list("date" = "Date"), stringsAsFactors = FALSE)
+                        colClasses = list("date" = "Date"), stringsAsFactors = FALSE)
 }
 # adapt column names for matching with targets
 colnames(dat_truth) <- gsub("inc_", "inc ", colnames(dat_truth))
@@ -36,49 +36,66 @@ cols_legend <- c("#699DAF", "#D3D3D3")
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output, session) {
-
-
+  
+  
   dat <- reactiveValues()
-
+  
   # Handling reading in of files:
   observe({
-    inFile <- input$file1
+    inFile <- input$file
+    query <- parseQueryString(session$clientData$url_search) # text in URL
     
-    if (is.null(inFile) | input$path1 != ""){
+    dat$path <- ""
+    dat$forecasts <- NULL
+    
+    if(!is.null(query$file) & is.null(inFile) & input$path == ""){
+      dat$path <- query$file
+      dat$name <- basename(query$file)
       dat$forecasts <- NULL
-    }else{
+      try(dat$forecasts <- read_week_ahead(dat$path))
+    }
+    
+    if(!is.null(inFile) & input$path == ""){
+      dat$path <- inFile$datapath
+      dat$name <- basename(inFile$name)
       dat$forecasts <- NULL
-      try(dat$forecasts <- read_week_ahead(inFile$datapath))
+      try(dat$forecasts <- read_week_ahead(dat$path))
+    }
+    
+    if(input$path != ""){
+      dat$path <- input$path
+      dat$name <- basename(input$path)
+      dat$forecasts <- NULL
+      try(dat$forecasts <- read_week_ahead(dat$path))
+    }
+    
+    if(!is.null(dat$forecasts)){
       locations <- unique(dat$forecasts$location)
       if(!is.null(dat$forecasts$location_name)) names(locations) <- unique(dat$forecasts$location_name)
       dat$locations <- locations
-      updateTextInput(session, "path1", value = "")
     }
     
-    if(input$path1 != ""){
-      dat$forecasts <- NULL
-      try(dat$forecasts <- read_week_ahead(input$path1))
-      locations <- unique(dat$forecasts$location)
-      if(!is.null(dat$forecasts$location_name)) names(locations) <- unique(dat$forecasts$location_name)
-      dat$locations <- locations
-    }
+    print(dat$path)
+    
   })
-
+  
   # input element to select location (loads the available locations):
   output$inp_select_location <- renderUI(
     selectInput("select_location", "Select location:", choices = dat$locations,
                 selected = "GM")
   )
-
+  
+  output$file_name <- renderText(dat$name)
+  
   # plot output:
   output$plot <- renderPlot({
     if(!is.null(dat$forecasts)){
-
+      
       # et forecast date:
       forecast_date <- dat$forecasts$forecast_date[1]
-
+      
       par(mfrow = 1:2)
-
+      
       # plot for cases:
       if(any(grepl("case", dat$forecasts$target))){ # only if case forecasts available
         plot_forecast(dat$forecasts, forecast_date = forecast_date,
@@ -89,12 +106,12 @@ shinyServer(function(input, output, session) {
                       end = as.Date(forecast_date) + 28)
         title(paste0("Incident cases - ", input$select_location))
         legend("topleft", legend = c("50%PI", "95% PI"), col = cols_legend, pch = 15, bty = "n")
-
+        
       }else{ # otherwise empty plot
         plot(NULL, xlim = 0:1, ylim = 0:1, xlab = "", ylab = "", axes = FALSE)
         text(0.5, 0.5, paste("No case forecasts found."))
       }
-
+      
       # plot for deaths:
       if(any(grepl("death", dat$forecasts$target))){  # only if case forecasts available
         plot_forecast(dat$forecasts, forecast_date = forecast_date,
@@ -105,17 +122,17 @@ shinyServer(function(input, output, session) {
                       end = as.Date(forecast_date) + 28)
         title(paste0("Incident deaths - ", input$select_location))
         legend("topleft", legend = c("50%PI", "95% PI"), col = cols_legend, pch = 15, bty = "n")
-
+        
       }else{  # otherwise empty plot
         plot(NULL, xlim = 0:1, ylim = 0:1, xlab = "", ylab = "", axes = FALSE)
         text(0.5, 0.5, paste("No  death forecasts found."))
       }
-
+      
     }else{
       # if no file is uploaded: empty plot with "Please select a valid csv file"
       plot(NULL, xlim = 0:1, ylim = 0:1, xlab = "", ylab = "", axes = FALSE)
       text(0.5, 0.5, "Please select a valid csv file.")
     }
   })
-
+  
 })

@@ -18,8 +18,8 @@ shinyUI(fluidPage(
   # Sidebar with a slider input for number of bins
   sidebarLayout(
     sidebarPanel(
-      fileInput("file1", "Choose file to upload", accept = ".csv"),
-      textInput("path1", "Or paste a URL to a csv file (the raw csv, not github preview)."),
+      fileInput("file", "Choose file to upload", accept = ".csv"),
+      textInput("path", "Or paste a URL to a csv file (the raw csv, not github preview)."),
       uiOutput("inp_select_location")
     ),
 
@@ -30,6 +30,7 @@ shinyUI(fluidPage(
                display:block; }"),
 
       h4("Forecast visualization:"),
+      textOutput(outputId = "file_name"),
       plotOutput("plot"),
       tags$div(
         tags$span(style="color:white", ".")
