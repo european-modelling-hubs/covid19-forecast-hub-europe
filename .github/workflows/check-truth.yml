@@ -29,8 +29,8 @@ jobs:
         pip3 install -r github-actions/pr_requirements.txt
 
     - name: Install R requirenments
-      run: sudo apt-get install pandoc
       run: |
+        sudo apt-get install pandoc
         Rscript -e 'install.packages(c("gh", "dplyr", "stringr", "here", "knitr", "rmarkdown"))'
 
     - name: Verify truth data
