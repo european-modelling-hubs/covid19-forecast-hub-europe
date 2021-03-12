@@ -20,11 +20,10 @@ cwd_p = Path(__file__).parent.resolve()
 all_forecasts = glob.glob('./data-processed/**/*-*.csv')
 # pprint.pprint(all_forecasts)
 # meta info
-project_name = 'COVID-19 Forecasts'
+project_name = 'ECDC European COVID-19 Forecast Hub'
 project_obj = None
-project_timezeros = []
 conn = util.authenticate()
-url = 'https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed/'
+url = 'https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/data-processed'
 
 # all_forecasts = glob.glob('./data')
 project_obj = [project for project in conn.projects if project.name == project_name][0]

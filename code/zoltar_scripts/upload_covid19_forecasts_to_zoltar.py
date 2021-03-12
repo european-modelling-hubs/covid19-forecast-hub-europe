@@ -19,8 +19,10 @@ logger = logging.getLogger(__name__)
 STAGING = False
 
 # meta info
-project_name = 'COVID-19 Forecasts'
+project_name = 'ECDC European COVID-19 Forecast Hub'
 project_obj = None
+# conn = util.authenticate()
+url = 'https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/data-processed'
 project_timezeros = []
 
 # Is staging is set to True, use the staging server
@@ -30,8 +32,6 @@ else:
     conn = ZoltarConnection()
 conn.authenticate(os.environ.get("Z_USERNAME"), os.environ.get("Z_PASSWORD"))
 
-
-url = 'https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed/'
 
 # mapping of variables in the metadata to the parameters in Zoltar
 metadata_field_to_zoltar = {
@@ -161,6 +161,7 @@ def upload_covid_all_forecasts(path_to_processed_model_forecasts, dir_name):
 
     if model_abbreviation not in model_abbrs:
         pprint.pprint('%s not in models' % model_abbreviation)
+        print(model_abbrs)
         if 'home_url' not in model_config:
             model_config['home_url'] = url + dir_name
         

@@ -7,10 +7,10 @@ import sys
 path_to_zoltar_truth = './data-truth/zoltar-truth.csv'
 
 # meta info
-project_name = 'COVID-19 Forecasts'
+project_name = 'ECDC European COVID-19 Forecast Hub'
 project_obj = None
 conn = util.authenticate()
-url = 'https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed/'
+url = 'https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/data-processed'
 
 
 # Get the project
