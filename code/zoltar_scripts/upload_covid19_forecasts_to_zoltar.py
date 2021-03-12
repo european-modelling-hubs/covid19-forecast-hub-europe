@@ -210,7 +210,6 @@ def upload_covid_all_forecasts(path_to_processed_model_forecasts, dir_name):
 
             # Check this hash against the previous version of hash
             if db.get(forecast, None) != checksum:
-                print(forecast, db.get(forecast, None))
                 if time_zero_date in existing_time_zeros:
                     
                     # Check if the already existing forecast has the same issue date
@@ -250,6 +249,7 @@ def upload_covid_all_forecasts(path_to_processed_model_forecasts, dir_name):
 
             # Upload forecast
             if "no errors" == errors_from_validation:
+                print(f"{forecast} had no errors")
                 quantile_json, error_from_transformation = json_io_dict_from_quantile_csv_file(fp,
                                                                                                COVID_TARGETS,
                                                                                                covid19_row_validator,
@@ -286,7 +286,7 @@ def upload_covid_all_forecasts(path_to_processed_model_forecasts, dir_name):
 if __name__ == '__main__':
     list_of_model_directories = os.listdir('./data-processed/')
     output_errors = {}
-    for directory in list_of_model_directories:
+    for directory in list_of_model_directories[:]:
         if "." in directory:
             continue
         output = upload_covid_all_forecasts('./data-processed/' + directory + '/', directory)
@@ -300,7 +300,8 @@ if __name__ == '__main__':
     if len(output_errors) > 0:
         for directory, errors in output_errors.items():
             print("\n* ERROR IN '", directory, "'")
-            print(errors)
+            for e in errors:
+                print(e)
         os.sync()  # make sure we flush before exiting
         sys.exit("\n ERRORS FOUND EXITING BUILD...")
     else:
