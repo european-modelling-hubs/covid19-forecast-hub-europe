@@ -46,7 +46,7 @@ jobs:
         AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git config user.email "action@github.com"
-        git config user.name "GitHub Action - check truth
+        git config user.name "GitHub Action - check truth"
         git add --all
         git commit -m "Check truth data"
         git push 
