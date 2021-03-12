@@ -30,7 +30,7 @@ jobs:
 
     - name: Install R requirenments
       run: |
-        sudo apt-get install pandoc
+        sudo apt-get install pandoc libcurl4-openssl-dev
         Rscript -e 'install.packages(c("gh", "dplyr", "stringr", "here", "knitr", "rmarkdown"))'
 
     - name: Verify truth data
