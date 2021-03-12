@@ -80,6 +80,11 @@ def covid19_row_validator(column_index_dict, row, codes):
     from cdc_io import _parse_date  # avoid circular imports
 
     error_messages = []  # returned value. filled next
+    
+    # 0. Validate forecast value
+    value = row[column_index_dict['value']]
+    if value < 0:
+        error_messages.append(f"Error > negative value in forecast: {value!r}. row={row}")
 
     # 1. validate location (ISO-2 code)
     location = row[column_index_dict['location']]
