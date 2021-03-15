@@ -14,7 +14,7 @@ library(shiny)
 shinyUI(fluidPage(
 
   # Application title
-  titlePanel("Visualize your forecasts prior to submission (European COVID19 Forecast Hub)"),
+  titlePanel("Visualize your submission to the European COVID19 Forecast Hub"),
 
   # Sidebar with control elements
   sidebarLayout(
@@ -30,7 +30,7 @@ shinyUI(fluidPage(
                font-family:'Courier New';
                display:block; }"),
 
-      h4("Forecast visualization:"),
+      h4("Forecast visualization (may take a few seconds to load):"),
       textOutput(outputId = "file_name"), # paste name of visualized file
       # plotOutput("plot"), # plot
       uiOutput("plot_ui"),
