@@ -14,7 +14,7 @@ filter_df <- function(data, filter_list) {
 
 
 ```{r, results = 'asis'}
-cat("\n\n##", tabtitle, "\n\n")
+cat("\n\n###", tabtitle, "\n\n")
 
 df <- filter_df(data, filter_list)
 table <- eval_forecasts(df, summarise_by = summarise_by, compute_relative_skill = TRUE)

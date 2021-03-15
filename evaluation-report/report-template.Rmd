@@ -1,9 +1,10 @@
 ---
-output:
-  html_document:
-    toc: true
-    toc_float: true
-    toc_depth: 1
+always_allow_html: true
+# output:
+#   rmarkdown::github_document:
+#     toc: true
+#     # toc_float: true
+#     toc_depth: 1
 title: "European COVID-19 Forecast Hub Evaluation Report"
 # toc: true
 # toc_float: true
@@ -24,11 +25,13 @@ knitr::opts_chunk$set(echo = FALSE,
                       warning = FALSE)
 
 include_ranking <- TRUE
-include_forecast_plot <- TRUE
+include_forecast_plot <- FALSE
+include_avail_forceasts <- FALSE
+include_ranks_over_time <- FALSE
 
 ```
 
-<br>
+
 
 This is an evaluation of forecasts for Covid-19 case and death numbers in 32 European countries submitted to the [European COVID-19 Forecast Hub](https://covid19forecasthub.eu/). You can find more information on the [European Forecast Hub Github page](https://github.com/epiforecasts/covid19-forecast-hub-europe). 
 
@@ -61,66 +64,68 @@ data <- scoringutils::merge_pred_and_obs(forecasts, truth,
 
 ```
 
-<br>
+
 
 ---
 
-# Forecaster ranking {.tabset}
+# Forecast accuracy {.tabset .tabset-fade .tabset-dropdown}
 
-Here is an overall ranking of all forecasters. The ranking is made according to relative skill. Relative skill is calculated by looking at all pairwise comparisons between forecasters in terms of the weighted interval score (WIS). See below for a more detailed explanation of the scoring metrics used. 'Overall' shows the complete ranking, 'latest' only spans the last 5-6 weeks of data. 'Detailed' represents the full data set that you can download for your own analysis. 
+Here is an overview of different evaluation metrics. See below for a more detailed explanation of the scoring metrics used. 'Overall' shows scores for all past weeks, 'latest' only spans the last 5-6 weeks of data. 'Detailed' represents the full data set that you can download for your own analysis. 
 
 ```{r ranking, include = FALSE, eval = include_ranking}
 out <- NULL
+locations <- unique(truth$location_name)
 
-tabtitle = "overall"
-summarise_by = c("model")
-filter_list = list("type != 'point'")
-out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.Rmd")))
-
-tabtitle = "latest"
-summarise_by = c("model")
-cut_off <- covid.german.forecasts::latest_weekday(Sys.Date()) - 5 * 7
-filter_list = list(paste0("forecast_date >= '", cut_off, "'"), 
-                   "type != 'point'")
-out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.Rmd")))
-
-tabtitle = "Cases"
-summarise_by = c("model", "target_variable")
-filter_list = list('target_variable == "inc case"', 
-                   "type != 'point'")
-out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.Rmd")),
-        quiet = TRUE)
-
-tabtitle = "Deaths"
-summarise_by = c("model", "target_variable")
-filter_list = list('target_variable == "inc death"', 
-                   "type != 'point'")
-out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.Rmd")),
-        quiet = TRUE)
-
-# tabtitle = "Germany"
-# summarise_by = c("model", "location_name")
-# filter_list = list('location_name == "Germany"')
-# out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.Rmd")),
-#         quiet = TRUE)
-# 
-# tabtitle = "Poland"
-# summarise_by = c("model", "location_name")
-# filter_list = list('location_name == "Poland"')
-# out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.Rmd")),
-#         quiet = TRUE)
-
-tabtitle = "overall by horizon"
-summarise_by = c("model", "horizon")
-filter_list = list("type != 'point'")
-out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.Rmd")),
-        quiet = TRUE)
-
-tabtitle = "Detailed"
-summarise_by = NULL
-filter_list = list("type != 'point'")
-out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.Rmd")),
-        quiet = TRUE)
+for (loc in locations) {
+  
+  cat("\n\n##", loc, ".tabset .tabset-fade \n\n")
+  
+  message(loc)
+  
+  tabtitle = "overall"
+  summarise_by = c("model")
+  filter_list = list("type != 'point'", 
+                     paste0("location_name == '", loc, "'"))
+  out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.Rmd")))
+  
+  tabtitle = "latest"
+  summarise_by = c("model")
+  cut_off <- covid.german.forecasts::latest_weekday(Sys.Date()) - 5 * 7
+  filter_list = list(paste0("forecast_date >= '", cut_off, "'"), 
+                     "type != 'point'", 
+                     paste0("location_name == '", loc, "'"))
+  out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.Rmd")))
+  
+  tabtitle = "Cases"
+  summarise_by = c("model", "target_variable")
+  filter_list = list('target_variable == "inc case"', 
+                     "type != 'point'", 
+                     paste0("location_name == '", loc, "'"))
+  out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.Rmd")),
+          quiet = TRUE)
+  
+  tabtitle = "Deaths"
+  summarise_by = c("model", "target_variable")
+  filter_list = list('target_variable == "inc death"', 
+                     "type != 'point'", 
+                     paste0("location_name == '", loc, "'"))
+  out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.Rmd")),
+          quiet = TRUE)
+  
+  tabtitle = "overall by horizon"
+  summarise_by = c("model", "horizon")
+  filter_list = list("type != 'point'", 
+                     paste0("location_name == '", loc, "'"))
+  out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.Rmd")),
+          quiet = TRUE)
+  
+  tabtitle = "Detailed"
+  summarise_by = NULL
+  filter_list = list("type != 'point'", 
+                     paste0("location_name == '", loc, "'"))
+  out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.Rmd")),
+          quiet = TRUE)
+}
 
 ```
 
@@ -128,7 +133,7 @@ out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.
 
 # {.unlisted .unnumbered}
 
-<br>
+
 
 --- 
 
@@ -142,7 +147,7 @@ out = c(out, knit_child(here::here("evaluation-report", "template-ranking-table.
 
 # {.unlisted .unnumbered}
 
-<br>
+
 
 ---
 
@@ -164,7 +169,7 @@ out = c(out, knit_child(here::here("evaluation-report", "template-plot-forecasts
 
 # {.unlisted .unnumbered}
 
-<br>
+
 
 ---
 
@@ -180,51 +185,51 @@ out = c(out, knit_child(here::here("evaluation-report", "template-scores-and-tru
 
 `r paste(knit(text = out), collapse = '\n\n')`
 
-# {.unlisted .unnumbered}
+<!-- # {.unlisted .unnumbered} -->
 
-<br>
+<!--  -->
 
----
+<!-- --- -->
 
-# Ranks over time {.tabset .tabset-fade .tabset-dropdown}
+<!-- # Ranks over time {.tabset .tabset-fade .tabset-dropdown} -->
 
-This table shows you the model rank among all forecasting models, or alternatively a standardised rank. The standardised rank is computed as (100 - the forecast model percentile rank) among all models for a given target and forecast date. What happens is basically this: Every model gets assigned a rank (1 is the best and the worst equals the number of available forecasts for that date). This rank is then transformed to a scale from 1 to 100 such that 100 is best and 0 is worst. Ranks are determined based on the weighted interval scores.
+<!-- This table shows you the model rank among all forecasting models, or alternatively a standardised rank. The standardised rank is computed as (100 - the forecast model percentile rank) among all models for a given target and forecast date. What happens is basically this: Every model gets assigned a rank (1 is the best and the worst equals the number of available forecasts for that date). This rank is then transformed to a scale from 1 to 100 such that 100 is best and 0 is worst. Ranks are determined based on the weighted interval scores. -->
 
-```{r ranking-over-time, include = FALSE}
+```{r ranking-over-time, include = FALSE, eval = include_ranks_over_time}
 out <- NULL
 out = c(out, knit_child(here::here("evaluation-report", "template-ranking-over-time.Rmd")))
 ```
 
-`r paste(knit(text = out), collapse = '\n\n')`
+`r paste(if (include_ranks_over_time) knit(text = out), collapse = '\n\n')`
 
 # {.unlisted .unnumbered}
 
-<br>
+
 
 ---
- 
+
 # WIS decomposition {.tabset .tabset-fade .tabset-dropdown}
 
-As mentionend above, the weighted interval score can be decomposed into three parts: sharpness (the amount of uncertainty around the forecast), overprediction and underprediction. This visualisation gives an impression of the distribution between these three forms of penalties for the different models. 
+As mentionend above, the weighted interval score can be decomposed into three parts: sharpness (the amount of uncertainty around the forecast), overprediction and underprediction. This visualisation gives an impression of the distribution between these three forms of penalties for the different models.
 
 ```{r wis-components, include = FALSE}
 out <- NULL
 out = c(out, knit_child(here::here("evaluation-report", "template-wis-components.Rmd")))
 ``` 
 
-`r paste(knit(text = out), collapse = '\n\n')`
+`r paste(if (TRUE) knit(text = out), collapse = '\n\n')`
 
 # {.unlisted .unnumbered}
 
-<br>
+<!--  -->
 
----
+<!-- --- -->
 
-# Models and available forecasts
+<!-- # Models and available forecasts -->
 
-The following graphic gives an overview of the models analysed and the number of forecasts they contributed. 
+<!-- The following graphic gives an overview of the models analysed and the number of forecasts they contributed.  -->
 
-```{r show-avail-forecasts, results = 'asis'}
+```{r show-avail-forecasts, results = 'asis', eval = include_avail_forceasts}
 plot <- scoringutils::show_avail_forecasts(forecasts,
                                            show_numbers = FALSE,
                                            make_x_factor = FALSE,
