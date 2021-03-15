@@ -10,5 +10,5 @@ data_inputs: JHU
 methods_long: "We use the reproduction equation to obtain a state space model whose states \
   \ comprise incidences, the current reproduction number, the generation time distribution, \
   \ as well as fraction of deaths by delay. An extended Kalman filter is used to fit this model \
-  \ and obtain forecasts. Quantiles for the latter are obtained from a negative binomial distribution \
+  \ and obtain forecasts. Quantiles for the latter are obtained from a log-normal distribution \
   \ with mean and variance given by the prediction steps."
