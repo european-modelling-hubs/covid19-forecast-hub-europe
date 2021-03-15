@@ -1,3 +1,4 @@
+# Written by Johannes Bracher, johannes.bracher@kit.edu
 #
 # This is the user-interface definition of a Shiny web application. You can
 # run the application by clicking 'Run App' above.
@@ -15,23 +16,24 @@ shinyUI(fluidPage(
   # Application title
   titlePanel("Visualize your forecasts prior to submission (European COVID19 Forecast Hub)"),
 
-  # Sidebar with a slider input for number of bins
+  # Sidebar with control elements
   sidebarLayout(
     sidebarPanel(
       fileInput("file", "Choose file to upload", accept = ".csv"),
       textInput("path", "Or paste a URL to a csv file (the raw csv, not github preview)."),
-      uiOutput("inp_select_location")
+      # uiOutput("inp_select_location") # currently not used
     ),
 
-    # Show a plot of the generated distribution
+    # Main panel
     mainPanel(
       tags$style("#result_checks {font-size:15px;
                font-family:'Courier New';
                display:block; }"),
 
       h4("Forecast visualization:"),
-      textOutput(outputId = "file_name"),
-      plotOutput("plot"),
+      textOutput(outputId = "file_name"), # paste name of visualized file
+      # plotOutput("plot"), # plot
+      uiOutput("plot_ui"),
       tags$div(
         tags$span(style="color:white", ".")
       ),
