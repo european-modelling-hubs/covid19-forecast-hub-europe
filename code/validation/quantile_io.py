@@ -237,8 +237,10 @@ def _validate_header(header, addl_req_cols):
 
     for elem in header:
         if elem not in POSSIBLE_COLUMNS:
-            raise RuntimeError(f"invalid header. contains invalid column. column={elem}, "
-                                f"possible_columns={POSSIBLE_COLUMNS}")
+            raise RuntimeError(f"HEADER ERROR: invalid colum name '{elem}'. "
+                               f"Check that all column names are contained in "
+                               f" the following list and separated by commas (','): "
+                                f"{POSSIBLE_COLUMNS}")
 
 
     if not all(counts):
