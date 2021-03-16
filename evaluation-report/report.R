@@ -8,11 +8,9 @@ library(rmarkdown)
 library(data.table)
 library(covidHubUtils)
 
-
-
-rmarkdown::render(here::here("evaluation-report", "report-template.Rmd"),
-                  output_format = "md_document",
-                  output_file = here::here("docs", "index.md"),
+rmarkdown::render(here::here("reports", "evaluation", "report-template.Rmd"),
+                  output_format = "html_document",
+                  output_file = here::here("docs", "evaluation.html"),
                   envir = new.env(),
                   clean = TRUE)
 

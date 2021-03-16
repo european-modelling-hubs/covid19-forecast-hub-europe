@@ -1,0 +1,49 @@
+```{r ranking-time, results = 'asis', fig.width=12, fig.height=8}
+scores <- scoringutils::eval_forecasts(data,
+                                         summarise_by = c("model", 
+                                                          "location_name", 
+                                                          "target_variable",
+                                                          "forecast_date"), 
+                                       compute_relative_skill = FALSE)
+
+
+for (loc in locations) {
+  cat("\n\n##", loc, "{.tabset} \n\n")
+  
+  tmp_scores <- filter(scores, location_name == loc)
+  
+  ranked_scores <- tmp_scores %>%
+    dplyr::mutate(forecast_date = as.Date(forecast_date)) %>%
+    dplyr::group_by(forecast_date, location_name, target_variable) %>%
+    dplyr::mutate(num_forecasts = dplyr::n(), 
+                  rank = rank(interval_score, ties.method = "average",
+                              na.last = "keep"), 
+                  standard_rank = round((1 - (rank - 1) / (num_forecasts - 1)) * 100)) %>%
+    dplyr::ungroup()
+  
+  cat("\n\n### model rank\n\n")
+  plot <- score_heatmap(ranked_scores, metric = "rank", 
+                        x = "forecast_date",
+                        facet_wrap_or_grid = "grid",
+                        facet_formula = ~ target_variable) + 
+    ggplot2::theme(legend.position = "bottom") +
+    ggplot2::scale_fill_gradient(low = "white", high = "coral")
+  
+  # suppress duplicated scale fill warning
+  suppressWarnings(print(plot))
+  
+  cat("\n\n### standardised model rank\n\n")
+  plot <- score_heatmap(ranked_scores, metric = "standard_rank", 
+                        x = "forecast_date",
+                        facet_wrap_or_grid = "grid",
+                        facet_formula = ~ target_variable) + 
+    ggplot2::theme(legend.position = "bottom") +
+    ggplot2::scale_fill_gradient(high = "white", low = "coral")
+  
+  # suppress duplicated scale fill warning
+  suppressWarnings(print(plot))
+  
+   
+}
+
+```

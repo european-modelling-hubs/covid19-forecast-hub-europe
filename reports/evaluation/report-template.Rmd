@@ -1,0 +1,237 @@
+---
+always_allow_html: true
+output:
+  html_document:
+    self_contained: true
+title: "European COVID-19 Forecast Hub Evaluation Report"
+---
+
+```{r setup, include=FALSE}
+library(scoringutils)
+library(ggplot2)
+library(dplyr)
+library(DT)
+library(knitr)
+library(covidHubUtils)
+library(lubridate)
+knitr::opts_chunk$set(echo = FALSE, 
+                      message = FALSE, 
+                      warning = FALSE)
+
+include_ranking <- TRUE
+include_forecast_plot <- FALSE
+include_avail_forecasts <- FALSE
+include_ranks_over_time <- FALSE
+
+```
+
+
+
+This is an evaluation of forecasts for Covid-19 case and death numbers in 32 European countries submitted to the [European COVID-19 Forecast Hub](https://covid19forecasthub.eu/). You can find more information on the [European Forecast Hub Github page](https://github.com/epiforecasts/covid19-forecast-hub-europe). 
+
+This report is intended as a basic evaluation of forecasts that helps modellers to better understand their performance. The structure and visualisations are likely subject to change in the future and we cannot rule out any mistakes. If you have questions or want to give feedback, please create an issue on our 
+[github repository](https://github.com/epiforecasts/covid19-forecast-hub-europe). Note that all forecast dates have been changed to the corresponding submission date (every Monday) to allow easier comparison. 
+
+```{r load-data}
+# load forecasts ---------------------------------------------------------------
+forecasts <- load_forecasts(source = "local_hub_repo",
+                            hub_repo_path = here(),
+                            hub = "ECDC")
+setDT(forecasts)
+# set forecast date to corresponding submision date
+forecasts[, forecast_date := ceiling_date(forecast_date, "week", week_start = 2) - 1]
+forecasts <- forecasts[forecast_date >= "2021-03-08"]
+setnames(forecasts, old = c("value"), new = c("prediction"))
+
+         # load truth data --------------------------------------------------------------
+truth <- map_dfr(.x = c("inc case", "inc death"),
+                 .f = ~ load_truth(truth_source = "JHU",
+                                   target_variable = .x,
+                                   hub = "ECDC")) 
+setDT(truth)
+truth[, model := NULL]
+setnames(truth, old = c("value"), 
+         new = c("true_value"))
+
+data <- scoringutils::merge_pred_and_obs(forecasts, truth, 
+                                         join = "full")
+
+```
+
+---
+
+<!-- # Forecast visualisation {.tabset .tabset-fade} -->
+
+```{r forecast-vis, include = FALSE, eval = include_forecast_plot}
+
+locations <- unique(truth$location_name)
+forecast_dates <- rev(as.character(unique(data$forecast_date[!is.na(data$forecast_date)])))
+target_variables <- c("inc case", "inc death")
+
+out <- NULL
+out = c(out, knit_child(here::here("reports", "evaluation", "template-plot-forecasts.Rmd")))
+```
+
+`r paste(if (include_forecast_plot) knit(text = out), collapse = '\n\n')`
+
+# {.unlisted .unnumbered}
+
+---
+
+# Forecast accuracy {.tabset .tabset-fade .tabset-dropdown}
+
+Here is an overview of different evaluation metrics. See below for a more detailed explanation of the scoring metrics used. 'Overall' shows scores for all past weeks, 'latest' only spans the last 5-6 weeks of data. 'Detailed' represents the full data set that you can download for your own analysis. 
+
+```{r ranking, include = FALSE, eval = include_ranking, results = 'asis'}
+out <- NULL
+locations <- unique(truth$location_name)
+
+for (loc in locations) {
+  
+  out <- c(out, paste0("\n\n## ", loc, " { .tabset .tabset-fade }\n\n"))
+  
+  message(loc)
+  
+  tabtitle <- "overall"
+  summarise_by <- c("model")
+  filter_list <- list("type != 'point'", 
+                       paste0("location_name == '", loc, "'"))
+  out <- c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
+                           quiet = TRUE))
+  
+  tabtitle = "latest"
+  summarise_by = c("model")
+  cut_off <- floor_date(today(), "week", 2) - 1 - 5 * 7
+  filter_list = list(paste0("forecast_date >= '", cut_off, "'"), 
+                     "type != 'point'", 
+                     paste0("location_name == '", loc, "'"))
+  out = c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
+                          quiet = TRUE))
+  
+  tabtitle = "Cases"
+  summarise_by = c("model", "target_variable")
+  filter_list = list('target_variable == "inc case"', 
+                     "type != 'point'", 
+                     paste0("location_name == '", loc, "'"))
+  out = c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
+                          quiet = TRUE))
+  
+  tabtitle = "Deaths"
+  summarise_by = c("model", "target_variable")
+  filter_list = list('target_variable == "inc death"', 
+                     "type != 'point'", 
+                     paste0("location_name == '", loc, "'"))
+  out = c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
+                          quiet = TRUE))
+  
+  tabtitle = "overall by horizon"
+  summarise_by = c("model", "horizon")
+  filter_list = list("type != 'point'", 
+                     paste0("location_name == '", loc, "'"))
+  out = c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
+                          quiet = TRUE))
+  
+  tabtitle = "Detailed"
+  summarise_by = NULL
+  filter_list = list("type != 'point'", 
+                     paste0("location_name == '", loc, "'"))
+  out = c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
+                          quiet = TRUE))
+}
+
+```
+
+`r paste(if (include_ranking) knit(text = out, quiet = TRUE), collapse = '\n\n')`
+
+# {.unlisted .unnumbered}
+
+
+
+--- 
+
+# Evaluation metrics
+
+ - Relative skill is a metric based on the weighted interval score (WIS) that is using a 'pairwise comparison tournament'. All pairs of forecasters are compared against each other in terms of the weighted interval score. The mean score of both models based on the set of common targets for which both models have made a prediction are calculated to obtain mean score ratios. The relative skill is the geometric mean of these mean score ratios. Smaller values are better and a value smaller than one means that the model beats the average forecasting model. 
+ - The weighted interval score is a proper scoring rule (meaning you can't cheat it) suited to scoring forecasts in an interval format. It has three components: sharpness, underprediction and overprediction. Sharpness is the width of your prediction interval. Over- and underprediction only come into play if the prediction interval does not cover the true value. They are the absolute value of the difference between the upper or lower bound of your prediction interval (depending on whether your forecast is too high or too low). 
+ - coverage deviation is the average difference between nominal and empirical interval coverage. Say your 50 percent prediction interval covers only 20 percent of all true values, then your coverage deviation is 0.5 - 0.2 = -0.3. The coverage deviation value in the table is calculated by averaging over the coverage deviation calculated for all possible prediction intervals. If the value is negative you have covered less then you should. If it is positve, then your forecasts could be a little more confident. 
+ - bias is a measure between -1 and 1 that expresses your tendency to underpredict (-1) or overpredict (1). In contrast to the over- and underprediction components of the WIS it is bound between -1 and 1 and cannot go to infinity. It is therefore less susceptible to outliers. 
+ - aem is the absolute error of your median forecasts. A high aem means your median forecasts tend to be far away from the true values. 
+
+# {.unlisted .unnumbered}
+
+
+
+---
+
+# Scores over time {.tabset .tabset-fade .tabset-dropdown}
+
+Here you can see a visualisation of forecaster scores over time. The first tab shows the weighted interval score. Other tabs show the components of the interval score, sharpness (how narrow are forecasts - smaller is better), and penalties for underprediction and overprediction. 
+
+```{r forecast-and-scores, include = FALSE}
+out <- NULL
+locations <- unique(truth$location_name)
+out = c(out, knit_child(here::here("reports", "evaluation", "template-scores-and-truth-time.Rmd")))
+```
+
+`r paste(knit(text = out), collapse = '\n\n')`
+
+<!-- # {.unlisted .unnumbered} -->
+
+<!--  -->
+
+<!-- --- -->
+
+<!-- # Ranks over time {.tabset .tabset-fade .tabset-dropdown} -->
+
+<!-- This table shows you the model rank among all forecasting models, or alternatively a standardised rank. The standardised rank is computed as (100 - the forecast model percentile rank) among all models for a given target and forecast date. What happens is basically this: Every model gets assigned a rank (1 is the best and the worst equals the number of available forecasts for that date). This rank is then transformed to a scale from 1 to 100 such that 100 is best and 0 is worst. Ranks are determined based on the weighted interval scores. -->
+
+```{r ranking-over-time, include = FALSE, eval = include_ranks_over_time}
+out <- NULL
+out = c(out, knit_child(here::here("reports", "evaluation", "template-ranking-over-time.Rmd")))
+```
+
+`r paste(if (include_ranks_over_time) knit(text = out), collapse = '\n\n')`
+
+# {.unlisted .unnumbered}
+
+
+
+---
+
+# WIS decomposition {.tabset .tabset-fade .tabset-dropdown}
+
+As mentionend above, the weighted interval score can be decomposed into three parts: sharpness (the amount of uncertainty around the forecast), overprediction and underprediction. This visualisation gives an impression of the distribution between these three forms of penalties for the different models.
+
+```{r wis-components, include = FALSE}
+out <- NULL
+out = c(out, knit_child(here::here("reports", "evaluation", "template-wis-components.Rmd")))
+``` 
+
+`r paste(if (TRUE) knit(text = out), collapse = '\n\n')`
+
+# {.unlisted .unnumbered}
+
+<!--  -->
+
+<!-- --- -->
+
+<!-- # Models and available forecasts -->
+
+<!-- The following graphic gives an overview of the models analysed and the number of forecasts they contributed.  -->
+
+```{r show-avail-forecasts, results = 'asis', eval = include_avail_forecasts}
+plot <- scoringutils::show_avail_forecasts(forecasts,
+                                           show_numbers = FALSE,
+                                           make_x_factor = FALSE,
+                                           summarise_by = c("forecast_date", 
+                                                            "model", 
+                                                            "horizon", 
+                                                            "type",
+                                                            "target_variable"),
+                                           legend_position = "bottom") + 
+  labs(fill = "number of locations", x = "forecast date")
+print(plot)
+```
+
+If you want to learn more about a model, you can go the the 'data-processed'-folder of the [European Forecast Hub github repository](https://github.com/epiforecasts/covid19-forecast-hub-europe), select a model and access the metadata file with further information provided by the model authors. 
+
