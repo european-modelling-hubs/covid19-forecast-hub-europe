@@ -30,11 +30,15 @@ ensemble <- models %>%
   filter(type == "quantile") %>%
   mutate(type_forecast = sub("^.* ([a-z]+)$", "\\1", target),
          quantile = round(quantile, 3)) %>%
-  group_by(team, type_forecast) %>%
-  mutate(all_quantiles = length(setdiff(quantiles, quantile)) == 0,
-         four_weeks = any(grepl("^4 wk", target))) %>%
+  group_by(team, type_forecast, location) %>%
+  mutate(four_weeks = any(grepl("^4 wk", target))) %>%
+  group_by(team, type_forecast, location, target_end_date) %>%
+  mutate(all_quantiles = length(setdiff(quantiles, quantile)) == 0) %>%
+  group_by(team, type_forecast, location) %>%
+  mutate(all_quantiles = all(all_quantiles == TRUE)) %>%
   ungroup() %>%
-  filter(all_quantiles & four_weeks) %>%
+  filter(all_quantiles == TRUE,
+         four_weeks == TRUE) %>%
   select(-all_quantiles, -four_weeks) %>%
   group_by(target, target_end_date, location, type, quantile) %>%
   summarise(forecasts = n(),
