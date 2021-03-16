@@ -8,7 +8,8 @@ library(lubridate)
 team_name <- "EuroCOVIDhub-ensemble"
 forecast_date <- floor_date(today(), "week", 1)
 
-files <- dir(here("data-processed"), pattern = as.character(forecast_date),
+files <- dir(here("data-processed"),
+             pattern = as.character(forecast_date),
              include.dirs = TRUE, recursive = TRUE,
              full.names = TRUE)
 
@@ -27,14 +28,18 @@ models <- bind_rows(models, .id = "team")
 quantiles <- round(c(0.01, 0.025, seq(0.05, 0.95, by = 0.05), 0.975, 0.99), 3)
 
 ensemble <- models %>%
-  filter(type == "quantile") %>%
+  filter(team != team_name, type == "quantile") %>%
   mutate(type_forecast = sub("^.* ([a-z]+)$", "\\1", target),
          quantile = round(quantile, 3)) %>%
-  group_by(team, type_forecast) %>%
-  mutate(all_quantiles = length(setdiff(quantiles, quantile)) == 0,
-         four_weeks = any(grepl("^4 wk", target))) %>%
+  group_by(team, type_forecast, location) %>%
+  mutate(four_weeks = any(grepl("^4 wk", target))) %>%
+  group_by(team, type_forecast, location, target_end_date) %>%
+  mutate(all_quantiles = length(setdiff(quantiles, quantile)) == 0) %>%
+  group_by(team, type_forecast, location) %>%
+  mutate(all_quantiles = all(all_quantiles == TRUE)) %>%
   ungroup() %>%
-  filter(all_quantiles & four_weeks) %>%
+  filter(all_quantiles == TRUE,
+         four_weeks == TRUE) %>%
   select(-all_quantiles, -four_weeks) %>%
   group_by(target, target_end_date, location, type, quantile) %>%
   summarise(forecasts = n(),
