@@ -1,10 +1,10 @@
 ---
 title: "European forecasting hub"
-output:   
-  html_document:
+output:
+  md_document:
+    variant: markdown_github
     toc: true
-    toc_float:
-      collapsed: false
+    toc_depth: 2
 ---
 
 ```{r setup, include=FALSE}
@@ -23,7 +23,6 @@ Over the next week, forecasters largely expect cases and deaths from Covid-19 to
 
 #### Trends over time {.tabset}
 
-
 ##### Deaths from Covid-19 {.tabset .tabset-pills}
 
 `r paste(country1wk$death$summary_table$Country[1:2])`, and `r country1wk$death$summary_table$Country[3]` are likely to see the highest increases in deaths. 
@@ -40,10 +39,10 @@ plot(country4wk$death$summary_region_plot)
 
 See our [main visualisation](https://covid19forecasthub.eu/visualisation/) for maps and country level plots of forecasts over the next four weeks.
 
-The table below shows forecasts for this week, over the period: `r paste(format(country1wk$death$dates[1], "%d %B"), "to", format(country1wk$death$dates[2], "%d %B %Y"))`
+The table below shows forecasts for the 5 countries with highest incidence per 100,000 population. Forecasts were made this week, for the period `r paste(format(country1wk$death$dates[1], "%d %B"), "to", format(country1wk$death$dates[2], "%d %B %Y"))`.
 
 ```{r}
-knitr::kable(country1wk$death$summary_table,
+knitr::kable(country1wk$death$summary_table[1:5,],
              format.args = list(big.mark = ","))
 ```
 
@@ -63,9 +62,9 @@ plot(country4wk$case$summary_region_plot)
 
 See our [main visualisation](https://covid19forecasthub.eu/visualisation/) for maps and country level plots of forecasts over the next four weeks.
 
-The table below shows forecasts for this week, over the period: `r paste(format(country1wk$case$dates[1], "%d %B"), "to", format(country1wk$case$dates[2], "%d %B %Y"))`
+The table below shows forecasts for the 5 countries with highest incidence per 100,000 population. Forecasts were made this week, for the period `r paste(format(country1wk$death$dates[1], "%d %B"), "to", format(country1wk$death$dates[2], "%d %B %Y"))`.
 
 ```{r}
-knitr::kable(country1wk$case$summary_table,
+knitr::kable(country1wk$case$summary_table[1:5,],
              format.args = list(big.mark = ","))
 ```
