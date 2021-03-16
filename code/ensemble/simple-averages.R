@@ -8,7 +8,8 @@ library(lubridate)
 team_name <- "EuroCOVIDhub-ensemble"
 forecast_date <- floor_date(today(), "week", 1)
 
-files <- dir(here("data-processed"), pattern = as.character(forecast_date),
+files <- dir(here("data-processed"),
+             pattern = as.character(forecast_date),
              include.dirs = TRUE, recursive = TRUE,
              full.names = TRUE)
 
@@ -27,7 +28,7 @@ models <- bind_rows(models, .id = "team")
 quantiles <- round(c(0.01, 0.025, seq(0.05, 0.95, by = 0.05), 0.975, 0.99), 3)
 
 ensemble <- models %>%
-  filter(type == "quantile") %>%
+  filter(team != team_name, type == "quantile") %>%
   mutate(type_forecast = sub("^.* ([a-z]+)$", "\\1", target),
          quantile = round(quantile, 3)) %>%
   group_by(team, type_forecast, location) %>%
