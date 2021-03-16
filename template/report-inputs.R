@@ -5,12 +5,12 @@ library(lubridate)
 library(stringr)
 library(tidyr)
 library(purrr)
+library(ggplot2)
 
 # Set up ------------------------------------------------------------------
 ensemble_name <- "EuroCOVIDhub-ensemble"
 ensemble_method <- "mean average"
-# forecast_date <- floor_date(today(), "week", 1)
-forecast_date <- floor_date(today()-1, "week", 1)
+forecast_date <- floor_date(today(), "week", 1)
 
 # Get current country data ------------------------------------------------
 # Population counts and European regions
@@ -35,7 +35,7 @@ get_latest_truth <- function(truth_data, forecast_date) {
     filter(date < forecast_date) %>%
     filter(date == max(date)) %>%
     mutate(target_end_date = forecast_date) %>%
-    select(location, target_end_date, quantile, value)
+    select(location, target_end_date, value)
 }
 
 latest_truth_deaths <- vroom(paste("data-truth", "JHU", "truth_JHU-Incident Deaths.csv",
@@ -51,7 +51,7 @@ latest_truth_cases <- vroom(paste("data-truth", "JHU", "truth_JHU-Incident Cases
 latest_truth <- bind_rows(latest_truth_deaths, latest_truth_cases) 
 latest_truth <- bind_rows(latest_truth, latest_truth, latest_truth,
                             .id = "quantile") %>%
-  mutate(quantile = recode(quantile, 0.25 = 1, 0.5 = 2, 0.75 = 3)) %>%
+  mutate(quantile = recode(quantile, `1` = 0.25, `2` = 0.5, `3` = 0.75)) %>%
   left_join(country_pop, by = "location")
 
 # Get latest ensemble -----------------------------------------------------
@@ -66,17 +66,15 @@ ensemble <- vroom(paste("data-processed", ensemble_name,
   bind_rows(latest_truth) 
 
 # Calculate trends ---------------------------------------
-summary_ensemble <- ensemble %>%
+summarise_ensemble <- function(ensemble, target_end_date) {
+  summary_ensemble <- ensemble %>%
   # keep central estimates
     filter(quantile %in% c(0.25, 0.5, 0.75)) %>%
   # calculate values per 100k and % change
     group_by(location_name, variable, quantile) %>%
     arrange(target_end_date) %>%
     mutate(value_100k = (value / population) * 100000,
-           change_percent = (value - lag(value)) / lag(value) * 100)
-
-
-#%>%
+           change_percent = (value - lag(value)) / lag(value) * 100) %>%
     # get trend
     pivot_wider(names_from = quantile, 
                 values_from = c(value, value_100k, 
@@ -91,29 +89,26 @@ summary_ensemble <- ensemble %>%
                           "decrease",
                           "remain stable or uncertain")))
 
-
-
   # Add a neater table
   summary_table <- summary_ensemble %>%
+    filter(target_end_date == {{target_end_date}}) %>%
+    arrange(desc(value_100k_0.5)) %>%
     ungroup() %>%
-    mutate(forecast_range = paste0(forecast_0.5," (",
-                                                forecast_0.25, "-",
-                                                forecast_0.75, ")"),
-           forecast_100k = paste0(forecast_100k_0.5, " (",
-                                                  forecast_100k_0.25, "-",
-                                                  forecast_100k_0.75, ")"),
+    mutate(across(where(is.numeric), round, -1),
+           forecast_range = paste0(value_0.5," (",
+                                                value_0.25, "-",
+                                                value_0.75, ")"),
+           forecast_100k = paste0(value_100k_0.5, " (",
+                                                  value_100k_0.25, "-",
+                                                  value_100k_0.75, ")"),
            date_range = paste(as.Date(target_end_date) - 6, "to", target_end_date)) %>%
-    arrange(desc(latest_100k)) %>%
     select('Region' = europe_region,
            'Country' = location_name, 
            'Population' = population,
-           # 'Latest weekly incidence' = latest, 
-           # 'Latest weekly incidence per 100,000' = latest_100k,
            'Forecast period' = date_range,
            'Forecast weekly range' = forecast_range, 
            'Forecast weekly per 100,000' = forecast_100k, 
-           'Trend' = trend,
-           variable) 
+           'Trend' = trend) 
   
   trend <- summary_table %>%
     count(Trend) %>%
@@ -126,22 +121,44 @@ summary_ensemble <- ensemble %>%
   
   region <- split(summary_table, summary_table$Region)
   
-  dates <- c(as.Date(week_end) - 6, week_end)
+  dates <- c(as.Date(target_end_date) - 6, target_end_date)
   
-  summary <- list(summary_table, trend, region_trend, region, dates)
-  names(summary) <- c("summary_table", "trend", "region_trend", "region", "dates")
+  summary_region <- summary_ensemble %>%
+    group_by(europe_region, target_end_date, variable) %>%
+    summarise(across(value_100k_0.25:change_percent_0.75, ~ mean(., na.rm=T))) %>%
+    mutate(obs = ifelse(target_end_date == forecast_date, "Observed", "Forecast"))
+  
+  summary_region_plot <- summary_region %>%
+    mutate(variable = recode(variable, "case" = "Weekly cases", 
+                             "death" = "Weekly deaths")) %>%
+    ggplot(aes(colour = europe_region, fill = europe_region,
+               x = target_end_date)) +
+    geom_point(aes(y = value_100k_0.5)) +
+    geom_line(aes(y = value_100k_0.5)) +
+    geom_ribbon(aes(ymin = value_100k_0.25, ymax = value_100k_0.75), alpha = 0.1) +
+    geom_vline(xintercept = forecast_date + 1, lty = 2) +
+    labs(x = "Week ending", y = "Weekly incidence per 100,000",
+         colour = NULL, fill = NULL) +
+    scale_fill_brewer(type = "qual", palette = 6) +
+    scale_colour_brewer(type = "qual", palette = 6) +
+    cowplot::theme_cowplot() +
+    theme(legend.position = "bottom")
+  
+  summary <- list(summary_ensemble, summary_table, summary_region_plot,
+                  trend, region_trend, region, dates)
+  names(summary) <- c("summary_ensemble", "summary_table", "summary_region_plot",
+                      "trend", "region_trend", "region", "dates")
   return(summary)
 }
 
 # Describe trends -------------------------------------------------------
 country1wk <- ensemble %>%
   split(.$variable) %>%
-  map(~ summarise_ensemble(.x, week_end = min(ensemble$target_end_date)))
+  map(~ summarise_ensemble(.x, target_end_date = forecast_date + 5))
 
 country4wk <- ensemble %>%
   split(.$variable) %>%
-  map(~ summarise_ensemble(.x, week_end = max(ensemble$target_end_date)))
-
+  map(~ summarise_ensemble(.x, target_end_date = max(ensemble$target_end_date)))
 
 
 # Meta data counts -------------------------------------------------------------------

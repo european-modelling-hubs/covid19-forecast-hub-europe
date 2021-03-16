@@ -1,0 +1,71 @@
+---
+title: "European forecasting hub"
+output:   
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+source(here::here("template", "report-inputs.R"))
+```
+### `r format(Sys.Date(), "%d %B %Y")`
+
+We collect, visualise, and combine weekly forecasts of Covid-19 cases and deaths across Europe.
+
+On `r format(forecast_date, "%d %B %Y")`, we collected forecasts from `r team_count` teams. Each team contributed a short-term forecast of new Covid-19 deaths or cases, for at least one of `r location_count` countries. We combined the forecasts using a `r ensemble_method`. See the [visualisation]() or the [raw data]() for detailed forecasts for Europe and each country.
+
+#### Short term situation
+
+Over the next week, forecasters largely expect cases and deaths from Covid-19 to `r country1wk$case$trend[1,1]`, with this trend forecast in `r country1wk$case$trend[1,2]` of `r location_count` countries across Europe. Reports of cases and deaths per 100,000 population are expected to increase in `r pull(filter(country1wk$case$trend, Trend=="increase"), n)` and `r pull(filter(country1wk$death$trend, Trend=="increase"), n)` countries, respectively. 
+
+#### Trends over time {.tabset}
+
+
+##### Deaths from Covid-19 {.tabset .tabset-pills}
+
+`r paste(country1wk$death$summary_table$Country[1:2])`, and `r country1wk$death$summary_table$Country[3]` are likely to see the highest increases in deaths. 
+
+In `r country1wk$death$summary_table$Country[1]`, deaths are expected to increase  to approximately `r country1wk$death$summary_table[["Forecast weekly per 100,000"]][1]` per 100,000 this week. Over the next four weeks, `r country4wk$death$summary_table$Country[1]` is likely to see the greatest increase  to approximately `r country4wk$death$summary_table[["Forecast weekly per 100,000"]][1]` deaths per 100,000 a week by `r format(country4wk$death$dates[2], "%d %B")`.
+
+###### Region
+```{r}
+# Summarise by region using values per 100,000
+plot(country4wk$death$summary_region_plot) 
+```
+
+###### Country
+
+See our [main visualisation](https://covid19forecasthub.eu/visualisation/) for maps and country level plots of forecasts over the next four weeks.
+
+The table below shows forecasts for this week, over the period: `r paste(format(country1wk$death$dates[1], "%d %B"), "to", format(country1wk$death$dates[2], "%d %B %Y"))`
+
+```{r}
+knitr::kable(country1wk$death$summary_table,
+             format.args = list(big.mark = ","))
+```
+
+##### Cases of Covid-19 {.tabset .tabset-pills}
+
+`r paste(country1wk$case$summary_table$Country[1:2])`, and `r country1wk$case$summary_table$Country[3]` are likely to see the highest increases in cases. 
+
+In `r country1wk$case$summary_table$Country[1]`, cases are expected to increase  to approximately `r country1wk$case$summary_table[["Forecast weekly per 100,000"]][1]` per 100,000 this week. Over the next four weeks, `r country4wk$case$summary_table$Country[1]` is likely to see the greatest increase to approximately `r country4wk$case$summary_table[["Forecast weekly per 100,000"]][1]` cases per 100,000 a week by `r format(country4wk$case$dates[2], "%d %B")`.
+
+###### Region
+
+```{r}
+plot(country4wk$case$summary_region_plot) 
+```
+
+###### Country
+
+See our [main visualisation](https://covid19forecasthub.eu/visualisation/) for maps and country level plots of forecasts over the next four weeks.
+
+The table below shows forecasts for this week, over the period: `r paste(format(country1wk$case$dates[1], "%d %B"), "to", format(country1wk$case$dates[2], "%d %B %Y"))`
+
+```{r}
+knitr::kable(country1wk$case$summary_table,
+             format.args = list(big.mark = ","))
+```
