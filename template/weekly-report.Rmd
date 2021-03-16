@@ -1,17 +1,13 @@
 ---
 title: "European forecasting hub"
-output: html_document
+output:
+  md_document:
+    variant: markdown_github
+    toc: yes
+    toc_depth: 2
 ---
 
 ```{r setup, include=FALSE}
-
-# render to github:
-  # md_document:
-  #   variant: markdown_github
-  #   toc: true
-  #   toc_depth: 2
-    
-    
 knitr::opts_chunk$set(echo = FALSE)
 source(here::here("template", "report-inputs.R"))
 ```
