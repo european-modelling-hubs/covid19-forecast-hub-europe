@@ -1,6 +1,6 @@
 ---
-title: "European data status"
-output: html_document
+title: "European Covid-19 data status"
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -16,6 +16,7 @@ date <- Sys.time()
 ```
 
 #### Potential issues in the JHU dataset over the last eight weeks
+
 As at `r date`
 
 ```{r issues, echo=FALSE, message=FALSE}
@@ -59,4 +60,6 @@ knitr::kable(issues, escape = FALSE)
 
 ```
 
+
+---
 Open issues taken from [JHU CSSEGISandData Github repo](https://github.com/CSSEGISandData/COVID-19/)
