@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: 'epiforecasts/covid19-forecast-hub-de-validations'
-        token: ${{secrets.GITHUBTOKEN}}
+        ref: main
 #     - name: Use Node.js ${{ matrix.node-version }}
 #       uses: actions/setup-node@v1
 #       with:
