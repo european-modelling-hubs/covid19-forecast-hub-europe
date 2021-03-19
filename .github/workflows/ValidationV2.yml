@@ -29,4 +29,4 @@ jobs:
     - run: pip3 install -r requirements.txt
     - run: python3 main.py
       env:
-        GH_TOKEN: ${{secrets.GITHUBTOKEN}}
+        GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
