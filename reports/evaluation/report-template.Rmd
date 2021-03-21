@@ -2,6 +2,10 @@
 always_allow_html: true
 output:
   html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 1
+    theme: readable
     self_contained: true
 title: "European COVID-19 Forecast Hub Evaluation Report"
 ---
@@ -19,7 +23,7 @@ knitr::opts_chunk$set(echo = FALSE,
                       warning = FALSE)
 
 include_ranking <- TRUE
-include_forecast_plot <- FALSE
+include_forecast_plot <- TRUE
 include_avail_forecasts <- FALSE
 include_ranks_over_time <- FALSE
 
@@ -60,7 +64,7 @@ data <- scoringutils::merge_pred_and_obs(forecasts, truth,
 
 ---
 
-<!-- # Forecast visualisation {.tabset .tabset-fade} -->
+# Forecast visualisation {.tabset .tabset-fade}
 
 ```{r forecast-vis, include = FALSE, eval = include_forecast_plot}
 
@@ -92,21 +96,21 @@ for (loc in locations) {
   
   message(loc)
   
-  tabtitle <- "overall"
-  summarise_by <- c("model")
-  filter_list <- list("type != 'point'", 
-                       paste0("location_name == '", loc, "'"))
-  out <- c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
-                           quiet = TRUE))
-  
-  tabtitle = "latest"
-  summarise_by = c("model")
-  cut_off <- floor_date(today(), "week", 2) - 1 - 5 * 7
-  filter_list = list(paste0("forecast_date >= '", cut_off, "'"), 
-                     "type != 'point'", 
-                     paste0("location_name == '", loc, "'"))
-  out = c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
-                          quiet = TRUE))
+  # tabtitle <- "overall"
+  # summarise_by <- c("model")
+  # filter_list <- list("type != 'point'", 
+  #                      paste0("location_name == '", loc, "'"))
+  # out <- c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
+  #                          quiet = TRUE))
+  # 
+  # tabtitle = "latest"
+  # summarise_by = c("model")
+  # cut_off <- floor_date(today(), "week", 2) - 1 - 5 * 7
+  # filter_list = list(paste0("forecast_date >= '", cut_off, "'"), 
+  #                    "type != 'point'", 
+  #                    paste0("location_name == '", loc, "'"))
+  # out = c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
+  #                         quiet = TRUE))
   
   tabtitle = "Cases"
   summarise_by = c("model", "target_variable")
@@ -131,12 +135,12 @@ for (loc in locations) {
   out = c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
                           quiet = TRUE))
   
-  tabtitle = "Detailed"
-  summarise_by = NULL
-  filter_list = list("type != 'point'", 
-                     paste0("location_name == '", loc, "'"))
-  out = c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
-                          quiet = TRUE))
+  # tabtitle = "Detailed"
+  # summarise_by = NULL
+  # filter_list = list("type != 'point'", 
+  #                    paste0("location_name == '", loc, "'"))
+  # out = c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
+  #                         quiet = TRUE))
 }
 
 ```
