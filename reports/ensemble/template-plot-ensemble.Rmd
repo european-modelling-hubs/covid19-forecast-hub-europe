@@ -1,0 +1,38 @@
+```{r prediction-plots, echo = FALSE, results='asis', fig.width = 8.5, fig.height=14}
+
+for (target_variable in target_variables) {
+  cat("\n\n## ", target_variable,
+      " {.tabset .tabset-fade .tabset-dropdown}\n\n")
+      
+  for (ago in agos) {
+    cat(paste0("\n\n### ", ago, " ago \n\n"))
+  
+      filter_both <-
+        list(paste0("target_variable %in% '", target_variable, "'")) 
+      filter_truth <-
+        list(paste0("target_end_date > '", as.Date(forecast_date) - 7 * 10, "'"), 
+             paste0("target_end_date <= '", as.Date(forecast_date) + 7 * 4, "'"))
+      filter_forecasts <- list(paste0("ago == '", ago, "'"))
+
+      plot <- scoringutils::plot_predictions(data,
+                                             x = "target_end_date",
+                                             filter_both = filter_both,
+                                             filter_truth = filter_truth,
+                                             filter_forecasts = filter_forecasts,
+                                             allow_truth_without_pred = FALSE,
+                                             scales = "free") + 
+        ggplot2::theme(legend.position = "bottom", 
+                       strip.placement = "outside") +
+        facet_wrap(ncol = 3, ~ location_name, scales = "free_y") +
+        scale_y_continuous("True and predicted values", labels = scales::comma) +
+        xlab("") +
+        expand_limits(x = max(data$target_end_date))
+        coord_cartesian(ylim = c(0, NA))
+      
+      print(plot)
+  }
+}
+
+
+
+```

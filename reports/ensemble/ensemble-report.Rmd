@@ -1,0 +1,128 @@
+---
+always_allow_html: true
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 1
+    theme: readable
+    self_contained: true
+title: "European COVID-19 Forecast Hub Ensemble Report"
+date: "`r lubridate::floor_date(today(), 'week', week_start = 1)`"
+---
+
+```{r setup, include=FALSE}
+library(purrr)
+library(scoringutils)
+library(ggplot2)
+library(dplyr)
+library(DT)
+library(knitr)
+library(covidHubUtils)
+library(lubridate)
+library(here)
+library(data.table)
+library(readr)
+knitr::opts_chunk$set(echo = FALSE, 
+                      message = FALSE, 
+                      warning = FALSE)
+
+include_ranking <- TRUE
+include_forecast_plot <- TRUE
+
+```
+
+
+
+This is an evaluation of forecasts for Covid-19 case and death numbers in 32 European countries submitted to the [European COVID-19 Forecast Hub](https://covid19forecasthub.eu/). You can find more information on the [European Forecast Hub Github page](https://github.com/epiforecasts/covid19-forecast-hub-europe). 
+
+This report is intended as a basic evaluation of forecasts that helps modellers to better understand their performance. The structure and visualisations are likely subject to change in the future and we cannot rule out any mistakes. If you have questions or want to give feedback, please create an issue on our 
+[github repository](https://github.com/epiforecasts/covid19-forecast-hub-europe). Note that all forecast dates have been changed to the corresponding submission date (every Monday) to allow easier comparison. 
+
+```{r load-data}
+# load forecasts ---------------------------------------------------------------
+forecasts <- load_forecasts(source = "local_hub_repo",
+                            hub_repo_path = here(),
+                            hub = "ECDC") %>%
+  filter(model == "EuroCOVIDhub-ensemble")
+setDT(forecasts)
+# set forecast date to corresponding submision date
+forecasts[, forecast_date :=
+              ceiling_date(forecast_date, "week", week_start = 2) - 1]
+forecasts <- forecasts[forecast_date >= "2021-03-08"]
+forecasts[, horizon := paste0(horizon, " week", if_else(horizon == 1, "", "s"))]
+forecasts[, ago :=
+              as.integer(floor_date(today(), "week", week_start = 1) -
+                         forecast_date) / 7]
+forecasts[, ago := paste0(ago, " week", if_else(ago == 1, "", "s"))]
+setnames(forecasts, old = c("value"), new = c("prediction"))
+
+         # load truth data --------------------------------------------------------------
+truth <- map_dfr(.x = c("inc case", "inc death"),
+                 .f = ~ load_truth(truth_source = "JHU",
+                                   target_variable = .x,
+                                   hub = "ECDC")) 
+setDT(truth)
+truth[, model := NULL]
+setnames(truth, old = c("value"), 
+         new = c("true_value"))
+
+data <- scoringutils::merge_pred_and_obs(forecasts, truth, 
+                                         join = "full")
+data[target_variable == "inc case", target_variable := "Cases"]
+data[target_variable == "inc death", target_variable := "Deaths"]
+
+```
+
+---
+
+# Forecast visualisation {.tabset .tabset-fade}
+
+```{r forecast-vis, include = FALSE, eval = include_forecast_plot}
+
+locations <- unique(truth$location_name)
+forecast_dates <- rev(as.character(unique(data$forecast_date[!is.na(data$forecast_date)])))
+agos <- sort(unique(data$ago[!is.na(data$ago)]))
+target_variables <- unique(data$target_variable)
+
+out <- NULL
+out <- c(out, knit_child(here::here("reports", "ensemble", "template-plot-ensemble.Rmd")))
+```
+
+`r paste(if (include_forecast_plot) knit(text = out), collapse = '\n\n')`
+
+# {.unlisted .unnumbered}
+
+---
+
+# Forecast calibration {.tabset .tabset-fade .tabset-dropdown}
+
+Shown below are PIT histograms for the most recent ensemble forecasts. These show the proportion of true values within each predict quantile (width: 0.2).
+
+```{r calibration, echo = FALSE, include = include_ranking}
+gap <- 0.2
+quantiles <- seq(gap, 1 - gap, by = gap)
+scores <- eval_forecasts(data,
+                         summarise_by = c("model", "range", "quantile",
+                                          "target_variable", "horizon"),
+                         pit_plots = TRUE)
+
+
+even_quantiles <-
+  scores[!is.na(quantile) & round(quantile, 3) %in% round(quantiles, 3)]
+setkey(even_quantiles, target_variable, horizon, quantile)
+pit <- even_quantiles[, list(quantile = c(quantile, 1),
+                             pit_bin = diff(c(0, quantile_coverage, 1))),
+               by = c("target_variable", "horizon")]
+
+p <- ggplot(pit, aes(x = quantile - gap / 2, y = pit_bin)) +
+  geom_col() +
+  theme_light() +
+  facet_grid(horizon ~ target_variable) +
+  xlab("Quantile") + ylab("Proportion") +
+  geom_hline(yintercept = gap, linetype = "dashed")
+
+print(p)
+```
+
+---
