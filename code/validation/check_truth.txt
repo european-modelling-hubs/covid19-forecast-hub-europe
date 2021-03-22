@@ -58,3 +58,10 @@ Latest check of truth data: 2021-03-21 13:34:34
 
 No errors detected.
 
+Latest check of truth data: 2021-03-22 13:32:44
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2021-03-21:
+
+- Negative incidence in the following locations: ['France'].
+
