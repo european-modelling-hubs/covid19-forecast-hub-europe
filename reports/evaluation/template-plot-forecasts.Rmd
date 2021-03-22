@@ -23,13 +23,17 @@ for (forecast_date in forecast_dates) {
                                              filter_truth = filter_truth,
                                              filter_forecasts = filter_forecasts,
                                              facet_formula = ~ model,
+                                             ncol = 3,
                                              # facet_formula = model ~ target_variable + location_name,
                                              # facet_wrap_or_grid = "facet",
                                              allow_truth_without_pred = FALSE,
                                              scales = "free") + 
         # ggplot2::ggtitle(paste0("Predictions for incident ", target_variable,  "s")) + 
         ggplot2::theme(legend.position = "bottom", 
-                       strip.placement = "outside")
+                       strip.placement = "outside") + 
+        scale_y_continuous(lables = scales::comma) + 
+        expand_limits(y = 0) + 
+        
       
       print(plot)
     }
