@@ -1,9 +1,0 @@
-team_name: UNIPG_UNIMIB_USI_UNINSUBRIA
-model_name: MULTINOMIAL_BAYESIAN
-model_abbr: UpgUmibUsi-MultiBayes
-model_contributors: Francesco Bartolucci (Università di Perugia) <francesco.bartolucci@unipg.it>, Fulvia Pennoni (Università di Milano Bicocca) <fulvia.pennoni@unimib.it>, Antonietta Mira (Università della Svizzera italiana and Università dell’Insubria) <antonietta.mira@usi.ch> 
-website_url: https://github.com/francescobartolucci/ARMultinomial
-license: cc-by-4.0
-team_model_designation: primary
-methods: Bayesian Dirichlet-Multinomial models for time-series of counts of patients in mutually exclusive and exhaustive categories such as hospitalized in regular wards and in intensive care units, deceased and recovered
-methods_long: We us a Bayesian Dirichlet-Multinomial autoregressive models for time-series of counts of patients in mutually exclusive and exhaustive observational categories, defined according to the severity of the patient status and the required treatment. Categories include hospitalized in regular wards (H) and in intensive care units (ICU), together with deceased (D) and recovered (R). These models explicitly formulate assumptions on the transition probabilities between these categories across time, thanks to a flexible formulation based on parameters that a-priori follow Normal distributions, possibly truncated to incorporate specific hypotheses having an epidemiological interpretation. The posterior distribution of model parameters and the transition matrices are estimated by an efficient Markov Chain Monte Carlo algorithm that also provides predictions and allows us to compute the reproduction number Rt. All estimates and predictions are endowed with an accuracy measure obtained thanks to the Bayesian approach.
