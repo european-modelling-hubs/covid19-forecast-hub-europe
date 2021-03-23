@@ -2,9 +2,6 @@
 always_allow_html: true
 output:
   html_document:
-    toc: true
-    toc_float: true
-    toc_depth: 1
     theme: readable
     self_contained: true
 title: "European COVID-19 Forecast Hub Evaluation Report"
