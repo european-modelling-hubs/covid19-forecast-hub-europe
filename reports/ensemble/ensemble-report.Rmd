@@ -32,12 +32,7 @@ include_forecast_plot <- TRUE
 
 ```
 
-
-
-This is an evaluation of forecasts for Covid-19 case and death numbers in 32 European countries submitted to the [European COVID-19 Forecast Hub](https://covid19forecasthub.eu/). You can find more information on the [European Forecast Hub Github page](https://github.com/epiforecasts/covid19-forecast-hub-europe). 
-
-This report is intended as a basic evaluation of forecasts that helps modellers to better understand their performance. The structure and visualisations are likely subject to change in the future and we cannot rule out any mistakes. If you have questions or want to give feedback, please create an issue on our 
-[github repository](https://github.com/epiforecasts/covid19-forecast-hub-europe). Note that all forecast dates have been changed to the corresponding submission date (every Monday) to allow easier comparison. 
+This report shows an evaluation of ensemble forecasts created from forecasts for Covid-19 case and death numbers in 32 European countries submitted to the [European COVID-19 Forecast Hub](https://covid19forecasthub.eu/), comparing forecasts from up to 4 weeks ago to the data available today.
 
 ```{r load-data}
 # load forecasts ---------------------------------------------------------------
