@@ -65,6 +65,12 @@ ensemble <- vroom(paste("data-processed", ensemble_name,
   left_join(country_pop, by = "location") %>%
   bind_rows(latest_truth) 
 
+forecasts <- load_forecasts(forecast_date = forecast_date,
+                            source = "local_hub_repo",
+                            hub_repo_path = here(),
+                            hub = "ECDC")
+
+
 # Calculate trends ---------------------------------------
 summarise_ensemble <- function(ensemble, target_end_date) {
   summary_ensemble <- ensemble %>%

@@ -1,5 +1,6 @@
 ---
 title: "European forecasting hub"
+date: "Generated `r Sys.Date()`"
 output:
   md_document:
     variant: markdown_github
@@ -9,9 +10,10 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(covidHubUtils)
 source(here::here("template", "report-inputs.R"))
 ```
-### `r format(Sys.Date(), "%d %B %Y")`
+
 
 We collect, visualise, and combine weekly forecasts of Covid-19 cases and deaths across Europe.
 
