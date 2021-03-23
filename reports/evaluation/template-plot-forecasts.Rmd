@@ -1,4 +1,4 @@
-```{r prediction-plots, echo = FALSE, results='asis', fig.width = 6.5, fig.height=8}
+```{r prediction-plots, echo = FALSE, results='asis', fig.width = 8.5, fig.height=8}
 
 for (forecast_date in forecast_dates) {
   cat(paste0("\n\n## ", forecast_date, "{.tabset .tabset-fade .tabset-dropdown} \n\n"))
@@ -31,9 +31,9 @@ for (forecast_date in forecast_dates) {
         # ggplot2::ggtitle(paste0("Predictions for incident ", target_variable,  "s")) + 
         ggplot2::theme(legend.position = "bottom", 
                        strip.placement = "outside") + 
-        scale_y_continuous(lables = scales::comma) + 
+        scale_y_continuous(labels = scales::comma) + 
         expand_limits(y = 0) + 
-        
+        coord_cartesian(ylim = c(0, NA))
       
       print(plot)
     }

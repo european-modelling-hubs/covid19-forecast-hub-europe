@@ -2,6 +2,9 @@
 always_allow_html: true
 output:
   html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 1
     theme: readable
     self_contained: true
 title: "European COVID-19 Forecast Hub Ensemble Report"
@@ -27,6 +30,7 @@ knitr::opts_chunk$set(echo = FALSE,
 include_ranking <- TRUE
 include_forecast_plot <- TRUE
 
+report_date <- lubridate::floor_date(today(), 'week', week_start = 1)
 ```
 
 This report shows an evaluation of ensemble forecasts created from forecasts for Covid-19 case and death numbers in 32 European countries submitted to the [European COVID-19 Forecast Hub](https://covid19forecasthub.eu/), comparing forecasts from up to 4 weeks ago to the data available today.
@@ -46,7 +50,8 @@ forecasts[, horizon := paste0(horizon, " week", if_else(horizon == 1, "", "s"))]
 forecasts[, ago :=
               as.integer(floor_date(today(), "week", week_start = 1) -
                          forecast_date) / 7]
-forecasts[, ago := paste0(ago, " week", if_else(ago == 1, "", "s"))]
+forecasts[, ago := paste0(ago, " week", if_else(ago == 1, "", "s ago"))]
+forecasts[, ago := if_else(ago == "0 weeks ago", "This week", ago)]
 setnames(forecasts, old = c("value"), new = c("prediction"))
 
          # load truth data --------------------------------------------------------------
@@ -75,6 +80,9 @@ data[target_variable == "inc death", target_variable := "Deaths"]
 locations <- unique(truth$location_name)
 forecast_dates <- rev(as.character(unique(data$forecast_date[!is.na(data$forecast_date)])))
 agos <- sort(unique(data$ago[!is.na(data$ago)]))
+if ("This week" %in% agos) {
+  agos <- c("This week", setdiff(agos, "This week"))
+}
 target_variables <- unique(data$target_variable)
 
 out <- NULL
