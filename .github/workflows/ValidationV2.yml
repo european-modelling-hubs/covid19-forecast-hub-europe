@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        repository: 'epiforecasts/covid19-forecast-hub-de-validations'
+        repository: 'epiforecasts/covid19-forecast-hub-europe-validations'
 #     - name: Use Node.js ${{ matrix.node-version }}
 #       uses: actions/setup-node@v1
 #       with:
@@ -29,4 +29,4 @@ jobs:
     - run: pip3 install -r requirements.txt
     - run: python3 main.py
       env:
-        GH_TOKEN: ${{secrets.GITHUBTOKEN}}
+        GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
