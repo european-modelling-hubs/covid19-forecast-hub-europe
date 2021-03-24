@@ -8,12 +8,11 @@ output:
     theme: readable
     self_contained: true
 title: "European COVID-19 Forecast Hub Ensemble Report"
-date: "`r lubridate::floor_date(today(), 'week', week_start = 1)`"
+date: "`r lubridate::floor_date(lubridate::today(), 'week', week_start = 1)`"
 ---
 
 ```{r setup, include=FALSE}
 library(purrr)
-library(scoringutils)
 library(ggplot2)
 library(dplyr)
 library(DT)
@@ -54,7 +53,7 @@ forecasts[, ago := paste0(ago, " week", if_else(ago == 1, "", "s ago"))]
 forecasts[, ago := if_else(ago == "0 weeks ago", "This week", ago)]
 setnames(forecasts, old = c("value"), new = c("prediction"))
 
-         # load truth data --------------------------------------------------------------
+# load truth data --------------------------------------------------------------
 truth <- map_dfr(.x = c("inc case", "inc death"),
                  .f = ~ load_truth(truth_source = "JHU",
                                    target_variable = .x,
