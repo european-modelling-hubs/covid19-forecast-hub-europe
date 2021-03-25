@@ -21,8 +21,9 @@ format_ensemble <- function(ensemble) {
     filter(quantile == 0.5) %>%
     mutate(type = "point",
            quantile = NA_real_)
+  
   ensemble_with_point <- ensemble %>%
     bind_rows(ensemble_point)
   
-  return(ensemble_point)
+  return(ensemble_with_point)
 }
