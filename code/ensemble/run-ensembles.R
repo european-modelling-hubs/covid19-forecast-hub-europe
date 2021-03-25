@@ -43,7 +43,7 @@ forecasts <- ensemble_base$forecasts
 criteria <- ensemble_base$criteria
 vroom_write(criteria,
             here::here("code", "ensemble", "weekly-criteria",
-                       paste0(forecast_date, "-criteria.csv")),
+                       paste0(forecast_date, ".csv")),
             delim = ",")
 
 # Run averaged ensembles ---------------------------------------------------
