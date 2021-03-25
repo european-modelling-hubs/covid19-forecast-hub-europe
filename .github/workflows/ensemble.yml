@@ -16,10 +16,12 @@ jobs:
       run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
 
     - name: Install R dependencies
-      run: Rscript -e 'install.packages(c("here", "vroom", "purrr", "dplyr", "stringr", "lubridate"))'
+      run: |
+       Rscript -e 'install.packages(c("here", "vroom", "dplyr", "tibble", "lubridate", "devtools"))'
+       Rscript -e 'devtools::install_github("reichlab/covidHubUtils")'
 
-    - name: Create mean ensemble
-      run: Rscript 'code/ensemble/simple-averages.R'
+    - name: Create ensembles
+      run: Rscript 'code/ensemble/run-ensembles.R'
         
     - name: Commit files
       env:

@@ -10,7 +10,7 @@ Forecasts must have all of the following to be included in the ensemble:
 - Includes forecasts over a four week horizon
 - Not manually specified for exclusion (e.g. because of late submission)
 
-We detail the inclusion and exclusion of models in a [weekly csv](./code/ensemble/criteria).
+We detail the inclusion and exclusion of models in a [weekly csv](./code/ensemble/weekly-criteria).
 
 ### Ensemble methods
 
@@ -25,9 +25,8 @@ The ensemble we use in evaluation is the "EuroCOVIDhub-ensemble".
 
 **Guide to ensemble code**
 
-Use the [`run-ensembles.R`](./code/ensemble/run-ensembles.R) script to create and save all ensembles as well as the logic for model inclusion.
-
-This uses the following flow:
+1. Add any models for manual exclusion to [`manual-exclusions.csv`](./code/ensemble/manual-exclusions.csv)
+2. Run the [`run-ensembles.R`](./code/ensemble/run-ensembles.R) script to create and save all ensembles as well as the logic for model inclusion. This uses the following flow:
 
    |   
 ---|---

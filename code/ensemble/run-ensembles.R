@@ -21,7 +21,9 @@ forecast_date <- floor_date(today(), "week", 1)
 
 # Character vector of model names for manual exclusion
 # - e.g. exclusion because of late submission
-exclude_models <- c()
+exclude_models <- vroom(here("code", "ensemble", "manual-exclusions.csv")) %>%
+  filter(forecast_date == forecast_date) %>%
+  pull(model)
 
 # Load forecasts and save criteria --------------------------------------------
 # Get all forecasts
@@ -40,7 +42,7 @@ forecasts <- ensemble_base$forecasts
 # Save criteria
 criteria <- ensemble_base$criteria
 vroom_write(criteria,
-            here::here("code", "ensemble", "criteria",
+            here::here("code", "ensemble", "weekly-criteria",
                        paste0(forecast_date, "-criteria.csv")),
             delim = ",")
 

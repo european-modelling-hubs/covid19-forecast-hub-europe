@@ -6,6 +6,8 @@
 # Steps:
 # Creates "target" variable
 # Adds point forecasts from 0.5 quantile
+#
+library(dplyr)
 
 format_ensemble <- function(ensemble) {
   # Format as standard forecast

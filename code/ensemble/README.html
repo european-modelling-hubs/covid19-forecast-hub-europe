@@ -190,8 +190,9 @@ pre code {
 </ul>
 <p>The ensemble we use in evaluation is the “EuroCOVIDhub-ensemble”.</p>
 <p><strong>Guide to ensemble code</strong></p>
-<p>Use the <a href="./code/ensemble/run-ensembles.R"><code>run-ensembles.R</code></a> script to create and save all ensembles as well as the logic for model inclusion.</p>
-<p>This uses the following flow:</p>
+<ol style="list-style-type: decimal">
+<li><p>Add any models for manual exclusion to <a href="./code/ensemble/manual-exclusions.csv"><code>manual-exclusions.csv</code></a></p></li>
+<li><p>Run the <a href="./code/ensemble/run-ensembles.R"><code>run-ensembles.R</code></a> script to create and save all ensembles as well as the logic for model inclusion. This uses the following flow:</p>
 <table>
 <colgroup>
 <col width="50%" />
@@ -199,8 +200,8 @@ pre code {
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><a href="./code/ensemble/utils/load-ensemble-forecasts.R"><code>load-ensemble-forecasts.R</code></a></td>
-<td>Load weekly forecasts using <code>covidHubUtils</code> and filter based on the <a href="#Inclusion%20criteria">inclusion criteria</a></td>
+<td><a href="./code/ensemble/utils/load-ensemble-forecasts.R"><code>use-ensemble-criteria.R</code></a></td>
+<td>Filter given forecasts based on the <a href="#Inclusion%20criteria">inclusion criteria</a></td>
 </tr>
 <tr class="even">
 <td><a href="./code/ensemble/methods/create-ensemble-average.R"><code>create-ensemble-average.R</code></a></td>
@@ -211,7 +212,8 @@ pre code {
 <td>Prepare an ensemble according to the standard submission format</td>
 </tr>
 </tbody>
-</table>
+</table></li>
+</ol>
 </div>
 </div>
 
