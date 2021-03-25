@@ -1,23 +1,19 @@
 # Create ensemble using mean or median average.
 # 
 # Steps:
-# Takes forecasts loaded by load_ensemble_forecasts()
+# Takes forecasts which should come from load_ensemble_forecasts()
 # Averages by mean or median
 # Formats in submission format
+# 
 # Returns ensemble model
-library(here)
-library(vroom)
-library(purrr)
+# 
 library(dplyr)
-library(stringr)
-library(lubridate)
-library(covidHubUtils)
 
 create_ensemble_average <- function(forecasts, 
                                     method = c("mean", "median"),
                                     team_name = "EuroCOVIDhub",
                                     model_name = "ensemble",
-                                    forecast_date = floor_date(today(), 
+                                    forecast_date = lubridate::floor_date(today(), 
                                                                "week", 1)) {
   # Set up
   ensemble <- forecasts %>%
