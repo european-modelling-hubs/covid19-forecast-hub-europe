@@ -26,6 +26,11 @@ path = Path('data-processed')
 
 models = [f.name for f in path.iterdir() if not f.name.endswith('.csv')]
 
+# exclude models designated as "other"
+metadata = json.load( open("metadata.json","r"))
+models_to_exclude = [k for k,v in metadata.items() if (v['team_model_designation'] == 'other')]
+models = [m for m in models if m not in models_to_exclude]
+
 VALID_TARGETS = [f"{_} wk ahead inc death" for _ in range(1, 5)] + \
                 [f"{_} wk ahead inc case" for _ in range(1, 5)]
 
