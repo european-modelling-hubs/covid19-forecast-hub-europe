@@ -25,8 +25,8 @@ jobs:
       run: |
         cp data-locations/locations_eu.csv viz/location_codes.csv
         python3 ./viz/prepare_truth_data.py
-        python3 ./viz/prepare_forecast_data.py
         python3 ./viz/prepare_metadata.py
+        python3 ./viz/prepare_forecast_data.py
     - name: Get commit dates
       run: |
         python3 code/validation/get_commit_dates.py
