@@ -29,7 +29,6 @@ jobs:
         pip3 install -r github-actions/pr_requirements.txt
 
     - name: Install R requirenments
-      run: sudo apt-get install pandoc
       run: |
         sudo apt-get install pandoc libcurl4-openssl-dev
         Rscript -e 'install.packages(c("gh", "dplyr", "stringr", "here", "knitr", "rmarkdown", "readr", "tibble", "countrycode"))'
