@@ -31,7 +31,8 @@ jobs:
     - name: Install R requirenments
       run: sudo apt-get install pandoc
       run: |
-        Rscript -e 'install.packages(c("gh", "dplyr", "stringr", "here", "knitr", "rmarkdown"))'
+        sudo apt-get install pandoc libcurl4-openssl-dev
+        Rscript -e 'install.packages(c("gh", "dplyr", "stringr", "here", "knitr", "rmarkdown", "readr", "tibble", "countrycode"))'
 
     - name: Verify truth data
       run: |
@@ -46,7 +47,7 @@ jobs:
         AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git config user.email "action@github.com"
-        git config user.name "GitHub Action - check truth
+        git config user.name "GitHub Action - check truth"
         git add --all
         git commit -m "Check truth data"
         git push 

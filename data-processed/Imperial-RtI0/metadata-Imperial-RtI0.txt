@@ -1,0 +1,13 @@
+team_name: Imperial College London
+model_name: RtI0 (jointlyr)
+model_abbr: Imperial-RtI0
+model_contributors: Sangeeta Bhatia (Imperial College London)
+  <s.bhatia@imperial.ac.uk>, Pierre Nouvellet (Sussex University)
+  <p.nouvellet@imperial.ac.uk>
+website_url: https://mrc-ide.github.io/covid19-short-term-forecasts
+license: cc-by-4.0
+team_model_designation: secondary
+methods: Jointly estimates initial incidence and reproduction number
+repo_url: https://github.com/mrc-ide/covid19-forecasts-orderly
+twitter_handles: PNouvellet sangeeta0312
+data_inputs: Deaths from WHO dashboard

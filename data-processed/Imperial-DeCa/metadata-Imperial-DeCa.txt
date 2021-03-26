@@ -1,0 +1,13 @@
+team_name: Imperial College London
+model_name: Death to cases (ascertainr)
+model_abbr: Imperial-DeCa
+model_contributors: Sangeeta Bhatia (Imperial College London)
+  <s.bhatia@imperial.ac.uk>,
+  Pierre Nouvellet (Sussex University) <p.nouvellet@imperial.ac.uk>
+website_url: https://mrc-ide.github.io/covid19-short-term-forecasts
+license: cc-by-4.0
+team_model_designation: primary
+methods: Uses both cases and deaths to estimate an observed CFR. Projections are based on the estimated CFR.
+repo_url: https://github.com/mrc-ide/covid19-forecasts-orderly
+twitter_handles: PNouvellet sangeeta0312
+data_inputs: Cases and deaths from WHO dashboard
