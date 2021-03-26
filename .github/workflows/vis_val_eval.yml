@@ -23,8 +23,10 @@ jobs:
         pip3 install -r github-actions/pr_requirements.txt
     - name: Visualization
       run: |
+        cp data-locations/locations_eu.csv viz/location_codes.csv
         python3 ./viz/prepare_truth_data.py
         python3 ./viz/prepare_forecast_data.py
+        python3 ./viz/prepare_metadata.py
     - name: Get commit dates
       run: |
         python3 code/validation/get_commit_dates.py
