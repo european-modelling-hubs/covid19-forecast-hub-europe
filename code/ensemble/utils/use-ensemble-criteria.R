@@ -25,9 +25,12 @@ use_ensemble_criteria <- function(forecasts =
   
   # 1. Identify models with all quantiles
   quantiles <- round(c(0.01, 0.025, seq(0.05, 0.95, by = 0.05), 0.975, 0.99), 3)
+  
   all_quantiles <- forecasts %>%
     group_by(model, target_variable, location, target_end_date) %>%
-    filter(length(setdiff(quantiles, quantile)) == 0) %>%
+    summarise(n_quantiles = n(), 
+              .groups = "drop") %>%
+    filter(n_quantiles != length(quantile)) %>%
     pull(model) %>%
     unique()
   
