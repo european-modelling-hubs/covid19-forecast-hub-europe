@@ -19,4 +19,4 @@ forecast_date,model,missing_quantiles,missing_horizons,excluded_manually,include
 2021-03-22,UNED-PreCoV2,TRUE,TRUE,FALSE,FALSE
 2021-03-22,UNIPV-BayesINGARCHX,FALSE,FALSE,FALSE,TRUE
 2021-03-22,UpgUmibUsi-MultiBayes,FALSE,TRUE,FALSE,FALSE
-2021-03-22,UVA-Ensemble,TRUE,FALSE,FALSE,FALSE
+2021-03-22,UVA-Ensemble,FALSE,FALSE,FALSE,TRUE
