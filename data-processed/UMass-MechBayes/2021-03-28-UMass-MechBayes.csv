@@ -1,5 +1,4 @@
 quantile,value,type,location,target,forecast_date,target_end_date
-NA,204,point_mean,BE,1 wk ahead inc death,2021-03-28,NA
 0.010,111,quantile,BE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,121,quantile,BE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,132,quantile,BE,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -24,7 +23,6 @@ NA,195,point,BE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,302,quantile,BE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,337,quantile,BE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,379,quantile,BE,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,195,point_mean,BE,2 wk ahead inc death,2021-03-28,NA
 0.010,73,quantile,BE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,83,quantile,BE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,96,quantile,BE,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -49,7 +47,6 @@ NA,169,point,BE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,397,quantile,BE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,467,quantile,BE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,535,quantile,BE,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,173,point_mean,BE,3 wk ahead inc death,2021-03-28,NA
 0.010,45,quantile,BE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,53,quantile,BE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,62,quantile,BE,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -74,7 +71,6 @@ NA,134,point,BE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,430,quantile,BE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,524,quantile,BE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,618,quantile,BE,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,144,point_mean,BE,4 wk ahead inc death,2021-03-28,NA
 0.010,24,quantile,BE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,30,quantile,BE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,37,quantile,BE,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -99,7 +95,6 @@ NA,102,point,BE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,405,quantile,BE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,521,quantile,BE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,655,quantile,BE,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,742,point_mean,BG,1 wk ahead inc death,2021-03-28,NA
 0.010,428,quantile,BG,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,476,quantile,BG,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,512,quantile,BG,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -124,7 +119,6 @@ NA,725,point,BG,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,1030,quantile,BG,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,1097,quantile,BG,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,1214,quantile,BG,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,734,point_mean,BG,2 wk ahead inc death,2021-03-28,NA
 0.010,373,quantile,BG,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,415,quantile,BG,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,457,quantile,BG,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -149,7 +143,6 @@ NA,712,point,BG,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,1112,quantile,BG,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,1180,quantile,BG,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,1286,quantile,BG,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,710,point_mean,BG,3 wk ahead inc death,2021-03-28,NA
 0.010,307,quantile,BG,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,351,quantile,BG,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,392,quantile,BG,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -174,7 +167,6 @@ NA,657,point,BG,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,1177,quantile,BG,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,1329,quantile,BG,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,1469,quantile,BG,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,698,point_mean,BG,4 wk ahead inc death,2021-03-28,NA
 0.010,250,quantile,BG,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,289,quantile,BG,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,319,quantile,BG,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -199,7 +191,6 @@ NA,614,point,BG,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,1331,quantile,BG,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,1489,quantile,BG,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,1788,quantile,BG,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,1027,point_mean,CZ,1 wk ahead inc death,2021-03-28,NA
 0.010,696,quantile,CZ,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,742,quantile,CZ,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,779,quantile,CZ,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -224,7 +215,6 @@ NA,1010,point,CZ,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,1321,quantile,CZ,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,1383,quantile,CZ,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,1482,quantile,CZ,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,838,point_mean,CZ,2 wk ahead inc death,2021-03-28,NA
 0.010,500,quantile,CZ,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,556,quantile,CZ,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,586,quantile,CZ,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -249,7 +239,6 @@ NA,816,point,CZ,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,1168,quantile,CZ,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,1242,quantile,CZ,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,1417,quantile,CZ,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,673,point_mean,CZ,3 wk ahead inc death,2021-03-28,NA
 0.010,364,quantile,CZ,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,390,quantile,CZ,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,415,quantile,CZ,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -274,7 +263,6 @@ NA,636,point,CZ,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,1090,quantile,CZ,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,1214,quantile,CZ,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,1385,quantile,CZ,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,543,point_mean,CZ,4 wk ahead inc death,2021-03-28,NA
 0.010,248,quantile,CZ,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,272,quantile,CZ,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,293,quantile,CZ,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -299,7 +287,6 @@ NA,483,point,CZ,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,1017,quantile,CZ,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,1196,quantile,CZ,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,1373,quantile,CZ,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,11,point_mean,DK,1 wk ahead inc death,2021-03-28,NA
 0.010,4,quantile,DK,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,4,quantile,DK,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,5,quantile,DK,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -324,7 +311,6 @@ NA,10,point,DK,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,18,quantile,DK,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,21,quantile,DK,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,24,quantile,DK,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,9,point_mean,DK,2 wk ahead inc death,2021-03-28,NA
 0.010,1,quantile,DK,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,2,quantile,DK,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,3,quantile,DK,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -349,7 +335,6 @@ NA,8,point,DK,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,16,quantile,DK,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,18,quantile,DK,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,23,quantile,DK,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,6,point_mean,DK,3 wk ahead inc death,2021-03-28,NA
 0.010,1,quantile,DK,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,1,quantile,DK,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,2,quantile,DK,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -374,7 +359,6 @@ NA,6,point,DK,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,13,quantile,DK,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,16,quantile,DK,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,22,quantile,DK,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,5,point_mean,DK,4 wk ahead inc death,2021-03-28,NA
 0.010,0,quantile,DK,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,0,quantile,DK,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,1,quantile,DK,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -399,7 +383,6 @@ NA,4,point,DK,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,12,quantile,DK,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,15,quantile,DK,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,18,quantile,DK,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,1241,point_mean,DE,1 wk ahead inc death,2021-03-28,NA
 0.010,642,quantile,DE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,717,quantile,DE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,768,quantile,DE,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -424,7 +407,6 @@ NA,1209,point,DE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,1878,quantile,DE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,2032,quantile,DE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,2346,quantile,DE,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,1374,point_mean,DE,2 wk ahead inc death,2021-03-28,NA
 0.010,569,quantile,DE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,625,quantile,DE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,700,quantile,DE,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -449,7 +431,6 @@ NA,1279,point,DE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,2400,quantile,DE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,2712,quantile,DE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,3061,quantile,DE,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,1611,point_mean,DE,3 wk ahead inc death,2021-03-28,NA
 0.010,453,quantile,DE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,513,quantile,DE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,587,quantile,DE,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -474,7 +455,6 @@ NA,1384,point,DE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,3325,quantile,DE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,4033,quantile,DE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,4621,quantile,DE,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,2031,point_mean,DE,4 wk ahead inc death,2021-03-28,NA
 0.010,366,quantile,DE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,421,quantile,DE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,508,quantile,DE,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -499,7 +479,6 @@ NA,1588,point,DE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,5089,quantile,DE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,6308,quantile,DE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,7614,quantile,DE,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,74,point_mean,EE,1 wk ahead inc death,2021-03-28,NA
 0.010,42,quantile,EE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,45,quantile,EE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,48,quantile,EE,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -524,7 +503,6 @@ NA,73,point,EE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,103,quantile,EE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,109,quantile,EE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,116,quantile,EE,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,69,point_mean,EE,2 wk ahead inc death,2021-03-28,NA
 0.010,31,quantile,EE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,36,quantile,EE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,40,quantile,EE,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -549,7 +527,6 @@ NA,66,point,EE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,109,quantile,EE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,123,quantile,EE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,134,quantile,EE,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,63,point_mean,EE,3 wk ahead inc death,2021-03-28,NA
 0.010,21,quantile,EE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,25,quantile,EE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,29,quantile,EE,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -574,7 +551,6 @@ NA,58,point,EE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,116,quantile,EE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,132,quantile,EE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,152,quantile,EE,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,60,point_mean,EE,4 wk ahead inc death,2021-03-28,NA
 0.010,17,quantile,EE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,20,quantile,EE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,22,quantile,EE,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -599,7 +575,6 @@ NA,50,point,EE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,135,quantile,EE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,162,quantile,EE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,197,quantile,EE,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,56,point_mean,IE,1 wk ahead inc death,2021-03-28,NA
 0.010,22,quantile,IE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,26,quantile,IE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,30,quantile,IE,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -624,7 +599,6 @@ NA,53,point,IE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,90,quantile,IE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,101,quantile,IE,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,116,quantile,IE,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,52,point_mean,IE,2 wk ahead inc death,2021-03-28,NA
 0.010,18,quantile,IE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,22,quantile,IE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,26,quantile,IE,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -649,7 +623,6 @@ NA,48,point,IE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,90,quantile,IE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,99,quantile,IE,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,114,quantile,IE,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,49,point_mean,IE,3 wk ahead inc death,2021-03-28,NA
 0.010,15,quantile,IE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,17,quantile,IE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,20,quantile,IE,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -674,7 +647,6 @@ NA,44,point,IE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,98,quantile,IE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,111,quantile,IE,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,127,quantile,IE,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,52,point_mean,IE,4 wk ahead inc death,2021-03-28,NA
 0.010,11,quantile,IE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,15,quantile,IE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,17,quantile,IE,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -699,7 +671,6 @@ NA,42,point,IE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,111,quantile,IE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,131,quantile,IE,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,163,quantile,IE,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,421,point_mean,GR,1 wk ahead inc death,2021-03-28,NA
 0.010,283,quantile,GR,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,297,quantile,GR,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,310,quantile,GR,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -724,7 +695,6 @@ NA,416,point,GR,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,548,quantile,GR,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,586,quantile,GR,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,646,quantile,GR,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,422,point_mean,GR,2 wk ahead inc death,2021-03-28,NA
 0.010,238,quantile,GR,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,256,quantile,GR,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,274,quantile,GR,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -749,7 +719,6 @@ NA,408,point,GR,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,603,quantile,GR,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,643,quantile,GR,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,686,quantile,GR,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,418,point_mean,GR,3 wk ahead inc death,2021-03-28,NA
 0.010,194,quantile,GR,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,208,quantile,GR,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,227,quantile,GR,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -774,7 +743,6 @@ NA,387,point,GR,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,688,quantile,GR,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,729,quantile,GR,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,806,quantile,GR,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,421,point_mean,GR,4 wk ahead inc death,2021-03-28,NA
 0.010,142,quantile,GR,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,161,quantile,GR,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,183,quantile,GR,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -799,7 +767,6 @@ NA,372,point,GR,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,802,quantile,GR,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,871,quantile,GR,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,983,quantile,GR,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,90,point_mean,FR,1 wk ahead inc death,2021-03-28,NA
 0.010,50,quantile,FR,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,56,quantile,FR,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,62,quantile,FR,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -824,7 +791,6 @@ NA,89,point,FR,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,124,quantile,FR,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,132,quantile,FR,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,142,quantile,FR,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,77,point_mean,FR,2 wk ahead inc death,2021-03-28,NA
 0.010,39,quantile,FR,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,45,quantile,FR,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,51,quantile,FR,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -849,7 +815,6 @@ NA,76,point,FR,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,106,quantile,FR,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,116,quantile,FR,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,121,quantile,FR,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,66,point_mean,FR,3 wk ahead inc death,2021-03-28,NA
 0.010,33,quantile,FR,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,37,quantile,FR,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,43,quantile,FR,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -874,7 +839,6 @@ NA,64,point,FR,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,93,quantile,FR,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,98,quantile,FR,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,108,quantile,FR,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,57,point_mean,FR,4 wk ahead inc death,2021-03-28,NA
 0.010,28,quantile,FR,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,33,quantile,FR,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,36,quantile,FR,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -899,7 +863,6 @@ NA,56,point,FR,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,81,quantile,FR,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,85,quantile,FR,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,92,quantile,FR,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,153,point_mean,HR,1 wk ahead inc death,2021-03-28,NA
 0.010,93,quantile,HR,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,103,quantile,HR,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,110,quantile,HR,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -924,7 +887,6 @@ NA,150,point,HR,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,207,quantile,HR,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,219,quantile,HR,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,233,quantile,HR,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,211,point_mean,HR,2 wk ahead inc death,2021-03-28,NA
 0.010,97,quantile,HR,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,108,quantile,HR,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,119,quantile,HR,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -949,7 +911,6 @@ NA,203,point,HR,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,328,quantile,HR,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,348,quantile,HR,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,392,quantile,HR,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,298,point_mean,HR,3 wk ahead inc death,2021-03-28,NA
 0.010,90,quantile,HR,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,110,quantile,HR,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,125,quantile,HR,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -974,7 +935,6 @@ NA,266,point,HR,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,559,quantile,HR,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,608,quantile,HR,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,694,quantile,HR,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,437,point_mean,HR,4 wk ahead inc death,2021-03-28,NA
 0.010,80,quantile,HR,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,103,quantile,HR,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,121,quantile,HR,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -999,7 +959,6 @@ NA,368,point,HR,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,962,quantile,HR,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,1068,quantile,HR,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,1216,quantile,HR,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,2912,point_mean,IT,1 wk ahead inc death,2021-03-28,NA
 0.010,1960,quantile,IT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,2094,quantile,IT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,2203,quantile,IT,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -1024,7 +983,6 @@ NA,2866,point,IT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,3729,quantile,IT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,3944,quantile,IT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,4206,quantile,IT,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,2841,point_mean,IT,2 wk ahead inc death,2021-03-28,NA
 0.010,1487,quantile,IT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,1656,quantile,IT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,1864,quantile,IT,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -1049,7 +1007,6 @@ NA,2750,point,IT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,4126,quantile,IT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,4405,quantile,IT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,4810,quantile,IT,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,2727,point_mean,IT,3 wk ahead inc death,2021-03-28,NA
 0.010,1110,quantile,IT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,1306,quantile,IT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,1515,quantile,IT,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -1074,7 +1031,6 @@ NA,2563,point,IT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,4544,quantile,IT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,4833,quantile,IT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,5353,quantile,IT,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,2671,point_mean,IT,4 wk ahead inc death,2021-03-28,NA
 0.010,770,quantile,IT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,926,quantile,IT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,1113,quantile,IT,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -1099,7 +1055,6 @@ NA,2369,point,IT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,5125,quantile,IT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,5690,quantile,IT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,6095,quantile,IT,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,10,point_mean,CY,1 wk ahead inc death,2021-03-28,NA
 0.010,2,quantile,CY,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,3,quantile,CY,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,4,quantile,CY,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -1124,7 +1079,6 @@ NA,10,point,CY,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,18,quantile,CY,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,20,quantile,CY,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,23,quantile,CY,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,11,point_mean,CY,2 wk ahead inc death,2021-03-28,NA
 0.010,2,quantile,CY,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,3,quantile,CY,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,4,quantile,CY,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -1149,7 +1103,6 @@ NA,10,point,CY,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,21,quantile,CY,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,23,quantile,CY,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,26,quantile,CY,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,11,point_mean,CY,3 wk ahead inc death,2021-03-28,NA
 0.010,1,quantile,CY,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,2,quantile,CY,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,3,quantile,CY,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -1174,7 +1127,6 @@ NA,10,point,CY,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,23,quantile,CY,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,27,quantile,CY,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,32,quantile,CY,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,13,point_mean,CY,4 wk ahead inc death,2021-03-28,NA
 0.010,1,quantile,CY,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,2,quantile,CY,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,3,quantile,CY,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -1199,7 +1151,6 @@ NA,11,point,CY,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,30,quantile,CY,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,36,quantile,CY,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,41,quantile,CY,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,55,point_mean,LV,1 wk ahead inc death,2021-03-28,NA
 0.010,27,quantile,LV,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,32,quantile,LV,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,34,quantile,LV,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -1224,7 +1175,6 @@ NA,54,point,LV,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,79,quantile,LV,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,83,quantile,LV,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,90,quantile,LV,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,53,point_mean,LV,2 wk ahead inc death,2021-03-28,NA
 0.010,24,quantile,LV,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,27,quantile,LV,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,30,quantile,LV,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -1249,7 +1199,6 @@ NA,51,point,LV,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,83,quantile,LV,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,91,quantile,LV,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,99,quantile,LV,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,52,point_mean,LV,3 wk ahead inc death,2021-03-28,NA
 0.010,22,quantile,LV,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,25,quantile,LV,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,28,quantile,LV,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -1274,7 +1223,6 @@ NA,47,point,LV,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,90,quantile,LV,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,99,quantile,LV,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,113,quantile,LV,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,53,point_mean,LV,4 wk ahead inc death,2021-03-28,NA
 0.010,17,quantile,LV,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,19,quantile,LV,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,22,quantile,LV,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -1299,7 +1247,6 @@ NA,45,point,LV,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,112,quantile,LV,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,129,quantile,LV,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,144,quantile,LV,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,74,point_mean,LT,1 wk ahead inc death,2021-03-28,NA
 0.010,45,quantile,LT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,50,quantile,LT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,53,quantile,LT,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -1324,7 +1271,6 @@ NA,73,point,LT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,100,quantile,LT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,106,quantile,LT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,114,quantile,LT,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,86,point_mean,LT,2 wk ahead inc death,2021-03-28,NA
 0.010,44,quantile,LT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,50,quantile,LT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,55,quantile,LT,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -1349,7 +1295,6 @@ NA,83,point,LT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,127,quantile,LT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,140,quantile,LT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,154,quantile,LT,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,104,point_mean,LT,3 wk ahead inc death,2021-03-28,NA
 0.010,43,quantile,LT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,48,quantile,LT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,53,quantile,LT,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -1374,7 +1319,6 @@ NA,97,point,LT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,182,quantile,LT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,198,quantile,LT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,218,quantile,LT,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,133,point_mean,LT,4 wk ahead inc death,2021-03-28,NA
 0.010,37,quantile,LT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,45,quantile,LT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,52,quantile,LT,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -1399,7 +1343,6 @@ NA,116,point,LT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,265,quantile,LT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,303,quantile,LT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,328,quantile,LT,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,1972,point_mean,HU,1 wk ahead inc death,2021-03-28,NA
 0.010,1287,quantile,HU,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,1355,quantile,HU,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,1437,quantile,HU,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -1424,7 +1367,6 @@ NA,1956,point,HU,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,2577,quantile,HU,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,2718,quantile,HU,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,2884,quantile,HU,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,2264,point_mean,HU,2 wk ahead inc death,2021-03-28,NA
 0.010,1198,quantile,HU,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,1327,quantile,HU,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,1422,quantile,HU,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -1449,7 +1391,6 @@ NA,2186,point,HU,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,3420,quantile,HU,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,3666,quantile,HU,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,3882,quantile,HU,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,2549,point_mean,HU,3 wk ahead inc death,2021-03-28,NA
 0.010,977,quantile,HU,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,1134,quantile,HU,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,1289,quantile,HU,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -1474,7 +1415,6 @@ NA,2434,point,HU,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,4263,quantile,HU,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,4732,quantile,HU,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,5268,quantile,HU,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,2853,point_mean,HU,4 wk ahead inc death,2021-03-28,NA
 0.010,866,quantile,HU,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,983,quantile,HU,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,1104,quantile,HU,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -1499,7 +1439,6 @@ NA,2628,point,HU,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,5498,quantile,HU,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,6101,quantile,HU,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,6666,quantile,HU,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,15,point_mean,MT,1 wk ahead inc death,2021-03-28,NA
 0.010,6,quantile,MT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,7,quantile,MT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,8,quantile,MT,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -1524,7 +1463,6 @@ NA,15,point,MT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,24,quantile,MT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,25,quantile,MT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,28,quantile,MT,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,13,point_mean,MT,2 wk ahead inc death,2021-03-28,NA
 0.010,4,quantile,MT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,5,quantile,MT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,6,quantile,MT,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -1549,7 +1487,6 @@ NA,12,point,MT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,21,quantile,MT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,22,quantile,MT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,24,quantile,MT,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,10,point_mean,MT,3 wk ahead inc death,2021-03-28,NA
 0.010,3,quantile,MT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,4,quantile,MT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,4,quantile,MT,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -1574,7 +1511,6 @@ NA,10,point,MT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,17,quantile,MT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,18,quantile,MT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,19,quantile,MT,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,8,point_mean,MT,4 wk ahead inc death,2021-03-28,NA
 0.010,1,quantile,MT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,2,quantile,MT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,3,quantile,MT,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -1599,7 +1535,6 @@ NA,8,point,MT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,15,quantile,MT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,16,quantile,MT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,18,quantile,MT,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,264,point_mean,NL,1 wk ahead inc death,2021-03-28,NA
 0.010,160,quantile,NL,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,175,quantile,NL,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,188,quantile,NL,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -1624,7 +1559,6 @@ NA,259,point,NL,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,361,quantile,NL,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,384,quantile,NL,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,404,quantile,NL,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,313,point_mean,NL,2 wk ahead inc death,2021-03-28,NA
 0.010,166,quantile,NL,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,182,quantile,NL,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,195,quantile,NL,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -1649,7 +1583,6 @@ NA,304,point,NL,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,466,quantile,NL,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,501,quantile,NL,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,540,quantile,NL,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,382,point_mean,NL,3 wk ahead inc death,2021-03-28,NA
 0.010,154,quantile,NL,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,170,quantile,NL,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,196,quantile,NL,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -1674,7 +1607,6 @@ NA,358,point,NL,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,652,quantile,NL,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,742,quantile,NL,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,815,quantile,NL,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,480,point_mean,NL,4 wk ahead inc death,2021-03-28,NA
 0.010,146,quantile,NL,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,173,quantile,NL,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,197,quantile,NL,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -1699,7 +1631,6 @@ NA,434,point,NL,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,941,quantile,NL,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,1059,quantile,NL,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,1136,quantile,NL,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,197,point_mean,AT,1 wk ahead inc death,2021-03-28,NA
 0.010,117,quantile,AT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,126,quantile,AT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,134,quantile,AT,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -1724,7 +1655,6 @@ NA,192,point,AT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,274,quantile,AT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,295,quantile,AT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,317,quantile,AT,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,199,point_mean,AT,2 wk ahead inc death,2021-03-28,NA
 0.010,90,quantile,AT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,104,quantile,AT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,113,quantile,AT,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -1749,7 +1679,6 @@ NA,191,point,AT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,313,quantile,AT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,332,quantile,AT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,345,quantile,AT,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,201,point_mean,AT,3 wk ahead inc death,2021-03-28,NA
 0.010,64,quantile,AT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,78,quantile,AT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,89,quantile,AT,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -1774,7 +1703,6 @@ NA,186,point,AT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,376,quantile,AT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,406,quantile,AT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,443,quantile,AT,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,207,point_mean,AT,4 wk ahead inc death,2021-03-28,NA
 0.010,45,quantile,AT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,60,quantile,AT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,68,quantile,AT,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -1799,7 +1727,6 @@ NA,176,point,AT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,428,quantile,AT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,488,quantile,AT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,540,quantile,AT,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,3423,point_mean,PL,1 wk ahead inc death,2021-03-28,NA
 0.010,1887,quantile,PL,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,2043,quantile,PL,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,2218,quantile,PL,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -1824,7 +1751,6 @@ NA,3354,point,PL,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,4992,quantile,PL,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,5313,quantile,PL,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,5751,quantile,PL,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,4421,point_mean,PL,2 wk ahead inc death,2021-03-28,NA
 0.010,2037,quantile,PL,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,2290,quantile,PL,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,2553,quantile,PL,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -1849,7 +1775,6 @@ NA,4280,point,PL,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,6881,quantile,PL,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,7508,quantile,PL,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,8431,quantile,PL,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,5738,point_mean,PL,3 wk ahead inc death,2021-03-28,NA
 0.010,2148,quantile,PL,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,2411,quantile,PL,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,2756,quantile,PL,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -1874,7 +1799,6 @@ NA,5363,point,PL,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,10137,quantile,PL,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,11198,quantile,PL,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,12968,quantile,PL,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,7685,point_mean,PL,4 wk ahead inc death,2021-03-28,NA
 0.010,2177,quantile,PL,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,2467,quantile,PL,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,2837,quantile,PL,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -1899,7 +1823,6 @@ NA,6647,point,PL,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,15846,quantile,PL,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,17667,quantile,PL,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,18941,quantile,PL,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,51,point_mean,PT,1 wk ahead inc death,2021-03-28,NA
 0.010,30,quantile,PT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,32,quantile,PT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,34,quantile,PT,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -1924,7 +1847,6 @@ NA,50,point,PT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,70,quantile,PT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,74,quantile,PT,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,79,quantile,PT,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,42,point_mean,PT,2 wk ahead inc death,2021-03-28,NA
 0.010,19,quantile,PT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,21,quantile,PT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,24,quantile,PT,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -1949,7 +1871,6 @@ NA,41,point,PT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,63,quantile,PT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,69,quantile,PT,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,76,quantile,PT,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,36,point_mean,PT,3 wk ahead inc death,2021-03-28,NA
 0.010,13,quantile,PT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,15,quantile,PT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,17,quantile,PT,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -1974,7 +1895,6 @@ NA,34,point,PT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,63,quantile,PT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,68,quantile,PT,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,75,quantile,PT,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,33,point_mean,PT,4 wk ahead inc death,2021-03-28,NA
 0.010,7,quantile,PT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,10,quantile,PT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,11,quantile,PT,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -1999,7 +1919,6 @@ NA,29,point,PT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,66,quantile,PT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,74,quantile,PT,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,82,quantile,PT,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,949,point_mean,RO,1 wk ahead inc death,2021-03-28,NA
 0.010,641,quantile,RO,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,686,quantile,RO,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,714,quantile,RO,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -2024,7 +1943,6 @@ NA,934,point,RO,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,1224,quantile,RO,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,1279,quantile,RO,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,1338,quantile,RO,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,1026,point_mean,RO,2 wk ahead inc death,2021-03-28,NA
 0.010,561,quantile,RO,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,608,quantile,RO,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,666,quantile,RO,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -2049,7 +1967,6 @@ NA,1001,point,RO,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,1482,quantile,RO,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,1571,quantile,RO,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,1681,quantile,RO,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,1099,point_mean,RO,3 wk ahead inc death,2021-03-28,NA
 0.010,446,quantile,RO,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,507,quantile,RO,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,586,quantile,RO,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -2074,7 +1991,6 @@ NA,1035,point,RO,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,1835,quantile,RO,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,1964,quantile,RO,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,2067,quantile,RO,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,1197,point_mean,RO,4 wk ahead inc death,2021-03-28,NA
 0.010,346,quantile,RO,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,414,quantile,RO,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,472,quantile,RO,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -2099,7 +2015,6 @@ NA,1077,point,RO,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,2227,quantile,RO,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,2453,quantile,RO,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,2753,quantile,RO,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,49,point_mean,SI,1 wk ahead inc death,2021-03-28,NA
 0.010,25,quantile,SI,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,28,quantile,SI,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,31,quantile,SI,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -2124,7 +2039,6 @@ NA,48,point,SI,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,72,quantile,SI,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,77,quantile,SI,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,84,quantile,SI,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,58,point_mean,SI,2 wk ahead inc death,2021-03-28,NA
 0.010,24,quantile,SI,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,27,quantile,SI,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,30,quantile,SI,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -2149,7 +2063,6 @@ NA,53,point,SI,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,99,quantile,SI,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,106,quantile,SI,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,121,quantile,SI,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,70,point_mean,SI,3 wk ahead inc death,2021-03-28,NA
 0.010,20,quantile,SI,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,22,quantile,SI,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,26,quantile,SI,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -2174,7 +2087,6 @@ NA,62,point,SI,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,145,quantile,SI,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,161,quantile,SI,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,188,quantile,SI,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,88,point_mean,SI,4 wk ahead inc death,2021-03-28,NA
 0.010,16,quantile,SI,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,20,quantile,SI,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,23,quantile,SI,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -2199,7 +2111,6 @@ NA,71,point,SI,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,215,quantile,SI,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,246,quantile,SI,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,297,quantile,SI,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,392,point_mean,SK,1 wk ahead inc death,2021-03-28,NA
 0.010,180,quantile,SK,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,206,quantile,SK,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,226,quantile,SK,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -2224,7 +2135,6 @@ NA,375,point,SK,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,642,quantile,SK,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,705,quantile,SK,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,743,quantile,SK,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,335,point_mean,SK,2 wk ahead inc death,2021-03-28,NA
 0.010,120,quantile,SK,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,140,quantile,SK,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,156,quantile,SK,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -2249,7 +2159,6 @@ NA,297,point,SK,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,644,quantile,SK,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,706,quantile,SK,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,842,quantile,SK,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,284,point_mean,SK,3 wk ahead inc death,2021-03-28,NA
 0.010,80,quantile,SK,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,94,quantile,SK,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,109,quantile,SK,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -2274,7 +2183,6 @@ NA,228,point,SK,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,672,quantile,SK,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,781,quantile,SK,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,1046,quantile,SK,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,247,point_mean,SK,4 wk ahead inc death,2021-03-28,NA
 0.010,46,quantile,SK,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,56,quantile,SK,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,68,quantile,SK,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -2299,7 +2207,6 @@ NA,176,point,SK,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,615,quantile,SK,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,812,quantile,SK,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,1291,quantile,SK,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,19,point_mean,FI,1 wk ahead inc death,2021-03-28,NA
 0.010,4,quantile,FI,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,5,quantile,FI,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,7,quantile,FI,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -2324,7 +2231,6 @@ NA,17,point,FI,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,37,quantile,FI,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,41,quantile,FI,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,46,quantile,FI,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,18,point_mean,FI,2 wk ahead inc death,2021-03-28,NA
 0.010,3,quantile,FI,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,4,quantile,FI,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,6,quantile,FI,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -2349,7 +2255,6 @@ NA,17,point,FI,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,37,quantile,FI,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,43,quantile,FI,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,47,quantile,FI,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,18,point_mean,FI,3 wk ahead inc death,2021-03-28,NA
 0.010,3,quantile,FI,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,4,quantile,FI,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,5,quantile,FI,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -2374,7 +2279,6 @@ NA,15,point,FI,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,38,quantile,FI,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,43,quantile,FI,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,54,quantile,FI,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,19,point_mean,FI,4 wk ahead inc death,2021-03-28,NA
 0.010,2,quantile,FI,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,3,quantile,FI,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,4,quantile,FI,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -2399,7 +2303,6 @@ NA,15,point,FI,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,46,quantile,FI,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,54,quantile,FI,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,69,quantile,FI,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,481,point_mean,GB,1 wk ahead inc death,2021-03-28,NA
 0.010,296,quantile,GB,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,312,quantile,GB,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,337,quantile,GB,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -2424,7 +2327,6 @@ NA,473,point,GB,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,652,quantile,GB,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,691,quantile,GB,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,726,quantile,GB,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,408,point_mean,GB,2 wk ahead inc death,2021-03-28,NA
 0.010,222,quantile,GB,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,243,quantile,GB,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,277,quantile,GB,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -2449,7 +2351,6 @@ NA,398,point,GB,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,570,quantile,GB,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,610,quantile,GB,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,691,quantile,GB,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,362,point_mean,GB,3 wk ahead inc death,2021-03-28,NA
 0.010,162,quantile,GB,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,188,quantile,GB,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,209,quantile,GB,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -2474,7 +2375,6 @@ NA,344,point,GB,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,574,quantile,GB,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,631,quantile,GB,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,706,quantile,GB,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,341,point_mean,GB,4 wk ahead inc death,2021-03-28,NA
 0.010,130,quantile,GB,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,144,quantile,GB,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,164,quantile,GB,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -2499,7 +2399,6 @@ NA,308,point,GB,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,630,quantile,GB,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,689,quantile,GB,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,805,quantile,GB,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,0,point_mean,IS,1 wk ahead inc death,2021-03-28,NA
 0.010,0,quantile,IS,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,0,quantile,IS,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,0,quantile,IS,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -2524,7 +2423,6 @@ NA,0,point,IS,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,1,quantile,IS,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,1,quantile,IS,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,1,quantile,IS,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,0,point_mean,IS,2 wk ahead inc death,2021-03-28,NA
 0.010,0,quantile,IS,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,0,quantile,IS,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,0,quantile,IS,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -2549,7 +2447,6 @@ NA,0,point,IS,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,1,quantile,IS,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,1,quantile,IS,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,2,quantile,IS,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,0,point_mean,IS,3 wk ahead inc death,2021-03-28,NA
 0.010,0,quantile,IS,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,0,quantile,IS,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,0,quantile,IS,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -2574,7 +2471,6 @@ NA,0,point,IS,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,1,quantile,IS,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,2,quantile,IS,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,3,quantile,IS,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,0,point_mean,IS,4 wk ahead inc death,2021-03-28,NA
 0.010,0,quantile,IS,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,0,quantile,IS,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,0,quantile,IS,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -2599,7 +2495,6 @@ NA,0,point,IS,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,2,quantile,IS,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,4,quantile,IS,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,6,quantile,IS,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,0,point_mean,LI,1 wk ahead inc death,2021-03-28,NA
 0.010,0,quantile,LI,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,0,quantile,LI,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,0,quantile,LI,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -2624,7 +2519,6 @@ NA,0,point,LI,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,2,quantile,LI,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,2,quantile,LI,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,3,quantile,LI,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,1,point_mean,LI,2 wk ahead inc death,2021-03-28,NA
 0.010,0,quantile,LI,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,0,quantile,LI,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,0,quantile,LI,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -2649,7 +2543,6 @@ NA,0,point,LI,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,2,quantile,LI,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,3,quantile,LI,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,4,quantile,LI,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,1,point_mean,LI,3 wk ahead inc death,2021-03-28,NA
 0.010,0,quantile,LI,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,0,quantile,LI,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,0,quantile,LI,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -2674,7 +2567,6 @@ NA,0,point,LI,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,4,quantile,LI,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,6,quantile,LI,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,11,quantile,LI,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,2,point_mean,LI,4 wk ahead inc death,2021-03-28,NA
 0.010,0,quantile,LI,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,0,quantile,LI,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,0,quantile,LI,4 wk ahead inc death,2021-03-28,2021-04-24
@@ -2699,7 +2591,6 @@ NA,0,point,LI,4 wk ahead inc death,2021-03-28,2021-04-24
 0.950,9,quantile,LI,4 wk ahead inc death,2021-03-28,2021-04-24
 0.975,15,quantile,LI,4 wk ahead inc death,2021-03-28,2021-04-24
 0.990,25,quantile,LI,4 wk ahead inc death,2021-03-28,2021-04-24
-NA,17,point_mean,NO,1 wk ahead inc death,2021-03-28,NA
 0.010,2,quantile,NO,1 wk ahead inc death,2021-03-28,2021-04-03
 0.025,3,quantile,NO,1 wk ahead inc death,2021-03-28,2021-04-03
 0.050,5,quantile,NO,1 wk ahead inc death,2021-03-28,2021-04-03
@@ -2724,7 +2615,6 @@ NA,15,point,NO,1 wk ahead inc death,2021-03-28,2021-04-03
 0.950,34,quantile,NO,1 wk ahead inc death,2021-03-28,2021-04-03
 0.975,39,quantile,NO,1 wk ahead inc death,2021-03-28,2021-04-03
 0.990,50,quantile,NO,1 wk ahead inc death,2021-03-28,2021-04-03
-NA,17,point_mean,NO,2 wk ahead inc death,2021-03-28,NA
 0.010,3,quantile,NO,2 wk ahead inc death,2021-03-28,2021-04-10
 0.025,3,quantile,NO,2 wk ahead inc death,2021-03-28,2021-04-10
 0.050,5,quantile,NO,2 wk ahead inc death,2021-03-28,2021-04-10
@@ -2749,7 +2639,6 @@ NA,15,point,NO,2 wk ahead inc death,2021-03-28,2021-04-10
 0.950,36,quantile,NO,2 wk ahead inc death,2021-03-28,2021-04-10
 0.975,41,quantile,NO,2 wk ahead inc death,2021-03-28,2021-04-10
 0.990,48,quantile,NO,2 wk ahead inc death,2021-03-28,2021-04-10
-NA,18,point_mean,NO,3 wk ahead inc death,2021-03-28,NA
 0.010,2,quantile,NO,3 wk ahead inc death,2021-03-28,2021-04-17
 0.025,3,quantile,NO,3 wk ahead inc death,2021-03-28,2021-04-17
 0.050,4,quantile,NO,3 wk ahead inc death,2021-03-28,2021-04-17
@@ -2774,7 +2663,6 @@ NA,15,point,NO,3 wk ahead inc death,2021-03-28,2021-04-17
 0.950,41,quantile,NO,3 wk ahead inc death,2021-03-28,2021-04-17
 0.975,48,quantile,NO,3 wk ahead inc death,2021-03-28,2021-04-17
 0.990,60,quantile,NO,3 wk ahead inc death,2021-03-28,2021-04-17
-NA,19,point_mean,NO,4 wk ahead inc death,2021-03-28,NA
 0.010,2,quantile,NO,4 wk ahead inc death,2021-03-28,2021-04-24
 0.025,3,quantile,NO,4 wk ahead inc death,2021-03-28,2021-04-24
 0.050,4,quantile,NO,4 wk ahead inc death,2021-03-28,2021-04-24
