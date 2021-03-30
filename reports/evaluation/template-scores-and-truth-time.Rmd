@@ -13,9 +13,6 @@ scores <- eval_forecasts(data,
 # remove point forecasts
 scores <- scores[!is.na(interval_score)]
 
-for (loc in locations) {
-  cat("\n\n##", loc, " \n\n")
-  
   tmp_data <- filter(data, location_name == loc)
   tmp_scores <- filter(scores, location_name == loc)
   
@@ -62,7 +59,7 @@ for (loc in locations) {
     facet_wrap(~ target_variable, scales = "free") + 
     theme(legend.position = "bottom") +
     labs(y = "weighted interval score", x = "date", 
-         title = paste("Forecaser scores -", loc)) + 
+         title = paste("Forecaster scores -", loc)) + 
     scale_x_date(limits = as.Date(date_range)) 
   
   cat("\n\n")
@@ -122,8 +119,6 @@ for (loc in locations) {
   print(p5)
   cat("\n\n")
   
-}
-
 
 
 ```

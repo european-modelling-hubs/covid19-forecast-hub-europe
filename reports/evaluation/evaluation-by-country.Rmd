@@ -1,0 +1,50 @@
+```{r forecast-vis-header, include = FALSE, eval = include_forecast_plot}
+out <- paste("\n\n### Forecast visualisation", paste0("(", loc, ")", "{.tabset .tabset_fade}\n\n"))
+```
+
+```{r forecast-vis, include = FALSE, eval = include_forecast_plot}
+
+forecast_dates <- rev(as.character(unique(data$forecast_date[!is.na(data$forecast_date)])))
+out <- c(out, knit_child(here::here("reports", "evaluation", "template-plot-forecasts.Rmd")))
+```
+
+`r paste(if (include_forecast_plot) knit(text = out), collapse = '\n\n')`
+
+---
+
+```{r ranking-header, include = FALSE, eval = include_ranking}
+out <- paste("\n\n### Forecast accuracy", paste0("(", loc, ")"), "{.tabset .tabset-fade}\n\n")
+```
+
+```{r ranking, include = FALSE, eval = include_ranking}
+for (variable in names(target_variables)) {
+  out <- c(out, paste("\n\n####", variable, " {.tabset .tabset-fade}\n\n"))
+  for (this_horizon in horizons) {
+    filter_list = list(paste0("target_variable == '", target_variables[[variable]], "'"),
+                     "type != 'point'",
+                     paste0("horizon == ", this_horizon),
+                     paste0("location_name == '", loc, "'"))
+    horizon_string <- paste0(this_horizon, " week", if_else(this_horizon > 1, "s", ""), " ahead")
+    out <- c(out, paste("\n\n#####", horizon_string, "\n\n"))
+    out <- c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
+                            quiet = TRUE))
+  }
+}
+```
+
+`r paste(if (include_ranking) knit(text = out, quiet = TRUE), collapse = '\n\n')`
+
+---
+
+```{r forecast-and-scores-header, include = FALSE}
+out <- paste("\n\n### Scores over time", paste0("(", loc, ")"), "{.tabset .tabset-fade}\n\n")
+```
+
+Here you can see a visualisation of forecaster scores over time. The first tab shows the weighted interval score. Other tabs show the components of the interval score, sharpness (how narrow are forecasts - smaller is better), and penalties for underprediction and overprediction. 
+
+```{r forecast-and-scores, include = FALSE}
+out <- c(out, knit_child(here::here("reports", "evaluation", "template-scores-and-truth-time.Rmd")))
+```
+
+`r paste(knit(text = out), collapse = '\n\n')`
+

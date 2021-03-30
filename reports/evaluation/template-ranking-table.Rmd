@@ -12,41 +12,45 @@ filter_df <- function(data, filter_list) {
 }
 ```
 
-
 ```{r, results = 'asis'}
-cat("\n\n###", tabtitle, "\n\n")
-
 df <- filter_df(data, filter_list)
+
+## if more than 1 location exists, filter to have at least half of them
+if (length(unique(df$location)) > 1) {
+  df <- df %>%
+    group_by(model) %>%
+    mutate(n = length(unique(location))) %>%
+    ungroup() %>%
+    mutate(nall = length(unique(location))) %>%
+    filter(n >= nall / 2) %>%
+    select(-n, -nall)
+ }
+
 table <- eval_forecasts(df, summarise_by = summarise_by, compute_relative_skill = TRUE)
 
-
-if ("horizon" %in% colnames(table)) {
-  table[, horizon := paste("horizon", horizon)]
-}
 setcolorder(table, c("model", "relative_skill"))
 
 htmltools::tagList(
-   table %>%
-    arrange(relative_skill) %>%
-    dplyr::select(-scaled_rel_skill) %>%
-    mutate_if(is.numeric, round, 2) %>%
-    dplyr::rename(wis = interval_score,
-                  underpred = underprediction,
-                  overpred = overprediction,
-                  cvrage_dev = coverage_deviation,
-                  rel_skill = relative_skill) %>%
-     DT::datatable(extensions = c('FixedColumns', 'Buttons'),
-                   width = "100%",
-                   options = list(
-                     pageLength = 10,
-                     buttons = c('csv', 'excel'),
-                     dom = 'Bfrtip',
-                     scrollX = TRUE,
-                     fixedColumns = TRUE
-                   ), 
-                   class = 'white-space: nowrap')
+     table %>%
+       arrange(relative_skill) %>%
+       dplyr::select(-scaled_rel_skill) %>%
+       mutate_if(is.numeric, round, 2) %>%
+       dplyr::rename(wis = interval_score,
+                     underpred = underprediction,
+                     overpred = overprediction,
+                     cvrage_dev = coverage_deviation,
+                     rel_skill = relative_skill) %>%
+       DT::datatable(extensions = c('FixedColumns', 'Buttons'),
+                     width = "100%",
+                     options = list(
+                       pageLength = 10,
+                       buttons = c('csv', 'excel'),
+                       dom = 'Bfrtip',
+                       scrollX = TRUE,
+                       fixedColumns = TRUE
+                     ), 
+                     class = 'white-space: nowrap')
 )
-
 ```
 
 
