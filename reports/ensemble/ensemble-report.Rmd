@@ -6,7 +6,7 @@ output:
     toc_float: true
     toc_depth: 1
     theme: yeti
-    self_contained: false
+    self_contained: true
 title: "European COVID-19 Forecast Hub Ensemble Report"
 date: "`r lubridate::floor_date(lubridate::today(), 'week', week_start = 1)`"
 ---
