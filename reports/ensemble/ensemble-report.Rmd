@@ -5,8 +5,8 @@ output:
     toc: true
     toc_float: true
     toc_depth: 1
-    theme: readable
-    self_contained: true
+    theme: yeti
+    self_contained: false
 title: "European COVID-19 Forecast Hub Ensemble Report"
 date: "`r lubridate::floor_date(lubridate::today(), 'week', week_start = 1)`"
 ---
@@ -49,7 +49,7 @@ forecasts[, horizon := paste0(horizon, " week", if_else(horizon == 1, "", "s"))]
 forecasts[, ago :=
               as.integer(floor_date(today(), "week", week_start = 1) -
                          forecast_date) / 7]
-forecasts[, ago := paste0(ago, " week", if_else(ago == 1, "", "s ago"))]
+forecasts[, ago := paste0(ago, " week", if_else(ago == 1, " ago", "s ago"))]
 forecasts[, ago := if_else(ago == "0 weeks ago", "This week", ago)]
 setnames(forecasts, old = c("value"), new = c("prediction"))
 
