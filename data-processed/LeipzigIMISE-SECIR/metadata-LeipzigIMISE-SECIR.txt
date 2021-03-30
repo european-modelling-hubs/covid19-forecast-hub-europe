@@ -1,0 +1,12 @@
+team_name: Universitaet Leipzig IMISE/GenStat
+model_name: SECIR
+model_abbr: LeipzigIMISE-SECIR
+model_contributors: Yuri Kheifetz <Yuri.Kheifetz@imise.uni-leipzig.de>, Holger Kirsten <holger.kirsten@imise.uni-leipzig.de>, Markus Scholz <Markus.Scholz@imise.uni-leipzig.de>
+website_url: https://github.com/holgerman/covid19-forecast-hub-de
+repo_url: https://github.com/holgerman/covid19-forecast-hub-de
+license: mit
+team_model_designation: primary
+data_inputs: RKI and DIVI, ECDC, age distributions for cases and deaths from RKI as described in methods, case & ICU  & death counts
+methods: SECIR type model
+methods_long: An extension of the SECIR type implemented as input-output non-linear dynamical system. Joint fit of data on test positives, deaths, and ICU occupancy accounting for reporting delays.
+twitter_handles: GenStatLeipzig
