@@ -2,7 +2,7 @@ import yaml
 import json
 from pathlib import Path
 
-path = Path('../data-processed/')
+path = Path('data-processed')
 files = [f for f in path.glob('**/metadata*')]
 
 metadata = dict()
@@ -13,4 +13,4 @@ for f in files:
     metadata_temp.update((k, v.replace('  ', ' ')) for k,v in metadata_temp.items() if v)
     metadata[metadata_temp['model_abbr']] = metadata_temp
     
-json.dump(metadata, open("metadata.json","w"), indent=4)
+json.dump(metadata, open("viz/metadata.json","w"), indent=4)
