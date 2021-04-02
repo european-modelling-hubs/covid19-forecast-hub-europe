@@ -15,7 +15,7 @@ date <- lubridate::floor_date(lubridate::today(), 'week', week_start = 1)
 
 locations <- hub_locations_ecdc
 
-for (i in nrow(hub_locations_ecdc)) {
+for (i in 1:nrow(hub_locations_ecdc)) {
   country_code <- hub_locations_ecdc$location[i]
   country <- hub_locations_ecdc$location_name[i]
 
