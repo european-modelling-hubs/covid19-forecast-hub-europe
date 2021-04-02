@@ -13,11 +13,23 @@ options(knitr.duplicate.label = "allow")
 
 date <- lubridate::floor_date(lubridate::today(), 'week', week_start = 1)
 
-rmarkdown::render(here::here("reports", "evaluation", "evaluation-report.Rmd"),
-                  output_format = "html_document",
-                  output_file =
-                    here::here("docs", paste0("evaluation-report-", date, ".html")),
-                  envir = new.env())
+locations <- hub_locations_ecdc
+
+for (i in nrow(hub_locations_ecdc)) {
+  country_code <- hub_locations_ecdc$location[i]
+  country <- hub_locations_ecdc$location_name[i]
+
+  rmarkdown::render(here::here("reports", "evaluation", "evaluation-by-country.Rmd"),
+                    output_format = "html_document",
+                    params = list(location_code = country_code,
+                                  location_name = country),
+                    output_file =
+                      here::here("docs", paste0("evaluation-report-", date,
+                                                "-", country, ".html")),
+                    envir = new.env())
+}
+
+
 
 rmarkdown::render(here::here("reports", "ensemble", "ensemble-report.Rmd"),
                   output_format = "html_document",

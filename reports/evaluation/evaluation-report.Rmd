@@ -19,6 +19,7 @@ library(DT)
 library(knitr)
 library(covidHubUtils)
 library(lubridate)
+library(data.table)
 knitr::opts_chunk$set(echo = FALSE, 
                       message = FALSE, 
                       warning = FALSE)
