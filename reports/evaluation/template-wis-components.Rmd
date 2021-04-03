@@ -1,0 +1,50 @@
+
+
+```{r wis-component-plot, results = 'asis', fig.width=10}
+
+# plot for overall
+
+cat("\n\n##", "overall", " \n\n")
+
+scores <- scoringutils::eval_forecasts(data,
+                                       summarise_by = c("model", "target_variable"), 
+                                       compute_relative_skill = FALSE)
+
+plot <- scoringutils::wis_components(scores, 
+                                     facet_wrap_or_grid = "grid",
+                                     relative_contributions = TRUE,
+                                     facet_formula = . ~ target_variable) + 
+  ggplot2::coord_flip() + 
+  ggplot2::theme(legend.position = "bottom")
+
+cat("\n\n")
+print(plot)
+cat("\n\n")
+
+
+# plot by location
+scores <- scoringutils::eval_forecasts(data,
+                                       summarise_by = c("model", "location_name", "target_variable"), 
+                                       compute_relative_skill = FALSE)
+
+for (loc in locations) {
+  cat("\n\n##", loc, " \n\n")
+  
+  tmp_scores <- filter(scores, location_name == loc)
+  
+  plot <- scoringutils::wis_components(tmp_scores, 
+                                       facet_wrap_or_grid = "grid",
+                                       relative_contributions = TRUE,
+                                       facet_formula = . ~ target_variable) + 
+    ggplot2::coord_flip() + 
+    ggplot2::theme(legend.position = "bottom")
+  
+  cat("\n\n")
+  print(plot)
+  cat("\n\n")
+  
+}
+
+
+
+```
