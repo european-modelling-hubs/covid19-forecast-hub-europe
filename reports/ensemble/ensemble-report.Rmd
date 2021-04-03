@@ -1,14 +1,14 @@
 ---
+params: 
+  report_date: "2021-03-29"
 always_allow_html: true
 output:
   html_document:
-    toc: true
-    toc_float: true
-    toc_depth: 1
     theme: yeti
     self_contained: true
+    css: https://covid19forecasthub.eu/css/styles.css
 title: "European COVID-19 Forecast Hub Ensemble Report"
-date: "`r lubridate::floor_date(lubridate::today(), 'week', week_start = 1)`"
+date: "`r params$report_date`"
 ---
 
 ```{r setup, include=FALSE}
@@ -45,12 +45,8 @@ setDT(forecasts)
 forecasts[, forecast_date :=
               ceiling_date(forecast_date, "week", week_start = 2) - 1]
 forecasts <- forecasts[forecast_date >= "2021-03-08"]
-forecasts[, horizon := paste0(horizon, " week", if_else(horizon == 1, "", "s"))]
-forecasts[, ago :=
-              as.integer(floor_date(today(), "week", week_start = 1) -
-                         forecast_date) / 7]
-forecasts[, ago := paste0(ago, " week", if_else(ago == 1, " ago", "s ago"))]
-forecasts[, ago := if_else(ago == "0 weeks ago", "This week", ago)]
+forecasts <- forecasts[forecast_date <= as.Date(params$report_date)]
+
 setnames(forecasts, old = c("value"), new = c("prediction"))
 
 # load truth data --------------------------------------------------------------
@@ -60,29 +56,26 @@ truth <- map_dfr(.x = c("inc case", "inc death"),
                                    hub = "ECDC")) 
 setDT(truth)
 truth[, model := NULL]
+truth <- truth[target_end_date <= as.Date(params$report_date)]
 setnames(truth, old = c("value"), 
          new = c("true_value"))
 
 data <- scoringutils::merge_pred_and_obs(forecasts, truth, 
                                          join = "full")
-data[target_variable == "inc case", target_variable := "Cases"]
-data[target_variable == "inc death", target_variable := "Deaths"]
 
+target_variables <- c(Cases = "inc case", Deaths = "inc death")
 ```
 
 ---
 
 # Forecast visualisation {.tabset .tabset-fade}
 
+Forecast visualisations. The date of the tab marks the date on which a forecast was made.
+
 ```{r forecast-vis, include = FALSE, eval = include_forecast_plot}
 
 locations <- unique(truth$location_name)
 forecast_dates <- rev(as.character(unique(data$forecast_date[!is.na(data$forecast_date)])))
-agos <- sort(unique(data$ago[!is.na(data$ago)]))
-if ("This week" %in% agos) {
-  agos <- c("This week", setdiff(agos, "This week"))
-}
-target_variables <- unique(data$target_variable)
 
 out <- NULL
 out <- c(out, knit_child(here::here("reports", "ensemble", "template-plot-ensemble.Rmd")))
