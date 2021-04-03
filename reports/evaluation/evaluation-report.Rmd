@@ -1,14 +1,14 @@
 ---
+params: 
+  report_date: "2021-03-29"
 always_allow_html: true
 output:
   html_document:
-    toc: true
-    toc_float: true
-    toc_depth: 1
     theme: yeti
     self_contained: true
+    css: https://covid19forecasthub.eu/css/styles.css
 title: "European COVID-19 Forecast Hub Evaluation Report"
-date: "`r lubridate::floor_date(lubridate::today(), 'week', week_start = 1)`"
+date: "`r params$report_date`"
 ---
 
 ```{r setup, include=FALSE}
@@ -51,6 +51,7 @@ setDT(forecasts)
 # set forecast date to corresponding submision date
 forecasts[, forecast_date := ceiling_date(forecast_date, "week", week_start = 2) - 1]
 forecasts <- forecasts[forecast_date >= "2021-03-08"]
+forecasts <- forecasts[forecast_date <= as.Date(params$report_date)]
 setnames(forecasts, old = c("value"), new = c("prediction"))
 
 ## load truth data --------------------------------------------------------------
@@ -60,19 +61,19 @@ truth <- map_dfr(.x = c("inc case", "inc death"),
                                    hub = "ECDC")) 
 setDT(truth)
 truth[, model := NULL]
+truth <- truth[target_end_date <= as.Date(params$report_date)]
 setnames(truth, old = c("value"), 
          new = c("true_value"))
 
 data <- scoringutils::merge_pred_and_obs(forecasts, truth, 
                                          join = "full")
-
 ```
 
 ---
 
 # Overall performance {.tabset .tabset-fade}
 
-The following table shows scores averaged across all locations, for all models that make forecasts for more than half of countries in the Hub.
+The following table shows scores averaged across all locations, for all models that make forecasts for more than half of countries in the Hub. For country-by-country evaluation of performance of all models, select one of the countries in the drop-down list above.
 
 ```{r overall_ranking, include = FALSE, eval = include_ranking, results = 'asis'}
 out <- NULL
@@ -90,7 +91,7 @@ summarise_by = c("model", "target_variable")
 target_variables <- c(Cases = "inc case", Deaths = "inc death")
 
 for (variable in names(target_variables)) {
-  out = c(out, paste("\n\n##", variable, " {.tabset .tabset-fade}\n\n"))
+  out = c(out, paste("\n\n##", variable, "{.tabset .tabset-fade}\n\n"))
   for (this_horizon in horizons) {
     filter_list = list(paste0("target_variable == '", target_variables[[variable]], "'"),
                      "type != 'point'",
@@ -118,18 +119,3 @@ for (variable in names(target_variables)) {
  - aem is the absolute error of your median forecasts. A high aem means your median forecasts tend to be far away from the true values. 
 
 # {.unlisted .unnumbered}
-
-# Performance by country {.tabset .tabset-fade .tabset-dropdown}
-
-```{r by_country, include = FALSE, eval = include_countries, results = 'asis'}
-out <- NULL
-for (loc in unique(data$location_name)) {
-  out = c(out, paste("\n\n##", loc, "\n\n"))
-  out = c(out, knit_child(here::here("reports", "evaluation", "evaluation-by-country.Rmd"),
-                          quiet = TRUE))
-}
-```
-
-`r paste(if (include_countries) knit(text = out, quiet = TRUE), collapse = '\n\n')`
-
-If you want to learn more about a model, you can go the the 'data-processed'-folder of the [European Forecast Hub github repository](https://github.com/epiforecasts/covid19-forecast-hub-europe), select a model and access the metadata file with further information provided by the model authors. 

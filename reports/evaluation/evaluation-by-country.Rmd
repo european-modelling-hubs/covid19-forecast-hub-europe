@@ -1,21 +1,17 @@
 ---
 always_allow_html: true
 params: 
+  report_date: "2021-03-29"
   location_code: "DE"
   location_name: "Germany"
 output:
   html_document:
-    # toc: true
-    # toc_float: true
-    # toc_depth: 1
     theme: yeti
     self_contained: true
+    css: https://covid19forecasthub.eu/css/styles.css
 title: "`r paste('European COVID-19 Forecast Hub Evaluation Report for', params$location_name)`"
-date: "`r lubridate::floor_date(lubridate::today(), 'week', week_start = 1)`"
+date: "`r params$report_date`"
 ---
-
-
-
 
 ```{r setup, include=FALSE}
 library(scoringutils)
@@ -58,6 +54,7 @@ setDT(forecasts)
 # set forecast date to corresponding submision date
 forecasts[, forecast_date := ceiling_date(forecast_date, "week", week_start = 2) - 1]
 forecasts <- forecasts[forecast_date >= "2021-03-08"]
+forecasts <- forecasts[forecast_date <= as.Date(params$report_date)]
 setnames(forecasts, old = c("value"), new = c("prediction"))
 
 ## load truth data --------------------------------------------------------------
@@ -68,6 +65,7 @@ truth <- map_dfr(.x = c("inc case", "inc death"),
                                    hub = "ECDC")) 
 setDT(truth)
 truth[, model := NULL]
+truth <- truth[target_end_date <= as.Date(params$report_date)]
 setnames(truth, old = c("value"), 
          new = c("true_value"))
 
