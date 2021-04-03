@@ -13,47 +13,53 @@
 # 
 library(dplyr)
 library(tibble)
+library(lubridate)
+library(here)
 
 use_ensemble_criteria <- function(forecasts = 
                                     covidHubUtils::load_forecasts(source = "local_hub_repo",
                                                                   hub_repo_path = here(),
                                                                   hub = "ECDC",
-                                                                  forecast_dates = forecast_date),
+                                                                  forecast_dates = floor_date(today(), "week", 1)),
+                                  forecast_date = floor_date(today(), "week", 1),
                                   exclude_models = NULL,
-                                  team_name = "EuroCOVIDhub",
-                                  forecast_date = floor_date(today(), "week", 1)) {
+                                  team_name = "EuroCOVIDhub") {
+  
+  # Remove point forecasts
+  forecasts <- filter(forecasts, type == "quantile")
   
   # 1. Identify models with all quantiles
   quantiles <- round(c(0.01, 0.025, seq(0.05, 0.95, by = 0.05), 0.975, 0.99), 3)
-  
   all_quantiles <- forecasts %>%
+    # Check all quantiles per target/location
     group_by(model, target_variable, location, target_end_date) %>%
-    summarise(n_quantiles = n(), 
-              .groups = "drop") %>%
-    filter(n_quantiles != length(quantile)) %>%
-    pull(model) %>%
-    unique()
+    summarise(all_quantiles_present = setequal(quantile, quantiles)) %>%
+    # Check all quantiles at all horizons
+    group_by(model, target_variable, location) %>%
+    summarise(all_quantiles_all_horizons = all(all_quantiles_present))
   
   # 2. Identify models with 4 week forecasts
+  horizons <- 1:4
   all_horizons <- forecasts %>%
     group_by(model, target_variable, location) %>%
-    filter(any(grepl("4", horizon))) %>%
-    pull(model) %>%
-    unique()
+    summarise(all_horizons = setequal(horizon, horizons))
   
-  criteria <- tibble("forecast_date" = forecast_date, 
-                     "model" = unique(forecasts$model)) %>%
-    mutate(missing_quantiles = !model %in% all_quantiles,
-           missing_horizons = !model %in% all_horizons,
   # 3. Manually excluded forecasts
-           excluded_manually = model %in% exclude_models,
-           include = !(missing_quantiles | missing_horizons | excluded_manually)) %>%
-  # 4. Drop any hub ensemble models
+  criteria <- all_quantiles %>%
+    left_join(all_horizons, 
+              by = c("model", "target_variable", "location")) %>%
+    mutate(excluded_manually = model %in% exclude_models,
+           include = all(all_quantiles_all_horizons, all_horizons) & !excluded_manually)  %>%
+  # 4. Drop hub ensemble model
     filter(!grepl(team_name, model))
   
+  include <- filter(criteria, include) %>%
+    select(model, target_variable, location)
+  
   # Return
-  forecasts <- filter(forecasts, 
-                      model %in% filter(criteria, include)$model)
+  forecasts <- inner_join(forecasts, include, 
+                          by = c("model", "target_variable", "location"))
+  
   ensemble_forecasts <- list("forecasts" = forecasts,
                              "criteria" = criteria)
   return(ensemble_forecasts)

@@ -21,7 +21,7 @@ Ensembling methods combine forecast values by target, location, horizon, and qua
 - Mean average ([`EuroCOVIDhub-ensemble`](./data-processed/EuroCOVIDhub-ensemble))
 - Median average ([`EuroCOVIDhub-median`](./data-processed/EuroCOVIDhub-median))
 
-The ensemble we use in evaluation is the "EuroCOVIDhub-ensemble".
+The ensemble we use in evaluation is the "EuroCOVIDhub-ensemble". We are continually reviewing the performance of the default ensemble compared to other ensembling methods. We will make a change if we find a different method to consistently outperform the current default.
 
 **Guide to ensemble code**
 
