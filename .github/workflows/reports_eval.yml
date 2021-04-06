@@ -28,7 +28,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: 'docs/*.html'
+        source_file: docs/*.html
         destination_repo: 'epiforecasts/covid19-forecast-hub-europe-website'
         destination_folder: 'reports'
         user_email: 'action@github.com'
