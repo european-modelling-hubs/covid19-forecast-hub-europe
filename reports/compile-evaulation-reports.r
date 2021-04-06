@@ -37,13 +37,6 @@ rmarkdown::render(here::here("reports", "evaluation", "evaluation-report.Rmd"),
                     here::here("docs", paste0("evaluation-report-", report_date, "-Overall.html")),
                   envir = new.env())
 
-rmarkdown::render(here::here("reports", "ensemble", "ensemble-report.Rmd"),
-                  params = list(report_date = report_date),
-                  output_format = "html_document",
-                  output_file =
-                    here::here("docs", paste0("ensemble-report-", report_date, ".html")),
-                  envir = new.env())
-
 ## to make this generalisable
 # allow bits to be turned off and on
 # somehow pass down the filtering
