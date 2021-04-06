@@ -30,7 +30,7 @@ jobs:
       with:
         source_file: 'docs/*.html'
         destination_repo: 'epiforecasts/covid19-forecast-hub-website'
-        destination-folder: 'reports'
+        destination_folder: 'reports'
         user_email: 'action@github.com'
         user_name: 'GitHub Action - evaluation reports'
         commit_message: 'Evaluation reports'
