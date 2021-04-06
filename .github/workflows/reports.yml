@@ -16,8 +16,9 @@ jobs:
 
     - name: Install R dependencies
       run: |
-       Rscript -e 'install.packages(c("remotes", "here", "rmarkdown", "lubridate", "scoringutils", "ggplot2", "dplyr", "DT", "knitr", "purrr", "data.table", "readr"))'
+       Rscript -e 'install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "purrr", "data.table", "readr"))'
        Rscript -e 'remotes::install_github("reichlab/covidHubUtils")'
+       Rscript -e 'remotes::install_github("epiforecasts/scoringutils")'
 
     - name: Create ensembles
       run: Rscript 'reports/compile-reports.r'
