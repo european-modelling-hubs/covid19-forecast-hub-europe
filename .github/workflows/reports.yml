@@ -1,10 +1,10 @@
-name: "create reports"
+name: "Create reports"
 on:
   workflow_dispatch:
   schedule:
     - cron: "30 11 * * 2"
 jobs:
-  ensemble:
+  reports:
     runs-on: ubuntu-20.04
     if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
     steps:
@@ -20,7 +20,7 @@ jobs:
        Rscript -e 'remotes::install_github("reichlab/covidHubUtils")'
 
     - name: Create ensembles
-      run: Rscript 'code/reports/compile_reports.R'
+      run: Rscript 'reports/compile-reports.r'
         
     - name: Push to web site
       uses: dmnemec/copy_file_to_another_repo_action@main
@@ -32,4 +32,4 @@ jobs:
         destination-folder: 'reports'
         user_email: 'action@github.com'
         user_name: 'GitHub Action'
-        commit_message: 'Ensemble and evaluation'
+        commit_message: 'Ensemble and evaluation reports'
