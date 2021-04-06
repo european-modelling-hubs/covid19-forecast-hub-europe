@@ -24,11 +24,11 @@ jobs:
       run: Rscript 'reports/compile-evaluation-reports.r'
         
     - name: Push to web site
-      uses: epiforecasts/copy_dir_contents_to_another_repo_action@main
+      uses: dmnemec/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_folder: html
+        source_file: 'html/.'
         destination_repo: 'epiforecasts/covid19-forecast-hub-europe-website'
         destination_folder: 'reports'
         user_email: 'action@github.com'
