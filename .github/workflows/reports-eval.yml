@@ -2,7 +2,7 @@ name: "Create evaluation reports"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 11 * * 2"
+    - cron: "00 11 * * 1"
 jobs:
   evaluation_reports:
     runs-on: ubuntu-20.04
