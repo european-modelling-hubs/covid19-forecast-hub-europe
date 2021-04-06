@@ -1,4 +1,4 @@
-name: "Visualization/Validation/Evaluation"
+name: "Visualisation"
 on:
   workflow_dispatch:
   schedule:
@@ -35,8 +35,8 @@ jobs:
         AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git config user.email "action@github.com"
-        git config user.name "GitHub Action - Vis/Val/Eval Update"
+        git config user.name "GitHub Action - Visualisation Update"
         git add --all
-        git diff-index --quiet HEAD || git commit -m "Daily Vis/Val/Eval update"
+        git diff-index --quiet HEAD || git commit -m "Daily Visualisation update"
         git push
         echo "pushed to github"
