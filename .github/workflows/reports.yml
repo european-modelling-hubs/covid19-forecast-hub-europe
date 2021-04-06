@@ -20,7 +20,7 @@ jobs:
        Rscript -e 'remotes::install_github("reichlab/covidHubUtils")'
        Rscript -e 'remotes::install_github("epiforecasts/scoringutils")'
 
-    - name: Create evalution reports
+    - name: Create evaluation reports
       run: Rscript 'reports/compile-evaluation-reports.r'
         
     - name: Push to web site
@@ -29,7 +29,7 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source_file: 'docs/*.html'
-        destination_repo: 'epiforecasts/covid19-forecast-hub-website'
+        destination_repo: 'epiforecasts/covid19-forecast-hub-europe-website'
         destination_folder: 'reports'
         user_email: 'action@github.com'
         user_name: 'GitHub Action - evaluation reports'
