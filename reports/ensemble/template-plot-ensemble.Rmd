@@ -13,7 +13,11 @@
              paste0("target_end_date <= '", as.Date(report_date) + 7 * 4, "'"))
       filter_forecasts <- list(paste0("forecast_date == '", as.Date(forecast_date), "'"))
 
-      plot <- scoringutils::plot_predictions(data,
+      plot_data <- copy(data)
+      plot_data <- plot_data[, true_value := true_value / population * 1e+5]
+      plot_data <- plot_data[, prediction := prediction / population * 1e+5]
+
+      plot <- scoringutils::plot_predictions(plot_data,
                                              x = "target_end_date",
                                              facet_formula = ~ location_name,
                                              ncol = 3, 
@@ -30,7 +34,7 @@
                                              scales = "free") + 
         ggplot2::theme(legend.position = "bottom", 
                        strip.placement = "outside") +
-        scale_y_continuous("True and predicted values", labels = scales::comma) +
+        scale_y_continuous("True and predicted values per week per 100,000", labels = scales::comma) +
         xlab("")
       
       print(plot)
