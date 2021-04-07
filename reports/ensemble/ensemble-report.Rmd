@@ -68,7 +68,7 @@ target_variables <- c(Cases = "inc case", Deaths = "inc death")
 
 # Forecast visualisation {.tabset .tabset-fade}
 
-Forecast visualisations. The date of the tab marks the date on which a forecast was made.
+Forecasts of cases/deaths per week per 100,000. The date of the tab marks the date on which a forecast was made.
 
 ```{r forecast-vis, include = FALSE, eval = include_forecast_plot}
 
