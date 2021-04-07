@@ -1,10 +1,10 @@
-name: "Create ensemble reports"
+name: "Create ensemble report"
 on:
   workflow_dispatch:
   schedule:
     - cron: "30 11 * * 2"
 jobs:
-  evaluation_reports:
+  ensemble_report:
     runs-on: ubuntu-20.04
     if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
     steps:
