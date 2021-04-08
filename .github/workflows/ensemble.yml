@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 11 * * 2"
-  
+
 jobs:
   ensemble:
     runs-on: ubuntu-20.04
@@ -21,8 +21,8 @@ jobs:
        Rscript -e 'devtools::install_github("reichlab/covidHubUtils")'
 
     - name: Create ensembles
-      run: Rscript 'code/ensemble/run-ensembles.R'
-        
+      run: Rscript 'code/ensemble/EuroCOVIDhub-ensemble/create-weekly-ensemble.R'
+
     - name: Commit files
       env:
         AUTH: ${{ secrets.GITHUBTOKEN }}
@@ -31,5 +31,5 @@ jobs:
         git config user.name "GitHub Action - mean ensemble"
         git add --all
         git commit -m "Build ensemble"
-        git push 
+        git push
         echo "pushed to github"
