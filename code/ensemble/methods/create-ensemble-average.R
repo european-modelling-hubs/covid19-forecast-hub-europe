@@ -10,11 +10,7 @@
 library(dplyr)
 
 create_ensemble_average <- function(forecasts, 
-                                    method = c("mean", "median"),
-                                    team_name = "EuroCOVIDhub",
-                                    model_name = "ensemble",
-                                    forecast_date = lubridate::floor_date(today(), 
-                                                               "week", 1)) {
+                                    method = c("mean", "median")) {
   # Set up
   ensemble <- forecasts %>%
     filter(type == "quantile") %>%

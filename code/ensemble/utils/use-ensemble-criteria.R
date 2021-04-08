@@ -14,16 +14,10 @@
 library(dplyr)
 library(tibble)
 library(lubridate)
-library(here)
 
-use_ensemble_criteria <- function(forecasts = 
-                                    covidHubUtils::load_forecasts(source = "local_hub_repo",
-                                                                  hub_repo_path = here(),
-                                                                  hub = "ECDC",
-                                                                  forecast_dates = floor_date(today(), "week", 1)),
-                                  forecast_date = floor_date(today(), "week", 1),
+use_ensemble_criteria <- function(forecasts,
                                   exclude_models = NULL,
-                                  team_name = "EuroCOVIDhub") {
+                                  return_criteria = TRUE) {
   
   # Remove point forecasts
   forecasts <- filter(forecasts, type == "quantile")
@@ -33,34 +27,48 @@ use_ensemble_criteria <- function(forecasts =
   all_quantiles <- forecasts %>%
     # Check all quantiles per target/location
     group_by(model, target_variable, location, target_end_date) %>%
-    summarise(all_quantiles_present = setequal(quantile, quantiles)) %>%
+    summarise(all_quantiles_present = setequal(quantile, quantiles),
+              .groups = "drop") %>%
     # Check all quantiles at all horizons
     group_by(model, target_variable, location) %>%
-    summarise(all_quantiles_all_horizons = all(all_quantiles_present))
+    summarise(all_quantiles_all_horizons = all(all_quantiles_present),
+              .groups = "drop")
   
   # 2. Identify models with 4 week forecasts
   horizons <- 1:4
   all_horizons <- forecasts %>%
     group_by(model, target_variable, location) %>%
-    summarise(all_horizons = setequal(horizon, horizons))
+    summarise(all_horizons = setequal(horizon, horizons),
+              .groups = "drop")
   
   # 3. Manually excluded forecasts
   criteria <- all_quantiles %>%
     left_join(all_horizons, 
               by = c("model", "target_variable", "location")) %>%
-    mutate(excluded_manually = model %in% exclude_models,
-           include = all(all_quantiles_all_horizons, all_horizons) & !excluded_manually)  %>%
+    mutate(excluded_manually = model %in% exclude_models) %>%
   # 4. Drop hub ensemble model
-    filter(!grepl(team_name, model))
+    filter(!grepl("EuroCOVIDhub", model))
   
-  include <- filter(criteria, include) %>%
-    select(model, target_variable, location)
+  # Clarify inclusion and exclusion for all models by location/variable
+  include <- filter(criteria, 
+                    all_quantiles_all_horizons &
+                      all_horizons &
+                      !excluded_manually) %>%
+    select(model, target_variable, location) %>%
+    mutate(included_in_ensemble = TRUE)
+  
+  criteria <- left_join(criteria, include, by = c("model", "target_variable", "location")) %>%
+    mutate(included_in_ensemble = ifelse(is.na(included_in_ensemble), FALSE, included_in_ensemble))
+  
   
   # Return
   forecasts <- inner_join(forecasts, include, 
                           by = c("model", "target_variable", "location"))
   
-  ensemble_forecasts <- list("forecasts" = forecasts,
-                             "criteria" = criteria)
-  return(ensemble_forecasts)
+  if (return_criteria) {
+    return(list("forecasts" = forecasts,
+                "criteria" = criteria))
+  }
+
+  return(forecasts)
 }
