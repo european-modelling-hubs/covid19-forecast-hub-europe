@@ -1,6 +1,6 @@
 library(here)
 
-exclude <- readr::read_csv(here("code/ensemble/manual-exclusions.csv"),
+exclude <- readr::read_csv(here("code/ensemble/EuroCOVIDhub/manual-exclusions.csv"),
                            col_types = "ccc")
 
 exclude_new <- tibble::tribble(
@@ -15,4 +15,4 @@ exclude_new <- tibble::tribble(
 
 exclude <- dplyr::bind_rows(exclude, exclude_new)
 
-readr::write_csv(exclude, here("code/ensemble/manual-exclusions.csv"))
+readr::write_csv(exclude, here("code/ensemble/EuroCOVIDhub/manual-exclusions.csv"))

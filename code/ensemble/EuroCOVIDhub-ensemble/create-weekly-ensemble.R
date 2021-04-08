@@ -7,7 +7,7 @@ source(here("code", "ensemble", "utils", "run-ensemble.R"))
 
 # Set up ----------------------------------------------------------------
 # Get method
-method <- readLines(here("code", "ensemble", "current-method.txt"))
+method <- readLines(here("code", "ensemble", "EuroCOVIDhub",  "current-method.txt"))
 
 # Set current week of possible forecast dates
 forecast_dates <- seq.Date(from = floor_date(today(), "week", 1), 
@@ -15,7 +15,7 @@ forecast_dates <- seq.Date(from = floor_date(today(), "week", 1),
                            length.out = 6)
 
 # Get model names for manual exclusion
-exclude_models <- vroom(here("code", "ensemble", "manual-exclusions.csv")) %>%
+exclude_models <- vroom(here("code", "ensemble", "EuroCOVIDhub", "manual-exclusions.csv")) %>%
   filter(forecast_date %in% forecast_dates) %>%
   pull(model)
 
@@ -25,7 +25,7 @@ hub_ensemble <- run_ensemble(method = method,
                              exclude_models = exclude_models,
                              return_criteria = TRUE)
 
-# Save forecast in data-processed
+# Save in data-processed
 vroom_write(hub_ensemble$forecast,
             here("data-processed", 
                  paste0("EuroCOVIDhub-ensemble"),
@@ -46,5 +46,5 @@ vroom(here("code", "ensemble", "EuroCOVIDhub-ensemble", "method.csv")) %>%
   add_row(forecast_date = hub_ensemble$forecast_date,
           method = method) %>%
   vroom_write(here("code", "ensemble", "EuroCOVIDhub-ensemble", 
-                 "method.csv"),
+                 "methods-by-date.csv"),
             delim = ",")
