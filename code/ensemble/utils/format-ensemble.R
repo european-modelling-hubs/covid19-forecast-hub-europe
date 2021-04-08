@@ -9,7 +9,9 @@
 #
 library(dplyr)
 
-format_ensemble <- function(ensemble) {
+format_ensemble <- function(ensemble,
+                            forecast_date) {
+  
   # Format as standard forecast
   ensemble <- ensemble %>%
     mutate(forecast_date = forecast_date,
