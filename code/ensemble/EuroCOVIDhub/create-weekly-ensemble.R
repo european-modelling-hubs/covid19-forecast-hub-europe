@@ -26,7 +26,7 @@ hub_ensemble <- run_ensemble(method = method,
                              return_criteria = TRUE)
 
 # Save in data-processed
-vroom_write(hub_ensemble$forecast,
+vroom_write(hub_ensemble$ensemble,
             here("data-processed", 
                  paste0("EuroCOVIDhub-ensemble"),
                  paste0(hub_ensemble$forecast_date, 
@@ -35,7 +35,7 @@ vroom_write(hub_ensemble$forecast,
 
 
 # Save criteria + methods -------------------------------------------------
-vroom_write(hub_ensemble$forecast,
+vroom_write(hub_ensemble$criteria,
             here("code", "ensemble", "EuroCOVIDhub",
                  "criteria",
                  paste0(hub_ensemble$forecast_date, ".csv")),
