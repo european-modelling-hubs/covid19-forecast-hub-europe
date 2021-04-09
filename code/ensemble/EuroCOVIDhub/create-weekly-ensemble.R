@@ -9,19 +9,18 @@ source(here("code", "ensemble", "utils", "run-ensemble.R"))
 # Get method
 method <- readLines(here("code", "ensemble", "EuroCOVIDhub",  "current-method.txt"))
 
-# Set current week of possible forecast dates
-forecast_dates <- seq.Date(from = floor_date(today(), "week", 1), 
-                           by = -1,
-                           length.out = 6)
+# Set current submission date
+forecast_date <- floor_date(today(), "week", 1)
 
 # Get model names for manual exclusion
-exclude_models <- vroom(here("code", "ensemble", "EuroCOVIDhub", "manual-exclusions.csv")) %>%
-  filter(forecast_date %in% forecast_dates) %>%
+exclude_models <-
+  vroom(here("code", "ensemble", "EuroCOVIDhub", "manual-exclusions.csv")) %>%
+  filter(forecast_date == forecast_date) %>%
   pull(model)
 
 # Run weekly automated ensemble -----------------------------------------
 hub_ensemble <- run_ensemble(method = method,
-                             forecast_date = forecast_dates,
+                             forecast_date = forecast_date,
                              exclude_models = exclude_models,
                              return_criteria = TRUE)
 

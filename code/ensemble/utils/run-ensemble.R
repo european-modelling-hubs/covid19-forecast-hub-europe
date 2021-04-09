@@ -31,9 +31,14 @@ source(here("code", "ensemble", "utils", "use-ensemble-criteria.R"))
 source(here("code", "ensemble", "utils", "format-ensemble.R"))
 
 run_ensemble <- function(method,
-                         forecast_dates, 
+                         forecast_date,
                          exclude_models = NULL,
                          return_criteria = TRUE) {
+
+  # determine forecast dates matching the forecast date
+  forecast_dates <- seq.Date(from = forecast_date,
+                             by = -1,
+                             length.out = 6)
 
   # Load forecasts and save criteria --------------------------------------------
   # Get all forecasts
