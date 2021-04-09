@@ -36,15 +36,15 @@ vroom_write(hub_ensemble$forecast,
 
 # Save criteria + methods -------------------------------------------------
 vroom_write(hub_ensemble$forecast,
-            here("code", "ensemble", "EuroCOVIDhub-ensemble",  
+            here("code", "ensemble", "EuroCOVIDhub",
                  "criteria",
                  paste0(hub_ensemble$forecast_date, ".csv")),
             delim = ",")
 
 # Add method to csv
-vroom(here("code", "ensemble", "EuroCOVIDhub-ensemble", "method.csv")) %>%
+vroom(here("code", "ensemble", "EuroCOVIDhub", "method.csv")) %>%
   add_row(forecast_date = hub_ensemble$forecast_date,
           method = method) %>%
-  vroom_write(here("code", "ensemble", "EuroCOVIDhub-ensemble", 
+  vroom_write(here("code", "ensemble", "EuroCOVIDhub",
                  "method-by-date.csv"),
             delim = ",")

@@ -21,7 +21,7 @@ jobs:
        Rscript -e 'devtools::install_github("reichlab/covidHubUtils")'
 
     - name: Create ensembles
-      run: Rscript 'code/ensemble/EuroCOVIDhub-ensemble/create-weekly-ensemble.R'
+      run: Rscript 'code/ensemble/EuroCOVIDhub/create-weekly-ensemble.R'
 
     - name: Commit files
       env:
