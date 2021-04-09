@@ -49,7 +49,7 @@ use_ensemble_criteria <- function(forecasts,
   criteria <- all_quantiles %>%
     left_join(all_horizons, 
               by = c("model", "target_variable", "location")) %>%
-    mutate(excluded_manually = model %in% exclude_models) %>%
+    mutate(not_excluded_manually = !(model %in% exclude_models)) %>%
   # 4. Drop hub ensemble model
     filter(!grepl("EuroCOVIDhub", model))
   
@@ -57,7 +57,7 @@ use_ensemble_criteria <- function(forecasts,
   include <- filter(criteria, 
                     all_quantiles_all_horizons &
                       all_horizons &
-                      !excluded_manually) %>%
+                      not_excluded_manually) %>%
     select(model, target_variable, location) %>%
     mutate(included_in_ensemble = TRUE)
   
