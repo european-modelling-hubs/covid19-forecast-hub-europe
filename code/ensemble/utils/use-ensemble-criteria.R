@@ -27,7 +27,8 @@ use_ensemble_criteria <- function(forecasts,
   all_quantiles <- forecasts %>%
     # Check all quantiles per target/location
     group_by(model, target_variable, location, target_end_date) %>%
-    summarise(all_quantiles_present = setequal(quantile, quantiles),
+    summarise(all_quantiles_present =
+                (length(setdiff(quantiles, quantile)) == 0),
               .groups = "drop") %>%
     # Check all quantiles at all horizons
     group_by(model, target_variable, location) %>%
@@ -38,8 +39,11 @@ use_ensemble_criteria <- function(forecasts,
   horizons <- 1:4
   all_horizons <- forecasts %>%
     group_by(model, target_variable, location) %>%
-    summarise(all_horizons = setequal(horizon, horizons),
+    summarise(all_horizons =
+                (length(setdiff(horizons, horizon)) == 0),
               .groups = "drop")
+  forecasts <- forecasts %>%
+    filter(horizon %in% horizons)
   
   # 3. Manually excluded forecasts
   criteria <- all_quantiles %>%
