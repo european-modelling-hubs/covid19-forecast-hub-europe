@@ -1,0 +1,24 @@
+team_name: altymis-AVSCP
+model_name: SCP
+model_abbr: altymis-AVSCP
+model_contributors: Mariusz Kwiatkowski, <altymis@gmail.com>
+website_url: https://docs.google.com/spreadsheets/d/1TfTuLVZNphfEbFgSvAtC_zprdE6ifsr9YTJNjDPTrRY/edit?usp=sharing
+license: cc-by-nc-4.0
+team_model_designation: proposed
+methods: Converting the relationship between two groups of phrases in Google Trends related to COVID.
+team_funding: private project, not commercial
+twitter_handles: altymis
+data_inputs: Google Trends data
+
+methods_long: "A method of calibrating the relationship between groups\
+\ of phrases (values for phrases taken from Google Trends) regarding symptoms\
+\ and searching for treatment and testing methods.\
+\ The starting point was the number of cases in Poland on 2020-10-12.\ 
+\ All subsequent values result only from conversions concerning\
+\ the weight of the relationship between groups of phrases.\
+\ In order to properly determine the burden on the health care\
+\ system, a shift by 14-21 days should be taken into account -\ 
+\ the numbers of cases "shift over time" due to various personal\
+\ unpredictable parameters (treatment delay, problem in access to\
+\ a doctor, fear of illness, etc.)\
+\"
