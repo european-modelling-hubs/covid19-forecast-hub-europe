@@ -18,13 +18,13 @@
         "model_name": "SECIR",
         "model_abbr": "LeipzigIMISE-SECIR",
         "model_contributors": "Yuri Kheifetz <Yuri.Kheifetz@imise.uni-leipzig.de>, Holger Kirsten <holger.kirsten@imise.uni-leipzig.de>, Markus Scholz <Markus.Scholz@imise.uni-leipzig.de>",
-        "website_url": "https://github.com/holgerman/covid19-forecast-hub-de",
-        "repo_url": "https://github.com/holgerman/covid19-forecast-hub-de",
+        "website_url": "https://github.com/holgerman/covid19-forecast-hub-europe",
+        "repo_url": "https://github.com/holgerman/covid19-forecast-hub-europe",
         "license": "mit",
         "team_model_designation": "primary",
         "data_inputs": "RKI and DIVI, ECDC, age distributions for cases and deaths from RKI as described in methods, case & ICU & death counts",
         "methods": "SECIR type model",
-        "methods_long": "An extension of the SECIR type implemented as input-output non-linear dynamical system. Joint fit of data on test positives, deaths, and ICU occupancy accounting for reporting delays.",
+        "methods_long": "We integrate an adapted mechanistic epidemiologic model of the SECIR type into Input-Output Non-Linear Dynamical Systems (IO-NLDS) serving as hidden layers, i.e. the true dynamics cannot directly be observed. Thereby, we include an asymptomatic compartment, a compartment of patients requiring intensive care, and subdivide most of the compartments into three sub-compartments to model time delays. Changing factors of the system due to non-pharmaceutical interventions, changing age-structure of infected population, and changes in testing policy are imposed as inputs to the system. We then estimate parameters by a knowledge synthesis process considering parameter ranges derived from external studies and public data. Specifically, we use Bayesian inference for the parameters\u2019 estimation, which can also be time-dependent. Public data is translated to model outputs not identical but related to hidden states of the model. The model is fitted to data by a full information approach.",
         "twitter_handles": "GenStatLeipzig"
     },
     "bisop-seirfilter": {
