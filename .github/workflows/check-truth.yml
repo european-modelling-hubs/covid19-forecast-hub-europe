@@ -39,7 +39,7 @@ jobs:
 
     - name: Create status page
       run: |
-        Rscript -e 'rmarkdown::render("data-truth/data-issues.Rmd")'
+        Rscript -e 'rmarkdown::render("data-truth/README.Rmd")'
 
     - name: Commit files
       env:

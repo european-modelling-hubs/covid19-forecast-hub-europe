@@ -4,7 +4,7 @@ We are aggregating forecasts of new cases and deaths due to Covid-19 over the ne
 
 ##### Latest forecasts
 * View the [current forecasts](https://covid19forecasthub.eu/visualisation)
-* We publish a weekly [evaluation](https://covid19forecasthub.eu/reports/) of current forecasts
+* We publish a weekly [evaluation](https://covid19forecasthub.eu/reports) of current forecasts
 * Raw forecast files are in the [data-processed](https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/data-processed) folder
 
 ##### README contents
