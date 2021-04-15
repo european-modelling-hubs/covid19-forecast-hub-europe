@@ -3,11 +3,11 @@ European data status
 
 #### Potential issues in the JHU dataset
 
-As at 2021-04-14 13:17:14
+As at 2021-04-15 13:19:40
 
 | country | created    | updated    | issue                                                                                                        | message                                                  | url                                                      |
 | :------ | :--------- | :--------- | :----------------------------------------------------------------------------------------------------------- | :------------------------------------------------------- | :------------------------------------------------------- |
-| uk      | 2021-04-14 | 2021-04-14 | uk daily cases is negative?                                                                                  | I use data from <https://github.com/owid/covid-19-d>…    | <https://github.com/CSSEGISandData/COVID-19/issues/3964> |
+| it      | 2021-04-15 | 2021-04-15 | total recovery count dropped (it should never drop as it is total)                                           | In the ’`time_series_covid19_recovered_global.csv`…      | <https://github.com/CSSEGISandData/COVID-19/issues/3968> |
 | it      | 2021-04-04 | 2021-04-06 | announcement: iowa reported 68 deaths in saturday, april 3rd’s tally; the previous saturday, it was 2 deaths | This has been verified here in this Data Set, as w…      | <https://github.com/CSSEGISandData/COVID-19/issues/3919> |
 | denmark | 2021-03-31 | 2021-03-31 | denmark spikes (-2001 and +1210) and easter pause                                                            | Hello\! From \[ssi.dk\](<https://covid19.ssi.dk/overva>… | <https://github.com/CSSEGISandData/COVID-19/issues/3903> |
 | it      | 2021-03-25 | 2021-03-25 | chile publishes probable deaths data but it’s not included in csse data set                                  | Looking at \[the current version of the March 23 da…     | <https://github.com/CSSEGISandData/COVID-19/issues/3862> |
