@@ -1,0 +1,14 @@
+team_name: ILM
+model_name: EKF
+model_abbr: ILM-EKF
+model_contributors: Stefan Heyder <stefan.heyder@tu-ilmenau.de>, Thomas Hotz <thomas.hotz@tu-ilmenau.de>
+website_url: https://github.com/Stochastik-TU-Ilmenau
+license: cc-by-4.0
+team_model_designation: primary
+methods: Extended Kalman filter based on reproduction equation
+data_inputs: JHU
+methods_long: "We use the reproduction equation to obtain a state space model whose states \
+  \ comprise incidences, the current reproduction number, the generation time distribution, \
+  \ as well as fraction of deaths by delay. An extended Kalman filter is used to fit this model \
+  \ and obtain forecasts. Quantiles for the latter are obtained from a log-normal distribution \
+  \ with mean and variance given by the prediction steps."

@@ -4,7 +4,7 @@ We are aggregating forecasts of new cases and deaths due to Covid-19 over the ne
 
 ##### Latest forecasts
 * View the [current forecasts](https://covid19forecasthub.eu/visualisation)
-* We publish a weekly [evaluation](https://covid19forecasthub.eu/reports/) of current forecasts
+* We publish a weekly [evaluation](https://covid19forecasthub.eu/reports) of current forecasts
 * Raw forecast files are in the [data-processed](https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/data-processed) folder
 
 ##### README contents
@@ -18,7 +18,7 @@ This is a brief outline for anyone considering contributing a forecast. For a de
 
 #### Set up
 Before contributing for the first time:
-* Let us know you are [planning to submit](../../wiki/Preparing-to-submit)
+* Read the guide for [preparing to submit](../../wiki/Preparing-to-submit)
 * Create a [team directory](../../wiki/Creating-a-team-directory)
 * Add your [metadata](../../wiki/Metadata) and a [license](../../wiki/Licensing)
 
@@ -69,6 +69,11 @@ Direct contributors to this repository include (in alphabetical order):
 - Katharine Sherratt
 - Nikos Bosse
 - [Sebastian Funk](https://www.lshtm.ac.uk/aboutus/people/funk.sebastian)
+
+The [interactive visualization tool](https://covid19forecasthub.eu/visualisation/) (code available [here](https://github.com/SignaleRKI/forecast-europe)) has been developed by the [Signale Team at Robert Koch Institute](https://www.rki.de/EN/Content/infections/epidemiology/signals/signals_node.html):
+- Fabian Eckelmann
+- Knut Perseke
+- Alexander Ullrich
 
 ### Data license and reuse
 - The forecasts assembled in this repository have been created by independent teams. Most provide a license in their respective subfolder of `data-processed`.
