@@ -54,7 +54,8 @@ htmltools::tagList(
        DT::datatable(extensions = c('FixedColumns', 'Buttons'),
                      width = "100%",
                      options = list(
-                       pageLength = 10,
+                       paging = FALSE,
+                       info = FALSE,
                        buttons = c('csv', 'excel'),
                        dom = 'Bfrtip',
                        scrollX = TRUE,
