@@ -1,6 +1,7 @@
 ---
 params: 
   report_date: "2021-03-29"
+  data: NULL
 always_allow_html: true
 output:
   html_document:
@@ -35,44 +36,8 @@ include_countries <- include_forecast_plot ||
   include_ranks_over_time
 ```
 
-
-```{r load-data}
-report_date <- as.Date(params$report_date)
-last_forecast_date <- report_date - 7
-## load forecasts ---------------------------------------------------------------
-forecasts <- load_forecasts(source = "local_hub_repo",
-                            hub_repo_path = here(),
-                            hub = "ECDC")
-setDT(forecasts)
-# set forecast date to corresponding submision date
-forecasts[, forecast_date := ceiling_date(forecast_date, "week", week_start = 2) - 1]
-forecasts <- forecasts[forecast_date >= "2021-03-08"]
-forecasts <- forecasts[forecast_date <= last_forecast_date]
-setnames(forecasts, old = c("value"), new = c("prediction"))
-
-## load truth data --------------------------------------------------------------
-truth <- map_dfr(.x = c("inc case", "inc death"),
-                 .f = ~ load_truth(truth_source = "JHU",
-                                   target_variable = .x,
-                                   hub = "ECDC")) 
-setDT(truth)
-truth[, model := NULL]
-truth <- truth[target_end_date <= report_date]
-setnames(truth, old = c("value"), 
-         new = c("true_value"))
-
-data <- scoringutils::merge_pred_and_obs(forecasts, truth, 
-                                         join = "full")
-```
-
----
-
-# Overall performance {.tabset .tabset-fade}
-
-The following table shows scores averaged across all locations, for all models that make forecasts for more than half of countries in the Hub. For country-by-country evaluation of performance of all models, select one of the countries in the drop-down list above.
-
-```{r overall_ranking, include = FALSE, eval = include_ranking, results = 'asis'}
-out <- NULL
+```{r prepare-data}
+data <- params$data
 
 horizons <- data %>% 
   filter(!is.na(true_value), !is.na(horizon)) %>% 
@@ -85,6 +50,14 @@ horizons <- horizons[order(as.integer(horizons))]
 summarise_by = c("model", "target_variable")
 
 target_variables <- c(Cases = "inc case", Deaths = "inc death")
+```
+
+# Overall performance {.tabset .tabset-fade}
+
+The following table shows scores averaged across all locations, for all models that make forecasts for more than half of countries in the Hub. For country-by-country evaluation of performance of all models, select one of the countries in the drop-down list above.
+
+```{r overall_ranking, include = FALSE, eval = include_ranking, results = 'asis'}
+out <- NULL
 
 for (variable in names(target_variables)) {
   out = c(out, paste("\n\n##", variable, "{.tabset .tabset-fade}\n\n"))
