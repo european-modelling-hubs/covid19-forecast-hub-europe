@@ -15,17 +15,16 @@ filter_df <- function(data, filter_list) {
 ```{r, results = 'asis'}
 df <- filter_df(data, filter_list)
 
-ranges <- c(0, seq(10, 90, by = 10), 95, 98)
+quantiles <- round(c(0.01, 0.025, seq(0.05, 0.95, by = 0.05), 0.975, 0.99), 3)
 
 df <- df %>%
   # Check all quantiles per target/location
-  group_by(location, target_variable, target_end_date, model, boundary) %>%
-  mutate(all_ranges_present = (length(setdiff(ranges, range)) == 0)) %>%
   group_by(location, target_variable, target_end_date, model) %>%
-  mutate(all_ranges_present = all(all_ranges_present)) %>%
+  mutate(all_quantiles_present =
+           (length(setdiff(quantiles, quantile)) == 0)) %>%
   ungroup() %>%
-  filter(all_ranges_present == TRUE) %>%
-  select(-all_ranges_present)
+  filter(all_quantiles_present == TRUE) %>%
+  select(-all_quantiles_present)
 
 ## if more than 1 location exists, filter to have at least half of them
 if (length(unique(df$location)) > 1) {
