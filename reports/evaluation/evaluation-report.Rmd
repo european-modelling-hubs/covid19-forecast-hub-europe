@@ -36,12 +36,6 @@ include_countries <- include_forecast_plot ||
 ```
 
 
-
-This is an evaluation of forecasts for Covid-19 case and death numbers in 32 European countries submitted to the [European COVID-19 Forecast Hub](https://covid19forecasthub.eu/). You can find more information on the [European Forecast Hub Github page](https://github.com/epiforecasts/covid19-forecast-hub-europe). 
-
-This report is intended as a basic evaluation of forecasts that helps modellers to better understand their performance. The structure and visualisations are likely subject to change in the future and we cannot rule out any mistakes. If you have questions or want to give feedback, please create an issue on our 
-[github repository](https://github.com/epiforecasts/covid19-forecast-hub-europe). Note that all forecast dates have been changed to the corresponding submission date (every Monday) to allow easier comparison. 
-
 ```{r load-data}
 report_date <- as.Date(params$report_date)
 last_forecast_date <- report_date - 7
@@ -115,9 +109,9 @@ for (variable in names(target_variables)) {
 # Evaluation metrics
 
  - Relative skill is a metric based on the weighted interval score (WIS) that is using a 'pairwise comparison tournament'. All pairs of forecasters are compared against each other in terms of the weighted interval score. The mean score of both models based on the set of common targets for which both models have made a prediction are calculated to obtain mean score ratios. The relative skill is the geometric mean of these mean score ratios. Smaller values are better and a value smaller than one means that the model beats the average forecasting model. 
- - The weighted interval score is a proper scoring rule (meaning you can't cheat it) suited to scoring forecasts in an interval format. It has three components: sharpness, underprediction and overprediction. Sharpness is the width of your prediction interval. Over- and underprediction only come into play if the prediction interval does not cover the true value. They are the absolute value of the difference between the upper or lower bound of your prediction interval (depending on whether your forecast is too high or too low). 
- - coverage deviation is the average difference between nominal and empirical interval coverage. Say your 50 percent prediction interval covers only 20 percent of all true values, then your coverage deviation is 0.5 - 0.2 = -0.3. The coverage deviation value in the table is calculated by averaging over the coverage deviation calculated for all possible prediction intervals. If the value is negative you have covered less then you should. If it is positve, then your forecasts could be a little more confident. 
- - bias is a measure between -1 and 1 that expresses your tendency to underpredict (-1) or overpredict (1). In contrast to the over- and underprediction components of the WIS it is bound between -1 and 1 and cannot go to infinity. It is therefore less susceptible to outliers. 
- - aem is the absolute error of your median forecasts. A high aem means your median forecasts tend to be far away from the true values. 
+ - The weighted interval score is a proper scoring rule (meaning you can't cheat it) suited to scoring forecasts in an interval format. It has three components: sharpness, underprediction and overprediction. Sharpness is the width of the prediction interval. Over- and underprediction only come into play if the prediction interval does not cover the true value. They are the absolute value of the difference between the upper or lower bound of the prediction interval (depending on whether the forecast is too high or too low). 
+ - coverage deviation is the average difference between nominal and empirical interval coverage. Say the 50 percent prediction interval covers only 20 percent of all true values, then the coverage deviation is 0.5 - 0.2 = -0.3. The coverage deviation value in the table is calculated by averaging over the coverage deviation calculated for all possible prediction intervals. If the value is negative you have covered less then you should. If it is positve, then the forecasts could be a little more confident. 
+ - bias is a measure between -1 and 1 that expresses the tendency to underpredict (-1) or overpredict (1). In contrast to the over- and underprediction components of the WIS it is bound between -1 and 1 and cannot go to infinity. It is therefore less susceptible to outliers. 
+ - aem is the absolute error of the median forecasts. A high aem means the median forecasts tend to be far away from the true values. 
 
 # {.unlisted .unnumbered}
