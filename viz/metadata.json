@@ -81,6 +81,20 @@
         "methods_long": "See GitHub for full description",
         "team_funding": "This model development is supported by NIGMS grant R35GM119582. The content is solely the responsibility of the authors and does not necessarily represent the official views of NIGMS or the National Institutes of Health."
     },
+    "epiforecasts-EpiExpert_Rt": {
+        "team_name": "Epiforecasts / London School of Hygiene and Tropical Medicine",
+        "model_name": "EpiExpert Rt (epiforecasts)",
+        "model_abbr": "epiforecasts-EpiExpert_Rt",
+        "model_contributors": "Nikos Bosse, Sam Abbott, Sebastian Funk",
+        "website_url": "https://epiforecasts.io/",
+        "license": "mit",
+        "team_model_designation": "proposed",
+        "methods": "Mean ensemble of human predictions of Rt which get mapped to cases and deaths using a renewal equation",
+        "team_funding": "Funding by the Health Protection Research Unit (grant code NIHR200908)",
+        "data_inputs": "ECDC deaths and cases",
+        "citation": "https://github.com/epiforecasts/covid-german-forecasts",
+        "methods_long": "Forecasts of Rt from experts and non-experts are elicited using a shinyApp. Individuals choose a distribution (default is normal) for Rt and change the median and width of that predictive distribution for evey forecast horizon. Based on individual forecasts, samples are drawn from the individual forecast distributions. These samples are used to simulate cases and deaths based on a renewal equation using the R package EpiNow2."
+    },
     "UpgUmibUsi-MultiBayes": {
         "team_name": "UNIPG_UNIMIB_USI_UNINSUBRIA",
         "model_name": "MULTINOMIAL_BAYESIAN",
@@ -211,19 +225,6 @@
         "data_inputs": "EsCovid19Data (https://github.com/montera34/escovid19data) and Google.",
         "citation": "https://precov2.org/metodologia",
         "twitter_handles": "jlaznarte, inverence"
-    },
-    "bisop-seirfilterlite": {
-        "team_name": "Centre for Modelling of Biological and Social Processes",
-        "model_name": "SeirFilterLite",
-        "model_abbr": "bisop-seirfilterlite",
-        "model_contributors": "Martin \u0160m\u00edd, Jan Trnka, V\u00edt Tu\u010dek, Milan Zaj\u00ed\u010dek",
-        "license": "mit",
-        "team_model_designation": "secondary",
-        "website_url": "https://www.medrxiv.org/content/10.1101/2021.02.16.21251834v1",
-        "methods": "smiplified version of our SeirFilter model",
-        "team_funding": "no funding",
-        "data_inputs": "John Hopkins data, Google Mobility Recors",
-        "methods_long": "a single-cohort version of the SeirFilter model, estimating the contact reduction by Google Mobility data. To be described in the forthcoming version of https://www.medrxiv.org/content/10.1101/2021.02.16.21251834v1"
     },
     "SDSC_ISG-TrendModel": {
         "team_name": "Swiss Data Science Center / University of Geneva",
