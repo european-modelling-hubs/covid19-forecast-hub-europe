@@ -8,4 +8,4 @@ team_model_designation: primary
 methods: Modified SIR method, applied to all districts. Forecasts for districts are summed up.
 data_inputs: data provided by the Ministry of Health https://wojewodztwa-rcb-gis.hub.arcgis.com/pages/dane-do-pobrania
 twitter_handles: @Grzegorz_Red
-
+methods_long: Generating forecasts for all districts including historical data analysis. Then the numbers of cases from all districts are summed up.
