@@ -42,7 +42,7 @@ coverage <- eval_forecasts(
   summarise_by = c(summarise_by, "range"), 
   compute_relative_skill = FALSE,
 ) %>%
-  dplyr::filter(range %in% c(50, 90)) %>%
+  dplyr::filter(range %in% c(50, 95)) %>%
   dplyr::select(model, coverage, range) %>%
   tidyr::pivot_wider(names_from = range, values_from = coverage, 
                      names_prefix = "Coverage ")
