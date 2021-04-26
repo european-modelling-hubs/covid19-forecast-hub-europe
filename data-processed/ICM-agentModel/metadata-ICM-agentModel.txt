@@ -7,6 +7,6 @@ license: other
 team_model_designation: primary
 methods: Agent-based model
 team_funding: --
-data_inputs: Polish Ministry of Health (general epidemic data: number of cases, deaths, etc.) and Polish National Institute for Public Health (Detailed epidemic data: time of hospitalization, age, symptoms, contact tracing etc.)
+data_inputs: "Polish Ministry of Health (general epidemic data: number of cases, deaths, etc.) and Polish National Institute for Public Health (Detailed epidemic data: time of hospitalization, age, symptoms, contact tracing etc.)"
 citation: https://www.sciencedirect.com/science/article/pii/S0378437110003687
 methods_long: "The main idea behind our agent-based model is a representation of the social structure of population of Poland to the level of individual citizen and its social contacts. Our model has resolution in space and contexts. It means it can follow development of epidemic on geographical grid in 1km resolution as well as through physical contact in various characteristic contexts of social life."
