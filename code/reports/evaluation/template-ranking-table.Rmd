@@ -37,20 +37,33 @@ if (length(unique(df$location)) > 1) {
     select(-n, -nall)
  }
 
-table <- eval_forecasts(df, summarise_by = summarise_by, compute_relative_skill = TRUE)
+coverage <- eval_forecasts(
+  df, 
+  summarise_by = c(summarise_by, "range"), 
+  compute_relative_skill = FALSE,
+) %>%
+  dplyr::filter(range %in% c(50, 95)) %>%
+  dplyr::select(model, coverage, range) %>%
+  tidyr::pivot_wider(names_from = range, values_from = coverage, 
+                     names_prefix = "Coverage ")
+
+table <- eval_forecasts(df, summarise_by = summarise_by, 
+                        compute_relative_skill = TRUE) %>%
+  dplyr::left_join(coverage, by = "model")
 
 setcolorder(table, c("model", "relative_skill"))
 
 htmltools::tagList(
      table %>%
        arrange(relative_skill) %>%
-       dplyr::select(-scaled_rel_skill) %>%
+       dplyr::select(c(-scaled_rel_skill, -coverage_deviation)) %>%
        mutate_if(is.numeric, round, 2) %>%
        dplyr::rename(wis = interval_score,
                      underpred = underprediction,
                      overpred = overprediction,
-                     cvrage_dev = coverage_deviation,
-                     rel_skill = relative_skill) %>%
+                     rel_skill = relative_skill, 
+                     "90% Cov." = `Coverage 90`, 
+                     "50% Cov." = `Coverage 50`) %>%
        DT::datatable(extensions = c('FixedColumns', 'Buttons'),
                      width = "100%",
                      options = list(

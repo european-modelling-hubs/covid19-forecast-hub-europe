@@ -63,8 +63,8 @@ for (variable in names(target_variables)) {
   out = c(out, paste("\n\n##", variable, "{.tabset .tabset-fade}\n\n"))
   for (this_horizon in horizons) {
     filter_list = list(paste0("target_variable == '", target_variables[[variable]], "'"),
-                     "type != 'point'",
-                     paste0("horizon == ", this_horizon))
+                       "type != 'point'",
+                       paste0("horizon == ", this_horizon))
     horizon_string <- paste0(this_horizon, " week", if_else(this_horizon > 1, "s", ""), " ahead")
     out = c(out, paste("\n\n###", horizon_string, "\n\n"))
     out = c(out, knit_child(here::here("code", "reports", "evaluation",
