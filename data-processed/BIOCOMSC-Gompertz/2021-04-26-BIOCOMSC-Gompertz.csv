@@ -1,4 +1,4 @@
-location,target,type,quantile,value,target_date,forecast_date
+location,target,type,quantile,value,target_end_date,forecast_date
 AT,1 wk ahead inc case,point,NA,13515,2021-05-01,2021-04-26
 AT,1 wk ahead inc case,quantile,0.025,3987,2021-05-01,2021-04-26
 AT,1 wk ahead inc case,quantile,0.250,10406,2021-05-01,2021-04-26
