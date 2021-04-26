@@ -62,7 +62,7 @@ htmltools::tagList(
                      underpred = underprediction,
                      overpred = overprediction,
                      rel_skill = relative_skill, 
-                     "90% Cov." = `Coverage 90`, 
+                     "95% Cov." = `Coverage 95`, 
                      "50% Cov." = `Coverage 50`) %>%
        DT::datatable(extensions = c('FixedColumns', 'Buttons'),
                      width = "100%",
