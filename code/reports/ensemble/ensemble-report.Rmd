@@ -22,8 +22,8 @@ library(lubridate)
 library(here)
 library(data.table)
 library(readr)
-knitr::opts_chunk$set(echo = FALSE, 
-                      message = FALSE, 
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
                       warning = FALSE)
 
 include_ranking <- TRUE
@@ -71,10 +71,12 @@ Forecasts of cases/deaths per week per 100,000. The date of the tab marks the da
 ```{r forecast-vis, include = FALSE, eval = include_forecast_plot}
 
 locations <- unique(truth$location_name)
-forecast_dates <- rev(as.character(unique(data$forecast_date[!is.na(data$forecast_date)])))
+forecast_dates <-
+  rev(as.character(unique(data$forecast_date[!is.na(data$forecast_date)])))
 
 out <- NULL
-out <- c(out, knit_child(here::here("reports", "ensemble", "template-plot-ensemble.Rmd")))
+out <- c(out, knit_child(here::here("code", "reports", "ensemble",
+                                    "template-plot-ensemble.Rmd")))
 ```
 
 `r paste(if (include_forecast_plot) knit(text = out), collapse = '\n\n')`

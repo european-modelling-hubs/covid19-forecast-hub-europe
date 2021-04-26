@@ -67,7 +67,8 @@ for (variable in names(target_variables)) {
                      paste0("horizon == ", this_horizon))
     horizon_string <- paste0(this_horizon, " week", if_else(this_horizon > 1, "s", ""), " ahead")
     out = c(out, paste("\n\n###", horizon_string, "\n\n"))
-    out = c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
+    out = c(out, knit_child(here::here("code", "reports", "evaluation",
+                                       "template-ranking-table.Rmd"),
                             quiet = TRUE))
   }
 }

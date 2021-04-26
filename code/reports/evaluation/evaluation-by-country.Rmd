@@ -62,19 +62,22 @@ target_variables <- c(Cases = "inc case", Deaths = "inc death")
 ---
 
 ```{r forecast-vis-header, include = FALSE, eval = include_forecast_plot}
-out <- paste("\n\n## Forecast visualisation", paste0("(", params$location_name, ")", "{.tabset .tabset_fade}\n\n"))
+out <- paste0("\n\n## Forecast visualisation (", params$location_name,
+              ") {.tabset .tabset_fade}\n\n")
 
-out <- c(out, "Forecast visualisations. The date of the tab marks the date on which a forecast was made.\n\n")
-
+out <- c(out, "Forecast visualisations. The date of the tab marks the date on",
+         "which a forecast was made.\n\n")
 ```
 
 `r paste(if (include_forecast_plot) knit(text = out), collapse = '\n\n')`
 
 ```{r forecast-vis, include = FALSE, eval = include_forecast_plot}
 out <- NULL
-forecast_dates <- rev(as.character(unique(data$forecast_date[!is.na(data$forecast_date)])))
+forecast_dates <-
+  rev(as.character(unique(data$forecast_date[!is.na(data$forecast_date)])))
 loc <- params$location_name
-out <- c(out, knit_child(here::here("reports", "evaluation", "template-plot-forecasts.Rmd")))
+out <- c(out, knit_child(here::here("code", "reports", "evaluation",
+                                    "template-plot-forecasts.Rmd")))
 ```
 
 `r paste(if (include_forecast_plot) knit(text = out), collapse = '\n\n')`
@@ -84,7 +87,7 @@ out <- c(out, knit_child(here::here("reports", "evaluation", "template-plot-fore
 ---
 
 ```{r ranking-header, include = FALSE, eval = include_ranking}
-out <- paste("\n\n## Forecast scores", paste0("(", loc, ")"), "{.tabset .tabset-fade}\n\n")
+out <- paste0("\n\n## Forecast scores (", loc, ") {.tabset .tabset-fade}\n\n")
 
 out <- c(out, "Scores separated by target and forecast horizon.\n\n")
 ```
@@ -95,13 +98,17 @@ out <- NULL
 for (variable in names(target_variables)) {
   out <- c(out, paste("\n\n###", variable, " {.tabset .tabset-fade}\n\n"))
   for (this_horizon in horizons) {
-    filter_list = list(paste0("target_variable == '", target_variables[[variable]], "'"),
+    filter_list = list(paste0("target_variable == '",
+                              target_variables[[variable]], "'"),
                      "type != 'point'",
                      paste0("horizon == ", this_horizon),
                      paste0("location_name == '", loc, "'"))
-    horizon_string <- paste0(this_horizon, " week", if_else(this_horizon > 1, "s", ""), " ahead horizon")
+    horizon_string <-
+      paste0(this_horizon, " week",
+             if_else(this_horizon > 1, "s", ""), " ahead horizon")
     out <- c(out, paste("\n\n####", horizon_string, "\n\n"))
-    out <- c(out, knit_child(here::here("reports", "evaluation", "template-ranking-table.Rmd"),
+    out <- c(out, knit_child(here::here("code", "reports", "evaluation",
+                                        "template-ranking-table.Rmd"),
                             quiet = TRUE))
   }
 }
@@ -126,8 +133,12 @@ for (variable in names(target_variables)) {
 ---
 
 ```{r forecast-and-scores-header, include = FALSE, results='asis'}
-out <- paste("\n\n## Scores over time", paste0("(", loc, ")"), "{.tabset .tabset-fade}\n\n ")
-out <- c(out, "Visualisation of the weighted interval score over time. In addition, the components of the interval score, sharpness (how narrow are forecasts - smaller is better), and penalties for underprediction and overprediction are shown. Scores are again separated by forecast horizon\n\n")
+out <- paste0("\n\n## Scores over time (", loc, ") {.tabset .tabset-fade}\n\n")
+out <- c(out, "Visualisation of the weighted interval score over time. In",
+         "addition, the components of the interval score, sharpness (how",
+         "narrow are forecasts - smaller is better), and penalties for",
+         "underprediction and overprediction are shown. Scores are again",
+         "separated by forecast horizon\n\n")
 ```
 
 `r paste(knit(text = out), collapse = '\n\n')`
@@ -136,14 +147,14 @@ out <- c(out, "Visualisation of the weighted interval score over time. In additi
 out <- NULL
 
 for (this_horizon in horizons) {
-    horizon_string <- paste0(this_horizon, " week", if_else(this_horizon > 1, "s", ""), " ahead horizon {.tabset .tabset-fade}\n\n ")
+  horizon_string <-
+    paste0(this_horizon, " week", if_else(this_horizon > 1, "s", ""),
+           " ahead horizon {.tabset .tabset-fade}\n\n ")
     out <- c(out, paste("\n\n###", horizon_string, "\n\n"))
-    out <- c(out, knit_child(here::here("reports", "evaluation", "template-scores-and-truth-time.Rmd"), quiet = TRUE))
+    out <- c(out, knit_child(here::here("code", "reports", "evaluation",
+                                        "template-scores-and-truth-time.Rmd"),
+                             quiet = TRUE))
   }
-
-
-
-
 ```
 
 `r paste(knit(text = out), collapse = '\n\n')`

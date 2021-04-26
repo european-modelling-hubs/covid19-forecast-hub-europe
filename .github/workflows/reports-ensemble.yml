@@ -21,7 +21,7 @@ jobs:
        Rscript -e 'remotes::install_github("epiforecasts/scoringutils@limit-viz")'
 
     - name: Create ensemble reports
-      run: Rscript 'reports/compile-ensemble-report.r'
+      run: Rscript 'code/reports/compile-ensemble-report.r'
         
     - name: Push to web site
       uses: dmnemec/copy_file_to_another_repo_action@main
