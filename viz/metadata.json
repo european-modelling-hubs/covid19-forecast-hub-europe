@@ -26,6 +26,20 @@
         "citation": "https://github.com/epiforecasts/covid-german-forecasts",
         "methods_long": "Forecasts of Rt from experts and non-experts are elicited using a shinyApp. Individuals choose a distribution (default is normal) for Rt and change the median and width of that predictive distribution for evey forecast horizon. Based on individual forecasts, samples are drawn from the individual forecast distributions. These samples are used to simulate cases and deaths based on a renewal equation using the R package EpiNow2."
     },
+    "BIOCOMSC-Gompertz": {
+        "team_name": "BIOCOMSC",
+        "model_name": "Gompertz",
+        "model_abbr": "BIOCOMSC-Gompertz",
+        "model_contributors": "Mart\u00ed Catal\u00e0 (Centre for Comparative Medicine and Bioimage (CMCiB), Germans Trias i Pujol Research Institute (IGTP), Barcelona, Spain) <mcatala@igtp.cat>, Enric \u00c1lvarez (Department of Physics, Universitat Polit\u00e8cnica de Catalunya, Barcelona, Spain) <enric.alvarez@upc.edu>, Sergio Alonso (Department of Physics, Universitat Polit\u00e8cnica de Catalunya, Barcelona, Spain) <s.alonso@upc.edu>, Daniel L\u00f3pez (Department of Physics, Universitat Polit\u00e8cnica de Catalunya, Barcelona, Spain) <daniel.lopez-codina@upc.edu>, Clara Prats (Department of Physics, Universitat Polit\u00e8cnica de Catalunya, Barcelona, Spain) <clara.prats@upc.edu>",
+        "website_url": "https://biocomsc.upc.edu/en/covid-19",
+        "license": "cc-by-4.0",
+        "team_model_designation": "primary",
+        "methods": "Empirical model based on cases and deaths dynamics.",
+        "institution_affil": "Universitat Polit\u00e8cnica de Catalunya and Institut de Recerca Germans Trias i Pujol.",
+        "team_funding": "European Commission, DG-CONNECT (CNECT/LUX/2020/LVP/0085, LC-01591965); Ministerio de Ciencia e Innovaci\u00f3n, Gobierno de Espa\u00f1a (PGC2018-095456-B-I00)",
+        "twitter_handles": "BIOCOMSC1",
+        "citation": "https://doi.org/10.1371/journal.pcbi.1008431"
+    },
     "ILM-EKF": {
         "team_name": "ILM",
         "model_name": "EKF",
@@ -152,14 +166,14 @@
         "model_name": "agentModel",
         "model_abbr": "ICM-agentModel",
         "model_contributors": "Rafa\u0142 Bartczuk, \u0141ukasz G\u00f3rski, Magdalena Gruziel-S\u0142omka, Artur Kaczorek, Jan Kisielewski, Antoni Moszy\u0144ski, Karol Niedzielewski, J\u0119drzej Nowosielski, Maciej Radwan, Franciszek Rakowski, Marcin Semeniuk, Jakub Zieli\u0144ski",
-        "website_url": "https://icm.edu.pl/en/",
+        "website_url": "https://covid-19.icm.edu.pl/en/model-description/",
         "license": "other",
         "team_model_designation": "primary",
         "methods": "Agent-based model",
         "team_funding": "--",
-        "data_inputs": "???",
+        "data_inputs": "Polish Ministry of Health (general epidemic data: number of cases, deaths, etc.) and Polish National Institute for Public Health (Detailed epidemic data: time of hospitalization, age, symptoms, contact tracing etc.)",
         "citation": "https://www.sciencedirect.com/science/article/pii/S0378437110003687",
-        "methods_long": "Detailed agent-based model."
+        "methods_long": "The main idea behind our agent-based model is a representation of the social structure of population of Poland to the level of individual citizen and its social contacts. Our model has resolution in space and contexts. It means it can follow development of epidemic on geographical grid in 1km resolution as well as through physical contact in various characteristic contexts of social life."
     },
     "EuroCOVIDhub-ensemble": {
         "team_name": "European COVID-19 Forecast Hub",
@@ -297,6 +311,34 @@
         "data_inputs": "EsCovid19Data (https://github.com/montera34/escovid19data) and Google.",
         "citation": "https://precov2.org/metodologia",
         "twitter_handles": "jlaznarte, inverence"
+    },
+    "UB-BSLCoV": {
+        "team_name": "UB",
+        "model_name": "BSLCoV v0.1",
+        "model_abbr": "UB-BSLCoV",
+        "model_contributors": "David Mori\u00f1a (UB) <dmorina@ub.edu>",
+        "institution_affil": "Universitat de Barcelona -- UB (www.ub.edu)",
+        "website_url": "https://dmorina.shinyapps.io/UB-CoV/",
+        "license": "cc-by-sa-4.0",
+        "team_model_designation": "primary",
+        "methods": "Bayesian synthetic likelihood estimation for underreported non-stationary time series",
+        "team_funding": "UB, Instituto de Salud Carlos III, Gobierno de Espa\u00f1a",
+        "data_inputs": "JHU (https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Targets-and-horizons#truth-data)",
+        "citation": "https://arxiv.org/abs/2003.09202",
+        "twitter_handles": "dmorinya"
+    },
+    "PL_GRedlarski-DistrictsSum": {
+        "team_name": "Grzegorz Redlarski",
+        "model_name": "Sum of districts forecasts",
+        "model_abbr": "PL_GRedlarski-DistrictsSum",
+        "model_contributors": "Grzegorz Redlarski (GUMed) <gred@gumed.edu.pl>",
+        "website_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRpH4yhKRts7Co5tydhZhojIPTcTTybms1PqJ9j1tmSBzzPLoU2U9XjUWDwiKYxnE6gMLayl71rpGC8/pubhtml?gid=493251550&single=true",
+        "license": "cc-by-4.0",
+        "team_model_designation": "primary",
+        "methods": "Modified SIR method, applied to all districts. Forecasts for districts are summed up.",
+        "data_inputs": "data provided by the Ministry of Health https://wojewodztwa-rcb-gis.hub.arcgis.com/pages/dane-do-pobrania",
+        "twitter_handles": "@Grzegorz_Red",
+        "methods_long": "Generating forecasts for all districts including historical data analysis. Then the numbers of cases from all districts are summed up."
     },
     "LeipzigIMISE-SECIR": {
         "team_name": "Universitaet Leipzig IMISE/GenStat",
