@@ -1,0 +1,9 @@
+forecast_date,scenario_id,target,target_end_date,location,type,quantile,value
+2021-04-12,forecast,1 wk ahead inc death,2021-04-17,DE,point,NA,1361.65206703
+2021-04-12,forecast,2 wk ahead inc death,2021-04-24,DE,point,NA,1356.26614786
+2021-04-12,forecast,3 wk ahead inc death,2021-05-01,DE,point,NA,1351.84572177
+2021-04-12,forecast,4 wk ahead inc death,2021-05-08,DE,point,NA,1349.03461268
+2021-04-12,forecast,1 wk ahead inc case,2021-04-17,DE,point,NA,106142.11694094552
+2021-04-12,forecast,2 wk ahead inc case,2021-04-24,DE,point,NA,105340.23336607026
+2021-04-12,forecast,3 wk ahead inc case,2021-05-01,DE,point,NA,104218.3815233442
+2021-04-12,forecast,4 wk ahead inc case,2021-05-08,DE,point,NA,102723.75927729477

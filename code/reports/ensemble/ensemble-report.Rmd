@@ -1,0 +1,118 @@
+---
+params: 
+  report_date: "2021-03-29"
+always_allow_html: true
+output:
+  html_document:
+    theme: yeti
+    self_contained: true
+    css: https://covid19forecasthub.eu/css/styles.css
+title: "European COVID-19 Forecast Hub Ensemble Report"
+date: "`r params$report_date`"
+---
+
+```{r setup, include=FALSE}
+library(purrr)
+library(ggplot2)
+library(dplyr)
+library(DT)
+library(knitr)
+library(covidHubUtils)
+library(lubridate)
+library(here)
+library(data.table)
+library(readr)
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+
+include_ranking <- TRUE
+include_forecast_plot <- TRUE
+```
+
+```{r load-data}
+# load forecasts ---------------------------------------------------------------
+forecasts <- load_forecasts(source = "local_hub_repo",
+                            hub_repo_path = here(),
+                            hub = "ECDC") %>%
+  filter(model == "EuroCOVIDhub-ensemble")
+setDT(forecasts)
+# set forecast date to corresponding submision date
+forecasts[, forecast_date :=
+              ceiling_date(forecast_date, "week", week_start = 2) - 1]
+forecasts <- forecasts[forecast_date >= "2021-03-08"]
+forecasts <- forecasts[forecast_date <= as.Date(params$report_date)]
+
+setnames(forecasts, old = c("value"), new = c("prediction"))
+
+# load truth data --------------------------------------------------------------
+truth <- map_dfr(.x = c("inc case", "inc death"),
+                 .f = ~ load_truth(truth_source = "JHU",
+                                   target_variable = .x,
+                                   hub = "ECDC")) 
+setDT(truth)
+truth[, model := NULL]
+truth <- truth[target_end_date <= as.Date(params$report_date)]
+setnames(truth, old = c("value"), 
+         new = c("true_value"))
+
+data <- scoringutils::merge_pred_and_obs(forecasts, truth, 
+                                         join = "full")
+
+target_variables <- c(Cases = "inc case", Deaths = "inc death")
+```
+
+---
+
+# Forecast visualisation {.tabset .tabset-fade}
+
+Forecasts of cases/deaths per week per 100,000. The date of the tab marks the date on which a forecast was made.
+
+```{r forecast-vis, include = FALSE, eval = include_forecast_plot}
+
+locations <- unique(truth$location_name)
+forecast_dates <-
+  rev(as.character(unique(data$forecast_date[!is.na(data$forecast_date)])))
+
+out <- NULL
+out <- c(out, knit_child(here::here("code", "reports", "ensemble",
+                                    "template-plot-ensemble.Rmd")))
+```
+
+`r paste(if (include_forecast_plot) knit(text = out), collapse = '\n\n')`
+
+# {.unlisted .unnumbered}
+
+---
+
+# Forecast calibration {.tabset .tabset-fade .tabset-dropdown}
+
+Shown below are PIT histograms for the most recent ensemble forecasts. These show the proportion of true values within each predict quantile (width: 0.2).
+
+```{r calibration, echo = FALSE, include = include_ranking}
+gap <- 0.2
+quantiles <- seq(gap, 1 - gap, by = gap)
+scores <- eval_forecasts(data,
+                         summarise_by = c("model", "range", "quantile",
+                                          "target_variable", "horizon"),
+                         pit_plots = TRUE)
+
+
+even_quantiles <-
+  scores[!is.na(quantile) & round(quantile, 3) %in% round(quantiles, 3)]
+setkey(even_quantiles, target_variable, horizon, quantile)
+pit <- even_quantiles[, list(quantile = c(quantile, 1),
+                             pit_bin = diff(c(0, quantile_coverage, 1))),
+               by = c("target_variable", "horizon")]
+
+p <- ggplot(pit, aes(x = quantile - gap / 2, y = pit_bin)) +
+  geom_col() +
+  theme_light() +
+  facet_grid(horizon ~ target_variable) +
+  xlab("Quantile") + ylab("Proportion") +
+  geom_hline(yintercept = gap, linetype = "dashed")
+
+print(p)
+```
+
+---

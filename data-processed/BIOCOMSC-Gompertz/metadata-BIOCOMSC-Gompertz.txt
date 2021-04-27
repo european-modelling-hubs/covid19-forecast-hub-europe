@@ -1,0 +1,12 @@
+team_name: BIOCOMSC
+model_name: Gompertz
+model_abbr: BIOCOMSC-Gompertz
+model_contributors: Martí Català (Centre for Comparative Medicine and Bioimage (CMCiB), Germans Trias i Pujol Research Institute (IGTP), Barcelona, Spain) <mcatala@igtp.cat>, Enric Álvarez (Department of Physics, Universitat Politècnica de Catalunya, Barcelona, Spain) <enric.alvarez@upc.edu>, Sergio Alonso (Department of Physics, Universitat Politècnica de Catalunya, Barcelona, Spain) <s.alonso@upc.edu>, Daniel López (Department of Physics, Universitat Politècnica de Catalunya, Barcelona, Spain) <daniel.lopez-codina@upc.edu>, Clara Prats (Department of Physics, Universitat Politècnica de Catalunya, Barcelona, Spain) <clara.prats@upc.edu> 
+website_url: https://biocomsc.upc.edu/en/covid-19
+license: cc-by-4.0
+team_model_designation: primary
+methods: Empirical model based on cases and deaths dynamics.
+institution_affil: Universitat Politècnica de Catalunya and Institut de Recerca Germans Trias i Pujol.
+team_funding: European Commission, DG-CONNECT (CNECT/LUX/2020/LVP/0085, LC-01591965); Ministerio de Ciencia e Innovación, Gobierno de España (PGC2018-095456-B-I00)
+twitter_handles: BIOCOMSC1
+citation: https://doi.org/10.1371/journal.pcbi.1008431
