@@ -4,7 +4,7 @@ model_abbr: epiforecasts-EpiExpert_Rt
 model_contributors: Nikos Bosse, Sam Abbott, Sebastian Funk
 website_url: https://epiforecasts.io/
 license: mit
-team_model_designation: proposed
+team_model_designation: other
 methods: Mean ensemble of human predictions of Rt which get mapped to cases and deaths using a renewal equation
 team_funding: Funding by the Health Protection Research Unit (grant code NIHR200908)
 data_inputs: ECDC deaths and cases
