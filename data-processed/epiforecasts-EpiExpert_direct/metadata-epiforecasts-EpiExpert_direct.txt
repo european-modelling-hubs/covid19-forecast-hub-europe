@@ -4,7 +4,7 @@ model_abbr: epiforecasts-EpiExpert_direct
 model_contributors: Nikos Bosse, Sam Abbott, Sebastian Funk
 website_url: https://epiforecasts.io/
 license: mit
-team_model_designation: secondary
+team_model_designation: other
 methods: Mean ensemble of human predictions
 team_funding: Funding by the Health Protection Research Unit (grant code NIHR200908)
 data_inputs: ECDC deaths and cases
