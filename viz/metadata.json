@@ -19,7 +19,7 @@
         "model_contributors": "Nikos Bosse, Sam Abbott, Sebastian Funk",
         "website_url": "https://epiforecasts.io/",
         "license": "mit",
-        "team_model_designation": "proposed",
+        "team_model_designation": "other",
         "methods": "Mean ensemble of human predictions of Rt which get mapped to cases and deaths using a renewal equation",
         "team_funding": "Funding by the Health Protection Research Unit (grant code NIHR200908)",
         "data_inputs": "ECDC deaths and cases",
@@ -132,6 +132,20 @@
         "methods_long": "EpiNow2 implements a Bayesian latent variable approach using the probabilistic programming language Stan, which works as follows. For an initial, unobserved, seeding time infections were estimated using an exponential model with priors based on observed growth. For each subsequent time step, previous imputed infections were summed, weighted by an uncertain generation time probability mass function, and combined with an estimate of Rt to give the incidence at that time. The infection trajectories were then mapped to mean reported case counts by convolving over an uncertain incubation period and report delay distribution. Observed reported case counts were then assumed to be generated from a negative binomial observation model with overdispersion, multiplied by a day of the week effect with an independent parameter for each day of the week. Temporal variation was controlled using an approximate Gaussian process with a Matern 3/2 kernel. Rt was assumed to be constant over the forecast horizon although a correction was applied to adjust for the time-varying proportion of the population that was susceptible. Deaths were then modelled as a convolution of forecast cases combined with some scaling factor, a day of the week effect and a negative binomial observation model.",
         "citation": "https://doi.org/10.5281/zenodo.3957489",
         "twitter_handles": "ftargument, seabbs, sbfnk"
+    },
+    "epiforecasts-EpiExpert_direct": {
+        "team_name": "Epiforecasts / London School of Hygiene and Tropical Medicine",
+        "model_name": "EpiExpert Direct (epiforecasts)",
+        "model_abbr": "epiforecasts-EpiExpert_direct",
+        "model_contributors": "Nikos Bosse, Sam Abbott, Sebastian Funk",
+        "website_url": "https://epiforecasts.io/",
+        "license": "mit",
+        "team_model_designation": "other",
+        "methods": "Mean ensemble of human predictions",
+        "team_funding": "Funding by the Health Protection Research Unit (grant code NIHR200908)",
+        "data_inputs": "ECDC deaths and cases",
+        "citation": "https://github.com/epiforecasts/covid-german-forecasts",
+        "methods_long": "Forecasts from experts and non-experts are elicited using a shinyApp. Individuals currently make forecasts by choosing a distribution and specifying the median and width of that predictive distribution for evey forecast horizon. Forecasts are collected and a mean ensemble is formed."
     },
     "Priesemann-bayes": {
         "team_name": "Priesemann Group, MPI-DS",
@@ -392,7 +406,7 @@
         "team_funding": "Funding by the Health Protection Research Unit (grant code NIHR200908)",
         "data_inputs": "ECDC deaths and cases",
         "citation": "https://github.com/epiforecasts/covid-german-forecasts",
-        "methods_long": "Forecasts from experts and non-experts are elicited using a shinyApp. Individuals currently make forecasts by choosing a distribution and specifying the median and width of that predictive distribution for evey forecast horizon. Forecasts are collected and a mean ensemble is formed."
+        "methods_long": "Forecasts from experts and non-experts are elicited using a shinyApp. Two variants of this shiynApp exist. In one, forecasters are asked to predict cases and deaths directly. In the other, forecasters are asked to predict Rt. The Rt predictions are then mapped to death and cases using a renewal equation and the R package EpiNow2. Individuals currently make forecasts by choosing a distribution and specifying the median and width of that predictive distribution for evey forecast horizon. Forecasts from both apps are collected and a mean ensemble is formed."
     },
     "USyd-OneModelMan": {
         "team_name": "University of Sydney Forecast Lab",
