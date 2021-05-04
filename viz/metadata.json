@@ -1,4 +1,14 @@
 {
+    "MUNI-ARIMA": {
+        "team_name": "Masaryk University",
+        "model_name": "ARIMA",
+        "model_abbr": "MUNI-ARIMA",
+        "model_contributors": "Andrea Kraus, David Kraus <david.kraus@mail.muni.cz>",
+        "website_url": "https://sites.google.com/mail.muni.cz/covid19stat",
+        "license": "cc-by-4.0",
+        "team_model_designation": "primary",
+        "methods": "Seasonal ARIMA model with outlier detection fitted to transformed daily series. Weekly forecasts are obtained by aggregating bootstrap daily forecast paths."
+    },
     "Imperial-DeCa": {
         "team_name": "Imperial College London",
         "model_name": "Death to cases (ascertainr)",
@@ -474,6 +484,18 @@
         "methods": "This model makes predictions for future cases based on a heavily modified SEIR model taking into account underdetection and government intervention. Current interventions are assumed to continue.",
         "methods_long": "This model makes predictions for future cases based on a heavily modified SEIR model. New states are added to the SEIR model to account for cases that went undetected, and an explicit death state is included. The infection rate is corrected with a nonlinear curve that represents the governmental and societal response (which is assumed) to continue until the end of the pandemic). Key parameters for the disease are fixed using a metanalysis conducted by the CovidAnalytics group of over 150 parameters while epidemiological parameters are fitted to hisorical death counts and detected cases.",
         "citation": "https://www.covidanalytics.io/DELPHI_documentation_pdf"
+    },
+    "epiMOX-SUIHTER": {
+        "team_name": "epiMOX",
+        "model_name": "SUIHTER",
+        "model_abbr": "epiMOX-SUIHTER",
+        "model_contributors": "Giovanni Ardenghi (Politecnico di Milano) <giovanni.ardenghi@polimi.it>, Luca Dede' (Politecnico di Milano) <luca.dede@polimi.it>, Nicola Parolini (Politecnico di Milano) <nicola.parolini@polimi.it>, Alfio Quarteroni (Politecnico di Milano, EPFL) <alfio.quarteroni@polimi.it>",
+        "website_url": "https://www.epimox.polimi.it",
+        "license": "mit",
+        "team_model_designation": "primary",
+        "methods": "Compartmental model SUIHTER",
+        "methods_long": "The results are obtained using the compartmental model SUIHTER which simulates the evolution of COVID-19 epidemic in Italy. SUIHTER comprises the following compartments: Susceptibles(S), Undetected(U), Isolated(I), Hospitalized(H), Threatened(T), Extinct(E), Recovered(R). The model parameters are calibrated thanks to a combination of the least squares method with the Markov Chain Monte Carlo (MCMC) method. The current version of the model accounts for two additional compartments collecting individuals who have received the first and the second dose of vaccine, respectively. Different NPIs and vaccination scenarios can be accounted for in the model forecast.",
+        "citation": "https://arxiv.org/abs/2101.03369"
     },
     "USC-SIkJalpha": {
         "team_name": "University of Southern California Data Science Lab",
