@@ -1727,10 +1727,6 @@ PT,point,,2021-05-08,2021-05-03,1 wk ahead inc death,forecast,20
 PT,point,,2021-05-15,2021-05-03,2 wk ahead inc death,forecast,17.21
 PT,point,,2021-05-22,2021-05-03,3 wk ahead inc death,forecast,15.7
 PT,point,,2021-05-29,2021-05-03,4 wk ahead inc death,forecast,14.47
-SI,point,,2021-05-08,2021-05-03,1 wk ahead inc case,forecast,120.75
-SI,point,,2021-05-15,2021-05-03,2 wk ahead inc case,forecast,113.46
-SI,point,,2021-05-22,2021-05-03,3 wk ahead inc case,forecast,106.44
-SI,point,,2021-05-29,2021-05-03,4 wk ahead inc case,forecast,95.18
 PL,point,,2021-05-08,2021-05-03,1 wk ahead inc case,forecast,37324
 PL,quantile,0.01,2021-05-08,2021-05-03,1 wk ahead inc case,forecast,19810.42
 PL,quantile,0.025,2021-05-08,2021-05-03,1 wk ahead inc case,forecast,21832.3875
