@@ -2,7 +2,7 @@ name: "Create evaluation reports"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "00 11 * * 1"
+    - cron: "0 9 * * 0"
 jobs:
   evaluation_reports:
     runs-on: ubuntu-20.04
@@ -21,7 +21,7 @@ jobs:
        Rscript -e 'remotes::install_github("epiforecasts/scoringutils")'
 
     - name: Create evaluation reports
-      run: Rscript 'reports/compile-evaluation-reports.r'
+      run: Rscript 'code/reports/compile-evaluation-reports.r'
         
     - name: Push to web site
       uses: dmnemec/copy_file_to_another_repo_action@main
