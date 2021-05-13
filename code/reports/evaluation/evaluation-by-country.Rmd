@@ -51,7 +51,7 @@ horizons <- data %>%
 horizons <- horizons[as.integer(horizons) < 5]
 horizons <- horizons[order(as.integer(horizons))]
  
-summarise_by = c("model", "target_variable")
+summarise_by <- c("model", "target_variable")
 
 target_variables <- c(Cases = "inc case", Deaths = "inc death")
 ```
@@ -66,7 +66,7 @@ out <- paste0("\n\n## Forecast visualisation (", params$location_name,
               ") {.tabset .tabset_fade}\n\n")
 
 out <- c(out, "Forecast visualisations. The date of the tab marks the date on",
-         "which a forecast was made.\n\n")
+         "which a forecast was made (only last 4 weeks shown).\n\n")
 ```
 
 `r paste(if (include_forecast_plot) knit(text = out), collapse = '\n\n')`
@@ -98,7 +98,7 @@ out <- NULL
 for (variable in names(target_variables)) {
   out <- c(out, paste("\n\n###", variable, " {.tabset .tabset-fade}\n\n"))
   for (this_horizon in horizons) {
-    filter_list = list(paste0("target_variable == '",
+    filter_list <- list(paste0("target_variable == '",
                               target_variables[[variable]], "'"),
                      "type != 'point'",
                      paste0("horizon == ", this_horizon),
