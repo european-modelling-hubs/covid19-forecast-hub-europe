@@ -18,7 +18,7 @@ forecast_date <- floor_date(today(), "week", 1)
 # Get model names for manual exclusion
 exclude_models <-
   vroom(here("code", "ensemble", "EuroCOVIDhub", "manual-exclusions.csv")) %>%
-  filter(forecast_date == forecast_date) %>%
+  filter(forecast_date == !!forecast_date) %>%
   pull(model)
 
 # Run weekly automated ensemble -----------------------------------------
