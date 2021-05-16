@@ -10,7 +10,8 @@
 # Params:
 # method : character L1 : name of an ensembling method
 # forecast_date : date or character
-# exclude models : character : names of team-models to exclude by forecast_date
+# exclude models : character or data frame: names of team-models to exclude 
+#   (if data.frame, by forecast_date)
 # return_criteria : logical : whether to return a model/inclusion criteria grid
 #  as well as the ensemble forecast (default TRUE)
 # 
@@ -35,12 +36,24 @@ run_ensemble <- function(method,
                          exclude_models = NULL,
                          return_criteria = TRUE) {
 
+  if (missing(method)) {
+    method <- readLines(here("code", "ensemble", "EuroCOVIDhub",  
+                             "current-method.txt"))
+  }
+  
   # determine forecast dates matching the forecast date
   forecast_dates <- seq.Date(from = forecast_date,
                              by = -1,
                              length.out = 6)
 
-  # Load forecasts and save criteria --------------------------------------------
+  # If manual exclusion is csv, convert to vector
+  if ("data.frame" %in% class(exclude_models)) {
+    exclude_models <- exclude_models %>%
+      filter(forecast_date == !!forecast_date) %>%
+      pull(model)
+  }
+  
+  # Load forecasts and save criteria ------------------------------------------
   # Get all forecasts
   all_forecasts <- load_forecasts(source = "local_hub_repo",
                               hub_repo_path = here(),
