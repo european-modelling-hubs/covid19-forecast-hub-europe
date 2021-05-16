@@ -29,6 +29,7 @@ ensembles <- map2(.x = names(method_dates),
                                     return_criteria = FALSE) %>%
                     mutate(method = .x) %>%
                     vroom_write(here("code", "ensemble", "forecasts",
-                                     .x, paste0(.y, ".csv"))))
+                                     .x, paste0(.y, ".csv")), 
+                                delim = ","))
 
 
