@@ -35,10 +35,23 @@ run_ensemble <- function(method,
                          exclude_models = NULL,
                          return_criteria = TRUE) {
 
+  
+  if (missing(method)) {
+    method <- readLines(here("code", "ensemble", "EuroCOVIDhub",  
+                             "current-method.txt"))
+  }
+  
   # determine forecast dates matching the forecast date
   forecast_dates <- seq.Date(from = forecast_date,
                              by = -1,
                              length.out = 6)
+  
+  # If manual exclusion is csv, convert to vector
+  if ("data.frame" %in% class(exclude_models)) {
+    exclude_models <- exclude_models %>%
+      filter(forecast_date == !!forecast_date) %>%
+      pull(model)
+  }
 
   # Load forecasts and save criteria --------------------------------------------
   # Get all forecasts
