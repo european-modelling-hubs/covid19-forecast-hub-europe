@@ -1,3 +1,4 @@
+# Written by Johannes Bracher, johannes.bracher@kit.edu
 #
 # This is the user-interface definition of a Shiny web application. You can
 # run the application by clicking 'Run App' above.
@@ -13,32 +14,34 @@ library(shiny)
 shinyUI(fluidPage(
 
   # Application title
-  titlePanel("Visualize your forecasts prior to submission (European COVID19 Forecast Hub)"),
+  titlePanel("Visualize your submission to the European COVID19 Forecast Hub"),
 
-  # Sidebar with a slider input for number of bins
+  # Sidebar with control elements
   sidebarLayout(
     sidebarPanel(
-      fileInput("file1", "Choose file to upload", accept = ".csv"),
-      textInput("path1", "Or paste a URL to a csv file (the raw csv, not github preview)."),
-      uiOutput("inp_select_location")
+      fileInput("file", "Choose file to upload", accept = ".csv"),
+      textInput("path", "Or paste a URL to a csv file (the raw csv, not github preview)."),
+      # uiOutput("inp_select_location") # currently not used
     ),
 
-    # Show a plot of the generated distribution
+    # Main panel
     mainPanel(
       tags$style("#result_checks {font-size:15px;
                font-family:'Courier New';
                display:block; }"),
 
-      h4("Forecast visualization:"),
-      plotOutput("plot"),
+      h4("Forecast visualization (may take a few seconds to load):"),
+      textOutput(outputId = "file_name"), # paste name of visualized file
+      # plotOutput("plot"), # plot
+      uiOutput("plot_ui"),
       tags$div(
         tags$span(style="color:white", ".")
       ),
       tags$div(
         tags$span(style="color:white", ".")
       ),
-      h6(" Even if your files are displayed correctly here it is possible that they fail the format checks on the GitHub platform. The formal evaluation checks are not run on this site, it serves solely for visualization. Information on how to run local
-         validation checks can be found in the Wiki of or github repository."),
+      h6(" Even if your files are displayed correctly here it is possible that they fail the format checks on the GitHub platform. The formal evaluation checks are not run on this site, it serves solely for visualization. Information on how to run
+         validation checks locally can be found in the Wiki of our GitHub repository."),
       h4("A few things worth checking:"),
       h6("The following are no requirements for submission and will not be checked after your pull request.",
          "This is just a non-exhaustive list of plausibility checks we have found useful in the past."

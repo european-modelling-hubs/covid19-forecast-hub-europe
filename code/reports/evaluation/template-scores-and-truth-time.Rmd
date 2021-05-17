@@ -1,0 +1,128 @@
+```{r scores-and-truth1, results = 'asis', fig.width=10, fig.height = 4}
+
+library(ggplot2)
+library(dplyr)
+library(scoringutils)
+
+
+scores <- eval_forecasts(data, 
+                         summarise_by = c("model", "target_variable", 
+                                          "horizon", 
+                                          "location_name", "forecast_date"), 
+                         compute_relative_skill = FALSE)
+
+# remove point forecasts
+scores <- scores[!is.na(interval_score)]
+
+  tmp_data <- filter(data, location_name == loc)
+  tmp_scores <- filter(scores, 
+                       location_name == loc, 
+                       horizon == this_horizon)
+  
+  if (nrow(tmp_data) == 0) {
+    print(location)
+    cat("skip")
+    next
+  }
+  
+  p1 <- tmp_data %>%
+    select(target_end_date, true_value, location_name, target_variable) %>%
+    filter(target_end_date >= "2021-01-01",
+           !is.na(true_value)) %>%
+    unique() %>%
+    ggplot(aes(x = target_end_date, y = true_value)) + 
+    geom_line() + 
+    geom_point() + 
+    theme_light() + 
+    facet_wrap(~ target_variable, scales = "free") + 
+    theme(legend.position = "bottom") + 
+    labs(y = "true observed values", x = "date", 
+         title = paste("Observed data -", loc))
+  
+  cat("\n\n")
+  print(p1)
+  cat("\n\n")
+  
+  if (nrow(tmp_scores) == 0) {
+    next()
+  }
+  
+  date_range <- c(as.Date("2021-01-01"), 
+                max(as.Date(tmp_scores$forecast_date), na.rm = TRUE))
+  
+  # cat("\n\n### {.tabset}\n\n")
+  
+  cat("\n\n#### Weighted interval score")
+  
+  p2 <- tmp_scores  %>%
+    ggplot(aes(x = as.Date(forecast_date), y = interval_score, colour = model)) + 
+    geom_line() + 
+    geom_point() + 
+    theme_light() + 
+    facet_wrap(~ target_variable, scales = "free") + 
+    theme(legend.position = "bottom") +
+    labs(y = "weighted interval score", x = "date", 
+         title = paste("Forecaster scores -", loc)) + 
+    scale_x_date(limits = as.Date(date_range)) 
+  
+  cat("\n\n")
+  print(p2)
+  cat("\n\n")
+  
+  cat("\n\n#### Overprediction")
+  
+  # plot overprediction
+  p3 <- tmp_scores  %>%
+    ggplot(aes(x = as.Date(forecast_date), y = overprediction, colour = model)) + 
+    geom_line() + 
+    geom_point() + 
+    theme_light() + 
+    facet_wrap(~ target_variable, scales = "free") + 
+    theme(legend.position = "bottom") +
+    labs(y = "weighted interval score", x = "date", 
+         title = paste("Overprediction -", loc)) + 
+    scale_x_date(limits = date_range) 
+  
+  cat("\n\n")
+  print(p3)
+  cat("\n\n")
+  
+  # plot underprediction
+  
+  cat("\n\n#### Underprediction")
+  p4 <- tmp_scores  %>%
+    ggplot(aes(x = as.Date(forecast_date), y = underprediction, colour = model)) + 
+    geom_line() + 
+    geom_point() + 
+    theme_light() + 
+    facet_wrap(~ target_variable, scales = "free") + 
+    theme(legend.position = "bottom") +
+    labs(y = "weighted interval score", x = "date", 
+         title = paste("Underprediction -", loc)) + 
+    scale_x_date(limits = date_range) 
+  
+  cat("\n\n")
+  print(p4)
+  cat("\n\n")
+  
+  # plot underprediction
+  cat("\n\n#### Sharpness")
+  p5 <- tmp_scores  %>%
+    ggplot(aes(x = as.Date(forecast_date), y = sharpness, colour = model)) + 
+    geom_line() + 
+    geom_point() + 
+    theme_light() + 
+    facet_wrap(~ target_variable, scales = "free") + 
+    theme(legend.position = "bottom") +
+    labs(y = "weighted interval score", x = "date", 
+         title = paste("Sharpness (lower values are better) -", loc)) + 
+    scale_x_date(limits = date_range) 
+  
+  cat("\n\n")
+  print(p5)
+  cat("\n\n")
+  
+
+
+```
+
