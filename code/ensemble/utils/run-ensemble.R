@@ -94,6 +94,7 @@ run_ensemble <- function(method,
   if (return_criteria) {
     return(list("ensemble" = ensemble,
                 "criteria" = criteria,
+                "method" = method,
                 "forecast_date" = max(forecast_dates)))
   }
   
