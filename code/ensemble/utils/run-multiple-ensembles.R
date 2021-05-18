@@ -26,26 +26,24 @@ run_multiple_ensembles <- function(forecast_dates,
   names(method_dates) <- rep(methods, length(forecast_dates))
   
   # Run ensembles
-  ensembles <- map(.x = method_dates,
-                    ~ run_ensemble(method = names(.x),
+  ensembles <- imap(method_dates,
+                    ~ run_ensemble(method = .y,
                                    forecast_date = .x,
                                    exclude_models = exclude_models,
-                                   return_criteria = FALSE) %>%
-                      mutate(method = names(.x)))
-  
-  # Name list items by forecast date
-  names(ensembles) <- method_dates
+                                   return_criteria = FALSE))
   
   # Save in code/ensemble/forecasts/model directory as forecast_date.csv
   if (save_forecasts) {
-    walk2(.x = ensembles,
-          .y = names(method_dates),
+    iwalk(ensembles,
           ~ vroom_write(x = .x,
-                    path = here("code", "ensemble", "forecasts", .y, 
-                                paste0(names(.x), ".csv")), 
-                    delim = ","))
-  }
+                        path = here("code", "ensemble", "forecasts", 
+                                    .y,
+                                    paste0(unique(.x$forecast_date), 
+                                           ".csv")), 
+                        delim = ","))
+    }
   
   return(ensembles)
   
 }
+
