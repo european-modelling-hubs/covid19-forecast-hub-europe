@@ -26,7 +26,7 @@ knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE,
                       warning = FALSE)
 
-include_ranking <- TRUE
+include_calibration <- TRUE
 include_forecast_plot <- TRUE
 ```
 
@@ -66,7 +66,7 @@ target_variables <- c(Cases = "inc case", Deaths = "inc death")
 
 # Forecast visualisation {.tabset .tabset-fade}
 
-Forecasts of cases/deaths per week per 100,000. The date of the tab marks the date on which a forecast was made.
+Forecasts of cases/deaths per week per 100,000. The date of the tab marks the date on which a forecast was made (only the latest forecasts and the previous four weeks shown).
 
 ```{r forecast-vis, include = FALSE, eval = include_forecast_plot}
 
@@ -85,19 +85,55 @@ out <- c(out, knit_child(here::here("code", "reports", "ensemble",
 
 ---
 
-# Forecast calibration {.tabset .tabset-fade .tabset-dropdown}
+# Forecast calibration
 
-Shown below are PIT histograms for the most recent ensemble forecasts. These show the proportion of true values within each predict quantile (width: 0.2).
+## Coverage
 
-```{r calibration, echo = FALSE, include = include_ranking}
-gap <- 0.2
-quantiles <- seq(gap, 1 - gap, by = gap)
+The table below shows this week's _coverage_ of the ensemble model at the 50% and 95% level, across the 32 countries. This shows the proportion of observations that fall within a given prediction interval. Ideally, a forecast model would achieve 50% coverage of 0.50 (i.e., 50% of observations fall within the 50% prediction interval) and 95% coverage of 0.95 (i.e., 95% of observations fall within the 95% prediction interval). Values of coverage greater than these nominal values indicate that the forecasts are _underconfident_, i.e. prediction intervals tend to be too wide, wherease values of coverage smaller than these nominal values indicate that the ensemble forecasts are _overconfident_, i.e. prediction intervals tend to be too narrow.
+
+```{r coverage, echo = FALSE, include = include_calibration}
 scores <- eval_forecasts(data,
                          summarise_by = c("model", "range", "quantile",
                                           "target_variable", "horizon"),
                          pit_plots = TRUE)
 
+coverage <- scores %>%
+  dplyr::filter(range %in% c(50, 95)) %>%
+  select(range, `Target variable` = target_variable,
+         `Forecast horizon` = horizon, coverage) %>%
+  distinct() %>%
+  mutate(range = paste0(range, "% coverage"),
+         `Forecast horizon` =
+           paste0(`Forecast horizon`, " week",
+                  if_else(`Forecast horizon` == 1, "", "s")),
+         `Target variable` = recode_factor(`Target variable`,
+                                         `inc case` = "Cases",
+                                         `inc death` = "Deaths"),
+         coverage = round(coverage, 2)) %>%
+  tidyr::pivot_wider(names_from = range, values_from = coverage)
 
+htmltools::tagList(
+     coverage %>%
+       DT::datatable(extensions = c('FixedColumns', 'Buttons'),
+                     width = "100%",
+                     options = list(
+                       paging = FALSE,
+                       info = FALSE,
+                       buttons = c('csv', 'excel'),
+                       dom = 'Bfrtip',
+                       scrollX = TRUE
+                     ), 
+                     class = 'white-space: nowrap')
+)
+```
+
+## PIT histograms
+
+The figures below are _PIT histograms_ for the most recent ensemble forecasts. These show the proportion of true values within each predictive quantile (width: 0.2). If the forecasts were perfectly calibrated, observations would fall evenly across these equally-spaced quantiles, i.e. the histograms would be flat.
+
+```{r pit, echo = FALSE, include = include_calibration}
+gap <- 0.2
+quantiles <- seq(gap, 1 - gap, by = gap)
 even_quantiles <-
   scores[!is.na(quantile) & round(quantile, 3) %in% round(quantiles, 3)]
 setkey(even_quantiles, target_variable, horizon, quantile)
