@@ -8,11 +8,11 @@ exclude_by_date <- vroom(here("code", "ensemble", "EuroCOVIDhub",
                       "manual-exclusions.csv"))
 
 # Get all past weeks' forecast dates
-all_dates <- dir(here("data-processed", "EuroCOVIDhub-ensemble"))
-all_dates <- all_dates[!grepl("metadata", all_dates)]
-all_dates <- as.Date(substr(all_dates, 1, 10))
+all_dates <- vroom(here("code", "ensemble", "EuroCOVIDhub",
+                             "method-by-date.csv")) %>%
+  pull(forecast_date)
 
-# Get all methods
+# Get all supported methods
 all_methods <- dir(here("code", "ensemble", "forecasts"))
 
 # Run ensembles over all methods and past forecast dates
