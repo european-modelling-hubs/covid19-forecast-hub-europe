@@ -1,19 +1,25 @@
-This folder contains code for running and evaluating multiple ensemble methods.
+This folder contains code for running and evaluating ensemble methods.
 
-The  [EuroCOVIDhub](./code/ensemble/EuroCOVIDhub) file contains code specifically for creating the European forecasting hub ensemble published each week.
+To run a single ensemble on hub forecasts, use the `run_ensemble()` function combined with one of the [supported methods](#Methods) for any given forecast date.
 
-
-_General purpose ensemble code_
-
-Purpose | Function | Description
----|---|---
-Utility | [`run_ensemble()`](./code/ensemble/utils/run-ensemble.R) | Specify a supported method and a (set of) valid dates to create a single formatted ensemble
-Utility | [`run_multiple_ensembles()`](./code/ensemble/utils/run-multiple-ensembles.R) | Input one or more supported methods and forecast dates: returns a list of ensembles for each method/date combination. This is implemented for all methods and forecast dates in [`create-all-methods-ensembles.R`](./code/ensemble/utils/create-all-methods-ensembles.R)
-Utility | [`use_ensemble_criteria()`](./code/ensemble/utils/use-ensemble-criteria.R) | Filter given forecasts based on the [inclusion criteria](./code/ensemble/EuroCOVIDhub/README.md#Inclusion-criteria)
-Utility | [`format_ensemble()`](./code/ensemble/utils/format-ensemble.R) | Prepare an ensemble according to the standard submission format
+See the  [EuroCOVIDhub](./code/ensemble/EuroCOVIDhub) folder for the code and history of the European forecasting hub ensemble published each week.
 
 _Methods_
 
-Type | Function | Description
+Currently, our code supports the following ensemble [methods](./code/ensemble/methods). Find ensemble forecasts for all methods over time in [Forecasts](code/ensemble/forecasts).
+
+Type | Method | Function
 ---|---|---
-Unweighted | [`create_ensemble_average()`](./code/ensemble/methods/create-ensemble-average.R) | Create a mean or a median ensemble
+Unweighted | Mean | [`create_ensemble_average(method = "mean")`](./code/ensemble/methods/create-ensemble-average.R)
+Unweighted | Median | [`create_ensemble_average(method = "median")`](./code/ensemble/methods/create-ensemble-average.R)
+
+_Implementation_
+
+These functions support running and formatting ensembles.
+
+Function | Description
+---|---
+[`run_ensemble()`](./code/ensemble/utils/run-ensemble.R) | Specify a supported method and a valid date to create a single formatted ensemble
+[`use_ensemble_criteria()`](./code/ensemble/utils/use-ensemble-criteria.R) | Filter given forecasts based on the [hub inclusion criteria](./code/ensemble/EuroCOVIDhub/README.md#Inclusion-criteria)
+[`format_ensemble()`](./code/ensemble/utils/format-ensemble.R) | Prepare an ensemble according to the standard submission format
+[`run_multiple_ensembles()`](./code/ensemble/utils/run-multiple-ensembles.R) | Specify one or more supported methods and forecast dates to create a list of ensembles for each method/date combination. This is implemented for all methods and forecast dates in [`create-all-methods-ensembles.R`](./code/ensemble/utils/create-all-methods-ensembles.R)
