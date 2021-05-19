@@ -47,11 +47,20 @@ coverage <- eval_forecasts(
   tidyr::pivot_wider(names_from = range, values_from = coverage, 
                      names_prefix = "Coverage ")
 
+num_fc <- df %>%
+  dplyr::filter(quantile == 0.5, 
+                !is.na(true_value)) %>%
+  dplyr::group_by(model, horizon) %>%
+  dplyr::summarise(n = n())
+
 table <- eval_forecasts(df, summarise_by = summarise_by, 
                         compute_relative_skill = TRUE) %>%
-  dplyr::left_join(coverage, by = "model")
+  dplyr::left_join(coverage, by = "model") %>%
+  dplyr::left_join(num_fc)
 
-setcolorder(table, c("model", "relative_skill"))
+setcolorder(table, c("model", "relative_skill", 
+                     "target_variable", "Coverage 50", 
+                     "Coverage 95", "interval_score"))
 
 htmltools::tagList(
      table %>%
