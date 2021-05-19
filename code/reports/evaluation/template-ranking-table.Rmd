@@ -29,13 +29,27 @@ df <- df %>%
 ## if more than 1 location exists, filter to have at least half of them
 if (length(unique(df$location)) > 1) {
   df <- df %>%
-    group_by(model) %>%
+    group_by(model, target_variable) %>%
     mutate(n = length(unique(location))) %>%
     ungroup() %>%
     mutate(nall = length(unique(location))) %>%
     filter(n >= nall / 2) %>%
     select(-n, -nall)
  }
+
+## filter to cover all of the last few weeks
+df <- df %>%
+  mutate(submission_date =
+	   floor_date(forecast_date, "week", week_start = 3) + 5) %>%
+  mutate(last_4_weeks_submission_date =
+	   if_else(submission_date < report_date &
+		    submission_date > report_date - (restrict_weeks + 1) * 7,
+		   submission_date, as.Date(NA_character_))) %>%
+  group_by(model, target_variable) %>%
+  mutate(present_forecasts = length(unique(na.omit(last_4_weeks_submission_date)))) %>%
+  ungroup() %>%
+  filter(present_forecasts == restrict_weeks) %>%
+  select(-submission_date, -last_4_weeks_submission_date, -present_forecasts)
 
 coverage <- eval_forecasts(
   df, 
