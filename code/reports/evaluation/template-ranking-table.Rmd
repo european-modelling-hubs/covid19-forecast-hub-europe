@@ -58,9 +58,9 @@ table <- eval_forecasts(df, summarise_by = summarise_by,
   dplyr::left_join(coverage, by = "model") %>%
   dplyr::left_join(num_fc)
 
-setcolorder(table, c("model", "relative_skill", 
-                     "target_variable", "Coverage 50", 
-                     "Coverage 95", "interval_score"))
+setcolorder(table, c("model", "n", "relative_skill",
+                     "Coverage 50", "Coverage 95",
+                     "interval_score"))
 
 htmltools::tagList(
      table %>%
