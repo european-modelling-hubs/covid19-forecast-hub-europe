@@ -21,10 +21,15 @@ ensembles <- run_multiple_ensembles(forecast_dates = all_dates,
                                     exclude_models = exclude_by_date)
 
 # Save in code/ensemble/forecasts/model directory as forecast_date.csv
+res <- lapply(all_methods, function(x)
+  suppressWarnings(dir.create(here("data-ensembles",
+                                   paste0("EuroCOVIDhub-", x)),
+                              recursive = TRUE)))
+
 walk(ensembles,
      ~ vroom_write(x = .x$ensemble,
-                   path = here("code", "ensemble", "forecasts", 
-                               .x$method,
-                               paste0(unique(.x$forecast_date), 
-                                      ".csv")), 
+                   path = here("data-ensembles",
+                               paste0("EuroCOVIDhub-", .x$method),
+                               paste0(.x$forecast_date, "-EuroCOVIDhub-",
+                                      .x$method, ".csv")),
                    delim = ","))
