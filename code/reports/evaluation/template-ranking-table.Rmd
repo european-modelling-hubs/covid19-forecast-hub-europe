@@ -74,7 +74,9 @@ table <- eval_forecasts(df, summarise_by = summarise_by,
 
 setcolorder(table, c("model", "n", "relative_skill",
                      "Coverage 50", "Coverage 95",
-                     "interval_score"))
+                     "interval_score", "sharpness",
+                     "underprediction", "overprediction",
+                     "bias", "aem"))
 
 htmltools::tagList(
      table %>%
