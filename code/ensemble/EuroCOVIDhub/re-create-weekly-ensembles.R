@@ -1,6 +1,7 @@
 # Re-create past weekly ensembles for EuroCOVIDhub
 library(here)
 library(vroom)
+library(purrr)
 source(here("code", "ensemble", "utils", "run-ensemble.R"))
 
 # Get method by date

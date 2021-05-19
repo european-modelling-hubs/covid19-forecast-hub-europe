@@ -12,8 +12,8 @@ all_dates <- vroom(here("code", "ensemble", "EuroCOVIDhub",
                              "method-by-date.csv")) %>%
   pull(forecast_date)
 
-# Get all supported methods
-all_methods <- dir(here("code", "ensemble", "forecasts"))
+# Get all methods
+all_methods <- sub("^.*-", "", dir(here("ensembles", "data-processed")))
 
 # Run ensembles over all methods and past forecast dates
 ensembles <- run_multiple_ensembles(forecast_dates = all_dates,
@@ -22,13 +22,13 @@ ensembles <- run_multiple_ensembles(forecast_dates = all_dates,
 
 # Save in code/ensemble/forecasts/model directory as forecast_date.csv
 res <- lapply(all_methods, function(x)
-  suppressWarnings(dir.create(here("data-ensembles",
+  suppressWarnings(dir.create(here("ensembles", "data-processed",
                                    paste0("EuroCOVIDhub-", x)),
                               recursive = TRUE)))
 
 walk(ensembles,
      ~ vroom_write(x = .x$ensemble,
-                   path = here("data-ensembles",
+                   path = here("ensembles", "data-processed",
                                paste0("EuroCOVIDhub-", .x$method),
                                paste0(.x$forecast_date, "-EuroCOVIDhub-",
                                       .x$method, ".csv")),

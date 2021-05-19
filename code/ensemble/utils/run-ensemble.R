@@ -36,13 +36,15 @@ run_ensemble <- function(method,
                          exclude_models = NULL,
                          return_criteria = TRUE) {
   
+  methods <- sub("^.*-", "", dir(here("data-ensembles")))
+
   # Check method is supported
   if (missing(method)) {
     method <- readLines(here("code", "ensemble", "EuroCOVIDhub",  
                              "current-method.txt"))
   }
   method <- match.arg(arg = method, 
-                      choices = dir(here("code", "ensemble", "forecasts")),
+                      choices = methods,
                       several.ok = FALSE)
   
   # determine forecast dates matching the forecast date
