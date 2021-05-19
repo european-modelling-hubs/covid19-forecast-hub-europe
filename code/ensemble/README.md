@@ -6,7 +6,7 @@ See the  [EuroCOVIDhub](./code/ensemble/EuroCOVIDhub) folder for the code and hi
 
 _Methods_
 
-Currently, our code supports the following ensemble [methods](./code/ensemble/methods). Find ensemble forecasts for all methods over time in [Forecasts](code/ensemble/forecasts).
+Currently, our code supports the following ensemble [methods](./code/ensemble/methods). Find ensemble forecasts for all methods over time in [Forecasts](ensembles).
 
 Type | Method | Function
 ---|---|---
