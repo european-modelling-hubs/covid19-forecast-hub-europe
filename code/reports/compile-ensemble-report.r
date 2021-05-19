@@ -18,7 +18,8 @@ dir.create(here::here("html"))
 
 rmarkdown::render(here::here("code", "reports", "ensemble",
                              "ensemble-report.Rmd"),
-                  params = list(report_date = report_date),
+                  params = list(report_date = report_date,
+                                restrict_weeks = 4),
                   output_format = "html_document",
                   output_file =
                     here::here("html", paste0("ensemble-report-", report_date,

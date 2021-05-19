@@ -5,6 +5,7 @@ params:
   location_code: "DE"
   location_name: "Germany"
   data: NULL
+  restrict_weeks: 4
 output:
   html_document:
     theme: yeti
@@ -37,6 +38,8 @@ include_countries <- include_forecast_plot ||
   include_forecast_plot || 
   include_avail_forecasts || 
   include_ranks_over_time
+
+restrict_weeks <- params$restrict_weeks
 ```
 
 
@@ -89,7 +92,9 @@ out <- c(out, knit_child(here::here("code", "reports", "evaluation",
 ```{r ranking-header, include = FALSE, eval = include_ranking}
 out <- paste0("\n\n## Forecast scores (", loc, ") {.tabset .tabset-fade}\n\n")
 
-out <- c(out, "Scores separated by target and forecast horizon.\n\n")
+out <- c(out, "Scores separated by target and forecast horizon.",
+	 "Only models with submission in the last", restrict_weeks,
+	 "are shown.\n\n")
 ```
 `r paste(if (include_ranking) knit(text = out, quiet = TRUE), collapse = '\n\n')`
 

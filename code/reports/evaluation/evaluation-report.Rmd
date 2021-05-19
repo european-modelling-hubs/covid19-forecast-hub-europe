@@ -2,6 +2,7 @@
 params: 
   report_date: "2021-03-29"
   data: NULL
+  restrict_weeks: 4
 always_allow_html: true
 output:
   html_document:
@@ -34,6 +35,8 @@ include_countries <- include_forecast_plot ||
   include_forecast_plot || 
   include_avail_forecasts || 
   include_ranks_over_time
+
+restrict_weeks <- params$restrict_weeks
 ```
 
 ```{r prepare-data}
