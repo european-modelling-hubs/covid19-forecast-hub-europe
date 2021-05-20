@@ -72,7 +72,6 @@ epiforecasts-EpiExpert,inc death,AT,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiExpert,inc death,BE,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiExpert,inc death,CZ,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiExpert,inc death,DE,TRUE,TRUE,TRUE,TRUE
-epiforecasts-EpiExpert,inc death,ES,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiExpert,inc death,FR,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiExpert,inc death,GB,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiExpert,inc death,HR,TRUE,TRUE,TRUE,TRUE
@@ -93,7 +92,6 @@ epiforecasts-EpiExpert_direct,inc case,PL,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiExpert_direct,inc case,SE,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiExpert_direct,inc death,BE,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiExpert_direct,inc death,DE,TRUE,TRUE,TRUE,TRUE
-epiforecasts-EpiExpert_direct,inc death,ES,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiExpert_direct,inc death,FR,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiExpert_direct,inc death,GB,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiExpert_direct,inc death,NL,TRUE,TRUE,TRUE,TRUE
@@ -468,6 +466,8 @@ MIT_CovidAnalytics-DELPHI,inc death,DE,TRUE,TRUE,TRUE,TRUE
 MIT_CovidAnalytics-DELPHI,inc death,PL,TRUE,TRUE,TRUE,TRUE
 MOCOS-agent1,inc case,PL,TRUE,TRUE,TRUE,TRUE
 MOCOS-agent1,inc death,PL,TRUE,TRUE,TRUE,TRUE
+MUNI_DMS-SEIAR,inc case,CZ,TRUE,TRUE,TRUE,TRUE
+MUNI_DMS-SEIAR,inc death,CZ,TRUE,TRUE,TRUE,TRUE
 MUNI-ARIMA,inc case,AT,TRUE,TRUE,TRUE,TRUE
 MUNI-ARIMA,inc case,BE,TRUE,TRUE,TRUE,TRUE
 MUNI-ARIMA,inc case,BG,TRUE,TRUE,TRUE,TRUE
@@ -532,8 +532,6 @@ MUNI-ARIMA,inc death,RO,TRUE,TRUE,TRUE,TRUE
 MUNI-ARIMA,inc death,SE,TRUE,TRUE,TRUE,TRUE
 MUNI-ARIMA,inc death,SI,TRUE,TRUE,TRUE,TRUE
 MUNI-ARIMA,inc death,SK,TRUE,TRUE,TRUE,TRUE
-MUNI_DMS-SEIAR,inc case,CZ,TRUE,TRUE,TRUE,TRUE
-MUNI_DMS-SEIAR,inc death,CZ,TRUE,TRUE,TRUE,TRUE
 PL_GRedlarski-DistrictsSum,inc case,PL,TRUE,TRUE,TRUE,TRUE
 Priesemann-bayes,inc case,AT,TRUE,FALSE,TRUE,FALSE
 Priesemann-bayes,inc case,BE,TRUE,FALSE,TRUE,FALSE
