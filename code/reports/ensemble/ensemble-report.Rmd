@@ -1,6 +1,7 @@
 ---
 params: 
   report_date: "2021-03-29"
+  restrict_weeks: 4
 always_allow_html: true
 output:
   html_document:
@@ -28,6 +29,8 @@ knitr::opts_chunk$set(echo = FALSE,
 
 include_calibration <- TRUE
 include_forecast_plot <- TRUE
+
+restrict_weeks <- params$restrict_weeks
 ```
 
 ```{r load-data}
@@ -66,7 +69,7 @@ target_variables <- c(Cases = "inc case", Deaths = "inc death")
 
 # Forecast visualisation {.tabset .tabset-fade}
 
-Forecasts of cases/deaths per week per 100,000. The date of the tab marks the date on which a forecast was made (only the latest forecasts and the previous four weeks shown).
+Forecasts of cases/deaths per week per 100,000. The date of the tab marks the date on which a forecast was made (only the latest forecasts and the previous `r restrict_weeks`  weeks shown).
 
 ```{r forecast-vis, include = FALSE, eval = include_forecast_plot}
 
