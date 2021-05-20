@@ -343,10 +343,10 @@ Imperial-sbkp,inc death,RO,TRUE,FALSE,TRUE,FALSE
 Imperial-sbkp,inc death,SE,TRUE,FALSE,TRUE,FALSE
 itwm-dSEIR,inc case,DE,TRUE,TRUE,TRUE,TRUE
 itwm-dSEIR,inc death,DE,TRUE,TRUE,TRUE,TRUE
-ITWW-county_repro,inc case,DE,TRUE,TRUE,FALSE,FALSE
-ITWW-county_repro,inc case,PL,TRUE,TRUE,FALSE,FALSE
-ITWW-county_repro,inc death,DE,TRUE,TRUE,FALSE,FALSE
-ITWW-county_repro,inc death,PL,TRUE,TRUE,FALSE,FALSE
+ITWW-county_repro,inc case,DE,TRUE,TRUE,TRUE,TRUE
+ITWW-county_repro,inc case,PL,TRUE,TRUE,TRUE,TRUE
+ITWW-county_repro,inc death,DE,TRUE,TRUE,TRUE,TRUE
+ITWW-county_repro,inc death,PL,TRUE,TRUE,TRUE,TRUE
 Karlen-pypm,inc case,DE,TRUE,TRUE,TRUE,TRUE
 Karlen-pypm,inc death,DE,TRUE,TRUE,TRUE,TRUE
 LANL-GrowthRate,inc case,AT,TRUE,TRUE,TRUE,TRUE
@@ -415,8 +415,8 @@ LANL-GrowthRate,inc death,SI,TRUE,TRUE,TRUE,TRUE
 LANL-GrowthRate,inc death,SK,TRUE,TRUE,TRUE,TRUE
 LeipzigIMISE-SECIR,inc case,DE,TRUE,TRUE,TRUE,TRUE
 LeipzigIMISE-SECIR,inc death,DE,TRUE,TRUE,TRUE,TRUE
-MIMUW-StochSEIR,inc case,PL,TRUE,TRUE,FALSE,FALSE
-MIMUW-StochSEIR,inc death,PL,TRUE,TRUE,FALSE,FALSE
+MIMUW-StochSEIR,inc case,PL,TRUE,TRUE,TRUE,TRUE
+MIMUW-StochSEIR,inc death,PL,TRUE,TRUE,TRUE,TRUE
 MIT_CovidAnalytics-DELPHI,inc case,DE,TRUE,TRUE,TRUE,TRUE
 MIT_CovidAnalytics-DELPHI,inc case,PL,TRUE,TRUE,TRUE,TRUE
 MIT_CovidAnalytics-DELPHI,inc death,DE,TRUE,TRUE,TRUE,TRUE
