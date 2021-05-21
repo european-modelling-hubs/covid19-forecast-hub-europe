@@ -166,10 +166,17 @@ for (variable in names(target_variables)) {
 The figures below are _PIT histograms_ for the most recent ensemble forecasts. These show the proportion of true values within each predictive quantile (width: 0.2). If the forecasts were perfectly calibrated, observations would fall evenly across these equally-spaced quantiles, i.e. the histograms would be flat.
 
 ```{r pit, echo = FALSE, include = include_calibration}
+latest_data <- data %>%
+  filter(target_end_date == report_date - 2)
+pit_scores <- eval_forecasts(latest_data,
+                         summarise_by = c("model", "range", "quantile",
+                                          "target_variable", "horizon"),
+                         pit_plots = TRUE)
 gap <- 0.2
 quantiles <- seq(gap, 1 - gap, by = gap)
 even_quantiles <-
-  scores[!is.na(quantile) & round(quantile, 3) %in% round(quantiles, 3)]
+  pit_scores[!is.na(quantile) & round(quantile, 3) %in% round(quantiles, 3)]
+
 setkey(even_quantiles, target_variable, horizon, quantile)
 pit <- even_quantiles[, list(quantile = c(quantile, 1),
                              pit_bin = diff(c(0, quantile_coverage, 1))),
