@@ -36,7 +36,7 @@ run_ensemble <- function(method,
                          exclude_models = NULL,
                          return_criteria = TRUE) {
   
-  methods <- sub("^.*-", "", dir(here("data-ensembles")))
+  methods <- sub("^.*-", "", dir(here("ensembles", "data-processed")))
 
   # Check method is supported
   if (missing(method)) {
