@@ -8,7 +8,7 @@ source_dict = {'Deaths': 'https://raw.githubusercontent.com/CSSEGISandData/COVID
                'Cases': 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/' \
                    'csse_covid_19_time_series/time_series_covid19_confirmed_global.csv'}
 
-locs = pd.read_csv('viz/location_codes.csv')
+locs = pd.read_csv('data-locations/locations_eu.csv')
 
 # extract data for given targets
 for target in ['Deaths', 'Cases']:

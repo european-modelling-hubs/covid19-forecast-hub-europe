@@ -1,0 +1,13 @@
+team_name: Imperial College London
+model_name: sbkp (apeestim)
+model_abbr: Imperial-sbkp
+model_contributors: Sangeeta Bhatia (Imperial College London)
+  <s.bhatia@imperial.ac.uk>, Pierre Nouvellet (Sussex University)
+  <p.nouvellet@imperial.ac.uk> Kris V Parag (k.parag@imperial.ac.uk)
+website_url: https://mrc-ide.github.io/covid19-short-term-forecasts
+license: cc-by-4.0
+team_model_designation: proposed
+methods: Optimises the window over which reproduction number is assumed to be constant.
+repo_url: https://github.com/mrc-ide/covid19-forecasts-orderly
+twitter_handles: PNouvellet sangeeta0312 krisparag1
+data_inputs: Deaths from WHO dashboard

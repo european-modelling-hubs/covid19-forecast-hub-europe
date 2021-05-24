@@ -1,0 +1,36 @@
+name: "Create evaluation reports"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 9 * * 0"
+jobs:
+  evaluation_reports:
+    runs-on: ubuntu-20.04
+    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
+    steps:
+    - uses: actions/checkout@v2
+    - uses: r-lib/actions/setup-r@v1
+
+    - name: Install system dependencies
+      run: sudo apt-get install -y libssl-dev libcurl4-openssl-dev pandoc
+
+    - name: Install R dependencies
+      run: |
+       Rscript -e 'install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "purrr", "data.table", "readr"))'
+       Rscript -e 'remotes::install_github("reichlab/covidHubUtils")'
+       Rscript -e 'remotes::install_github("epiforecasts/scoringutils")'
+
+    - name: Create evaluation reports
+      run: Rscript 'code/reports/compile-evaluation-reports.r'
+        
+    - name: Push to web site
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'html/.'
+        destination_repo: 'epiforecasts/covid19-forecast-hub-europe-website'
+        destination_folder: 'reports'
+        user_email: 'action@github.com'
+        user_name: 'GitHub Action - evaluation reports'
+        commit_message: 'Evaluation reports'
