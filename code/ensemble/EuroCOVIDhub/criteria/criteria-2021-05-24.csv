@@ -161,6 +161,8 @@ epiMOX-SUIHTER,inc case,IT,TRUE,FALSE,TRUE,FALSE
 epiMOX-SUIHTER,inc death,IT,TRUE,FALSE,TRUE,FALSE
 FIAS_FZJ-Epi1Ger,inc case,DE,TRUE,TRUE,TRUE,TRUE
 FIAS_FZJ-Epi1Ger,inc death,DE,TRUE,TRUE,TRUE,TRUE
+HZI-AgeExtendedSEIR,inc case,DE,TRUE,TRUE,TRUE,TRUE
+HZI-AgeExtendedSEIR,inc death,DE,TRUE,TRUE,TRUE,TRUE
 IEM_Health-CovidProject,inc case,AT,TRUE,TRUE,TRUE,TRUE
 IEM_Health-CovidProject,inc case,BE,TRUE,TRUE,TRUE,TRUE
 IEM_Health-CovidProject,inc case,BG,TRUE,TRUE,TRUE,TRUE
@@ -414,6 +416,8 @@ LANL-GrowthRate,inc death,RO,TRUE,TRUE,TRUE,TRUE
 LANL-GrowthRate,inc death,SE,TRUE,TRUE,TRUE,TRUE
 LANL-GrowthRate,inc death,SI,TRUE,TRUE,TRUE,TRUE
 LANL-GrowthRate,inc death,SK,TRUE,TRUE,TRUE,TRUE
+MIMUW-StochSEIR,inc case,PL,TRUE,TRUE,TRUE,TRUE
+MIMUW-StochSEIR,inc death,PL,TRUE,TRUE,TRUE,TRUE
 MIT_CovidAnalytics-DELPHI,inc case,DE,TRUE,TRUE,TRUE,TRUE
 MIT_CovidAnalytics-DELPHI,inc case,PL,TRUE,TRUE,TRUE,TRUE
 MIT_CovidAnalytics-DELPHI,inc death,DE,TRUE,TRUE,TRUE,TRUE
