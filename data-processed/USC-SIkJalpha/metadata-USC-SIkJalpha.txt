@@ -21,8 +21,7 @@ methods_long: We use our own epidemic model called SI-kJalpha, preliminary versi
   and generate 100 days of forecasts of reported cases and deaths for all the states
   in the US. The total execution time for 184 countries is 11.83s and for more than
   3000 US counties is 30s. Despite being fast, the accuracy of our forecasts is
-  on par with the state-of-the-art as demonstrated by our evaluiation and benchmarking page:
-  https://scc-usc.github.io/covid19-forecast-bench
+  on par with the state-of-the-art as demonstrated by our evaluation and benchmarking page: https://scc-usc.github.io/covid19-forecast-bench
   Our model is able to quickly adapt to changing trends, and the variations in parameters
   during different times/policies allow us to forecast different scenarios such as
   what would happen if we were to disregard social distancing suggestions.
