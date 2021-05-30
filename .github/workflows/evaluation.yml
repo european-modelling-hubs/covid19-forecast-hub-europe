@@ -17,8 +17,9 @@ jobs:
 
     - name: Install R dependencies
       run: |
-       Rscript -e 'install.packages(c("here", "scoringutils", "dplyr", "data.table", "lubridate", "devtools", "tidyr", "purrr", "readr"))'
+       Rscript -e 'install.packages(c("here", "dplyr", "data.table", "lubridate", "devtools", "tidyr", "purrr", "readr"))'
        Rscript -e 'devtools::install_github("reichlab/covidHubUtils")'
+       Rscript -e 'remotes::install_github("epiforecasts/scoringutils")'
 
     - name: Score forecasts
       run: Rscript 'code/evaluation/score_models.r'
