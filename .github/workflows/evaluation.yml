@@ -20,8 +20,8 @@ jobs:
        Rscript -e 'install.packages(c("here", "scoringutils", "dplyr", "data.table", "lubridate", "devtools", "tidyr", "purrr", "readr"))'
        Rscript -e 'devtools::install_github("reichlab/covidHubUtils")'
 
-    - name: Create ensembles
-      run: Rscript 'code/evaluation/score_models.R'
+    - name: Score forecasts
+      run: Rscript 'code/evaluation/score_models.r'
 
     - name: Commit files
       env:
