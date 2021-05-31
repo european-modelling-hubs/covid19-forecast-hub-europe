@@ -54,7 +54,8 @@ for (i in 1:nrow(hub_locations_ecdc)) {
                     params = list(data = data,
                                   location_code = country_code,
                                   location_name = country,
-                                  report_date = report_date),
+                                  report_date = report_date,
+                                  restrict_weeks = 4),
                     output_file =
                       here::here("html",
                                  paste0("evaluation-report-", report_date,
@@ -65,7 +66,8 @@ for (i in 1:nrow(hub_locations_ecdc)) {
 rmarkdown::render(here::here("code", "reports", "evaluation",
                              "evaluation-report.Rmd"),
                   params = list(data = data,
-                                report_date = report_date),
+                                report_date = report_date,
+                                restrict_weeks = 4),
                   output_format = "html_document",
                   output_file =
                     here::here("html", paste0("evaluation-report-", report_date,

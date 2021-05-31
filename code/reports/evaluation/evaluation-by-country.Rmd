@@ -5,6 +5,7 @@ params:
   location_code: "DE"
   location_name: "Germany"
   data: NULL
+  restrict_weeks: 4
 output:
   html_document:
     theme: yeti
@@ -37,6 +38,8 @@ include_countries <- include_forecast_plot ||
   include_forecast_plot || 
   include_avail_forecasts || 
   include_ranks_over_time
+
+restrict_weeks <- params$restrict_weeks
 ```
 
 
@@ -51,7 +54,7 @@ horizons <- data %>%
 horizons <- horizons[as.integer(horizons) < 5]
 horizons <- horizons[order(as.integer(horizons))]
  
-summarise_by = c("model", "target_variable")
+summarise_by <- c("model", "target_variable")
 
 target_variables <- c(Cases = "inc case", Deaths = "inc death")
 ```
@@ -66,7 +69,7 @@ out <- paste0("\n\n## Forecast visualisation (", params$location_name,
               ") {.tabset .tabset_fade}\n\n")
 
 out <- c(out, "Forecast visualisations. The date of the tab marks the date on",
-         "which a forecast was made.\n\n")
+         "which a forecast was made (only last 4 weeks shown).\n\n")
 ```
 
 `r paste(if (include_forecast_plot) knit(text = out), collapse = '\n\n')`
@@ -89,7 +92,9 @@ out <- c(out, knit_child(here::here("code", "reports", "evaluation",
 ```{r ranking-header, include = FALSE, eval = include_ranking}
 out <- paste0("\n\n## Forecast scores (", loc, ") {.tabset .tabset-fade}\n\n")
 
-out <- c(out, "Scores separated by target and forecast horizon.\n\n")
+out <- c(out, "Scores separated by target and forecast horizon.",
+	 "Only models with submission in the last", restrict_weeks,
+	 "are shown.\n\n")
 ```
 `r paste(if (include_ranking) knit(text = out, quiet = TRUE), collapse = '\n\n')`
 
@@ -98,7 +103,7 @@ out <- NULL
 for (variable in names(target_variables)) {
   out <- c(out, paste("\n\n###", variable, " {.tabset .tabset-fade}\n\n"))
   for (this_horizon in horizons) {
-    filter_list = list(paste0("target_variable == '",
+    filter_list <- list(paste0("target_variable == '",
                               target_variables[[variable]], "'"),
                      "type != 'point'",
                      paste0("horizon == ", this_horizon),
@@ -122,9 +127,10 @@ for (variable in names(target_variables)) {
 
 ## Evaluation metrics
 
- - Relative skill is a metric based on the weighted interval score (WIS) that is using a 'pairwise comparison tournament'. All pairs of forecasters are compared against each other in terms of the weighted interval score. The mean score of both models based on the set of common targets for which both models have made a prediction are calculated to obtain mean score ratios. The relative skill is the geometric mean of these mean score ratios. Smaller values are better and a value smaller than one means that the model beats the average forecasting model. 
- - The weighted interval score is a proper scoring rule (meaning you can't cheat it) suited to scoring forecasts in an interval format. It has three components: sharpness, underprediction and overprediction. Sharpness is the width of the prediction interval. Over- and underprediction only come into play if the prediction interval does not cover the true value. They are the absolute value of the difference between the upper or lower bound of the prediction interval (depending on whether the forecast is too high or too low). 
- - coverage deviation is the average difference between nominal and empirical interval coverage. Say the 50 percent prediction interval covers only 20 percent of all true values, then the coverage deviation is 0.5 - 0.2 = -0.3. The coverage deviation value in the table is calculated by averaging over the coverage deviation calculated for all possible prediction intervals. If the value is negative you have covered less then you should. If it is positve, then the forecasts could be a little more confident. 
+ - The first column (n) gives the number of forecasts included in the evaluation 
+ - Relative skill (rel_skill) is a metric based on the weighted interval score (WIS) that is using a 'pairwise comparison tournament'. All pairs of forecasters are compared against each other in terms of the weighted interval score. The mean score of both models based on the set of common targets for which both models have made a prediction are calculated to obtain mean score ratios. The relative skill is the geometric mean of these mean score ratios. Smaller values are better and a value smaller than one means that the model beats the average forecasting model. 
+ - Coverage (50% Cov. / 95% Cov.) is the proportion of observations that fell within a given prediction interval. Ideally, a forecast model would achieve 50% coverage of 0.50 (i.e., 50% of observations fall within the 50% prediction interval) and 95% coverage of 0.95 (i.e., 95% of observations fall within the 95% prediction interval). Values of coverage greater than these nominal values indicate that the forecasts are _underconfident_, i.e. prediction intervals tend to be too wide, wherease values of coverage smaller than these nominal values indicate that the forecasts are _overconfident_, i.e. prediction intervals tend to be too narrow.
+ - The weighted interval score (wis) is a [proper scoring rule](https://en.wikipedia.org/wiki/Scoring_rule#Propriety) (i.e., it cannot be "cheated") that is suited to scoring forecasts in an interval format. It has three components: sharpness, underprediction and overprediction. Sharpness is the width of the prediction interval. Over- and underprediction (overpred/underpred) only come into play if the prediction interval does not cover the true value. They are the absolute value of the difference between the upper or lower bound of the prediction interval (depending on whether the forecast is too high or too low). 
  - bias is a measure between -1 and 1 that expresses the tendency to underpredict (-1) or overpredict (1). In contrast to the over- and underprediction components of the WIS it is bound between -1 and 1 and cannot go to infinity. It is therefore less susceptible to outliers. 
  - aem is the absolute error of the median forecasts. A high aem means the median forecasts tend to be far away from the true values. 
 

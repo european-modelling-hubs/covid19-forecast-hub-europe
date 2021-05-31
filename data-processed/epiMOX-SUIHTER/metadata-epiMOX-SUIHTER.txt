@@ -1,0 +1,10 @@
+team_name: epiMOX
+model_name: SUIHTER
+model_abbr: epiMOX-SUIHTER
+model_contributors: Giovanni Ardenghi (Politecnico di Milano) <giovanni.ardenghi@polimi.it>, Luca Dede' (Politecnico di Milano) <luca.dede@polimi.it>, Nicola Parolini (Politecnico di Milano) <nicola.parolini@polimi.it>, Alfio Quarteroni (Politecnico di Milano, EPFL) <alfio.quarteroni@polimi.it>
+website_url: https://www.epimox.polimi.it
+license: mit
+team_model_designation: primary
+methods: Compartmental model SUIHTER
+methods_long: "The results are obtained using the compartmental model SUIHTER which simulates the evolution of COVID-19 epidemic in Italy. SUIHTER comprises the following compartments: Susceptibles(S), Undetected(U), Isolated(I), Hospitalized(H), Threatened(T), Extinct(E), Recovered(R). The model parameters are calibrated  thanks to a  combination of the least  squares  method  with the  Markov Chain Monte Carlo (MCMC) method. The current version of the model accounts for two additional compartments collecting individuals who have received the first and the second dose of vaccine, respectively. Different NPIs and vaccination scenarios can be accounted for in the model forecast."
+citation: https://arxiv.org/abs/2101.03369
