@@ -1,6 +1,6 @@
-forecast_date	target_variable	location	location_name	problem
-2021-05-24	case	FR	France	Removed double counted cases
-2021-05-24	case	IE	Ireland	No data reported
-2021-05-24	case	IE	Ireland	No data reported
-2021-05-31	death	IE	Ireland	No data reported
-2021-05-31	death	IE	Ireland	No data reported
+forecast_date,target_variable,location,location_name,problem
+2021-05-24,case,FR,France,Removed double counted cases
+2021-05-24,case,IE,Ireland,No data reported
+2021-05-24,case,IE,Ireland,No data reported
+2021-05-31,death,IE,Ireland,No data reported
+2021-05-31,death,IE,Ireland,No data reported

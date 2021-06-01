@@ -14,4 +14,5 @@ anomalies <- tribble(
 )
 
 vroom_write(anomalies,
-            here("data-truth", "anomalies", "anomalies.csv"))
+            here("data-truth", "anomalies", "anomalies.csv"),
+            delim = ",")
