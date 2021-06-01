@@ -14,22 +14,6 @@
         "citation": "Giudici, P., Tarantino, B., A Bayesian time-dependent framework to assess the effectiveness of policy measures on COVID-19 counts. Working paper 2021.",
         "methods_long": "Our model accounts for uncertainty via a Bayesian framework, for time-dependence on past COVID-19 counts via an INGARCH structure and non-linearity via time-varying coefficients. In addition, time-lagged NPI covariates have been coded and incorporated into the Bayesian framework to assess whether policy measures can effectively reduce positive counts."
     },
-    "Priesemann-bayes": {
-        "team_name": "Priesemann Group, MPI-DS",
-        "model_name": "Bayesian SIR",
-        "model_abbr": "Priesemann-bayes",
-        "model_contributors": "Sebastian B. Mohr (Max Planck Institute for Dynamics and Self-Organization)<sebastian.mohr@ds.mpg.de>, Jonas Dehning (Max Planck Institute for Dynamics and Self-Organization)<jonas.dehning@ds.mpg.de>, Viola Priesemann (Max Planck Institute for Dynamics and Self-Organization)<viola.priesemann@ds.mpg.de>",
-        "website_url": "https://github.com/Priesemann-Group/covid19_inference_forecast",
-        "license": "lgpl-3.0",
-        "team_model_designation": "primary",
-        "methods": "Bayesian inference of SIR-dynamics",
-        "institution_affil": "Max Planck Institute for Dynamics and Self-Organization",
-        "repo_url": "https://github.com/Priesemann-Group/covid19-forecast-hub-europe",
-        "twitter_handles": "ViolaPriesemann, JonasDehning",
-        "data_inputs": "JHU CSSE (confirmed cases; reported fatalities)",
-        "citation": "https://science.sciencemag.org/content/369/6500/eabb9789",
-        "methods_long": "This model simulates SIR-dynamics with a log-normal convolutions of infections to obtain the delayed reported cases. Parameters of the model are sampled with Hamiltonian Monte-Carlo using the PyMC3 Python library. We assume that the infection rate can change every week, with a standard deviation that is also an  optimized parameter. When new governmental restrictions are enacted or lifted, we  include a small prior to the change of the infection rate."
-    },
     "UpgUmibUsi-MultiBayes": {
         "team_name": "UNIPG_UNIMIB_USI_UNINSUBRIA",
         "model_name": "MULTINOMIAL_BAYESIAN",
@@ -187,7 +171,7 @@
         "methods": "SEIAR model with A compartment of absent unobserved infected estimated from hospital data with incorporated mobility data dependence; optimized to the compartment of all exposed (unobserved included)",
         "team_funding": "MUNI/11/02202001/2020",
         "data_inputs": "UZIS data for predictive models (anonymized set modely_05_datumy.csv of confirmed subjects https://onemocneni-aktualne.mzcr.cz/api/account/dokumentace), google mobility reports (https://github.com/ActiveConclusion/COVID19_mobility/tree/master/google_reports)",
-        "methods_long": "This is a model based on a mechanistic compartmental approach, where some parameters are taken from literature, some parameters are estimated from an anonymized dataset of confirmed subjects. It estimates moving ascertainment rate using data of hospitalized subjects (using a proportion of cases not caught before admission to hospital), so it estimates not only the observed part of the epidemic (compartment I) but also the undetected absent infected (compartment A). The model incorporates transmission rate estimate dependence on mobility data and optimizes affected clusters' size to estimate all exposed individuals using the moving ascertainment rate estimate. To model deaths, we incorporated fixed time delay from positivity report to death estimated from data. Currently, we assume around 0.44% IFR, a simple division of the age structure 65+/65- is used. The model estimates continuously from the first outbreak (spring 2020), the prevalence corresponds to the Czech prevalence study from May 2020 as well as to December community test screenings. We incorporated dominance of b.1.1.7 at the beginning of the year 2021 by multiplying the transmission rate by 1.5 (the estimate is based on data that reveal evidence on its dependence on the number of risk contacts - study PAQ research https://zivotbehempandemie.cz/kontakty or mobility data). With the dominance of b.1.1.7 we increased the probability of hospitalization by factor 1.3 and the conditional probability of death in case of hospitalization by factor 1.1. There is a significant decline of death rate of 65+ cohort in hospitals from the second half of March. We started to adjust its value to estimated 0.36% daily decrease based on fit to data of hospitalized positive subjects (starting form submission 2021-05-10). We submit a single calibration to forecast deaths and cases while the prediction intervals are estimated using time series decomposition. Especially, we subtract a deterministic trend given by the SEIAR model."
+        "methods_long": "This is a model based on a mechanistic compartmental approach, where some parameters are taken from literature, some parameters are estimated from an anonymized dataset of confirmed subjects. It estimates moving ascertainment rate using data of hospitalized subjects (using a proportion of cases not caught before admission to hospital), so it estimates not only the observed part of the epidemic (compartment I) but also the undetected absent infected (compartment A). The model incorporates transmission rate estimate dependence on mobility data and immunization after vaccination and optimizes affected clusters' size to estimate all exposed individuals using the moving ascertainment rate estimate. To model deaths, we incorporated fixed time delay from positivity report to death estimated from data. Currently, we assume around 0.44% IFR, a simple division of the age structure 65+/65- is used. The model estimates continuously from the first outbreak (spring 2020), the prevalence corresponds to the Czech prevalence study from May 2020 as well as to December community test screenings. We incorporated dominance of b.1.1.7 at the beginning of the year 2021 by multiplying the transmission rate by 1.5 (the estimate is based on data that reveal evidence on its dependence on the number of risk contacts - study PAQ research https://zivotbehempandemie.cz/kontakty or mobility data). With the dominance of b.1.1.7 we increased the probability of hospitalization by factor 1.3 and the conditional probability of death in case of hospitalization by factor 1.1. There is a significant decline of death rate of 65+ cohort in hospitals from the second half of March. We started to adjust its value to estimated 0.36% daily decrease based on fit to data of hospitalized positive subjects (starting form submission 2021-05-10). We submit a single calibration to forecast deaths and cases while the prediction intervals are estimated using time series decomposition. Especially, we subtract a deterministic trend given by the SEIAR model."
     },
     "epiforecasts-EpiNow2": {
         "team_name": "Epiforecasts / London School of Hygiene and Tropical Medicine",
@@ -394,6 +378,20 @@
         "methods": "Deterministic SEIR type model",
         "methods_long": "This model is an extended SEIR model with additional compartments for the hospitalized, intensive unit, long-COVID, and death. The model is also developed as an age-structured model. The model is fitted to reported cases and reported cumulative deaths. The fitted parameters are used to predict the number of cases and deaths."
     },
+    "CovidMetrics-epiBATS": {
+        "team_name": "Univertity of Cologne Covid Metrics",
+        "model_name": "epiBATS",
+        "model_abbr": "CovidMetrics-epiBATS",
+        "model_contributors": "Arne Rodloff, Tom Zimmermann",
+        "institution_affil": "University of Cologne",
+        "license": "other",
+        "team_model_designation": "primary",
+        "website_url": "https://tomz.shinyapps.io/coronaLandkreise/",
+        "data_inputs": "cases (RKI)",
+        "methods": "Forecasts based on TBATS models (DeLivera, Hyndman, Snyder 2011) and updated daily for German states. Final models are based on comparing multiple models and selecting the best-performing (AIC).",
+        "methods_long": "Forecasts are based on TBATS - models (DeLivera, Hyndman und Snyder (2011)) and are updated daily for each German state. Final models are based on comparing multiple models and selecting the best-performing model based on AIC in historical data. The models forecast 7-day incidence and we convert forecasts back into number of daily new cases. The forecasting model is the same that is used at our website below.",
+        "citation": "https://tomz.shinyapps.io/coronaLandkreise/"
+    },
     "ILM-EKF": {
         "team_name": "ILM",
         "model_name": "EKF",
@@ -515,6 +513,22 @@
         "methods": "SECIR type model",
         "methods_long": "We integrate an adapted mechanistic epidemiologic model of the SECIR type into Input-Output Non-Linear Dynamical Systems (IO-NLDS) serving as hidden layers, i.e. the true dynamics cannot directly be observed. Thereby, we include an asymptomatic compartment, a compartment of patients requiring intensive care, and subdivide most of the compartments into three sub-compartments to model time delays. Changing factors of the system due to non-pharmaceutical interventions, changing age-structure of infected population, and changes in testing policy are imposed as inputs to the system. We then estimate parameters by a knowledge synthesis process considering parameter ranges derived from external studies and public data. Specifically, we use Bayesian inference for the parameters\u2019 estimation, which can also be time-dependent. Public data is translated to model outputs not identical but related to hidden states of the model. The model is fitted to data by a full information approach.",
         "twitter_handles": "GenStatLeipzig"
+    },
+    "DSMPG-bayes": {
+        "team_name": "Priesemann Group, MPI-DS",
+        "model_name": "Bayesian SIR",
+        "model_abbr": "DSMPG-bayes",
+        "model_contributors": "Sebastian B. Mohr (Max Planck Institute for Dynamics and Self-Organization)<sebastian.mohr@ds.mpg.de>, Jonas Dehning (Max Planck Institute for Dynamics and Self-Organization)<jonas.dehning@ds.mpg.de>, Viola Priesemann (Max Planck Institute for Dynamics and Self-Organization)<viola.priesemann@ds.mpg.de>",
+        "website_url": "https://github.com/Priesemann-Group/covid19_inference_forecast",
+        "license": "lgpl-3.0",
+        "team_model_designation": "primary",
+        "methods": "Bayesian inference of SIR-dynamics",
+        "institution_affil": "Max Planck Institute for Dynamics and Self-Organization",
+        "repo_url": "https://github.com/Priesemann-Group/covid19-forecast-hub-europe",
+        "twitter_handles": "ViolaPriesemann, JonasDehning",
+        "data_inputs": "JHU CSSE (confirmed cases; reported fatalities)",
+        "citation": "https://science.sciencemag.org/content/369/6500/eabb9789",
+        "methods_long": "This model simulates SIR-dynamics with a log-normal convolutions of infections to obtain the delayed reported cases. Parameters of the model are sampled with Hamiltonian Monte-Carlo using the PyMC3 Python library. We assume that the infection rate can change every week, with a standard deviation that is also an  optimized parameter. When new governmental restrictions are enacted or lifted, we  include a small prior to the change of the infection rate."
     },
     "RobertWalraven-ESG": {
         "team_name": "Robert Walraven",
