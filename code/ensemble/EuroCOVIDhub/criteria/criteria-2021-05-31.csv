@@ -270,6 +270,8 @@ ITWW-county_repro,inc death,DE,TRUE,TRUE,TRUE,TRUE
 ITWW-county_repro,inc death,PL,TRUE,TRUE,TRUE,TRUE
 Karlen-pypm,inc case,DE,TRUE,TRUE,TRUE,TRUE
 Karlen-pypm,inc death,DE,TRUE,TRUE,TRUE,TRUE
+MIMUW-StochSEIR,inc case,PL,TRUE,TRUE,TRUE,TRUE
+MIMUW-StochSEIR,inc death,PL,TRUE,TRUE,TRUE,TRUE
 MIT_CovidAnalytics-DELPHI,inc case,DE,TRUE,TRUE,TRUE,TRUE
 MIT_CovidAnalytics-DELPHI,inc case,PL,TRUE,TRUE,TRUE,TRUE
 MIT_CovidAnalytics-DELPHI,inc death,DE,TRUE,TRUE,TRUE,TRUE
