@@ -5,13 +5,15 @@ library(dplyr)
 library(tibble)
 
 anomalies <- tribble(
-  ~forecast_date, ~target_variable, ~location, ~location_name, ~problem,
-  "2021-05-24", "case", "FR", "France", "Removed double counting",
-  "2021-05-24", "case", "IE", "Ireland", "No data reported",
-  "2021-05-24", "death", "IE", "Ireland", "No data reported",
-  "2021-05-31", "case", "IE", "Ireland", "No data reported",
-  "2021-05-31", "death", "IE", "Ireland", "No data reported"
-)
+  ~target_end_date, ~target_variable, ~location, ~location_name, ~anomaly,
+  "2021-03-06", "inc case", "ES", "Spain", "Negative case reporting",
+  "2021-05-22", "inc case", "FR", "France", "Removed double counting",
+  "2021-05-22", "inc case", "IE", "Ireland", "No data reported",
+  "2021-05-22", "inc death", "IE", "Ireland", "No data reported",
+  "2021-05-29", "inc case", "IE", "Ireland", "No data reported",
+  "2021-05-29", "inc death", "IE", "Ireland", "No data reported"
+) %>%
+  mutate(target_end_date = as.Date(target_end_date))
 
 vroom_write(anomalies,
             here("data-truth", "anomalies", "anomalies.csv"),
