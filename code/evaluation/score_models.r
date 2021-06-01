@@ -123,7 +123,7 @@ truth <- left_join(raw_truth, anomalies,
                                    "location", "location_name",
                                    "target_end_date")) %>%
   filter(is.na(anomaly)) %>%
-  mutate(anomaly = NULL)
+  select(-anomaly)
 
 setDT(truth)
 truth[, model := NULL]
