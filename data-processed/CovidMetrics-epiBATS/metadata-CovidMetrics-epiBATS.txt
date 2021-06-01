@@ -11,7 +11,7 @@ website_url: https://tomz.shinyapps.io/coronaLandkreise/
 
 data_inputs: cases (RKI)
 
-methods: Forecasts are based on TBATS - models (DeLivera, Hyndman und Snyder (2011)) and are updated daily for each German state. Final models are based on comparing multiple models and selecting the best-performing model based on AIC in historical data.
+methods: Forecasts based on TBATS models (DeLivera, Hyndman, Snyder 2011) and updated daily for German states. Final models are based on comparing multiple models and selecting the best-performing (AIC).
 
 methods_long: Forecasts are based on TBATS - models (DeLivera, Hyndman und Snyder (2011)) and are updated daily for each German state. Final models are based on comparing multiple models and selecting the best-performing model based on AIC in historical data. The models forecast 7-day incidence and we convert forecasts back into number of daily new cases. The forecasting model is the same that is used at our website below.
 
