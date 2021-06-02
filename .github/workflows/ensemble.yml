@@ -8,6 +8,8 @@ jobs:
   ensemble:
     runs-on: ubuntu-20.04
     if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
+    env:
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
     steps:
     - uses: actions/checkout@master
     - uses: r-lib/actions/setup-r@v1
@@ -17,8 +19,8 @@ jobs:
 
     - name: Install R dependencies
       run: |
-       Rscript -e 'install.packages(c("here", "vroom", "dplyr", "tibble", "lubridate", "devtools"))'
-       Rscript -e 'devtools::install_github("reichlab/covidHubUtils")'
+       Rscript -e 'install.packages(c("here", "vroom", "dplyr", "tibble", "lubridate", "remotes"))'
+       Rscript -e 'remotes::install_github("reichlab/covidHubUtils")'
 
     - name: Create ensembles
       run: Rscript 'code/ensemble/EuroCOVIDhub/create-weekly-ensemble.R'
