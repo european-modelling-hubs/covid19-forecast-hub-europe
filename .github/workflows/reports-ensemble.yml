@@ -7,6 +7,8 @@ jobs:
   ensemble_report:
     runs-on: ubuntu-20.04
     if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
+    env:
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
     steps:
     - uses: actions/checkout@v2
     - uses: r-lib/actions/setup-r@v1
@@ -22,7 +24,7 @@ jobs:
 
     - name: Create ensemble reports
       run: Rscript 'code/reports/compile-ensemble-report.r'
-        
+
     - name: Push to web site
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
