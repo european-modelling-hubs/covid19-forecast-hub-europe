@@ -17,9 +17,8 @@ all_methods <- sub("^.*-", "", dir(here("ensembles", "data-processed")))
 
 # Run all ensembles for all past dates ------------------------------------
 ensembles <- run_multiple_ensembles(forecast_dates = all_dates,
-                                    methods = "relative_skill", # all_methods,
+                                    methods = all_methods, # all_methods,
                                     exclude_models = exclude_by_date,
-                                    by_horizon = FALSE,
                                     verbose = TRUE) %>%
   transpose() %>%
   simplify_all()
