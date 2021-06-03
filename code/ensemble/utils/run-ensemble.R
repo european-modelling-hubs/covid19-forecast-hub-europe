@@ -36,6 +36,7 @@ run_ensemble <- function(method = c("mean", "median", "relative_skill"),
                          exclude_models = NULL,
                          return_criteria = TRUE,
                          evaluation_date,
+                         by_horizon = FALSE,
                          continuous_weeks = 4,
                          verbose = FALSE) {
 
@@ -119,6 +120,7 @@ run_ensemble <- function(method = c("mean", "median", "relative_skill"),
     ensemble <- create_ensemble_relative_skill(forecasts = forecasts,
                                                evaluation_date = evaluation_date,
                                                continuous_weeks = continuous_weeks,
+                                               by_horizon = by_horizon,
                                                return_criteria = return_criteria,
                                                verbose = verbose)
     # Update model inclusion criteria

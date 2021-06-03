@@ -18,8 +18,9 @@ source(here("code", "ensemble", "utils", "run-ensemble.R"))
 run_multiple_ensembles <- function(forecast_dates,
                                    methods,
                                    exclude_models = NULL,
-                                   continuous_weeks = 4,
                                    return_criteria = TRUE,
+                                   continuous_weeks = 4,
+                                   by_horizon = FALSE,
                                    verbose = FALSE) {
 
   # Match methods and dates
@@ -34,8 +35,9 @@ run_multiple_ensembles <- function(forecast_dates,
                     ~ safe_run_ensemble(method = .x,
                                         forecast_date = .y,
                                         exclude_models = exclude_models,
-                                        return_criteria = TRUE,
+                                        return_criteria = return_criteria,
                                         continuous_weeks = continuous_weeks,
+                                        by_horizon = by_horizon,
                                         verbose = verbose))
 
   # Add descriptive name

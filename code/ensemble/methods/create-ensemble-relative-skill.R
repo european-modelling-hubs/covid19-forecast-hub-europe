@@ -7,12 +7,14 @@
 #' @param forecasts forecasting models used for ensemble
 #' @param forecast_date date with saved evaluation csv of forecasts
 #' @param continuous_weeks include only forecasts with a history of evaluation
+#' @param by_horizon weight using relative skill by horizon, rather than average
 
 library(dplyr)
 
 create_ensemble_relative_skill <- function(forecasts,
                                            evaluation_date,
                                            continuous_weeks = 4,
+                                           by_horizon = FALSE,
                                            return_criteria = FALSE,
                                            verbose = FALSE) {
 
@@ -38,26 +40,37 @@ create_ensemble_relative_skill <- function(forecasts,
              continuous_weeks >= !!continuous_weeks &
              !is.na(relative_skill))
 
+  # Average skill over all horizons (default)
+  if (!by_horizon) {
+    skill <- skill %>%
+      group_by(model, location, target_variable) %>%
+      summarise(relative_skill = mean(relative_skill, na.rm = TRUE),
+                .groups = "drop")
+  }
+
 # Find weights ---------------------------------------------
   # Take inverse of relative skill
   skill <- skill %>%
     mutate(inv_skill = ifelse(relative_skill > 0,
                               1/relative_skill, 0))
 
-  # Weights for each model, horizon, location, target
-  skill <- skill %>%
-    group_by(target_variable, location, horizon) %>%
-    mutate(skill_weight = inv_skill / sum(inv_skill))
+  # Weights for each model, by location, target (and horizon)
+  groups <- c("target_variable", "location")
+  if (by_horizon) {
+    groups <- c(groups, "horizon")
+  }
+
+  weights <- skill %>%
+    group_by(across(all_of(groups))) %>%
+    mutate(sum_inv_skill = sum(inv_skill, na.rm = TRUE),
+           skill_weight = inv_skill / sum_inv_skill)
 
   if (verbose) {message(paste0("Included ",
-                               length(unique(skill$model)), " models"))}
-
+                               length(unique(weights$model)), " models"))}
 
 # Sum weights for ensemble ------------------------------------------------
-  # Join weights to each forecast
-  forecast_skill <- left_join(forecasts, skill,
-                              by = c("model", "target_variable",
-                                     "location", "horizon")) %>%
+  join <- c(groups, "model")
+  forecast_skill <- left_join(forecasts, weights, by = join) %>%
     filter(!is.na(skill_weight)) %>%
     mutate(weighted_value = value * skill_weight)
 
@@ -69,7 +82,7 @@ create_ensemble_relative_skill <- function(forecasts,
               .groups = "drop")
 
   if (return_criteria) {
-    return(list("weights" = skill,
+    return(list("weights" = weights,
                 "ensemble" = weighted_ensemble))
   }
 
