@@ -17,14 +17,17 @@ all_methods <- sub("^.*-", "", dir(here("ensembles", "data-processed")))
 
 # Run all ensembles for all past dates ------------------------------------
 ensembles <- run_multiple_ensembles(forecast_dates = all_dates,
-                                    methods = all_methods,
-                                    exclude_models = exclude_by_date) %>%
+                                    methods = "relative_skill", # all_methods,
+                                    exclude_models = exclude_by_date,
+                                    by_horizon = FALSE,
+                                    verbose = TRUE) %>%
   transpose() %>%
   simplify_all()
+
 results <- ensembles$result %>%
   compact()
 
-# Save in code/ensemble/forecasts/model directory as forecast_date.csv
+# Save in ensemble/data-processed/model
 res <- lapply(all_methods, function(x)
   suppressWarnings(dir.create(here("ensembles", "data-processed",
                                    paste0("EuroCOVIDhub-", x)),
@@ -38,32 +41,7 @@ walk(results,
                                       .x$method, ".csv")),
                    delim = ","))
 
-
-# Run one ensemble over all past dates ---------------------------
-# Define method
-single_method <- "relative_skill"
-
-# Run
-ensembles <- run_multiple_ensembles(forecast_dates = all_dates,
-                                    methods = single_method,
-                                    exclude_models = exclude_by_date,
-                                    return_criteria = TRUE,
-                                    verbose = TRUE) %>%
-  transpose() %>%
-  simplify_all()
-results <- ensembles$result %>%
-  compact()
-
-# Save
-walk(results,
-     ~ vroom_write(x = .x$ensemble,
-                   path = here("ensembles", "data-processed",
-                               paste0("EuroCOVIDhub-", .x$method),
-                               paste0(.x$forecast_date, "-EuroCOVIDhub-",
-                                      .x$method, ".csv")),
-                   delim = ","))
-
-# Save weights
+# Save weights in ensemble/weights/model
 walk(results,
      ~ vroom_write(x = .x$weights,
                    path = here("ensembles", "weights",
