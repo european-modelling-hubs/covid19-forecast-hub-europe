@@ -31,12 +31,12 @@ library(covidHubUtils)
 source(here("code", "ensemble", "utils", "use-ensemble-criteria.R"))
 source(here("code", "ensemble", "utils", "format-ensemble.R"))
 
-run_ensemble <- function(method = c("mean", "median", "relative_skill"),
+run_ensemble <- function(method = c("mean", "median", "relative_skill",
+                                    "relative_skill_by_horizon"),
                          forecast_date,
                          exclude_models = NULL,
                          return_criteria = TRUE,
                          evaluation_date,
-                         by_horizon = FALSE,
                          continuous_weeks = 4,
                          verbose = FALSE) {
 
@@ -111,12 +111,13 @@ run_ensemble <- function(method = c("mean", "median", "relative_skill"),
   }
 
   # Relative skill
-  if (method %in% "relative_skill") {
+  if (grepl("^relative_skill", method)) {
     source(here("code", "ensemble", "methods",
                 "create-ensemble-relative-skill.R"))
     if (missing(evaluation_date)) {
       evaluation_date <- forecast_date
     }
+    by_horizon <- grepl("_by_horizon$", method)
     ensemble <- create_ensemble_relative_skill(forecasts = forecasts,
                                                evaluation_date = evaluation_date,
                                                continuous_weeks = continuous_weeks,

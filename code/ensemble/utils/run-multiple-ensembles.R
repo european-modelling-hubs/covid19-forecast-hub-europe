@@ -20,7 +20,6 @@ run_multiple_ensembles <- function(forecast_dates,
                                    exclude_models = NULL,
                                    return_criteria = TRUE,
                                    continuous_weeks = 4,
-                                   by_horizon = FALSE,
                                    verbose = FALSE) {
 
   # Match methods and dates
@@ -37,7 +36,6 @@ run_multiple_ensembles <- function(forecast_dates,
                                         exclude_models = exclude_models,
                                         return_criteria = return_criteria,
                                         continuous_weeks = continuous_weeks,
-                                        by_horizon = by_horizon,
                                         verbose = verbose))
 
   # Add descriptive name
