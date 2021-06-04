@@ -12,7 +12,6 @@ options(knitr.duplicate.label = "allow")
 
 report_date <-
   lubridate::floor_date(lubridate::today(), "week", week_start = 7) + 1
-locations <- hub_locations_ecdc
 
 suppressWarnings(dir.create(here::here("html")))
 
