@@ -9,7 +9,6 @@ library(readr)
 
 ## only evaluate if the last 4 weeks hae been submitted
 restrict_weeks <- 4
-locations <- hub_locations_ecdc
 
 suppressWarnings(dir.create(here::here("evaluation")))
 
