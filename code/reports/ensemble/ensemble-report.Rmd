@@ -35,10 +35,13 @@ restrict_weeks <- params$restrict_weeks
 
 ```{r load-data}
 # load forecasts ---------------------------------------------------------------
-forecasts <- load_forecasts(source = "local_hub_repo",
-                            hub_repo_path = here(),
-                            hub = "ECDC") %>%
-  filter(model == "EuroCOVIDhub-ensemble")
+forecasts <- load_forecasts(
+  models = "EuroCOVIDhub-ensemble",
+  source = "local_hub_repo",
+  hub_repo_path = here(),
+  hub = "ECDC"
+)
+
 setDT(forecasts)
 # set forecast date to corresponding submission date
 forecasts[, forecast_date :=
