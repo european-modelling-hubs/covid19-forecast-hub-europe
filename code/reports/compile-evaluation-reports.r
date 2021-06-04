@@ -29,16 +29,19 @@ forecasts <- forecasts[forecast_date <= last_forecast_date]
 setnames(forecasts, old = c("value"), new = c("prediction"))
 
 ## load truth data -------------------------------------------------------------
-raw_truth <- load_truth(truth_source = "JHU",
-                        target_variable = c("inc case", "inc death"),
-                        hub = "ECDC"))
+raw_truth <- load_truth(
+  truth_source = "JHU",
+  target_variable = c("inc case", "inc death"),
+  truth_end_date = report_date,
+  hub = "ECDC"
+)
+
 # get anomalies
 anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
 truth <- anti_join(raw_truth, anomalies)
 
 setDT(truth)
 truth[, model := NULL]
-truth <- truth[target_end_date <= report_date]
 setnames(truth, old = c("value"),
          new = c("true_value"))
 
