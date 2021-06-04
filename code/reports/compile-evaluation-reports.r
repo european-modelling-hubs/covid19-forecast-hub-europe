@@ -36,12 +36,7 @@ raw_truth <- load_truth(truth_source = "JHU",
                         hub = "ECDC"))
 # get anomalies
 anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
-truth <- left_join(raw_truth, anomalies,
-                   by = c("target_variable",
-                          "location", "location_name",
-                          "target_end_date")) %>%
-  filter(is.na(anomaly)) %>%
-  select(-anomaly)
+truth <- anti_join(raw_truth, anomalies)
 
 setDT(truth)
 truth[, model := NULL]

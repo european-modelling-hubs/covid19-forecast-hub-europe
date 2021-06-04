@@ -55,12 +55,7 @@ raw_truth <- load_truth(truth_source = "JHU",
 
 # get anomalies
 anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
-truth <- left_join(raw_truth, anomalies,
-                            by = c("target_variable",
-                                   "location", "location_name",
-                                   "target_end_date")) %>%
-  filter(is.na(anomaly)) %>%
-  select(-anomaly)
+truth <- anti_join(raw_truth, anomalies)
 
 setDT(truth)
 truth[, model := NULL]
@@ -78,7 +73,7 @@ target_variables <- c(Cases = "inc case", Deaths = "inc death")
 
 # Forecast visualisation {.tabset .tabset-fade}
 
-Forecasts of cases/deaths per week per 100,000. The date of the tab marks the date on which a forecast was made (only the latest forecasts and the previous `r restrict_weeks`  weeks shown).
+Forecasts of cases/deaths per week per 100,000. The date of the tab marks the date on which a forecast was made (only the latest forecasts and the previous `r restrict_weeks` weeks shown).
 
 ```{r forecast-vis, include = FALSE, eval = include_forecast_plot}
 
