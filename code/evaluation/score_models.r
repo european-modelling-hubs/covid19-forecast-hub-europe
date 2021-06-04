@@ -112,10 +112,9 @@ forecasts <- forecasts[forecast_date >= "2021-03-08"]
 setnames(forecasts, old = c("value"), new = c("prediction"))
 
 ## load truth data -------------------------------------------------------------
-raw_truth <- map_dfr(.x = c("inc case", "inc death"),
-                 .f = ~ load_truth(truth_source = "JHU",
-                                   target_variable = .x,
-                                   hub = "ECDC"))
+raw_truth <- load_truth(truth_source = "JHU",
+                        target_variable = c("inc case", "inc death"),
+                        hub = "ECDC"))
 # get anomalies
 anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
 truth <- anti_join(raw_truth, anomalies)
