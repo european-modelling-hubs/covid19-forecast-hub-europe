@@ -13,7 +13,6 @@ date: "`r params$report_date`"
 ---
 
 ```{r setup, include=FALSE}
-library(purrr)
 library(ggplot2)
 library(dplyr)
 library(DT)

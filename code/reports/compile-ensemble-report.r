@@ -1,5 +1,4 @@
 # packages ---------------------------------------------------------------------
-library(purrr)
 library(dplyr)
 library(here)
 library(readr)

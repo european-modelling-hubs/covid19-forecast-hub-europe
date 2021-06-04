@@ -6,7 +6,6 @@ library(tidyr)
 library(lubridate)
 library(here)
 library(readr)
-library(purrr)
 
 ## only evaluate if the last 4 weeks hae been submitted
 restrict_weeks <- 4
