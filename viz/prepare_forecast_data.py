@@ -21,6 +21,7 @@ def get_relevant_dates(dates):
                                    ~pd.Series(n in relevant_dates for n in (next_mondays - pd.offsets.Day(5)))
                                    ])
     ### Temp fix for large file size
+    relevant_dates = sorted(relevant_dates)
     relevant_dates = relevant_dates[len(relevant_dates)-8:len(relevant_dates)]
     return [str(r.date()) for r in relevant_dates] # return as strings
 
