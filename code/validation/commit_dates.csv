@@ -5,7 +5,9 @@ filename,first_commit,latest_commit
 2021-05-17-BIOCOMSC-Gompertz.csv,2021-05-17,2021-05-17
 2021-05-24-BIOCOMSC-Gompertz.csv,2021-05-24,2021-05-24
 2021-05-31-BIOCOMSC-Gompertz.csv,2021-05-31,2021-05-31
+2021-06-07-BIOCOMSC-Gompertz.csv,2021-06-07,2021-06-07
 2021-05-31-CovidMetrics-epiBATS.csv,2021-06-01,2021-06-01
+2021-06-07-CovidMetrics-epiBATS.csv,2021-06-08,2021-06-08
 2021-03-01-DSMPG-bayes.csv,2021-06-01,2021-06-01
 2021-03-08-DSMPG-bayes.csv,2021-06-01,2021-06-01
 2021-03-15-DSMPG-bayes.csv,2021-06-01,2021-06-01
@@ -20,6 +22,7 @@ filename,first_commit,latest_commit
 2021-05-17-DSMPG-bayes.csv,2021-06-01,2021-06-01
 2021-05-24-DSMPG-bayes.csv,2021-06-01,2021-06-01
 2021-05-31-DSMPG-bayes.csv,2021-06-01,2021-06-01
+2021-06-07-DSMPG-bayes.csv,2021-06-07,2021-06-07
 2021-03-08-EuroCOVIDhub-ensemble.csv,2021-03-08,2021-05-20
 2021-03-15-EuroCOVIDhub-ensemble.csv,2021-03-16,2021-05-20
 2021-03-22-EuroCOVIDhub-ensemble.csv,2021-03-23,2021-05-20
@@ -33,6 +36,7 @@ filename,first_commit,latest_commit
 2021-05-17-EuroCOVIDhub-ensemble.csv,2021-05-18,2021-05-18
 2021-05-24-EuroCOVIDhub-ensemble.csv,2021-05-25,2021-05-26
 2021-05-31-EuroCOVIDhub-ensemble.csv,2021-06-01,2021-06-01
+2021-06-07-EuroCOVIDhub-ensemble.csv,2021-06-08,2021-06-08
 2021-02-15-FIAS_FZJ-Epi1Ger.csv,2021-02-16,2021-03-01
 2021-02-22-FIAS_FZJ-Epi1Ger.csv,2021-02-23,2021-03-01
 2021-03-01-FIAS_FZJ-Epi1Ger.csv,2021-03-01,2021-03-01
@@ -49,6 +53,7 @@ filename,first_commit,latest_commit
 2021-05-17-FIAS_FZJ-Epi1Ger.csv,2021-05-18,2021-05-18
 2021-05-24-FIAS_FZJ-Epi1Ger.csv,2021-05-25,2021-05-25
 2021-05-31-FIAS_FZJ-Epi1Ger.csv,2021-06-01,2021-06-01
+2021-06-07-FIAS_FZJ-Epi1Ger.csv,2021-06-08,2021-06-08
 2021-03-15-HZI-AgeExtendedSEIR.csv,2021-03-15,2021-03-15
 2021-03-22-HZI-AgeExtendedSEIR.csv,2021-03-22,2021-03-22
 2021-03-29-HZI-AgeExtendedSEIR.csv,2021-03-29,2021-03-29
@@ -61,6 +66,7 @@ filename,first_commit,latest_commit
 2021-05-17-HZI-AgeExtendedSEIR.csv,2021-05-17,2021-05-17
 2021-05-24-HZI-AgeExtendedSEIR.csv,2021-05-25,2021-05-25
 2021-05-31-HZI-AgeExtendedSEIR.csv,2021-05-31,2021-05-31
+2021-06-07-HZI-AgeExtendedSEIR.csv,2021-06-07,2021-06-07
 2021-02-15-ICM-agentModel.csv,2021-02-16,2021-03-01
 2021-02-22-ICM-agentModel.csv,2021-02-23,2021-03-01
 2021-03-08-ICM-agentModel.csv,2021-03-08,2021-03-08
@@ -74,6 +80,7 @@ filename,first_commit,latest_commit
 2021-05-10-ICM-agentModel.csv,2021-05-11,2021-05-11
 2021-05-17-ICM-agentModel.csv,2021-05-18,2021-05-18
 2021-05-31-ICM-agentModel.csv,2021-06-01,2021-06-01
+2021-06-07-ICM-agentModel.csv,2021-06-08,2021-06-08
 2021-03-08-IEM_Health-CovidProject.csv,2021-03-08,2021-03-08
 2021-03-15-IEM_Health-CovidProject.csv,2021-03-15,2021-03-15
 2021-03-22-IEM_Health-CovidProject.csv,2021-03-22,2021-03-22
@@ -87,6 +94,7 @@ filename,first_commit,latest_commit
 2021-05-17-IEM_Health-CovidProject.csv,2021-05-17,2021-05-17
 2021-05-24-IEM_Health-CovidProject.csv,2021-05-24,2021-05-24
 2021-05-31-IEM_Health-CovidProject.csv,2021-05-31,2021-05-31
+2021-06-07-IEM_Health-CovidProject.csv,2021-06-07,2021-06-07
 2021-03-08-ILM-EKF.csv,2021-03-08,2021-03-08
 2021-03-15-ILM-EKF.csv,2021-03-15,2021-03-15
 2021-03-22-ILM-EKF.csv,2021-03-22,2021-03-22
@@ -100,6 +108,7 @@ filename,first_commit,latest_commit
 2021-05-17-ILM-EKF.csv,2021-05-17,2021-05-17
 2021-05-24-ILM-EKF.csv,2021-05-24,2021-05-24
 2021-05-31-ILM-EKF.csv,2021-05-31,2021-05-31
+2021-06-07-ILM-EKF.csv,2021-06-07,2021-06-07
 2021-02-15-ITWW-county_repro.csv,2021-02-16,2021-03-01
 2021-02-22-ITWW-county_repro.csv,2021-02-23,2021-03-01
 2021-03-01-ITWW-county_repro.csv,2021-03-01,2021-03-01
@@ -116,6 +125,7 @@ filename,first_commit,latest_commit
 2021-05-17-ITWW-county_repro.csv,2021-05-18,2021-05-18
 2021-05-24-ITWW-county_repro.csv,2021-05-25,2021-05-25
 2021-05-31-ITWW-county_repro.csv,2021-06-01,2021-06-01
+2021-06-07-ITWW-county_repro.csv,2021-06-08,2021-06-08
 2021-03-15-Imperial-DeCa.csv,2021-03-15,2021-03-15
 2021-03-22-Imperial-DeCa.csv,2021-03-22,2021-03-22
 2021-03-29-Imperial-DeCa.csv,2021-03-29,2021-03-29
@@ -125,6 +135,7 @@ filename,first_commit,latest_commit
 2021-05-10-Imperial-DeCa.csv,2021-05-10,2021-05-10
 2021-05-17-Imperial-DeCa.csv,2021-05-17,2021-05-17
 2021-05-24-Imperial-DeCa.csv,2021-05-24,2021-05-24
+2021-06-07-Imperial-DeCa.csv,2021-06-07,2021-06-07
 2021-03-15-Imperial-RtI0.csv,2021-03-15,2021-03-15
 2021-03-22-Imperial-RtI0.csv,2021-03-22,2021-03-22
 2021-03-29-Imperial-RtI0.csv,2021-03-29,2021-03-29
@@ -134,6 +145,7 @@ filename,first_commit,latest_commit
 2021-05-10-Imperial-RtI0.csv,2021-05-10,2021-05-10
 2021-05-17-Imperial-RtI0.csv,2021-05-17,2021-05-17
 2021-05-24-Imperial-RtI0.csv,2021-05-24,2021-05-24
+2021-06-07-Imperial-RtI0.csv,2021-06-07,2021-06-07
 2021-03-15-Imperial-sbkp.csv,2021-03-15,2021-03-15
 2021-03-22-Imperial-sbkp.csv,2021-03-22,2021-03-22
 2021-03-29-Imperial-sbkp.csv,2021-03-29,2021-03-29
@@ -143,6 +155,7 @@ filename,first_commit,latest_commit
 2021-05-10-Imperial-sbkp.csv,2021-05-10,2021-05-10
 2021-05-17-Imperial-sbkp.csv,2021-05-17,2021-05-17
 2021-05-24-Imperial-sbkp.csv,2021-05-24,2021-05-24
+2021-06-07-Imperial-sbkp.csv,2021-06-07,2021-06-07
 2021-02-14-Karlen-pypm.csv,2021-02-16,2021-03-01
 2021-02-21-Karlen-pypm.csv,2021-02-23,2021-03-01
 2021-02-28-Karlen-pypm.csv,2021-03-02,2021-03-02
@@ -159,6 +172,7 @@ filename,first_commit,latest_commit
 2021-05-16-Karlen-pypm.csv,2021-05-18,2021-05-18
 2021-05-23-Karlen-pypm.csv,2021-05-25,2021-05-25
 2021-05-30-Karlen-pypm.csv,2021-06-01,2021-06-01
+2021-06-06-Karlen-pypm.csv,2021-06-08,2021-06-08
 2021-02-07-LANL-GrowthRate.csv,2021-02-15,2021-02-15
 2021-02-14-LANL-GrowthRate.csv,2021-02-16,2021-02-16
 2021-02-21-LANL-GrowthRate.csv,2021-02-23,2021-02-23
@@ -210,6 +224,7 @@ filename,first_commit,latest_commit
 2021-05-17-MIT_CovidAnalytics-DELPHI.csv,2021-05-18,2021-05-18
 2021-05-24-MIT_CovidAnalytics-DELPHI.csv,2021-05-25,2021-05-25
 2021-05-31-MIT_CovidAnalytics-DELPHI.csv,2021-06-01,2021-06-01
+2021-06-07-MIT_CovidAnalytics-DELPHI.csv,2021-06-08,2021-06-08
 2021-02-15-MOCOS-agent1.csv,2021-02-17,2021-03-01
 2021-02-22-MOCOS-agent1.csv,2021-02-23,2021-03-01
 2021-03-08-MOCOS-agent1.csv,2021-03-08,2021-03-08
@@ -225,11 +240,13 @@ filename,first_commit,latest_commit
 2021-05-17-MOCOS-agent1.csv,2021-05-18,2021-05-18
 2021-05-24-MOCOS-agent1.csv,2021-05-25,2021-05-25
 2021-05-31-MOCOS-agent1.csv,2021-06-01,2021-06-01
+2021-06-07-MOCOS-agent1.csv,2021-06-08,2021-06-08
 2021-05-03-MUNI-ARIMA.csv,2021-05-03,2021-05-03
 2021-05-10-MUNI-ARIMA.csv,2021-05-10,2021-05-10
 2021-05-17-MUNI-ARIMA.csv,2021-05-17,2021-05-17
 2021-05-24-MUNI-ARIMA.csv,2021-05-24,2021-05-24
 2021-05-31-MUNI-ARIMA.csv,2021-05-31,2021-05-31
+2021-06-07-MUNI-ARIMA.csv,2021-06-07,2021-06-07
 2021-03-08-MUNI_DMS-SEIAR.csv,2021-03-05,2021-03-08
 2021-03-15-MUNI_DMS-SEIAR.csv,2021-03-15,2021-03-15
 2021-03-22-MUNI_DMS-SEIAR.csv,2021-03-22,2021-03-22
@@ -242,12 +259,14 @@ filename,first_commit,latest_commit
 2021-05-17-MUNI_DMS-SEIAR.csv,2021-05-17,2021-05-17
 2021-05-24-MUNI_DMS-SEIAR.csv,2021-05-24,2021-05-24
 2021-05-31-MUNI_DMS-SEIAR.csv,2021-05-31,2021-05-31
+2021-06-07-MUNI_DMS-SEIAR.csv,2021-06-07,2021-06-07
 2021-04-26-PL_GRedlarski-DistrictsSum.csv,2021-04-25,2021-04-25
 2021-05-03-PL_GRedlarski-DistrictsSum.csv,2021-05-03,2021-05-03
 2021-05-10-PL_GRedlarski-DistrictsSum.csv,2021-05-10,2021-05-10
 2021-05-17-PL_GRedlarski-DistrictsSum.csv,2021-05-17,2021-05-17
 2021-05-24-PL_GRedlarski-DistrictsSum.csv,2021-05-24,2021-05-24
 2021-05-31-PL_GRedlarski-DistrictsSum.csv,2021-05-31,2021-05-31
+2021-06-07-PL_GRedlarski-DistrictsSum.csv,2021-06-07,2021-06-07
 2021-03-01-RobertWalraven-ESG.csv,2021-03-01,2021-03-01
 2021-03-08-RobertWalraven-ESG.csv,2021-03-08,2021-03-08
 2021-03-15-RobertWalraven-ESG.csv,2021-03-15,2021-03-15
@@ -262,6 +281,7 @@ filename,first_commit,latest_commit
 2021-05-17-RobertWalraven-ESG.csv,2021-05-17,2021-05-17
 2021-05-24-RobertWalraven-ESG.csv,2021-05-24,2021-05-24
 2021-05-31-RobertWalraven-ESG.csv,2021-05-31,2021-05-31
+2021-06-07-RobertWalraven-ESG.csv,2021-06-07,2021-06-07
 2021-03-29-SDSC_ISG-TrendModel.csv,2021-03-29,2021-03-29
 2021-04-05-SDSC_ISG-TrendModel.csv,2021-04-05,2021-04-05
 2021-04-12-SDSC_ISG-TrendModel.csv,2021-04-12,2021-04-12
@@ -272,6 +292,7 @@ filename,first_commit,latest_commit
 2021-05-17-SDSC_ISG-TrendModel.csv,2021-05-17,2021-05-17
 2021-05-24-SDSC_ISG-TrendModel.csv,2021-05-24,2021-05-24
 2021-05-31-SDSC_ISG-TrendModel.csv,2021-05-31,2021-05-31
+2021-06-07-SDSC_ISG-TrendModel.csv,2021-06-07,2021-06-07
 2021-04-26-UB-BSLCoV.csv,2021-04-26,2021-04-26
 2021-05-03-UB-BSLCoV.csv,2021-05-03,2021-05-03
 2021-05-10-UB-BSLCoV.csv,2021-05-10,2021-05-10
@@ -288,6 +309,7 @@ filename,first_commit,latest_commit
 2021-05-16-UMass-MechBayes.csv,2021-05-17,2021-05-17
 2021-05-23-UMass-MechBayes.csv,2021-05-24,2021-05-24
 2021-05-30-UMass-MechBayes.csv,2021-05-31,2021-05-31
+2021-06-06-UMass-MechBayes.csv,2021-06-07,2021-06-07
 2021-03-28-UMass-SemiMech.csv,2021-03-29,2021-03-29
 2021-04-04-UMass-SemiMech.csv,2021-04-05,2021-04-05
 2021-04-11-UMass-SemiMech.csv,2021-04-12,2021-04-12
@@ -298,6 +320,7 @@ filename,first_commit,latest_commit
 2021-05-16-UMass-SemiMech.csv,2021-05-17,2021-05-17
 2021-05-23-UMass-SemiMech.csv,2021-05-24,2021-05-24
 2021-05-30-UMass-SemiMech.csv,2021-05-31,2021-05-31
+2021-06-06-UMass-SemiMech.csv,2021-06-07,2021-06-07
 2021-03-08-UNED-PreCoV2.csv,2021-03-08,2021-03-08
 2021-03-15-UNED-PreCoV2.csv,2021-03-15,2021-03-15
 2021-03-22-UNED-PreCoV2.csv,2021-03-22,2021-03-22
@@ -311,6 +334,7 @@ filename,first_commit,latest_commit
 2021-05-17-UNED-PreCoV2.csv,2021-05-17,2021-05-17
 2021-05-24-UNED-PreCoV2.csv,2021-05-24,2021-05-24
 2021-05-31-UNED-PreCoV2.csv,2021-05-31,2021-05-31
+2021-06-07-UNED-PreCoV2.csv,2021-06-07,2021-06-07
 2021-03-08-UNIPV-BayesINGARCHX.csv,2021-03-08,2021-03-08
 2021-03-15-UNIPV-BayesINGARCHX.csv,2021-03-15,2021-03-15
 2021-03-22-UNIPV-BayesINGARCHX.csv,2021-03-22,2021-03-22
@@ -324,6 +348,7 @@ filename,first_commit,latest_commit
 2021-05-17-UNIPV-BayesINGARCHX.csv,2021-05-17,2021-05-17
 2021-05-24-UNIPV-BayesINGARCHX.csv,2021-05-24,2021-05-24
 2021-05-31-UNIPV-BayesINGARCHX.csv,2021-05-31,2021-05-31
+2021-06-07-UNIPV-BayesINGARCHX.csv,2021-06-07,2021-06-07
 2021-02-14-USC-SIkJalpha.csv,2021-02-16,2021-03-01
 2021-02-21-USC-SIkJalpha.csv,2021-02-23,2021-03-01
 2021-02-28-USC-SIkJalpha.csv,2021-03-01,2021-03-01
@@ -340,6 +365,7 @@ filename,first_commit,latest_commit
 2021-05-16-USC-SIkJalpha.csv,2021-05-16,2021-05-16
 2021-05-23-USC-SIkJalpha.csv,2021-05-23,2021-05-23
 2021-05-30-USC-SIkJalpha.csv,2021-05-30,2021-05-30
+2021-06-06-USC-SIkJalpha.csv,2021-06-06,2021-06-06
 2021-03-29-USyd-OneModelMan.csv,2021-03-29,2021-03-29
 2021-04-05-USyd-OneModelMan.csv,2021-04-05,2021-04-05
 2021-04-12-USyd-OneModelMan.csv,2021-04-12,2021-04-12
@@ -350,6 +376,7 @@ filename,first_commit,latest_commit
 2021-05-17-USyd-OneModelMan.csv,2021-05-17,2021-05-17
 2021-05-24-USyd-OneModelMan.csv,2021-05-24,2021-05-24
 2021-05-31-USyd-OneModelMan.csv,2021-05-31,2021-05-31
+2021-06-07-USyd-OneModelMan.csv,2021-06-07,2021-06-07
 2021-03-08-UVA-Ensemble.csv,2021-03-09,2021-03-09
 2021-03-15-UVA-Ensemble.csv,2021-03-15,2021-03-16
 2021-03-22-UVA-Ensemble.csv,2021-03-23,2021-03-23
@@ -363,6 +390,7 @@ filename,first_commit,latest_commit
 2021-05-17-UVA-Ensemble.csv,2021-05-18,2021-05-18
 2021-05-24-UVA-Ensemble.csv,2021-05-25,2021-05-25
 2021-05-31-UVA-Ensemble.csv,2021-06-01,2021-06-01
+2021-06-07-UVA-Ensemble.csv,2021-06-08,2021-06-08
 2021-03-22-UpgUmibUsi-MultiBayes.csv,2021-03-22,2021-03-23
 2021-03-28-UpgUmibUsi-MultiBayes.csv,2021-03-29,2021-06-03
 2021-04-04-UpgUmibUsi-MultiBayes.csv,2021-04-05,2021-04-05
@@ -374,6 +402,7 @@ filename,first_commit,latest_commit
 2021-05-16-UpgUmibUsi-MultiBayes.csv,2021-05-17,2021-05-17
 2021-05-23-UpgUmibUsi-MultiBayes.csv,2021-05-24,2021-05-24
 2021-05-30-UpgUmibUsi-MultiBayes.csv,2021-05-31,2021-05-31
+2021-06-06-UpgUmibUsi-MultiBayes.csv,2021-06-07,2021-06-07
 2021-03-29-bisop-seirfilter.csv,2021-03-29,2021-03-29
 2021-04-05-bisop-seirfilter.csv,2021-04-06,2021-04-06
 2021-04-12-bisop-seirfilter.csv,2021-04-12,2021-04-12
@@ -390,6 +419,7 @@ filename,first_commit,latest_commit
 2021-05-17-epiMOX-SUIHTER.csv,2021-05-17,2021-05-17
 2021-05-24-epiMOX-SUIHTER.csv,2021-05-24,2021-05-24
 2021-05-31-epiMOX-SUIHTER.csv,2021-05-31,2021-05-31
+2021-06-07-epiMOX-SUIHTER.csv,2021-06-07,2021-06-07
 2021-02-15-epiforecasts-EpiExpert.csv,2021-02-16,2021-03-01
 2021-02-22-epiforecasts-EpiExpert.csv,2021-02-23,2021-03-01
 2021-03-08-epiforecasts-EpiExpert.csv,2021-03-08,2021-03-08
@@ -405,18 +435,21 @@ filename,first_commit,latest_commit
 2021-05-17-epiforecasts-EpiExpert.csv,2021-05-17,2021-05-17
 2021-05-24-epiforecasts-EpiExpert.csv,2021-05-25,2021-05-25
 2021-05-31-epiforecasts-EpiExpert.csv,2021-05-31,2021-05-31
+2021-06-07-epiforecasts-EpiExpert.csv,2021-06-07,2021-06-07
 2021-04-19-epiforecasts-EpiExpert_Rt.csv,2021-04-20,2021-04-20
 2021-04-26-epiforecasts-EpiExpert_Rt.csv,2021-04-27,2021-04-27
 2021-05-03-epiforecasts-EpiExpert_Rt.csv,2021-05-03,2021-05-03
 2021-05-10-epiforecasts-EpiExpert_Rt.csv,2021-05-10,2021-05-10
 2021-05-24-epiforecasts-EpiExpert_Rt.csv,2021-05-25,2021-05-25
 2021-05-31-epiforecasts-EpiExpert_Rt.csv,2021-05-31,2021-05-31
+2021-06-07-epiforecasts-EpiExpert_Rt.csv,2021-06-07,2021-06-07
 2021-04-26-epiforecasts-EpiExpert_direct.csv,2021-04-27,2021-04-27
 2021-05-03-epiforecasts-EpiExpert_direct.csv,2021-05-03,2021-05-06
 2021-05-10-epiforecasts-EpiExpert_direct.csv,2021-05-10,2021-05-19
 2021-05-17-epiforecasts-EpiExpert_direct.csv,2021-05-17,2021-05-17
 2021-05-24-epiforecasts-EpiExpert_direct.csv,2021-05-25,2021-05-25
 2021-05-31-epiforecasts-EpiExpert_direct.csv,2021-05-31,2021-05-31
+2021-06-07-epiforecasts-EpiExpert_direct.csv,2021-06-07,2021-06-07
 2021-02-15-epiforecasts-EpiNow2.csv,2021-02-16,2021-03-01
 2021-02-22-epiforecasts-EpiNow2.csv,2021-02-23,2021-03-01
 2021-03-08-epiforecasts-EpiNow2.csv,2021-03-08,2021-03-08
@@ -432,6 +465,7 @@ filename,first_commit,latest_commit
 2021-05-17-epiforecasts-EpiNow2.csv,2021-05-17,2021-05-17
 2021-05-24-epiforecasts-EpiNow2.csv,2021-05-25,2021-05-25
 2021-05-31-epiforecasts-EpiNow2.csv,2021-05-31,2021-05-31
+2021-06-07-epiforecasts-EpiNow2.csv,2021-06-07,2021-06-07
 2021-02-15-itwm-dSEIR.csv,2021-02-16,2021-03-01
 2021-02-22-itwm-dSEIR.csv,2021-02-23,2021-03-01
 2021-03-01-itwm-dSEIR.csv,2021-03-01,2021-03-01
@@ -448,3 +482,4 @@ filename,first_commit,latest_commit
 2021-05-17-itwm-dSEIR.csv,2021-05-18,2021-05-18
 2021-05-24-itwm-dSEIR.csv,2021-05-24,2021-05-24
 2021-05-31-itwm-dSEIR.csv,2021-05-31,2021-05-31
+2021-06-07-itwm-dSEIR.csv,2021-06-07,2021-06-07
