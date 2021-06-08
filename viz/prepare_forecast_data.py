@@ -20,9 +20,6 @@ def get_relevant_dates(dates):
                                    ~pd.Series(n in relevant_dates for n in (next_mondays - pd.offsets.Day(4))) &
                                    ~pd.Series(n in relevant_dates for n in (next_mondays - pd.offsets.Day(5)))
                                    ])
-    ### Temp fix for large file size
-    relevant_dates = sorted(relevant_dates)
-    relevant_dates = relevant_dates[len(relevant_dates)-8:len(relevant_dates)]
     return [str(r.date()) for r in relevant_dates] # return as strings
 
 path = Path('data-processed')
@@ -59,6 +56,7 @@ for m in models:
 df = pd.concat(dfs)
 df.forecast_date = pd.to_datetime(df.forecast_date)
 df.target_end_date = pd.to_datetime(df.target_end_date)
+
 df = df[df.target.isin(VALID_TARGETS) & 
         (df['quantile'].isin(VALID_QUANTILES) | (df.type=='point'))].reset_index(drop=True)
 
@@ -147,4 +145,4 @@ for index, row in df.iterrows():
         result[location][target_type]['availableDates'].append(item['timezero'])
     result[location][target_type]['data'].append(item)
     
-json.dump(result, open("viz/forecasts_to_plot.json","w"), indent=4, sort_keys=True)
+json.dump(result, open("viz/forecasts_to_plot.json","w"), sort_keys=True)
