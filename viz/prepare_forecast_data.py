@@ -57,7 +57,9 @@ df = pd.concat(dfs)
 df.forecast_date = pd.to_datetime(df.forecast_date)
 df.target_end_date = pd.to_datetime(df.target_end_date)
 
+### Temp fix for large file size
 df = df[df.target.isin(VALID_TARGETS) & 
+        df.forecast_date >= pd.to_datetime("2021-04-15")  &
         (df['quantile'].isin(VALID_QUANTILES) | (df.type=='point'))].reset_index(drop=True)
 
 df['timezero'] = df.forecast_date.apply(next_monday)
