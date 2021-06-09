@@ -112,7 +112,7 @@ setnames(forecasts, old = c("value"), new = c("prediction"))
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(truth_source = "JHU",
                         target_variable = c("inc case", "inc death"),
-                        hub = "ECDC"))
+                        hub = "ECDC")
 # get anomalies
 anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
 truth <- anti_join(raw_truth, anomalies)
