@@ -10,10 +10,31 @@
 #' @param by_horizon weight using relative skill by horizon, rather than average
 
 library(dplyr)
+library(cNORM)
+
+## helper functions
+weighted_mean <- function(x, weights) {
+  return(sum(x * weights) / sum(weights))
+}
+
+weighted_median <- function(x, weights) {
+  return(cNORM::weighted.quantile(x, probs = 0.5, weights = weights))
+}
+
+weighted_average <- function(..., average = "mean") {
+  if (average == "mean") {
+    return(weighted_mean(...))
+  } else if (average == "median") {
+    return(weighted_median(...))
+  } else {
+    stop("Unknown average: ", average)
+  }
+}
 
 create_ensemble_relative_skill <- function(forecasts,
                                            evaluation_date,
                                            continuous_weeks = 4,
+                                           average = "mean",
                                            by_horizon = FALSE,
                                            return_criteria = FALSE,
                                            verbose = FALSE) {
@@ -71,13 +92,13 @@ create_ensemble_relative_skill <- function(forecasts,
 # Sum weights for ensemble ------------------------------------------------
   join <- c(groups, "model")
   forecast_skill <- left_join(forecasts, weights, by = join) %>%
-    filter(!is.na(skill_weight)) %>%
-    mutate(weighted_value = value * skill_weight)
+    filter(!is.na(skill_weight))
 
   # Take sum of weighted values
   weighted_ensemble <- forecast_skill %>%
     group_by(quantile, target_variable, location, horizon) %>%
-    summarise(value = sum(weighted_value, na.rm = TRUE),
+    summarise(value = weighted_average(x = value, weights = skill_weight,
+                                       average = average),
               n_models = n(),
               .groups = "drop")
 
