@@ -15,7 +15,7 @@ report_date <-
 
 suppressWarnings(dir.create(here::here("html")))
 
-last_forecast_date <- report_date - 7
+last_forecast_date <- report_date
 ## load forecasts --------------------------------------------------------------
 forecasts <- load_forecasts(source = "local_hub_repo",
                             hub_repo_path = here(),

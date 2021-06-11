@@ -1,6 +1,6 @@
 ```{r prediction-plots, echo = FALSE, results='asis', fig.width = 8.5, fig.height=8}
 
-for (forecast_date in head(forecast_dates, restrict_weeks + 1)) {
+for (forecast_date in head(forecast_dates, restrict_weeks + 2)) {
   cat(paste0("\n\n### ", forecast_date, "{.tabset .tabset-fade} \n\n"))
   
     for (target in names(target_variables)) {
