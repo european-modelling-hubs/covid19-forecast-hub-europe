@@ -24,7 +24,6 @@ library(here)
 library(knitr)
 library(covidHubUtils)
 library(lubridate)
-library(purrr)
 knitr::opts_chunk$set(echo = FALSE, 
                       message = FALSE, 
                       warning = FALSE)
@@ -93,8 +92,8 @@ out <- c(out, knit_child(here::here("code", "reports", "evaluation",
 out <- paste0("\n\n## Forecast scores (", loc, ") {.tabset .tabset-fade}\n\n")
 
 out <- c(out, "Scores separated by target and forecast horizon.",
-	 "Only models with submission in the last", restrict_weeks,
-	 "are shown.\n\n")
+	 "Only models with submissions in each of the last", restrict_weeks,
+	 " weeks are shown.\n\n")
 ```
 `r paste(if (include_ranking) knit(text = out, quiet = TRUE), collapse = '\n\n')`
 

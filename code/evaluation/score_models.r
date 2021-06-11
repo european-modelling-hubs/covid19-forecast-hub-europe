@@ -6,11 +6,9 @@ library(tidyr)
 library(lubridate)
 library(here)
 library(readr)
-library(purrr)
 
 ## only evaluate if the last 4 weeks hae been submitted
 restrict_weeks <- 4
-locations <- hub_locations_ecdc
 
 suppressWarnings(dir.create(here::here("evaluation")))
 
@@ -112,18 +110,12 @@ forecasts <- forecasts[forecast_date >= "2021-03-08"]
 setnames(forecasts, old = c("value"), new = c("prediction"))
 
 ## load truth data -------------------------------------------------------------
-raw_truth <- map_dfr(.x = c("inc case", "inc death"),
-                 .f = ~ load_truth(truth_source = "JHU",
-                                   target_variable = .x,
-                                   hub = "ECDC"))
+raw_truth <- load_truth(truth_source = "JHU",
+                        target_variable = c("inc case", "inc death"),
+                        hub = "ECDC")
 # get anomalies
 anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
-truth <- left_join(raw_truth, anomalies,
-                            by = c("target_variable",
-                                   "location", "location_name",
-                                   "target_end_date")) %>%
-  filter(is.na(anomaly)) %>%
-  select(-anomaly)
+truth <- anti_join(raw_truth, anomalies)
 
 setDT(truth)
 truth[, model := NULL]

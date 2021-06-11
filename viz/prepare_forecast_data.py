@@ -145,4 +145,4 @@ for index, row in df.iterrows():
         result[location][target_type]['availableDates'].append(item['timezero'])
     result[location][target_type]['data'].append(item)
     
-json.dump(result, open("viz/forecasts_to_plot.json","w"), indent=4, sort_keys=True)
+json.dump(result, open("viz/forecasts_to_plot.json","w"), sort_keys=True)
