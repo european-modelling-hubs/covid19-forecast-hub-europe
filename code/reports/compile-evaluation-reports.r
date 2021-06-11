@@ -1,5 +1,4 @@
 # packages ---------------------------------------------------------------------
-library(purrr)
 library(dplyr)
 library(here)
 library(readr)
@@ -13,7 +12,6 @@ options(knitr.duplicate.label = "allow")
 
 report_date <-
   lubridate::floor_date(lubridate::today(), "week", week_start = 7) + 1
-locations <- hub_locations_ecdc
 
 suppressWarnings(dir.create(here::here("html")))
 
@@ -31,22 +29,19 @@ forecasts <- forecasts[forecast_date <= last_forecast_date]
 setnames(forecasts, old = c("value"), new = c("prediction"))
 
 ## load truth data -------------------------------------------------------------
-raw_truth <- map_dfr(.x = c("inc case", "inc death"),
-                     .f = ~ load_truth(truth_source = "JHU",
-                                       target_variable = .x,
-                                       hub = "ECDC"))
+raw_truth <- load_truth(
+  truth_source = "JHU",
+  target_variable = c("inc case", "inc death"),
+  truth_end_date = report_date,
+  hub = "ECDC"
+)
+
 # get anomalies
 anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
-truth <- left_join(raw_truth, anomalies,
-                   by = c("target_variable",
-                          "location", "location_name",
-                          "target_end_date")) %>%
-  filter(is.na(anomaly)) %>%
-  select(-anomaly)
+truth <- anti_join(raw_truth, anomalies)
 
 setDT(truth)
 truth[, model := NULL]
-truth <- truth[target_end_date <= report_date]
 setnames(truth, old = c("value"),
          new = c("true_value"))
 

@@ -13,7 +13,6 @@ date: "`r params$report_date`"
 ---
 
 ```{r setup, include=FALSE}
-library(purrr)
 library(ggplot2)
 library(dplyr)
 library(DT)
@@ -35,12 +34,15 @@ restrict_weeks <- params$restrict_weeks
 
 ```{r load-data}
 # load forecasts ---------------------------------------------------------------
-forecasts <- load_forecasts(source = "local_hub_repo",
-                            hub_repo_path = here(),
-                            hub = "ECDC") %>%
-  filter(model == "EuroCOVIDhub-ensemble")
+forecasts <- load_forecasts(
+  models = "EuroCOVIDhub-ensemble",
+  source = "local_hub_repo",
+  hub_repo_path = here(),
+  hub = "ECDC"
+)
+
 setDT(forecasts)
-# set forecast date to corresponding submision date
+# set forecast date to corresponding submission date
 forecasts[, forecast_date :=
               ceiling_date(forecast_date, "week", week_start = 2) - 1]
 forecasts <- forecasts[forecast_date >= "2021-03-08"]
@@ -49,22 +51,19 @@ forecasts <- forecasts[forecast_date <= as.Date(params$report_date)]
 setnames(forecasts, old = c("value"), new = c("prediction"))
 
 # load truth data --------------------------------------------------------------
-raw_truth <- map_dfr(.x = c("inc case", "inc death"),
-                 .f = ~ load_truth(truth_source = "JHU",
-                                   target_variable = .x,
-                                   hub = "ECDC"))
+raw_truth <- load_truth(
+  truth_source = "JHU",
+  target_variable = c("inc case", "inc death"),
+  truth_end_date = params$report_date,
+  hub = "ECDC"
+)
+
 # get anomalies
 anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
-truth <- left_join(raw_truth, anomalies,
-                            by = c("target_variable",
-                                   "location", "location_name",
-                                   "target_end_date")) %>%
-  filter(is.na(anomaly)) %>%
-  select(-anomaly)
+truth <- anti_join(raw_truth, anomalies)
 
 setDT(truth)
 truth[, model := NULL]
-truth <- truth[target_end_date <= as.Date(params$report_date)]
 setnames(truth, old = c("value"), 
          new = c("true_value"))
 
@@ -78,7 +77,7 @@ target_variables <- c(Cases = "inc case", Deaths = "inc death")
 
 # Forecast visualisation {.tabset .tabset-fade}
 
-Forecasts of cases/deaths per week per 100,000. The date of the tab marks the date on which a forecast was made (only the latest forecasts and the previous `r restrict_weeks`  weeks shown).
+Forecasts of cases/deaths per week per 100,000. The date of the tab marks the date on which a forecast was made (only the latest forecasts and the previous `r restrict_weeks` weeks shown).
 
 ```{r forecast-vis, include = FALSE, eval = include_forecast_plot}
 
@@ -99,7 +98,7 @@ out <- c(out, knit_child(here::here("code", "reports", "ensemble",
 
 # Forecast calibration
 
-The table and plot below show this week's _coverage_ of the ensemble model at the 50% and 95% level, across the 32 countries. This shows the proportion of observations that fall within a given prediction interval. Ideally, a forecast model would achieve 50% coverage of 0.50 (i.e., 50% of observations fall within the 50% prediction interval) and 95% coverage of 0.95 (i.e., 95% of observations fall within the 95% prediction interval). Values of coverage greater than these nominal values indicate that the forecasts are _underconfident_, i.e. prediction intervals tend to be too wide, wherease values of coverage smaller than these nominal values indicate that the ensemble forecasts are _overconfident_, i.e. prediction intervals tend to be too narrow.
+The table and plot below show this week's _coverage_ of the ensemble model at the 50% and 95% level, across the 32 countries. This shows the proportion of observations that fall within a given prediction interval. Ideally, a forecast model would achieve 50% coverage of 0.50 (i.e., 50% of observations fall within the 50% prediction interval) and 95% coverage of 0.95 (i.e., 95% of observations fall within the 95% prediction interval). Values of coverage greater than these nominal values indicate that the forecasts are _underconfident_, i.e. prediction intervals tend to be too wide, whereas values of coverage smaller than these nominal values indicate that the ensemble forecasts are _overconfident_, i.e. prediction intervals tend to be too narrow.
 
 ## Coverage (this week)
 

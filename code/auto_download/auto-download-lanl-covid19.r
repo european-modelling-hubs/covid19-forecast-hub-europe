@@ -11,7 +11,7 @@ library("readr")
 library("janitor")
 
 model_name <- "LANL-GrowthRate"
-raw_dir <- here::here("data-raw", model_name)
+raw_dir <- file.path(tempdir(), "data-raw", model_name)
 processed_dir <- here::here("data-processed", model_name)
 last_sunday <- floor_date(today(), unit = "week", week_start = 7)
 data_types <- c("cases", "deaths")
