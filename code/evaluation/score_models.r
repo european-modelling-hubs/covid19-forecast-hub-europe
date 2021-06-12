@@ -93,7 +93,8 @@ score_models <- function(file, data, report_date, restrict_weeks) {
         dplyr::left_join(cont_weeks, by = c(
             "model", "target_variable", "horizon",
             "location"
-        ))
+        )) %>%
+      replace_na(list(continuous_weeks = 0))
 
     write_csv(table, file)
 }
