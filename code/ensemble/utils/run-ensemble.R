@@ -31,8 +31,7 @@ library(covidHubUtils)
 source(here("code", "ensemble", "utils", "use-ensemble-criteria.R"))
 source(here("code", "ensemble", "utils", "format-ensemble.R"))
 
-run_ensemble <- function(method = c("mean", "median", "relative_skill",
-                                    "relative_skill_by_horizon"),
+run_ensemble <- function(method = "mean",
                          forecast_date,
                          exclude_models = NULL,
                          return_criteria = TRUE,
@@ -117,11 +116,15 @@ run_ensemble <- function(method = c("mean", "median", "relative_skill",
     if (missing(evaluation_date)) {
       evaluation_date <- forecast_date
     }
-    by_horizon <- grepl("_by_horizon$", method)
+    by_horizon <- grepl("_by_horizon", method)
+    use_median <- grepl("_median", method )
     ensemble <- create_ensemble_relative_skill(forecasts = forecasts,
                                                evaluation_date = evaluation_date,
                                                continuous_weeks = continuous_weeks,
                                                by_horizon = by_horizon,
+                                               average = if_else(use_median,
+                                                                 "median",
+                                                                 "mean"),
                                                return_criteria = return_criteria,
                                                verbose = verbose)
     # Update model inclusion criteria
