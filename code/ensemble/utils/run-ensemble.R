@@ -105,7 +105,11 @@ run_ensemble <- function(method = "mean",
     ensemble <- create_ensemble_average(method = method,
                                         forecasts = forecasts)
     if (return_criteria) {
-      weights <- "Equal"
+      weights <- forecasts %>%
+        group_by(target_variable, location) %>%
+        mutate(weight = 1 / length(unique(model))) %>%
+        group_by(model, target_variable, location) %>%
+        summarise(weight = unique(weight), .groups = "drop")
     }
   }
 

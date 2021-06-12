@@ -84,7 +84,8 @@ create_ensemble_relative_skill <- function(forecasts,
   weights <- skill %>%
     group_by(across(all_of(groups))) %>%
     mutate(sum_inv_skill = sum(inv_skill, na.rm = TRUE),
-           skill_weight = inv_skill / sum_inv_skill)
+           weight = inv_skill / sum_inv_skill) %>%
+    select_at(c("model", groups, "weight"))
 
   if (verbose) {message(paste0("Included ",
                                length(unique(weights$model)), " models"))}
@@ -92,12 +93,12 @@ create_ensemble_relative_skill <- function(forecasts,
 # Sum weights for ensemble ------------------------------------------------
   join <- c(groups, "model")
   forecast_skill <- left_join(forecasts, weights, by = join) %>%
-    filter(!is.na(skill_weight))
+    filter(!is.na(weight))
 
   # Take sum of weighted values
   weighted_ensemble <- forecast_skill %>%
     group_by(quantile, target_variable, location, horizon) %>%
-    summarise(value = weighted_average(x = value, weights = skill_weight,
+    summarise(value = weighted_average(x = value, weights = weight,
                                        average = average),
               n_models = n(),
               .groups = "drop")
@@ -108,4 +109,4 @@ create_ensemble_relative_skill <- function(forecasts,
   }
 
   return(weighted_ensemble)
-  }
+}
