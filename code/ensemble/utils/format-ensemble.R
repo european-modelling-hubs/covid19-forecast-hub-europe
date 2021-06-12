@@ -37,6 +37,10 @@ format_ensemble <- function(ensemble,
     # Keep only standard columns
     select(forecast_date, target, target_end_date,
            location, type, quantile, value)
+  
+  # round
+  ensemble <- ensemble %>%
+    mutate(value = round(value))
 
   # Add point forecasts
   ensemble_point <- ensemble %>%
