@@ -11,7 +11,7 @@ library(lubridate)
 options(knitr.duplicate.label = "allow")
 
 report_date <-
-  lubridate::floor_date(lubridate::today(), "week", week_start = 7) + 1
+  lubridate::floor_date(lubridate::today(), "week", week_start = 1)
 
 dir.create(here::here("html"))
 
