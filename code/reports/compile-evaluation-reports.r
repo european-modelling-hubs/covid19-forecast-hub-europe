@@ -17,7 +17,7 @@ suppressWarnings(dir.create(here::here("html")))
 
 last_forecast_date <- report_date
 ## load forecasts --------------------------------------------------------------
-raw_forecasts <- load_raw_forecasts(source = "local_hub_repo",
+raw_forecasts <- load_forecasts(source = "local_hub_repo",
                             hub_repo_path = here(),
                             hub = "ECDC")
 setDT(raw_forecasts)
