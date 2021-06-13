@@ -7,7 +7,7 @@ scores <- scoringutils::eval_forecasts(data,
                                        compute_relative_skill = FALSE)
 
 
-for (loc in locations) {
+for (loc in unique(scores$location_name)) {
   cat("\n\n##", loc, "{.tabset} \n\n")
   
   tmp_scores <- filter(scores, location_name == loc)

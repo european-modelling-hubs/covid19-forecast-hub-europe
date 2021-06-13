@@ -4,7 +4,7 @@ library(vroom)
 source(here("code", "ensemble", "utils", "run-multiple-ensembles.R"))
 
 # Get exclusions for all weeks
-exclude_by_date <- vroom(here("code", "ensemble", "EuroCOVIDhub", 
+exclude_by_date <- vroom(here("code", "ensemble", "EuroCOVIDhub",
                       "manual-exclusions.csv"))
 
 # Get all past weeks' forecast dates
@@ -15,20 +15,35 @@ all_dates <- vroom(here("code", "ensemble", "EuroCOVIDhub",
 # Get all methods
 all_methods <- sub("^.*-", "", dir(here("ensembles", "data-processed")))
 
-# Run ensembles over all methods and past forecast dates
+# Run all ensembles for all past dates ------------------------------------
 ensembles <- run_multiple_ensembles(forecast_dates = all_dates,
-                                    methods = all_methods,
-                                    exclude_models = exclude_by_date)
+                                    methods = all_methods, # all_methods,
+                                    exclude_models = exclude_by_date,
+                                    verbose = TRUE) %>%
+  transpose() %>%
+  simplify_all()
 
-# Save in code/ensemble/forecasts/model directory as forecast_date.csv
+results <- ensembles$result %>%
+  compact()
+
+# Save in ensemble/data-processed/model
 res <- lapply(all_methods, function(x)
   suppressWarnings(dir.create(here("ensembles", "data-processed",
                                    paste0("EuroCOVIDhub-", x)),
                               recursive = TRUE)))
 
-walk(ensembles,
+walk(results,
      ~ vroom_write(x = .x$ensemble,
                    path = here("ensembles", "data-processed",
+                               paste0("EuroCOVIDhub-", .x$method),
+                               paste0(.x$forecast_date, "-EuroCOVIDhub-",
+                                      .x$method, ".csv")),
+                   delim = ","))
+
+# Save weights in ensemble/weights/model
+walk(results,
+     ~ vroom_write(x = .x$weights,
+                   path = here("ensembles", "weights",
                                paste0("EuroCOVIDhub-", .x$method),
                                paste0(.x$forecast_date, "-EuroCOVIDhub-",
                                       .x$method, ".csv")),
