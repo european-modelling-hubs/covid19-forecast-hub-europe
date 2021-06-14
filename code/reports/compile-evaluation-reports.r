@@ -73,8 +73,8 @@ for (i in 1:nrow(hub_locations_ecdc)) {
                                   restrict_weeks = 4),
                     output_file =
                       here::here("html",
-                                 paste0("evaluation-report-", report_date,
-                                        "-", country, ".html")),
+                                 paste0("evaluation-report-",
+                                        country, ".html")),
                     envir = new.env())
 }
 
@@ -85,8 +85,8 @@ rmarkdown::render(here::here("code", "reports", "evaluation",
                                 restrict_weeks = 4),
                   output_format = "html_document",
                   output_file =
-                    here::here("html", paste0("evaluation-report-", report_date,
-                                              "-Overall.html")),
+                    here::here("html", paste0("evaluation-report-", 
+                                              "Overall.html")),
                   envir = new.env())
 
 ## to make this generalisable
