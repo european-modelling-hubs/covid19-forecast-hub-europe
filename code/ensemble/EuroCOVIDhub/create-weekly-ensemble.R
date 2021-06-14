@@ -10,7 +10,7 @@ source(here("code", "ensemble", "utils", "run-ensemble.R"))
 
 # Set up ----------------------------------------------------------------
 # Get method
-method <- readLines(here("code", "ensemble", "EuroCOVIDhub",  "current-method.txt"))
+method <- yaml::read_yaml(here("forecasthub.yml"))$ensemble_method
 
 # Set current submission date
 forecast_date <- floor_date(today(), "week", 1)
