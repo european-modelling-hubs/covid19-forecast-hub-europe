@@ -1,2 +1,6 @@
 name: EuroCOVIDhub
 ensemble_method: mean
+horizon: '4 weeks'
+targets:
+  - cases
+  - deaths
