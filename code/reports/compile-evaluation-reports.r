@@ -7,6 +7,8 @@ library(rmarkdown)
 library(data.table)
 library(covidHubUtils)
 library(lubridate)
+source(here("code", "config_utils", "get_forecast_targets.R"))
+data_types <- get_forecast_targets()
 
 options(knitr.duplicate.label = "allow")
 
@@ -31,7 +33,7 @@ setnames(raw_forecasts, old = c("value"), new = c("prediction"))
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(
   truth_source = "JHU",
-  target_variable = c("inc case", "inc death"),
+  target_variable = gsub("^(\\w+)s$", "inc \\1", data_types),
   truth_end_date = report_date,
   hub = "ECDC"
 )
