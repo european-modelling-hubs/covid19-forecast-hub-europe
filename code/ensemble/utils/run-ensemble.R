@@ -30,6 +30,7 @@ library(lubridate)
 library(covidHubUtils)
 source(here("code", "ensemble", "utils", "use-ensemble-criteria.R"))
 source(here("code", "ensemble", "utils", "format-ensemble.R"))
+source(here("code", "config_utils", "get_ensemble_method.R"))
 
 run_ensemble <- function(method = "mean",
                          forecast_date,
@@ -51,11 +52,15 @@ run_ensemble <- function(method = "mean",
 
   if (missing(method)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     method <- readLines(here("code", "ensemble", "EuroCOVIDhub",
                              "current-method.txt"))
 =======
     method <- yaml::read_yaml(here("forecasthub.yml"))$ensemble_method
 >>>>>>> 533de0c (Store repo-specific settings in a single top-level config file)
+=======
+    method <- get_ensemble_method()
+>>>>>>> 5efe572 (Move functions to interact with config file to a specific folder)
   }
   method <- match.arg(arg = method,
                       choices = methods,

@@ -7,10 +7,11 @@ library(here)
 library(tibble)
 
 source(here("code", "ensemble", "utils", "run-ensemble.R"))
+source(here("code", "config_utils", "get_ensemble_method.R"))
 
 # Set up ----------------------------------------------------------------
 # Get method
-method <- yaml::read_yaml(here("forecasthub.yml"))$ensemble_method
+method <- get_ensemble_method()
 
 # Set current submission date
 forecast_date <- floor_date(today(), "week", 1)
