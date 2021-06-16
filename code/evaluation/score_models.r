@@ -6,6 +6,8 @@ library(tidyr)
 library(lubridate)
 library(here)
 library(readr)
+source(here("code", "config_utils", "get_forecast_targets.R"))
+data_types <- get_forecast_targets()
 
 ## only evaluate if the last 4 weeks hae been submitted
 restrict_weeks <- 4
@@ -112,7 +114,7 @@ setnames(forecasts, old = c("value"), new = c("prediction"))
 
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(truth_source = "JHU",
-                        target_variable = c("inc case", "inc death"),
+                        target_variable = gsub("^(\\w+)s$", "inc \\1", data_types),
                         hub = "ECDC")
 # get anomalies
 anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))

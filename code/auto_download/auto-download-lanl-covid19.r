@@ -9,12 +9,13 @@ library("dplyr")
 library("tidyr")
 library("readr")
 library("janitor")
+source(here("code", "config_utils", "get_forecast_targets.R"))
 
 model_name <- "LANL-GrowthRate"
 raw_dir <- file.path(tempdir(), "data-raw", model_name)
 processed_dir <- here::here("data-processed", model_name)
 last_sunday <- floor_date(today(), unit = "week", week_start = 7)
-data_types <- c("cases", "deaths")
+data_types <- get_forecast_targets()
 
 suppressWarnings(dir.create(raw_dir, recursive = TRUE))
 suppressWarnings(dir.create(processed_dir, recursive = TRUE))

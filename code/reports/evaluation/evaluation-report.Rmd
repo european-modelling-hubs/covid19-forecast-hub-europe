@@ -37,6 +37,9 @@ include_countries <- include_forecast_plot ||
   include_ranks_over_time
 
 restrict_weeks <- params$restrict_weeks
+
+source(here("code", "config_utils", "get_forecast_targets.R"))
+data_types <- get_forecast_targets()
 ```
 
 ```{r prepare-data}
@@ -52,7 +55,10 @@ horizons <- horizons[order(as.integer(horizons))]
  
 summarise_by = c("model", "target_variable")
 
-target_variables <- c(Cases = "inc case", Deaths = "inc death")
+target_variables <- setNames(
+  gsub("^(\\w+)s$", "inc \\1", data_types),
+  tools::toTitleCase(data_types)
+)
 ```
 
 # Overall performance {.tabset .tabset-fade}
