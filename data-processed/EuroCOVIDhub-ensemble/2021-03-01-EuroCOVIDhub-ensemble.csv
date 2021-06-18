@@ -1,6 +1,6 @@
 forecast_date,target,target_end_date,location,type,quantile,value
-2021-03-01,1 wk ahead inc case,2021-03-06,AT,quantile,0.01,11335.022980630283
-2021-03-01,1 wk ahead inc case,2021-03-06,AT,quantile,0.025,1815.013397266615
+2021-03-01,1 wk ahead inc case,2021-03-06,AT,quantile,0.01,11335
+2021-03-01,1 wk ahead inc case,2021-03-06,AT,quantile,0.025,11335
 2021-03-01,1 wk ahead inc case,2021-03-06,AT,quantile,0.05,12260.285203604051
 2021-03-01,1 wk ahead inc case,2021-03-06,AT,quantile,0.1,12848.087718280934
 2021-03-01,1 wk ahead inc case,2021-03-06,AT,quantile,0.15,13275.993681535001
