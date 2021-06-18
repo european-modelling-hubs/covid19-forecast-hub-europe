@@ -3,31 +3,31 @@ library(dplyr)
 library(readr)
 library(lubridate)
 
-df1 <- read_csv(here("data-truth", "JHU", "truth_JHU-Incident Deaths.csv")) %>%
-  rename(inc_death = value)
+locations <- read_csv(here("data-locations", "locations_eu.csv")) %>%
+  select(location, location_name)
 
-df2 <- read_csv(here("data-truth", "JHU", "truth_JHU-Incident Cases.csv")) %>%
-  rename(inc_case = value)
+cases <- covidData::load_jhu_data(
+  issue_date = lubridate::today(),
+  location_code = locations$location,
+  spatial_resolution = "national",
+  geography = "global",
+  measure = "cases"
+) %>%
+  select(date, location, inc_case = inc) %>%
+  left_join(locations)
+
+deaths <- covidData::load_jhu_data(
+  issue_date = lubridate::today(),
+  location_code = locations$location,
+  spatial_resolution = "national",
+  geography = "global",
+  measure = "deaths"
+) %>%
+  select(date, location, inc_death = inc) %>%
+  left_join(locations)
 
 # merge cases and deaths into one dataframe
-df <- full_join(df1, df2, by = c("date", "location", "location_name"))
-
-# add epi weeks for aggregation
-df <- df %>%
-  mutate(epi_week = epiweek(date),
-         epi_year = epiyear(date))
-
-# aggregate to weekly incidence
-df <- df %>%
-  group_by(location, location_name, epi_year, epi_week) %>%
-  summarise(date = max(date),
-            inc_death = sum(inc_death),
-            inc_case = sum(inc_case),
-            .groups = "drop")
-
-# only keep Saturdays
-df <- df %>%
-  filter(wday(date, label = TRUE, abbr = FALSE) == "Saturday")
+df <- full_join(cases, deaths, by = c("date", "location", "location_name"))
 
 # reformat
 df <- df %>%
