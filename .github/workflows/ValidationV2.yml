@@ -1,10 +1,6 @@
 name: Validations v2
 
-on:
-  - pull_request_target:
-      branches: [ main ]
-  - push:
-      branches: validation-test
+on: push
 
 jobs:
   build:
