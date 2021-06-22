@@ -23,6 +23,9 @@ anomalies <- tribble(
   "2021-06-12", "inc death", "IE", "Ireland", "No data reported",
   "2021-06-12", "inc case", "IE", "Ireland", "Spike removed after case count backdistributed",
   "2021-06-12", "inc case", "ES", "Spain", "Historic cases added but not backdistributed in Catalonia",
+  #
+  "2021-06-20", "inc death", "SE", "Sweden", "No data reported",
+  "2021-06-20", "inc case", "SE", "Sweden", "No data reported"
 ) %>%
   mutate(target_end_date = as.Date(target_end_date))
 
