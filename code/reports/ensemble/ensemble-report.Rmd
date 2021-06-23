@@ -87,8 +87,6 @@ target_variables <- setNames(
 Forecasts of cases/deaths per week per 100,000. The date of the tab marks the date on which a forecast was made (only the latest forecasts and the previous `r restrict_weeks` weeks shown).
 
 ```{r forecast-vis, include = FALSE, eval = include_forecast_plot}
-
-locations <- unique(truth$location_name)
 forecast_dates <-
   rev(as.character(unique(data$forecast_date[!is.na(data$forecast_date)])))
 
