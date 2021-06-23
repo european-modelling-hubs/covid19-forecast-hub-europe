@@ -13,9 +13,8 @@ for (forecast_date in head(forecast_dates, restrict_weeks + 1)) {
            paste0("target_end_date <= '", as.Date(params$report_date) + 7 * 4, "'"))
     filter_forecasts <- list(paste0("forecast_date == '", as.Date(forecast_date), "'"))
 
-    plot_data <- copy(data)
-    plot_data <- plot_data[, true_value := true_value / population * 1e+5]
-    plot_data <- plot_data[, prediction := prediction / population * 1e+5]
+    plot_data <- data %>%
+      mutate(across(c("true_value", "prediction"), ~ .x / population * 1e+5))
 
     plot <- scoringutils::plot_predictions(plot_data,
                                            x = "target_end_date",

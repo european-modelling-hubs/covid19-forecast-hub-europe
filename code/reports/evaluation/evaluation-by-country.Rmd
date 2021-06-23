@@ -50,8 +50,8 @@ data <- params$data
 
 horizons <- data %>% 
   filter(!is.na(true_value), !is.na(horizon)) %>% 
-  .$horizon %>% 
-  unique
+  pull(horizon) %>% 
+  unique()
 
 horizons <- horizons[as.integer(horizons) < 5]
 horizons <- horizons[order(as.integer(horizons))]
