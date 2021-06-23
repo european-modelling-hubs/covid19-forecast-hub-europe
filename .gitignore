@@ -20,3 +20,6 @@ env
 
 # ignore developement credentials
 /code/auto_download/creds.json
+
+# HTML-rendered version of READMEs
+README.html

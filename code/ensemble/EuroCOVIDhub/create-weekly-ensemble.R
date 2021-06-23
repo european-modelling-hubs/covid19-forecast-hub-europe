@@ -1,8 +1,8 @@
-# Runs and formats EuroCOVIDhub ensemble 
+# Runs and formats EuroCOVIDhub ensemble
 #  saved in data-processed/EuroCOVIDhub-ensemble
 library(vroom)
 library(dplyr)
-library(lubridate) 
+library(lubridate)
 library(here)
 library(tibble)
 
@@ -18,7 +18,7 @@ forecast_date <- floor_date(today(), "week", 1)
 # Get model names for manual exclusion
 exclude_models <-
   vroom(here("code", "ensemble", "EuroCOVIDhub", "manual-exclusions.csv")) %>%
-  filter(forecast_date == forecast_date) %>%
+  filter(forecast_date == !!forecast_date) %>%
   pull(model)
 
 # Run weekly automated ensemble -----------------------------------------
@@ -29,9 +29,9 @@ hub_ensemble <- run_ensemble(method = method,
 
 # Save in data-processed
 vroom_write(hub_ensemble$ensemble,
-            here("data-processed", 
+            here("data-processed",
                  paste0("EuroCOVIDhub-ensemble"),
-                 paste0(hub_ensemble$forecast_date, 
+                 paste0(hub_ensemble$forecast_date,
                         "-EuroCOVIDhub-ensemble.csv")),
             delim = ",")
 
