@@ -45,7 +45,7 @@ forecasts <- load_forecasts(
 )
 
 setDT(forecasts)
-# set forecast date to corresponding submission date
+  # set forecast date to corresponding submission date
 forecasts[, forecast_date :=
               ceiling_date(forecast_date, "week", week_start = 2) - 1]
 forecasts <- forecasts[forecast_date >= "2021-03-08"]
@@ -108,11 +108,13 @@ The table and plot below show this week's _coverage_ of the ensemble model at th
 ## Coverage (this week)
 
 ```{r coverage, echo = FALSE, include = include_calibration}
-scores <- eval_forecasts(data,
-                         summarise_by = c("model", "range", "quantile",
-                                          "target_variable", "horizon",
-                                          "forecast_date"),
-                         pit_plots = TRUE)
+scores <- scoringutils::eval_forecasts(
+  data,
+  summarise_by = c("model", "range", "quantile",
+                  "target_variable", "horizon",
+                  "forecast_date"),
+  pit_plots = TRUE
+)
 
 coverage <- scores %>%
   dplyr::filter(range %in% c(50, 95)) %>%
@@ -180,7 +182,7 @@ The figures below are _PIT histograms_ for the most recent ensemble forecasts. T
 ```{r pit, echo = FALSE, include = include_calibration}
 latest_data <- data %>%
   filter(target_end_date == report_date - 2)
-pit_scores <- eval_forecasts(latest_data,
+pit_scores <- scoringutils::eval_forecasts(latest_data,
                          summarise_by = c("model", "range", "quantile",
                                           "target_variable", "horizon"),
                          pit_plots = TRUE)
