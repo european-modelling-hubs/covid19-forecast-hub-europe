@@ -19,16 +19,15 @@ suppressWarnings(dir.create(here::here("html")))
 
 last_forecast_date <- report_date
 ## load forecasts --------------------------------------------------------------
-raw_forecasts <- load_forecasts(source = "local_hub_repo",
-                            hub_repo_path = here(),
-                            hub = "ECDC")
-setDT(raw_forecasts)
-## set forecast date to corresponding submision date
-raw_forecasts[, forecast_date :=
-              ceiling_date(forecast_date, "week", week_start = 2) - 1]
-raw_forecasts <- raw_forecasts[forecast_date >= "2021-03-08"]
-raw_forecasts <- raw_forecasts[forecast_date <= last_forecast_date]
-setnames(raw_forecasts, old = c("value"), new = c("prediction"))
+raw_forecasts <- load_forecasts(
+  source = "local_hub_repo",
+  hub_repo_path = here(),
+  hub = "ECDC"
+) %>%
+  # set forecast date to corresponding submission date
+  mutate(forecast_date = ceiling_date(forecast_date, "week", week_start = 2) - 1) %>%
+  filter(between(forecast_date, ymd("2021-03-08"), ymd(report_date))) %>%
+  rename(prediction = value)
 
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(
@@ -40,7 +39,10 @@ raw_truth <- load_truth(
 
 # get anomalies
 anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
-truth <- anti_join(raw_truth, anomalies)
+
+truth <- anti_join(raw_truth, anomalies) %>%
+  mutate(model = NULL) %>%
+  rename(true_value = value)
 
 # remove forecasts made directly after a data anomaly
 forecasts <- raw_forecasts %>%
@@ -52,11 +54,6 @@ forecasts <- raw_forecasts %>%
                    "previous_end_date")) %>%
   filter(is.na(anomaly)) %>%
   select(-anomaly, -previous_end_date)
-
-setDT(truth)
-truth[, model := NULL]
-setnames(truth, old = c("value"),
-         new = c("true_value"))
 
 data <- scoringutils::merge_pred_and_obs(forecasts, truth,
                                          join = "full")
