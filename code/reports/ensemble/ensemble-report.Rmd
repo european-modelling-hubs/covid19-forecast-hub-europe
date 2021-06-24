@@ -148,8 +148,7 @@ The dashed line indicates the nominal 95% level and dotted line the 50% level. I
 for (variable in names(target_variables)) {
   cat("\n\n###", variable, "{.tabset .tabset_fade}\n\n")
   for (horizon in unique(coverage$`Forecast horizon`)) {
-    cat("\n\n####", paste0(horizon, " week",
-                  if_else(horizon == 1, "", "s")), "\n\n")
+    cat("\n\n####", horizon, "\n\n")
     p <- ggplot(coverage %>%
            filter(`Forecast horizon` == horizon,
                   `Target variable` == variable),
