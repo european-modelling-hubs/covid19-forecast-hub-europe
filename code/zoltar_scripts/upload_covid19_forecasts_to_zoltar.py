@@ -1,6 +1,5 @@
 from requests.models import codes
 from zoltpy import util
-from zoltpy.cdc_io import YYYY_MM_DD_DATE_FORMAT
 from zoltpy.connection import ZoltarConnection
 import os
 import sys
@@ -11,9 +10,10 @@ import logging
 import json
 import pprint
 
-sys.path.append("code/validation")
+sys.path.append("validation/codebase")
 from quantile_io import json_io_dict_from_quantile_csv_file
 from covid19 import VALID_TARGET_NAMES, codes, covid19_row_validator, validate_quantile_csv_file
+from cdc_io import YYYY_MM_DD_DATE_FORMAT
 
 logger = logging.getLogger(__name__)
 

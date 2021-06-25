@@ -1,13 +1,17 @@
 import hashlib
 import os
 import pickle
-from zoltpy.quantile_io import json_io_dict_from_quantile_csv_file
 from zoltpy import util
 from zoltpy.connection import ZoltarConnection
-from zoltpy.covid19 import COVID_TARGETS, covid19_row_validator, validate_quantile_csv_file
 import glob
 import json
 import sys
+
+# replace zoltar us-specific with euro validation
+# from zoltpy.covid19 import COVID_TARGETS, covid19_row_validator, validate_quantile_csv_file
+sys.path.append("validation/codebase")
+from quantile_io import json_io_dict_from_quantile_csv_file
+from covid19 import VALID_TARGET_NAMES, codes, covid19_row_validator, validate_quantile_csv_file
 
 UPDATE = False
 if len(sys.argv) >1:
