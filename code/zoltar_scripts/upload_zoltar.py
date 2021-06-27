@@ -1,7 +1,9 @@
-from zoltpy.quantile_io import json_io_dict_from_quantile_csv_file
+from __future__ import absolute_import
+
+# from zoltpy.quantile_io import json_io_dict_from_quantile_csv_file
 from zoltpy import util
 from zoltpy.connection import ZoltarConnection
-from zoltpy.covid19 import COVID_TARGETS, COVID_ADDL_REQ_COLS, covid19_row_validator, validate_quantile_csv_file
+# from zoltpy.covid19 import COVID_TARGETS, COVID_ADDL_REQ_COLS, covid19_row_validator, validate_quantile_csv_file
 import os
 import sys
 
@@ -14,18 +16,23 @@ import pickle
 import hashlib
 import json
 
-logging.basicConfig(level=logging.DEBUG)
+sys.path.append("validation/codebase")
+from quantile_io import json_io_dict_from_quantile_csv_file, REQUIRED_COLUMNS
+from covid19 import VALID_TARGET_NAMES, codes, covid19_row_validator, validate_quantile_csv_file
+from cdc_io import YYYY_MM_DD_DATE_FORMAT
+
+# logging.basicConfig(level=logging.DEBUG)
 
 cwd_p = Path(__file__).parent.resolve()
 all_forecasts = glob.glob('./data-processed/**/*-*.csv')
-# pprint.pprint(all_forecasts)
+pprint.pprint(all_forecasts)
 # meta info
 project_name = 'ECDC European COVID-19 Forecast Hub'
 project_obj = None
 conn = util.authenticate()
 url = 'https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/data-processed'
 
-# all_forecasts = glob.glob('./data')
+# all_forecasts = glob.glob('./data-processed')
 project_obj = [project for project in conn.projects if project.name == project_name][0]
 project_timezeros = [timezero.timezero_date for timezero in project_obj.timezeros]
 models = [model for model in project_obj.models]
@@ -44,7 +51,7 @@ def read_validation_db():
 
 
 def write_db(db):
-    with open('./code/zoltar_scripts/validated_file_db.json', 'wb') as fw:
+    with open('./code/zoltar_scripts/validated_file_db.json', 'w') as fw:
         json.dump(db, fw, indent=4)
 
 # Function to read metadata file to get model name
@@ -112,9 +119,10 @@ def upload_forecast(forecast_name):
             checksum = hashlib.md5(str(fp.read()).encode('utf-8')).hexdigest()
             fp.seek(0)
             quantile_json, error_from_transformation = json_io_dict_from_quantile_csv_file(fp,
-            COVID_TARGETS,
+            VALID_TARGET_NAMES,
+            codes,
             covid19_row_validator, 
-            COVID_ADDL_REQ_COLS)
+            REQUIRED_COLUMNS)
             
             if len(error_from_transformation) > 0:
                 return error_from_transformation, True
@@ -144,7 +152,7 @@ if __name__ == '__main__':
     forecasts_to_upload = []
     for forecast in repo_forecasts:
         if forecast not in zoltar_forecasts:
-            # print("This forecast in repo but not in zoltar "+forecast)
+            print("This forecast in repo but not in zoltar "+forecast)
             forecasts_to_upload.append(forecast)
 
     l = list(map(upload_forecast, forecasts_to_upload))
