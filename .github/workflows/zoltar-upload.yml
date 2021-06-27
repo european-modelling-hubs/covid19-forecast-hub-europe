@@ -26,3 +26,5 @@ jobs:
 
       env:
         GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        Z_USERNAME: ${{secrets.Z_USERNAME}}
+        Z_PASSWORD: ${{secrets.Z_PASSWORD}}

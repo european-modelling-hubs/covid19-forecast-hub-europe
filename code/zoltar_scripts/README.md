@@ -1,22 +1,33 @@
-### Upload to Zoltar
-Complete sequence for conversion and upload running locally
+We use Zoltar to store forecasts and metadata. This means all forecasts and metadata can be accessed via web download or programatically using R or Python.
+
+- [View the ECDC European COVID-19 Forecast Hub on Zoltar](https://www.zoltardata.com/project/238)
+- [Find out more about Zoltar](https://docs.zoltardata.com/)
+
+----
+
+### Hub developers
+
+#### Local upload to Zoltar
+
+First ensure you have set up  hub Zoltar access by adding `Z_USERNAME` and `Z_PASSWORD` as environment variables.
 
 ```
-# Set working directory
-cd Github/covid19-forecast-hub-europe
+# Clone repo with validations submodule
+git clone epiforecasts/covid19-forecast-hub-europe --recurse-submodules
+
+# Set hub as working directory, e.g.
+# cd Github/covid19-forecast-hub-europe
+
 # Detect modified files, convert to json and upload
 python code/zoltar_scripts/upload_zoltar.py
 ```
-
 Detection, validation, and upload takes ~10 seconds per forecast.
 
-
-### Other tasks
+#### Other tasks
 
  - Compare forecasts in the repo with those in Zoltar with:
 ```
  python code/zoltar_scripts/compare_repo_to_zoltar.py
- # zoltar = 335; repo = 561
  ```
 
 - Create json file with:
