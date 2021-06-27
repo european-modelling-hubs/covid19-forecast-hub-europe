@@ -10,17 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@master
       with:
-        repository: 'epiforecasts/covid19-forecast-hub-europe-validations'
+        submodules: recursive
 
-    - name: Setup Python
+    - name: Python set up
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-        architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
-      run: - pip3 install -r requirements.txt
-      run: - python3 code/zoltar_scripts/upload_zoltar.py
+        python-version: '3.x' # Version range
+        architecture: 'x64'
+      run: pip3 install -r code/zoltar_scripts/requirements.txt
+
+    - name: Zoltar upload
+      run: python3 code/zoltar_scripts/upload_zoltar.py
 
       env:
         GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
