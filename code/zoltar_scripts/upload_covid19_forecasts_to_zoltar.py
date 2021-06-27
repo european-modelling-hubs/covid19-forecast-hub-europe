@@ -1,3 +1,5 @@
+from __future__ import absolute_import
+
 from requests.models import codes
 from zoltpy import util
 from zoltpy.connection import ZoltarConnection
