@@ -18,7 +18,7 @@ jobs:
 
     - name: Install R dependencies
       run: |
-       Rscript -e 'install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "readr"))'
+       Rscript -e 'install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "readr", "rlang"))'
        Rscript -e 'remotes::install_github("reichlab/covidHubUtils")'
        Rscript -e 'remotes::install_github("epiforecasts/scoringutils@limit-viz")'
 
