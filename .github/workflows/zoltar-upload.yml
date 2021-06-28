@@ -1,0 +1,30 @@
+name: Zoltar upload
+
+on:
+  workflow_dispatch #:
+  # schedule:
+  #  - cron: "0 7 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+      with:
+        submodules: recursive
+
+    - name: Python set up
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x' # Version range
+        architecture: 'x64'
+      run: pip3 install -r code/zoltar_scripts/requirements.txt
+
+    - name: Zoltar upload
+      run: python3 code/zoltar_scripts/upload_zoltar.py
+
+      env:
+        GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        Z_USERNAME: ${{secrets.Z_USERNAME}}
+        Z_PASSWORD: ${{secrets.Z_PASSWORD}}
