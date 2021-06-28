@@ -4,7 +4,6 @@ library(here)
 library(readr)
 library(scoringutils)
 library(rmarkdown)
-library(data.table)
 library(covidHubUtils)
 library(lubridate)
 
