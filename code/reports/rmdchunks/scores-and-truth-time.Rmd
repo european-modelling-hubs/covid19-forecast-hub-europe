@@ -1,6 +1,6 @@
 <!--- Forecasts diagnostics (WIS, overprediction, underprediction and sharpness)
 over time. --->
-## Scores over time (`r loc`) {.tabset .tabset-fade}
+## Scores over time (`r params$location_name`) {.tabset .tabset-fade}
 
 Visualisation of the weighted interval score over time. In addition, the
 components of the interval score, sharpness (how narrow are forecasts - smaller
