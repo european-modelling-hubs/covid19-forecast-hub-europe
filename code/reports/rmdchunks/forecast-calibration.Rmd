@@ -1,0 +1,111 @@
+<!--- 
+- Table with coverage by horizon for this week
+- Plot of coverage by target and horizon over time
+- PIT histograms
+--->
+# Forecast calibration
+
+The table and plot below show this week's _coverage_ of the ensemble model at the 50% and 95% level, across the 32 countries. This shows the proportion of observations that fall within a given prediction interval. Ideally, a forecast model would achieve 50% coverage of 0.50 (i.e., 50% of observations fall within the 50% prediction interval) and 95% coverage of 0.95 (i.e., 95% of observations fall within the 95% prediction interval). Values of coverage greater than these nominal values indicate that the forecasts are _underconfident_, i.e. prediction intervals tend to be too wide, whereas values of coverage smaller than these nominal values indicate that the ensemble forecasts are _overconfident_, i.e. prediction intervals tend to be too narrow.
+
+## Coverage (this week)
+
+```{r coverage, echo = FALSE, include = include_calibration}
+scores <- scoringutils::eval_forecasts(
+  data,
+  summarise_by = c("model", "range", "quantile",
+                  "target_variable", "horizon",
+                  "forecast_date"),
+  pit_plots = TRUE
+)
+
+coverage <- scores %>%
+  dplyr::filter(range %in% c(50, 95)) %>%
+  select(range, forecast_date, `Target variable` = target_variable,
+         `Forecast horizon` = horizon, coverage) %>%
+  distinct() %>%
+  mutate(range = paste0(range, "% coverage"),
+         `Forecast horizon` =
+           paste0(`Forecast horizon`, " week",
+                  if_else(`Forecast horizon` == 1, "", "s")),
+         `Target variable` = recode_factor(`Target variable`,
+                                         `inc case` = "Cases",
+                                         `inc death` = "Deaths"),
+         coverage = round(coverage, 2))
+
+coverage %>%
+  tidyr::pivot_wider(names_from = range, values_from = coverage) %>%
+  group_by(`Forecast horizon`) %>%
+  filter(forecast_date == max(forecast_date)) %>%
+  DT::datatable(extensions = c('FixedColumns', 'Buttons'),
+                width = "100%",
+                options = list(
+                  paging = FALSE,
+                  info = FALSE,
+                  buttons = c('csv', 'excel'),
+                  dom = 'Bfrtip',
+                  scrollX = TRUE
+                ),
+                class = 'white-space: nowrap') %>%
+  htmltools::tagList()
+```
+
+## Coverage (over time) { .tabset .tabset_fade }
+
+The dashed line indicates the nominal 95% level and dotted line the 50% level. If the ensemble was perfectly calibrated, the corresponding coloured lines would coincide with these.
+
+```{r coverage_time, echo = FALSE, include = include_calibration, results='asis'}
+for (variable in names(target_variables)) {
+  cat("\n\n###", variable, "{.tabset .tabset_fade}\n\n")
+  for (horizon in unique(coverage$`Forecast horizon`)) {
+    cat("\n\n####", horizon, "\n\n")
+    p <- ggplot(coverage %>%
+           filter(`Forecast horizon` == horizon,
+                  `Target variable` == variable),
+           aes(x = forecast_date, y = coverage, colour = range)) +
+      geom_line() +
+      geom_point() +
+      theme_light() +
+      scale_colour_brewer("", palette = "Dark2") +
+      xlab("Date of the forecast") +
+      ylab("Coverage") +
+      geom_hline(yintercept = 0.95, linetype = "dashed", colour = "black") +
+      geom_hline(yintercept = 0.50, linetype = "dotted", colour = "black") +
+      theme(legend.position = "top") +
+      ylim(c(0, 1))
+    print(p)
+  }
+}
+```
+
+## PIT histograms
+
+The figures below are _PIT histograms_ for the most recent ensemble forecasts. These show the proportion of true values within each predictive quantile (width: 0.2). If the forecasts were perfectly calibrated, observations would fall evenly across these equally-spaced quantiles, i.e. the histograms would be flat.
+
+```{r pit, echo = FALSE, include = include_calibration}
+latest_data <- data %>%
+  filter(target_end_date == ymd(params$report_date) - 2)
+pit_scores <- scoringutils::eval_forecasts(latest_data,
+                         summarise_by = c("model", "range", "quantile",
+                                          "target_variable", "horizon"),
+                         pit_plots = TRUE)
+gap <- 0.2
+quantiles <- seq(gap, 1 - gap, by = gap)
+
+even_quantiles <- pit_scores %>%
+  filter(!is.na(quantile) & round(quantile, 3) %in% round(quantiles, 3))
+
+pit <- even_quantiles %>%
+  arrange(target_variable, horizon, quantile) %>%
+  group_by(target_variable, horizon) %>%
+  summarise(quantile = c(quantile, 1),
+            pit_bin = diff(c(0, quantile_coverage, 1)))
+
+p <- ggplot(pit, aes(x = quantile - gap / 2, y = pit_bin)) +
+  geom_col() +
+  theme_light() +
+  facet_grid(horizon ~ target_variable) +
+  xlab("Quantile") + ylab("Proportion") +
+  geom_hline(yintercept = gap, linetype = "dashed")
+
+print(p)
+```

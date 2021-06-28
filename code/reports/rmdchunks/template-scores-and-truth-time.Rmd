@@ -1,3 +1,5 @@
+### {{ this_horizon }} `r ifelse(this_horizon > 1, "weeks", "week")` ahead horizon {.tabset .tabset-fade}
+
 ```{r scores-and-truth1, results = 'asis', fig.width=10, fig.height = 4}
 
 library(ggplot2)
@@ -17,7 +19,7 @@ scores <- scores[!is.na(interval_score)]
   tmp_data <- filter(data, location_name == loc)
   tmp_scores <- filter(scores, 
                        location_name == loc, 
-                       horizon == this_horizon)
+                       horizon == "{{ this_horizon }}")
   
   if (nrow(tmp_data) == 0) {
     print(location)
