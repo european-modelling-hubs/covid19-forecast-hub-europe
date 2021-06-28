@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
       with:
-        submodules: recursive
+        submodules: recursive # zoltar upload relies on validations submodule
 
     - name: Python set up
       uses: actions/setup-python@v2
