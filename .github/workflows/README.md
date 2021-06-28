@@ -12,7 +12,6 @@
 | [`reports-eval.yml`](reports-eval.yml)         | R          | [9:00 every Sunday](https://crontab.guru/#0_9_*_*_0)           | Compile evaluation reports                         |
 | [`visualisation.yml`](visualisation.yml)       | Python     | [8:00 and 11:00 every day](https://crontab.guru/#0_8,11_*_*_*) | Prepare truth data and forecasts for visualisation |
 
-
 ## Submission checks
 
 | Action name                            | Language |
