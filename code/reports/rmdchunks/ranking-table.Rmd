@@ -54,7 +54,7 @@ df <- df %>%
 if (nrow(df) > 0) {
   coverage <- eval_forecasts(
     df, 
-    summarise_by = c(summarise_by, "range"), 
+    summarise_by = c("model", "target_variable", "range"), 
     compute_relative_skill = FALSE,
     ) %>%
     dplyr::filter(range %in% c(50, 95)) %>%
@@ -68,7 +68,7 @@ if (nrow(df) > 0) {
     dplyr::group_by(model, horizon) %>%
     dplyr::summarise(n = n())
 
-  table <- eval_forecasts(df, summarise_by = summarise_by, 
+  table <- eval_forecasts(df, summarise_by = c("model", "target_variable"), 
                           compute_relative_skill = TRUE) %>%
     dplyr::left_join(coverage, by = "model") %>%
     dplyr::left_join(num_fc)
@@ -94,31 +94,31 @@ if (nrow(df) > 0) {
             "underprediction", "overprediction",
             "bias", "aem")
 
-  setcolorder(table, cols)
-
-  htmltools::tagList(
-               table %>%
-               arrange(relative_skill) %>%
-               dplyr::select(c(-scaled_rel_skill, -coverage_deviation)) %>%
-               mutate_if(is.numeric, round, 2) %>%
-               dplyr::rename(wis = interval_score,
-                             underpred = underprediction,
-                             overpred = overprediction,
-                             rel_skill = relative_skill, 
-                             "95% Cov." = `Coverage 95`, 
-                             "50% Cov." = `Coverage 50`) %>%
-               DT::datatable(extensions = c('FixedColumns', 'Buttons'),
-                             width = "100%",
-                             options = list(
-                               paging = FALSE,
-                               info = FALSE,
-                               buttons = c('csv', 'excel'),
-                               dom = 'Bfrtip',
-                               scrollX = TRUE,
-                               fixedColumns = TRUE
-                             ), 
-                             class = 'white-space: nowrap')
-             )
+  table %>%
+    select(all_of(cols)) %>%
+    arrange(relative_skill) %>%
+    mutate_if(is.numeric, round, 2) %>%
+    dplyr::rename(
+      wis = interval_score,
+      underpred = underprediction,
+      overpred = overprediction,
+      rel_skill = relative_skill, 
+      "95% Cov." = `Coverage 95`, 
+      "50% Cov." = `Coverage 50`
+    ) %>%
+    DT::datatable(
+      extensions = c('FixedColumns', 'Buttons'),
+      width = "100%",
+      options = list(
+        paging = FALSE,
+        info = FALSE,
+        buttons = c('csv', 'excel'),
+        dom = 'Bfrtip',
+        scrollX = TRUE,
+        fixedColumns = TRUE
+      )
+    )
+  
 } else {
   cat("Rankings are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment no model fulfills that criterion." )
 }
