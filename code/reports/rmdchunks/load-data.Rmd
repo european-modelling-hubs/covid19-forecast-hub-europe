@@ -1,6 +1,4 @@
 <!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. -->
-
-
 ```{r}
 library(covidHubUtils)
 library(readr)
@@ -9,7 +7,7 @@ library(here)
 library(lubridate)
 ```
 
-```{r load-data}
+```{r load-data, cache = TRUE, cache.extra = params$report_date, cache.vars="data"}
 raw_forecasts <- load_forecasts(
   models = params$model,
   source = "local_hub_repo",
@@ -49,10 +47,6 @@ forecasts <- raw_forecasts %>%
 
 data <- scoringutils::merge_pred_and_obs(forecasts, truth,
                                          join = "full")
-
-if (!is.null(params$location_name)) {
-  data <- data %>%
-    filter(location_name == params$location_name)
-}
 ```
+
 ## {.unlisted .unnumbered}
