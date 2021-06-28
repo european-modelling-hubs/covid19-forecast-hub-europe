@@ -34,3 +34,7 @@ Detection, validation, and upload takes ~10 seconds per forecast.
 ```
 code/zoltar_scripts/create_validated_files_db.py
 ```
+
+- Untested: in development
+  `code/zoltar_scripts/upload_single_forecast.py`
+  `code/zoltar_scripts/upload_truth_to_zoltar.py`
