@@ -19,7 +19,11 @@ jobs:
       with:
         python-version: '3.x' # Version range
         architecture: 'x64'
-      run: pip3 install -r code/zoltar_scripts/requirements.txt
+        
+    - name: Install requirements
+      run: |
+        pip3 install -r code/zoltar_scripts/requirements.txt
+        pip3 install git+https://github.com/reichlab/zoltpy/
 
     - name: Zoltar upload
       run: python3 code/zoltar_scripts/upload_zoltar.py
