@@ -19,7 +19,7 @@ jobs:
 
       - name: Commit
         env:
-          AUTH: ${{ secrets.GITHUBTOKEN }}
+          AUTH: ${{ secrets.API_TOKEN_GITHUB }}
         run: |
           git config user.email "action@github.com"
           git config user.name "GitHub Action - update submodules"
