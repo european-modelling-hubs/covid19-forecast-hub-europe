@@ -19,16 +19,13 @@ jobs:
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
     - name: Install requirenments
       run: |
-        pip3 install -r github-actions/pr_requirements.txt
+        pip3 install -r github-actions/viz_requirements.txt
     - name: Visualization
       run: |
         cp data-locations/locations_eu.csv viz/location_codes.csv
         python3 ./viz/prepare_truth_data.py
         python3 ./viz/prepare_metadata.py
         python3 ./viz/prepare_forecast_data.py
-    - name: Get commit dates
-      run: |
-        python3 code/validation/get_commit_dates.py
     - name: Commit files
       env:
         AUTH: ${{ secrets.GITHUBTOKEN }}
