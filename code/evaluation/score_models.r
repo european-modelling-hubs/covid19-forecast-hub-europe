@@ -7,7 +7,7 @@ library(lubridate)
 library(here)
 library(readr)
 source(here("code", "config_utils", "get_hub_config.R"))
-data_types <- get_hub_config("targets")
+data_types <- get_hub_config("target_variables")
 
 ## only evaluate if the last 4 weeks hae been submitted
 restrict_weeks <- 4

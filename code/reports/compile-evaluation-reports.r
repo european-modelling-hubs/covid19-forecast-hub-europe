@@ -8,7 +8,7 @@ library(data.table)
 library(covidHubUtils)
 library(lubridate)
 source(here("code", "config_utils", "get_hub_config.R"))
-data_types <- get_hub_config("targets")
+data_types <- get_hub_config("target_variables")
 
 options(knitr.duplicate.label = "allow")
 
@@ -87,7 +87,7 @@ rmarkdown::render(here::here("code", "reports", "evaluation",
                                 restrict_weeks = 4),
                   output_format = "html_document",
                   output_file =
-                    here::here("html", paste0("evaluation-report-", 
+                    here::here("html", paste0("evaluation-report-",
                                               "Overall.html")),
                   envir = new.env())
 
