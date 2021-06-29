@@ -114,7 +114,7 @@ setnames(forecasts, old = c("value"), new = c("prediction"))
 
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(truth_source = "JHU",
-                        target_variable = gsub("^(\\w+)s$", "inc \\1", data_types),
+                        target_variable = paste("inc", data_types),
                         hub = "ECDC")
 # get anomalies
 anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
