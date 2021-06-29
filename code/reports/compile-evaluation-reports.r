@@ -7,8 +7,8 @@ library(rmarkdown)
 library(data.table)
 library(covidHubUtils)
 library(lubridate)
-source(here("code", "config_utils", "get_forecast_targets.R"))
-data_types <- get_forecast_targets()
+source(here("code", "config_utils", "get_hub_config.R"))
+data_types <- get_hub_config("targets")
 
 options(knitr.duplicate.label = "allow")
 

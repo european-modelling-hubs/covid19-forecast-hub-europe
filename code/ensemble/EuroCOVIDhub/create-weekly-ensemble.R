@@ -11,7 +11,7 @@ source(here("code", "config_utils", "get_ensemble_method.R"))
 
 # Set up ----------------------------------------------------------------
 # Get method
-method <- get_ensemble_method()
+method <- get_hub_config("ensemble_method")
 
 # Set current submission date
 forecast_date <- floor_date(today(), "week", 1)
