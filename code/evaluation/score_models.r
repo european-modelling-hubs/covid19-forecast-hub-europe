@@ -128,8 +128,8 @@ setnames(truth, old = c("value"),
 data <- scoringutils::merge_pred_and_obs(forecasts, truth,
                                          join = "full")
 
-latest_date <- update(today(), wday = get_hub_config("forecast_week_day"),
-                      week_start = 1, roll = TRUE)
+latest_date <- today()
+wday(latest_date) <- get_hub_config("forecast_week_day")
 
 ## can modify manually if wanting to re-run past evaluation
 re_run <- FALSE

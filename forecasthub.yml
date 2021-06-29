@@ -2,12 +2,8 @@ shortname: EuroCOVIDhub
 repo_url: https://github.com/epiforecasts/covid19-forecast-hub-europe
 ensemble_method: mean
 horizon: '4 weeks'
-# week_end_date and forecast_week_date use the ISO 8601 standard (same as the
-# lubridate R package).
-# 1: Monday, 2: Tuesday, 3: Wednesday, 4: Thursday, 5: Friday, 6: Saturday,
-# 7: Sunday
-week_end_day: 6
-forecast_week_day: 1
+week_end_day: Saturday
+forecast_week_day: Monday
 target_variables:
   - cases
   - deaths

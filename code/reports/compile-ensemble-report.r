@@ -11,8 +11,8 @@ source(here("code", "config_utils", "get_hub_config.R"))
 
 options(knitr.duplicate.label = "allow")
 
-report_date <- update(today(), wday = get_hub_config("forecast_week_day"),
-                      week_start = 1, roll = TRUE)
+report_date <- today()
+wday(report_date) <- get_hub_config("forecast_week_day")
 
 dir.create(here::here("html"))
 
