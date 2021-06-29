@@ -128,8 +128,8 @@ setnames(truth, old = c("value"),
 data <- scoringutils::merge_pred_and_obs(forecasts, truth,
                                          join = "full")
 
-latest_date <-
-  lubridate::floor_date(lubridate::today(), "week", week_start = 7) + 1
+latest_date <- update(today(), wday = get_hub_config("forecast_week_day"),
+                      week_start = 1, roll = TRUE)
 
 ## can modify manually if wanting to re-run past evaluation
 re_run <- FALSE
