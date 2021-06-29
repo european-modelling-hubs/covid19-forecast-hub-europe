@@ -16,12 +16,12 @@ First ensure you have set up  hub Zoltar access by adding `Z_USERNAME` and `Z_PA
 git clone epiforecasts/covid19-forecast-hub-europe --recurse-submodules
 
 # Set hub as working directory, e.g.
-# cd Github/covid19-forecast-hub-europe
+# cd covid19-forecast-hub-europe
 
 # Detect modified files, convert to json and upload
 python code/zoltar_scripts/upload_zoltar.py
 ```
-Detection, validation, and upload takes ~10 seconds per forecast.
+Detection, validation, and upload takes ~10 seconds per forecast file.
 
 #### Other tasks
 
@@ -30,7 +30,8 @@ Detection, validation, and upload takes ~10 seconds per forecast.
  python code/zoltar_scripts/compare_repo_to_zoltar.py
  ```
 
-- Create json file with:
+- In case of problems connecting to Zoltar programatically, an alternative is to
+create and save a json file of modified forecasts and upload to zoltar via web interface. Create this file with:
 ```
 code/zoltar_scripts/create_validated_files_db.py
 ```

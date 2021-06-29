@@ -1,9 +1,7 @@
 from __future__ import absolute_import
 
-# from zoltpy.quantile_io import json_io_dict_from_quantile_csv_file
 from zoltpy import util
 from zoltpy.connection import ZoltarConnection
-# from zoltpy.covid19 import COVID_TARGETS, COVID_ADDL_REQ_COLS, covid19_row_validator, validate_quantile_csv_file
 import os
 import sys
 
@@ -32,7 +30,6 @@ project_obj = None
 conn = util.authenticate()
 url = 'https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/data-processed'
 
-# all_forecasts = glob.glob('./data-processed')
 project_obj = [project for project in conn.projects if project.name == project_name][0]
 project_timezeros = [timezero.timezero_date for timezero in project_obj.timezeros]
 models = [model for model in project_obj.models]
@@ -75,7 +72,7 @@ def config_from_metadata(metadata):
             metadata['team_name'], metadata['methods'], metadata['website_url'] if metadata.get(
         'website_url') != None else url + dir_name, 'NA'
     return model_config
-        
+
 
 def create_model(file_path, metadata):
     model_config = config_from_metadata(metadata)
@@ -102,7 +99,7 @@ def upload_forecast(forecast_name):
     metadata = metadata_dict_for_file(list(Path(path).parent.glob('metadata-*.txt'))[0])
     if f"{metadata['model_abbr']}"  not in [m.abbreviation for m in models]:
         create_model(path, metadata)
-    
+
     time_zero_date = '-'.join(forecast_name.split('-')[:3])
 
     if time_zero_date not in [timezero.timezero_date for timezero in project_obj.timezeros]:
@@ -121,12 +118,12 @@ def upload_forecast(forecast_name):
             quantile_json, error_from_transformation = json_io_dict_from_quantile_csv_file(fp,
             VALID_TARGET_NAMES,
             codes,
-            covid19_row_validator, 
+            covid19_row_validator,
             REQUIRED_COLUMNS)
-            
+
             if len(error_from_transformation) > 0:
                 return error_from_transformation, True
-            
+
             try:
                 fr = util.upload_forecast(conn, quantile_json, path, project_name, f"{metadata['model_abbr']}" , time_zero_date)
                 db[forecast_name] = checksum
