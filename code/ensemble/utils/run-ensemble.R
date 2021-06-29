@@ -30,55 +30,36 @@ library(lubridate)
 library(covidHubUtils)
 source(here("code", "ensemble", "utils", "use-ensemble-criteria.R"))
 source(here("code", "ensemble", "utils", "format-ensemble.R"))
-source(here("code", "config_utils", "get_ensemble_method.R"))
+source(here("code", "config_utils", "get_hub_config.R"))
 
 run_ensemble <- function(method = "mean",
                          forecast_date,
                          exclude_models = NULL,
-<<<<<<< HEAD
                          return_criteria = TRUE,
                          evaluation_date,
                          continuous_weeks = 4,
                          verbose = FALSE) {
-=======
-                         return_criteria = TRUE) {
-
-  methods <- sub("^.*-", "", dir(here("ensembles", "data-processed")))
->>>>>>> 533de0c (Store repo-specific settings in a single top-level config file)
 
   # Method ------------------------------------------------------------------
   # Check method is supported
   methods <- sub("^.*-", "", dir(here("ensembles", "data-processed")))
 
   if (missing(method)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    method <- readLines(here("code", "ensemble", "EuroCOVIDhub",
-                             "current-method.txt"))
-=======
-    method <- yaml::read_yaml(here("forecasthub.yml"))$ensemble_method
->>>>>>> 533de0c (Store repo-specific settings in a single top-level config file)
-=======
-    method <- get_ensemble_method()
->>>>>>> 5efe572 (Move functions to interact with config file to a specific folder)
+    method <- get_hub_config("ensemble_method")
   }
   method <- match.arg(arg = method,
                       choices = methods,
                       several.ok = FALSE)
 
-<<<<<<< HEAD
   if (verbose) {message(paste0("Ensemble method: ", method))}
 
   # Dates ------------------------------------------------------------------
-=======
->>>>>>> 533de0c (Store repo-specific settings in a single top-level config file)
   # determine forecast dates matching the forecast date
   forecast_date <- as.Date(forecast_date)
   forecast_dates <- seq.Date(from = forecast_date,
                              by = -1,
                              length.out = 6)
 
-<<<<<<< HEAD
   # Load forecasts and save criteria --------------------------------------------
   # Get all forecasts
   all_forecasts <- suppressMessages(
@@ -95,8 +76,6 @@ run_ensemble <- function(method = "mean",
     }
 
   # Exclusions --------------------------------------------------------------
-=======
->>>>>>> 533de0c (Store repo-specific settings in a single top-level config file)
   # If manual exclusion is csv, convert to vector
   if ("data.frame" %in% class(exclude_models)) {
     exclude_models <- exclude_models %>%
@@ -104,16 +83,6 @@ run_ensemble <- function(method = "mean",
       pull(model)
   }
 
-<<<<<<< HEAD
-=======
-  # Load forecasts and save criteria --------------------------------------------
-  # Get all forecasts
-  all_forecasts <- load_forecasts(source = "local_hub_repo",
-                              hub_repo_path = here(),
-                              hub = "ECDC",
-                              forecast_dates = forecast_dates)
-
->>>>>>> 533de0c (Store repo-specific settings in a single top-level config file)
   # Filter by inclusion criteria
   forecasts <- use_ensemble_criteria(forecasts = all_forecasts,
                                      exclude_models = exclude_models,
@@ -124,14 +93,11 @@ run_ensemble <- function(method = "mean",
     forecasts <- forecasts$forecasts
   }
 
-<<<<<<< HEAD
   forecasts <- forecasts %>%
     filter(type == "quantile") %>%
     mutate(quantile = round(quantile, 3),
            horizon = as.numeric(horizon))
 
-=======
->>>>>>> 533de0c (Store repo-specific settings in a single top-level config file)
   # Run  ensembles ---------------------------------------------------
   # Averages
   if (method %in% c("mean", "median")) {
@@ -184,10 +150,8 @@ run_ensemble <- function(method = "mean",
 # Format and return -----------------------------------------------------------
   ensemble <- format_ensemble(ensemble = ensemble,
                               forecast_date = max(forecast_dates))
-<<<<<<< HEAD
+
   if (verbose) {message("Ensemble formatted in hub standard")}
-=======
->>>>>>> 533de0c (Store repo-specific settings in a single top-level config file)
 
   if (return_criteria) {
     return(list("ensemble" = ensemble,
@@ -196,11 +160,6 @@ run_ensemble <- function(method = "mean",
                 "weights" = weights,
                 "forecast_date" = max(forecast_dates)))
   }
-<<<<<<< HEAD
-=======
-
-  return(ensemble)
->>>>>>> 533de0c (Store repo-specific settings in a single top-level config file)
 
   return(ensemble)
 }
