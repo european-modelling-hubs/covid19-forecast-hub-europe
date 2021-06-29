@@ -12,8 +12,8 @@ data_types <- get_hub_config("target_variables")
 
 options(knitr.duplicate.label = "allow")
 
-report_date <- update(today(), wday = get_hub_config("forecast_week_day"),
-                      week_start = 1, roll = TRUE)
+report_date <- today()
+wday(report_date) <- get_hub_config("forecast_week_day")
 
 suppressWarnings(dir.create(here::here("html")))
 
