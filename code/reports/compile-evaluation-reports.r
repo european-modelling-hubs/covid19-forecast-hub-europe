@@ -12,8 +12,8 @@ data_types <- get_hub_config("targets")
 
 options(knitr.duplicate.label = "allow")
 
-report_date <-
-  lubridate::floor_date(lubridate::today(), "week", week_start = 7) + 1
+report_date <- update(today(), wday = get_hub_config("forecast_week_day"),
+                      week_start = 1, roll = TRUE)
 
 suppressWarnings(dir.create(here::here("html")))
 

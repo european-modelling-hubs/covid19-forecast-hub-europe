@@ -7,11 +7,12 @@ library(rmarkdown)
 library(data.table)
 library(covidHubUtils)
 library(lubridate)
+source(here("code", "config_utils", "get_hub_config.R"))
 
 options(knitr.duplicate.label = "allow")
 
-report_date <-
-  lubridate::floor_date(lubridate::today(), "week", week_start = 1)
+report_date <- update(today(), wday = get_hub_config("forecast_week_day"),
+                      week_start = 1, roll = TRUE)
 
 dir.create(here::here("html"))
 

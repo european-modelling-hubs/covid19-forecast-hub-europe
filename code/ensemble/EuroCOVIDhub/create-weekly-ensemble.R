@@ -14,7 +14,8 @@ source(here("code", "config_utils", "get_ensemble_method.R"))
 method <- get_hub_config("ensemble_method")
 
 # Set current submission date
-forecast_date <- floor_date(today(), "week", 1)
+forecast_date <- update(today(), wday = get_hub_config("forecast_week_day"),
+                        week_start = 1, roll = TRUE)
 
 # Get model names for manual exclusion
 exclude_models <-
