@@ -8,6 +8,6 @@ horizon: '4 weeks'
 # 7: Sunday
 week_end_day: 6
 forecast_week_day: 1
-targets:
+target_variables:
   - cases
   - deaths

@@ -41,7 +41,7 @@ include_countries <- include_forecast_plot ||
 restrict_weeks <- params$restrict_weeks
 
 source(here("code", "config_utils", "get_hub_config.R"))
-data_types <- get_hub_config("targets")
+data_types <- get_hub_config("target_variables")
 ```
 
 
