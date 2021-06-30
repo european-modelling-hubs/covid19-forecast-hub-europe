@@ -67,7 +67,6 @@ Direct contributors to this repository include (in alphabetical order):
 - Hugo Gruson
 - Jannik Deuschel
 - [Johannes Bracher](https://statistik.econ.kit.edu/mitarbeiter_2902.php)
-- Hugo Gruson
 - Katharine Sherratt
 - Nikos Bosse
 - [Sebastian Funk](https://www.lshtm.ac.uk/aboutus/people/funk.sebastian)
