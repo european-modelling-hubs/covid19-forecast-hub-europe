@@ -64,6 +64,7 @@ This repository is maintained by [Epiforecasts](https://epiforecasts.io). It is 
 Direct contributors to this repository include (in alphabetical order):
 
 - Daniel Wolffram
+- Hugo Gruson
 - Jannik Deuschel
 - [Johannes Bracher](https://statistik.econ.kit.edu/mitarbeiter_2902.php)
 - Hugo Gruson
