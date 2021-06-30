@@ -1,0 +1,35 @@
+name: "Baseline"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 2 * * 1"
+
+jobs:
+  ensemble:
+    runs-on: ubuntu-20.04
+    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
+    env:
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
+    steps:
+    - uses: actions/checkout@master
+    - uses: r-lib/actions/setup-r@v1
+
+    - name: Install system dependencies
+      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
+
+    - name: Install R dependencies
+      run: |
+       install.packages(c("dplyr", "purrr", "lubridate", "yaml", "here", "readr"))
+       remotes::install_github("reichlab/covidModels")
+      shell: Rscript {0}
+
+    - name: Create ensembles
+      run: Rscript 'code/baseline/create-baseline.R'
+
+    - name: Commit files
+      run: |
+        git config user.email "actions@github.com"
+        git config user.name "GitHub Actions"
+        git commit -am "Build baseline model"
+        git push
+        echo "pushed to github"
