@@ -33,7 +33,7 @@ setnames(raw_forecasts, old = c("value"), new = c("prediction"))
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(
   truth_source = "JHU",
-  target_variable = paste("inc", data_types),
+  target_variable = data_types,
   truth_end_date = report_date,
   hub = "ECDC"
 )
