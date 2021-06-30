@@ -56,7 +56,7 @@ setnames(forecasts, old = c("value"), new = c("prediction"))
 # load truth data --------------------------------------------------------------
 raw_truth <- load_truth(
   truth_source = "JHU",
-  target_variable = paste("inc", data_types),
+  target_variable = data_types,
   truth_end_date = params$report_date,
   hub = "ECDC"
 )
@@ -73,9 +73,10 @@ setnames(truth, old = c("value"),
 data <- scoringutils::merge_pred_and_obs(forecasts, truth, 
                                          join = "full")
 
+# Add a beautiful name to data_types for plots
 target_variables <- setNames(
-  gsub("^(\\w+)s$", "inc \\1", data_types),
-  tools::toTitleCase(data_types)
+  data_types,
+  gsub("^inc (\\w)(\\w*)$", "\\U\\1\\L\\2s", get_hub_config("target_variables"), perl = TRUE)
 )
 ```
 

@@ -55,9 +55,10 @@ horizons <- horizons[order(as.integer(horizons))]
  
 summarise_by = c("model", "target_variable")
 
+# Add a beautiful name to data_types for plots
 target_variables <- setNames(
-  paste("inc", data_types),
-  tools::toTitleCase(data_types)
+  data_types,
+  gsub("^inc (\\w)(\\w*)$", "\\U\\1\\L\\2s", get_hub_config("target_variables"), perl = TRUE)
 )
 ```
 
