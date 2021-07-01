@@ -95,6 +95,7 @@ even_quantiles <- pit_scores %>%
   filter(!is.na(quantile) & round(quantile, 3) %in% round(quantiles, 3))
 
 pit <- even_quantiles %>%
+  mutate(horizon = paste0(horizon, " week", if_else(horizon == 1, "", "s"))) %>%
   arrange(target_variable, horizon, quantile) %>%
   group_by(target_variable, horizon) %>%
   summarise(quantile = c(quantile, 1),
