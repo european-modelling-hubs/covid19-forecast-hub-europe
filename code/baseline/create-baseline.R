@@ -57,7 +57,7 @@ baseline_forecast <- raw_truth %>%
   filter(type == "inc")
 
 # Adopt the format required for forecasts
-baseline_forecast %>%
+baseline_forecast <- baseline_forecast %>%
   transmute(
     forecast_date = forecast_date,
     target = paste(horizon, "wk ahead", target_variable),
@@ -66,7 +66,16 @@ baseline_forecast %>%
     type = "quantile",
     quantile = quantile,
     value = round(value)
-  ) %>%
-  write_csv(paste0(model_folder, "/", forecast_date, "-", model_name, ".csv"))
+  ) 
+
+# Add point forecasts
+baseline_with_point <- baseline_forecast %>%
+  filter(quantile == 0.5) %>%
+  mutate(type = "point",
+         quantile = NA_real_) %>%
+  bind_rows(baseline_forecast) 
+
+write_csv(baseline_with_point,
+            paste0(model_folder, "/", forecast_date, "-", model_name, ".csv"))
 
 
