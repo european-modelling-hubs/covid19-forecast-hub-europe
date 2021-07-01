@@ -55,7 +55,8 @@ baseline_forecast <- raw_truth %>%
     )
   ) %>%
   bind_rows() %>%
-  filter(type == "inc")
+  filter(type == "inc") %>%
+  mutate(type = "quantile")
 
 format_ensemble(baseline_forecast, forecast_date) %>%
   write_csv(paste0(model_folder, "/", forecast_date, "-", model_name, ".csv"))
