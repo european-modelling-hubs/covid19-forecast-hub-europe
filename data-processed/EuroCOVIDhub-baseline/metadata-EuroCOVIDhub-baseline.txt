@@ -9,4 +9,4 @@ methods: An baseline model against which other models can be evaluated
 team_funding: This model's development is funded by the European Centre for Disease Prevention and Control.
 repo_url: https://github.com/epiforecasts/covid19-forecast-hub-europe
 data_inputs: observed incident cases and deaths (from JHU).
-methods_long: Baseline model automatically generated using past truth data via the script create-baseline.R in the present repository
+methods_long: Baseline model automatically generated using past truth data via the script create-baseline.R in the present repository. Baseline generated using code at https://github.com/reichlab/covidModels/blob/master/R-package/R/quantile_baseline.R
