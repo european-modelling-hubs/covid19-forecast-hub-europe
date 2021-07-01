@@ -37,9 +37,14 @@ create_ensemble_relative_skill <- function(forecasts,
                                            average = "mean",
                                            by_horizon = FALSE,
                                            return_criteria = FALSE,
-                                           verbose = FALSE) {
+                                           verbose = FALSE,
+                                           ...) {
 
 # Get evaluation ----------------------------------------------------------
+  if (missing(evaluation_date)) {
+    evaluation_date = max(forecasts$forecast_date)
+  }
+  
   evaluation <- try(suppressMessages(
     vroom(here("evaluation", paste0("evaluation-", evaluation_date, ".csv")))))
   # evaluation error catching

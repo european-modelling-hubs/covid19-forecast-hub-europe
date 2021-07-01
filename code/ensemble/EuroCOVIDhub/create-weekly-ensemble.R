@@ -27,6 +27,7 @@ exclude_models <-
 hub_ensemble <- run_ensemble(method = method,
                              forecast_date = forecast_date,
                              exclude_models = exclude_models,
+                             # Make explicit the hub default options
                              exclude_designated_other = TRUE,
                              return_criteria = TRUE)
 
