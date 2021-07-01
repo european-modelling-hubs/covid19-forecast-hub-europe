@@ -7,7 +7,7 @@ library(here)
 library(tibble)
 
 source(here("code", "ensemble", "utils", "run-ensemble.R"))
-source(here("code", "config_utils", "get_ensemble_method.R"))
+source(here("code", "config_utils", "get_hub_config.R"))
 
 # Set up ----------------------------------------------------------------
 # Get method
