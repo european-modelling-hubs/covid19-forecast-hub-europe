@@ -86,6 +86,7 @@ run_ensemble <- function(method = "mean",
   # Filter by inclusion criteria
   forecasts <- use_ensemble_criteria(forecasts = all_forecasts,
                                      exclude_models = exclude_models,
+                                     exclude_designated_other = TRUE,
                                      return_criteria = return_criteria)
 
   if (return_criteria) {
