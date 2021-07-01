@@ -49,7 +49,7 @@ data_types <- get_hub_config("target_variables")
 options(knitr.duplicate.label = "allow")
 ```
 
-<!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to manually invalidate if necessary when testing. -->
+<!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
 ```{r load-data, child = "../rmdchunks/load-data.Rmd"}
 ```
 
