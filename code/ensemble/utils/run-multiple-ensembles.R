@@ -18,6 +18,7 @@ source(here("code", "ensemble", "utils", "run-ensemble.R"))
 run_multiple_ensembles <- function(forecast_dates,
                                    methods,
                                    exclude_models = NULL,
+                                   exclude_designated_other = TRUE,
                                    return_criteria = TRUE,
                                    continuous_weeks = 4,
                                    verbose = FALSE) {
@@ -34,6 +35,7 @@ run_multiple_ensembles <- function(forecast_dates,
                     ~ safe_run_ensemble(method = .x,
                                         forecast_date = .y,
                                         exclude_models = exclude_models,
+                                        exclude_designated_other = exclude_designated_other,
                                         return_criteria = return_criteria,
                                         continuous_weeks = continuous_weeks,
                                         verbose = verbose))

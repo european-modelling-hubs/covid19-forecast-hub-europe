@@ -35,6 +35,7 @@ source(here("code", "config_utils", "get_hub_config.R"))
 run_ensemble <- function(method = "mean",
                          forecast_date,
                          exclude_models = NULL,
+                         exclude_designated_other = TRUE,
                          return_criteria = TRUE,
                          evaluation_date,
                          continuous_weeks = 4,
@@ -86,7 +87,7 @@ run_ensemble <- function(method = "mean",
   # Filter by inclusion criteria
   forecasts <- use_ensemble_criteria(forecasts = all_forecasts,
                                      exclude_models = exclude_models,
-                                     exclude_designated_other = TRUE,
+                                     exclude_designated_other = exclude_designated_other,
                                      return_criteria = return_criteria)
 
   if (return_criteria) {
