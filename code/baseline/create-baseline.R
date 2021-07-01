@@ -17,6 +17,7 @@ if (!dir.exists(model_folder)) {
 
 hub_quantiles <- get_hub_config("forecast_type")[["quantiles"]]
 hub_horizon <- get_hub_config("horizon")[["value"]]
+hub_targets <- get_hub_config("target_variables")
 
 forecast_date <- today()
 
@@ -39,7 +40,7 @@ build_baseline <- function(inc_obs, quantiles, horizon) {
 
 raw_truth <- covidHubUtils::load_truth(
   truth_source = "JHU",
-  target_variable = c("inc case", "inc death"),
+  target_variable = hub_targets,
   truth_end_date = forecast_date - 1,
   hub = "ECDC"
 )
@@ -55,7 +56,7 @@ baseline_forecast <- raw_truth %>%
     )
   ) %>%
   bind_rows() %>%
-  filter(type == "inc") %>%
+  filter(type %in% substr(hub_targets, 1, 3)) %>%
   mutate(type = "quantile")
 
 format_ensemble(baseline_forecast, forecast_date) %>%
