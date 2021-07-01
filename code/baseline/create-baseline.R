@@ -7,6 +7,7 @@ library(here)
 library(readr)
 
 source(here("code", "config_utils", "get_hub_config.R"))
+source(here("code", "ensemble", "utils", "format-ensemble.R"))
 
 model_name <- "EuroCOVIDhub-baseline"
 model_folder <- here("data-processed", model_name)
@@ -56,26 +57,7 @@ baseline_forecast <- raw_truth %>%
   bind_rows() %>%
   filter(type == "inc")
 
-# Adopt the format required for forecasts
-baseline_forecast <- baseline_forecast %>%
-  transmute(
-    forecast_date = forecast_date,
-    target = paste(horizon, "wk ahead", target_variable),
-    target_end_date = first_target_date + weeks(horizon - 1),
-    location = location,
-    type = "quantile",
-    quantile = quantile,
-    value = round(value)
-  ) 
-
-# Add point forecasts
-baseline_with_point <- baseline_forecast %>%
-  filter(quantile == 0.5) %>%
-  mutate(type = "point",
-         quantile = NA_real_) %>%
-  bind_rows(baseline_forecast) 
-
-write_csv(baseline_with_point,
-            paste0(model_folder, "/", forecast_date, "-", model_name, ".csv"))
+format_ensemble(baseline_forecast, forecast_date) %>%
+  write_csv(paste0(model_folder, "/", forecast_date, "-", model_name, ".csv"))
 
 
