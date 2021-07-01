@@ -88,8 +88,8 @@ pit_scores <- scoringutils::eval_forecasts(latest_data,
                          summarise_by = c("model", "range", "quantile",
                                           "target_variable", "horizon"),
                          pit_plots = TRUE)
-gap <- 0.2
-quantiles <- seq(gap, 1 - gap, by = gap)
+width <- 0.2
+quantiles <- seq(width, 1 - width, by = width)
 
 even_quantiles <- pit_scores %>%
   filter(!is.na(quantile) & round(quantile, 3) %in% round(quantiles, 3))
@@ -100,12 +100,12 @@ pit <- even_quantiles %>%
   summarise(quantile = c(quantile, 1),
             pit_bin = diff(c(0, quantile_coverage, 1)))
 
-p <- ggplot(pit, aes(x = quantile - gap / 2, y = pit_bin)) +
+p <- ggplot(pit, aes(x = quantile - width / 2, y = pit_bin)) +
   geom_col() +
   theme_light() +
   facet_grid(horizon ~ target_variable) +
   xlab("Quantile") + ylab("Proportion") +
-  geom_hline(yintercept = gap, linetype = "dashed")
+  geom_hline(yintercept = width, linetype = "dashed")
 
 print(p)
 ```
