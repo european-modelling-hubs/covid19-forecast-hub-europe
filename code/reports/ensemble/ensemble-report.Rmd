@@ -40,7 +40,7 @@ model <- params$model
 facetting_var <- rlang::quo(location_name)
 ```
 
-<!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to manually invalidate if necessary when testing. -->
+<!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
 ```{r load-data, child = "../rmdchunks/load-data.Rmd"}
 ```
 
