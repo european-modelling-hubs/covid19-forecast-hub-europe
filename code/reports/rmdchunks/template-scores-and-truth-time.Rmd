@@ -16,6 +16,9 @@ scores <- eval_forecasts(data,
 # remove point forecasts
 scores <- scores[!is.na(interval_score)]
 
+tmp_scores <- filter(scores, 
+                     horizon == "{{ this_horizon }}")
+
 if (nrow(data) == 0) {
   print(location)
   cat("skip")
@@ -40,7 +43,7 @@ cat("\n\n")
 print(p1)
 cat("\n\n")
 
-if (nrow(scores) == 0) {
+if (nrow(tmp_scores) == 0) {
   next()
 }
 
@@ -51,7 +54,7 @@ date_range <- c(as.Date("2021-01-01"),
 
 cat("\n\n#### Weighted interval score")
 
-p2 <- scores  %>%
+p2 <- tmp_scores  %>%
   ggplot(aes(x = as.Date(forecast_date), y = interval_score, colour = model)) + 
   geom_line() + 
   geom_point() + 
@@ -69,7 +72,7 @@ cat("\n\n")
 cat("\n\n#### Overprediction")
 
 # plot overprediction
-p3 <- scores  %>%
+p3 <- tmp_scores  %>%
   ggplot(aes(x = as.Date(forecast_date), y = overprediction, colour = model)) + 
   geom_line() + 
   geom_point() + 
@@ -87,7 +90,7 @@ cat("\n\n")
 # plot underprediction
 
 cat("\n\n#### Underprediction")
-p4 <- scores  %>%
+p4 <- tmp_scores  %>%
   ggplot(aes(x = as.Date(forecast_date), y = underprediction, colour = model)) + 
   geom_line() + 
   geom_point() + 
@@ -104,7 +107,7 @@ cat("\n\n")
 
 # plot underprediction
 cat("\n\n#### Sharpness")
-p5 <- scores  %>%
+p5 <- tmp_scores  %>%
   ggplot(aes(x = as.Date(forecast_date), y = sharpness, colour = model)) + 
   geom_line() + 
   geom_point() + 
