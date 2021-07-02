@@ -58,7 +58,7 @@ use_ensemble_criteria <- function(forecasts,
   
   # 5. Drop "other" designated models
   if (exclude_designated_other) {
-    not_other <- suppressWarnings(get_model_designations(here())) %>%
+    not_other <- get_model_designations(here()) %>%
       filter(designation != "other")
     criteria <- criteria %>%
       filter(model %in% not_other$model)
