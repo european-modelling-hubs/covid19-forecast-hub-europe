@@ -1,12 +1,14 @@
 # Round all forecasts in data-processed
 library(here)
 library(purrr)
+library(readr)
 
 # Load forecast from individual file, round values, and re-write
-all_files <- dir(here("data-processed"), recursive = TRUE,
+all_files <- dir(here("data-processed"), 
+                 recursive = TRUE, full.names = TRUE,
                  pattern = ".csv")
 
 walk2(all_files, all_files,
-    ~ read_csv(here("data-processed", .x)) %>%
+    ~ read_csv(here(.x)) %>%
       mutate(value = round(value)) %>%
-      write_csv(here("data-processed", .y)))
+      write_csv(here(.y)))
