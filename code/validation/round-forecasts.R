@@ -10,6 +10,6 @@ all_files <- dir(here("data-processed"),
                  pattern = ".csv")
 
 walk2(all_files, all_files,
-    ~ read_csv(here(.x)) %>%
+    ~ read_csv(.x) %>%
       mutate(value = round(value)) %>%
-      write_csv(here(.y)))
+      write_csv(.y))
