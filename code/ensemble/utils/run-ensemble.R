@@ -15,6 +15,11 @@
 # return_criteria : logical : whether to return a model/inclusion criteria grid
 #   as well as the ensemble forecast (default TRUE)
 #
+# Additional args:
+# evaluation_date: passed to create_ensemble_relative_skill()
+# continuous_weeks: passed to create_ensemble_relative_skill()
+# exclude_designated_other: passed to use_ensemble_criteria()
+#
 # Returns a list or a tibble
 # return_criteria = TRUE:
 #   "ensemble" : tibble : a single ensemble forecast
@@ -36,9 +41,8 @@ run_ensemble <- function(method = "mean",
                          forecast_date,
                          exclude_models = NULL,
                          return_criteria = TRUE,
-                         evaluation_date,
-                         continuous_weeks = 4,
-                         verbose = FALSE) {
+                         verbose = FALSE,
+                         ...) {
 
   # Method ------------------------------------------------------------------
   # Check method is supported
@@ -86,7 +90,8 @@ run_ensemble <- function(method = "mean",
   # Filter by inclusion criteria
   forecasts <- use_ensemble_criteria(forecasts = all_forecasts,
                                      exclude_models = exclude_models,
-                                     return_criteria = return_criteria)
+                                     return_criteria = return_criteria,
+                                     ...)
 
   if (return_criteria) {
     criteria <- forecasts$criteria
@@ -117,20 +122,16 @@ run_ensemble <- function(method = "mean",
   if (grepl("^relative_skill", method)) {
     source(here("code", "ensemble", "methods",
                 "create-ensemble-relative-skill.R"))
-    if (missing(evaluation_date)) {
-      evaluation_date <- forecast_date
-    }
     by_horizon <- grepl("_by_horizon", method)
     use_median <- grepl("_median", method )
     ensemble <- create_ensemble_relative_skill(forecasts = forecasts,
-                                               evaluation_date = evaluation_date,
-                                               continuous_weeks = continuous_weeks,
                                                by_horizon = by_horizon,
                                                average = if_else(use_median,
                                                                  "median",
                                                                  "mean"),
                                                return_criteria = return_criteria,
-                                               verbose = verbose)
+                                               verbose = verbose,
+                                               ...)
     # Update model inclusion criteria
     if (return_criteria) {
       weights <- ensemble$weights
