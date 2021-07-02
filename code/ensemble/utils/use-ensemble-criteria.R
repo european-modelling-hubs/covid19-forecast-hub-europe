@@ -19,8 +19,7 @@ source(here("code", "ensemble", "utils", "get_model_designations.r"))
 use_ensemble_criteria <- function(forecasts,
                                   exclude_models = NULL,
                                   exclude_designated_other = TRUE,
-                                  return_criteria = TRUE,
-                                  ...) {
+                                  return_criteria = TRUE) {
   
   # Remove point forecasts
   forecasts <- filter(forecasts, type == "quantile")
