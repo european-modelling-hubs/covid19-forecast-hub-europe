@@ -42,6 +42,7 @@ run_ensemble <- function(method = "mean",
                          exclude_models = NULL,
                          return_criteria = TRUE,
                          verbose = FALSE,
+                         exclude_designated_other = TRUE,
                          ...) {
 
   # Method ------------------------------------------------------------------
@@ -91,7 +92,7 @@ run_ensemble <- function(method = "mean",
   forecasts <- use_ensemble_criteria(forecasts = all_forecasts,
                                      exclude_models = exclude_models,
                                      return_criteria = return_criteria,
-                                     ...)
+                                     exclude_designated_other = exclude_designated_other)
 
   if (return_criteria) {
     criteria <- forecasts$criteria

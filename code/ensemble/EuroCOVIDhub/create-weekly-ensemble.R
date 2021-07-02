@@ -28,8 +28,6 @@ hub_ensemble <- run_ensemble(
   method = method,
   forecast_date = forecast_date,
   exclude_models = c(exclude_models, "EuroCOVIDhub-baseline"),
-  # Make explicit the hub default options
-  exclude_designated_other = TRUE,
   return_criteria = TRUE
 )
 
