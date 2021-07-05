@@ -19,15 +19,9 @@ jobs:
       with:
         python-version: '3.x' # Version range
         architecture: 'x64'
-        
-    - name: Install requirements
-      run: |
-        pip3 install -r code/zoltar_scripts/requirements.txt
-        pip3 install git+https://github.com/reichlab/zoltpy/
-
-    - name: Zoltar upload
-      run: python3 code/zoltar_scripts/upload_zoltar.py
-
+    - run: pip3 install -r code/zoltar_scripts/requirements.txt
+    - run: pip3 install git+https://github.com/reichlab/zoltpy/
+    - run: python3 code/zoltar_scripts/upload_zoltar.py
       env:
         GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         Z_USERNAME: ${{secrets.Z_USERNAME}}
