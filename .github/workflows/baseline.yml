@@ -31,6 +31,7 @@ jobs:
       run: |
         git config user.email "actions@github.com"
         git config user.name "GitHub Actions"
-        git commit -am "Build baseline model"
+        git add --all
+        git commit -m "Build baseline model"
         git push
         echo "pushed to github"
