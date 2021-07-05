@@ -3,7 +3,7 @@ European data status
 
 #### Potential issues in the JHU dataset
 
-As at 2021-07-05 11:14:02
+As at 2021-07-05 11:22:20
 
 | country | created    | updated    | issue                                                                     | message                                            | url                                                      |
 |:--------|:-----------|:-----------|:--------------------------------------------------------------------------|:---------------------------------------------------|:---------------------------------------------------------|
@@ -16,11 +16,11 @@ Github](https://github.com/CSSEGISandData/COVID-19/)
 
 ## Truth data
 
-We evaluate forecasts against [Johns Hopkins University
-data](https://github.com/CSSEGISandData/COVID-19), and we recommend
-using this dataset as the basis for forecasts.
+We evaluate forecasts of cases and deaths against [Johns Hopkins
+University data](https://github.com/CSSEGISandData/COVID-19), and we
+recommend using this dataset as the basis for forecasts.
 
--   Data are available to download from
+-   Daily numbers of cases and deaths are available to download from
     [JHU](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series),
     or from [our
     repository](https://github.com/epiforecasts/covid19-forecast-hub-europe/data-truth).

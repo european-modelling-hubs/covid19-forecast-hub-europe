@@ -63,9 +63,9 @@ Open issues updated over the last eight weeks: from [JHU CSSEGISandData Github](
 
 ## Truth data
 
-We evaluate forecasts against [Johns Hopkins University data](https://github.com/CSSEGISandData/COVID-19), and we recommend using this dataset as the basis for forecasts.
+We evaluate forecasts of cases and deaths against [Johns Hopkins University data](https://github.com/CSSEGISandData/COVID-19), and we recommend using this dataset as the basis for forecasts.
 
-* Data are available to download from [JHU](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series), or from [our repository](https://github.com/epiforecasts/covid19-forecast-hub-europe/data-truth).
+* Daily numbers of cases and deaths are available to download from [JHU](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series), or from [our repository](https://github.com/epiforecasts/covid19-forecast-hub-europe/data-truth).
 * JHU also provide [country metadata](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv), including population counts and ISO-3 codes.
 
 Note there are some differences between the format of the JHU data and what we require in a forecast. Please check the [Wiki](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Targets-and-horizons#truth-data) for more on forecast formatting.
