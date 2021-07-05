@@ -19,7 +19,7 @@ jobs:
 
     - name: Install R dependencies
       run: |
-       install.packages(c("dplyr", "purrr", "lubridate", "yaml", "here", "readr"))
+       install.packages(c("dplyr", "purrr", "lubridate", "yaml", "here", "readr", "remotes"))
        remotes::install_github("reichlab/covidModels")
       shell: Rscript {0}
 
