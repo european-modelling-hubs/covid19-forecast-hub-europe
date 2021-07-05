@@ -20,7 +20,7 @@ jobs:
     - name: Install R dependencies
       run: |
        install.packages(c("dplyr", "purrr", "lubridate", "yaml", "here", "readr", "remotes"))
-       remotes::install_github("reichlab/covidModels")
+       remotes::install_github("reichlab/covidModels/R-package")
       shell: Rscript {0}
 
     - name: Create ensembles
