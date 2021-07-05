@@ -19,7 +19,7 @@ jobs:
 
     - name: Install R dependencies
       run: |
-       Rscript -e 'install.packages(c("here", "vroom", "dplyr", "tibble", "lubridate", "remotes", "cNORM"))'
+       Rscript -e 'install.packages(c("here", "vroom", "dplyr", "tibble", "lubridate", "remotes", "cNORM", "yaml"))'
        Rscript -e 'remotes::install_github("reichlab/covidHubUtils")'
 
     - name: Create ensembles

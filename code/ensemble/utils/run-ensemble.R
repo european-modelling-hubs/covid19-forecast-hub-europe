@@ -15,6 +15,11 @@
 # return_criteria : logical : whether to return a model/inclusion criteria grid
 #   as well as the ensemble forecast (default TRUE)
 #
+# Additional args:
+# evaluation_date: passed to create_ensemble_relative_skill()
+# continuous_weeks: passed to create_ensemble_relative_skill()
+# exclude_designated_other: passed to use_ensemble_criteria()
+#
 # Returns a list or a tibble
 # return_criteria = TRUE:
 #   "ensemble" : tibble : a single ensemble forecast
@@ -30,22 +35,22 @@ library(lubridate)
 library(covidHubUtils)
 source(here("code", "ensemble", "utils", "use-ensemble-criteria.R"))
 source(here("code", "ensemble", "utils", "format-ensemble.R"))
+source(here("code", "config_utils", "get_hub_config.R"))
 
 run_ensemble <- function(method = "mean",
                          forecast_date,
                          exclude_models = NULL,
                          return_criteria = TRUE,
-                         evaluation_date,
-                         continuous_weeks = 4,
-                         verbose = FALSE) {
+                         verbose = FALSE,
+                         exclude_designated_other = TRUE,
+                         ...) {
 
   # Method ------------------------------------------------------------------
   # Check method is supported
   methods <- sub("^.*-", "", dir(here("ensembles", "data-processed")))
 
   if (missing(method)) {
-    method <- readLines(here("code", "ensemble", "EuroCOVIDhub",
-                             "current-method.txt"))
+    method <- get_hub_config("ensemble_method")
   }
   method <- match.arg(arg = method,
                       choices = methods,
@@ -86,7 +91,8 @@ run_ensemble <- function(method = "mean",
   # Filter by inclusion criteria
   forecasts <- use_ensemble_criteria(forecasts = all_forecasts,
                                      exclude_models = exclude_models,
-                                     return_criteria = return_criteria)
+                                     return_criteria = return_criteria,
+                                     exclude_designated_other = exclude_designated_other)
 
   if (return_criteria) {
     criteria <- forecasts$criteria
@@ -117,20 +123,16 @@ run_ensemble <- function(method = "mean",
   if (grepl("^relative_skill", method)) {
     source(here("code", "ensemble", "methods",
                 "create-ensemble-relative-skill.R"))
-    if (missing(evaluation_date)) {
-      evaluation_date <- forecast_date
-    }
     by_horizon <- grepl("_by_horizon", method)
     use_median <- grepl("_median", method )
     ensemble <- create_ensemble_relative_skill(forecasts = forecasts,
-                                               evaluation_date = evaluation_date,
-                                               continuous_weeks = continuous_weeks,
                                                by_horizon = by_horizon,
                                                average = if_else(use_median,
                                                                  "median",
                                                                  "mean"),
                                                return_criteria = return_criteria,
-                                               verbose = verbose)
+                                               verbose = verbose,
+                                               ...)
     # Update model inclusion criteria
     if (return_criteria) {
       weights <- ensemble$weights
@@ -150,6 +152,7 @@ run_ensemble <- function(method = "mean",
 # Format and return -----------------------------------------------------------
   ensemble <- format_ensemble(ensemble = ensemble,
                               forecast_date = max(forecast_dates))
+
   if (verbose) {message("Ensemble formatted in hub standard")}
 
   if (return_criteria) {

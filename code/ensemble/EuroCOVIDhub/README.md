@@ -16,7 +16,7 @@ We detail the inclusion and exclusion of models in a csv updated [weekly](./code
 
 **Current methods**
 
-Ensembling methods combine forecast values by target, location, horizon, and quantile. The ensemble we use in evaluation is the "EuroCOVIDhub-ensemble". See [here](./code/ensemble/EuroCOVIDhub/current-method.txt) for the current ensemble method used this week.
+Ensembling methods combine forecast values by target, location, horizon, and quantile. The ensemble we use in evaluation is the "EuroCOVIDhub-ensemble". See [here](../../../forecasthub.yml) for the current ensemble method used this week.
 
 We are continually reviewing the performance of the default ensemble compared to other ensembling methods. We will make a change if we find a different method to consistently outperform the current default.
 
@@ -32,5 +32,5 @@ _Creating the EuroCOVIDhub weekly ensemble_
 
 - Add any models for manual exclusion to [`manual-exclusions.csv`](./code/ensemble/EuroCOVIDhub/manual-exclusions.csv)
    - If already in R, optionally add these by [`create-manual-exclusions.R`](./code/ensemble/utils/create-manual-exclusions.R)
-- Define the forecast method in [`current-method.txt`](./code/ensemble/EuroCOVIDhub/current-method.txt)
+- Define the forecast method in [`forecasthub.yml`](../../../forecasthub.yml)
 - The weekly ensemble is created with [`create-weekly-ensemble.R`](./code/ensemble/EuroCOVIDhub/create-weekly-ensemble.R)

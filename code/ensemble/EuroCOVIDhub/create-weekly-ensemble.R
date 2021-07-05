@@ -7,13 +7,15 @@ library(here)
 library(tibble)
 
 source(here("code", "ensemble", "utils", "run-ensemble.R"))
+source(here("code", "config_utils", "get_hub_config.R"))
 
 # Set up ----------------------------------------------------------------
 # Get method
-method <- readLines(here("code", "ensemble", "EuroCOVIDhub",  "current-method.txt"))
+method <- get_hub_config("ensemble_method")
 
 # Set current submission date
-forecast_date <- floor_date(today(), "week", 1)
+forecast_date <- today()
+wday(forecast_date) <- get_hub_config("forecast_week_day")
 
 # Get model names for manual exclusion
 exclude_models <-
@@ -22,10 +24,12 @@ exclude_models <-
   pull(model)
 
 # Run weekly automated ensemble -----------------------------------------
-hub_ensemble <- run_ensemble(method = method,
-                             forecast_date = forecast_date,
-                             exclude_models = exclude_models,
-                             return_criteria = TRUE)
+hub_ensemble <- run_ensemble(
+  method = method,
+  forecast_date = forecast_date,
+  exclude_models = c(exclude_models, "EuroCOVIDhub-baseline"),
+  return_criteria = TRUE
+)
 
 # Save in data-processed
 vroom_write(hub_ensemble$ensemble,

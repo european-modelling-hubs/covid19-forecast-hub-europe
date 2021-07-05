@@ -9,12 +9,13 @@ library("dplyr")
 library("tidyr")
 library("readr")
 library("janitor")
+source(here("code", "config_utils", "get_hub_config.R"))
 
 model_name <- "LANL-GrowthRate"
 raw_dir <- file.path(tempdir(), "data-raw", model_name)
 processed_dir <- here::here("data-processed", model_name)
 last_sunday <- floor_date(today(), unit = "week", week_start = 7)
-data_types <- c("cases", "deaths")
+data_types <- gsub("^inc (\\w+)$", "\\1s", get_hub_config("target_variables"))
 
 suppressWarnings(dir.create(raw_dir, recursive = TRUE))
 suppressWarnings(dir.create(processed_dir, recursive = TRUE))
@@ -89,7 +90,8 @@ df <- lapply(data_types, function(x) {
          target = paste(week_ahead, "wk ahead inc", sub("s$", "", type))) %>%
   pivot_longer(starts_with("q."), names_to = "quantile") %>%
   mutate(quantile = as.numeric(sub("q\\.", "0.", quantile)),
-         type = "quantile") %>%
+         type = "quantile",
+         value = round(value)) %>%
   select(scenario_id, forecast_date = fcst_date, target,
          target_end_date = end_date, location, type, quantile, value)
 

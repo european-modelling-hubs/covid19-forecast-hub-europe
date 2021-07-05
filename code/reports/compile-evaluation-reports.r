@@ -7,11 +7,13 @@ library(rmarkdown)
 library(data.table)
 library(covidHubUtils)
 library(lubridate)
+source(here("code", "config_utils", "get_hub_config.R"))
+data_types <- get_hub_config("target_variables")
 
 options(knitr.duplicate.label = "allow")
 
-report_date <-
-  lubridate::floor_date(lubridate::today(), "week", week_start = 7) + 1
+report_date <- today()
+wday(report_date) <- get_hub_config("forecast_week_day")
 
 suppressWarnings(dir.create(here::here("html")))
 
@@ -31,7 +33,7 @@ setnames(raw_forecasts, old = c("value"), new = c("prediction"))
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(
   truth_source = "JHU",
-  target_variable = c("inc case", "inc death"),
+  target_variable = data_types,
   truth_end_date = report_date,
   hub = "ECDC"
 )
@@ -85,7 +87,7 @@ rmarkdown::render(here::here("code", "reports", "evaluation",
                                 restrict_weeks = 4),
                   output_format = "html_document",
                   output_file =
-                    here::here("html", paste0("evaluation-report-", 
+                    here::here("html", paste0("evaluation-report-",
                                               "Overall.html")),
                   envir = new.env())
 

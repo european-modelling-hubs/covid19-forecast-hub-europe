@@ -6,6 +6,8 @@ library(tidyr)
 library(lubridate)
 library(here)
 library(readr)
+source(here("code", "config_utils", "get_hub_config.R"))
+data_types <- get_hub_config("target_variables")
 
 ## only evaluate if the last 4 weeks hae been submitted
 restrict_weeks <- 4
@@ -112,7 +114,7 @@ setnames(forecasts, old = c("value"), new = c("prediction"))
 
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(truth_source = "JHU",
-                        target_variable = c("inc case", "inc death"),
+                        target_variable = data_types,
                         hub = "ECDC")
 # get anomalies
 anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
@@ -126,8 +128,8 @@ setnames(truth, old = c("value"),
 data <- scoringutils::merge_pred_and_obs(forecasts, truth,
                                          join = "full")
 
-latest_date <-
-  lubridate::floor_date(lubridate::today(), "week", week_start = 7) + 1
+latest_date <- today()
+wday(latest_date) <- get_hub_config("forecast_week_day")
 
 ## can modify manually if wanting to re-run past evaluation
 re_run <- FALSE
