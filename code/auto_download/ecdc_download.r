@@ -6,6 +6,7 @@ library("countrycode")
 library("tidyr")
 library("ISOweek")
 library("stringi")
+library("lubridate")
 
 cat("Downloading ECDC data\n")
 
@@ -38,3 +39,28 @@ df <-
                                             paste0(file_base, " ",
                                                    .y$indicator, ".csv"))))
 
+# Hospitalisation data
+# Get file
+data_filepath <- here("data-truth", "ECDC", 
+                      "truth_ecdc-Incident Hospitalizations.csv") # covidHubUtils format
+
+R.utils::downloadFile(Sys.getenv("DATA_URL"), 
+                      data_filepath, 
+                      username = Sys.getenv("DATA_USERNAME"), 
+                      password = Sys.getenv("DATA_PASSWORD"),
+                      skip = FALSE,
+                      overwrite = TRUE)
+
+locations <- read_csv(here("data-locations", "locations_eu.csv")) %>%
+  select(location, location_name)
+
+# Format
+public_sources <- c("Country_Website", "Country_API", "Country_Github")
+ecdc <- vroom(data_filepath) %>%
+  filter(Indicator %in% c("New_Hospitalised") &
+           Source %in% public_sources) %>%
+  rename(location_name = CountryName) %>%
+  mutate(target_variable = "inc hosp") %>%
+  left_join(locations, by = "location_name") %>%
+  select(date = Date, location, location_name, value = Value) %>%
+  write_csv(file = data_filepath, append = FALSE)
