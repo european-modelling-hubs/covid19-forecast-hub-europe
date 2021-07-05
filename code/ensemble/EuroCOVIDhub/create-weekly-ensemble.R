@@ -24,12 +24,12 @@ exclude_models <-
   pull(model)
 
 # Run weekly automated ensemble -----------------------------------------
-hub_ensemble <- run_ensemble(method = method,
-                             forecast_date = forecast_date,
-                             exclude_models = exclude_models,
-                             # Make explicit the hub default options
-                             exclude_designated_other = TRUE,
-                             return_criteria = TRUE)
+hub_ensemble <- run_ensemble(
+  method = method,
+  forecast_date = forecast_date,
+  exclude_models = c(exclude_models, "EuroCOVIDhub-baseline"),
+  return_criteria = TRUE
+)
 
 # Save in data-processed
 vroom_write(hub_ensemble$ensemble,

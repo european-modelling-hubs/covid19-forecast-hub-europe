@@ -1,7 +1,9 @@
 shortname: EuroCOVIDhub
 repo_url: https://github.com/epiforecasts/covid19-forecast-hub-europe
 ensemble_method: mean
-horizon: '4 weeks'
+horizon:
+  value: 4
+  unit: weeks
 week_end_day: Saturday
 forecast_week_day: Monday
 target_variables:

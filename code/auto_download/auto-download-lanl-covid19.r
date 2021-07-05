@@ -90,7 +90,8 @@ df <- lapply(data_types, function(x) {
          target = paste(week_ahead, "wk ahead inc", sub("s$", "", type))) %>%
   pivot_longer(starts_with("q."), names_to = "quantile") %>%
   mutate(quantile = as.numeric(sub("q\\.", "0.", quantile)),
-         type = "quantile") %>%
+         type = "quantile",
+         value = round(value)) %>%
   select(scenario_id, forecast_date = fcst_date, target,
          target_end_date = end_date, location, type, quantile, value)
 

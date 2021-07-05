@@ -37,8 +37,7 @@ create_ensemble_relative_skill <- function(forecasts,
                                            average = "mean",
                                            by_horizon = FALSE,
                                            return_criteria = FALSE,
-                                           verbose = FALSE,
-                                           ...) {
+                                           verbose = FALSE) {
 
 # Get evaluation ----------------------------------------------------------
   if (missing(evaluation_date)) {
