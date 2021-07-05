@@ -16,13 +16,16 @@ subset_forecasts_for_plot <- function(forecasts, forecast_date = NULL, target_ty
   
   forecasts <- forecasts[check_target &
                            check_forecast_date &
-                           forecasts$location == location, ]
+                           forecasts$location == location &
+                           (forecasts$quantile %in% c(0.025, 0.25, 0.5, 0.75, 0.975) |
+                              forecasts$type == "point"), ]
   if(!is.null(type)) forecasts <- forecasts[forecasts$type == type, ]
   return(forecasts)
 }
 
 # helper function to deterine y-limit
 determine_ylim <- function(forecasts, forecast_date = NULL, target_type, horizon, location, truth, start_at_zero = TRUE){
+  truth <- subset(truth, date >= forecast_date - 28)
   forecasts <- subset_forecasts_for_plot(forecasts = forecasts, forecast_date = forecast_date,
                             target_type = target_type, horizon = horizon, location = location)
   lower <- if(start_at_zero){
