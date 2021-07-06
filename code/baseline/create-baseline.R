@@ -19,44 +19,46 @@ hub_quantiles <- get_hub_config("forecast_type")[["quantiles"]]
 hub_horizon <- get_hub_config("horizon")[["value"]]
 hub_targets <- get_hub_config("target_variables")
 
-forecast_date <- today()
+for (forecast_date in seq(ymd("2021-03-08"), ymd("2021-06-21"), by = 7)) {
 
-# Wrapper to build baseline because S3 doesn't usually work well with pipe
-# workflows
-build_baseline <- function(inc_obs, quantiles, horizon) {
-  baseline_fit <- covidModels::fit_quantile_baseline(inc_obs)
-  predict(
-    baseline_fit,
-    inc_obs,
-    cumsum(inc_obs),
-    quantiles = quantiles,
-    horizon = horizon,
-    num_samples = 100000
-  )
-}
+  forecast_date <- as.Date(forecast_date, origin = "1970-01-01")
 
-raw_truth <- covidHubUtils::load_truth(
-  truth_source = "JHU",
-  target_variable = hub_targets,
-  truth_end_date = forecast_date - 1,
-  hub = "ECDC"
-)
-
-baseline_forecast <- raw_truth %>%
-  filter(!is.na(value)) %>%
-  group_by(location, target_variable) %>%
-  group_map(
-    ~ full_join(
-      .y,
-      build_baseline(.x$value, quantiles = hub_quantiles, horizon = hub_horizon),
-      by = character()
+  # Wrapper to build baseline because S3 doesn't usually work well with pipe
+  # workflows
+  build_baseline <- function(inc_obs, quantiles, horizon) {
+    baseline_fit <- covidModels::fit_quantile_baseline(inc_obs)
+    predict(
+      baseline_fit,
+      inc_obs,
+      cumsum(inc_obs),
+      quantiles = quantiles,
+      horizon = horizon,
+      num_samples = 100000
     )
-  ) %>%
-  bind_rows() %>%
-  filter(type %in% substr(hub_targets, 1, 3)) %>%
-  mutate(type = "quantile")
+  }
 
-format_ensemble(baseline_forecast, forecast_date) %>%
-  write_csv(paste0(model_folder, "/", forecast_date, "-", model_name, ".csv"))
+  raw_truth <- covidHubUtils::load_truth(
+    truth_source = "JHU",
+    target_variable = hub_targets,
+    truth_end_date = forecast_date - 1,
+    hub = "ECDC"
+  )
 
+  baseline_forecast <- raw_truth %>%
+    filter(!is.na(value)) %>%
+    group_by(location, target_variable) %>%
+    group_map(
+      ~ full_join(
+        .y,
+        build_baseline(.x$value, quantiles = hub_quantiles, horizon = hub_horizon),
+        by = character()
+      )
+    ) %>%
+    bind_rows() %>%
+    filter(type %in% substr(hub_targets, 1, 3)) %>%
+    mutate(type = "quantile")
 
+  format_ensemble(baseline_forecast, forecast_date) %>%
+    write_csv(paste0(model_folder, "/", forecast_date, "-", model_name, ".csv"))
+
+}
