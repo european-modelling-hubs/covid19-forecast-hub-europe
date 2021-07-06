@@ -21,9 +21,6 @@ hub_targets <- get_hub_config("target_variables")
 
 forecast_date <- today()
 
-first_target_date <- forecast_date
-wday(first_target_date) <- get_hub_config("week_end_day")
-
 # Wrapper to build baseline because S3 doesn't usually work well with pipe
 # workflows
 build_baseline <- function(inc_obs, quantiles, horizon) {
