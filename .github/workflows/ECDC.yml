@@ -18,7 +18,7 @@ jobs:
       run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
 
     - name: Install R dependencies
-      run: Rscript -e 'install.packages(c("here", "readr", "lubridate", "dplyr", "tidyr", "ISOweek", "stringi"))'
+      run: Rscript -e 'install.packages(c("curl", "R.utils", "here", "readr", "lubridate", "dplyr", "tidyr", "ISOweek", "stringi"))'
 
     - name: ECDC Truth
       run: Rscript 'code/auto_download/ecdc_download.r'
