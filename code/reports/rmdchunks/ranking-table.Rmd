@@ -69,7 +69,8 @@ if (nrow(df) > 0) {
     dplyr::summarise(n = n())
 
   table <- eval_forecasts(df, summarise_by = c("model", "target_variable"), 
-                          compute_relative_skill = TRUE) %>%
+                          compute_relative_skill = TRUE,
+                          baseline = "EuroCOVIDhub-baseline") %>%
     dplyr::left_join(coverage, by = "model") %>%
     dplyr::left_join(num_fc)
 

@@ -78,7 +78,8 @@ score_models <- function(file, data, report_date, restrict_weeks) {
                 "model", "target_variable",
                 "horizon", "location"
             ),
-            compute_relative_skill = TRUE
+            compute_relative_skill = TRUE,
+            baseline = "EuroCOVIDhub-baseline"
         ) %>%
         dplyr::left_join(coverage, by = c(
             "model", "target_variable", "horizon",
