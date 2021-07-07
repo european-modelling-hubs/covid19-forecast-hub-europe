@@ -9,26 +9,23 @@ import glob
 from pathlib import Path
 import pprint
 import yaml
-import logging
-import pickle
 import hashlib
 import json
 
-sys.path.append("validation/codebase")
-from quantile_io import json_io_dict_from_quantile_csv_file, REQUIRED_COLUMNS
-from covid19 import VALID_TARGET_NAMES, codes, covid19_row_validator, validate_quantile_csv_file
-from cdc_io import YYYY_MM_DD_DATE_FORMAT
-
-# logging.basicConfig(level=logging.DEBUG)
+from .validation.codebase.quantile_io import json_io_dict_from_quantile_csv_file, REQUIRED_COLUMNS
+from .validation.codebase.covid19 import VALID_TARGET_NAMES, codes, covid19_row_validator, validate_quantile_csv_file
 
 cwd_p = Path(__file__).parent.resolve()
 all_forecasts = glob.glob('./data-processed/**/*-*.csv')
 pprint.pprint(all_forecasts)
+
 # meta info
+with open('forecasthub.yml') as f:
+    hub_config = yaml.safe_load(f)
 project_name = 'ECDC European COVID-19 Forecast Hub'
 project_obj = None
 conn = util.authenticate()
-url = 'https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/data-processed'
+repo_url = hub_config['repo_url'] + '/tree/main/data-processed'
 
 project_obj = [project for project in conn.projects if project.name == project_name][0]
 project_timezeros = [timezero.timezero_date for timezero in project_obj.timezeros]
