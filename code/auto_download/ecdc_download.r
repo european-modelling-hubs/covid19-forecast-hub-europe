@@ -5,6 +5,8 @@ library("tidyr")
 library("ISOweek")
 library("stringi")
 library("lubridate")
+library("R.utils")
+library("curl")
 
 cat("Downloading ECDC data\n")
 

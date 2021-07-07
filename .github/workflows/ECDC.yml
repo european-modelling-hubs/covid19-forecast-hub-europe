@@ -22,6 +22,10 @@ jobs:
 
     - name: ECDC Truth
       run: Rscript 'code/auto_download/ecdc_download.r'
+      env:
+        DATA_USERNAME: ${{secrets.DATA_USERNAME}}
+        DATA_PASSWORD: ${{secrets.DATA_PASSWORD}}
+        DATA_URL: ${{secrets.DATA_URL}}
 
     - name: Commit files
       run: |
@@ -31,9 +35,5 @@ jobs:
         git commit -m "ECDC - daily"
         git push
         echo "pushed to github"
-
       env:
         AUTH: ${{secrets.GITHUB_TOKEN}}
-        DATA_USERNAME: ${{secrets.DATA_USERNAME}}
-        DATA_PASSWORD: ${{secrets.DATA_PASSWORD}}
-        DATA_URL: ${{secrets.DATA_URL}}
