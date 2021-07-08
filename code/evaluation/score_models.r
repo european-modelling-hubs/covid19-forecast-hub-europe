@@ -34,15 +34,16 @@ score_models <- function(data, report_date, restrict_weeks) {
     df <- data %>%
         bind_rows(overall_df)
 
-    coverage <- eval_forecasts(
-        df %>% filter(type != "point"),
-      summarise_by = c("model", "target_variable", "range", "horizon",
-                       "location"),
-        compute_relative_skill = FALSE,
-    ) %>%
+    coverage <- df %>%
+        filter(type != "point") %>%
+        eval_forecasts(
+          summarise_by = c("model", "target_variable", "range", "horizon",
+                           "location"),
+          compute_relative_skill = FALSE,
+        ) %>%
         dplyr::filter(range %in% c(50, 95)) %>%
-      dplyr::select(model, target_variable, horizon, location, coverage,
-                    range) %>%
+        dplyr::select(model, target_variable, horizon, location, coverage,
+                      range) %>%
         tidyr::pivot_wider(
             names_from = range, values_from = coverage,
             names_prefix = "cov_"
@@ -72,8 +73,9 @@ score_models <- function(data, report_date, restrict_weeks) {
         filter(!is.na(continuous_weeks)) %>%
         summarise(continuous_weeks = max(continuous_weeks), .groups = "drop")
 
-    table <-
-        eval_forecasts(df %>% dplyr::filter(type != "point"),
+    table <- df %>%
+        dplyr::filter(type != "point") %>%
+        eval_forecasts(
             summarise_by = c(
                 "model", "target_variable",
                 "horizon", "location"
@@ -97,7 +99,7 @@ score_models <- function(data, report_date, restrict_weeks) {
             "model", "target_variable", "horizon",
             "location"
         )) %>%
-      replace_na(list(continuous_weeks = 0))
+        replace_na(list(continuous_weeks = 0))
 
     return(table)
 }
@@ -147,7 +149,7 @@ for (chr_report_date in as.character(report_dates)) {
     here::here("evaluation", paste0("evaluation-", report_date, ".csv"))
 
   table <- score_models(data, report_date, restrict_weeks) %>%
-    mutate(across(c("interval_score", "sharpness", "underprediction", "overprediction", "aem"), round)) %>%
+    mutate(across(c("interval_score", "sharpness", "underprediction", "overprediction", "aem", "mae"), round)) %>%
     mutate(across(c("coverage_deviation", "bias", "relative_skill", "scaled_rel_skill", "cov_50", "cov_95"), round, 2))
 
   write_csv(table, filename)
