@@ -31,7 +31,7 @@ score_models <- function(data, report_date, restrict_weeks) {
         select(-n, -nall) %>%
         mutate(location = "Overall")
 
-    df <- data %>%
+    df <- score_data %>%
         bind_rows(overall_df)
 
     coverage <- df %>%
