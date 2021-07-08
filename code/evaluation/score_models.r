@@ -14,7 +14,7 @@ restrict_weeks <- 4
 
 suppressWarnings(dir.create(here::here("evaluation")))
 
-score_models <- function(file, data, report_date, restrict_weeks) {
+score_models <- function(data, report_date, restrict_weeks) {
     last_forecast_date <- report_date - 7
 
     score_data <- data[forecast_date <= last_forecast_date &
@@ -99,7 +99,7 @@ score_models <- function(file, data, report_date, restrict_weeks) {
         )) %>%
       replace_na(list(continuous_weeks = 0))
 
-    write_csv(table, file)
+    return(table)
 }
 
 ## load forecasts --------------------------------------------------------------
@@ -145,5 +145,7 @@ for (chr_report_date in as.character(report_dates)) {
   report_date <- as.Date(chr_report_date)
   filename <-
     here::here("evaluation", paste0("evaluation-", report_date, ".csv"))
-  score_models(filename, data, report_date, restrict_weeks)
+  table <- score_models(data, report_date, restrict_weeks)
+
+  write_csv(table, filename)
 }
