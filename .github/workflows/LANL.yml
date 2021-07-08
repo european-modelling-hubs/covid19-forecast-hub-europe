@@ -18,7 +18,7 @@ jobs:
       run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
 
     - name: Install R dependencies
-      run: Rscript -e 'install.packages(c("lubridate", "here", "vroom", "dplyr", "tidyr", "readr", "janitor"))'
+      run: Rscript -e 'install.packages(c("lubridate", "here", "vroom", "dplyr", "tidyr", "readr", "janitor", "yaml"))'
 
     - name: LANL forecasts
       run: Rscript 'code/auto_download/auto-download-lanl-covid19.r'

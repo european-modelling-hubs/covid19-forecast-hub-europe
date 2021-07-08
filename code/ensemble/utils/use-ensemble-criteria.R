@@ -14,9 +14,11 @@
 library(dplyr)
 library(tibble)
 library(lubridate)
+source(here("code", "ensemble", "utils", "get_model_designations.r"))
 
 use_ensemble_criteria <- function(forecasts,
                                   exclude_models = NULL,
+                                  exclude_designated_other = TRUE,
                                   return_criteria = TRUE) {
   
   # Remove point forecasts
@@ -51,7 +53,15 @@ use_ensemble_criteria <- function(forecasts,
               by = c("model", "target_variable", "location")) %>%
     mutate(not_excluded_manually = !(model %in% exclude_models)) %>%
   # 4. Drop hub ensemble model
-    filter(!grepl("EuroCOVIDhub", model))
+    filter(!grepl("EuroCOVIDhub-ensemble", model))
+  
+  # 5. Drop "other" designated models
+  if (exclude_designated_other) {
+    not_other <- get_model_designations(here()) %>%
+      filter(designation != "other")
+    criteria <- criteria %>%
+      filter(model %in% not_other$model)
+  }
   
   # Clarify inclusion and exclusion for all models by location/variable
   include <- filter(criteria, 
@@ -61,8 +71,11 @@ use_ensemble_criteria <- function(forecasts,
     select(model, target_variable, location) %>%
     mutate(included_in_ensemble = TRUE)
   
-  criteria <- left_join(criteria, include, by = c("model", "target_variable", "location")) %>%
-    mutate(included_in_ensemble = ifelse(is.na(included_in_ensemble), FALSE, included_in_ensemble))
+  criteria <- left_join(criteria, include, 
+                        by = c("model", "target_variable", "location")) %>%
+    mutate(included_in_ensemble = ifelse(is.na(included_in_ensemble), 
+                                         FALSE, 
+                                         included_in_ensemble))
   
   
   # Return

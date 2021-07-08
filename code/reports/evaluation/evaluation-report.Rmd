@@ -1,7 +1,6 @@
 ---
 params: 
-  report_date: "2021-03-29"
-  data: NULL
+  report_date: "2021-06-21"
   restrict_weeks: 4
 always_allow_html: true
 output:
@@ -21,7 +20,7 @@ library(DT)
 library(knitr)
 library(covidHubUtils)
 library(lubridate)
-library(data.table)
+library(here)
 knitr::opts_chunk$set(echo = FALSE, 
                       message = FALSE, 
                       warning = FALSE)
@@ -36,60 +35,27 @@ include_countries <- include_forecast_plot ||
   include_avail_forecasts || 
   include_ranks_over_time
 
+report_date <- ymd(params$report_date)
 restrict_weeks <- params$restrict_weeks
+
+source(here("code", "config_utils", "get_hub_config.R"))
+data_types <- get_hub_config("target_variables")
 ```
 
-```{r prepare-data}
-data <- params$data
-
-horizons <- data %>% 
-  filter(!is.na(true_value), !is.na(horizon)) %>% 
-  .$horizon %>% 
-  unique
-
-horizons <- horizons[as.integer(horizons) < 5]
-horizons <- horizons[order(as.integer(horizons))]
- 
-summarise_by = c("model", "target_variable")
-
-target_variables <- c(Cases = "inc case", Deaths = "inc death")
+<!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
+```{r load-data, child = "../rmdchunks/load-data.Rmd"}
 ```
 
-# Overall performance {.tabset .tabset-fade}
-
-The following table shows scores averaged across all locations, for all models that make forecasts for more than half of countries in the Hub. For country-by-country evaluation of performance of all models, select one of the countries in the drop-down list above.
-
-```{r overall_ranking, include = FALSE, eval = include_ranking, results = 'asis'}
-out <- NULL
-
-for (variable in names(target_variables)) {
-  out = c(out, paste("\n\n##", variable, "{.tabset .tabset-fade}\n\n"))
-  for (this_horizon in horizons) {
-    filter_list = list(paste0("target_variable == '", target_variables[[variable]], "'"),
-                       "type != 'point'",
-                       paste0("horizon == ", this_horizon))
-    horizon_string <- paste0(this_horizon, " week", if_else(this_horizon > 1, "s", ""), " ahead")
-    out = c(out, paste("\n\n###", horizon_string, "\n\n"))
-    out = c(out, knit_child(here::here("code", "reports", "evaluation",
-                                       "template-ranking-table.Rmd"),
-                            quiet = TRUE))
-  }
-}
+<!--- Define targets and horizons -->
+```{r define-targets-horizons, child = "../rmdchunks/define-targets-horizons.Rmd"}
 ```
 
-`r paste(if (include_ranking) knit(text = out, quiet = TRUE), collapse = '\n\n')`
+<!--- Table comparing the performance of each model. The table is followed by
+an explanation text detailing the meaning of each column/index. --->
+```{r model-ranking, child = if (include_ranking) "../rmdchunks/ranking.Rmd", results = 'asis'}
+```
 
-# {.unlisted .unnumbered}
-
---- 
-
-# Evaluation metrics
-
- - The first column (n) gives the number of forecasts included in the evaluation. This number may vary across models as some models may not cover all countries, joined later than others, or missed some weeks in submitting forecasts.
- - Relative skill (rel_skill) is a relative measure of forecast performance which takes into account that different teams may not cover the exact same set of forecast targets (i.e., weeks and locations). Loosely speaking, a relative skill of X means that averaged over the targets a given team addressed, its weighted interval score (see below) was X times higher/lower than the the average performance of all models. Smaller values are thus better and a value below one means that the model has above average performance. The relative skill is computed using a 'pairwise comparison tournament' where for each pair of models a mean score ratio is computed based on the set of shared targets. The relative skill is the geometric mean of these ratios. Details on the computation can be found in [this preprint](https://www.medrxiv.org/content/10.1101/2021.02.03.21250974v1).
- - Coverage (50% Cov. / 95% Cov.) is the proportion of observations that fell within a given prediction interval. Ideally, a forecast model would achieve 50% coverage of 0.50 (i.e., 50% of observations fall within the 50% prediction interval) and 95% coverage of 0.95 (i.e., 95% of observations fall within the 95% prediction interval). Values of coverage greater than these nominal values indicate that the forecasts are _underconfident_, i.e. prediction intervals tend to be too wide, whereas values of coverage smaller than these nominal values indicate that the forecasts are _overconfident_, i.e. prediction intervals tend to be too narrow.
- - The [weighted interval score (wis)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008618) is a [proper scoring rule](https://en.wikipedia.org/wiki/Scoring_rule#Propriety) (i.e., it cannot be "cheated") that is suited to scoring forecasts in an interval format. It generalizes the absolute error (i.e. lower values are better) and has three components: dispersion, underprediction and overprediction. Dispersion is a weighted average of the widths of the submitted prediction intervals. Over- and underprediction (overpred/underpred) penalties are added whenever an observation falls outside of a reported central prediction interval, with the strength of the penalty depending on the nominal level of the interval and how far outside of the interval the observation fell. Note that the average WIS can refer to different sets of targets for different models and therefore _cannot always be compared across models_. Such comparisons should be done based on the relative skill.
- - bias is a measure between -1 and 1 that expresses the tendency to underpredict (-1) or overpredict (1). In contrast to the over- and underprediction components of the WIS it is bound between -1 and 1 and cannot go to infinity. It is therefore less susceptible to outliers. 
- - aem is the mean absolute error of the predictive medians. A high aem means the median forecasts tend to be far away from the true values. Again the average may not refer to the same set of targets for different models, meaning that values cannot always be compared.
-
-# {.unlisted .unnumbered}
+<!--- Footer about GitHub repository and where to find data for individual 
+models --->
+```{r footer, child = "../rmdchunks/evaluation-footer.Rmd"}
+```

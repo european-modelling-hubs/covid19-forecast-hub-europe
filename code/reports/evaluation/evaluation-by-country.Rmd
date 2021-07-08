@@ -1,10 +1,9 @@
 ---
 always_allow_html: true
 params: 
-  report_date: "2021-03-29"
+  report_date: "2021-06-21"
   location_code: "DE"
   location_name: "Germany"
-  data: NULL
   restrict_weeks: 4
 output:
   html_document:
@@ -26,7 +25,9 @@ library(covidHubUtils)
 library(lubridate)
 knitr::opts_chunk$set(echo = FALSE, 
                       message = FALSE, 
-                      warning = FALSE)
+                      warning = FALSE,
+                      # stabilize fig.path to avoid invalidating cache for each country
+                      fig.path = here("html", "report-country-files/"))
 
 include_ranking <- TRUE
 include_forecast_plot <- TRUE
@@ -38,133 +39,49 @@ include_countries <- include_forecast_plot ||
   include_avail_forecasts || 
   include_ranks_over_time
 
+report_date <- lubridate::ymd(params$report_date)
 restrict_weeks <- params$restrict_weeks
+facetting_var <- rlang::quo(model)
+
+source(here("code", "config_utils", "get_hub_config.R"))
+data_types <- get_hub_config("target_variables")
+
+options(knitr.duplicate.label = "allow")
 ```
 
-
-```{r prepare-data}
-data <- params$data
-
-horizons <- data %>% 
-  filter(!is.na(true_value), !is.na(horizon)) %>% 
-  .$horizon %>% 
-  unique
-
-horizons <- horizons[as.integer(horizons) < 5]
-horizons <- horizons[order(as.integer(horizons))]
- 
-summarise_by <- c("model", "target_variable")
-
-target_variables <- c(Cases = "inc case", Deaths = "inc death")
+<!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
+```{r load-data, child = "../rmdchunks/load-data.Rmd"}
 ```
 
-
-## {.unlisted .unnumbered}
-
----
-
-```{r forecast-vis-header, include = FALSE, eval = include_forecast_plot}
-out <- paste0("\n\n## Forecast visualisation (", params$location_name,
-              ") {.tabset .tabset_fade}\n\n")
-
-out <- c(out, "Forecast visualisations. The date of the tab marks the date on",
-         "which a forecast was made (only last 4 weeks shown).\n\n")
+<!--- Chunk to filter data to keep only the relevant locations. Is is separated from the global data loading step
+so that we can cache the loading step.. -->
+```{r filter-data, child = "../rmdchunks/filter-country-data.Rmd"}
 ```
 
-`r paste(if (include_forecast_plot) knit(text = out), collapse = '\n\n')`
-
-```{r forecast-vis, include = FALSE, eval = include_forecast_plot}
-out <- NULL
-forecast_dates <-
-  rev(as.character(unique(data$forecast_date[!is.na(data$forecast_date)])))
-loc <- params$location_name
-out <- c(out, knit_child(here::here("code", "reports", "evaluation",
-                                    "template-plot-forecasts.Rmd")))
+<!--- Define targets and horizons -->
+```{r define-targets-horizons, child = "../rmdchunks/define-targets-horizons.Rmd"}
 ```
 
-`r paste(if (include_forecast_plot) knit(text = out), collapse = '\n\n')`
-
-## {.unlisted .unnumbered}
-
----
-
-```{r ranking-header, include = FALSE, eval = include_ranking}
-out <- paste0("\n\n## Forecast scores (", loc, ") {.tabset .tabset-fade}\n\n")
-
-out <- c(out, "Scores separated by target and forecast horizon.",
-	 "Only models with submissions in each of the last", restrict_weeks,
-	 " weeks are shown.\n\n")
-```
-`r paste(if (include_ranking) knit(text = out, quiet = TRUE), collapse = '\n\n')`
-
-```{r ranking, include = FALSE, eval = include_ranking}
-out <- NULL
-for (variable in names(target_variables)) {
-  out <- c(out, paste("\n\n###", variable, " {.tabset .tabset-fade}\n\n"))
-  for (this_horizon in horizons) {
-    filter_list <- list(paste0("target_variable == '",
-                              target_variables[[variable]], "'"),
-                     "type != 'point'",
-                     paste0("horizon == ", this_horizon),
-                     paste0("location_name == '", loc, "'"))
-    horizon_string <-
-      paste0(this_horizon, " week",
-             if_else(this_horizon > 1, "s", ""), " ahead horizon")
-    out <- c(out, paste("\n\n####", horizon_string, "\n\n"))
-    out <- c(out, knit_child(here::here("code", "reports", "evaluation",
-                                        "template-ranking-table.Rmd"),
-                            quiet = TRUE))
-  }
-}
+<!--- Visualisation of forecasts (cases or deaths across time) for multiple
+forecasting dates. --->
+```{r forecast-vis, child = if (include_forecast_plot) "../rmdchunks/plot-forecasts.Rmd"}
 ```
 
-`r paste(if (include_ranking) knit(text = out, quiet = TRUE), collapse = '\n\n')`
-
-## {.unlisted .unnumbered}
-
---- 
-
-## Evaluation metrics
-
- - The first column (n) gives the number of forecasts included in the evaluation. This number may vary across models as some models joined later than others, or models may not have submitted forecasts in certain weeks.
- - Relative skill (rel_skill) is a relative measure of forecast performance which takes into account that different teams may not cover the exact same set of forecast targets (i.e., weeks and locations). Loosely speaking, a relative skill of X means that averaged over the targets a given team addressed, its weighted interval score (see below) was X times higher/lower than the the average performance of all models. Smaller values are thus better and a value below one means that the model has above average performance. The relative skill is computed using a 'pairwise comparison tournament' where for each pair of models a mean score ratio is computed based on the set of shared targets. The relative skill is the geometric mean of these ratios. Details on the computation can be found in [this preprint](https://www.medrxiv.org/content/10.1101/2021.02.03.21250974v1).
- - Coverage (50% Cov. / 95% Cov.) is the proportion of observations that fell within a given prediction interval. Ideally, a forecast model would achieve 50% coverage of 0.50 (i.e., 50% of observations fall within the 50% prediction interval) and 95% coverage of 0.95 (i.e., 95% of observations fall within the 95% prediction interval). Values of coverage greater than these nominal values indicate that the forecasts are _underconfident_, i.e. prediction intervals tend to be too wide, whereas values of coverage smaller than these nominal values indicate that the forecasts are _overconfident_, i.e. prediction intervals tend to be too narrow.
- - The [weighted interval score (wis)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008618) is a [proper scoring rule](https://en.wikipedia.org/wiki/Scoring_rule#Propriety) (i.e., it cannot be "cheated") that is suited to scoring forecasts in an interval format. It generalizes the absolute error (i.e. lower values are better) and has three components: dispersion, underprediction and overprediction. Dispersion is a weighted average of the widths of the submitted prediction intervals. Over- and underprediction (overpred/underpred) penalties are added whenever an observation falls outside of a reported central prediction interval, with the strength of the penalty depending on the nominal level of the interval and how far outside of the interval the observation fell. Note that the average WIS can refer to different sets of targets for different models and therefore _cannot always be compared across models_. Such comparisons should be done based on the relative skill.
- - bias is a measure between -1 and 1 that expresses the tendency to underpredict (-1) or overpredict (1). In contrast to the over- and underprediction components of the WIS it is bound between -1 and 1 and cannot go to infinity. It is therefore less susceptible to outliers. 
- - aem is the mean absolute error of the predictive medians. A high aem means the median forecasts tend to be far away from the true values. Again the average may not refer to the same set of targets for different models, meaning that values cannot always be compared.
-
-## {.unlisted .unnumbered}
-
----
-
-```{r forecast-and-scores-header, include = FALSE, results='asis'}
-out <- paste0("\n\n## Scores over time (", loc, ") {.tabset .tabset-fade}\n\n")
-out <- c(out, "Visualisation of the weighted interval score over time. In",
-         "addition, the components of the interval score, sharpness (how",
-         "narrow are forecasts - smaller is better), and penalties for",
-         "underprediction and overprediction are shown. Scores are again",
-         "separated by forecast horizon\n\n")
+<!--- Table comparing the performance of each model. The table is followed by
+an explanation text detailing the meaning of each column/index. --->
+```{r model-ranking, child = if (include_ranking) "../rmdchunks/ranking.Rmd", results = 'asis'}
 ```
 
-`r paste(knit(text = out), collapse = '\n\n')`
-
-```{r forecast-and-scores, include = FALSE}
-out <- NULL
-
-for (this_horizon in horizons) {
-  horizon_string <-
-    paste0(this_horizon, " week", if_else(this_horizon > 1, "s", ""),
-           " ahead horizon {.tabset .tabset-fade}\n\n ")
-    out <- c(out, paste("\n\n###", horizon_string, "\n\n"))
-    out <- c(out, knit_child(here::here("code", "reports", "evaluation",
-                                        "template-scores-and-truth-time.Rmd"),
-                             quiet = TRUE))
-  }
+<!--- Forecasts diagnostics (WIS, overprediction, underprediction and sharpness)
+over time. --->
+```{r scores-time, child = "../rmdchunks/scores-and-truth-time.Rmd"}
 ```
 
-`r paste(knit(text = out), collapse = '\n\n')`
+<!--- Footer about GitHub repository and where to find data for individual 
+models --->
+```{r footer, child = "../rmdchunks/evaluation-footer.Rmd"}
+```
 
-If you want to learn more about a model, you can go the the 'data-processed'-folder of the [European Forecast Hub github repository](https://github.com/epiforecasts/covid19-forecast-hub-europe), select a model and access the metadata file with further information provided by the model authors. 
 
 
 
