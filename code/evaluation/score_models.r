@@ -39,7 +39,8 @@ score_models <- function(data, report_date, restrict_weeks) {
         eval_forecasts(
           summarise_by = c("model", "target_variable", "range", "horizon",
                            "location"),
-          compute_relative_skill = FALSE,
+          metrics = "coverage",
+          compute_relative_skill = FALSE
         ) %>%
         dplyr::filter(range %in% c(50, 95)) %>%
         dplyr::select(model, target_variable, horizon, location, coverage,
@@ -52,8 +53,7 @@ score_models <- function(data, report_date, restrict_weeks) {
     ## number of forecasts
     num_fc <- df %>%
         dplyr::filter(type == "point", !is.na(true_value)) %>%
-        dplyr::group_by(model, target_variable, horizon, location) %>%
-        dplyr::summarise(n = n(), .groups = "drop")
+        dplyr::count(model, target_variable, horizon, location)
 
     ## mean absolute error of point forecast
     mae <- df %>%
