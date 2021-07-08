@@ -1,0 +1,8 @@
+<!--- Chunk to filter data to keep only the relevant locations. Is is separated from the global data loading step
+so that we can cache the loading step.. -->
+```{r}
+data <- data %>%
+  filter(location_name == params$location_name)
+```
+
+## {.unlisted .unnumbered}

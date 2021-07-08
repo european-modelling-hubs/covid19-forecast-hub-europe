@@ -2,7 +2,7 @@ name: "ECDC"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 12 * * 4"
+    - cron: "0 12 * * *"
 
 jobs:
   get_ecdc:
@@ -18,14 +18,16 @@ jobs:
       run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
 
     - name: Install R dependencies
-      run: Rscript -e 'install.packages(c("here", "vroom", "eurostat", "dplyr", "countrycode", "tidyr", "ISOweek", "stringi"))'
+      run: Rscript -e 'install.packages(c("curl", "R.utils", "here", "readr", "lubridate", "dplyr", "tidyr", "ISOweek", "stringi"))'
 
     - name: ECDC Truth
       run: Rscript 'code/auto_download/ecdc_download.r'
+      env:
+        DATA_USERNAME: ${{secrets.DATA_USERNAME}}
+        DATA_PASSWORD: ${{secrets.DATA_PASSWORD}}
+        DATA_URL: ${{secrets.DATA_URL}}
 
     - name: Commit files
-      env:
-        AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git config user.email "action@github.com"
         git config user.name "GitHub Action - ECDC"
@@ -33,3 +35,5 @@ jobs:
         git commit -m "ECDC - daily"
         git push
         echo "pushed to github"
+      env:
+        AUTH: ${{secrets.GITHUB_TOKEN}}
