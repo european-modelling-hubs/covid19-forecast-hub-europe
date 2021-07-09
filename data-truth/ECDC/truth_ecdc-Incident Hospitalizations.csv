@@ -1,6 +1,9 @@
 date,location,location_name,value
-2021-03-13,BE,Belgium,195
-2021-03-14,BE,Belgium,159
+2021-03-10,BE,Belgium,154
+2021-03-11,BE,Belgium,139
+2021-05-20,BE,Belgium,121
+2021-05-21,BE,Belgium,127
+2021-05-22,BE,Belgium,123
 2021-05-23,BE,Belgium,88
 2021-05-24,BE,Belgium,76
 2021-05-25,BE,Belgium,90
@@ -138,9 +141,9 @@ date,location,location_name,value
 2020-06-23,BE,Belgium,12
 2020-06-24,BE,Belgium,16
 2020-06-25,BE,Belgium,21
-2020-06-26,BE,Belgium,18
-2020-06-27,BE,Belgium,16
-2020-06-28,BE,Belgium,7
+2020-09-05,BE,Belgium,16
+2020-09-06,BE,Belgium,17
+2020-09-07,BE,Belgium,26
 2020-09-08,BE,Belgium,42
 2020-09-09,BE,Belgium,24
 2020-09-10,BE,Belgium,29
@@ -324,9 +327,9 @@ date,location,location_name,value
 2021-03-07,BE,Belgium,122
 2021-03-08,BE,Belgium,113
 2021-03-09,BE,Belgium,202
-2021-03-10,BE,Belgium,154
-2021-03-11,BE,Belgium,139
 2021-03-12,BE,Belgium,170
+2021-03-13,BE,Belgium,195
+2021-03-14,BE,Belgium,159
 2021-03-15,BE,Belgium,150
 2021-03-16,BE,Belgium,208
 2021-03-17,BE,Belgium,207
@@ -393,9 +396,9 @@ date,location,location_name,value
 2021-05-17,BE,Belgium,99
 2021-05-18,BE,Belgium,131
 2021-05-19,BE,Belgium,141
-2021-05-20,BE,Belgium,121
-2021-05-21,BE,Belgium,127
-2021-05-22,BE,Belgium,123
+2020-07-11,BE,Belgium,11
+2020-07-12,BE,Belgium,7
+2020-07-13,BE,Belgium,9
 2020-07-14,BE,Belgium,18
 2020-07-15,BE,Belgium,11
 2020-07-16,BE,Belgium,13
@@ -443,6 +446,10 @@ date,location,location_name,value
 2021-07-05,BE,Belgium,11
 2021-07-06,BE,Belgium,24
 2021-07-07,BE,Belgium,28
+2021-07-08,BE,Belgium,7
+2020-06-26,BE,Belgium,18
+2020-06-27,BE,Belgium,16
+2020-06-28,BE,Belgium,7
 2020-06-29,BE,Belgium,14
 2020-06-30,BE,Belgium,17
 2020-07-01,BE,Belgium,9
@@ -455,9 +462,6 @@ date,location,location_name,value
 2020-07-08,BE,Belgium,9
 2020-07-09,BE,Belgium,11
 2020-07-10,BE,Belgium,6
-2020-07-11,BE,Belgium,11
-2020-07-12,BE,Belgium,7
-2020-07-13,BE,Belgium,9
 2020-08-18,BE,Belgium,35
 2020-08-19,BE,Belgium,39
 2020-08-20,BE,Belgium,30
@@ -476,9 +480,6 @@ date,location,location_name,value
 2020-09-02,BE,Belgium,26
 2020-09-03,BE,Belgium,13
 2020-09-04,BE,Belgium,22
-2020-09-05,BE,Belgium,16
-2020-09-06,BE,Belgium,17
-2020-09-07,BE,Belgium,26
 2021-07-04,HR,Croatia,12
 2021-07-03,HR,Croatia,11
 2021-07-02,HR,Croatia,10
@@ -1423,6 +1424,7 @@ date,location,location_name,value
 2021-07-05,DK,Denmark,5
 2021-07-06,DK,Denmark,10
 2021-07-07,DK,Denmark,5
+2021-07-08,DK,Denmark,7
 2020-01-06,EE,Estonia,1
 2020-01-18,EE,Estonia,1
 2020-02-12,EE,Estonia,0
@@ -1924,6 +1926,7 @@ date,location,location_name,value
 2021-07-05,EE,Estonia,6
 2021-07-06,EE,Estonia,3
 2021-07-07,EE,Estonia,4
+2021-07-08,EE,Estonia,2
 2020-03-19,FR,France,2229
 2020-03-20,FR,France,1256
 2020-03-21,FR,France,1540
@@ -2400,6 +2403,7 @@ date,location,location_name,value
 2021-07-05,FR,France,137
 2021-07-06,FR,France,149
 2021-07-07,FR,France,140
+2021-07-08,FR,France,100
 2020-02-27,NL,Netherlands,2
 2020-02-28,NL,Netherlands,4
 2020-02-29,NL,Netherlands,1
@@ -2927,9 +2931,10 @@ date,location,location_name,value
 2021-07-02,NL,Netherlands,1
 2021-07-03,NL,Netherlands,4
 2021-07-04,NL,Netherlands,2
-2021-07-05,NL,Netherlands,0
+2021-07-05,NL,Netherlands,2
 2021-07-06,NL,Netherlands,0
 2021-07-07,NL,Netherlands,0
+2021-07-08,NL,Netherlands,0
 2020-02-21,NO,Norway,0
 2020-02-22,NO,Norway,0
 2020-02-23,NO,Norway,0
@@ -3429,9 +3434,10 @@ date,location,location_name,value
 2021-07-01,NO,Norway,3
 2021-07-02,NO,Norway,2
 2021-07-03,NO,Norway,0
-2021-07-04,NO,Norway,5
-2021-07-05,NO,Norway,0
-2021-07-06,NO,Norway,0
+2021-07-04,NO,Norway,4
+2021-07-05,NO,Norway,3
+2021-07-06,NO,Norway,3
+2021-07-07,NO,Norway,1
 2020-03-10,SI,Slovenia,0
 2020-03-11,SI,Slovenia,2
 2020-03-12,SI,Slovenia,4
@@ -3918,6 +3924,7 @@ date,location,location_name,value
 2021-07-06,SI,Slovenia,4
 2021-07-07,SI,Slovenia,4
 2021-07-08,SI,Slovenia,3
+2021-07-09,SI,Slovenia,2
 2020-01-01,ES,Spain,8
 2020-01-02,ES,Spain,66
 2020-01-03,ES,Spain,11
@@ -4136,7 +4143,7 @@ date,location,location_name,value
 2020-08-03,ES,Spain,235
 2020-08-04,ES,Spain,232
 2020-08-05,ES,Spain,262
-2020-08-06,ES,Spain,296
+2020-08-06,ES,Spain,297
 2020-08-07,ES,Spain,307
 2020-08-08,ES,Spain,257
 2020-08-09,ES,Spain,246
@@ -4144,9 +4151,9 @@ date,location,location_name,value
 2020-08-11,ES,Spain,390
 2020-08-12,ES,Spain,437
 2020-08-13,ES,Spain,463
-2020-08-14,ES,Spain,461
+2020-08-14,ES,Spain,459
 2020-08-15,ES,Spain,362
-2020-08-16,ES,Spain,376
+2020-08-16,ES,Spain,377
 2020-08-17,ES,Spain,529
 2020-08-18,ES,Spain,531
 2020-08-19,ES,Spain,592
@@ -4183,54 +4190,54 @@ date,location,location_name,value
 2020-09-19,ES,Spain,736
 2020-09-20,ES,Spain,656
 2020-09-21,ES,Spain,974
-2020-09-22,ES,Spain,1017
+2020-09-22,ES,Spain,1016
 2020-09-23,ES,Spain,909
 2020-09-24,ES,Spain,924
 2020-09-25,ES,Spain,904
 2020-09-26,ES,Spain,626
-2020-09-27,ES,Spain,600
-2020-09-28,ES,Spain,825
+2020-09-27,ES,Spain,601
+2020-09-28,ES,Spain,826
 2020-09-29,ES,Spain,878
 2020-09-30,ES,Spain,848
 2020-10-01,ES,Spain,834
 2020-10-02,ES,Spain,893
 2020-10-03,ES,Spain,595
 2020-10-04,ES,Spain,567
-2020-10-05,ES,Spain,822
+2020-10-05,ES,Spain,823
 2020-10-06,ES,Spain,853
 2020-10-07,ES,Spain,828
 2020-10-08,ES,Spain,918
 2020-10-09,ES,Spain,954
 2020-10-10,ES,Spain,700
 2020-10-11,ES,Spain,732
-2020-10-12,ES,Spain,705
+2020-10-12,ES,Spain,706
 2020-10-13,ES,Spain,999
 2020-10-14,ES,Spain,1069
 2020-10-15,ES,Spain,1030
-2020-10-16,ES,Spain,1112
+2020-10-16,ES,Spain,1113
 2020-10-17,ES,Spain,846
 2020-10-18,ES,Spain,833
 2020-10-19,ES,Spain,1185
 2020-10-20,ES,Spain,1225
-2020-10-21,ES,Spain,1262
-2020-10-22,ES,Spain,1333
-2020-10-23,ES,Spain,1371
+2020-10-21,ES,Spain,1263
+2020-10-22,ES,Spain,1332
+2020-10-23,ES,Spain,1372
 2020-10-24,ES,Spain,1157
 2020-10-25,ES,Spain,1005
 2020-10-26,ES,Spain,1403
 2020-10-27,ES,Spain,1479
 2020-10-28,ES,Spain,1431
-2020-10-29,ES,Spain,1481
+2020-10-29,ES,Spain,1480
 2020-10-30,ES,Spain,1578
 2020-10-31,ES,Spain,1180
 2020-11-01,ES,Spain,1151
 2020-11-02,ES,Spain,1412
-2020-11-03,ES,Spain,1571
+2020-11-03,ES,Spain,1572
 2020-11-04,ES,Spain,1546
 2020-11-05,ES,Spain,1464
 2020-11-06,ES,Spain,1558
 2020-11-07,ES,Spain,1202
-2020-11-08,ES,Spain,1022
+2020-11-08,ES,Spain,1023
 2020-11-09,ES,Spain,1498
 2020-11-10,ES,Spain,1556
 2020-11-11,ES,Spain,1464
@@ -4247,16 +4254,16 @@ date,location,location_name,value
 2020-11-22,ES,Spain,650
 2020-11-23,ES,Spain,939
 2020-11-24,ES,Spain,917
-2020-11-25,ES,Spain,869
-2020-11-26,ES,Spain,820
+2020-11-25,ES,Spain,870
+2020-11-26,ES,Spain,819
 2020-11-27,ES,Spain,809
 2020-11-28,ES,Spain,621
 2020-11-29,ES,Spain,525
 2020-11-30,ES,Spain,736
 2020-12-01,ES,Spain,745
-2020-12-02,ES,Spain,672
+2020-12-02,ES,Spain,671
 2020-12-03,ES,Spain,649
-2020-12-04,ES,Spain,656
+2020-12-04,ES,Spain,655
 2020-12-05,ES,Spain,473
 2020-12-06,ES,Spain,468
 2020-12-07,ES,Spain,566
@@ -4265,19 +4272,19 @@ date,location,location_name,value
 2020-12-10,ES,Spain,658
 2020-12-11,ES,Spain,722
 2020-12-12,ES,Spain,544
-2020-12-13,ES,Spain,486
+2020-12-13,ES,Spain,485
 2020-12-14,ES,Spain,751
 2020-12-15,ES,Spain,706
-2020-12-16,ES,Spain,729
+2020-12-16,ES,Spain,728
 2020-12-17,ES,Spain,675
-2020-12-18,ES,Spain,724
+2020-12-18,ES,Spain,725
 2020-12-19,ES,Spain,508
 2020-12-20,ES,Spain,549
-2020-12-21,ES,Spain,784
+2020-12-21,ES,Spain,785
 2020-12-22,ES,Spain,784
 2020-12-23,ES,Spain,777
 2020-12-24,ES,Spain,595
-2020-12-25,ES,Spain,556
+2020-12-25,ES,Spain,557
 2020-12-26,ES,Spain,601
 2020-12-27,ES,Spain,696
 2020-12-28,ES,Spain,923
@@ -4292,84 +4299,84 @@ date,location,location_name,value
 2021-01-06,ES,Spain,957
 2021-01-07,ES,Spain,1299
 2021-01-08,ES,Spain,1372
-2021-01-09,ES,Spain,959
-2021-01-10,ES,Spain,1167
-2021-01-11,ES,Spain,1688
-2021-01-12,ES,Spain,1786
+2021-01-09,ES,Spain,960
+2021-01-10,ES,Spain,1166
+2021-01-11,ES,Spain,1689
+2021-01-12,ES,Spain,1785
 2021-01-13,ES,Spain,1943
-2021-01-14,ES,Spain,2051
-2021-01-15,ES,Spain,2179
+2021-01-14,ES,Spain,2052
+2021-01-15,ES,Spain,2178
 2021-01-16,ES,Spain,1809
-2021-01-17,ES,Spain,1776
+2021-01-17,ES,Spain,1777
 2021-01-18,ES,Spain,2567
-2021-01-19,ES,Spain,2564
+2021-01-19,ES,Spain,2563
 2021-01-20,ES,Spain,2504
 2021-01-21,ES,Spain,2585
 2021-01-22,ES,Spain,2549
-2021-01-23,ES,Spain,1955
-2021-01-24,ES,Spain,1819
-2021-01-25,ES,Spain,2593
+2021-01-23,ES,Spain,1954
+2021-01-24,ES,Spain,1820
+2021-01-25,ES,Spain,2594
 2021-01-26,ES,Spain,2483
 2021-01-27,ES,Spain,2388
 2021-01-28,ES,Spain,2319
-2021-01-29,ES,Spain,2299
-2021-01-30,ES,Spain,1679
+2021-01-29,ES,Spain,2300
+2021-01-30,ES,Spain,1681
 2021-01-31,ES,Spain,1524
-2021-02-01,ES,Spain,2052
-2021-02-02,ES,Spain,1930
-2021-02-03,ES,Spain,1737
-2021-02-04,ES,Spain,1688
+2021-02-01,ES,Spain,2053
+2021-02-02,ES,Spain,1931
+2021-02-03,ES,Spain,1736
+2021-02-04,ES,Spain,1689
 2021-02-05,ES,Spain,1595
-2021-02-06,ES,Spain,1069
-2021-02-07,ES,Spain,955
+2021-02-06,ES,Spain,1070
+2021-02-07,ES,Spain,956
 2021-02-08,ES,Spain,1453
-2021-02-09,ES,Spain,1310
-2021-02-10,ES,Spain,1106
+2021-02-09,ES,Spain,1309
+2021-02-10,ES,Spain,1107
 2021-02-11,ES,Spain,1005
-2021-02-12,ES,Spain,1036
+2021-02-12,ES,Spain,1039
 2021-02-13,ES,Spain,624
 2021-02-14,ES,Spain,570
-2021-02-15,ES,Spain,888
+2021-02-15,ES,Spain,887
 2021-02-16,ES,Spain,737
 2021-02-17,ES,Spain,762
-2021-02-18,ES,Spain,700
-2021-02-19,ES,Spain,680
-2021-02-20,ES,Spain,482
+2021-02-18,ES,Spain,702
+2021-02-19,ES,Spain,679
+2021-02-20,ES,Spain,483
 2021-02-21,ES,Spain,467
-2021-02-22,ES,Spain,644
+2021-02-22,ES,Spain,645
 2021-02-23,ES,Spain,600
-2021-02-24,ES,Spain,539
+2021-02-24,ES,Spain,538
 2021-02-25,ES,Spain,544
 2021-02-26,ES,Spain,587
-2021-02-27,ES,Spain,400
-2021-02-28,ES,Spain,362
+2021-02-27,ES,Spain,399
+2021-02-28,ES,Spain,363
 2021-03-01,ES,Spain,479
 2021-03-02,ES,Spain,474
 2021-03-03,ES,Spain,460
-2021-03-04,ES,Spain,505
+2021-03-04,ES,Spain,503
 2021-03-05,ES,Spain,495
 2021-03-06,ES,Spain,351
 2021-03-07,ES,Spain,364
-2021-03-08,ES,Spain,517
-2021-03-09,ES,Spain,448
+2021-03-08,ES,Spain,516
+2021-03-09,ES,Spain,449
 2021-03-10,ES,Spain,433
 2021-03-11,ES,Spain,434
 2021-03-12,ES,Spain,475
 2021-03-13,ES,Spain,351
-2021-03-14,ES,Spain,315
-2021-03-15,ES,Spain,452
-2021-03-16,ES,Spain,431
+2021-03-14,ES,Spain,316
+2021-03-15,ES,Spain,451
+2021-03-16,ES,Spain,432
 2021-03-17,ES,Spain,475
-2021-03-18,ES,Spain,438
-2021-03-19,ES,Spain,401
+2021-03-18,ES,Spain,439
+2021-03-19,ES,Spain,399
 2021-03-20,ES,Spain,333
-2021-03-21,ES,Spain,331
-2021-03-22,ES,Spain,520
-2021-03-23,ES,Spain,451
-2021-03-24,ES,Spain,447
+2021-03-21,ES,Spain,332
+2021-03-22,ES,Spain,519
+2021-03-23,ES,Spain,452
+2021-03-24,ES,Spain,446
 2021-03-25,ES,Spain,494
-2021-03-26,ES,Spain,526
-2021-03-27,ES,Spain,394
+2021-03-26,ES,Spain,527
+2021-03-27,ES,Spain,395
 2021-03-28,ES,Spain,345
 2021-03-29,ES,Spain,546
 2021-03-30,ES,Spain,554
@@ -4378,100 +4385,101 @@ date,location,location_name,value
 2021-04-02,ES,Spain,501
 2021-04-03,ES,Spain,513
 2021-04-04,ES,Spain,455
-2021-04-05,ES,Spain,691
-2021-04-06,ES,Spain,629
+2021-04-05,ES,Spain,693
+2021-04-06,ES,Spain,630
 2021-04-07,ES,Spain,637
-2021-04-08,ES,Spain,646
-2021-04-09,ES,Spain,633
-2021-04-10,ES,Spain,508
-2021-04-11,ES,Spain,486
+2021-04-08,ES,Spain,647
+2021-04-09,ES,Spain,635
+2021-04-10,ES,Spain,509
+2021-04-11,ES,Spain,487
 2021-04-12,ES,Spain,763
-2021-04-13,ES,Spain,659
-2021-04-14,ES,Spain,691
-2021-04-15,ES,Spain,650
+2021-04-13,ES,Spain,661
+2021-04-14,ES,Spain,693
+2021-04-15,ES,Spain,653
 2021-04-16,ES,Spain,758
-2021-04-17,ES,Spain,519
-2021-04-18,ES,Spain,496
-2021-04-19,ES,Spain,759
+2021-04-17,ES,Spain,520
+2021-04-18,ES,Spain,497
+2021-04-19,ES,Spain,761
 2021-04-20,ES,Spain,698
-2021-04-21,ES,Spain,664
-2021-04-22,ES,Spain,655
+2021-04-21,ES,Spain,662
+2021-04-22,ES,Spain,656
 2021-04-23,ES,Spain,624
-2021-04-24,ES,Spain,489
-2021-04-25,ES,Spain,459
-2021-04-26,ES,Spain,719
-2021-04-27,ES,Spain,612
-2021-04-28,ES,Spain,575
-2021-04-29,ES,Spain,578
-2021-04-30,ES,Spain,574
-2021-05-01,ES,Spain,433
-2021-05-02,ES,Spain,391
-2021-05-03,ES,Spain,484
-2021-05-04,ES,Spain,553
-2021-05-05,ES,Spain,486
-2021-05-06,ES,Spain,485
-2021-05-07,ES,Spain,479
+2021-04-24,ES,Spain,490
+2021-04-25,ES,Spain,462
+2021-04-26,ES,Spain,721
+2021-04-27,ES,Spain,609
+2021-04-28,ES,Spain,574
+2021-04-29,ES,Spain,580
+2021-04-30,ES,Spain,573
+2021-05-01,ES,Spain,435
+2021-05-02,ES,Spain,392
+2021-05-03,ES,Spain,487
+2021-05-04,ES,Spain,556
+2021-05-05,ES,Spain,489
+2021-05-06,ES,Spain,488
+2021-05-07,ES,Spain,483
 2021-05-08,ES,Spain,306
 2021-05-09,ES,Spain,332
-2021-05-10,ES,Spain,405
-2021-05-11,ES,Spain,393
-2021-05-12,ES,Spain,388
-2021-05-13,ES,Spain,358
-2021-05-14,ES,Spain,359
-2021-05-15,ES,Spain,256
+2021-05-10,ES,Spain,409
+2021-05-11,ES,Spain,396
+2021-05-12,ES,Spain,389
+2021-05-13,ES,Spain,360
+2021-05-14,ES,Spain,362
+2021-05-15,ES,Spain,261
 2021-05-16,ES,Spain,252
 2021-05-17,ES,Spain,334
-2021-05-18,ES,Spain,320
-2021-05-19,ES,Spain,288
+2021-05-18,ES,Spain,322
+2021-05-19,ES,Spain,289
 2021-05-20,ES,Spain,264
 2021-05-21,ES,Spain,310
-2021-05-22,ES,Spain,214
-2021-05-23,ES,Spain,186
-2021-05-24,ES,Spain,316
+2021-05-22,ES,Spain,215
+2021-05-23,ES,Spain,185
+2021-05-24,ES,Spain,317
 2021-05-25,ES,Spain,263
-2021-05-26,ES,Spain,259
-2021-05-27,ES,Spain,249
+2021-05-26,ES,Spain,258
+2021-05-27,ES,Spain,250
 2021-05-28,ES,Spain,289
-2021-05-29,ES,Spain,200
-2021-05-30,ES,Spain,210
-2021-05-31,ES,Spain,281
+2021-05-29,ES,Spain,201
+2021-05-30,ES,Spain,211
+2021-05-31,ES,Spain,280
 2021-06-01,ES,Spain,236
-2021-06-02,ES,Spain,246
-2021-06-03,ES,Spain,213
+2021-06-02,ES,Spain,247
+2021-06-03,ES,Spain,215
 2021-06-04,ES,Spain,207
 2021-06-05,ES,Spain,173
-2021-06-06,ES,Spain,182
-2021-06-07,ES,Spain,252
-2021-06-08,ES,Spain,211
-2021-06-09,ES,Spain,194
+2021-06-06,ES,Spain,183
+2021-06-07,ES,Spain,251
+2021-06-08,ES,Spain,210
+2021-06-09,ES,Spain,193
 2021-06-10,ES,Spain,184
 2021-06-11,ES,Spain,208
 2021-06-12,ES,Spain,140
-2021-06-13,ES,Spain,156
+2021-06-13,ES,Spain,157
 2021-06-14,ES,Spain,179
-2021-06-15,ES,Spain,179
+2021-06-15,ES,Spain,180
 2021-06-16,ES,Spain,180
 2021-06-17,ES,Spain,137
 2021-06-18,ES,Spain,141
 2021-06-19,ES,Spain,113
-2021-06-20,ES,Spain,125
-2021-06-21,ES,Spain,150
-2021-06-22,ES,Spain,145
-2021-06-23,ES,Spain,130
+2021-06-20,ES,Spain,127
+2021-06-21,ES,Spain,151
+2021-06-22,ES,Spain,146
+2021-06-23,ES,Spain,131
 2021-06-24,ES,Spain,129
-2021-06-25,ES,Spain,157
-2021-06-26,ES,Spain,133
-2021-06-27,ES,Spain,146
-2021-06-28,ES,Spain,149
-2021-06-29,ES,Spain,161
-2021-06-30,ES,Spain,149
-2021-07-01,ES,Spain,158
-2021-07-02,ES,Spain,143
-2021-07-03,ES,Spain,178
-2021-07-04,ES,Spain,141
-2021-07-05,ES,Spain,146
-2021-07-06,ES,Spain,67
-2021-07-07,ES,Spain,1
+2021-06-25,ES,Spain,158
+2021-06-26,ES,Spain,134
+2021-06-27,ES,Spain,147
+2021-06-28,ES,Spain,152
+2021-06-29,ES,Spain,163
+2021-06-30,ES,Spain,154
+2021-07-01,ES,Spain,165
+2021-07-02,ES,Spain,149
+2021-07-03,ES,Spain,183
+2021-07-04,ES,Spain,144
+2021-07-05,ES,Spain,165
+2021-07-06,ES,Spain,150
+2021-07-07,ES,Spain,54
+2021-07-08,ES,Spain,0
 2020-03-01,GB,United Kingdom,5
 2020-03-02,GB,United Kingdom,12
 2020-03-03,GB,United Kingdom,13
@@ -4504,7 +4512,7 @@ date,location,location_name,value
 2020-03-30,GB,United Kingdom,3190
 2020-03-31,GB,United Kingdom,2832
 2020-04-01,GB,United Kingdom,3565
-2020-04-02,GB,United Kingdom,3284
+2020-04-02,GB,United Kingdom,3285
 2020-04-03,GB,United Kingdom,2930
 2020-04-04,GB,United Kingdom,2921
 2020-04-05,GB,United Kingdom,2917
@@ -4531,7 +4539,7 @@ date,location,location_name,value
 2020-04-26,GB,United Kingdom,1355
 2020-04-27,GB,United Kingdom,1538
 2020-04-28,GB,United Kingdom,1517
-2020-04-29,GB,United Kingdom,1489
+2020-04-29,GB,United Kingdom,1488
 2020-04-30,GB,United Kingdom,1442
 2020-05-01,GB,United Kingdom,1262
 2020-05-02,GB,United Kingdom,1180
@@ -4735,7 +4743,7 @@ date,location,location_name,value
 2020-11-16,GB,United Kingdom,1768
 2020-11-17,GB,United Kingdom,1716
 2020-11-18,GB,United Kingdom,1782
-2020-11-19,GB,United Kingdom,1685
+2020-11-19,GB,United Kingdom,1684
 2020-11-20,GB,United Kingdom,1547
 2020-11-21,GB,United Kingdom,1460
 2020-11-22,GB,United Kingdom,1488
@@ -4767,7 +4775,7 @@ date,location,location_name,value
 2020-12-18,GB,United Kingdom,1917
 2020-12-19,GB,United Kingdom,2044
 2020-12-20,GB,United Kingdom,2168
-2020-12-21,GB,United Kingdom,2368
+2020-12-21,GB,United Kingdom,2367
 2020-12-22,GB,United Kingdom,2479
 2020-12-23,GB,United Kingdom,2273
 2020-12-24,GB,United Kingdom,2082
@@ -4805,7 +4813,7 @@ date,location,location_name,value
 2021-01-25,GB,United Kingdom,2930
 2021-01-26,GB,United Kingdom,3147
 2021-01-27,GB,United Kingdom,3057
-2021-01-28,GB,United Kingdom,3043
+2021-01-28,GB,United Kingdom,3042
 2021-01-29,GB,United Kingdom,2685
 2021-01-30,GB,United Kingdom,2472
 2021-01-31,GB,United Kingdom,2403
@@ -4817,7 +4825,7 @@ date,location,location_name,value
 2021-02-06,GB,United Kingdom,1891
 2021-02-07,GB,United Kingdom,1847
 2021-02-08,GB,United Kingdom,1920
-2021-02-09,GB,United Kingdom,1753
+2021-02-09,GB,United Kingdom,1754
 2021-02-10,GB,United Kingdom,1725
 2021-02-11,GB,United Kingdom,1678
 2021-02-12,GB,United Kingdom,1507
@@ -4922,9 +4930,9 @@ date,location,location_name,value
 2021-05-22,GB,United Kingdom,120
 2021-05-23,GB,United Kingdom,114
 2021-05-24,GB,United Kingdom,136
-2021-05-25,GB,United Kingdom,132
+2021-05-25,GB,United Kingdom,133
 2021-05-26,GB,United Kingdom,129
-2021-05-27,GB,United Kingdom,124
+2021-05-27,GB,United Kingdom,125
 2021-05-28,GB,United Kingdom,138
 2021-05-29,GB,United Kingdom,103
 2021-05-30,GB,United Kingdom,112
@@ -4936,35 +4944,36 @@ date,location,location_name,value
 2021-06-05,GB,United Kingdom,124
 2021-06-06,GB,United Kingdom,153
 2021-06-07,GB,United Kingdom,174
-2021-06-08,GB,United Kingdom,188
+2021-06-08,GB,United Kingdom,189
 2021-06-09,GB,United Kingdom,188
 2021-06-10,GB,United Kingdom,200
 2021-06-11,GB,United Kingdom,177
 2021-06-12,GB,United Kingdom,178
 2021-06-13,GB,United Kingdom,223
-2021-06-14,GB,United Kingdom,224
+2021-06-14,GB,United Kingdom,225
 2021-06-15,GB,United Kingdom,227
 2021-06-16,GB,United Kingdom,226
 2021-06-17,GB,United Kingdom,240
-2021-06-18,GB,United Kingdom,235
+2021-06-18,GB,United Kingdom,234
 2021-06-19,GB,United Kingdom,211
 2021-06-20,GB,United Kingdom,206
 2021-06-21,GB,United Kingdom,226
 2021-06-22,GB,United Kingdom,235
-2021-06-23,GB,United Kingdom,272
+2021-06-23,GB,United Kingdom,273
 2021-06-24,GB,United Kingdom,247
 2021-06-25,GB,United Kingdom,248
 2021-06-26,GB,United Kingdom,266
 2021-06-27,GB,United Kingdom,261
 2021-06-28,GB,United Kingdom,306
-2021-06-29,GB,United Kingdom,357
-2021-06-30,GB,United Kingdom,411
-2021-07-01,GB,United Kingdom,359
+2021-06-29,GB,United Kingdom,359
+2021-06-30,GB,United Kingdom,412
+2021-07-01,GB,United Kingdom,362
 2021-07-02,GB,United Kingdom,380
 2021-07-03,GB,United Kingdom,386
-2021-07-04,GB,United Kingdom,397
-2021-07-05,GB,United Kingdom,428
-2021-07-06,GB,United Kingdom,10
+2021-07-04,GB,United Kingdom,456
+2021-07-05,GB,United Kingdom,429
+2021-07-06,GB,United Kingdom,471
+2021-07-07,GB,United Kingdom,10
 2020-04-03,IE,Ireland,56
 2020-04-04,IE,Ireland,54
 2020-04-05,IE,Ireland,56
@@ -5423,3 +5432,4 @@ date,location,location_name,value
 2021-07-05,IE,Ireland,0
 2021-07-06,IE,Ireland,0
 2021-07-07,IE,Ireland,0
+2021-07-08,IE,Ireland,0
