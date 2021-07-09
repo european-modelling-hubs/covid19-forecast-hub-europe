@@ -15,6 +15,7 @@ restrict_weeks <- 4
 suppressWarnings(dir.create(here::here("evaluation")))
 
 score_models <- function(data, report_date, restrict_weeks) {
+
     last_forecast_date <- report_date - 7
 
     score_data <- data[forecast_date <= last_forecast_date &
@@ -39,7 +40,10 @@ score_models <- function(data, report_date, restrict_weeks) {
         eval_forecasts(
           summarise_by = c("model", "target_variable", "range", "horizon",
                            "location"),
-          metrics = "coverage",
+          # FIXME: we only care about coverage but we have to compute
+          # "interval_score" first for this to work.
+          # See https://github.com/epiforecasts/scoringutils/issues/111
+          metrics = c("interval_score", "coverage"),
           compute_relative_skill = FALSE
         ) %>%
         dplyr::filter(range %in% c(50, 95)) %>%
