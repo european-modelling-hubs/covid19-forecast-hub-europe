@@ -1,6 +1,10 @@
 date,location,location_name,value
-2021-03-10,BE,Belgium,154
-2021-03-11,BE,Belgium,139
+2021-03-06,BE,Belgium,141
+2021-03-07,BE,Belgium,122
+2021-03-08,BE,Belgium,113
+2021-05-17,BE,Belgium,99
+2021-05-18,BE,Belgium,131
+2021-05-19,BE,Belgium,141
 2021-05-20,BE,Belgium,121
 2021-05-21,BE,Belgium,127
 2021-05-22,BE,Belgium,123
@@ -138,9 +142,10 @@ date,location,location_name,value
 2020-06-20,BE,Belgium,18
 2020-06-21,BE,Belgium,12
 2020-06-22,BE,Belgium,14
-2020-06-23,BE,Belgium,12
-2020-06-24,BE,Belgium,16
-2020-06-25,BE,Belgium,21
+2020-09-01,BE,Belgium,28
+2020-09-02,BE,Belgium,26
+2020-09-03,BE,Belgium,13
+2020-09-04,BE,Belgium,22
 2020-09-05,BE,Belgium,16
 2020-09-06,BE,Belgium,17
 2020-09-07,BE,Belgium,26
@@ -323,10 +328,9 @@ date,location,location_name,value
 2021-03-03,BE,Belgium,152
 2021-03-04,BE,Belgium,171
 2021-03-05,BE,Belgium,152
-2021-03-06,BE,Belgium,141
-2021-03-07,BE,Belgium,122
-2021-03-08,BE,Belgium,113
 2021-03-09,BE,Belgium,202
+2021-03-10,BE,Belgium,154
+2021-03-11,BE,Belgium,139
 2021-03-12,BE,Belgium,170
 2021-03-13,BE,Belgium,195
 2021-03-14,BE,Belgium,159
@@ -393,9 +397,9 @@ date,location,location_name,value
 2021-05-14,BE,Belgium,102
 2021-05-15,BE,Belgium,168
 2021-05-16,BE,Belgium,105
-2021-05-17,BE,Belgium,99
-2021-05-18,BE,Belgium,131
-2021-05-19,BE,Belgium,141
+2020-07-08,BE,Belgium,9
+2020-07-09,BE,Belgium,11
+2020-07-10,BE,Belgium,6
 2020-07-11,BE,Belgium,11
 2020-07-12,BE,Belgium,7
 2020-07-13,BE,Belgium,9
@@ -447,6 +451,10 @@ date,location,location_name,value
 2021-07-06,BE,Belgium,24
 2021-07-07,BE,Belgium,28
 2021-07-08,BE,Belgium,7
+2021-07-09,BE,Belgium,20
+2020-06-23,BE,Belgium,12
+2020-06-24,BE,Belgium,16
+2020-06-25,BE,Belgium,21
 2020-06-26,BE,Belgium,18
 2020-06-27,BE,Belgium,16
 2020-06-28,BE,Belgium,7
@@ -459,9 +467,6 @@ date,location,location_name,value
 2020-07-05,BE,Belgium,7
 2020-07-06,BE,Belgium,10
 2020-07-07,BE,Belgium,17
-2020-07-08,BE,Belgium,9
-2020-07-09,BE,Belgium,11
-2020-07-10,BE,Belgium,6
 2020-08-18,BE,Belgium,35
 2020-08-19,BE,Belgium,39
 2020-08-20,BE,Belgium,30
@@ -476,10 +481,6 @@ date,location,location_name,value
 2020-08-29,BE,Belgium,8
 2020-08-30,BE,Belgium,14
 2020-08-31,BE,Belgium,18
-2020-09-01,BE,Belgium,28
-2020-09-02,BE,Belgium,26
-2020-09-03,BE,Belgium,13
-2020-09-04,BE,Belgium,22
 2021-07-04,HR,Croatia,12
 2021-07-03,HR,Croatia,11
 2021-07-02,HR,Croatia,10
@@ -1425,6 +1426,7 @@ date,location,location_name,value
 2021-07-06,DK,Denmark,10
 2021-07-07,DK,Denmark,5
 2021-07-08,DK,Denmark,7
+2021-07-09,DK,Denmark,4
 2020-01-06,EE,Estonia,1
 2020-01-18,EE,Estonia,1
 2020-02-12,EE,Estonia,0
@@ -1927,6 +1929,7 @@ date,location,location_name,value
 2021-07-06,EE,Estonia,3
 2021-07-07,EE,Estonia,4
 2021-07-08,EE,Estonia,2
+2021-07-09,EE,Estonia,0
 2020-03-19,FR,France,2229
 2020-03-20,FR,France,1256
 2020-03-21,FR,France,1540
@@ -2404,6 +2407,7 @@ date,location,location_name,value
 2021-07-06,FR,France,149
 2021-07-07,FR,France,140
 2021-07-08,FR,France,100
+2021-07-09,FR,France,147
 2020-02-27,NL,Netherlands,2
 2020-02-28,NL,Netherlands,4
 2020-02-29,NL,Netherlands,1
@@ -2908,7 +2912,7 @@ date,location,location_name,value
 2021-06-09,NL,Netherlands,10
 2021-06-10,NL,Netherlands,4
 2021-06-11,NL,Netherlands,5
-2021-06-12,NL,Netherlands,8
+2021-06-12,NL,Netherlands,9
 2021-06-13,NL,Netherlands,5
 2021-06-14,NL,Netherlands,12
 2021-06-15,NL,Netherlands,5
@@ -2928,13 +2932,14 @@ date,location,location_name,value
 2021-06-29,NL,Netherlands,2
 2021-06-30,NL,Netherlands,1
 2021-07-01,NL,Netherlands,0
-2021-07-02,NL,Netherlands,1
+2021-07-02,NL,Netherlands,2
 2021-07-03,NL,Netherlands,4
-2021-07-04,NL,Netherlands,2
+2021-07-04,NL,Netherlands,4
 2021-07-05,NL,Netherlands,2
 2021-07-06,NL,Netherlands,0
 2021-07-07,NL,Netherlands,0
 2021-07-08,NL,Netherlands,0
+2021-07-09,NL,Netherlands,0
 2020-02-21,NO,Norway,0
 2020-02-22,NO,Norway,0
 2020-02-23,NO,Norway,0
@@ -3434,10 +3439,11 @@ date,location,location_name,value
 2021-07-01,NO,Norway,3
 2021-07-02,NO,Norway,2
 2021-07-03,NO,Norway,0
-2021-07-04,NO,Norway,4
+2021-07-04,NO,Norway,6
 2021-07-05,NO,Norway,3
 2021-07-06,NO,Norway,3
-2021-07-07,NO,Norway,1
+2021-07-07,NO,Norway,3
+2021-07-08,NO,Norway,1
 2020-03-10,SI,Slovenia,0
 2020-03-11,SI,Slovenia,2
 2020-03-12,SI,Slovenia,4
@@ -3925,6 +3931,7 @@ date,location,location_name,value
 2021-07-07,SI,Slovenia,4
 2021-07-08,SI,Slovenia,3
 2021-07-09,SI,Slovenia,2
+2021-07-10,SI,Slovenia,3
 2020-01-01,ES,Spain,8
 2020-01-02,ES,Spain,66
 2020-01-03,ES,Spain,11
@@ -4738,7 +4745,7 @@ date,location,location_name,value
 2020-11-11,GB,United Kingdom,1971
 2020-11-12,GB,United Kingdom,1916
 2020-11-13,GB,United Kingdom,1648
-2020-11-14,GB,United Kingdom,1612
+2020-11-14,GB,United Kingdom,1613
 2020-11-15,GB,United Kingdom,1669
 2020-11-16,GB,United Kingdom,1768
 2020-11-17,GB,United Kingdom,1716
@@ -4763,7 +4770,7 @@ date,location,location_name,value
 2020-12-06,GB,United Kingdom,1470
 2020-12-07,GB,United Kingdom,1661
 2020-12-08,GB,United Kingdom,1783
-2020-12-09,GB,United Kingdom,1753
+2020-12-09,GB,United Kingdom,1754
 2020-12-10,GB,United Kingdom,1750
 2020-12-11,GB,United Kingdom,1686
 2020-12-12,GB,United Kingdom,1799
@@ -4782,7 +4789,7 @@ date,location,location_name,value
 2020-12-25,GB,United Kingdom,2182
 2020-12-26,GB,United Kingdom,2530
 2020-12-27,GB,United Kingdom,2870
-2020-12-28,GB,United Kingdom,3132
+2020-12-28,GB,United Kingdom,3133
 2020-12-29,GB,United Kingdom,3249
 2020-12-30,GB,United Kingdom,3288
 2020-12-31,GB,United Kingdom,2915
@@ -4852,7 +4859,7 @@ date,location,location_name,value
 2021-03-05,GB,United Kingdom,599
 2021-03-06,GB,United Kingdom,637
 2021-03-07,GB,United Kingdom,535
-2021-03-08,GB,United Kingdom,576
+2021-03-08,GB,United Kingdom,577
 2021-03-09,GB,United Kingdom,579
 2021-03-10,GB,United Kingdom,567
 2021-03-11,GB,United Kingdom,550
@@ -4958,22 +4965,23 @@ date,location,location_name,value
 2021-06-19,GB,United Kingdom,211
 2021-06-20,GB,United Kingdom,206
 2021-06-21,GB,United Kingdom,226
-2021-06-22,GB,United Kingdom,235
-2021-06-23,GB,United Kingdom,273
+2021-06-22,GB,United Kingdom,236
+2021-06-23,GB,United Kingdom,274
 2021-06-24,GB,United Kingdom,247
-2021-06-25,GB,United Kingdom,248
+2021-06-25,GB,United Kingdom,250
 2021-06-26,GB,United Kingdom,266
-2021-06-27,GB,United Kingdom,261
-2021-06-28,GB,United Kingdom,306
-2021-06-29,GB,United Kingdom,359
+2021-06-27,GB,United Kingdom,262
+2021-06-28,GB,United Kingdom,307
+2021-06-29,GB,United Kingdom,360
 2021-06-30,GB,United Kingdom,412
-2021-07-01,GB,United Kingdom,362
-2021-07-02,GB,United Kingdom,380
-2021-07-03,GB,United Kingdom,386
-2021-07-04,GB,United Kingdom,456
-2021-07-05,GB,United Kingdom,429
+2021-07-01,GB,United Kingdom,364
+2021-07-02,GB,United Kingdom,382
+2021-07-03,GB,United Kingdom,387
+2021-07-04,GB,United Kingdom,458
+2021-07-05,GB,United Kingdom,509
 2021-07-06,GB,United Kingdom,471
-2021-07-07,GB,United Kingdom,10
+2021-07-07,GB,United Kingdom,478
+2021-07-08,GB,United Kingdom,13
 2020-04-03,IE,Ireland,56
 2020-04-04,IE,Ireland,54
 2020-04-05,IE,Ireland,56
@@ -5433,3 +5441,5 @@ date,location,location_name,value
 2021-07-06,IE,Ireland,0
 2021-07-07,IE,Ireland,0
 2021-07-08,IE,Ireland,0
+2021-07-09,IE,Ireland,0
+2021-07-10,IE,Ireland,0
