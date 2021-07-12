@@ -18,4 +18,5 @@ methods_long: "The total weekly incidence is modelled as the sum of two independ
   \ latent branching processes. Posterior samples are enerated using the JAGS software. Priors were chosen as\
   \ 'uninformative' uniform distributions, but may be specified in a more informative fashion in the future.\
   \ In order to be included in the ensemble forecasts are generated up to 4 wk into the future, but given the\
-  \ simple model structure, three and four-week-ahead forecasts should be interpreted with caution."
+  \ simple model structure, three and four-week-ahead forecasts should be interpreted with caution.\
+  \ Update 12 July: Sequencing data are now shifted forward by one week with respect to JHU data."
