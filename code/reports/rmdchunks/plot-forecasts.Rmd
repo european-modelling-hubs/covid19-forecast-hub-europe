@@ -6,11 +6,17 @@ forecasting dates. -->
 Forecasts of cases/deaths per week per 100,000. The date of the tab marks the date on which a forecast was made (only the latest forecasts and the previous `r restrict_weeks` weeks shown).
 
 ```{r}
-forecast_dates <- rev(as.character(unique(data$forecast_date[!is.na(data$forecast_date)])))
+forecast_dates <- data %>%
+  filter(!is.na(forecast_date)) %>%
+  select(forecast_date) %>%
+  distinct() %>%
+  filter(forecast_date > max(forecast_date) - restrict_weeks * 7) %>%
+  arrange(desc(forecast_date)) %>%
+  pull(forecast_date)
 ```
 
 ```{r prediction-plots, echo = FALSE, results='asis', fig.width = 8.5, fig.height=8}
-for (forecast_date in head(forecast_dates, restrict_weeks + 2)) {
+for (forecast_date in as.character(forecast_dates)) {
   cat(paste0("\n\n## ", forecast_date, "{.tabset .tabset-fade} \n\n"))
   
     for (target in names(target_variables)) {
@@ -20,7 +26,6 @@ for (forecast_date in head(forecast_dates, restrict_weeks + 2)) {
       filter_truth <- list(paste0("target_end_date > '", as.Date(forecast_date) - 7 * 10, "'"), 
                            paste0("target_end_date <= '", as.Date(forecast_date) + 7 * 4, "'"))
       filter_forecasts <- list(paste0("forecast_date == '", as.Date(forecast_date), "'"))
-      
       
       plot <- scoringutils::plot_predictions(
         data,
