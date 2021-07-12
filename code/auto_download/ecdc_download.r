@@ -39,7 +39,7 @@ df <-
 
 # Hospitalisation data
 ecdc_hosp_filepath <- here("data-truth", "ECDC", 
-                      "truth_ecdc-Incident Hospitalizations.csv") # covidHubUtils format
+                      paste(file_base, "Hospitalizations.csv")) # covidHubUtils format
 
 R.utils::downloadFile(Sys.getenv("DATA_URL"), # Uses set environment variables
                       ecdc_hosp_filepath, 
