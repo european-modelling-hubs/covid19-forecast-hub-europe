@@ -14,7 +14,8 @@ restrict_weeks <- 4
 
 suppressWarnings(dir.create(here::here("evaluation")))
 
-score_models <- function(file, data, report_date, restrict_weeks) {
+score_models <- function(data, report_date, restrict_weeks) {
+
     last_forecast_date <- report_date - 7
 
     score_data <- data[forecast_date <= last_forecast_date &
@@ -31,18 +32,23 @@ score_models <- function(file, data, report_date, restrict_weeks) {
         select(-n, -nall) %>%
         mutate(location = "Overall")
 
-    df <- data %>%
+    df <- score_data %>%
         bind_rows(overall_df)
 
-    coverage <- eval_forecasts(
-        df %>% filter(type != "point"),
-      summarise_by = c("model", "target_variable", "range", "horizon",
-                       "location"),
-        compute_relative_skill = FALSE,
-    ) %>%
+    coverage <- df %>%
+        filter(type != "point") %>%
+        eval_forecasts(
+          summarise_by = c("model", "target_variable", "range", "horizon",
+                           "location"),
+          # FIXME: we only care about coverage but we have to compute
+          # "interval_score" first for this to work.
+          # See https://github.com/epiforecasts/scoringutils/issues/111
+          metrics = c("interval_score", "coverage"),
+          compute_relative_skill = FALSE
+        ) %>%
         dplyr::filter(range %in% c(50, 95)) %>%
-      dplyr::select(model, target_variable, horizon, location, coverage,
-                    range) %>%
+        dplyr::select(model, target_variable, horizon, location, coverage,
+                      range) %>%
         tidyr::pivot_wider(
             names_from = range, values_from = coverage,
             names_prefix = "cov_"
@@ -51,8 +57,7 @@ score_models <- function(file, data, report_date, restrict_weeks) {
     ## number of forecasts
     num_fc <- df %>%
         dplyr::filter(type == "point", !is.na(true_value)) %>%
-        dplyr::group_by(model, target_variable, horizon, location) %>%
-        dplyr::summarise(n = n(), .groups = "drop")
+        dplyr::count(model, target_variable, horizon, location)
 
     ## mean absolute error of point forecast
     mae <- df %>%
@@ -72,13 +77,15 @@ score_models <- function(file, data, report_date, restrict_weeks) {
         filter(!is.na(continuous_weeks)) %>%
         summarise(continuous_weeks = max(continuous_weeks), .groups = "drop")
 
-    table <-
-        eval_forecasts(df %>% dplyr::filter(type != "point"),
+    table <- df %>%
+        dplyr::filter(type != "point") %>%
+        eval_forecasts(
             summarise_by = c(
                 "model", "target_variable",
                 "horizon", "location"
             ),
-            compute_relative_skill = TRUE
+            compute_relative_skill = TRUE,
+            baseline = "EuroCOVIDhub-baseline"
         ) %>%
         dplyr::left_join(coverage, by = c(
             "model", "target_variable", "horizon",
@@ -96,9 +103,9 @@ score_models <- function(file, data, report_date, restrict_weeks) {
             "model", "target_variable", "horizon",
             "location"
         )) %>%
-      replace_na(list(continuous_weeks = 0))
+        replace_na(list(continuous_weeks = 0))
 
-    write_csv(table, file)
+    return(table)
 }
 
 ## load forecasts --------------------------------------------------------------
@@ -144,5 +151,10 @@ for (chr_report_date in as.character(report_dates)) {
   report_date <- as.Date(chr_report_date)
   filename <-
     here::here("evaluation", paste0("evaluation-", report_date, ".csv"))
-  score_models(filename, data, report_date, restrict_weeks)
+
+  table <- score_models(data, report_date, restrict_weeks) %>%
+    mutate(across(c("interval_score", "sharpness", "underprediction", "overprediction", "aem", "mae"), round)) %>%
+    mutate(across(c("coverage_deviation", "bias", "relative_skill", "scaled_rel_skill", "cov_50", "cov_95"), round, 2))
+
+  write_csv(table, filename)
 }
