@@ -40,7 +40,9 @@ for (forecast_date in as.character(forecast_dates)) {
         ggplot2::theme(legend.position = "bottom", 
                        strip.placement = "outside") + 
         scale_y_continuous(labels = scales::comma) + 
-        expand_limits(y = 0)
+        expand_limits(y = 0) +
+        # Make sure negative values for cases/deaths are not displayed
+        coord_cartesian(ylim = c(0, NA))
 
       if (is.null(plot)) {
         cat("No forecasts available, possibly because of recent anomalies in the available data." )
