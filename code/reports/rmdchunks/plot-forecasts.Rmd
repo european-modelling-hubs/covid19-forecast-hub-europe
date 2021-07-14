@@ -53,7 +53,7 @@ for (forecast_date in as.character(forecast_dates)) {
         expand_limits(y = 0) +
         # Make sure negative values for cases/deaths are not displayed
         coord_cartesian(ylim = c(0, NA)) +
-        xlab("Last day of week")
+        xlab("Week")
 
       if (is.null(plot)) {
         cat("No forecasts available, possibly because of recent anomalies in the available data." )
