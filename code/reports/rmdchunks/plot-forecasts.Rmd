@@ -15,7 +15,17 @@ forecast_dates <- data %>%
   pull(forecast_date)
 ```
 
-```{r prediction-plots, echo = FALSE, results='asis', fig.width = 8.5, fig.asp = length(unique(rlang::eval_tidy(facetting_var, data = data))) / 16}
+```{r}
+# Programmatically determine figure aspect ratio:
+# It is based on the value of distinct values in the facetting variables with
+# some extra requirements. For example, we don't want the ratio to change when
+# we add a new panel without adding a new row.
+nb_facets <- dplyr::n_distinct(rlang::eval_tidy(facetting_var, data = data))
+n_cols <- 3
+fa <- ((nb_facets-1) %/% n_cols + 1) / 7
+```
+
+```{r prediction-plots, echo = FALSE, results='asis', fig.width = 8.5, fig.asp = fa}
 for (forecast_date in as.character(forecast_dates)) {
   cat(paste0("\n\n## ", forecast_date, "{.tabset .tabset-fade} \n\n"))
   
@@ -34,7 +44,7 @@ for (forecast_date in as.character(forecast_dates)) {
         filter_truth = filter_truth,
         filter_forecasts = filter_forecasts,
         facet_formula =  rlang::expr(~ !!facetting_var),
-        ncol = 3,
+        ncol = n_cols,
         allow_truth_without_pred = FALSE,
         scales = "free_y") + 
         ggplot2::theme(legend.position = "bottom", 
