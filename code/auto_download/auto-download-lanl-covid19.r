@@ -15,7 +15,7 @@ model_name <- "LANL-GrowthRate"
 raw_dir <- file.path(tempdir(), "data-raw", model_name)
 processed_dir <- here::here("data-processed", model_name)
 last_sunday <- floor_date(today(), unit = "week", week_start = 7)
-data_types <- gsub("^inc (\\w+)$", "\\1s", get_hub_config("target_variables"))
+data_types <- get_hub_config("target_variables")
 
 suppressWarnings(dir.create(raw_dir, recursive = TRUE))
 suppressWarnings(dir.create(processed_dir, recursive = TRUE))
@@ -56,29 +56,30 @@ col_specs <- cols(
 )
 
 filenames <- vapply(data_types, function(x) {
-  paste0(last_sunday, "_global_incidence_weekly_", x, "_website.csv")
+  paste0(last_sunday, "_global_incidence_weekly_",
+         gsub("^inc (\\w+)$", "\\1s", x),
+         "_website.csv")
 }, "")
 
 ## download
 
-url <- vapply(c("cases", "deaths"), function(x) {
+url <- vapply(data_types, function(x) {
   paste0("https://covid-19.bsvgateway.org/forecast/global/", last_sunday,
          "/files/", filenames[x])
 }, "")
 
-out <- tryCatch({
-  vapply(names(url), function(x) {
-    download.file(url[x], file.path(raw_dir, filenames[x]))
-  }, 0L)},
-  error = function(cond) {
-    quit()
-  }
-)
+dl_res <- vapply(names(url), function(x) {
+    tryCatch(
+      download.file(url[x], file.path(raw_dir, filenames[x])),
+      error = function(cond) {
+        return(1L)
+      }
+    )}, 0L)
 
 ## process
 country_codes <- vroom(here::here("data-locations", "locations_eu.csv"))
 
-df <- lapply(data_types, function(x) {
+df <- lapply(data_types[dl_res == 0], function(x) {
   vroom(file.path(raw_dir, filenames[x]), col_types = col_specs) %>%
     mutate(type = x)
 }) %>%
@@ -87,7 +88,7 @@ df <- lapply(data_types, function(x) {
   rename(location_name = name) %>%
   inner_join(country_codes, by = "location_name") %>%
   mutate(scenario_id = "forecast",
-         target = paste(week_ahead, "wk ahead inc", sub("s$", "", type))) %>%
+         target = paste(week_ahead, "wk ahead", type)) %>%
   pivot_longer(starts_with("q."), names_to = "quantile") %>%
   mutate(quantile = as.numeric(sub("q\\.", "0.", quantile)),
          type = "quantile",
