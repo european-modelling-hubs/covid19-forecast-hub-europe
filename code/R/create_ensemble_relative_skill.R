@@ -1,36 +1,24 @@
-# Ensemble by relative skill
-#
-# Ensemble = sum of forecast values weighted by the inverse of relative skill
-# Weights are by model, horizon, target, location
-# i.e. not weighted by quantile
+#' Ensemble by relative skill
 #'
-#' @param forecasts forecasting models used for ensemble
+#' @inheritParams create_ensemble_average
 #' @param forecast_date date with saved evaluation csv of forecasts
 #' @param continuous_weeks include only forecasts with a history of evaluation
 #' @param by_horizon weight using relative skill by horizon, rather than average
-
-library(dplyr)
-library(cNORM)
-
-## helper functions
-weighted_mean <- function(x, weights) {
-  return(sum(x * weights) / sum(weights))
-}
-
-weighted_median <- function(x, weights) {
-  return(cNORM::weighted.quantile(x, probs = 0.5, weights = weights))
-}
-
-weighted_average <- function(..., average = "mean") {
-  if (average == "mean") {
-    return(weighted_mean(...))
-  } else if (average == "median") {
-    return(weighted_median(...))
-  } else {
-    stop("Unknown average: ", average)
-  }
-}
-
+#' @inheritParams weighted_average
+#' @inheritParams use_ensemble_criteria
+#' @param verbose Logical determining whether diagnostic messages should
+#' be printed while running (defaults to `FALSE`).
+#'
+#' @details
+#' Ensemble = sum of forecast values weighted by the inverse of relative skill
+#' Weights are by model, horizon, target, location
+#' i.e. not weighted by quantile
+#'
+#' @importFrom vroom vroom
+#' @importFrom here here
+#' @importFrom dplyr select filter group_by %>% summarise mutate across all_of select_at n
+#'
+#' @export
 create_ensemble_relative_skill <- function(forecasts,
                                            evaluation_date,
                                            continuous_weeks = 4,
@@ -43,7 +31,7 @@ create_ensemble_relative_skill <- function(forecasts,
   if (missing(evaluation_date)) {
     evaluation_date = max(forecasts$forecast_date)
   }
-  
+
   evaluation <- try(suppressMessages(
     vroom(here("evaluation", paste0("evaluation-", evaluation_date, ".csv")))))
   # evaluation error catching

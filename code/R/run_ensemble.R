@@ -1,41 +1,32 @@
-# Run ensembling methods
+#' Run ensembling methods
+#'
+#' @param method name of ensembling method
+#' @param forecast_date date or character
+#' @param exclude_models character : names of team-models to exclude by forecast_date
+#' @param return_criteria logical : whether to return a model/inclusion criteria grid
+#'   as well as the ensemble forecast (default `TRUE`)
+#' @inheritParams use_ensemble_criteria
 #
-# Used to create a single ensemble forecast.
-#  Takes a forecast date and loads all forecasts for the preceding week, then:
-#  Filters models according to criteria
-#  Ensembles forecasts according to given method
-#  Formats ensemble forecast
-#  Returns ensemble forecast and optionally the criteria for inclusion
-#
-# Params:
-# method : character L1 : name of an ensembling method
-#   should have an existing folder in code/ensemble/forecasts
-# forecast_date : date or character
-# exclude models : character : names of team-models to exclude by forecast_date
-# return_criteria : logical : whether to return a model/inclusion criteria grid
-#   as well as the ensemble forecast (default TRUE)
-#
-# Additional args:
-# evaluation_date: passed to create_ensemble_relative_skill()
-# continuous_weeks: passed to create_ensemble_relative_skill()
-# exclude_designated_other: passed to use_ensemble_criteria()
-#
-# Returns a list or a tibble
-# return_criteria = TRUE:
-#   "ensemble" : tibble : a single ensemble forecast
-#   "criteria": tibble : all candidate models against criteria
-#     for inclusion in ensemble (all locations and horizons)
-#   "forecast_date" : date : latest date
-# return_criteria = FALSE:
-#   a tibble of a single ensemble forecast
-
-library(here)
-library(vroom)
-library(lubridate)
-library(covidHubUtils)
-source(here("code", "ensemble", "utils", "use-ensemble-criteria.R"))
-source(here("code", "ensemble", "utils", "format-ensemble.R"))
-source(here("code", "config_utils", "get_hub_config.R"))
+#' @return
+#' - if `return_criteria = TRUE`, a list with the following elements
+#'   * "ensemble" : tibble : a single ensemble forecast
+#'   * "criteria": tibble : all candidate models against criteria
+#'     for inclusion in ensemble (all locations and horizons)
+#'   * "forecast_date" : date : latest date
+#' - if `return_criteria = FALSE`, a tibble of a single ensemble forecast
+#'
+#' @details
+#' Used to create a single ensemble forecast.
+#' Takes a forecast date and loads all forecasts for the preceding week, then:
+#' Filters models according to criteria
+#' Ensembles forecasts according to given method
+#' Formats ensemble forecast
+#' Returns ensemble forecast and optionally the criteria for inclusion
+#'
+#' @importFrom covidHubUtils load_forecasts
+#' @importFrom dplyr %>% filter pull mutate group_by summarise if_else
+#'
+#' @export
 
 run_ensemble <- function(method = "mean",
                          forecast_date,
@@ -107,7 +98,6 @@ run_ensemble <- function(method = "mean",
   # Run  ensembles ---------------------------------------------------
   # Averages
   if (method %in% c("mean", "median")) {
-    source(here("code", "ensemble", "methods", "create-ensemble-average.R"))
     ensemble <- create_ensemble_average(method = method,
                                         forecasts = forecasts)
     if (return_criteria) {
@@ -121,8 +111,6 @@ run_ensemble <- function(method = "mean",
 
   # Relative skill
   if (grepl("^relative_skill", method)) {
-    source(here("code", "ensemble", "methods",
-                "create-ensemble-relative-skill.R"))
     by_horizon <- grepl("_by_horizon", method)
     use_median <- grepl("_median", method )
     ensemble <- create_ensemble_relative_skill(forecasts = forecasts,

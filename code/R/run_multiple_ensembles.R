@@ -1,19 +1,19 @@
-# Runs and saves past ensembles for specified methods/dates.
-# Wrapper around run_ensemble() that allows multiple methods/forecast dates.
-#
-# forecast_dates : Dates vector
-# methods : character vector of method/s supported in run_ensemble(),
-#   (as in the named folders of code/ensemble/forecasts)
-# exclude_models : optional character vector to exclude over all dates,
-#   or data.frame with cols model and forecast_date, to exclude for specific dates
-#
-# Returns a list of ensembles with forecasts, method, forecast date, criteria
-
-library(here)
-library(vroom)
-library(purrr)
-library(dplyr)
-source(here("code", "ensemble", "utils", "run-ensemble.R"))
+#' Runs and saves past ensembles for specified methods/dates.
+#'
+#' Wrapper around [run_ensemble()] that allows multiple methods/forecast dates.
+#'
+#' @param forecast_dates Dates vector
+#' @param methods character vector of method/s supported in [run_ensemble()]
+#'   (as in the named folders of code/ensemble/forecasts)
+#' @param exclude_models optional character vector to exclude over all dates,
+#'   or data.frame with cols model and forecast_date, to exclude for specific
+#'    dates
+#'
+#' @return a list of ensembles with forecasts, method, forecast date, criteria
+#'
+#' @importFrom purrr safely map2
+#'
+#' @export
 
 run_multiple_ensembles <- function(forecast_dates,
                                    methods,

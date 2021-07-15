@@ -1,3 +1,10 @@
+#' Score models
+#'
+#' @importFrom dplyr group_by mutate ungroup filter select bind_rows count summarise left_join right_join
+#' @importFrom tidyr pivot_wider complete replace_na
+#' @importFrom scoringutils eval_forecasts
+#'
+#' @export
 score_models <- function(data, report_date, restrict_weeks) {
 
   last_forecast_date <- report_date - 7
@@ -30,22 +37,22 @@ score_models <- function(data, report_date, restrict_weeks) {
       metrics = c("interval_score", "coverage"),
       compute_relative_skill = FALSE
     ) %>%
-    dplyr::filter(range %in% c(50, 95)) %>%
-    dplyr::select(model, target_variable, horizon, location, coverage,
-                  range) %>%
-    tidyr::pivot_wider(
+    filter(range %in% c(50, 95)) %>%
+    select(model, target_variable, horizon, location, coverage,
+           range) %>%
+    pivot_wider(
       names_from = range, values_from = coverage,
       names_prefix = "cov_"
     )
 
   ## number of forecasts
   num_fc <- df %>%
-    dplyr::filter(type == "point", !is.na(true_value)) %>%
-    dplyr::count(model, target_variable, horizon, location)
+    filter(type == "point", !is.na(true_value)) %>%
+    count(model, target_variable, horizon, location)
 
   ## mean absolute error of point forecast
   mae <- df %>%
-    dplyr::filter(type == "point", !is.na(true_value)) %>%
+    filter(type == "point", !is.na(true_value)) %>%
     mutate(ae = abs(prediction - true_value)) %>%
     group_by(model, target_variable, location, horizon) %>%
     summarise(mae = mean(ae), .groups = "drop")
@@ -62,7 +69,7 @@ score_models <- function(data, report_date, restrict_weeks) {
     summarise(continuous_weeks = max(continuous_weeks), .groups = "drop")
 
   table <- df %>%
-    dplyr::filter(type != "point") %>%
+    filter(type != "point") %>%
     eval_forecasts(
       summarise_by = c(
         "model", "target_variable",
@@ -71,19 +78,19 @@ score_models <- function(data, report_date, restrict_weeks) {
       compute_relative_skill = TRUE,
       baseline = "EuroCOVIDhub-baseline"
     ) %>%
-    dplyr::left_join(coverage, by = c(
+    left_join(coverage, by = c(
       "model", "target_variable", "horizon",
       "location"
     )) %>%
-    dplyr::right_join(mae, by = c(
+    right_join(mae, by = c(
       "model", "target_variable", "horizon",
       "location"
     )) %>%
-    dplyr::left_join(num_fc, by = c(
+    left_join(num_fc, by = c(
       "model", "target_variable", "horizon",
       "location"
     )) %>%
-    dplyr::left_join(cont_weeks, by = c(
+    left_join(cont_weeks, by = c(
       "model", "target_variable", "horizon",
       "location"
     )) %>%
