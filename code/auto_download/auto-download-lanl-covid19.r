@@ -15,7 +15,7 @@ model_name <- "LANL-GrowthRate"
 raw_dir <- file.path(tempdir(), "data-raw", model_name)
 processed_dir <- here::here("data-processed", model_name)
 last_sunday <- floor_date(today(), unit = "week", week_start = 7)
-data_types <- get_hub_config("target_variables")
+data_types <- c("inc case", "inc death")
 
 suppressWarnings(dir.create(raw_dir, recursive = TRUE))
 suppressWarnings(dir.create(processed_dir, recursive = TRUE))
@@ -68,18 +68,19 @@ url <- vapply(data_types, function(x) {
          "/files/", filenames[x])
 }, "")
 
-dl_res <- vapply(names(url), function(x) {
-    tryCatch(
-      download.file(url[x], file.path(raw_dir, filenames[x])),
-      error = function(cond) {
-        return(1L)
-      }
-    )}, 0L)
+out <- tryCatch({
+  vapply(names(url), function(x) {
+    download.file(url[x], file.path(raw_dir, filenames[x]))
+  }, 0L)},
+  error = function(cond) {
+    quit()
+  }
+)
 
 ## process
 country_codes <- vroom(here::here("data-locations", "locations_eu.csv"))
 
-df <- lapply(data_types[dl_res == 0], function(x) {
+df <- lapply(data_types, function(x) {
   vroom(file.path(raw_dir, filenames[x]), col_types = col_specs) %>%
     mutate(type = x)
 }) %>%
