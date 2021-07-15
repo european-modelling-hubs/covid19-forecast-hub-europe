@@ -5,9 +5,7 @@ library(yaml)
 library(covidModels)
 library(here)
 library(readr)
-
-source(here("code", "config_utils", "get_hub_config.R"))
-source(here("code", "ensemble", "utils", "format-ensemble.R"))
+library(EuroForecastHub)
 
 model_name <- "EuroCOVIDhub-baseline"
 model_folder <- here("data-processed", model_name)

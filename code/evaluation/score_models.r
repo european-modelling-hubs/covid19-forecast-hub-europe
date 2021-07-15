@@ -6,7 +6,8 @@ library(tidyr)
 library(lubridate)
 library(here)
 library(readr)
-source(here("code", "config_utils", "get_hub_config.R"))
+library(EuroForecastHub)
+
 data_types <- get_hub_config("target_variables")
 
 ## only evaluate if the last 4 weeks hae been submitted

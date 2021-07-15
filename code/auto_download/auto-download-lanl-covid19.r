@@ -9,7 +9,6 @@ library("dplyr")
 library("tidyr")
 library("readr")
 library("janitor")
-source(here("code", "config_utils", "get_hub_config.R"))
 
 model_name <- "LANL-GrowthRate"
 raw_dir <- file.path(tempdir(), "data-raw", model_name)
