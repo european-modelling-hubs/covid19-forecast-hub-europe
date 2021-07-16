@@ -1,9 +1,15 @@
 Package: EuroForecastHub
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R: c( 
     person("European COVID-19 Forecast Hub contributors",
-           role = c("aut", "cre", "cph"))
+           role = c("aut", "cph")),
+    person("Hugo", 
+           "Gruson", 
+           email = "hugo.gruson+R@normalesup.org",
+           role = "cre", 
+           comment = c(ORCID = "0000-0002-4094-1476"))
+    )
 Description: What the package does (one paragraph).
 License: MIT
 Config/testthat/edition: 3
