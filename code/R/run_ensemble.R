@@ -2,18 +2,9 @@
 #'
 #' @param method name of ensembling method
 #' @param forecast_date date or character
-#' @param exclude_models character : names of team-models to exclude by forecast_date
-#' @param return_criteria logical : whether to return a model/inclusion criteria grid
-#'   as well as the ensemble forecast (default `TRUE`)
 #' @inheritParams use_ensemble_criteria
-#
-#' @return
-#' - if `return_criteria = TRUE`, a list with the following elements
-#'   * "ensemble" : tibble : a single ensemble forecast
-#'   * "criteria": tibble : all candidate models against criteria
-#'     for inclusion in ensemble (all locations and horizons)
-#'   * "forecast_date" : date : latest date
-#' - if `return_criteria = FALSE`, a tibble of a single ensemble forecast
+#' @inheritParams create_ensemble_relative_skill
+#' @param ... arguments passed to [create_ensemble_relative_skill()]
 #'
 #' @details
 #' Used to create a single ensemble forecast.

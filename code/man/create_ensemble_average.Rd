@@ -18,9 +18,3 @@ ensemble model
 \description{
 Create ensemble using mean or median average.
 }
-\details{
-Steps:
-Takes forecasts which should come from \code{\link[=load_ensemble_forecasts]{load_ensemble_forecasts()}}
-Averages by mean or median
-Formats in submission format
-}

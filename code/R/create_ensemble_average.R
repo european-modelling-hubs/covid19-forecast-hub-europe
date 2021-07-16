@@ -4,12 +4,6 @@
 #' as an ensemble.
 #' @param method One of `mean` (default) or `median`.
 #'
-#' @details
-#' Steps:
-#' Takes forecasts which should come from [load_ensemble_forecasts()]
-#' Averages by mean or median
-#' Formats in submission format
-#'
 #' @return ensemble model
 #'
 #' @importFrom dplyr group_by %>% summarise n

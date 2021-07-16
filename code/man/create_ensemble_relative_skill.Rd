@@ -18,16 +18,20 @@ create_ensemble_relative_skill(
 \item{forecasts}{\code{data.frame} containing all the forecasts to be summarised
 as an ensemble.}
 
+\item{evaluation_date}{which date should be used to measure model
+performance?}
+
 \item{continuous_weeks}{include only forecasts with a history of evaluation}
 
 \item{average}{Method to average. One of \code{"mean"} or \code{"median"}}
 
 \item{by_horizon}{weight using relative skill by horizon, rather than average}
 
+\item{return_criteria}{logical : whether to return a model/inclusion criteria
+grid as well as the ensemble forecast (default \code{TRUE})}
+
 \item{verbose}{Logical determining whether diagnostic messages should
 be printed while running (defaults to \code{FALSE}).}
-
-\item{forecast_date}{date with saved evaluation csv of forecasts}
 }
 \description{
 Ensemble by relative skill

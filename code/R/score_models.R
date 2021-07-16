@@ -1,16 +1,19 @@
 #' Score models
 #'
+#' @inheritParams create_ensemble_average
+#' @param report_date Date at which the scoring takes place
+#'
 #' @importFrom dplyr group_by mutate ungroup filter select bind_rows count summarise left_join right_join
 #' @importFrom tidyr pivot_wider complete replace_na
 #' @importFrom scoringutils eval_forecasts
 #'
 #' @export
-score_models <- function(data, report_date, restrict_weeks) {
+score_models <- function(forecasts, report_date, restrict_weeks) {
 
   last_forecast_date <- report_date - 7
 
-  score_data <- data[forecast_date <= last_forecast_date &
-                       target_end_date <= report_date]
+  score_data <- forecasts[forecast_date <= last_forecast_date &
+                          target_end_date <= report_date]
 
   ## for overall, if more than 1 location exists, filter to have at least half
   ## of them

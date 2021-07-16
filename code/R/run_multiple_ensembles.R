@@ -5,9 +5,7 @@
 #' @param forecast_dates Dates vector
 #' @param methods character vector of method/s supported in [run_ensemble()]
 #'   (as in the named folders of code/ensemble/forecasts)
-#' @param exclude_models optional character vector to exclude over all dates,
-#'   or data.frame with cols model and forecast_date, to exclude for specific
-#'    dates
+#' @param ... arguments passed to [run_ensemble()]
 #'
 #' @return a list of ensembles with forecasts, method, forecast date, criteria
 #'

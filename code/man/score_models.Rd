@@ -4,7 +4,11 @@
 \alias{score_models}
 \title{Score models}
 \usage{
-score_models(data, report_date, restrict_weeks)
+score_models(forecasts, report_date, restrict_weeks)
+}
+\arguments{
+\item{forecasts}{\code{data.frame} containing all the forecasts to be summarised
+as an ensemble.}
 }
 \description{
 Score models

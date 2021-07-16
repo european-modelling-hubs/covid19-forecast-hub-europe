@@ -12,9 +12,7 @@ run_multiple_ensembles(forecast_dates, methods, ...)
 \item{methods}{character vector of method/s supported in \code{\link[=run_ensemble]{run_ensemble()}}
 (as in the named folders of code/ensemble/forecasts)}
 
-\item{exclude_models}{optional character vector to exclude over all dates,
-or data.frame with cols model and forecast_date, to exclude for specific
-dates}
+\item{...}{arguments passed to \code{\link[=run_ensemble]{run_ensemble()}}}
 }
 \value{
 a list of ensembles with forecasts, method, forecast date, criteria

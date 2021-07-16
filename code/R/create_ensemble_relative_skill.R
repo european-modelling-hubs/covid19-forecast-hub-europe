@@ -1,7 +1,8 @@
 #' Ensemble by relative skill
 #'
 #' @inheritParams create_ensemble_average
-#' @param forecast_date date with saved evaluation csv of forecasts
+#' @param evaluation_date which date should be used to measure model
+#' performance?
 #' @param continuous_weeks include only forecasts with a history of evaluation
 #' @param by_horizon weight using relative skill by horizon, rather than average
 #' @inheritParams weighted_average

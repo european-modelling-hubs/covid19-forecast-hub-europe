@@ -6,6 +6,14 @@
 \usage{
 format_ensemble(ensemble, forecast_date, temporal_resolution = "wk")
 }
+\arguments{
+\item{ensemble}{Data.frame containing the ensemble forecast}
+
+\item{forecast_date}{The date at which this forecast has been established}
+
+\item{temporal_resolution}{The temporal resolution of the forecast (defaults
+to \code{"wk"})}
+}
 \description{
 Converts a quantile-only ensemble based on \code{\link[covidHubUtils:load_forecasts]{covidHubUtils::load_forecasts()}}
 to standardised submission format

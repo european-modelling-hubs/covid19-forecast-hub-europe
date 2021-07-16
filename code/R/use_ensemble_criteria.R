@@ -1,9 +1,21 @@
 #' Load models according to inclusion criteria before ensembling
 #'
+#' @inheritParams create_ensemble_average
+#' @param exclude_models optional character vector to exclude over all dates,
+#'   or data.frame with cols model and forecast_date, to exclude for specific
+#'    dates
+#' @param exclude_designated_other logical: whether to exclude models designated
+#' as "other" in their metadata file (default `TRUE`)
+#' @param return_criteria logical : whether to return a model/inclusion criteria
+#' grid as well as the ensemble forecast (default `TRUE`)
+#'
 #' @return
-#'  a list:
-#' - "forecasts" = tibble, all forecasts passing inclusion criteria
-#' - "criteria" = tibble, model names and criteria assessment
+#' - if `return_criteria = TRUE`, a list with the following elements
+#'   * "ensemble" : tibble : a single ensemble forecast
+#'   * "criteria": tibble : all candidate models against criteria
+#'     for inclusion in ensemble (all locations and horizons)
+#'   * "forecast_date" : date : latest date
+#' - if `return_criteria = FALSE`, a tibble of a single ensemble forecast
 #'
 #' @details
 #' Steps:

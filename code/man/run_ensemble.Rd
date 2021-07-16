@@ -19,22 +19,20 @@ run_ensemble(
 
 \item{forecast_date}{date or character}
 
-\item{exclude_models}{character : names of team-models to exclude by forecast_date}
+\item{exclude_models}{optional character vector to exclude over all dates,
+or data.frame with cols model and forecast_date, to exclude for specific
+dates}
 
-\item{return_criteria}{logical : whether to return a model/inclusion criteria grid
-as well as the ensemble forecast (default \code{TRUE})}
-}
-\value{
-\itemize{
-\item if \code{return_criteria = TRUE}, a list with the following elements
-\itemize{
-\item "ensemble" : tibble : a single ensemble forecast
-\item "criteria": tibble : all candidate models against criteria
-for inclusion in ensemble (all locations and horizons)
-\item "forecast_date" : date : latest date
-}
-\item if \code{return_criteria = FALSE}, a tibble of a single ensemble forecast
-}
+\item{return_criteria}{logical : whether to return a model/inclusion criteria
+grid as well as the ensemble forecast (default \code{TRUE})}
+
+\item{verbose}{Logical determining whether diagnostic messages should
+be printed while running (defaults to \code{FALSE}).}
+
+\item{exclude_designated_other}{logical: whether to exclude models designated
+as "other" in their metadata file (default \code{TRUE})}
+
+\item{...}{arguments passed to \code{\link[=create_ensemble_relative_skill]{create_ensemble_relative_skill()}}}
 }
 \description{
 Run ensembling methods

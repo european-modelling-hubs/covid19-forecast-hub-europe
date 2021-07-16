@@ -3,6 +3,11 @@
 #' Converts a quantile-only ensemble based on [covidHubUtils::load_forecasts()]
 #' to standardised submission format
 #'
+#' @param ensemble Data.frame containing the ensemble forecast
+#' @param forecast_date The date at which this forecast has been established
+#' @param temporal_resolution The temporal resolution of the forecast (defaults
+#' to `"wk"`)
+#'
 #' @details
 #' Steps:
 #' Creates "target" variable
