@@ -11,7 +11,7 @@ Authors@R: c(
            comment = c(ORCID = "0000-0002-4094-1476"))
     )
 Description: What the package does (one paragraph).
-License: MIT
+License: MIT + file LICENSE
 Imports:
     cNORM,
     covidHubUtils,
