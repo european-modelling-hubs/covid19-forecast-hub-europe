@@ -9,6 +9,7 @@ library("dplyr")
 library("tidyr")
 library("readr")
 library("janitor")
+library("EuroForecastHub")
 
 model_name <- "LANL-GrowthRate"
 raw_dir <- file.path(tempdir(), "data-raw", model_name)
@@ -96,18 +97,14 @@ df <- lapply(data_types, function(x) {
   select(scenario_id, forecast_date = fcst_date, target,
          target_end_date = end_date, location, type, quantile, value)
 
-point_forecasts <- df %>%
-  filter(quantile == 0.5) %>%
-  mutate(type = "point",
-         quantile = NA_real_)
-
-combined <- df %>%
-  bind_rows(point_forecasts) %>%
-  arrange(forecast_date, target, target_end_date, location, type, quantile)
+combined <- add_point_forecasts(df)
 
 forecast_submission_date <-
   unique(df$forecast_date)
 
 filename <-
   paste0(paste(forecast_submission_date, model_name, sep = "-"), ".csv")
-vroom_write(combined, file.path(processed_dir, filename), delim = ",")
+
+combined  %>%
+  arrange(forecast_date, target, target_end_date, location, type, quantile) %>%
+  vroom_write(file.path(processed_dir, filename), delim = ",")

@@ -50,12 +50,7 @@ format_ensemble <- function(ensemble,
     mutate(value = round(value))
 
   # Add point forecasts
-  ensemble_point <- ensemble %>%
-    filter(quantile == 0.5) %>%
-    mutate(type = "point",
-           quantile = NA_real_)
-  ensemble_with_point <- ensemble %>%
-    bind_rows(ensemble_point)
+  ensemble_with_point <- add_point_forecasts(ensemble)
 
   return(ensemble_with_point)
 }
