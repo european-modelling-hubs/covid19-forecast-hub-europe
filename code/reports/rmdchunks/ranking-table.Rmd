@@ -89,7 +89,7 @@ if (nrow(df) > 0) {
     cols <- c(cols, "n_loc")
   }
 
-  cols <- c(cols, "relative_skill",
+  cols <- c(cols, "scaled_rel_skill",
             "Coverage 50", "Coverage 95",
             "interval_score", "sharpness",
             "underprediction", "overprediction",
@@ -97,13 +97,13 @@ if (nrow(df) > 0) {
 
   table %>%
     select(all_of(cols)) %>%
-    arrange(relative_skill) %>%
+    arrange(scaled_rel_skill) %>%
     mutate_if(is.numeric, round, 2) %>%
     dplyr::rename(
       wis = interval_score,
       underpred = underprediction,
       overpred = overprediction,
-      rel_skill = relative_skill, 
+      rel_skill = scaled_rel_skill, 
       "95% Cov." = `Coverage 95`, 
       "50% Cov." = `Coverage 50`
     ) %>%
