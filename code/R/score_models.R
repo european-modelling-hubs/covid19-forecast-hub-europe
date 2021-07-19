@@ -8,7 +8,7 @@
 #' @importFrom scoringutils eval_forecasts
 #'
 #' @export
-score_models <- function(forecasts, report_date, restrict_weeks) {
+score_models <- function(forecasts, report_date) {
 
   last_forecast_date <- report_date - 7
 

@@ -59,7 +59,7 @@ for (chr_report_date in as.character(report_dates)) {
   filename <-
     here::here("evaluation", paste0("evaluation-", report_date, ".csv"))
 
-  table <- score_models(data, report_date, restrict_weeks) %>%
+  table <- score_models(data, report_date) %>%
     mutate(across(c("interval_score", "sharpness", "underprediction", "overprediction", "aem", "mae"), round)) %>%
     mutate(across(c("coverage_deviation", "bias", "relative_skill", "scaled_rel_skill", "cov_50", "cov_95"), round, 2))
 
