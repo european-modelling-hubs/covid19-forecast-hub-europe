@@ -9,7 +9,7 @@ output:
     theme: yeti
     self_contained: true
     css: https://covid19forecasthub.eu/css/styles.css
-title: "`r paste0('European COVID-19 Forecast Hub Evaluation Report', if_else(params$location_name == 'Overall', '', paste(' for', params$location_name)))`"
+title: "`r paste0('European COVID-19 Forecast Hub Evaluation Report', ifelse(params$location_name == 'Overall', '', paste(' for', params$location_name)))`"
 date: "`r params$report_date`"
 ---
 
