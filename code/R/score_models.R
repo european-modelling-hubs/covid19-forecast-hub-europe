@@ -12,8 +12,9 @@ score_models <- function(forecasts, report_date) {
 
   last_forecast_date <- report_date - 7
 
-  score_data <- forecasts[forecast_date <= last_forecast_date &
-                          target_end_date <= report_date]
+  score_data <- forecasts %>%
+    filter(forecast_date <= last_forecast_date,
+           target_end_date <= report_date)
 
   ## for overall, if more than 1 location exists, filter to have at least half
   ## of them
