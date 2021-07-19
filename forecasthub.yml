@@ -1,6 +1,6 @@
 shortname: EuroCOVIDhub
 repo_url: https://github.com/epiforecasts/covid19-forecast-hub-europe
-ensemble_method: mean
+ensemble_method: median
 horizon:
   value: 4
   unit: weeks
