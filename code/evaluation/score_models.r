@@ -1,7 +1,6 @@
 library(scoringutils)
 library(covidHubUtils)
 library(dplyr)
-library(data.table)
 library(tidyr)
 library(lubridate)
 library(here)
@@ -16,15 +15,15 @@ restrict_weeks <- 4
 suppressWarnings(dir.create(here::here("evaluation")))
 
 ## load forecasts --------------------------------------------------------------
-forecasts <- load_forecasts(source = "local_hub_repo",
-                            hub_repo_path = here(),
-                            hub = "ECDC")
-setDT(forecasts)
-## set forecast date to corresponding submision date
-forecasts[, forecast_date :=
-              ceiling_date(forecast_date, "week", week_start = 2) - 1]
-forecasts <- forecasts[forecast_date >= "2021-03-08"]
-setnames(forecasts, old = c("value"), new = c("prediction"))
+forecasts <- load_forecasts(
+  source = "local_hub_repo",
+  hub_repo_path = here(),
+  hub = "ECDC"
+) %>%
+  # set forecast date to corresponding submission date
+  mutate(forecast_date = ceiling_date(forecast_date, "week", week_start = 2) - 1) %>%
+  filter(between(forecast_date, ymd("2021-03-08"), ymd(report_date))) %>%
+  rename(prediction = value)
 
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(truth_source = "JHU",
@@ -32,12 +31,9 @@ raw_truth <- load_truth(truth_source = "JHU",
                         hub = "ECDC")
 # get anomalies
 anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
-truth <- anti_join(raw_truth, anomalies)
-
-setDT(truth)
-truth[, model := NULL]
-setnames(truth, old = c("value"),
-         new = c("true_value"))
+truth <- anti_join(raw_truth, anomalies) %>%
+  mutate(model = NULL) %>%
+  rename(true_value = value)
 
 data <- scoringutils::merge_pred_and_obs(forecasts, truth,
                                          join = "full")
