@@ -18,9 +18,11 @@ jobs:
 
     - name: Install R dependencies
       run: |
-       Rscript -e 'install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "readr", "rlang"))'
-       Rscript -e 'remotes::install_github("reichlab/covidHubUtils")'
-       Rscript -e 'remotes::install_github("epiforecasts/scoringutils")'
+        install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "readr", "rlang"))
+        remotes::install_github("reichlab/covidHubUtils")
+        remotes::install_github("epiforecasts/scoringutils")
+        remotes::install_local(subdir = "code")
+      shell: Rscript {0}
 
     - name: Create evaluation reports
       run: Rscript 'code/reports/compile-evaluation-reports.r'
