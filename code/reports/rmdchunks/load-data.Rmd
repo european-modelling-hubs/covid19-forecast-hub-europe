@@ -45,6 +45,10 @@ forecasts <- raw_forecasts %>%
   filter(is.na(anomaly)) %>%
   select(-anomaly, -previous_end_date)
 
+## remove forecasts that are longer away than hub config
+forecasts <- forecasts %>%
+  filter(horizon <= max_horizon)
+
 data <- scoringutils::merge_pred_and_obs(forecasts, truth,
                                          join = "full")
 ```

@@ -38,6 +38,7 @@ data_types <- get_hub_config("target_variables")
 report_date <- params$report_date
 model <- params$model
 facetting_var <- rlang::quo(location_name)
+max_horizon <- get_hub_config("horizon")$value
 ```
 
 <!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
