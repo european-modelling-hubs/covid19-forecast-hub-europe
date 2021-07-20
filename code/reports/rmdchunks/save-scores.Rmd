@@ -1,5 +1,5 @@
 <!--- Save evaluation scores as csv -->
-```{r, cache = TRUE, cache.extra = params$report_date}
+```{r}
 filename <-
   here::here("evaluation", paste0("evaluation-", report_date, ".csv"))
 
