@@ -14,8 +14,13 @@ render <- JS(
 )
 
 if (nrow(df) > 0) {
+  df <- df %>%
+    select(model, n, n_loc, rel_wis, rel_ae, cov_50, cov_95, bias)
+  if (unique(df$n_loc) == 1) {
+    df <- df %>%
+      select(-n_loc)
+  }
   df %>%
-    select(model, n, n_loc, rel_wis, rel_ae, cov_50, cov_95, bias) %>%
     arrange(rel_wis) %>%
     dplyr::rename(
       "95% Cov." = cov_95,
