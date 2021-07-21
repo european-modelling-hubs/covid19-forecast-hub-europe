@@ -1,111 +1,30 @@
-```{r, echo = FALSE}
-filter_df <- function(data, filter_list) {
-  if (!is.list(filter_list) || is.null(filter_list) || length(filter_list) == 0) {
-    return(data)
-  }
-  data <- data.table::copy(data)
-  # filter as specified by the user
-  for (expr in filter_list) {
-    data <- data[eval(parse(text = expr)), ]
-  }
-  return(data)
-}
-```
-
 ```{r, results = 'asis'}
-df <- filter_df(data, filter_list)
+df <- table %>%
+  filter(target_variable == target_variables[variable],
+         horizon == this_horizon)
 
-quantiles <- round(c(0.01, 0.025, seq(0.05, 0.95, by = 0.05), 0.975, 0.99), 3)
-
-df <- df %>%
-  # Check all quantiles per target/location
-  group_by(location, target_variable, target_end_date, model) %>%
-  mutate(all_quantiles_present =
-           (length(setdiff(quantiles, quantile)) == 0)) %>%
-  ungroup() %>%
-  filter(all_quantiles_present == TRUE) %>%
-  select(-all_quantiles_present)
-
-## if more than 1 location exists, filter to have at least half of them
-if (length(unique(df$location)) > 1) {
-  df <- df %>%
-    group_by(model, target_variable) %>%
-    mutate(n = length(unique(location))) %>%
-    ungroup() %>%
-    mutate(nall = length(unique(location))) %>%
-    filter(n >= nall / 2) %>%
-    select(-n, -nall)
- }
-
-## filter to cover all of the last few weeks
-df <- df %>%
-  mutate(submission_date =
-	   floor_date(forecast_date, "week", week_start = 3) + 5) %>%
-  mutate(last_4_weeks_submission_date =
-	   if_else(submission_date < report_date &
-		    submission_date > report_date - (restrict_weeks + 1) * 7,
-		   submission_date, as.Date(NA_character_))) %>%
-  group_by(model, target_variable) %>%
-  mutate(present_forecasts = length(unique(na.omit(last_4_weeks_submission_date)))) %>%
-  ungroup() %>%
-  filter(present_forecasts == restrict_weeks) %>%
-  select(-submission_date, -last_4_weeks_submission_date, -present_forecasts)
+## we want NA to be sorted as a high number, see https://stackoverflow.com/a/65897972
+render <- JS(
+  "function(data, type, row) {",
+  "  if(type === 'sort' && data === null) {",
+  "    return Infinity;",
+  "  }",
+  "  return data;",
+  "}"
+)
 
 if (nrow(df) > 0) {
-  coverage <- eval_forecasts(
-    df, 
-    summarise_by = c("model", "target_variable", "range"), 
-    compute_relative_skill = FALSE,
-    ) %>%
-    dplyr::filter(range %in% c(50, 95)) %>%
-    dplyr::select(model, coverage, range) %>%
-    tidyr::pivot_wider(names_from = range, values_from = coverage, 
-                       names_prefix = "Coverage ")
-
-  num_fc <- df %>%
-    dplyr::filter(quantile == 0.5, 
-                  !is.na(true_value)) %>%
-    dplyr::group_by(model, horizon) %>%
-    dplyr::summarise(n = n())
-
-  table <- eval_forecasts(df, summarise_by = c("model", "target_variable"), 
-                          compute_relative_skill = TRUE,
-                          baseline = "EuroCOVIDhub-baseline") %>%
-    dplyr::left_join(coverage, by = "model") %>%
-    dplyr::left_join(num_fc)
-
-  cols <- c("model", "n")
-
-  ## if more than 1 location exists, get the number of locations with forecasts per model
-  if (length(unique(df$location)) > 1) {
-    num_loc <- df %>%
-      dplyr::filter(quantile == 0.5, 
-                    !is.na(true_value)) %>%
-      dplyr::group_by(model, horizon) %>%
-      dplyr::summarise(n_loc = length(unique(location)), .groups = "drop")
-
-    table <- table %>%
-      dplyr::left_join(num_loc)
-    cols <- c(cols, "n_loc")
+  df <- df %>%
+    select(model, n, n_loc, rel_wis, rel_ae, cov_50, cov_95, bias)
+  if (unique(df$n_loc) == 1) {
+    df <- df %>%
+      select(-n_loc)
   }
-
-  cols <- c(cols, "scaled_rel_skill",
-            "Coverage 50", "Coverage 95",
-            "interval_score", "sharpness",
-            "underprediction", "overprediction",
-            "bias", "aem")
-
-  table %>%
-    select(all_of(cols)) %>%
-    arrange(scaled_rel_skill) %>%
-    mutate_if(is.numeric, round, 2) %>%
+  df %>%
+    arrange(rel_wis) %>%
     dplyr::rename(
-      wis = interval_score,
-      underpred = underprediction,
-      overpred = overprediction,
-      rel_skill = scaled_rel_skill, 
-      "95% Cov." = `Coverage 95`, 
-      "50% Cov." = `Coverage 50`
+      "95% Cov." = cov_95,
+      "50% Cov." = cov_50
     ) %>%
     DT::datatable(
       extensions = c('FixedColumns', 'Buttons'),
@@ -116,14 +35,14 @@ if (nrow(df) > 0) {
         buttons = c('csv', 'excel'),
         dom = 'Bfrtip',
         scrollX = TRUE,
-        fixedColumns = TRUE
-      )
+        fixedColumns = TRUE,
+        columnDefs = list(
+          list(targets = seq(1, ncol(.) - 1), render = render)
+        )
+      ),
+      rownames = FALSE
     )
-  
 } else {
   cat("Rankings are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment no model fulfills that criterion." )
 }
 ```
-
-
-
