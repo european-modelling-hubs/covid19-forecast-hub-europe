@@ -5,10 +5,14 @@ on:
     branches:
       - main
       - master
+    paths:
+      - code
   pull_request:
     branches:
       - main
       - master
+    paths:
+      - code
 
 name: R-CMD-check
 
