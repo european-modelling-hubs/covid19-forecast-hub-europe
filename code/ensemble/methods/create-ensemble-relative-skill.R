@@ -35,11 +35,14 @@ create_ensemble_relative_skill <- function(forecasts,
                                            evaluation_date,
                                            continuous_weeks = 4,
                                            average = "mean",
+                                           skill = "wis",
                                            by_horizon = FALSE,
                                            return_criteria = FALSE,
                                            verbose = FALSE) {
 
 # Get evaluation ----------------------------------------------------------
+
+  col_name <- paste("rel", skill, sep = "_")
   if (missing(evaluation_date)) {
     evaluation_date = max(forecasts$forecast_date)
   }
@@ -50,12 +53,15 @@ create_ensemble_relative_skill <- function(forecasts,
   if ("try-error" %in% class(evaluation)) {
     stop(paste0("Evaluation not found for ", evaluation_date))
   }
-  if (verbose) {message(paste0("Relative skill evaluation as of ",
-                               evaluation_date))}
-  if (!"relative_skill" %in% names(evaluation)) {
-    stop("Evaluation does not include relative skill")
+  if (!col_name %in% names(evaluation)) {
+    stop(paste("Evaluation does not include relative", skill))
+  } else {
+    evaluation <- evaluation %>%
+      mutate(relative_skill = as.numeric(!!rlang::sym(col_name)))
   }
 
+  if (verbose) {message(paste0("Relative skill evaluation as of ",
+                               evaluation_date))}
   # include only models with forecasts,
   #   with evaluation for >= x weeks
   skill <- evaluation %>%
