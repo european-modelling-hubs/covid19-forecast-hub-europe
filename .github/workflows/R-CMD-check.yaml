@@ -18,6 +18,11 @@ name: R-CMD-check
 
 jobs:
   R-CMD-check:
+
+    defaults:
+      run:
+        working-directory: code
+
     runs-on: ${{ matrix.config.os }}
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
@@ -44,9 +49,6 @@ jobs:
           r-version: ${{ matrix.config.r }}
 
       - uses: r-lib/actions/setup-pandoc@v1
-
-      - name: Enter package folder
-        run: cd code
 
       - name: Query dependencies
         run: |
