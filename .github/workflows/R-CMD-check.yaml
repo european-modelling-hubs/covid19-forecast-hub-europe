@@ -20,11 +20,6 @@ name: R-CMD-check
 
 jobs:
   R-CMD-check:
-
-    defaults:
-      run:
-        working-directory: code
-
     runs-on: ${{ matrix.config.os }}
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
@@ -53,6 +48,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v1
 
       - name: Query dependencies
+        working-directory: code
         run: |
           install.packages('remotes')
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
@@ -67,6 +63,7 @@ jobs:
           restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
 
       - name: Install system dependencies
+        working-directory: code
         if: runner.os == 'Linux'
         run: |
           while read -r cmd
@@ -75,12 +72,14 @@ jobs:
           done < <(Rscript -e 'writeLines(remotes::system_requirements("ubuntu", "20.04"))')
 
       - name: Install dependencies
+        working-directory: code
         run: |
           remotes::install_deps(dependencies = TRUE)
           remotes::install_cran("rcmdcheck")
         shell: Rscript {0}
 
       - name: Check
+        working-directory: code
         env:
           _R_CHECK_CRAN_INCOMING_REMOTE_: false
         run: |
