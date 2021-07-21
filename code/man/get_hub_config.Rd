@@ -15,3 +15,8 @@ in a list if missing.}
 \description{
 Get the value of setting from config file
 }
+\examples{
+# Get config for European COVID-19 forecast hub
+get_hub_config(config_file = "https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/forecasthub.yml")
+
+}
