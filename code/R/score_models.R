@@ -66,10 +66,7 @@ score_models <- function(forecasts, report_date) {
     eval_forecasts(
       summarise_by = c("model", "target_variable", "range", "horizon",
                        "location"),
-      ## FIXME: we only care about coverage but we have to compute
-      ## "interval_score" first for this to work.
-      ## See https://github.com/epiforecasts/scoringutils/issues/111
-      metrics = c("interval_score", "coverage"),
+      metrics = "coverage",
       compute_relative_skill = FALSE
     ) %>%
     filter(range %in% c(50, 95)) %>%
@@ -84,10 +81,7 @@ score_models <- function(forecasts, report_date) {
     filter(type != "point") %>%
     eval_forecasts(
       summarise_by = c("model", "target_variable", "horizon", "location"),
-      ## FIXME: we only care about coverage but we have to compute
-      ## "interval_score" first for this to work.
-      ## See https://github.com/epiforecasts/scoringutils/issues/111
-      metrics = c("interval_score", "bias"),
+      metrics = "bias",
       compute_relative_skill = FALSE
     ) %>%
     select(model, target_variable, horizon, location, bias)
