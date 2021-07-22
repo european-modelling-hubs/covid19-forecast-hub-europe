@@ -3,7 +3,7 @@
 #' @inheritParams create_ensemble_average
 #' @param report_date Date at which the scoring takes place
 #'
-#' @importFrom dplyr group_by mutate ungroup filter select bind_rows count summarise left_join right_join
+#' @importFrom dplyr group_by mutate ungroup filter select bind_rows count summarise left_join right_join select across if_else
 #' @importFrom tidyr pivot_wider complete replace_na
 #' @importFrom scoringutils eval_forecasts
 #'
@@ -12,32 +12,67 @@ score_models <- function(forecasts, report_date) {
 
   last_forecast_date <- report_date - 7
 
+  locations <- forecasts %>%
+    select(location, location_name) %>%
+    unique()
+
+  ## extract data to be scored and set number of locations to one as default (see next command)
   score_data <- forecasts %>%
     filter(forecast_date <= last_forecast_date,
            target_end_date <= report_date)
 
+  ## duplicate country data as overall data
+  score_df <- score_data %>%
+    mutate(location = "Overall") %>%
+    bind_rows(score_data)
+
+  num_loc <- score_df %>%
+    group_by(model, location, target_variable, horizon) %>%
+    summarise(n_loc = length(unique(location_name)), .groups = "drop")
+
   ## for overall, if more than 1 location exists, filter to have at least half
   ## of them
-  overall_df <- score_data %>%
-    group_by(model, target_variable) %>%
-    mutate(n = length(unique(location))) %>%
+  score_df <- score_df %>%
+    group_by(model, target_variable, location, horizon) %>%
+    mutate(n = length(unique(location_name))) %>%
     ungroup() %>%
-    mutate(nall = length(unique(location))) %>%
-    filter(n >= nall / 2) %>%
-    select(-n, -nall) %>%
-    mutate(location = "Overall")
+    mutate(nall = length(unique(location_name))) %>%
+    filter(location != "Overall" | n >= nall / 2) %>%
+    select(-n, -nall)
 
-  df <- score_data %>%
-    bind_rows(overall_df)
+  ## continuous weeks of submission
+  cont_weeks <- score_df %>%
+    group_by(forecast_date, model, location, target_variable, horizon) %>%
+    summarise(present = 1, .groups = "drop") %>%
+    complete(model, location, target_variable, horizon, forecast_date) %>%
+    filter(forecast_date <= report_date - 7 * as.integer(horizon)) %>%
+    group_by(model, location, target_variable, horizon) %>%
+    mutate(continuous_weeks = cumsum(rev(present))) %>%
+    filter(!is.na(continuous_weeks)) %>%
+    summarise(continuous_weeks = max(continuous_weeks), .groups = "drop")
 
-  coverage <- df %>%
+  score_df <- score_df %>%
+    left_join(cont_weeks, by = c(
+      "model", "target_variable", "horizon",
+      "location"
+    )) %>%
+    replace_na(list(continuous_weeks = 0)) %>%
+    filter(continuous_weeks >= restrict_weeks)
+
+  ## number of forecasts
+  num_fc <- score_df %>%
+    filter(type == "point", !is.na(true_value)) %>%
+    count(model, target_variable, horizon, location)
+
+  ## calibration metrics (50 and 95 percent coverage and bias)
+  coverage <- score_df %>%
     filter(type != "point") %>%
     eval_forecasts(
       summarise_by = c("model", "target_variable", "range", "horizon",
                        "location"),
-      # FIXME: we only care about coverage but we have to compute
-      # "interval_score" first for this to work.
-      # See https://github.com/epiforecasts/scoringutils/issues/111
+      ## FIXME: we only care about coverage but we have to compute
+      ## "interval_score" first for this to work.
+      ## See https://github.com/epiforecasts/scoringutils/issues/111
       metrics = c("interval_score", "coverage"),
       compute_relative_skill = FALSE
     ) %>%
@@ -49,44 +84,68 @@ score_models <- function(forecasts, report_date) {
       names_prefix = "cov_"
     )
 
-  ## number of forecasts
-  num_fc <- df %>%
-    filter(type == "point", !is.na(true_value)) %>%
-    count(model, target_variable, horizon, location)
-
-  ## mean absolute error of point forecast
-  mae <- df %>%
-    filter(type == "point", !is.na(true_value)) %>%
-    mutate(ae = abs(prediction - true_value)) %>%
-    group_by(model, target_variable, location, horizon) %>%
-    summarise(mae = mean(ae), .groups = "drop")
-
-  ## continuous weeks of submission
-  cont_weeks <- df %>%
-    filter(!is.na(model)) %>%
-    group_by(forecast_date, model, location, target_variable, horizon) %>%
-    summarise(present = 1, .groups = "drop") %>%
-    complete(model, location, target_variable, horizon, forecast_date) %>%
-    group_by(model, location, target_variable, horizon) %>%
-    mutate(continuous_weeks = cumsum(rev(present))) %>%
-    filter(!is.na(continuous_weeks)) %>%
-    summarise(continuous_weeks = max(continuous_weeks), .groups = "drop")
-
-  table <- df %>%
+  bias <- score_df %>%
     filter(type != "point") %>%
+    eval_forecasts(
+      summarise_by = c("model", "target_variable", "horizon", "location"),
+      ## FIXME: we only care about coverage but we have to compute
+      ## "interval_score" first for this to work.
+      ## See https://github.com/epiforecasts/scoringutils/issues/111
+      metrics = c("interval_score", "bias"),
+      compute_relative_skill = FALSE
+    ) %>%
+    select(model, target_variable, horizon, location, bias)
+
+  ## relative absolute error of point forecast
+  rel_ae <- score_df %>%
+    filter(type == "point", !is.na(true_value)) %>%
+    mutate(quantile = NA_real_) %>% ## scoringutils interprets these as point forecasts
     eval_forecasts(
       summarise_by = c(
         "model", "target_variable",
         "horizon", "location"
       ),
       compute_relative_skill = TRUE,
+      baseline = "EuroCOVIDhub-baseline",
+      rel_skill_metric = "ae_point"
+    ) %>%
+    select(model, target_variable, horizon, location, rel_ae = scaled_rel_skill)
+
+  ## for calculating WIS and bias, make sure all quantiles are there
+  score_df <- score_df %>%
+    group_by(location, target_variable, target_end_date, model, horizon) %>%
+    mutate(all_quantiles_present =
+             (length(setdiff(quantiles, quantile)) == 0)) %>%
+    ungroup() %>%
+    filter(all_quantiles_present == TRUE) %>%
+    select(-all_quantiles_present)
+
+  table <- score_df %>%
+    filter(type != "point") %>%
+    eval_forecasts(
+      summarise_by = c(
+        "model", "target_variable",
+        "horizon", "location"
+      ),
+      metrics = "interval_score",
+      compute_relative_skill = TRUE,
       baseline = "EuroCOVIDhub-baseline"
     ) %>%
-    left_join(coverage, by = c(
+    select(-relative_skill) %>%
+    rename(rel_wis = scaled_rel_skill) %>%
+    full_join(rel_ae, by = c(
       "model", "target_variable", "horizon",
       "location"
     )) %>%
-    right_join(mae, by = c(
+    full_join(coverage, by = c(
+      "model", "target_variable", "horizon",
+      "location"
+    )) %>%
+    full_join(bias, by = c(
+      "model", "target_variable", "horizon",
+      "location"
+    )) %>%
+    left_join(num_loc, by = c(
       "model", "target_variable", "horizon",
       "location"
     )) %>%
@@ -94,11 +153,12 @@ score_models <- function(forecasts, report_date) {
       "model", "target_variable", "horizon",
       "location"
     )) %>%
-    left_join(cont_weeks, by = c(
-      "model", "target_variable", "horizon",
-      "location"
-    )) %>%
-    replace_na(list(continuous_weeks = 0))
+    left_join(locations, by = "location") %>%
+    mutate(location_name =
+             if_else(location == "Overall", "Overall", location_name)) %>%
+    mutate(across(c("interval_score", "sharpness",
+                    "underprediction", "overprediction"), round)) %>%
+    mutate(across(c("bias", "rel_wis", "rel_ae", "cov_50", "cov_95"), round, 2))
 
   return(table)
 }
