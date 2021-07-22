@@ -3,8 +3,9 @@
 #' @inheritParams create_ensemble_average
 #' @param report_date Date at which the scoring takes place
 #'
-#' @importFrom dplyr group_by mutate ungroup filter select bind_rows count summarise left_join right_join select across if_else
+#' @importFrom dplyr group_by mutate ungroup filter select bind_rows count summarise left_join right_join select across if_else n_distinct
 #' @importFrom tidyr pivot_wider complete replace_na
+#' @importFrom lubridate weeks
 #' @importFrom scoringutils eval_forecasts
 #'
 #' @export
@@ -28,24 +29,19 @@ score_models <- function(forecasts, report_date) {
 
   num_loc <- score_df %>%
     group_by(model, location, target_variable, horizon) %>%
-    summarise(n_loc = length(unique(location_name)), .groups = "drop")
+    summarise(n_loc = n_distinct(location_name), .groups = "drop")
 
   ## for overall, if more than 1 location exists, filter to have at least half
   ## of them
-  score_df <- score_df %>%
-    group_by(model, target_variable, location, horizon) %>%
-    mutate(n = length(unique(location_name))) %>%
-    ungroup() %>%
-    mutate(nall = length(unique(location_name))) %>%
-    filter(location != "Overall" | n >= nall / 2) %>%
-    select(-n, -nall)
+  score_df <- num_loc %>%
+    filter(location != "Overall" | n_loc >= n_distinct(location_name) / 2)
 
   ## continuous weeks of submission
   cont_weeks <- score_df %>%
     group_by(forecast_date, model, location, target_variable, horizon) %>%
     summarise(present = 1, .groups = "drop") %>%
     complete(model, location, target_variable, horizon, forecast_date) %>%
-    filter(forecast_date <= report_date - 7 * as.integer(horizon)) %>%
+    filter(forecast_date <= report_date - weeks(horizon)) %>%
     group_by(model, location, target_variable, horizon) %>%
     mutate(continuous_weeks = cumsum(rev(present))) %>%
     filter(!is.na(continuous_weeks)) %>%
