@@ -22,7 +22,7 @@ forecasts <- load_forecasts(
 ) %>%
   # set forecast date to corresponding submission date
   mutate(forecast_date = ceiling_date(forecast_date, "week", week_start = 2) - 1) %>%
-  filter(between(forecast_date, ymd("2021-03-08"), ymd(report_date))) %>%
+  filter(forecast_date >= "2021-03-08") %>%
   rename(prediction = value)
 
 ## load truth data -------------------------------------------------------------
