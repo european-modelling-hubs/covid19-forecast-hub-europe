@@ -53,7 +53,7 @@ create_ensemble_relative_skill <- function(forecasts,
   if ("try-error" %in% class(evaluation)) {
     stop(paste0("Evaluation not found for ", evaluation_date))
   }
-  if (!col_name %in% names(evaluation)) {
+  if (!(col_name %in% names(evaluation))) {
     stop(paste("Evaluation does not include relative", skill))
   } else {
     evaluation <- evaluation %>%
