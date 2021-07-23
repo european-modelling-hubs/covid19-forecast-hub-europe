@@ -6,11 +6,27 @@ forecasting dates. -->
 Forecasts of cases/deaths per week per 100,000. The date of the tab marks the date on which a forecast was made (only the latest forecasts and the previous `r restrict_weeks` weeks shown).
 
 ```{r}
-forecast_dates <- rev(as.character(unique(data$forecast_date[!is.na(data$forecast_date)])))
+forecast_dates <- data %>%
+  filter(!is.na(forecast_date)) %>%
+  select(forecast_date) %>%
+  distinct() %>%
+  filter(forecast_date > max(forecast_date) - restrict_weeks * 7) %>%
+  arrange(desc(forecast_date)) %>%
+  pull(forecast_date)
 ```
 
-```{r prediction-plots, echo = FALSE, results='asis', fig.width = 8.5, fig.height=8}
-for (forecast_date in head(forecast_dates, restrict_weeks + 2)) {
+```{r}
+# Programmatically determine figure aspect ratio:
+# It is based on the value of distinct values in the facetting variables with
+# some extra requirements. For example, we don't want the ratio to change when
+# we add a new panel without adding a new row.
+nb_facets <- dplyr::n_distinct(rlang::eval_tidy(facetting_var, data = data))
+n_cols <- 3
+fa <- ((nb_facets-1) %/% n_cols + 1) / 7
+```
+
+```{r prediction-plots, echo = FALSE, results='asis', fig.width = 8.5, fig.asp = fa}
+for (forecast_date in as.character(forecast_dates)) {
   cat(paste0("\n\n## ", forecast_date, "{.tabset .tabset-fade} \n\n"))
   
     for (target in names(target_variables)) {
@@ -21,7 +37,6 @@ for (forecast_date in head(forecast_dates, restrict_weeks + 2)) {
                            paste0("target_end_date <= '", as.Date(forecast_date) + 7 * 4, "'"))
       filter_forecasts <- list(paste0("forecast_date == '", as.Date(forecast_date), "'"))
       
-      
       plot <- scoringutils::plot_predictions(
         data,
         x = "target_end_date",
@@ -29,14 +44,16 @@ for (forecast_date in head(forecast_dates, restrict_weeks + 2)) {
         filter_truth = filter_truth,
         filter_forecasts = filter_forecasts,
         facet_formula =  rlang::expr(~ !!facetting_var),
-        ncol = 3,
+        ncol = n_cols,
         allow_truth_without_pred = FALSE,
-        scales = "free") + 
+        scales = "free_y") + 
         ggplot2::theme(legend.position = "bottom", 
                        strip.placement = "outside") + 
         scale_y_continuous(labels = scales::comma) + 
-        expand_limits(y = 0) + 
-        coord_cartesian(ylim = c(0, NA))
+        expand_limits(y = 0) +
+        # Make sure negative values for cases/deaths are not displayed
+        coord_cartesian(ylim = c(0, NA)) +
+        xlab("Week")
 
       if (is.null(plot)) {
         cat("No forecasts available, possibly because of recent anomalies in the available data." )
