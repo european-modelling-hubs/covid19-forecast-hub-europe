@@ -22,7 +22,7 @@ raw_forecasts <- load_forecasts(
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(
   truth_source = "JHU",
-  target_variable = data_types,
+  temporal_resolution = "weekly",
   truth_end_date = report_date,
   hub = "ECDC"
 )
