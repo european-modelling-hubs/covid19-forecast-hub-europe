@@ -27,7 +27,7 @@ forecasts <- load_forecasts(
 
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(truth_source = "JHU",
-                        target_variable = data_types,
+                        temporal_resolution = "weekly",
                         hub = "ECDC")
 # get anomalies
 anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
