@@ -3,6 +3,8 @@
 library(EuroForecastHub)
 table <- score_models(
   forecasts = data,
-  report_date = params$report_date
+  report_date = ymd(params$report_date),
+  restrict_weeks = params$restrict_weeks,
+  quantiles = get_hub_config("forecast_type")$quantiles
 )
 ```

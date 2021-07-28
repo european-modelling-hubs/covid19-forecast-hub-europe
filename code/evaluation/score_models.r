@@ -55,7 +55,11 @@ for (chr_report_date in as.character(report_dates)) {
   filename <-
     here::here("evaluation", paste0("evaluation-", report_date, ".csv"))
 
-  table <- score_models(data, report_date)
+  table <- score_models(
+    data,
+    report_date,
+    quantiles = get_hub_config("forecast_type")$quantiles
+  )
 
   write_csv(table, filename)
 }
