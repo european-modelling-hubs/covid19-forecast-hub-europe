@@ -1,0 +1,64 @@
+$schema: "http://json-schema.org/draft-07/schema"
+title: ForecastHub model data
+description: >
+  This is the schema of the forecasts files, please refer to
+  https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Forecast-format
+  for more info.
+type: object
+properties:
+  forecast_date:
+    description: The date at which the forecasts were established and submitted
+    type: array
+    items:
+      type: string
+      format: date
+  scenario_id:
+    description: One of forecast or a specified scenario ID
+    type: array
+    items:
+      type: string
+  target:
+    description: >
+      '"# wk ahead inc case" or "# wk ahead inc death" where # is usually
+      between 1 and 4'
+    type: array
+    items:
+      type: string
+      pattern: ^\d+ wk ahead inc
+  target_end_date:
+    description: Date as YYYY-MM-DD, the last day (Saturday) of the target week
+    type: array
+    items:
+      type: string
+      format: date
+  location:
+    description: 'An ISO-2 country code'
+    type: array
+    items:
+      type: string
+      pattern: ^[A-Z]{2}$
+  type:
+    description: 'One of "point" or "quantile"'
+    type: array
+    items:
+      type: string
+      enum:
+        - point
+        - quantile
+  quantile:
+    type: array
+    items:
+      type: ["number", "null"]
+  value:
+    type: array
+    items:
+      type: integer
+      minimum: 0
+required:
+  - forecast_date
+  - target
+  - target_end_date
+  - location
+  - type
+  - quantile
+  - value
