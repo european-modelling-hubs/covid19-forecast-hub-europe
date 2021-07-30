@@ -443,7 +443,6 @@ date,location,location_name,value
 2020-06-28,BE,Belgium,7
 2020-06-29,BE,Belgium,14
 2020-06-30,BE,Belgium,17
-2021-07-23,BE,Belgium,27
 2021-07-24,BE,Belgium,34
 2021-07-25,BE,Belgium,27
 2021-07-26,BE,Belgium,25
@@ -481,6 +480,7 @@ date,location,location_name,value
 2021-07-20,BE,Belgium,30
 2021-07-21,BE,Belgium,28
 2021-07-22,BE,Belgium,28
+2021-07-23,BE,Belgium,27
 2020-04-23,BE,Belgium,204
 2020-04-24,BE,Belgium,221
 2020-04-25,BE,Belgium,203
@@ -1486,6 +1486,7 @@ date,location,location_name,value
 2021-07-26,DK,Denmark,12
 2021-07-27,DK,Denmark,15
 2021-07-28,DK,Denmark,17
+2021-07-29,DK,Denmark,8
 2020-01-06,EE,Estonia,1
 2020-01-18,EE,Estonia,1
 2020-02-12,EE,Estonia,0
@@ -2505,6 +2506,7 @@ date,location,location_name,value
 2021-07-26,FR,France,607
 2021-07-27,FR,France,557
 2021-07-28,FR,France,490
+2021-07-29,FR,France,501
 2020-01-01,NL,Netherlands,0
 2020-01-04,NL,Netherlands,0
 2020-01-06,NL,Netherlands,0
@@ -3050,13 +3052,13 @@ date,location,location_name,value
 2021-07-20,NL,Netherlands,75
 2021-07-21,NL,Netherlands,65
 2021-07-22,NL,Netherlands,63
-2021-07-23,NL,Netherlands,90
+2021-07-23,NL,Netherlands,91
 2021-07-24,NL,Netherlands,66
 2021-07-25,NL,Netherlands,72
 2021-07-26,NL,Netherlands,89
-2021-07-27,NL,Netherlands,72
-2021-07-28,NL,Netherlands,57
-2021-07-29,NL,Netherlands,5
+2021-07-27,NL,Netherlands,75
+2021-07-28,NL,Netherlands,64
+2021-07-29,NL,Netherlands,7
 2020-02-21,NO,Norway,0
 2020-02-22,NO,Norway,0
 2020-02-23,NO,Norway,0
@@ -3579,7 +3581,8 @@ date,location,location_name,value
 2021-07-24,NO,Norway,5
 2021-07-25,NO,Norway,2
 2021-07-26,NO,Norway,4
-2021-07-27,NO,Norway,1
+2021-07-27,NO,Norway,2
+2021-07-28,NO,Norway,1
 2020-03-10,SI,Slovenia,0
 2020-03-11,SI,Slovenia,2
 2020-03-12,SI,Slovenia,4
@@ -4670,69 +4673,69 @@ date,location,location_name,value
 2020-03-06,GB,United Kingdom,24
 2020-03-07,GB,United Kingdom,10
 2020-03-08,GB,United Kingdom,11
-2020-03-09,GB,United Kingdom,20
-2020-03-10,GB,United Kingdom,34
-2020-03-11,GB,United Kingdom,31
+2020-03-09,GB,United Kingdom,19
+2020-03-10,GB,United Kingdom,33
+2020-03-11,GB,United Kingdom,32
 2020-03-12,GB,United Kingdom,27
 2020-03-13,GB,United Kingdom,27
-2020-03-14,GB,United Kingdom,24
+2020-03-14,GB,United Kingdom,23
 2020-03-15,GB,United Kingdom,18
-2020-03-16,GB,United Kingdom,35
-2020-03-17,GB,United Kingdom,46
+2020-03-16,GB,United Kingdom,36
+2020-03-17,GB,United Kingdom,47
 2020-03-18,GB,United Kingdom,51
-2020-03-19,GB,United Kingdom,632
-2020-03-20,GB,United Kingdom,774
-2020-03-21,GB,United Kingdom,854
-2020-03-22,GB,United Kingdom,920
+2020-03-19,GB,United Kingdom,633
+2020-03-20,GB,United Kingdom,776
+2020-03-21,GB,United Kingdom,855
+2020-03-22,GB,United Kingdom,921
 2020-03-23,GB,United Kingdom,1273
-2020-03-24,GB,United Kingdom,1720
+2020-03-24,GB,United Kingdom,1717
 2020-03-25,GB,United Kingdom,2085
-2020-03-26,GB,United Kingdom,1929
-2020-03-27,GB,United Kingdom,2228
-2020-03-28,GB,United Kingdom,2191
+2020-03-26,GB,United Kingdom,1927
+2020-03-27,GB,United Kingdom,2227
+2020-03-28,GB,United Kingdom,2193
 2020-03-29,GB,United Kingdom,2489
 2020-03-30,GB,United Kingdom,3190
 2020-03-31,GB,United Kingdom,2832
-2020-04-01,GB,United Kingdom,3565
-2020-04-02,GB,United Kingdom,3285
+2020-04-01,GB,United Kingdom,3567
+2020-04-02,GB,United Kingdom,3286
 2020-04-03,GB,United Kingdom,2930
 2020-04-04,GB,United Kingdom,2921
 2020-04-05,GB,United Kingdom,2917
 2020-04-06,GB,United Kingdom,3046
-2020-04-07,GB,United Kingdom,3149
+2020-04-07,GB,United Kingdom,3150
 2020-04-08,GB,United Kingdom,2967
-2020-04-09,GB,United Kingdom,2628
+2020-04-09,GB,United Kingdom,2629
 2020-04-10,GB,United Kingdom,2463
-2020-04-11,GB,United Kingdom,2162
+2020-04-11,GB,United Kingdom,2163
 2020-04-12,GB,United Kingdom,2066
 2020-04-13,GB,United Kingdom,2162
 2020-04-14,GB,United Kingdom,2088
 2020-04-15,GB,United Kingdom,1880
 2020-04-16,GB,United Kingdom,2011
-2020-04-17,GB,United Kingdom,1965
-2020-04-18,GB,United Kingdom,1628
+2020-04-17,GB,United Kingdom,1967
+2020-04-18,GB,United Kingdom,1629
 2020-04-19,GB,United Kingdom,1657
-2020-04-20,GB,United Kingdom,1737
-2020-04-21,GB,United Kingdom,1713
-2020-04-22,GB,United Kingdom,1527
+2020-04-20,GB,United Kingdom,1735
+2020-04-21,GB,United Kingdom,1712
+2020-04-22,GB,United Kingdom,1529
 2020-04-23,GB,United Kingdom,1513
 2020-04-24,GB,United Kingdom,1525
-2020-04-25,GB,United Kingdom,1255
+2020-04-25,GB,United Kingdom,1254
 2020-04-26,GB,United Kingdom,1355
 2020-04-27,GB,United Kingdom,1538
-2020-04-28,GB,United Kingdom,1517
+2020-04-28,GB,United Kingdom,1518
 2020-04-29,GB,United Kingdom,1488
-2020-04-30,GB,United Kingdom,1442
-2020-05-01,GB,United Kingdom,1262
+2020-04-30,GB,United Kingdom,1441
+2020-05-01,GB,United Kingdom,1263
 2020-05-02,GB,United Kingdom,1180
 2020-05-03,GB,United Kingdom,1188
-2020-05-04,GB,United Kingdom,1250
+2020-05-04,GB,United Kingdom,1249
 2020-05-05,GB,United Kingdom,1146
 2020-05-06,GB,United Kingdom,1206
-2020-05-07,GB,United Kingdom,1164
+2020-05-07,GB,United Kingdom,1165
 2020-05-08,GB,United Kingdom,910
-2020-05-09,GB,United Kingdom,943
-2020-05-10,GB,United Kingdom,915
+2020-05-09,GB,United Kingdom,944
+2020-05-10,GB,United Kingdom,916
 2020-05-11,GB,United Kingdom,1029
 2020-05-12,GB,United Kingdom,983
 2020-05-13,GB,United Kingdom,966
@@ -4740,7 +4743,7 @@ date,location,location_name,value
 2020-05-15,GB,United Kingdom,871
 2020-05-16,GB,United Kingdom,813
 2020-05-17,GB,United Kingdom,792
-2020-05-18,GB,United Kingdom,848
+2020-05-18,GB,United Kingdom,849
 2020-05-19,GB,United Kingdom,881
 2020-05-20,GB,United Kingdom,851
 2020-05-21,GB,United Kingdom,841
@@ -4759,7 +4762,7 @@ date,location,location_name,value
 2020-06-03,GB,United Kingdom,633
 2020-06-04,GB,United Kingdom,565
 2020-06-05,GB,United Kingdom,476
-2020-06-06,GB,United Kingdom,406
+2020-06-06,GB,United Kingdom,407
 2020-06-07,GB,United Kingdom,408
 2020-06-08,GB,United Kingdom,412
 2020-06-09,GB,United Kingdom,492
@@ -4771,7 +4774,7 @@ date,location,location_name,value
 2020-06-15,GB,United Kingdom,439
 2020-06-16,GB,United Kingdom,456
 2020-06-17,GB,United Kingdom,432
-2020-06-18,GB,United Kingdom,403
+2020-06-18,GB,United Kingdom,404
 2020-06-19,GB,United Kingdom,336
 2020-06-20,GB,United Kingdom,257
 2020-06-21,GB,United Kingdom,288
@@ -4799,7 +4802,7 @@ date,location,location_name,value
 2020-07-13,GB,United Kingdom,189
 2020-07-14,GB,United Kingdom,186
 2020-07-15,GB,United Kingdom,166
-2020-07-16,GB,United Kingdom,166
+2020-07-16,GB,United Kingdom,167
 2020-07-17,GB,United Kingdom,144
 2020-07-18,GB,United Kingdom,105
 2020-07-19,GB,United Kingdom,126
@@ -4833,7 +4836,7 @@ date,location,location_name,value
 2020-08-16,GB,United Kingdom,80
 2020-08-17,GB,United Kingdom,97
 2020-08-18,GB,United Kingdom,130
-2020-08-19,GB,United Kingdom,115
+2020-08-19,GB,United Kingdom,116
 2020-08-20,GB,United Kingdom,98
 2020-08-21,GB,United Kingdom,109
 2020-08-22,GB,United Kingdom,72
@@ -4843,217 +4846,217 @@ date,location,location_name,value
 2020-08-26,GB,United Kingdom,132
 2020-08-27,GB,United Kingdom,152
 2020-08-28,GB,United Kingdom,137
-2020-08-29,GB,United Kingdom,109
+2020-08-29,GB,United Kingdom,110
 2020-08-30,GB,United Kingdom,77
 2020-08-31,GB,United Kingdom,91
 2020-09-01,GB,United Kingdom,134
 2020-09-02,GB,United Kingdom,146
-2020-09-03,GB,United Kingdom,145
-2020-09-04,GB,United Kingdom,153
+2020-09-03,GB,United Kingdom,146
+2020-09-04,GB,United Kingdom,154
 2020-09-05,GB,United Kingdom,130
 2020-09-06,GB,United Kingdom,139
-2020-09-07,GB,United Kingdom,142
-2020-09-08,GB,United Kingdom,184
-2020-09-09,GB,United Kingdom,202
+2020-09-07,GB,United Kingdom,146
+2020-09-08,GB,United Kingdom,186
+2020-09-09,GB,United Kingdom,203
 2020-09-10,GB,United Kingdom,218
 2020-09-11,GB,United Kingdom,231
-2020-09-12,GB,United Kingdom,216
+2020-09-12,GB,United Kingdom,218
 2020-09-13,GB,United Kingdom,226
-2020-09-14,GB,United Kingdom,255
+2020-09-14,GB,United Kingdom,257
 2020-09-15,GB,United Kingdom,270
 2020-09-16,GB,United Kingdom,285
-2020-09-17,GB,United Kingdom,263
-2020-09-18,GB,United Kingdom,262
-2020-09-19,GB,United Kingdom,260
+2020-09-17,GB,United Kingdom,264
+2020-09-18,GB,United Kingdom,263
+2020-09-19,GB,United Kingdom,261
 2020-09-20,GB,United Kingdom,289
-2020-09-21,GB,United Kingdom,369
-2020-09-22,GB,United Kingdom,351
-2020-09-23,GB,United Kingdom,422
-2020-09-24,GB,United Kingdom,422
+2020-09-21,GB,United Kingdom,371
+2020-09-22,GB,United Kingdom,352
+2020-09-23,GB,United Kingdom,424
+2020-09-24,GB,United Kingdom,425
 2020-09-25,GB,United Kingdom,383
-2020-09-26,GB,United Kingdom,351
-2020-09-27,GB,United Kingdom,340
-2020-09-28,GB,United Kingdom,443
-2020-09-29,GB,United Kingdom,439
-2020-09-30,GB,United Kingdom,452
-2020-10-01,GB,United Kingdom,525
-2020-10-02,GB,United Kingdom,528
-2020-10-03,GB,United Kingdom,531
-2020-10-04,GB,United Kingdom,628
-2020-10-05,GB,United Kingdom,624
-2020-10-06,GB,United Kingdom,722
-2020-10-07,GB,United Kingdom,685
-2020-10-08,GB,United Kingdom,711
-2020-10-09,GB,United Kingdom,703
-2020-10-10,GB,United Kingdom,721
-2020-10-11,GB,United Kingdom,822
-2020-10-12,GB,United Kingdom,884
-2020-10-13,GB,United Kingdom,1022
-2020-10-14,GB,United Kingdom,980
-2020-10-15,GB,United Kingdom,1045
-2020-10-16,GB,United Kingdom,911
-2020-10-17,GB,United Kingdom,1026
-2020-10-18,GB,United Kingdom,1086
-2020-10-19,GB,United Kingdom,1095
-2020-10-20,GB,United Kingdom,1188
-2020-10-21,GB,United Kingdom,1259
-2020-10-22,GB,United Kingdom,1275
-2020-10-23,GB,United Kingdom,1290
-2020-10-24,GB,United Kingdom,1257
-2020-10-25,GB,United Kingdom,1420
-2020-10-26,GB,United Kingdom,1532
-2020-10-27,GB,United Kingdom,1491
-2020-10-28,GB,United Kingdom,1485
-2020-10-29,GB,United Kingdom,1584
-2020-10-30,GB,United Kingdom,1372
-2020-10-31,GB,United Kingdom,1456
-2020-11-01,GB,United Kingdom,1486
-2020-11-02,GB,United Kingdom,1566
-2020-11-03,GB,United Kingdom,1515
-2020-11-04,GB,United Kingdom,1677
-2020-11-05,GB,United Kingdom,1587
-2020-11-06,GB,United Kingdom,1414
-2020-11-07,GB,United Kingdom,1556
-2020-11-08,GB,United Kingdom,1687
-2020-11-09,GB,United Kingdom,1763
-2020-11-10,GB,United Kingdom,1848
-2020-11-11,GB,United Kingdom,1971
-2020-11-12,GB,United Kingdom,1916
-2020-11-13,GB,United Kingdom,1648
-2020-11-14,GB,United Kingdom,1612
-2020-11-15,GB,United Kingdom,1669
-2020-11-16,GB,United Kingdom,1768
-2020-11-17,GB,United Kingdom,1716
-2020-11-18,GB,United Kingdom,1782
-2020-11-19,GB,United Kingdom,1684
-2020-11-20,GB,United Kingdom,1548
-2020-11-21,GB,United Kingdom,1460
-2020-11-22,GB,United Kingdom,1488
-2020-11-23,GB,United Kingdom,1587
-2020-11-24,GB,United Kingdom,1495
-2020-11-25,GB,United Kingdom,1613
-2020-11-26,GB,United Kingdom,1424
+2020-09-26,GB,United Kingdom,352
+2020-09-27,GB,United Kingdom,342
+2020-09-28,GB,United Kingdom,445
+2020-09-29,GB,United Kingdom,441
+2020-09-30,GB,United Kingdom,453
+2020-10-01,GB,United Kingdom,529
+2020-10-02,GB,United Kingdom,529
+2020-10-03,GB,United Kingdom,533
+2020-10-04,GB,United Kingdom,632
+2020-10-05,GB,United Kingdom,629
+2020-10-06,GB,United Kingdom,724
+2020-10-07,GB,United Kingdom,693
+2020-10-08,GB,United Kingdom,713
+2020-10-09,GB,United Kingdom,707
+2020-10-10,GB,United Kingdom,724
+2020-10-11,GB,United Kingdom,824
+2020-10-12,GB,United Kingdom,889
+2020-10-13,GB,United Kingdom,1031
+2020-10-14,GB,United Kingdom,985
+2020-10-15,GB,United Kingdom,1047
+2020-10-16,GB,United Kingdom,925
+2020-10-17,GB,United Kingdom,1032
+2020-10-18,GB,United Kingdom,1091
+2020-10-19,GB,United Kingdom,1108
+2020-10-20,GB,United Kingdom,1192
+2020-10-21,GB,United Kingdom,1264
+2020-10-22,GB,United Kingdom,1284
+2020-10-23,GB,United Kingdom,1299
+2020-10-24,GB,United Kingdom,1262
+2020-10-25,GB,United Kingdom,1423
+2020-10-26,GB,United Kingdom,1540
+2020-10-27,GB,United Kingdom,1498
+2020-10-28,GB,United Kingdom,1494
+2020-10-29,GB,United Kingdom,1590
+2020-10-30,GB,United Kingdom,1383
+2020-10-31,GB,United Kingdom,1461
+2020-11-01,GB,United Kingdom,1498
+2020-11-02,GB,United Kingdom,1573
+2020-11-03,GB,United Kingdom,1526
+2020-11-04,GB,United Kingdom,1686
+2020-11-05,GB,United Kingdom,1590
+2020-11-06,GB,United Kingdom,1417
+2020-11-07,GB,United Kingdom,1559
+2020-11-08,GB,United Kingdom,1692
+2020-11-09,GB,United Kingdom,1769
+2020-11-10,GB,United Kingdom,1856
+2020-11-11,GB,United Kingdom,1972
+2020-11-12,GB,United Kingdom,1917
+2020-11-13,GB,United Kingdom,1650
+2020-11-14,GB,United Kingdom,1616
+2020-11-15,GB,United Kingdom,1674
+2020-11-16,GB,United Kingdom,1770
+2020-11-17,GB,United Kingdom,1718
+2020-11-18,GB,United Kingdom,1786
+2020-11-19,GB,United Kingdom,1688
+2020-11-20,GB,United Kingdom,1550
+2020-11-21,GB,United Kingdom,1463
+2020-11-22,GB,United Kingdom,1492
+2020-11-23,GB,United Kingdom,1588
+2020-11-24,GB,United Kingdom,1499
+2020-11-25,GB,United Kingdom,1614
+2020-11-26,GB,United Kingdom,1425
 2020-11-27,GB,United Kingdom,1280
 2020-11-28,GB,United Kingdom,1220
-2020-11-29,GB,United Kingdom,1384
-2020-11-30,GB,United Kingdom,1404
+2020-11-29,GB,United Kingdom,1387
+2020-11-30,GB,United Kingdom,1405
 2020-12-01,GB,United Kingdom,1490
 2020-12-02,GB,United Kingdom,1486
-2020-12-03,GB,United Kingdom,1502
+2020-12-03,GB,United Kingdom,1503
 2020-12-04,GB,United Kingdom,1433
-2020-12-05,GB,United Kingdom,1378
-2020-12-06,GB,United Kingdom,1470
+2020-12-05,GB,United Kingdom,1379
+2020-12-06,GB,United Kingdom,1471
 2020-12-07,GB,United Kingdom,1661
 2020-12-08,GB,United Kingdom,1783
-2020-12-09,GB,United Kingdom,1754
-2020-12-10,GB,United Kingdom,1750
-2020-12-11,GB,United Kingdom,1686
-2020-12-12,GB,United Kingdom,1799
-2020-12-13,GB,United Kingdom,1753
+2020-12-09,GB,United Kingdom,1757
+2020-12-10,GB,United Kingdom,1753
+2020-12-11,GB,United Kingdom,1688
+2020-12-12,GB,United Kingdom,1800
+2020-12-13,GB,United Kingdom,1755
 2020-12-14,GB,United Kingdom,1955
-2020-12-15,GB,United Kingdom,1957
-2020-12-16,GB,United Kingdom,2079
-2020-12-17,GB,United Kingdom,2144
-2020-12-18,GB,United Kingdom,1917
-2020-12-19,GB,United Kingdom,2044
-2020-12-20,GB,United Kingdom,2168
-2020-12-21,GB,United Kingdom,2367
-2020-12-22,GB,United Kingdom,2479
-2020-12-23,GB,United Kingdom,2273
-2020-12-24,GB,United Kingdom,2082
+2020-12-15,GB,United Kingdom,1958
+2020-12-16,GB,United Kingdom,2081
+2020-12-17,GB,United Kingdom,2145
+2020-12-18,GB,United Kingdom,1920
+2020-12-19,GB,United Kingdom,2045
+2020-12-20,GB,United Kingdom,2171
+2020-12-21,GB,United Kingdom,2368
+2020-12-22,GB,United Kingdom,2481
+2020-12-23,GB,United Kingdom,2277
+2020-12-24,GB,United Kingdom,2084
 2020-12-25,GB,United Kingdom,2181
 2020-12-26,GB,United Kingdom,2530
-2020-12-27,GB,United Kingdom,2870
-2020-12-28,GB,United Kingdom,3133
-2020-12-29,GB,United Kingdom,3249
-2020-12-30,GB,United Kingdom,3288
-2020-12-31,GB,United Kingdom,2915
-2021-01-01,GB,United Kingdom,3368
-2021-01-02,GB,United Kingdom,3439
-2021-01-03,GB,United Kingdom,3648
+2020-12-27,GB,United Kingdom,2871
+2020-12-28,GB,United Kingdom,3138
+2020-12-29,GB,United Kingdom,3252
+2020-12-30,GB,United Kingdom,3293
+2020-12-31,GB,United Kingdom,2921
+2021-01-01,GB,United Kingdom,3369
+2021-01-02,GB,United Kingdom,3443
+2021-01-03,GB,United Kingdom,3649
 2021-01-04,GB,United Kingdom,3936
-2021-01-05,GB,United Kingdom,4116
+2021-01-05,GB,United Kingdom,4118
 2021-01-06,GB,United Kingdom,4392
-2021-01-07,GB,United Kingdom,4292
-2021-01-08,GB,United Kingdom,3998
+2021-01-07,GB,United Kingdom,4294
+2021-01-08,GB,United Kingdom,4000
 2021-01-09,GB,United Kingdom,4126
-2021-01-10,GB,United Kingdom,3933
+2021-01-10,GB,United Kingdom,3937
 2021-01-11,GB,United Kingdom,4308
-2021-01-12,GB,United Kingdom,4579
-2021-01-13,GB,United Kingdom,4222
-2021-01-14,GB,United Kingdom,4100
-2021-01-15,GB,United Kingdom,3677
-2021-01-16,GB,United Kingdom,3938
-2021-01-17,GB,United Kingdom,3748
-2021-01-18,GB,United Kingdom,4062
-2021-01-19,GB,United Kingdom,4160
-2021-01-20,GB,United Kingdom,4043
-2021-01-21,GB,United Kingdom,3633
-2021-01-22,GB,United Kingdom,3391
-2021-01-23,GB,United Kingdom,3112
-2021-01-24,GB,United Kingdom,3109
-2021-01-25,GB,United Kingdom,2929
-2021-01-26,GB,United Kingdom,3147
-2021-01-27,GB,United Kingdom,3057
-2021-01-28,GB,United Kingdom,3042
-2021-01-29,GB,United Kingdom,2685
+2021-01-12,GB,United Kingdom,4583
+2021-01-13,GB,United Kingdom,4224
+2021-01-14,GB,United Kingdom,4103
+2021-01-15,GB,United Kingdom,3683
+2021-01-16,GB,United Kingdom,3941
+2021-01-17,GB,United Kingdom,3750
+2021-01-18,GB,United Kingdom,4063
+2021-01-19,GB,United Kingdom,4161
+2021-01-20,GB,United Kingdom,4049
+2021-01-21,GB,United Kingdom,3636
+2021-01-22,GB,United Kingdom,3392
+2021-01-23,GB,United Kingdom,3116
+2021-01-24,GB,United Kingdom,3112
+2021-01-25,GB,United Kingdom,2931
+2021-01-26,GB,United Kingdom,3151
+2021-01-27,GB,United Kingdom,3058
+2021-01-28,GB,United Kingdom,3046
+2021-01-29,GB,United Kingdom,2687
 2021-01-30,GB,United Kingdom,2472
-2021-01-31,GB,United Kingdom,2403
-2021-02-01,GB,United Kingdom,2599
-2021-02-02,GB,United Kingdom,2481
-2021-02-03,GB,United Kingdom,2358
+2021-01-31,GB,United Kingdom,2407
+2021-02-01,GB,United Kingdom,2602
+2021-02-02,GB,United Kingdom,2483
+2021-02-03,GB,United Kingdom,2360
 2021-02-04,GB,United Kingdom,2142
 2021-02-05,GB,United Kingdom,2005
-2021-02-06,GB,United Kingdom,1891
-2021-02-07,GB,United Kingdom,1847
+2021-02-06,GB,United Kingdom,1893
+2021-02-07,GB,United Kingdom,1851
 2021-02-08,GB,United Kingdom,1920
-2021-02-09,GB,United Kingdom,1754
+2021-02-09,GB,United Kingdom,1755
 2021-02-10,GB,United Kingdom,1725
-2021-02-11,GB,United Kingdom,1678
+2021-02-11,GB,United Kingdom,1679
 2021-02-12,GB,United Kingdom,1507
-2021-02-13,GB,United Kingdom,1426
-2021-02-14,GB,United Kingdom,1534
-2021-02-15,GB,United Kingdom,1501
-2021-02-16,GB,United Kingdom,1492
-2021-02-17,GB,United Kingdom,1409
-2021-02-18,GB,United Kingdom,1336
-2021-02-19,GB,United Kingdom,1271
-2021-02-20,GB,United Kingdom,1087
-2021-02-21,GB,United Kingdom,1155
+2021-02-13,GB,United Kingdom,1427
+2021-02-14,GB,United Kingdom,1535
+2021-02-15,GB,United Kingdom,1502
+2021-02-16,GB,United Kingdom,1493
+2021-02-17,GB,United Kingdom,1411
+2021-02-18,GB,United Kingdom,1338
+2021-02-19,GB,United Kingdom,1272
+2021-02-20,GB,United Kingdom,1091
+2021-02-21,GB,United Kingdom,1157
 2021-02-22,GB,United Kingdom,1119
-2021-02-23,GB,United Kingdom,1119
-2021-02-24,GB,United Kingdom,1020
-2021-02-25,GB,United Kingdom,968
-2021-02-26,GB,United Kingdom,863
-2021-02-27,GB,United Kingdom,741
+2021-02-23,GB,United Kingdom,1120
+2021-02-24,GB,United Kingdom,1022
+2021-02-25,GB,United Kingdom,969
+2021-02-26,GB,United Kingdom,864
+2021-02-27,GB,United Kingdom,742
 2021-02-28,GB,United Kingdom,769
-2021-03-01,GB,United Kingdom,821
+2021-03-01,GB,United Kingdom,823
 2021-03-02,GB,United Kingdom,834
 2021-03-03,GB,United Kingdom,713
 2021-03-04,GB,United Kingdom,704
 2021-03-05,GB,United Kingdom,599
 2021-03-06,GB,United Kingdom,637
 2021-03-07,GB,United Kingdom,535
-2021-03-08,GB,United Kingdom,576
+2021-03-08,GB,United Kingdom,575
 2021-03-09,GB,United Kingdom,579
 2021-03-10,GB,United Kingdom,567
 2021-03-11,GB,United Kingdom,550
 2021-03-12,GB,United Kingdom,480
 2021-03-13,GB,United Kingdom,461
-2021-03-14,GB,United Kingdom,425
-2021-03-15,GB,United Kingdom,500
+2021-03-14,GB,United Kingdom,426
+2021-03-15,GB,United Kingdom,502
 2021-03-16,GB,United Kingdom,440
 2021-03-17,GB,United Kingdom,446
-2021-03-18,GB,United Kingdom,449
-2021-03-19,GB,United Kingdom,381
+2021-03-18,GB,United Kingdom,451
+2021-03-19,GB,United Kingdom,380
 2021-03-20,GB,United Kingdom,364
-2021-03-21,GB,United Kingdom,357
-2021-03-22,GB,United Kingdom,360
-2021-03-23,GB,United Kingdom,366
+2021-03-21,GB,United Kingdom,358
+2021-03-22,GB,United Kingdom,361
+2021-03-23,GB,United Kingdom,367
 2021-03-24,GB,United Kingdom,348
-2021-03-25,GB,United Kingdom,338
+2021-03-25,GB,United Kingdom,340
 2021-03-26,GB,United Kingdom,298
-2021-03-27,GB,United Kingdom,272
+2021-03-27,GB,United Kingdom,273
 2021-03-28,GB,United Kingdom,272
 2021-03-29,GB,United Kingdom,250
 2021-03-30,GB,United Kingdom,256
@@ -5061,35 +5064,35 @@ date,location,location_name,value
 2021-04-01,GB,United Kingdom,234
 2021-04-02,GB,United Kingdom,237
 2021-04-03,GB,United Kingdom,222
-2021-04-04,GB,United Kingdom,196
-2021-04-05,GB,United Kingdom,234
+2021-04-04,GB,United Kingdom,197
+2021-04-05,GB,United Kingdom,237
 2021-04-06,GB,United Kingdom,224
 2021-04-07,GB,United Kingdom,235
 2021-04-08,GB,United Kingdom,207
-2021-04-09,GB,United Kingdom,204
-2021-04-10,GB,United Kingdom,184
-2021-04-11,GB,United Kingdom,202
+2021-04-09,GB,United Kingdom,205
+2021-04-10,GB,United Kingdom,185
+2021-04-11,GB,United Kingdom,203
 2021-04-12,GB,United Kingdom,205
 2021-04-13,GB,United Kingdom,181
 2021-04-14,GB,United Kingdom,196
 2021-04-15,GB,United Kingdom,161
-2021-04-16,GB,United Kingdom,157
+2021-04-16,GB,United Kingdom,158
 2021-04-17,GB,United Kingdom,158
 2021-04-18,GB,United Kingdom,141
 2021-04-19,GB,United Kingdom,177
 2021-04-20,GB,United Kingdom,134
-2021-04-21,GB,United Kingdom,171
+2021-04-21,GB,United Kingdom,172
 2021-04-22,GB,United Kingdom,120
 2021-04-23,GB,United Kingdom,155
 2021-04-24,GB,United Kingdom,129
 2021-04-25,GB,United Kingdom,138
 2021-04-26,GB,United Kingdom,134
 2021-04-27,GB,United Kingdom,166
-2021-04-28,GB,United Kingdom,110
+2021-04-28,GB,United Kingdom,112
 2021-04-29,GB,United Kingdom,101
 2021-04-30,GB,United Kingdom,110
 2021-05-01,GB,United Kingdom,100
-2021-05-02,GB,United Kingdom,119
+2021-05-02,GB,United Kingdom,120
 2021-05-03,GB,United Kingdom,123
 2021-05-04,GB,United Kingdom,101
 2021-05-05,GB,United Kingdom,118
@@ -5103,79 +5106,80 @@ date,location,location_name,value
 2021-05-13,GB,United Kingdom,104
 2021-05-14,GB,United Kingdom,93
 2021-05-15,GB,United Kingdom,90
-2021-05-16,GB,United Kingdom,78
-2021-05-17,GB,United Kingdom,101
+2021-05-16,GB,United Kingdom,80
+2021-05-17,GB,United Kingdom,102
 2021-05-18,GB,United Kingdom,127
-2021-05-19,GB,United Kingdom,125
-2021-05-20,GB,United Kingdom,130
-2021-05-21,GB,United Kingdom,120
+2021-05-19,GB,United Kingdom,126
+2021-05-20,GB,United Kingdom,131
+2021-05-21,GB,United Kingdom,123
 2021-05-22,GB,United Kingdom,120
 2021-05-23,GB,United Kingdom,114
-2021-05-24,GB,United Kingdom,136
+2021-05-24,GB,United Kingdom,138
 2021-05-25,GB,United Kingdom,132
-2021-05-26,GB,United Kingdom,129
-2021-05-27,GB,United Kingdom,124
+2021-05-26,GB,United Kingdom,130
+2021-05-27,GB,United Kingdom,123
 2021-05-28,GB,United Kingdom,138
 2021-05-29,GB,United Kingdom,104
 2021-05-30,GB,United Kingdom,113
 2021-05-31,GB,United Kingdom,123
 2021-06-01,GB,United Kingdom,154
-2021-06-02,GB,United Kingdom,127
-2021-06-03,GB,United Kingdom,125
-2021-06-04,GB,United Kingdom,124
-2021-06-05,GB,United Kingdom,124
+2021-06-02,GB,United Kingdom,128
+2021-06-03,GB,United Kingdom,126
+2021-06-04,GB,United Kingdom,123
+2021-06-05,GB,United Kingdom,125
 2021-06-06,GB,United Kingdom,153
-2021-06-07,GB,United Kingdom,175
-2021-06-08,GB,United Kingdom,189
+2021-06-07,GB,United Kingdom,174
+2021-06-08,GB,United Kingdom,188
 2021-06-09,GB,United Kingdom,189
 2021-06-10,GB,United Kingdom,200
 2021-06-11,GB,United Kingdom,178
 2021-06-12,GB,United Kingdom,178
 2021-06-13,GB,United Kingdom,223
-2021-06-14,GB,United Kingdom,226
-2021-06-15,GB,United Kingdom,228
+2021-06-14,GB,United Kingdom,228
+2021-06-15,GB,United Kingdom,229
 2021-06-16,GB,United Kingdom,227
 2021-06-17,GB,United Kingdom,241
-2021-06-18,GB,United Kingdom,234
+2021-06-18,GB,United Kingdom,235
 2021-06-19,GB,United Kingdom,211
 2021-06-20,GB,United Kingdom,206
 2021-06-21,GB,United Kingdom,228
 2021-06-22,GB,United Kingdom,237
 2021-06-23,GB,United Kingdom,274
-2021-06-24,GB,United Kingdom,250
+2021-06-24,GB,United Kingdom,252
 2021-06-25,GB,United Kingdom,251
 2021-06-26,GB,United Kingdom,266
-2021-06-27,GB,United Kingdom,263
+2021-06-27,GB,United Kingdom,265
 2021-06-28,GB,United Kingdom,308
-2021-06-29,GB,United Kingdom,364
+2021-06-29,GB,United Kingdom,365
 2021-06-30,GB,United Kingdom,414
-2021-07-01,GB,United Kingdom,367
-2021-07-02,GB,United Kingdom,387
+2021-07-01,GB,United Kingdom,368
+2021-07-02,GB,United Kingdom,389
 2021-07-03,GB,United Kingdom,390
-2021-07-04,GB,United Kingdom,461
+2021-07-04,GB,United Kingdom,462
 2021-07-05,GB,United Kingdom,515
-2021-07-06,GB,United Kingdom,572
+2021-07-06,GB,United Kingdom,574
 2021-07-07,GB,United Kingdom,568
 2021-07-08,GB,United Kingdom,602
-2021-07-09,GB,United Kingdom,557
-2021-07-10,GB,United Kingdom,550
+2021-07-09,GB,United Kingdom,555
+2021-07-10,GB,United Kingdom,549
 2021-07-11,GB,United Kingdom,588
-2021-07-12,GB,United Kingdom,726
+2021-07-12,GB,United Kingdom,729
 2021-07-13,GB,United Kingdom,749
-2021-07-14,GB,United Kingdom,748
+2021-07-14,GB,United Kingdom,747
 2021-07-15,GB,United Kingdom,771
-2021-07-16,GB,United Kingdom,693
+2021-07-16,GB,United Kingdom,696
 2021-07-17,GB,United Kingdom,705
-2021-07-18,GB,United Kingdom,793
-2021-07-19,GB,United Kingdom,872
-2021-07-20,GB,United Kingdom,926
-2021-07-21,GB,United Kingdom,923
+2021-07-18,GB,United Kingdom,794
+2021-07-19,GB,United Kingdom,873
+2021-07-20,GB,United Kingdom,927
+2021-07-21,GB,United Kingdom,925
 2021-07-22,GB,United Kingdom,951
 2021-07-23,GB,United Kingdom,854
-2021-07-24,GB,United Kingdom,825
-2021-07-25,GB,United Kingdom,888
-2021-07-26,GB,United Kingdom,874
-2021-07-27,GB,United Kingdom,25
+2021-07-24,GB,United Kingdom,826
+2021-07-25,GB,United Kingdom,932
+2021-07-26,GB,United Kingdom,878
+2021-07-27,GB,United Kingdom,852
+2021-07-28,GB,United Kingdom,37
 2020-04-03,IE,Ireland,56
 2020-04-04,IE,Ireland,54
 2020-04-05,IE,Ireland,56
@@ -5582,77 +5586,6 @@ date,location,location_name,value
 2021-05-11,IE,Ireland,16
 2021-05-12,IE,Ireland,9
 2021-05-13,IE,Ireland,9
-2021-05-17,IE,Ireland,0
-2021-05-18,IE,Ireland,0
-2021-05-19,IE,Ireland,0
-2021-05-20,IE,Ireland,0
-2021-05-21,IE,Ireland,0
-2021-05-22,IE,Ireland,0
-2021-05-23,IE,Ireland,0
-2021-05-24,IE,Ireland,0
-2021-05-25,IE,Ireland,0
-2021-05-26,IE,Ireland,0
-2021-05-27,IE,Ireland,0
-2021-05-28,IE,Ireland,0
-2021-05-29,IE,Ireland,0
-2021-05-30,IE,Ireland,0
-2021-05-31,IE,Ireland,0
-2021-06-01,IE,Ireland,0
-2021-06-02,IE,Ireland,0
-2021-06-03,IE,Ireland,0
-2021-06-04,IE,Ireland,0
-2021-06-05,IE,Ireland,0
-2021-06-06,IE,Ireland,0
-2021-06-07,IE,Ireland,0
-2021-06-08,IE,Ireland,0
-2021-06-09,IE,Ireland,0
-2021-06-10,IE,Ireland,0
-2021-06-11,IE,Ireland,0
-2021-06-12,IE,Ireland,0
-2021-06-13,IE,Ireland,0
-2021-06-14,IE,Ireland,0
-2021-06-15,IE,Ireland,0
-2021-06-16,IE,Ireland,0
-2021-06-17,IE,Ireland,0
-2021-06-18,IE,Ireland,0
-2021-06-19,IE,Ireland,0
-2021-06-20,IE,Ireland,0
-2021-06-21,IE,Ireland,0
-2021-06-22,IE,Ireland,0
-2021-06-23,IE,Ireland,0
-2021-06-24,IE,Ireland,0
-2021-06-25,IE,Ireland,0
-2021-06-26,IE,Ireland,0
-2021-06-27,IE,Ireland,0
-2021-06-28,IE,Ireland,0
-2021-06-29,IE,Ireland,0
-2021-06-30,IE,Ireland,0
-2021-07-01,IE,Ireland,0
-2021-07-02,IE,Ireland,0
-2021-07-03,IE,Ireland,0
-2021-07-04,IE,Ireland,0
-2021-07-05,IE,Ireland,0
-2021-07-06,IE,Ireland,0
-2021-07-07,IE,Ireland,0
-2021-07-08,IE,Ireland,0
-2021-07-09,IE,Ireland,0
-2021-07-10,IE,Ireland,0
-2021-07-11,IE,Ireland,0
-2021-07-12,IE,Ireland,0
-2021-07-13,IE,Ireland,0
-2021-07-14,IE,Ireland,0
 2021-07-15,IE,Ireland,9
 2021-07-16,IE,Ireland,7
-2021-07-17,IE,Ireland,0
-2021-07-18,IE,Ireland,0
-2021-07-19,IE,Ireland,0
-2021-07-20,IE,Ireland,0
-2021-07-21,IE,Ireland,0
-2021-07-22,IE,Ireland,0
-2021-07-23,IE,Ireland,0
-2021-07-24,IE,Ireland,0
-2021-07-25,IE,Ireland,0
-2021-07-26,IE,Ireland,0
-2021-07-27,IE,Ireland,0
-2021-07-28,IE,Ireland,0
-2021-07-29,IE,Ireland,0
+2021-07-29,IE,Ireland,24
