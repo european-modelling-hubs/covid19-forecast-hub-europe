@@ -651,3 +651,15 @@ Latest check of truth data: 2021-07-29 13:26:55
 
 No errors detected.
 
+Latest check of truth data: 2021-07-30 13:26:42
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2021-07-29:
+
+- Negative incidence in the following locations: ['Germany'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Cases.csv' at 2021-07-29:
+
+- Negative incidence in the following locations: ['Germany'].
+
