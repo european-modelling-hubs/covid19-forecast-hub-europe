@@ -101,5 +101,19 @@ eval_team_location %>%
 
 
 
+# Check number of target locations by each team ---------------------------
+# Identify teams which forecast for only one location
+library(covidHubUtils)
+library(dplyr)
+library(here)
 
+all_forecasts <- load_forecasts(hub = "ECDC", 
+                                source = "local_hub_repo",
+                                hub_repo_path = here())
+
+model_locs_n <- all_forecasts %>%
+  distinct(model, location) %>%
+  group_by(model) %>%
+  summarise(n_locs = n()) %>%
+  mutate(n_locs_binary = ifelse(n_locs > 1, "Multiple", "Single"))
 
