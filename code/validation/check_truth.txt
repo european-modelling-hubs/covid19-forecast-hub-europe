@@ -681,3 +681,10 @@ Latest check of truth data: 2021-08-02 13:26:32
 
 No errors detected.
 
+Latest check of truth data: 2021-08-03 13:27:58
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2021-08-02:
+
+- Negative incidence in the following locations: ['Finland'].
+
