@@ -3,15 +3,14 @@ European data status
 
 #### Potential issues in the JHU dataset
 
-As at 2021-08-06 13:15:43
+As at 2021-08-07 13:10:56
 
-| country | created    | updated    | issue                                                                     | message                                             | url                                                      |
-| :------ | :--------- | :--------- | :------------------------------------------------------------------------ | :-------------------------------------------------- | :------------------------------------------------------- |
-| germany | 2021-07-31 | 2021-07-31 | decrease of daily cases for germany 2021-07-29                            | There is a difference of **-4910** daily cases in … | <https://github.com/CSSEGISandData/COVID-19/issues/4454> |
-| germany | 2021-07-30 | 2021-07-30 | incorrect “new cases” data on july 28th for germany                       | Huge difference between the stats for 27th July an… | <https://github.com/CSSEGISandData/COVID-19/issues/4451> |
-| france  | 2021-05-24 | 2021-06-28 | france negative cases may 20                                              | Hello all, Shortly, we will be merging in a PR th…  | <https://github.com/CSSEGISandData/COVID-19/issues/4125> |
-| sweden  | 2021-06-21 | 2021-06-21 | sweden pauses reporting due to security breach                            | Hello all, The following (translated) message is …  | <https://github.com/CSSEGISandData/COVID-19/issues/4264> |
-| spain   | 2021-06-11 | 2021-06-11 | catalonia, spain added backlogged cases (csse\_covid\_19\_daily\_reports) | Hi all, active cases in Catalonia have more than …  | <https://github.com/CSSEGISandData/COVID-19/issues/4219> |
+| country | created    | updated    | issue                                               | message                                             | url                                                      |
+| :------ | :--------- | :--------- | :-------------------------------------------------- | :-------------------------------------------------- | :------------------------------------------------------- |
+| germany | 2021-07-31 | 2021-07-31 | decrease of daily cases for germany 2021-07-29      | There is a difference of **-4910** daily cases in … | <https://github.com/CSSEGISandData/COVID-19/issues/4454> |
+| germany | 2021-07-30 | 2021-07-30 | incorrect “new cases” data on july 28th for germany | Huge difference between the stats for 27th July an… | <https://github.com/CSSEGISandData/COVID-19/issues/4451> |
+| france  | 2021-05-24 | 2021-06-28 | france negative cases may 20                        | Hello all, Shortly, we will be merging in a PR th…  | <https://github.com/CSSEGISandData/COVID-19/issues/4125> |
+| sweden  | 2021-06-21 | 2021-06-21 | sweden pauses reporting due to security breach      | Hello all, The following (translated) message is …  | <https://github.com/CSSEGISandData/COVID-19/issues/4264> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
