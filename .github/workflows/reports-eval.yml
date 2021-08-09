@@ -26,7 +26,18 @@ jobs:
     - name: Create evaluation reports
       run: Rscript 'code/reports/compile-evaluation-reports.r'
 
-    - name: Push to web site
+    - name: Push evaluation csv
+      env:
+        AUTH: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config user.email "action@github.com"
+        git config user.name "GitHub Action - evaluation csv"
+        git add evaluation/*
+        git diff-index --quiet HEAD || git commit -m "Upload evaluation csv"
+        git push
+        echo "pushed to github"
+
+    - name: Push HTML reports to web site
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
