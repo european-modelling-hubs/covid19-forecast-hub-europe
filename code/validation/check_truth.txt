@@ -720,3 +720,10 @@ Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-
 
 - Negative incidence in the following locations: ['Czechia'].
 
+Latest check of truth data: 2021-08-09 13:12:01
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2021-08-08:
+
+- Negative incidence in the following locations: ['Switzerland'].
+
