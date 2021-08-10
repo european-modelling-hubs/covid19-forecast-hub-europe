@@ -35,6 +35,17 @@ truth <- anti_join(raw_truth, anomalies) %>%
   mutate(model = NULL) %>%
   rename(true_value = value)
 
+# remove forecasts made directly after a data anomaly
+forecasts <- raw_forecasts %>%
+  mutate(previous_end_date = forecast_date - 2) %>%
+  left_join(anomalies %>%
+              rename(previous_end_date = target_end_date),
+            by = c("target_variable",
+                   "location", "location_name",
+                   "previous_end_date")) %>%
+  filter(is.na(anomaly)) %>%
+  select(-anomaly, -previous_end_date)
+
 data <- scoringutils::merge_pred_and_obs(forecasts, truth,
                                          join = "full")
 
