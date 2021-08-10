@@ -69,6 +69,7 @@ for (chr_report_date in as.character(report_dates)) {
   table <- score_models(
     data,
     report_date,
+    restrict_weeks = 4,
     quantiles = get_hub_config("forecast_type")$quantiles
   )
 
