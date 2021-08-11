@@ -36,7 +36,7 @@ truth <- anti_join(raw_truth, anomalies) %>%
   rename(true_value = value)
 
 # remove forecasts made directly after a data anomaly
-forecasts <- raw_forecasts %>%
+forecasts <- forecasts %>%
   mutate(previous_end_date = forecast_date - 2) %>%
   left_join(anomalies %>%
               rename(previous_end_date = target_end_date),
