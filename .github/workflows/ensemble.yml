@@ -18,6 +18,8 @@ jobs:
       run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
 
     - name: Install R dependencies
+      env:
+        AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
        Rscript -e 'install.packages(c("here", "vroom", "dplyr", "tibble", "lubridate", "devtools", "cNORM", "yaml"))'
        Rscript -e 'devtools::install_github("reichlab/covidHubUtils")'
