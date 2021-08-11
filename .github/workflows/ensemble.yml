@@ -10,6 +10,7 @@ jobs:
     if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
     env:
       RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - uses: actions/checkout@master
     - uses: r-lib/actions/setup-r@v1
@@ -18,11 +19,9 @@ jobs:
       run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
 
     - name: Install R dependencies
-      env:
-        AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
-       Rscript -e 'install.packages(c("here", "vroom", "dplyr", "tibble", "lubridate", "devtools", "cNORM", "yaml"))'
-       Rscript -e 'devtools::install_github("reichlab/covidHubUtils")'
+       Rscript -e 'install.packages(c("here", "vroom", "dplyr", "tibble", "lubridate", "remotes", "cNORM", "yaml"))'
+       Rscript -e 'remotes::install_github("reichlab/covidHubUtils")'
 
     - name: Create ensembles
       run: Rscript 'code/ensemble/EuroCOVIDhub/create-weekly-ensemble.R'
