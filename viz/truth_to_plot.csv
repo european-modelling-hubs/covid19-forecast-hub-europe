@@ -336,7 +336,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2020-04-04,ES,Spain,52933,5965,20638
 2020-04-04,FI,Finland,715,16,NA
 2020-04-04,FR,France,9321,5237,24514
-2020-04-04,GB,United Kingdom,30359,3810,21215
+2020-04-04,GB,United Kingdom,30359,3810,21216
 2020-04-04,GR,Greece,612,36,NA
 2020-04-04,HR,Croatia,469,7,NA
 2020-04-04,HU,Hungary,335,21,NA
@@ -656,7 +656,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2020-06-13,ES,Spain,2295,1,274
 2020-06-13,FI,Finland,123,3,NA
 2020-06-13,FR,France,2713,252,828
-2020-06-13,GB,United Kingdom,7079,774,3048
+2020-06-13,GB,United Kingdom,7079,774,3047
 2020-06-13,GR,Greece,132,3,NA
 2020-06-13,HR,Croatia,4,3,2
 2020-06-13,HU,Hungary,74,14,NA
@@ -1584,7 +1584,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-01-02,ES,Spain,73314,1013,5657
 2021-01-02,FI,Finland,1783,37,NA
 2021-01-02,FR,France,91016,2346,7477
-2021-01-02,GB,United Kingdom,343784,4165,22287
+2021-01-02,GB,United Kingdom,343784,4165,22286
 2021-01-02,GR,Greece,4595,368,NA
 2021-01-02,HR,Croatia,7950,403,1547
 2021-01-02,HU,Hungary,11326,830,NA
@@ -2384,7 +2384,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-06-26,ES,Spain,25021,127,1057
 2021-06-26,FI,Finland,720,2,NA
 2021-06-26,FR,France,10765,214,984
-2021-06-26,GB,United Kingdom,96843,119,1713
+2021-06-26,GB,United Kingdom,96843,119,1714
 2021-06-26,GR,Greece,2575,109,NA
 2021-06-26,HR,Croatia,492,28,107
 2021-06-26,HU,Hungary,482,30,NA
@@ -2416,7 +2416,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-07-03,ES,Spain,51405,132,1308
 2021-07-03,FI,Finland,1383,4,NA
 2021-07-03,FR,France,13336,186,816
-2021-07-03,GB,United Kingdom,161805,118,2499
+2021-07-03,GB,United Kingdom,161805,118,2500
 2021-07-03,GR,Greece,4677,73,NA
 2021-07-03,HR,Croatia,574,18,78
 2021-07-03,HU,Hungary,287,12,NA
@@ -2448,7 +2448,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-07-10,ES,Spain,103324,92,2064
 2021-07-10,FI,Finland,1572,3,NA
 2021-07-10,FR,France,22628,149,815
-2021-07-10,GB,United Kingdom,210277,192,3825
+2021-07-10,GB,United Kingdom,210277,192,3827
 2021-07-10,GR,Greece,11998,53,NA
 2021-07-10,HR,Croatia,587,12,89
 2021-07-10,HU,Hungary,240,12,NA
@@ -2480,7 +2480,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-07-17,ES,Spain,163030,93,3534
 2021-07-17,FI,Finland,2032,3,NA
 2021-07-17,FR,France,44321,123,1198
-2021-07-17,GB,United Kingdom,296447,284,4988
+2021-07-17,GB,United Kingdom,296447,284,4991
 2021-07-17,GR,Greece,18409,53,NA
 2021-07-17,HR,Croatia,720,9,76
 2021-07-17,HU,Hungary,288,11,NA
@@ -2512,7 +2512,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-07-24,ES,Spain,180207,125,5212
 2021-07-24,FI,Finland,2636,1,NA
 2021-07-24,FR,France,119095,117,1826
-2021-07-24,GB,United Kingdom,282920,447,6158
+2021-07-24,GB,United Kingdom,282920,447,6164
 2021-07-24,GR,Greece,18612,50,NA
 2021-07-24,HR,Croatia,1008,9,90
 2021-07-24,HU,Hungary,376,5,NA
@@ -2544,7 +2544,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-07-31,ES,Spain,166615,265,5224
 2021-07-31,FI,Finland,4190,4,NA
 2021-07-31,FR,France,142476,223,3354
-2021-07-31,GB,United Kingdom,187268,524,5856
+2021-07-31,GB,United Kingdom,187268,524,5861
 2021-07-31,GR,Greece,18938,74,NA
 2021-07-31,HR,Croatia,1119,14,136
 2021-07-31,HU,Hungary,390,6,NA
@@ -2565,7 +2565,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-07-31,SI,Slovenia,596,2,14
 2021-07-31,SK,Slovakia,388,6,NA
 2021-08-07,AT,Austria,3473,13,NA
-2021-08-07,BE,Belgium,12011,27,297
+2021-08-07,BE,Belgium,12011,27,295
 2021-08-07,BG,Bulgaria,2819,39,NA
 2021-08-07,CH,Switzerland,6303,11,NA
 2021-08-07,CY,Cyprus,4174,19,NA
@@ -2576,7 +2576,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-08-07,ES,Spain,141088,520,3617
 2021-08-07,FI,Finland,4083,2,NA
 2021-08-07,FR,France,143920,240,4646
-2021-08-07,GB,United Kingdom,185724,627,5110
+2021-08-07,GB,United Kingdom,185724,627,5313
 2021-08-07,GR,Greece,19038,91,NA
 2021-08-07,HR,Croatia,1217,12,NA
 2021-08-07,HU,Hungary,364,7,NA
