@@ -32,7 +32,8 @@ models_to_exclude = [k for k,v in metadata.items() if (v['team_model_designation
 models = [m for m in models if m not in models_to_exclude]
 
 VALID_TARGETS = [f"{_} wk ahead inc death" for _ in range(1, 5)] + \
-                [f"{_} wk ahead inc case" for _ in range(1, 5)]
+                [f"{_} wk ahead inc case" for _ in range(1, 5)] + \
+                [f"{_} wk ahead inc hosp" for _ in range(1, 5)]
 
 VALID_QUANTILES = [0.025, 0.25, 0.75, 0.975]
 
@@ -107,6 +108,8 @@ def createForecastDataItem(row):
         target_type = 'death'
     elif (target == 'inc case'):
         target_type = 'cases'
+    elif (target == 'inc hosp'):
+        target_type = 'hosp'
     else:
         raise NameError('Invalid target')
     
