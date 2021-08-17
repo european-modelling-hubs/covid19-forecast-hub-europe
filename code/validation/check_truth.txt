@@ -766,3 +766,15 @@ Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-
 
 - Negative incidence in the following locations: ['France'].
 
+Latest check of truth data: 2021-08-17 13:11:56
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2021-08-16:
+
+- Negative incidence in the following locations: ['France'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Cases.csv' at 2021-08-16:
+
+- Negative incidence in the following locations: ['France'].
+
