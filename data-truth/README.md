@@ -3,7 +3,7 @@ European data status
 
 #### Potential issues in the JHU dataset
 
-As at 2021-08-21 13:10:35
+As at 2021-08-22 13:10:34
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
