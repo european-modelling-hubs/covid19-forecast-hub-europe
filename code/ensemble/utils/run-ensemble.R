@@ -71,7 +71,7 @@ run_ensemble <- function(method = "mean",
     load_forecasts(source = "local_hub_repo",
                    hub_repo_path = here(),
                    hub = "ECDC",
-                   forecast_dates = forecast_dates,
+                   dates = forecast_dates,
                    verbose = FALSE))
 
   if (verbose) {message(paste0(

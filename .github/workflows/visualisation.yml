@@ -8,6 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
+    env:
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - uses: actions/checkout@master
       with:
@@ -17,15 +20,22 @@ jobs:
       with:
         python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
-    - name: Install requirenments
+    - name: Install python requirements
       run: |
         pip3 install -r github-actions/viz_requirements.txt
-    - name: Visualization
+    - name: Setup R
+      uses: r-lib/actions/setup-r@v1
+    - name: Install R requirements
+      run: |
+        install.packages(c("dplyr", "here", "readr", "lubridate"))
+      shell: Rscript {0}
+    - name: Visualization (python)
       run: |
         cp data-locations/locations_eu.csv viz/location_codes.csv
-        python3 ./viz/prepare_truth_data.py
         python3 ./viz/prepare_metadata.py
         python3 ./viz/prepare_forecast_data.py
+    - name: Visualization (R)
+      run: Rscript viz/prepare_truth_data.R
     - name: Commit files
       env:
         AUTH: ${{ secrets.GITHUBTOKEN }}
