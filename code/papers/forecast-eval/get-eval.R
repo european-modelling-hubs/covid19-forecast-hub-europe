@@ -3,10 +3,11 @@ library(here)
 library(purrr)
 library(readr)
 library(dplyr)
+library(tidyr)
 library(ggplot2)
 library(covidHubUtils)
 
-figure_path <- here("code", "exploratory", "/")
+file_path <- here("code", "papers", "forecast-eval", "/")
 
 # model designations
 source(here("code", "ensemble", "utils", "get_model_designations.r"))
@@ -27,9 +28,10 @@ eval <- read_csv(here("evaluation",
   mutate(target_variable_neat = recode(target_variable,
                                        "inc case" = "Cases",
                                        "inc death" = "Deaths")) %>%
-  left_join(read_csv(here("code", "exploratory", "model-abbr-3.csv")), 
+  left_join(read_csv(paste0(file_path, "model-abbr-3.csv")), 
             by = "model") %>%
   select(model_abbr = abbr, everything()) %>%
   filter(!model %in% filter(model_desig, designation == "other")$model)
 
-h2_eval <- filter(eval, horizon == 2)
+h1_eval <- filter(eval, horizon == 1)
+h1h2_eval <- filter(eval, horizon %in% c(1,2))
