@@ -3,14 +3,13 @@ European data status
 
 #### Potential issues in the JHU dataset
 
-As at 2021-08-23 13:11:27
+As at 2021-08-24 13:11:11
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
-| country | created    | updated    | issue                        | message                                            | url                                                      |
-| :------ | :--------- | :--------- | :--------------------------- | :------------------------------------------------- | :------------------------------------------------------- |
-| france  | 2021-05-24 | 2021-06-28 | france negative cases may 20 | Hello all, Shortly, we will be merging in a PR th… | <https://github.com/CSSEGISandData/COVID-19/issues/4125> |
+| country | created | updated | issue | message | url |
+| :------ | :------ | :------ | :---- | :------ | :-- |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
