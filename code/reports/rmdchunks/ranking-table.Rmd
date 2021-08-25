@@ -16,7 +16,7 @@ render <- JS(
 if (nrow(df) > 0) {
   df <- df %>%
     select(model, n, n_loc, rel_wis, rel_ae, cov_50, cov_95, bias)
-  if (all(df$n_loc == 1)) {
+  if (all(df$n_loc == 1L)) {
     df <- df %>%
       select(-n_loc)
   }
