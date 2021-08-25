@@ -36,9 +36,11 @@ for (forecast_date in as.character(forecast_dates)) {
       filter_truth <- list(paste0("target_end_date > '", as.Date(forecast_date) - 7 * 10, "'"), 
                            paste0("target_end_date <= '", as.Date(forecast_date) + 7 * 4, "'"))
       filter_forecasts <- list(paste0("forecast_date == '", as.Date(forecast_date), "'"))
+      plot_data <- data %>%
+        mutate(across(c("true_value", "prediction"), ~ .x / population * 1e+5))
       
       plot <- scoringutils::plot_predictions(
-        data,
+        plot_data,
         x = "target_end_date",
         filter_both = filter_both,
         filter_truth = filter_truth,
@@ -49,7 +51,8 @@ for (forecast_date in as.character(forecast_dates)) {
         scales = "free_y") + 
         ggplot2::theme(legend.position = "bottom", 
                        strip.placement = "outside") + 
-        scale_y_continuous(labels = scales::comma) + 
+        scale_y_continuous("True and predicted values per week per 100,000",
+                           labels = scales::comma) +
         expand_limits(y = 0) +
         # Make sure negative values for cases/deaths are not displayed
         coord_cartesian(ylim = c(0, NA)) +
