@@ -148,6 +148,6 @@ table <- score_df %>%
   mutate(location_name =
            if_else(location == "Overall", "Overall", location_name)) %>%
   mutate(across(c("interval_score", "sharpness",
-                  "underprediction", "overprediction"), round)) %>%
+                  "underprediction", "overprediction", "ae"), round)) %>%
   mutate(across(c("bias", "rel_wis", "rel_ae", "cov_50", "cov_95"), round, 2))
 ```
