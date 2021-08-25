@@ -38,7 +38,7 @@ wis_plot <- wis %>%
 wis_4wk <- wis_plot +
   labs(caption = "Not showing relative absolute error > 3 (n=3)")
 ggsave(height = 6, width = 6,
-       filename = paste0(file_path, "/eval-wis-4wk.png"), 
+       filename = paste0(file_path, "/figures/eval-wis-4wk.png"), 
        plot = wis_4wk)
 
 # Show only horizons 1 & 2
@@ -47,5 +47,5 @@ wis_2wk_data <- wis_plot$data %>%
 wis_2wk <- wis_plot
 wis_2wk$data <- wis_2wk_data
 ggsave(height = 6, width = 6,
-       filename = paste0(file_path, "/eval-wis-2wk.png"), 
+       filename = paste0(file_path, "/figures/eval-wis-2wk.png"), 
        plot = wis_2wk)

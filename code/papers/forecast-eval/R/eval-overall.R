@@ -19,7 +19,7 @@ h1_overall %>%
   facet_wrap(~ target_variable_neat, scales = "free_x") +
   theme_bw() +
   theme(legend.position = "none")
-ggsave(paste0(file_path, "/eval-overall-rae-models.png"))
+ggsave(paste0(file_path, "/figures/eval-overall-rae-models.png"))
 
 # Overall relative skill --------------------------------------------------
 # Models against baseline, overall relative skill, by target

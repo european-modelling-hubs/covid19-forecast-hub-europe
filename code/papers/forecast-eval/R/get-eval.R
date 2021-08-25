@@ -38,7 +38,7 @@ eval <- read_csv(here("evaluation",
     # ensure scores are numeric
     across(interval_score:n, as.numeric)) %>%
   # add 3 letter model abbreviation
-  left_join(read_csv(paste0(file_path, "model-abbr-3.csv")), by = "model") %>%
+  left_join(read_csv(paste0(file_path, "/data/model-abbr-3.csv")), by = "model") %>%
   select(model_abbr = abbr, everything()) %>%
   # remove models designated "other"
   filter(!model %in% filter(model_desig, designation == "other")$model)

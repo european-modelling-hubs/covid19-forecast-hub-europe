@@ -36,7 +36,7 @@ ae_plot <- ae %>%
 ae_4wk <- ae_plot +
   labs(caption = "Not showing relative absolute error > 3 (n=3)")
 ggsave(height = 6, width = 6,
-       filename = paste0(file_path, "/eval-rae-4wk.png"), 
+       filename = paste0(file_path, "/figures/eval-rae-4wk.png"), 
        plot = ae_4wk)
 
 # Show only horizons 1 & 2
@@ -45,7 +45,7 @@ ae_2wk_data <- ae_plot$data %>%
 ae_2wk <- ae_plot
 ae_2wk$data <- ae_2wk_data
 ggsave(height = 6, width = 6,
-       filename = paste0(file_path, "/eval-rae-2wk.png"), 
+       filename = paste0(file_path, "/figures/eval-rae-2wk.png"), 
        plot = ae_2wk)
 
 # wis ---------------------------------------------------------------------
@@ -85,7 +85,7 @@ wis_plot <- wis %>%
 wis_4wk <- wis_plot +
   labs(caption = "Not showing relative absolute error > 3 (n=3)")
 ggsave(height = 6, width = 6,
-       filename = paste0(file_path, "/eval-rel-wis-4wk.png"), 
+       filename = paste0(file_path, "/figures/eval-rel-wis-4wk.png"), 
        plot = wis_4wk)
 
 # Show only horizons 1 & 2
@@ -94,5 +94,5 @@ wis_2wk_data <- wis_plot$data %>%
 wis_2wk <- wis_plot
 wis_2wk$data <- wis_2wk_data
 ggsave(height = 6, width = 6,
-       filename = paste0(file_path, "/eval-rel-wis-2wk.png"), 
+       filename = paste0(file_path, "/figures/eval-rel-wis-2wk.png"), 
        plot = wis_2wk)

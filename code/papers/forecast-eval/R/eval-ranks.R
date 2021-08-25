@@ -49,7 +49,7 @@ rank_long %>%
        y = NULL) +
   theme_bw() +
   theme(legend.position = "bottom")
-ggsave(filename = paste0(file_path, "eval-ranks.png"),
+ggsave(filename = paste0(file_path, "/figures/eval-ranks.png"),
        height = 6, width = 6)
 
 # - this just shows the models which forecast for the most number of places
@@ -58,7 +58,15 @@ ggsave(filename = paste0(file_path, "eval-ranks.png"),
 # How does the composition of the best performing models change across 
 #  different stratifications?
 
+# check-mae-score.R
+models <- model_desig %>%
+  filter(designation != "other") %>% 
+  pull(model)
 
-
-
+targets <- score_df %>%
+  distinct(model, horizon, location, target_variable) %>%
+  mutate(horizon = as.numeric(horizon),
+         present_in_forecast = 1) %>%
+  filter(model %in% models & 
+           horizon <= 4)
 

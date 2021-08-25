@@ -1,7 +1,7 @@
 # Get latest evaluation scores
-source(here::here("code", "papers", "forecast-eval", "get-eval.R"))
+source(here::here("code", "papers", "forecast-eval", "R", "get-eval.R"))
 # get absolute MAE
-source(here::here("code", "papers", "forecast-eval", "check-mae-scores.R"))
+source(here::here("code", "papers", "forecast-eval", "R", "check-mae-scores.R"))
 # join
 abs_wis <- left_join(eval, 
                           rel_ae %>% 

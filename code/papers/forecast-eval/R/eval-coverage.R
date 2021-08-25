@@ -26,7 +26,7 @@ h1_cov50 %>%
   facet_wrap(~ target_variable_neat)
 
  ggsave(height = 6, width = 6,
-        filename = paste0(file_path, "eval-coverage.png"))
+        filename = paste0(file_path, "/figures/eval-coverage.png"))
 
 
 # 95 and 50 coverage ------------------------------------------------------
@@ -57,4 +57,4 @@ h1_cov50 %>%
 #         strip.background = element_blank()) +
 #   facet_grid(rows = vars(cov_level), cols = vars(target_variable_neat))
 # 
-# ggsave(paste0(file_path, "eval-cov.png"))
+# ggsave(paste0(file_path, "/figures/eval-cov.png"))

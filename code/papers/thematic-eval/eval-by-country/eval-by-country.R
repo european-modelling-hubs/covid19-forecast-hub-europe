@@ -32,14 +32,13 @@ eval <- read_csv(here("evaluation", "evaluation-2021-07-19.csv")) %>%
 # # re-written to csv
 
 # categorise locations and drop EpiExpert
-countries <- read_csv(here("code", "exploratory", 
+countries <- read_csv(here("code", "papers", "thematic-eval", 
                            "eval-by-country", "team-country-institution.csv")) %>%
   left_join(covidHubUtils::hub_locations_ecdc, 
             by = c("country" = "location_name")) %>%
   mutate(location = case_when(country == "UK" ~ "GB",
                               is.na(location) ~ "nonEuro",
                               TRUE ~ location)) %>%
-  filter(!model_abbr == "epiforecasts-EpiExpert") %>%
   select(team_name, model_abbr, 
          team_location = location)
 

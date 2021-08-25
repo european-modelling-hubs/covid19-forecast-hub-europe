@@ -1,0 +1,50 @@
+---
+title: "Guide to code"
+author: "K Sherratt"
+date: "25/08/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+All code is written in R and designed with the European hub repo as the root directory.
+
+First set a common file path to this folder to avoid navigating through the whole hub repository:
+```{r eval=FALSE}
+file_path <- here::here("code", "papers", "forecast-eval")
+```
+
+## Data access
+
+To access the raw dataset of forecasts used here, use:
+```{r eval=FALSE}
+source(here::here(file_path, "R", "get-forecasts.R"))
+```
+
+To access the evaluation scores used here, use:
+```{r eval=FALSE}
+source(here::here(file_path, "R", "get-eval.R"))
+```
+
+Anonymous responses to the survey are saved in an excel file: `data/survey-responses.xlsx`
+
+## Generate results
+
+### Description of forecasts
+Code to support description of the forecast models by various stratifications (team, locations, horizons, variable):
+```{r eval=FALSE}
+here::here(file_path, "R", "forecast-description.R")
+```
+
+### Forecast scoring
+All evaluation scores were originally created using a linked set of RMarkdown files to generate weekly reports as well as saving a csv of forecast scores. To make this more accessible, here is a simplified version of the same code to demonstrate how the full routine works to produce evaluation scores. This example replicates how the forecasts are loaded, combined with truth data, and produces the scores for relative and absolute mean error.  
+```{r eval=FALSE}
+here::here(file_path, "R", "check-mae-score.R")
+```
+The full, original code to create the evaluation scores is saved under: `here::here("code", "reports", "evaluation")`. 
+
+### Summarising forecast scores
+
+...

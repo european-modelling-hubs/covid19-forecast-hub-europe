@@ -45,10 +45,8 @@ ae_by_loc_plot <- ae_by_loc_abs %>%
 
 
 
-
 # Relative AE by location
 ae_by_loc_rel <- eval_all_locs %>%
-  filter(location != "Overall") %>%
   mutate(var = rel_ae) %>%
   group_by(location, target_variable_neat, horizon) %>%
   summarise(var.mean = mean(var, na.rm = TRUE),
@@ -79,7 +77,7 @@ ae_by_loc_plot <- ae_by_loc %>%
 # Show all 4 horizons
 ae_by_loc_4wk <- ae_by_loc_plot
 ggsave(height = 6, width = 6,
-       filename = paste0(file_path, "/eval-location-ae-4wk.png"), 
+       filename = paste0(file_path, "figures/eval-location-ae-4wk.png"), 
        plot = ae_by_loc_4wk)
 
 # Show only horizons 1 & 2
@@ -88,7 +86,12 @@ ae_by_loc_2wk_data <- ae_by_loc_plot$data %>%
 ae_by_loc_2wk <- ae_by_loc_plot
 ae_by_loc_2wk$data <- ae_by_loc_2wk_data
 ggsave(height = 6, width = 6,
-       filename = paste0(file_path, "/eval-location-ae-2wk.png"), 
+       filename = paste0(file_path, "figures/eval-location-ae-2wk.png"), 
        plot = ae_by_loc_2wk)
 
+# Bias by location --------------------------------------------------------
+eval_bias_loc <- eval_all_locs %>%
+  filter(horizon == 1) %>%
+  group_by(target_variable, location) %>%
+  summarise(bias = mean(bias, na.rm = TRUE))
 
