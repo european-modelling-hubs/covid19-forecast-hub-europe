@@ -20,6 +20,7 @@ jobs:
 
     - name: Install R dependencies
       run: Rscript -e 'install.packages(c("curl", "R.utils", "here", "readr", "lubridate", "dplyr", "tidyr", "ISOweek", "stringi"))'
+        remotes::install_github("reichlab/covidHubUtils")
 
     - name: ECDC Truth
       run: Rscript 'code/auto_download/ecdc_download.r'
