@@ -3,13 +3,14 @@ European data status
 
 #### Potential issues in the JHU dataset
 
-As at 2021-08-24 13:11:11
+As at 2021-08-26 13:12:34
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
-| country | created | updated | issue | message | url |
-| :------ | :------ | :------ | :---- | :------ | :-- |
+| country     | created    | updated    | issue                                            | message                                            | url                                                      |
+| :---------- | :--------- | :--------- | :----------------------------------------------- | :------------------------------------------------- | :------------------------------------------------------- |
+| switzerland | 2021-08-25 | 2021-08-25 | switzerland deaths revised until august 15, 2021 | Hello all, Due to small historical errors we had … | <https://github.com/CSSEGISandData/COVID-19/issues/4560> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
