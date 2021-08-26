@@ -20,7 +20,7 @@ jobs:
 
     - name: Install R dependencies
       run: |
-        install.packages(c("curl", "R.utils", "here", "readr", "lubridate", "dplyr", "tidyr", "ISOweek", "stringi"))
+        install.packages(c("curl", "R.utils", "here", "readr", "lubridate", "dplyr", "tidyr", "ISOweek", "stringi", "remotes"))
         remotes::install_github("reichlab/covidHubUtils")
       shell: Rscript {0}
 
