@@ -33,7 +33,7 @@ jobs:
         git config user.email "action@github.com"
         git config user.name "GitHub Action - ECDC"
         git add --all
-        git commit -m "ECDC - daily"
+        git commit -m "ECDC - daily" || echo "No changes to commit"
         git push
         echo "pushed to github"
       env:
