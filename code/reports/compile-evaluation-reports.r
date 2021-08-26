@@ -6,7 +6,7 @@ library(scoringutils)
 library(rmarkdown)
 library(covidHubUtils)
 library(lubridate)
-source(here("code", "config_utils", "get_hub_config.R"))
+library(EuroForecastHub)
 
 options(knitr.duplicate.label = "allow")
 

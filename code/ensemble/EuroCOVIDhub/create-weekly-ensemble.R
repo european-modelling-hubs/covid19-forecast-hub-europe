@@ -5,9 +5,7 @@ library(dplyr)
 library(lubridate)
 library(here)
 library(tibble)
-
-source(here("code", "ensemble", "utils", "run-ensemble.R"))
-source(here("code", "config_utils", "get_hub_config.R"))
+library(EuroForecastHub)
 
 # Set up ----------------------------------------------------------------
 # Get method
