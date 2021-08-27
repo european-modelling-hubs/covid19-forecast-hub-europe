@@ -97,7 +97,7 @@ df <- lapply(data_types, function(x) {
   select(scenario_id, forecast_date = fcst_date, target,
          target_end_date = end_date, location, type, quantile, value)
 
-combined <- add_point_forecasts(df)
+combined <- EuroForecastHub::add_point_forecasts(df)
 
 forecast_submission_date <-
   unique(df$forecast_date)
