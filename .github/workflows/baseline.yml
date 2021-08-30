@@ -23,7 +23,7 @@ jobs:
        install.packages(c("dplyr", "purrr", "lubridate", "yaml", "here", "readr", "remotes"))
        remotes::install_github("reichlab/covidModels/R-package")
        remotes::install_github("reichlab/covidHubUtils")
-       remotes::install_github("epiforecasts/EuroForecastHub")
+       remotes::install_github("epiforecasts/EuroForecastHu")
       shell: Rscript {0}
 
     - name: Create ensembles
