@@ -21,7 +21,7 @@ forecast_date <- today()
 
 raw_truth <- covidHubUtils::load_truth(
   truth_source = "JHU",
-  target_variable = hub_targets,
+  temporal_resolution = "weekly",
   truth_end_date = forecast_date - 1,
   hub = "ECDC"
 )
