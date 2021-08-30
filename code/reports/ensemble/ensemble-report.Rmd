@@ -23,6 +23,7 @@ library(covidHubUtils)
 library(lubridate)
 library(here)
 library(readr)
+library(EuroForecastHub)
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE,
                       warning = FALSE)
@@ -32,7 +33,6 @@ include_forecast_plot <- TRUE
 
 restrict_weeks <- params$restrict_weeks
 
-source(here("code", "config_utils", "get_hub_config.R"))
 data_types <- get_hub_config("target_variables")
 
 report_date <- params$report_date

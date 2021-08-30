@@ -19,7 +19,10 @@ jobs:
       run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
 
     - name: Install R dependencies
-      run: Rscript -e 'install.packages(c("curl", "R.utils", "here", "readr", "lubridate", "dplyr", "tidyr", "ISOweek", "stringi"))'
+      run: |
+        install.packages(c("curl", "R.utils", "here", "readr", "lubridate", "dplyr", "tidyr", "ISOweek", "stringi", "remotes"))
+        remotes::install_github("reichlab/covidHubUtils")
+      shell: Rscript {0}
 
     - name: ECDC Truth
       run: Rscript 'code/auto_download/ecdc_download.r'
@@ -33,7 +36,7 @@ jobs:
         git config user.email "action@github.com"
         git config user.name "GitHub Action - ECDC"
         git add --all
-        git commit -m "ECDC - daily"
+        git commit -m "ECDC - daily" || echo "No changes to commit"
         git push
         echo "pushed to github"
       env:

@@ -7,10 +7,11 @@ library("stringi")
 library("lubridate")
 library("R.utils")
 library("curl")
+library("covidHubUtils")
 
 cat("Downloading ECDC data\n")
 
-locations <- read_csv(here("data-locations", "locations_eu.csv")) %>%
+locations <- covidHubUtils::hub_locations_ecdc %>%
   select(location, location_name)
 
 # Case and death data
@@ -21,29 +22,13 @@ file_base <- "truth_ECDC-Incident"
 
 if (!dir.exists(ecdc_dir)) dir.create(ecdc_dir, recursive = TRUE)
 
-df <-
-  read_csv("https://opendata.ecdc.europa.eu/covid19/nationalcasedeath/csv",
-               col_types = ct) %>%
-  inner_join(locations, by = c("country" = "location_name")) %>%
-  separate(year_week, c("year", "week"), sep = "-") %>%
-  mutate(week_start = ISOweek2date(paste0(year, "-W", week, "-1"))) %>%
-  mutate(indicator = stri_trans_totitle(indicator)) %>%
-  select(week_start, indicator,
-         location, location_name = country,
-         value = weekly_count) %>%
-  group_by(indicator) %>%
-  group_walk(~ write_csv(.x,
-                           file = file.path(ecdc_dir,
-                                            paste0(file_base, " ",
-                                                   .y$indicator, ".csv"))))
-
 # Hospitalisation data
-ecdc_hosp_filepath <- here("data-truth", "ECDC", 
+ecdc_hosp_filepath <- here("data-truth", "ECDC",
                       paste(file_base, "Hospitalizations.csv")) # covidHubUtils format
 
 R.utils::downloadFile(Sys.getenv("DATA_URL"), # Uses set environment variables
-                      ecdc_hosp_filepath, 
-                      username = Sys.getenv("DATA_USERNAME"), 
+                      ecdc_hosp_filepath,
+                      username = Sys.getenv("DATA_USERNAME"),
                       password = Sys.getenv("DATA_PASSWORD"),
                       skip = FALSE,
                       overwrite = TRUE)
