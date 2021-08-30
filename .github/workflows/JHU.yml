@@ -32,5 +32,6 @@ jobs:
         git config user.name "GitHub Action - JHU"
         git add --all
         git commit -m "JHU - daily"
+        git pull --rebase
         git push
         echo "pushed to github"

@@ -52,5 +52,6 @@ jobs:
         git config user.name "GitHub Action - check truth"
         git add --all
         git commit -m "Check truth data"
+        git pull --rebase
         git push
         echo "pushed to github"

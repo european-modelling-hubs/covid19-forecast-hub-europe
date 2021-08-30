@@ -44,5 +44,6 @@ jobs:
         git config user.name "GitHub Action - Visualisation Update"
         git add --all
         git diff-index --quiet HEAD || git commit -m "Daily Visualisation update"
+        git pull --rebase
         git push
         echo "pushed to github"
