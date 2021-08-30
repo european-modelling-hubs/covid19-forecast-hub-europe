@@ -35,4 +35,5 @@ jobs:
         git config user.name "GitHub Action - LANL"
         git add --all
         git commit -m "LANL - weekly" || echo "No changes to commit"
+        git pull --rebase
         git push
