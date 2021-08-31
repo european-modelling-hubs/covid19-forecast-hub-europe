@@ -39,3 +39,11 @@ jobs:
         user_email: 'action@github.com'
         user_name: 'GitHub Action - ensemble report'
         commit_message: 'Ensemble report'
+
+    - name: Create issue about failure
+      if: failure()
+      uses: JasonEtco/create-an-issue@v2.5.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        filename: .github/action-issue-template.md

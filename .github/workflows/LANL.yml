@@ -35,4 +35,13 @@ jobs:
         git config user.name "GitHub Action - LANL"
         git add --all
         git commit -m "LANL - weekly" || echo "No changes to commit"
+        git pull --rebase
         git push
+
+    - name: Create issue about failure
+      if: failure()
+      uses: JasonEtco/create-an-issue@v2.5.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        filename: .github/action-issue-template.md
