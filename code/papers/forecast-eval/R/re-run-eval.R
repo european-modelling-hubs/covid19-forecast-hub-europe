@@ -12,7 +12,7 @@ library(tidyr)
 library(purrr)
 
 # Set up ------------------------------------------------------------------
-# - code/reports/rmdchunks/load-data.Rmd
+# copied from: code/reports/rmdchunks/load-data.Rmd
 
 report_date <- as.Date("2021-08-23")
 last_forecast_date <- report_date - 7
@@ -118,30 +118,9 @@ score_df <- score_df %>%
   filter(continuous_weeks >= restrict_weeks) %>%
   select(-continuous_weeks)
 
-# Example: score relative and mean absolute error ----------------------------
-# - a simple excerpt of code/reports/rmdchunks/score-forecasts.Rmd
-
-# rel_ae <- score_df %>%
-#   filter(location == "DE" & horizon == "1" & target_variable == "inc death") %>%
-#   filter(type == "point", !is.na(true_value)) %>%
-#   mutate(quantile = NA_real_) %>% ## scoringutils interprets these as point forecasts
-#   eval_forecasts(
-#     summarise_by = c(
-#       "model", "target_variable",
-#       "horizon", "location"
-#     ),
-#     compute_relative_skill = TRUE,
-#     baseline = "EuroCOVIDhub-baseline",
-#     rel_skill_metric = "ae_point"
-#   ) %>%
-#   select(model, target_variable, horizon, location,
-#          rel_ae = scaled_rel_skill,
-#          ae = ae_point) %>%
-#   mutate(across(rel_ae:ae, round, digits = 2))
-
 
 # Full scoring routine ----------------------------------------------------
-# - code/reports/rmdchunks/score-forecasts.Rmd
+# from: code/reports/rmdchunks/score-forecasts.Rmd
 
 ## number of forecasts
 num_fc <- score_df %>%

@@ -6,45 +6,82 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,
+                      eval = FALSE)
+```
+### Generate results
+Results text including numbers and figures can be created with
+```{r results_full}
+rmarkdown::render(here::here("code", "papers", "forecast-eval", "results.Rmd"))
 ```
 
-All code is written in R and designed with the European hub repo as the root directory.
-
-First set a common file path to this folder to avoid navigating through the whole hub repository:
-```{r eval=FALSE}
-file_path <- here::here("code", "papers", "forecast-eval")
-```
-
-## Data access
+### Data access
 
 To access the raw dataset of forecasts used here, use:
-```{r eval=FALSE}
+```{r get-forecasts}
 source(here::here(file_path, "R", "get-forecasts.R"))
 ```
 
 To access the evaluation scores used here, use:
-```{r eval=FALSE}
+```{r get-eval}
 source(here::here(file_path, "R", "get-eval.R"))
 ```
-
 Anonymous responses to the survey are saved in an excel file: `data/survey-responses.xlsx`
 
-## Generate results
+### Analysis
 
-### Description of forecasts
+All code is written in R and designed with the European hub repo as the root directory.
+
+First set a common file path to this folder to avoid navigating through the whole hub repository:
+```{r file-path, eval = TRUE}
+file_path <- here::here("code", "papers", "forecast-eval")
+```
+
+#### Description of forecasts
 Code to support description of the forecast models by various stratifications (team, locations, horizons, variable):
-```{r eval=FALSE}
+
+```{r forecast-description}
 here::here(file_path, "R", "forecast-description.R")
 ```
 
-### Forecast scoring
-All evaluation scores were originally created using a linked set of RMarkdown files to generate weekly reports as well as saving a csv of forecast scores. To make this more accessible, here is a simplified version of the same code to demonstrate how the full routine works to produce evaluation scores. This example replicates how the forecasts are loaded, combined with truth data, and produces the scores for relative and absolute mean error.  
-```{r eval=FALSE}
-here::here(file_path, "R", "check-mae-score.R")
+#### Forecast scoring
+
+Forecasts were scored using the cut off date 2021-08-23. Note that all models are included with a minimum of any four forecasts. This is different from the weekly evaluation, where only models that have submitted in the last four weeks continuously are included. 
+```{r eval_run}
+here::here(file_path, "R", "re-run-eval.R")
 ```
-The full, original code to create the evaluation scores is saved under: `here::here("code", "reports", "evaluation")`. 
 
-### Summarising forecast scores
+See also the weekly code to create the evaluation scores, saved under: `here::here("code", "reports", "evaluation")`. 
 
-...
+#### Score summaries
+
+Describe and plot models' relative AE and get the top ranked models with:
+```{r score-summaries-rel-ae}
+here::here(file_path, "R", "model-relative-ae.R")
+```
+![_Figure: Models by relative AE_](`r dir(here::here(file_path, "figures"), pattern = "-model-relative-ae.png", full.names = TRUE)[1]`)
+
+![_Figure: Number of top ranked models by relative AE_](`r dir(here::here(file_path, "figures"), pattern = "-top-models.png", full.names = TRUE)[1]`)
+
+
+Get and plot coverage with:
+```{r score-summaries-coverage}
+here::here(file_path, "R", "coverage.R")
+```
+![_Figure: Coverage_](`r dir(here::here(file_path, "figures"), pattern = "coverage.png", full.names = TRUE)`)
+
+
+Calculate and plot average score by location with:
+```{r score-summaries-location}
+here::here(file_path, "R", "location-absolute-score.R")
+```
+![_Figure: Average score by location_](`r dir(here::here(file_path, "figures"), pattern = "location-absolute-score.png", full.names = TRUE)`)
+
+
+Load truth data and plot for a single location (here for France) with:
+
+```{r score-summaries-truth}
+here::here(file_path, "R", "plot-single-location.R")
+```
+![_Figure: France: observed and forecast data_](`r dir(here::here(file_path, "figures"), pattern = "forecast-v-true", full.names = TRUE)`)
+
