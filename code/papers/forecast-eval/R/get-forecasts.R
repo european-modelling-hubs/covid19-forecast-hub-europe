@@ -22,7 +22,7 @@ raw_forecasts <- load_forecasts(source = "local_hub_repo",
            remove = FALSE)
 
 # Remove "other" designated models, except baseline
-model_desig <- EuroForecastHub::get_model_designations(hub_repo_path = here()) %>%
+model_desig_other <- EuroForecastHub::get_model_designations(hub_repo_path = here()) %>%
   mutate(designation = case_when(model == "EuroCOVIDhub-baseline" ~ "secondary",
                                  TRUE ~ designation)) %>%
   filter(designation == "other") %>%
