@@ -106,6 +106,8 @@ FIAS_FZJ-Epi1Ger,inc case,DE,TRUE,TRUE,TRUE,TRUE
 FIAS_FZJ-Epi1Ger,inc death,DE,TRUE,TRUE,TRUE,TRUE
 HZI-AgeExtendedSEIR,inc case,DE,TRUE,TRUE,TRUE,TRUE
 HZI-AgeExtendedSEIR,inc death,DE,TRUE,TRUE,TRUE,TRUE
+ICM-agentModel,inc case,PL,TRUE,TRUE,TRUE,TRUE
+ICM-agentModel,inc death,PL,TRUE,TRUE,TRUE,TRUE
 IEM_Health-CovidProject,inc case,AT,TRUE,TRUE,TRUE,TRUE
 IEM_Health-CovidProject,inc case,BE,TRUE,TRUE,TRUE,TRUE
 IEM_Health-CovidProject,inc case,BG,TRUE,TRUE,TRUE,TRUE
