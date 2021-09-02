@@ -73,10 +73,10 @@ here::here(file_path, "R", "model-relative-ae.R")
 ```
 
 ![*Figure: Models by relative
-AE*](C:/Users/kaths/GitHub/covid19-forecast-hub-europe/code/papers/forecast-eval/figures/2021-08-30-model-relative-ae.png)
+AE*](./figures/2021-09-01-model-relative-ae.png)
 
 ![*Figure: Number of top ranked models by relative
-AE*](C:/Users/kaths/GitHub/covid19-forecast-hub-europe/code/papers/forecast-eval/figures/2021-09-01-top-models.png)
+AE*](./figures/2021-09-01-top-models.png)
 
 Get and plot coverage with:
 
@@ -84,8 +84,7 @@ Get and plot coverage with:
 here::here(file_path, "R", "coverage.R")
 ```
 
-![*Figure:
-Coverage*](C:/Users/kaths/GitHub/covid19-forecast-hub-europe/code/papers/forecast-eval/figures/model-coverage.png)
+![*Figure: Coverage*](./figures/model-coverage.png)
 
 Calculate and plot average score by location with:
 
@@ -94,7 +93,7 @@ here::here(file_path, "R", "location-absolute-score.R")
 ```
 
 ![*Figure: Average score by
-location*](C:/Users/kaths/GitHub/covid19-forecast-hub-europe/code/papers/forecast-eval/figures/location-absolute-score.png)
+location*](./figures/location-absolute-score.png)
 
 Load truth data and plot for a single location (here for France) with:
 
@@ -103,4 +102,4 @@ here::here(file_path, "R", "plot-single-location.R")
 ```
 
 ![*Figure: France: observed and forecast
-data*](C:/Users/kaths/GitHub/covid19-forecast-hub-europe/code/papers/forecast-eval/figures/forecast-v-true_france.png)
+data*](./figures/forecast-v-true_france.png)
