@@ -59,23 +59,23 @@ Describe and plot models' relative AE and get the top ranked models with:
 ```{r score-summaries-rel-ae}
 here::here(file_path, "R", "model-relative-ae.R")
 ```
-![_Figure: Models by relative AE_](`r dir(here::here(file_path, "figures"), pattern = "-model-relative-ae.png", full.names = TRUE)[1]`)
+![_Figure: Models by relative AE_](./figures/2021-09-01-model-relative-ae.png)
 
-![_Figure: Number of top ranked models by relative AE_](`r dir(here::here(file_path, "figures"), pattern = "-top-models.png", full.names = TRUE)[1]`)
+![_Figure: Number of top ranked models by relative AE_](./figures/2021-09-01-top-models.png)
 
 
 Get and plot coverage with:
 ```{r score-summaries-coverage}
 here::here(file_path, "R", "coverage.R")
 ```
-![_Figure: Coverage_](`r dir(here::here(file_path, "figures"), pattern = "coverage.png", full.names = TRUE)`)
+![_Figure: Coverage_](./figures/model-coverage.png)
 
 
 Calculate and plot average score by location with:
 ```{r score-summaries-location}
 here::here(file_path, "R", "location-absolute-score.R")
 ```
-![_Figure: Average score by location_](`r dir(here::here(file_path, "figures"), pattern = "location-absolute-score.png", full.names = TRUE)`)
+![_Figure: Average score by location_](./figures/location-absolute-score.png)
 
 
 Load truth data and plot for a single location (here for France) with:
@@ -83,5 +83,5 @@ Load truth data and plot for a single location (here for France) with:
 ```{r score-summaries-truth}
 here::here(file_path, "R", "plot-single-location.R")
 ```
-![_Figure: France: observed and forecast data_](`r dir(here::here(file_path, "figures"), pattern = "forecast-v-true", full.names = TRUE)`)
+![_Figure: France: observed and forecast data_](./figures/forecast-v-true_france.png)
 
