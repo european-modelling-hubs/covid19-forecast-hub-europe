@@ -2,7 +2,7 @@
 title: "Guide to code"
 author: "K Sherratt"
 date: "25/08/2021"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
