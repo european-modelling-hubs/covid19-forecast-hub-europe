@@ -3,14 +3,14 @@ European data status
 
 #### Potential issues in the JHU dataset
 
-As at 2021-09-02 13:11:53
+As at 2021-09-03 13:11:20
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
 | country     | created    | updated    | issue                                                                                       | message                                            | url                                                      |
 | :---------- | :--------- | :--------- | :------------------------------------------------------------------------------------------ | :------------------------------------------------- | :------------------------------------------------------- |
-| france      | 2021-09-01 | 2021-09-01 | upcoming france spike in deaths august 17th due to republication of deaths in nursing homes | Hello all, On August 17th, 2021, the government o… | <https://github.com/CSSEGISandData/COVID-19/issues/4588> |
+| france      | 2021-09-01 | 2021-09-03 | upcoming france spike in deaths august 17th due to republication of deaths in nursing homes | Hello all, On August 17th, 2021, the government o… | <https://github.com/CSSEGISandData/COVID-19/issues/4588> |
 | switzerland | 2021-08-25 | 2021-08-25 | switzerland deaths revised until august 15, 2021                                            | Hello all, Due to small historical errors we had … | <https://github.com/CSSEGISandData/COVID-19/issues/4560> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
