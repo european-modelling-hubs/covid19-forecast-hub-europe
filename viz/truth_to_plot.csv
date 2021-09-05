@@ -2476,7 +2476,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-07-17,CZ,Czechia,1641,5,NA
 2021-07-17,DE,Germany,8089,130,NA
 2021-07-17,DK,Denmark,6845,3,70
-2021-07-17,EE,Estonia,347,1,NA
+2021-07-17,EE,Estonia,347,1,15
 2021-07-17,ES,Spain,163030,93,3640
 2021-07-17,FI,Finland,2032,3,NA
 2021-07-17,FR,France,44321,123,1198
@@ -2508,7 +2508,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-07-24,CZ,Czechia,1517,21,NA
 2021-07-24,DE,Germany,10616,162,NA
 2021-07-24,DK,Denmark,5417,0,73
-2021-07-24,EE,Estonia,561,0,NA
+2021-07-24,EE,Estonia,561,0,21
 2021-07-24,ES,Spain,180207,125,5508
 2021-07-24,FI,Finland,2636,1,NA
 2021-07-24,FR,France,119095,125,1826
@@ -2540,7 +2540,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-07-31,CZ,Czechia,1236,16,NA
 2021-07-31,DE,Germany,14855,135,NA
 2021-07-31,DK,Denmark,5931,7,85
-2021-07-31,EE,Estonia,1189,1,NA
+2021-07-31,EE,Estonia,1189,1,43
 2021-07-31,ES,Spain,166615,265,5672
 2021-07-31,FI,Finland,4190,4,NA
 2021-07-31,FR,France,142476,229,3354
@@ -2572,7 +2572,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-08-07,CZ,Czechia,1150,-10,NA
 2021-08-07,DE,Germany,18885,123,NA
 2021-08-07,DK,Denmark,6158,3,86
-2021-08-07,EE,Estonia,1393,5,NA
+2021-08-07,EE,Estonia,1393,5,44
 2021-08-07,ES,Spain,141088,520,4912
 2021-08-07,FI,Finland,4083,2,NA
 2021-08-07,FR,France,143920,253,4646
@@ -2604,7 +2604,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-08-14,CZ,Czechia,1354,10,NA
 2021-08-14,DE,Germany,28937,85,NA
 2021-08-14,DK,Denmark,6962,7,134
-2021-08-14,EE,Estonia,1840,2,NA
+2021-08-14,EE,Estonia,1840,2,72
 2021-08-14,ES,Spain,105408,464,4112
 2021-08-14,FI,Finland,6111,16,NA
 2021-08-14,FR,France,151528,398,5384
@@ -2620,7 +2620,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-08-14,LU,Luxembourg,333,4,NA
 2021-08-14,LV,Latvia,702,2,NA
 2021-08-14,MT,Malta,499,6,NA
-2021-08-14,NL,Netherlands,16134,39,418
+2021-08-14,NL,Netherlands,16134,39,419
 2021-08-14,NO,Norway,3569,4,35
 2021-08-14,PL,Poland,1209,14,NA
 2021-08-14,PT,Portugal,16133,92,NA
@@ -2636,7 +2636,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-08-21,CZ,Czechia,1298,11,NA
 2021-08-21,DE,Germany,45549,109,NA
 2021-08-21,DK,Denmark,6819,5,183
-2021-08-21,EE,Estonia,1916,2,NA
+2021-08-21,EE,Estonia,1916,2,70
 2021-08-21,ES,Spain,76913,666,3194
 2021-08-21,FI,Finland,4547,11,NA
 2021-08-21,FR,France,134208,563,6128
@@ -2652,7 +2652,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-08-21,LU,Luxembourg,390,2,NA
 2021-08-21,LV,Latvia,895,7,NA
 2021-08-21,MT,Malta,435,6,NA
-2021-08-21,NL,Netherlands,16669,41,401
+2021-08-21,NL,Netherlands,16669,41,400
 2021-08-21,NO,Norway,4020,3,47
 2021-08-21,PL,Poland,1328,17,NA
 2021-08-21,PT,Portugal,16190,81,NA
@@ -2668,7 +2668,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-08-28,CZ,Czechia,1353,17,NA
 2021-08-28,DE,Germany,63490,153,NA
 2021-08-28,DK,Denmark,6605,13,186
-2021-08-28,EE,Estonia,2308,6,NA
+2021-08-28,EE,Estonia,2308,6,99
 2021-08-28,ES,Spain,61356,864,2460
 2021-08-28,FI,Finland,3931,9,NA
 2021-08-28,FR,France,117980,534,5627
@@ -2684,7 +2684,7 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-08-28,LU,Luxembourg,532,0,NA
 2021-08-28,LV,Latvia,1179,5,NA
 2021-08-28,MT,Malta,318,4,NA
-2021-08-28,NL,Netherlands,17967,47,410
+2021-08-28,NL,Netherlands,17967,47,411
 2021-08-28,NO,Norway,8078,3,56
 2021-08-28,PL,Poland,1515,24,NA
 2021-08-28,PT,Portugal,15857,81,NA
@@ -2692,3 +2692,35 @@ date,location,location_name,inc_case,inc_death,inc_hosp
 2021-08-28,SE,Sweden,6829,17,NA
 2021-08-28,SI,Slovenia,2938,10,127
 2021-08-28,SK,Slovakia,680,1,NA
+2021-09-04,AT,Austria,10590,13,NA
+2021-09-04,BE,Belgium,14099,37,NA
+2021-09-04,BG,Bulgaria,10397,378,NA
+2021-09-04,CH,Switzerland,14931,46,NA
+2021-09-04,CY,Cyprus,1830,16,NA
+2021-09-04,CZ,Czechia,1623,5,NA
+2021-09-04,DE,Germany,81273,216,NA
+2021-09-04,DK,Denmark,4996,13,NA
+2021-09-04,EE,Estonia,2519,10,NA
+2021-09-04,ES,Spain,45946,795,NA
+2021-09-04,FI,Finland,3718,9,NA
+2021-09-04,FR,France,84772,521,NA
+2021-09-04,GB,United Kingdom,243125,785,NA
+2021-09-04,GR,Greece,18933,299,NA
+2021-09-04,HR,Croatia,4485,38,NA
+2021-09-04,HU,Hungary,1334,4,NA
+2021-09-04,IE,Ireland,7572,20,212
+2021-09-04,IS,Iceland,405,1,NA
+2021-09-04,IT,Italy,41834,410,NA
+2021-09-04,LI,Liechtenstein,55,0,NA
+2021-09-04,LT,Lithuania,4680,66,NA
+2021-09-04,LU,Luxembourg,585,0,NA
+2021-09-04,LV,Latvia,2037,11,NA
+2021-09-04,MT,Malta,387,2,NA
+2021-09-04,NL,Netherlands,17603,41,283
+2021-09-04,NO,Norway,10067,8,NA
+2021-09-04,PL,Poland,2133,39,NA
+2021-09-04,PT,Portugal,12692,74,NA
+2021-09-04,RO,Romania,8881,169,NA
+2021-09-04,SE,Sweden,7112,7,NA
+2021-09-04,SI,Slovenia,3749,7,171
+2021-09-04,SK,Slovakia,1204,1,NA
