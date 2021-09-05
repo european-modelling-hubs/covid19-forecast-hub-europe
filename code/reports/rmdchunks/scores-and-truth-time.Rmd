@@ -1,0 +1,16 @@
+<!--- Forecasts diagnostics (WIS, overprediction, underprediction and sharpness)
+over time. --->
+## Scores over time (`r params$location_name`) {.tabset .tabset-fade}
+
+Visualisation of the weighted interval score over time. In addition, the
+components of the interval score, sharpness (how narrow are forecasts - smaller
+is better), and penalties for underprediction and overprediction are shown.
+Scores are again separated by forecast horizon.
+
+```{r forecast-and-scores, results = "asis"}
+src <- lapply(horizons, function(this_horizon) {
+  knitr::knit_expand("template-scores-and-truth-time.Rmd")
+})
+res <- knitr::knit_child(text = unlist(src), quiet = TRUE)
+cat(res, sep = '\n')
+```

@@ -1,5 +1,5 @@
 location,type,quantile,value,target_end_date,forecast_date,target,scenario_id
-AT,point,,11660,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+AT,point,NA,11660,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 AT,quantile,0.01,7810,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 AT,quantile,0.025,8550,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 AT,quantile,0.05,9071,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -23,7 +23,7 @@ AT,quantile,0.9,13969,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 AT,quantile,0.95,14762,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 AT,quantile,0.975,15384,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 AT,quantile,0.99,16115,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-AT,point,,168,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+AT,point,NA,168,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 AT,quantile,0.01,83,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 AT,quantile,0.025,95,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 AT,quantile,0.05,105,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -47,7 +47,7 @@ AT,quantile,0.9,224,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 AT,quantile,0.95,241,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 AT,quantile,0.975,257,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 AT,quantile,0.99,277,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-AT,point,,10376,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+AT,point,NA,10376,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 AT,quantile,0.01,3444,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 AT,quantile,0.025,4395,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 AT,quantile,0.05,5187,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -71,7 +71,7 @@ AT,quantile,0.9,15674,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 AT,quantile,0.95,17465,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 AT,quantile,0.975,19180,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 AT,quantile,0.99,20997,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-AT,point,,162,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+AT,point,NA,162,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 AT,quantile,0.01,48,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 AT,quantile,0.025,60,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 AT,quantile,0.05,72,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -95,7 +95,7 @@ AT,quantile,0.9,260,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 AT,quantile,0.95,292,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 AT,quantile,0.975,316,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 AT,quantile,0.99,350,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-BE,point,,20214,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+BE,point,NA,20214,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 BE,quantile,0.01,6175,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 BE,quantile,0.025,9765,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 BE,quantile,0.05,11722,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -119,7 +119,7 @@ BE,quantile,0.9,27236,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 BE,quantile,0.95,30257,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 BE,quantile,0.975,32853,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 BE,quantile,0.99,36079,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-BE,point,,251,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+BE,point,NA,251,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 BE,quantile,0.01,129,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 BE,quantile,0.025,148,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 BE,quantile,0.05,164,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -143,7 +143,7 @@ BE,quantile,0.9,343,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 BE,quantile,0.95,369,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 BE,quantile,0.975,392,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 BE,quantile,0.99,425,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-BE,point,,20640,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+BE,point,NA,20640,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 BE,quantile,0.01,706,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 BE,quantile,0.025,2515,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 BE,quantile,0.05,5374,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -167,7 +167,7 @@ BE,quantile,0.9,35763,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 BE,quantile,0.95,40767,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 BE,quantile,0.975,45929,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 BE,quantile,0.99,51370,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-BE,point,,247,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+BE,point,NA,247,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 BE,quantile,0.01,54,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 BE,quantile,0.025,78,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 BE,quantile,0.05,98,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -191,7 +191,7 @@ BE,quantile,0.9,418,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 BE,quantile,0.95,477,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 BE,quantile,0.975,535,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 BE,quantile,0.99,603,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-BG,point,,8033,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+BG,point,NA,8033,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 BG,quantile,0.01,4842,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 BG,quantile,0.025,5462,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 BG,quantile,0.05,5904,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -215,7 +215,7 @@ BG,quantile,0.9,10041,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 BG,quantile,0.95,10930,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 BG,quantile,0.975,11908,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 BG,quantile,0.99,13309,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-BG,point,,547,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+BG,point,NA,547,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 BG,quantile,0.01,319,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 BG,quantile,0.025,357,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 BG,quantile,0.05,384,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -239,7 +239,7 @@ BG,quantile,0.9,699,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 BG,quantile,0.95,747,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 BG,quantile,0.975,787,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 BG,quantile,0.99,842,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-BG,point,,6221,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+BG,point,NA,6221,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 BG,quantile,0.01,1590,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 BG,quantile,0.025,2164,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 BG,quantile,0.05,2690,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -263,7 +263,7 @@ BG,quantile,0.9,10469,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 BG,quantile,0.95,12103,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 BG,quantile,0.975,13865,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 BG,quantile,0.99,16221,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-BG,point,,521,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+BG,point,NA,521,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 BG,quantile,0.01,208,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 BG,quantile,0.025,247,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 BG,quantile,0.05,285,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -287,7 +287,7 @@ BG,quantile,0.9,758,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 BG,quantile,0.95,840,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 BG,quantile,0.975,907,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 BG,quantile,0.99,994,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-CH,point,,13470,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+CH,point,NA,13470,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CH,quantile,0.01,8646,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CH,quantile,0.025,9587,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CH,quantile,0.05,10442,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -311,7 +311,7 @@ CH,quantile,0.9,15648,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CH,quantile,0.95,16648,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CH,quantile,0.975,17541,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CH,quantile,0.99,18680,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-CH,point,,63,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+CH,point,NA,63,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CH,quantile,0.01,14,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CH,quantile,0.025,19,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CH,quantile,0.05,25,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -335,7 +335,7 @@ CH,quantile,0.9,109,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CH,quantile,0.95,125,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CH,quantile,0.975,144,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CH,quantile,0.99,164,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-CH,point,,13426,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+CH,point,NA,13426,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CH,quantile,0.01,4869,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CH,quantile,0.025,6307,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CH,quantile,0.05,7606,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -359,7 +359,7 @@ CH,quantile,0.9,18509,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CH,quantile,0.95,20338,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CH,quantile,0.975,22337,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CH,quantile,0.99,24384,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-CH,point,,59,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+CH,point,NA,59,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CH,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CH,quantile,0.025,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CH,quantile,0.05,6,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -383,7 +383,7 @@ CH,quantile,0.9,143,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CH,quantile,0.95,176,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CH,quantile,0.975,206,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CH,quantile,0.99,248,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-CY,point,,4171,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+CY,point,NA,4171,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CY,quantile,0.01,2499,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CY,quantile,0.025,2970,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CY,quantile,0.05,3248,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -407,7 +407,7 @@ CY,quantile,0.9,4953,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CY,quantile,0.95,5215,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CY,quantile,0.975,5469,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CY,quantile,0.99,5809,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-CY,point,,12,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+CY,point,NA,12,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CY,quantile,0.01,2,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CY,quantile,0.025,3,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CY,quantile,0.05,4,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -431,7 +431,7 @@ CY,quantile,0.9,21,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CY,quantile,0.95,24,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CY,quantile,0.975,26,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CY,quantile,0.99,29,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-CY,point,,4351,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+CY,point,NA,4351,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CY,quantile,0.01,1640,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CY,quantile,0.025,2016,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CY,quantile,0.05,2437,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -455,7 +455,7 @@ CY,quantile,0.9,5903,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CY,quantile,0.95,6425,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CY,quantile,0.975,6956,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CY,quantile,0.99,7587,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-CY,point,,12,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+CY,point,NA,12,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CY,quantile,0.01,1,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CY,quantile,0.025,2,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CY,quantile,0.05,3,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -479,7 +479,7 @@ CY,quantile,0.9,23,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CY,quantile,0.95,27,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CY,quantile,0.975,30,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CY,quantile,0.99,34,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-CZ,point,,13229,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+CZ,point,NA,13229,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CZ,quantile,0.01,4155,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CZ,quantile,0.025,5325,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CZ,quantile,0.05,6515,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -503,7 +503,7 @@ CZ,quantile,0.9,20412,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CZ,quantile,0.95,23128,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CZ,quantile,0.975,25085,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 CZ,quantile,0.99,27726,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-CZ,point,,328,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+CZ,point,NA,328,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CZ,quantile,0.01,157,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CZ,quantile,0.025,179,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CZ,quantile,0.05,202,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -527,7 +527,7 @@ CZ,quantile,0.9,439,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CZ,quantile,0.95,473,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CZ,quantile,0.975,507,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 CZ,quantile,0.99,544,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-CZ,point,,10462,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+CZ,point,NA,10462,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CZ,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CZ,quantile,0.025,141,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CZ,quantile,0.05,960,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -551,7 +551,7 @@ CZ,quantile,0.9,24718,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CZ,quantile,0.95,29858,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CZ,quantile,0.975,35086,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 CZ,quantile,0.99,42257,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-CZ,point,,262,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+CZ,point,NA,262,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CZ,quantile,0.01,37,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CZ,quantile,0.025,54,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CZ,quantile,0.05,78,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -575,7 +575,7 @@ CZ,quantile,0.9,481,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CZ,quantile,0.95,551,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CZ,quantile,0.975,619,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 CZ,quantile,0.99,691,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-DE,point,,111467,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+DE,point,NA,111467,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 DE,quantile,0.01,89292,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 DE,quantile,0.025,93663,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 DE,quantile,0.05,96708,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -599,7 +599,7 @@ DE,quantile,0.9,123343,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 DE,quantile,0.95,127358,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 DE,quantile,0.975,130541,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 DE,quantile,0.99,134099,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-DE,point,,1685,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+DE,point,NA,1685,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 DE,quantile,0.01,928,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 DE,quantile,0.025,1030,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 DE,quantile,0.05,1133,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -623,7 +623,7 @@ DE,quantile,0.9,2156,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 DE,quantile,0.95,2315,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 DE,quantile,0.975,2469,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 DE,quantile,0.99,2617,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-DE,point,,102002,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+DE,point,NA,102002,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 DE,quantile,0.01,48353,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 DE,quantile,0.025,57043,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 DE,quantile,0.05,64952,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -647,7 +647,7 @@ DE,quantile,0.9,134411,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 DE,quantile,0.95,144385,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 DE,quantile,0.975,153181,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 DE,quantile,0.99,160717,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-DE,point,,1714,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+DE,point,NA,1714,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 DE,quantile,0.01,651,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 DE,quantile,0.025,781,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 DE,quantile,0.05,905,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -671,7 +671,7 @@ DE,quantile,0.9,2504,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 DE,quantile,0.95,2741,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 DE,quantile,0.975,2958,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 DE,quantile,0.99,3277,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-DK,point,,7192,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+DK,point,NA,7192,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 DK,quantile,0.01,4463,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 DK,quantile,0.025,4911,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 DK,quantile,0.05,5260,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -695,7 +695,7 @@ DK,quantile,0.9,8761,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 DK,quantile,0.95,9307,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 DK,quantile,0.975,9752,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 DK,quantile,0.99,10297,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-DK,point,,17,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+DK,point,NA,17,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 DK,quantile,0.01,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 DK,quantile,0.025,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 DK,quantile,0.05,2,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -719,7 +719,7 @@ DK,quantile,0.9,30,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 DK,quantile,0.95,35,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 DK,quantile,0.975,39,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 DK,quantile,0.99,43,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-DK,point,,7793,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+DK,point,NA,7793,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 DK,quantile,0.01,2631,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 DK,quantile,0.025,3245,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 DK,quantile,0.05,3988,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -743,7 +743,7 @@ DK,quantile,0.9,11431,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 DK,quantile,0.95,12480,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 DK,quantile,0.975,13487,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 DK,quantile,0.99,14877,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-DK,point,,17,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+DK,point,NA,17,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 DK,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 DK,quantile,0.025,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 DK,quantile,0.05,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -767,7 +767,7 @@ DK,quantile,0.9,39,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 DK,quantile,0.95,46,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 DK,quantile,0.975,54,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 DK,quantile,0.99,64,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-EE,point,,2151,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+EE,point,NA,2151,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 EE,quantile,0.01,1444,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 EE,quantile,0.025,1547,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 EE,quantile,0.05,1640,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -791,7 +791,7 @@ EE,quantile,0.9,2624,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 EE,quantile,0.95,2765,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 EE,quantile,0.975,2900,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 EE,quantile,0.99,3090,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-EE,point,,40,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+EE,point,NA,40,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 EE,quantile,0.01,20,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 EE,quantile,0.025,22,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 EE,quantile,0.05,24,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -815,7 +815,7 @@ EE,quantile,0.9,55,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 EE,quantile,0.95,61,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 EE,quantile,0.975,65,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 EE,quantile,0.99,71,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-EE,point,,1977,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+EE,point,NA,1977,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 EE,quantile,0.01,694,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 EE,quantile,0.025,873,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 EE,quantile,0.05,1036,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -839,7 +839,7 @@ EE,quantile,0.9,2950,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 EE,quantile,0.95,3282,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 EE,quantile,0.975,3582,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 EE,quantile,0.99,3924,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-EE,point,,40,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+EE,point,NA,40,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 EE,quantile,0.01,14,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 EE,quantile,0.025,17,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 EE,quantile,0.05,20,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -863,7 +863,7 @@ EE,quantile,0.9,61,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 EE,quantile,0.95,68,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 EE,quantile,0.975,75,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 EE,quantile,0.99,82,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-ES,point,,51532,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+ES,point,NA,51532,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 ES,quantile,0.01,29723,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 ES,quantile,0.025,34221,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 ES,quantile,0.05,37055,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -887,7 +887,7 @@ ES,quantile,0.9,65269,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 ES,quantile,0.95,70235,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 ES,quantile,0.975,76387,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 ES,quantile,0.99,85858,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-ES,point,,722,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+ES,point,NA,722,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 ES,quantile,0.01,319,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 ES,quantile,0.025,372,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 ES,quantile,0.05,422,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -911,7 +911,7 @@ ES,quantile,0.9,1014,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 ES,quantile,0.95,1126,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 ES,quantile,0.975,1252,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 ES,quantile,0.99,1403,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-ES,point,,49617,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+ES,point,NA,49617,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 ES,quantile,0.01,13752,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 ES,quantile,0.025,18563,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 ES,quantile,0.05,24288,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -935,7 +935,7 @@ ES,quantile,0.9,76215,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 ES,quantile,0.95,85882,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 ES,quantile,0.975,96529,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 ES,quantile,0.99,110914,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-ES,point,,662,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+ES,point,NA,662,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 ES,quantile,0.01,157,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 ES,quantile,0.025,225,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 ES,quantile,0.05,287,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -959,7 +959,7 @@ ES,quantile,0.9,1070,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 ES,quantile,0.95,1200,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 ES,quantile,0.975,1333,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 ES,quantile,0.99,1525,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-FI,point,,1120,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+FI,point,NA,1120,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 FI,quantile,0.01,652,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 FI,quantile,0.025,723,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 FI,quantile,0.05,783,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -983,7 +983,7 @@ FI,quantile,0.9,1448,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 FI,quantile,0.95,1558,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 FI,quantile,0.975,1670,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 FI,quantile,0.99,1769,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-FI,point,,15,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+FI,point,NA,15,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 FI,quantile,0.01,3,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 FI,quantile,0.025,5,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 FI,quantile,0.05,6,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -1007,7 +1007,7 @@ FI,quantile,0.9,26,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 FI,quantile,0.95,30,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 FI,quantile,0.975,33,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 FI,quantile,0.99,37,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-FI,point,,995,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+FI,point,NA,995,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 FI,quantile,0.01,295,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 FI,quantile,0.025,386,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 FI,quantile,0.05,459,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -1031,7 +1031,7 @@ FI,quantile,0.9,1571,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 FI,quantile,0.95,1739,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 FI,quantile,0.975,1927,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 FI,quantile,0.99,2113,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-FI,point,,15,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+FI,point,NA,15,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 FI,quantile,0.01,2,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 FI,quantile,0.025,3,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 FI,quantile,0.05,5,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -1055,7 +1055,7 @@ FI,quantile,0.9,27,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 FI,quantile,0.95,31,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 FI,quantile,0.975,34,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 FI,quantile,0.99,39,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-FR,point,,123738,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+FR,point,NA,123738,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 FR,quantile,0.01,73647,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 FR,quantile,0.025,82644,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 FR,quantile,0.05,90096,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -1079,7 +1079,7 @@ FR,quantile,0.9,160062,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 FR,quantile,0.95,173330,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 FR,quantile,0.975,187903,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 FR,quantile,0.99,203810,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-FR,point,,2064,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+FR,point,NA,2064,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 FR,quantile,0.01,1410,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 FR,quantile,0.025,1513,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 FR,quantile,0.05,1610,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -1103,7 +1103,7 @@ FR,quantile,0.9,2489,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 FR,quantile,0.95,2663,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 FR,quantile,0.975,2825,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 FR,quantile,0.99,3020,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-FR,point,,110853,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+FR,point,NA,110853,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 FR,quantile,0.01,18088,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 FR,quantile,0.025,32512,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 FR,quantile,0.05,42824,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -1127,7 +1127,7 @@ FR,quantile,0.9,185076,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 FR,quantile,0.95,210748,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 FR,quantile,0.975,237782,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 FR,quantile,0.99,266481,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-FR,point,,2157,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+FR,point,NA,2157,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 FR,quantile,0.01,863,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 FR,quantile,0.025,1064,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 FR,quantile,0.05,1208,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -1151,7 +1151,7 @@ FR,quantile,0.9,3065,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 FR,quantile,0.95,3413,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 FR,quantile,0.975,3738,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 FR,quantile,0.99,4180,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-GB,point,,12924,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+GB,point,NA,12924,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 GB,quantile,0.01,4022,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 GB,quantile,0.025,5148,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 GB,quantile,0.05,6198,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -1175,7 +1175,7 @@ GB,quantile,0.9,21599,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 GB,quantile,0.95,25006,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 GB,quantile,0.975,28412,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 GB,quantile,0.99,31878,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-GB,point,,60,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+GB,point,NA,60,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 GB,quantile,0.01,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 GB,quantile,0.025,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 GB,quantile,0.05,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -1199,7 +1199,7 @@ GB,quantile,0.9,165,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 GB,quantile,0.95,211,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 GB,quantile,0.975,251,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 GB,quantile,0.99,305,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-GB,point,,11667,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+GB,point,NA,11667,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 GB,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 GB,quantile,0.025,0,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 GB,quantile,0.05,472,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -1223,7 +1223,7 @@ GB,quantile,0.9,33977,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 GB,quantile,0.95,42545,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 GB,quantile,0.975,50961,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 GB,quantile,0.99,62607,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-GB,point,,28,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+GB,point,NA,28,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 GB,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 GB,quantile,0.025,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 GB,quantile,0.05,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -1247,7 +1247,7 @@ GB,quantile,0.9,235,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 GB,quantile,0.95,335,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 GB,quantile,0.975,444,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 GB,quantile,0.99,594,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-GR,point,,10446,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+GR,point,NA,10446,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 GR,quantile,0.01,7476,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 GR,quantile,0.025,7929,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 GR,quantile,0.05,8332,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -1271,7 +1271,7 @@ GR,quantile,0.9,12300,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 GR,quantile,0.95,12888,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 GR,quantile,0.975,13415,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 GR,quantile,0.99,13970,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-GR,point,,476,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+GR,point,NA,476,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 GR,quantile,0.01,325,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 GR,quantile,0.025,347,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 GR,quantile,0.05,365,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -1295,7 +1295,7 @@ GR,quantile,0.9,574,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 GR,quantile,0.95,608,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 GR,quantile,0.975,638,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 GR,quantile,0.99,677,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-GR,point,,9787,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+GR,point,NA,9787,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 GR,quantile,0.01,4795,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 GR,quantile,0.025,5532,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 GR,quantile,0.05,6065,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -1319,7 +1319,7 @@ GR,quantile,0.9,13447,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 GR,quantile,0.95,14527,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 GR,quantile,0.975,15466,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 GR,quantile,0.99,16693,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-GR,point,,470,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+GR,point,NA,470,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 GR,quantile,0.01,207,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 GR,quantile,0.025,239,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 GR,quantile,0.05,267,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -1343,7 +1343,7 @@ GR,quantile,0.9,669,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 GR,quantile,0.95,729,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 GR,quantile,0.975,799,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 GR,quantile,0.99,869,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-HR,point,,10513,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+HR,point,NA,10513,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 HR,quantile,0.01,7216,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 HR,quantile,0.025,7725,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 HR,quantile,0.05,8144,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -1367,7 +1367,7 @@ HR,quantile,0.9,12618,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 HR,quantile,0.95,13326,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 HR,quantile,0.975,13903,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 HR,quantile,0.99,14485,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-HR,point,,319,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+HR,point,NA,319,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 HR,quantile,0.01,220,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 HR,quantile,0.025,233,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 HR,quantile,0.05,247,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -1391,7 +1391,7 @@ HR,quantile,0.9,379,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 HR,quantile,0.95,395,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 HR,quantile,0.975,411,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 HR,quantile,0.99,431,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-HR,point,,8873,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+HR,point,NA,8873,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 HR,quantile,0.01,2972,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 HR,quantile,0.025,3711,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 HR,quantile,0.05,4470,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -1415,7 +1415,7 @@ HR,quantile,0.9,13290,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 HR,quantile,0.95,14926,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 HR,quantile,0.975,16487,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 HR,quantile,0.99,18034,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-HR,point,,319,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+HR,point,NA,319,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 HR,quantile,0.01,159,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 HR,quantile,0.025,180,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 HR,quantile,0.05,199,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -1439,7 +1439,7 @@ HR,quantile,0.9,431,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 HR,quantile,0.95,465,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 HR,quantile,0.975,497,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 HR,quantile,0.99,525,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-HU,point,,10541,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+HU,point,NA,10541,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 HU,quantile,0.01,4823,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 HU,quantile,0.025,5688,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 HU,quantile,0.05,6454,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -1463,7 +1463,7 @@ HU,quantile,0.9,14663,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 HU,quantile,0.95,15994,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 HU,quantile,0.975,17262,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 HU,quantile,0.99,19031,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-HU,point,,1150,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+HU,point,NA,1150,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 HU,quantile,0.01,831,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 HU,quantile,0.025,879,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 HU,quantile,0.05,924,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -1487,7 +1487,7 @@ HU,quantile,0.9,1323,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 HU,quantile,0.95,1370,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 HU,quantile,0.975,1412,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 HU,quantile,0.99,1454,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-HU,point,,9868,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+HU,point,NA,9868,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 HU,quantile,0.01,875,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 HU,quantile,0.025,1833,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 HU,quantile,0.05,2680,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -1511,7 +1511,7 @@ HU,quantile,0.9,18581,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 HU,quantile,0.95,21860,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 HU,quantile,0.975,24577,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 HU,quantile,0.99,28343,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-HU,point,,1084,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+HU,point,NA,1084,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 HU,quantile,0.01,593,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 HU,quantile,0.025,659,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 HU,quantile,0.05,721,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -1535,7 +1535,7 @@ HU,quantile,0.9,1403,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 HU,quantile,0.95,1490,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 HU,quantile,0.975,1572,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 HU,quantile,0.99,1676,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-IE,point,,3724,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+IE,point,NA,3724,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IE,quantile,0.01,1343,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IE,quantile,0.025,1624,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IE,quantile,0.05,1834,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -1559,7 +1559,7 @@ IE,quantile,0.9,5827,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IE,quantile,0.95,6600,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IE,quantile,0.975,7406,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IE,quantile,0.99,8710,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-IE,point,,31,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+IE,point,NA,31,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IE,quantile,0.01,1,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IE,quantile,0.025,4,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IE,quantile,0.05,7,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -1583,7 +1583,7 @@ IE,quantile,0.9,60,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IE,quantile,0.95,70,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IE,quantile,0.975,81,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IE,quantile,0.99,94,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-IE,point,,3664,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+IE,point,NA,3664,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IE,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IE,quantile,0.025,28,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IE,quantile,0.05,224,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -1607,7 +1607,7 @@ IE,quantile,0.9,9991,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IE,quantile,0.95,12377,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IE,quantile,0.975,15347,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IE,quantile,0.99,18571,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-IE,point,,26,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+IE,point,NA,26,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IE,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IE,quantile,0.025,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IE,quantile,0.05,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -1631,7 +1631,7 @@ IE,quantile,0.9,70,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IE,quantile,0.95,87,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IE,quantile,0.975,103,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IE,quantile,0.99,126,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-IS,point,,53,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+IS,point,NA,53,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IS,quantile,0.01,0,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IS,quantile,0.025,6,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IS,quantile,0.05,13,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -1655,7 +1655,7 @@ IS,quantile,0.9,109,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IS,quantile,0.95,135,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IS,quantile,0.975,160,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IS,quantile,0.99,201,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-IS,point,,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+IS,point,NA,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IS,quantile,0.01,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IS,quantile,0.025,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IS,quantile,0.05,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -1679,7 +1679,7 @@ IS,quantile,0.9,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IS,quantile,0.95,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IS,quantile,0.975,1,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IS,quantile,0.99,2,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-IS,point,,51,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+IS,point,NA,51,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IS,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IS,quantile,0.025,0,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IS,quantile,0.05,0,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -1703,7 +1703,7 @@ IS,quantile,0.9,148,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IS,quantile,0.95,190,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IS,quantile,0.975,231,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IS,quantile,0.99,297,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-IS,point,,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+IS,point,NA,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IS,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IS,quantile,0.025,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IS,quantile,0.05,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -1727,7 +1727,7 @@ IS,quantile,0.9,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IS,quantile,0.95,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IS,quantile,0.975,1,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IS,quantile,0.99,2,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-IT,point,,64636,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+IT,point,NA,64636,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IT,quantile,0.01,42774,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IT,quantile,0.025,46517,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IT,quantile,0.05,50116,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -1751,7 +1751,7 @@ IT,quantile,0.9,75756,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IT,quantile,0.95,79548,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IT,quantile,0.975,82964,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 IT,quantile,0.99,87300,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-IT,point,,1636,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+IT,point,NA,1636,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IT,quantile,0.01,1139,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IT,quantile,0.025,1205,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IT,quantile,0.05,1266,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -1775,7 +1775,7 @@ IT,quantile,0.9,1963,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IT,quantile,0.95,2061,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IT,quantile,0.975,2153,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 IT,quantile,0.99,2260,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-IT,point,,53299,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+IT,point,NA,53299,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IT,quantile,0.01,15502,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IT,quantile,0.025,21702,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IT,quantile,0.05,25489,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -1799,7 +1799,7 @@ IT,quantile,0.9,80195,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IT,quantile,0.95,89520,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IT,quantile,0.975,97374,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 IT,quantile,0.99,105962,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-IT,point,,1379,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+IT,point,NA,1379,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IT,quantile,0.01,556,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IT,quantile,0.025,672,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IT,quantile,0.05,755,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -1823,7 +1823,7 @@ IT,quantile,0.9,2036,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IT,quantile,0.95,2230,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IT,quantile,0.975,2421,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 IT,quantile,0.99,2643,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-LI,point,,51,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+LI,point,NA,51,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LI,quantile,0.01,18,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LI,quantile,0.025,21,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LI,quantile,0.05,26,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -1847,7 +1847,7 @@ LI,quantile,0.9,79,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LI,quantile,0.95,90,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LI,quantile,0.975,99,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LI,quantile,0.99,110,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-LI,point,,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+LI,point,NA,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LI,quantile,0.01,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LI,quantile,0.025,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LI,quantile,0.05,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -1871,7 +1871,7 @@ LI,quantile,0.9,1,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LI,quantile,0.95,2,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LI,quantile,0.975,3,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LI,quantile,0.99,4,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-LI,point,,51,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+LI,point,NA,51,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LI,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LI,quantile,0.025,5,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LI,quantile,0.05,10,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -1895,7 +1895,7 @@ LI,quantile,0.9,109,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LI,quantile,0.95,129,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LI,quantile,0.975,149,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LI,quantile,0.99,174,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-LI,point,,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+LI,point,NA,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LI,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LI,quantile,0.025,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LI,quantile,0.05,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -1919,7 +1919,7 @@ LI,quantile,0.9,2,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LI,quantile,0.95,3,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LI,quantile,0.975,4,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LI,quantile,0.99,6,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-LT,point,,9337,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+LT,point,NA,9337,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LT,quantile,0.01,6563,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LT,quantile,0.025,7080,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LT,quantile,0.05,7409,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -1943,7 +1943,7 @@ LT,quantile,0.9,10774,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LT,quantile,0.95,11198,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LT,quantile,0.975,11623,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LT,quantile,0.99,12067,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-LT,point,,104,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+LT,point,NA,104,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LT,quantile,0.01,65,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LT,quantile,0.025,70,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LT,quantile,0.05,75,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -1967,7 +1967,7 @@ LT,quantile,0.9,128,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LT,quantile,0.95,136,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LT,quantile,0.975,143,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LT,quantile,0.99,150,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-LT,point,,10215,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+LT,point,NA,10215,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LT,quantile,0.01,4973,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LT,quantile,0.025,5721,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LT,quantile,0.05,6411,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -1991,7 +1991,7 @@ LT,quantile,0.9,13423,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LT,quantile,0.95,14344,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LT,quantile,0.975,15384,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LT,quantile,0.99,16513,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-LT,point,,110,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+LT,point,NA,110,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LT,quantile,0.01,55,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LT,quantile,0.025,62,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LT,quantile,0.05,68,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -2015,7 +2015,7 @@ LT,quantile,0.9,151,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LT,quantile,0.95,164,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LT,quantile,0.975,175,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LT,quantile,0.99,187,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-LU,point,,1228,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+LU,point,NA,1228,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LU,quantile,0.01,714,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LU,quantile,0.025,816,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LU,quantile,0.05,896,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -2039,7 +2039,7 @@ LU,quantile,0.9,1653,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LU,quantile,0.95,1823,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LU,quantile,0.975,1952,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LU,quantile,0.99,2122,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-LU,point,,9,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+LU,point,NA,9,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LU,quantile,0.01,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LU,quantile,0.025,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LU,quantile,0.05,1,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -2063,7 +2063,7 @@ LU,quantile,0.9,19,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LU,quantile,0.95,23,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LU,quantile,0.975,26,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LU,quantile,0.99,30,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-LU,point,,1299,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+LU,point,NA,1299,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LU,quantile,0.01,546,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LU,quantile,0.025,682,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LU,quantile,0.05,783,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -2087,7 +2087,7 @@ LU,quantile,0.9,1889,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LU,quantile,0.95,2120,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LU,quantile,0.975,2293,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LU,quantile,0.99,2504,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-LU,point,,9,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+LU,point,NA,9,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LU,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LU,quantile,0.025,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LU,quantile,0.05,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -2111,7 +2111,7 @@ LU,quantile,0.9,20,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LU,quantile,0.95,24,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LU,quantile,0.975,28,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LU,quantile,0.99,33,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-LV,point,,4577,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+LV,point,NA,4577,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LV,quantile,0.01,3627,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LV,quantile,0.025,3769,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LV,quantile,0.05,3912,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -2135,7 +2135,7 @@ LV,quantile,0.9,5120,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LV,quantile,0.95,5274,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LV,quantile,0.975,5432,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 LV,quantile,0.99,5628,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-LV,point,,42,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+LV,point,NA,42,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LV,quantile,0.01,16,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LV,quantile,0.025,19,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LV,quantile,0.05,23,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -2159,7 +2159,7 @@ LV,quantile,0.9,62,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LV,quantile,0.95,69,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LV,quantile,0.975,75,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 LV,quantile,0.99,83,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-LV,point,,4854,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+LV,point,NA,4854,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LV,quantile,0.01,3294,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LV,quantile,0.025,3528,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LV,quantile,0.05,3737,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -2183,7 +2183,7 @@ LV,quantile,0.9,5789,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LV,quantile,0.95,6089,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LV,quantile,0.975,6338,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 LV,quantile,0.99,6624,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-LV,point,,42,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+LV,point,NA,42,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LV,quantile,0.01,10,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LV,quantile,0.025,13,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LV,quantile,0.05,18,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -2207,7 +2207,7 @@ LV,quantile,0.9,70,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LV,quantile,0.95,79,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LV,quantile,0.975,87,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 LV,quantile,0.99,96,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-MT,point,,112,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+MT,point,NA,112,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 MT,quantile,0.01,21,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 MT,quantile,0.025,30,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 MT,quantile,0.05,38,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -2231,7 +2231,7 @@ MT,quantile,0.9,214,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 MT,quantile,0.95,254,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 MT,quantile,0.975,291,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 MT,quantile,0.99,345,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-MT,point,,2,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+MT,point,NA,2,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 MT,quantile,0.01,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 MT,quantile,0.025,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 MT,quantile,0.05,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -2255,7 +2255,7 @@ MT,quantile,0.9,6,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 MT,quantile,0.95,7,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 MT,quantile,0.975,8,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 MT,quantile,0.99,10,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-MT,point,,119,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+MT,point,NA,119,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 MT,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 MT,quantile,0.025,0,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 MT,quantile,0.05,3,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -2279,7 +2279,7 @@ MT,quantile,0.9,342,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 MT,quantile,0.95,435,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 MT,quantile,0.975,528,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 MT,quantile,0.99,628,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-MT,point,,2,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+MT,point,NA,2,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 MT,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 MT,quantile,0.025,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 MT,quantile,0.05,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -2303,7 +2303,7 @@ MT,quantile,0.9,8,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 MT,quantile,0.95,10,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 MT,quantile,0.975,12,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 MT,quantile,0.99,14,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-NL,point,,35794,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+NL,point,NA,35794,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 NL,quantile,0.01,26217,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 NL,quantile,0.025,27394,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 NL,quantile,0.05,28678,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -2327,7 +2327,7 @@ NL,quantile,0.9,41262,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 NL,quantile,0.95,42943,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 NL,quantile,0.975,44354,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 NL,quantile,0.99,46476,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-NL,point,,124,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+NL,point,NA,124,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 NL,quantile,0.01,55,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 NL,quantile,0.025,64,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 NL,quantile,0.05,72,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -2351,7 +2351,7 @@ NL,quantile,0.9,176,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 NL,quantile,0.95,194,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 NL,quantile,0.975,209,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 NL,quantile,0.99,227,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-NL,point,,28843,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+NL,point,NA,28843,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 NL,quantile,0.01,10678,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 NL,quantile,0.025,12959,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 NL,quantile,0.05,15210,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -2375,7 +2375,7 @@ NL,quantile,0.9,42333,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 NL,quantile,0.95,46332,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 NL,quantile,0.975,50348,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 NL,quantile,0.99,54475,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-NL,point,,113,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+NL,point,NA,113,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 NL,quantile,0.01,22,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 NL,quantile,0.025,29,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 NL,quantile,0.05,39,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -2399,7 +2399,7 @@ NL,quantile,0.9,203,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 NL,quantile,0.95,235,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 NL,quantile,0.975,262,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 NL,quantile,0.99,298,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-NO,point,,2424,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+NO,point,NA,2424,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 NO,quantile,0.01,1090,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 NO,quantile,0.025,1364,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 NO,quantile,0.05,1544,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -2423,7 +2423,7 @@ NO,quantile,0.9,3223,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 NO,quantile,0.95,3483,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 NO,quantile,0.975,3731,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 NO,quantile,0.99,4051,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-NO,point,,20,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+NO,point,NA,20,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 NO,quantile,0.01,6,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 NO,quantile,0.025,9,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 NO,quantile,0.05,11,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -2447,7 +2447,7 @@ NO,quantile,0.9,33,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 NO,quantile,0.95,38,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 NO,quantile,0.975,42,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 NO,quantile,0.99,47,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-NO,point,,2450,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+NO,point,NA,2450,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 NO,quantile,0.01,460,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 NO,quantile,0.025,811,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 NO,quantile,0.05,1047,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -2471,7 +2471,7 @@ NO,quantile,0.9,3779,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 NO,quantile,0.95,4228,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 NO,quantile,0.975,4629,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 NO,quantile,0.99,5120,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-NO,point,,21,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+NO,point,NA,21,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 NO,quantile,0.01,5,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 NO,quantile,0.025,8,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 NO,quantile,0.05,10,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -2495,7 +2495,7 @@ NO,quantile,0.9,34,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 NO,quantile,0.95,39,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 NO,quantile,0.975,44,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 NO,quantile,0.99,50,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-PL,point,,29935,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+PL,point,NA,29935,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 PL,quantile,0.01,13382,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 PL,quantile,0.025,15863,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 PL,quantile,0.05,17930,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -2519,7 +2519,7 @@ PL,quantile,0.9,39884,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 PL,quantile,0.95,43394,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 PL,quantile,0.975,46853,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 PL,quantile,0.99,50669,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-PL,point,,2182,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+PL,point,NA,2182,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 PL,quantile,0.01,1576,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 PL,quantile,0.025,1654,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 PL,quantile,0.05,1730,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -2543,7 +2543,7 @@ PL,quantile,0.9,2552,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 PL,quantile,0.95,2657,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 PL,quantile,0.975,2760,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 PL,quantile,0.99,2892,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-PL,point,,18171,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+PL,point,NA,18171,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 PL,quantile,0.01,209,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 PL,quantile,0.025,1492,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 PL,quantile,0.05,2792,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -2567,7 +2567,7 @@ PL,quantile,0.9,38786,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 PL,quantile,0.95,46186,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 PL,quantile,0.975,54310,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 PL,quantile,0.99,63228,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-PL,point,,1799,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+PL,point,NA,1799,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 PL,quantile,0.01,801,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 PL,quantile,0.025,912,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 PL,quantile,0.05,1028,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -2591,7 +2591,7 @@ PL,quantile,0.9,2518,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 PL,quantile,0.95,2734,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 PL,quantile,0.975,2970,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 PL,quantile,0.99,3265,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-PT,point,,2450,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+PT,point,NA,2450,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 PT,quantile,0.01,457,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 PT,quantile,0.025,609,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 PT,quantile,0.05,788,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -2615,7 +2615,7 @@ PT,quantile,0.9,4711,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 PT,quantile,0.95,5552,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 PT,quantile,0.975,6287,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 PT,quantile,0.99,7173,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-PT,point,,6,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+PT,point,NA,6,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 PT,quantile,0.01,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 PT,quantile,0.025,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 PT,quantile,0.05,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -2639,7 +2639,7 @@ PT,quantile,0.9,22,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 PT,quantile,0.95,29,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 PT,quantile,0.975,37,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 PT,quantile,0.99,46,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-PT,point,,2069,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+PT,point,NA,2069,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 PT,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 PT,quantile,0.025,0,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 PT,quantile,0.05,0,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -2663,7 +2663,7 @@ PT,quantile,0.9,8345,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 PT,quantile,0.95,10952,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 PT,quantile,0.975,13630,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 PT,quantile,0.99,16210,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-PT,point,,2,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+PT,point,NA,2,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 PT,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 PT,quantile,0.025,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 PT,quantile,0.05,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -2687,7 +2687,7 @@ PT,quantile,0.9,55,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 PT,quantile,0.95,84,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 PT,quantile,0.975,118,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 PT,quantile,0.99,160,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-RO,point,,8101,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+RO,point,NA,8101,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 RO,quantile,0.01,4531,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 RO,quantile,0.025,5117,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 RO,quantile,0.05,5676,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -2711,7 +2711,7 @@ RO,quantile,0.9,10248,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 RO,quantile,0.95,11082,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 RO,quantile,0.975,11924,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 RO,quantile,0.99,13097,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-RO,point,,865,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+RO,point,NA,865,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 RO,quantile,0.01,673,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 RO,quantile,0.025,702,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 RO,quantile,0.05,726,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -2735,7 +2735,7 @@ RO,quantile,0.9,982,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 RO,quantile,0.95,1018,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 RO,quantile,0.975,1050,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 RO,quantile,0.99,1090,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-RO,point,,4828,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+RO,point,NA,4828,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 RO,quantile,0.01,325,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 RO,quantile,0.025,775,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 RO,quantile,0.05,1181,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -2759,7 +2759,7 @@ RO,quantile,0.9,9382,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 RO,quantile,0.95,10874,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 RO,quantile,0.975,12654,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 RO,quantile,0.99,14717,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-RO,point,,770,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+RO,point,NA,770,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 RO,quantile,0.01,481,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 RO,quantile,0.025,518,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 RO,quantile,0.05,557,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -2783,7 +2783,7 @@ RO,quantile,0.9,963,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 RO,quantile,0.95,1020,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 RO,quantile,0.975,1067,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 RO,quantile,0.99,1136,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-SE,point,,36187,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+SE,point,NA,36187,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SE,quantile,0.01,20721,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SE,quantile,0.025,24161,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SE,quantile,0.05,26910,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -2807,7 +2807,7 @@ SE,quantile,0.9,43252,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SE,quantile,0.95,47845,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SE,quantile,0.975,53174,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SE,quantile,0.99,57588,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-SE,point,,131,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+SE,point,NA,131,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SE,quantile,0.01,0,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SE,quantile,0.025,7,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SE,quantile,0.05,63,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -2831,7 +2831,7 @@ SE,quantile,0.9,245,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SE,quantile,0.95,314,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SE,quantile,0.975,382,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SE,quantile,0.99,532,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-SE,point,,37363,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+SE,point,NA,37363,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SE,quantile,0.01,18393,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SE,quantile,0.025,22131,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SE,quantile,0.05,25176,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -2855,7 +2855,7 @@ SE,quantile,0.9,47876,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SE,quantile,0.95,53340,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SE,quantile,0.975,58369,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SE,quantile,0.99,63673,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-SE,point,,138,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+SE,point,NA,138,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 SE,quantile,0.01,0,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 SE,quantile,0.025,14,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 SE,quantile,0.05,55,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -2879,7 +2879,7 @@ SE,quantile,0.9,257,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 SE,quantile,0.95,329,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 SE,quantile,0.975,406,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 SE,quantile,0.99,531,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-SI,point,,5035,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+SI,point,NA,5035,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SI,quantile,0.01,2749,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SI,quantile,0.025,3088,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SI,quantile,0.05,3454,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -2903,7 +2903,7 @@ SI,quantile,0.9,6399,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SI,quantile,0.95,6755,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SI,quantile,0.975,7090,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SI,quantile,0.99,7516,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-SI,point,,61,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+SI,point,NA,61,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SI,quantile,0.01,27,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SI,quantile,0.025,31,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SI,quantile,0.05,35,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -2927,7 +2927,7 @@ SI,quantile,0.9,89,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SI,quantile,0.95,98,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SI,quantile,0.975,106,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SI,quantile,0.99,117,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-SI,point,,4878,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+SI,point,NA,4878,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SI,quantile,0.01,714,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SI,quantile,0.025,1094,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SI,quantile,0.05,1550,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -2951,7 +2951,7 @@ SI,quantile,0.9,8315,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SI,quantile,0.95,9429,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SI,quantile,0.975,10470,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SI,quantile,0.99,11462,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-SI,point,,66,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+SI,point,NA,66,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 SI,quantile,0.01,13,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 SI,quantile,0.025,18,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 SI,quantile,0.05,24,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
@@ -2975,7 +2975,7 @@ SI,quantile,0.9,115,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 SI,quantile,0.95,132,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 SI,quantile,0.975,149,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 SI,quantile,0.99,170,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
-SK,point,,2729,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
+SK,point,NA,2729,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SK,quantile,0.01,1239,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SK,quantile,0.025,1427,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SK,quantile,0.05,1606,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
@@ -2999,7 +2999,7 @@ SK,quantile,0.9,3866,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SK,quantile,0.95,4265,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SK,quantile,0.975,4643,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
 SK,quantile,0.99,5103,2021-05-08,2021-05-03,1 wk ahead inc case,forecast
-SK,point,,292,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
+SK,point,NA,292,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SK,quantile,0.01,125,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SK,quantile,0.025,155,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SK,quantile,0.05,180,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
@@ -3023,7 +3023,7 @@ SK,quantile,0.9,395,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SK,quantile,0.95,429,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SK,quantile,0.975,454,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
 SK,quantile,0.99,487,2021-05-08,2021-05-03,1 wk ahead inc death,forecast
-SK,point,,2156,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
+SK,point,NA,2156,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SK,quantile,0.01,7,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SK,quantile,0.025,223,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SK,quantile,0.05,418,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
@@ -3047,7 +3047,7 @@ SK,quantile,0.9,4443,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SK,quantile,0.95,5223,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SK,quantile,0.975,6034,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
 SK,quantile,0.99,6988,2021-05-15,2021-05-03,2 wk ahead inc case,forecast
-SK,point,,287,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
+SK,point,NA,287,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 SK,quantile,0.01,71,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 SK,quantile,0.025,98,2021-05-15,2021-05-03,2 wk ahead inc death,forecast
 SK,quantile,0.05,128,2021-05-15,2021-05-03,2 wk ahead inc death,forecast

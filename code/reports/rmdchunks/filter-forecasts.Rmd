@@ -1,0 +1,22 @@
+<!--- Chunk to filter data and scores to keep only the relevant locations, horizons and target varaibles. Is is separated from the global scoring step
+so that we can cache the loading and scoring step.. -->
+```{r}
+if (params$location_name != "Overall") {
+  data <- data %>%
+    filter(location_name == params$location_name)
+}
+table <- table %>%
+  filter(location_name == params$location_name)
+
+data <- data %>%
+  filter(target_variable %in% target_variables)
+table <- table %>%
+  filter(target_variable %in% target_variables)
+
+data <- data %>%
+  filter(horizon %in% horizons)
+table <- table %>%
+  filter(horizon %in% horizons)
+```
+
+## {.unlisted .unnumbered}

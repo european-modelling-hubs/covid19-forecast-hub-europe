@@ -7,6 +7,9 @@ jobs:
   ensemble_report:
     runs-on: ubuntu-20.04
     if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
+    env:
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - uses: actions/checkout@v2
     - uses: r-lib/actions/setup-r@v1
@@ -16,13 +19,15 @@ jobs:
 
     - name: Install R dependencies
       run: |
-       Rscript -e 'install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "purrr", "data.table", "readr"))'
-       Rscript -e 'remotes::install_github("reichlab/covidHubUtils")'
-       Rscript -e 'remotes::install_github("epiforecasts/scoringutils@limit-viz")'
+        install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "readr", "rlang"))
+        remotes::install_github("reichlab/covidHubUtils")
+        remotes::install_github("epiforecasts/scoringutils@limit-viz")
+        remotes::install_github("epiforecasts/EuroForecastHub")
+      shell: Rscript {0}
 
     - name: Create ensemble reports
       run: Rscript 'code/reports/compile-ensemble-report.r'
-        
+
     - name: Push to web site
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
@@ -34,3 +39,11 @@ jobs:
         user_email: 'action@github.com'
         user_name: 'GitHub Action - ensemble report'
         commit_message: 'Ensemble report'
+
+    - name: Create issue about failure
+      if: failure()
+      uses: JasonEtco/create-an-issue@v2.5.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        filename: .github/action-issue-template.md

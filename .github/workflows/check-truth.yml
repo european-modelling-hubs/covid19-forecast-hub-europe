@@ -10,6 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
+    env:
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - uses: actions/checkout@master
       with:
@@ -24,11 +27,11 @@ jobs:
         python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
 
-    - name: Install python requirenments
+    - name: Install python requirements
       run: |
-        pip3 install -r github-actions/pr_requirements.txt
+        pip3 install pandas pyprojroot
 
-    - name: Install R requirenments
+    - name: Install R requirements
       run: |
         sudo apt-get install pandoc libcurl4-openssl-dev
         Rscript -e 'install.packages(c("gh", "dplyr", "stringr", "here", "knitr", "rmarkdown", "readr", "tibble", "countrycode"))'
@@ -49,5 +52,14 @@ jobs:
         git config user.name "GitHub Action - check truth"
         git add --all
         git commit -m "Check truth data"
-        git push 
+        git pull --rebase
+        git push
         echo "pushed to github"
+
+    - name: Create issue about failure
+      if: failure()
+      uses: JasonEtco/create-an-issue@v2.5.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        filename: .github/action-issue-template.md

@@ -1,0 +1,48 @@
+```{r, results = 'asis'}
+df <- table %>%
+  filter(target_variable == target_variables[variable],
+         horizon == this_horizon)
+
+## we want NA to be sorted as a high number, see https://stackoverflow.com/a/65897972
+render <- JS(
+  "function(data, type, row) {",
+  "  if(type === 'sort' && data === null) {",
+  "    return Infinity;",
+  "  }",
+  "  return data;",
+  "}"
+)
+
+if (nrow(df) > 0) {
+  df <- df %>%
+    select(model, n, n_loc, rel_wis, rel_ae, cov_50, cov_95, bias)
+  if (all(df$n_loc == 1L)) {
+    df <- df %>%
+      select(-n_loc)
+  }
+  df %>%
+    arrange(rel_wis) %>%
+    dplyr::rename(
+      "95% Cov." = cov_95,
+      "50% Cov." = cov_50
+    ) %>%
+    DT::datatable(
+      extensions = c('FixedColumns', 'Buttons'),
+      width = "100%",
+      options = list(
+        paging = FALSE,
+        info = FALSE,
+        buttons = c('csv', 'excel'),
+        dom = 'Bfrtip',
+        scrollX = TRUE,
+        fixedColumns = TRUE,
+        columnDefs = list(
+          list(targets = seq(1, ncol(.) - 1), render = render)
+        )
+      ),
+      rownames = FALSE
+    )
+} else {
+  cat("Rankings are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment no model fulfills that criterion." )
+}
+```

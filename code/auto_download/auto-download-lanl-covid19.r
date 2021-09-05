@@ -9,12 +9,13 @@ library("dplyr")
 library("tidyr")
 library("readr")
 library("janitor")
+library("EuroForecastHub")
 
 model_name <- "LANL-GrowthRate"
-raw_dir <- here::here("data-raw", model_name)
+raw_dir <- file.path(tempdir(), "data-raw", model_name)
 processed_dir <- here::here("data-processed", model_name)
 last_sunday <- floor_date(today(), unit = "week", week_start = 7)
-data_types <- c("cases", "deaths")
+data_types <- c("inc case", "inc death")
 
 suppressWarnings(dir.create(raw_dir, recursive = TRUE))
 suppressWarnings(dir.create(processed_dir, recursive = TRUE))
@@ -55,12 +56,14 @@ col_specs <- cols(
 )
 
 filenames <- vapply(data_types, function(x) {
-  paste0(last_sunday, "_global_incidence_weekly_", x, "_website.csv")
+  paste0(last_sunday, "_global_incidence_weekly_",
+         gsub("^inc (\\w+)$", "\\1s", x),
+         "_website.csv")
 }, "")
 
 ## download
 
-url <- vapply(c("cases", "deaths"), function(x) {
+url <- vapply(data_types, function(x) {
   paste0("https://covid-19.bsvgateway.org/forecast/global/", last_sunday,
          "/files/", filenames[x])
 }, "")
@@ -86,25 +89,22 @@ df <- lapply(data_types, function(x) {
   rename(location_name = name) %>%
   inner_join(country_codes, by = "location_name") %>%
   mutate(scenario_id = "forecast",
-         target = paste(week_ahead, "wk ahead inc", sub("s$", "", type))) %>%
+         target = paste(week_ahead, "wk ahead", type)) %>%
   pivot_longer(starts_with("q."), names_to = "quantile") %>%
   mutate(quantile = as.numeric(sub("q\\.", "0.", quantile)),
-         type = "quantile") %>%
+         type = "quantile",
+         value = round(value)) %>%
   select(scenario_id, forecast_date = fcst_date, target,
          target_end_date = end_date, location, type, quantile, value)
 
-point_forecasts <- df %>%
-  filter(quantile == 0.5) %>%
-  mutate(type = "point",
-         quantile = NA_real_)
-
-combined <- df %>%
-  bind_rows(point_forecasts) %>%
-  arrange(forecast_date, target, target_end_date, location, type, quantile)
+combined <- EuroForecastHub::add_point_forecasts(df)
 
 forecast_submission_date <-
   unique(df$forecast_date)
 
 filename <-
   paste0(paste(forecast_submission_date, model_name, sep = "-"), ".csv")
-vroom_write(combined, file.path(processed_dir, filename), delim = ",")
+
+combined  %>%
+  arrange(forecast_date, target, target_end_date, location, type, quantile) %>%
+  vroom_write(file.path(processed_dir, filename), delim = ",")
