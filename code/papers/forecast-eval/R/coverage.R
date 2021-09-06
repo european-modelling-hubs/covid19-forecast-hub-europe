@@ -25,7 +25,7 @@ cov50 <- cov %>%
          cov50.upper = cov50.mean + qt(1 - (0.05 / 2), cov50.n - 1) * cov50.se,
          diff = 0.5 - cov50.mean) %>%
   group_by(target_variable) %>%
-  mutate(model = fct_reorder(model, diff, min)) %>%
+  # mutate(model = fct_reorder(model, diff, min)) %>%
   ungroup()
 
 # Plot 50% Coverage ----------------------------------------------------------
@@ -45,7 +45,7 @@ cov50 %>%
   theme(legend.position = "bottom")
 
  ggsave(height = 6, width = 6,
-        filename = paste0(file_path, "/figures/", Sys.Date(), "-model-coverage.png"))
+        filename = paste0(file_path, "/figures/", "model-coverage.png"))
  
  # Caption
  #  The proportion of observations that fell within the 50% prediction interval 

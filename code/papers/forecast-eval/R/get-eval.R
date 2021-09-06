@@ -51,7 +51,9 @@ eval <- eval %>%
   mutate(model_score = case_when(is.na(interval_score) ~ ae,
                               TRUE ~ interval_score),
          model_score_source = case_when(is.na(interval_score) ~ "AE",
-                                TRUE ~ "Interval"))
+                                TRUE ~ "Interval"),
+         # model as alphabetical ordered factor for plotting
+         model = factor(model, ordered = TRUE))
 
 # separate out baseline and ensemble as comparators
 score_base <- eval %>%
@@ -70,6 +72,6 @@ eval_wide <- eval %>%
   full_join(score_ensemble)
 
 ###
-rm(model_desig, get_model_designations, clean_variables,
+rm(model_desig, clean_variables,
    score_base, score_ensemble)
    

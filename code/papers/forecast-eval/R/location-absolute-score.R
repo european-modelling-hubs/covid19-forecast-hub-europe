@@ -15,7 +15,7 @@ h1 <- eval_wide %>%
 
 # All model relative scores by location -----------------------------------
 # Boxplot showing range of model scores for each location, 
-# relative to baseline at 1 and facetted by case/death
+# relative to baseline at 1 and faceted by case/death
 # - not saved
 h1 %>%
   ggplot(aes(x = location, y = rel_ae)) +
@@ -68,7 +68,7 @@ h1_location_plot <- h1_location_plot %>%
   theme_bw() +
   theme(legend.position = "none")
 
-ggsave(filename = paste0(file_path, "/figures/", Sys.Date(), "-location-absolute-score.png"),
+ggsave(filename = paste0(file_path, "/figures/", "location-absolute-score.png"),
        height = 5, width = 8,
        plot = h1_location_plot)
 

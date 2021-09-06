@@ -16,18 +16,51 @@ h1 <- eval_wide %>%
 
 # Average relative score against baseline ------------------------------------------
 # Boxplot: spread of each model's relative performance across locations
-rae <- eval %>%
-  filter(horizon %in% c(1, 2) & !location %in% "Overall" & !grepl("baseline", model)) %>%
-  group_by(target_variable, horizon) %>%
-  mutate(model = fct_infreq(model)) %>%
+rel_score <- eval %>%
+  filter(horizon %in% c(1, 2) & 
+           !location %in% "Overall" & 
+           !grepl("baseline", model)) %>%
   group_by(target_variable, model, horizon) %>%
   mutate(n_locs = length(unique(location))) %>%
   ungroup() %>%
-  mutate(rel_ae_point = ifelse(n_locs == 1, rel_ae, NA),
+  mutate(rel_wis_point = ifelse(n_locs == 1, rel_wis, NA), # & !is.na(rel_wis), rel_wis,
+         rel_wis_multi = ifelse(n_locs > 1, rel_wis, NA),
+         rel_ae_point = ifelse(n_locs == 1, rel_ae, NA), # & !is.na(rel_wis), rel_wis,
          rel_ae_multi = ifelse(n_locs > 1, rel_ae, NA)) %>%
   ungroup() 
 
-rae_plot <- rae %>%
+# Rel WIS
+rwis_plot <- rel_score %>%
+  mutate(horizon = factor(horizon, ordered = TRUE)) %>%
+  ggplot(aes(y = model, 
+             colour = horizon,
+             fill = horizon)) +
+  geom_boxplot(aes(x = rel_wis_multi),
+               alpha = 0.8,
+               outlier.shape = NA) +
+  geom_jitter(aes(x = rel_wis_multi),
+              alpha = 0.2) +
+  geom_point(aes(x = rel_wis_point), alpha = 0.9,
+             position = position_dodge(width = 0.1)) +
+  xlim(c(0, 3)) +
+  geom_vline(aes(xintercept = 1), lty = 2) +
+  labs(y = NULL, x = "Scaled relative WIS per location",
+       colour = "Weeks ahead", fill = "Weeks ahead") +
+  scale_fill_brewer(palette = "Set1") +
+  scale_colour_brewer(palette = "Set1") +
+  coord_flip() +
+  facet_grid(rows = vars(target_variable), scales = "free_x") +
+  theme_bw() +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 30, hjust = 1),
+        plot.margin = unit(x = c(0.2,0.2,0.2,2), units = "cm"))
+        
+ggsave(filename = paste0(file_path, "/figures/", "model-relative-wis.png"),
+       height = 5, width = 9,
+       plot = rwis_plot)
+
+# Rel AE
+rae_plot <- rel_score %>%
   mutate(horizon = factor(horizon, ordered = TRUE)) %>%
   ggplot(aes(y = model, 
              colour = horizon,
@@ -41,18 +74,22 @@ rae_plot <- rae %>%
              position = position_dodge(width = 0.1)) +
   xlim(c(0, 3)) +
   geom_vline(aes(xintercept = 1), lty = 2) +
-  labs(y = NULL, x = "Average scaled relative error per location",
+  labs(y = NULL, x = "Scaled relative AE per location",
        colour = "Weeks ahead", fill = "Weeks ahead") +
-  scico::scale_fill_scico_d(palette = "bamako") +
-  scico::scale_colour_scico_d(palette = "bamako") +
-  facet_wrap(~ target_variable, scales = "free_x") +
+  scale_fill_brewer(palette = "Set1") +
+  scale_colour_brewer(palette = "Set1") +
+  coord_flip() +
+  facet_grid(rows = vars(target_variable), scales = "free_x") +
   theme_bw() +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 30, hjust = 1),
+        plot.margin = unit(x = c(0.2,0.2,0.2,2), units = "cm"))
 
-ggsave(filename = paste0(file_path, "/figures/", Sys.Date(), "-model-relative-ae.png"),
-       height = 7, width = 5.5,
+ggsave(filename = paste0(file_path, "/figures/", "model-relative-ae.png"),
+       height = 5, width = 9,
        plot = rae_plot)
 
+###
 rae_n_pairs_cases <- sum(rae$target_variable == "Cases")
 rae_n_pairs_deaths <- sum(rae$target_variable == "Deaths")
 rae_n_outliers <- nrow(filter(rae, rel_ae > 3))
@@ -145,7 +182,6 @@ top_models_plot <- top_target_models %>%
   group_by(model) %>%
   mutate(horizon = fct_reorder(as.character(horizon), horizon, sum)) %>%
   group_by(target_variable) %>%
-  mutate(model = fct_reorder(model, n, sum)) %>%
   ggplot(aes(y = model, x = n)) + 
   geom_col(aes(fill = horizon), position = position_stack()) +
   # scico::scale_fill_scico_d(palette = "bamako", end = 0.8, direction = -1) +
@@ -159,7 +195,7 @@ top_models_plot <- top_target_models %>%
 
 plot(top_models_plot)
 
-  ggsave(filename = paste0(file_path, "/figures/", Sys.Date(), "-top-models.png"),
+  ggsave(filename = paste0(file_path, "/figures/", "top-models.png"),
        height = 4, width = 5,
        plot = top_models_plot)
   

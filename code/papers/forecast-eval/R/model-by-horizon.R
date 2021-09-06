@@ -38,7 +38,8 @@ h1_h4 %>%
   theme(legend.position = "none") 
 
 ggsave(here(file_path, "figures", 
-            paste0(Sys.Date(), "-model-coverage-horizon.png")))
+            "model-horizon-coverage.png"),
+       height = 4, width = 4)
 
 
 # rel WIS per model by horizon --------------------------------------------
@@ -57,4 +58,5 @@ h1_h4 %>%
   theme(legend.position = "none") 
 
 ggsave(here(file_path, "figures", 
-            paste0(Sys.Date(), "-model-relwis-horizon.png")))
+           "model-horizon-relwis.png"),
+      height = 3, width = 5)
