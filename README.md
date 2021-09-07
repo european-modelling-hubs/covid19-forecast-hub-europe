@@ -30,13 +30,13 @@ Before contributing for the first time:
 
 We require some forecast parameters so that we can compare and ensemble forecasts. All forecasts should use the following structure:
 
-| Parameter | Description |
-| ----------- | ----------- |
-| Target | Cases, hospitalisations and/or deaths |
-| Count | Incident |
-| Geography | EU/EFTA/UK nations (any/all) |
-| Frequency | Weekly |
-| Horizon | 1 to 4 weeks |
+| Parameter | Description                           |
+|-----------|---------------------------------------|
+| Target    | Cases, hospitalisations and/or deaths |
+| Count     | Incident                              |
+| Geography | EU/EFTA/UK nations (any/all)          |
+| Frequency | Weekly                                |
+| Horizon   | 1 to 4 weeks                          |
 
 There is no obligation to submit forecasts for all suggested targets or horizons, and it is up to you to decide which you are comfortable forecasting with your model.
 
