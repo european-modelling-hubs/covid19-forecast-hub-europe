@@ -2,9 +2,9 @@ This folder contains code for running and evaluating ensemble methods.
 
 To run a single ensemble on hub forecasts, use the `run_ensemble()` function combined with one of the [supported methods](#Methods) for any given forecast date.
 
-See the  [EuroCOVIDhub](./code/ensemble/EuroCOVIDhub) folder for the code and history of the European forecasting hub ensemble published each week.
+See the [EuroCOVIDhub](./code/ensemble/EuroCOVIDhub) folder for the code and history of the European forecasting hub ensemble published each week.
 
-_Methods_
+## Methods
 
 Currently, our code supports the following ensemble [methods](./code/ensemble/methods). Find ensemble forecasts for all methods over time in [Forecasts](ensembles).
 
@@ -13,7 +13,7 @@ Type | Method | Function
 Unweighted | Mean | [`create_ensemble_average(method = "mean")`](./code/ensemble/methods/create-ensemble-average.R)
 Unweighted | Median | [`create_ensemble_average(method = "median")`](./code/ensemble/methods/create-ensemble-average.R)
 
-_Implementation_
+## Implementation
 
 These functions support running and formatting ensembles.
 
