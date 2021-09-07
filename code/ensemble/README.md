@@ -1,6 +1,6 @@
 This folder contains code for running and evaluating ensemble methods.
 
-To run a single ensemble on hub forecasts, use the `run_ensemble()` function combined with one of the [supported methods](#Methods) for any given forecast date.
+To run a single ensemble on hub forecasts, use the `run_ensemble()` function combined with one of the [supported methods](#methods) for any given forecast date.
 
 See the [EuroCOVIDhub](./code/ensemble/EuroCOVIDhub) folder for the code and history of the European forecasting hub ensemble published each week.
 
