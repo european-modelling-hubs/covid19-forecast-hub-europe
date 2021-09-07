@@ -32,7 +32,7 @@ We require some forecast parameters so that we can compare and ensemble forecast
 
 | Parameter | Description |
 | ----------- | ----------- |
-| Target | Cases and/or deaths |
+| Target | Cases, hospitalisations and/or deaths |
 | Count | Incident |
 | Geography | EU/EFTA/UK nations (any/all) |
 | Frequency | Weekly |
