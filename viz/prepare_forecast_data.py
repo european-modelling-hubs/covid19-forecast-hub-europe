@@ -71,7 +71,7 @@ df['merge_target'] = 'inc_' + df.target.str.split().str[-1]
 truth = pd.read_csv('viz/truth_to_plot.csv')
 truth.date = pd.to_datetime(truth.date)
 
-truth = pd.melt(truth, id_vars=['date', 'location', 'location_name'], value_vars=['inc_death', 'inc_case'], 
+truth = pd.melt(truth, id_vars=['date', 'location', 'location_name'], value_vars=['inc_death', 'inc_case', 'inc_hosp'], 
                var_name='merge_target', value_name='truth')[['date', 'location', 'merge_target', 'truth']]
 
 df = df.merge(truth, left_on=['location', 'saturday0', 'merge_target'], 
