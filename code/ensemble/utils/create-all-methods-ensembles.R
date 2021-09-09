@@ -2,6 +2,8 @@
 library(here)
 library(vroom)
 library(EuroForecastHub)
+library(dplyr)
+library(purrr)
 
 # Get exclusions for all weeks
 exclude_by_date <- vroom(here("code", "ensemble", "EuroCOVIDhub",
