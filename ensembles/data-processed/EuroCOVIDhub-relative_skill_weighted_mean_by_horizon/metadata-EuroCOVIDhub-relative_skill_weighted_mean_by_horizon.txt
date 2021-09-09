@@ -1,0 +1,13 @@
+team_name: European COVID-19 Forecast Hub
+model_name: relative_skill_weighted_mean_by_horizon
+model_abbr: EuroCOVIDhub-relative_skill_weighted_mean_by_horizon
+model_contributors: Katharine Sherratt <katharine.sherratt@lshtm.ac.uk>, Nikos Bosse <nikos.bosse@lshtm.ac.uk>, Sebastian Funk <sebastian.funk@lshtm.ac.uk>
+website_url: https://covid19forecasthub.eu/
+license: cc-by-4.0
+team_model_designation: primary
+methods: An ensemble, or model average, of submitted forecasts to the European COVID-19 Forecast Hub.
+team_funding: This model's development is funded by the European Centres for Disease Countrol.
+repo_url: https://github.com/epiforecasts/covid19-forecast-hub-europe
+twitter_handles: kathsherratt, ftargument, sbfnk
+data_inputs: incident case and death forecasts from other models.
+methods_long: Relative skill weighted mean ensemble by horizon.
