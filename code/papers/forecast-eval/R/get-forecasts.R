@@ -37,5 +37,5 @@ forecasts <- raw_forecasts %>%
 forecasts_ex_hub <- forecasts %>%
   filter(!grepl("EuroCOVIDhub", model))
 
-rm(model_desig_other, get_model_designations)
+rm(model_desig_other)
 

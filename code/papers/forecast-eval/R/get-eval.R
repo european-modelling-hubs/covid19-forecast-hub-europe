@@ -59,11 +59,15 @@ eval <- eval %>%
 score_base <- eval %>%
   filter(grepl("hub-baseline", model)) %>%
   select(baseline_score = interval_score,
+         baseline_rel_wis = rel_wis,
+         baseline_rel_ae = rel_ae,
          target_variable, horizon, location)
 
 score_ensemble <- eval %>%
   filter(grepl("hub-ensemble", model)) %>%
   select(ensemble_score = interval_score,
+         ensemble_rel_wis = rel_wis,
+         ensemble_rel_ae = rel_ae,
          target_variable, horizon, location)
 
 eval_wide <- eval %>%

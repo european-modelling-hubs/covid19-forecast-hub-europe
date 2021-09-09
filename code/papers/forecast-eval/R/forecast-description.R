@@ -23,13 +23,31 @@ team_countries <- read_csv(here("code", "papers", "thematic-eval",
 # Teams - excludes hub team ----------------------------------------------
 # Over time
 models_time <- forecasts_ex_hub %>%
-  group_by(forecast_date) %>%
+  group_by(forecast_date, target_variable) %>%
   distinct(team_name, model_name) %>%
   summarise(n_teams = length(unique(team_name)),
             n_models = length(unique(model_name)))
 teams_min <- min(models_time$n_teams)
 teams_max <- max(models_time$n_teams)
 teams_unique <- length(unique(forecasts_ex_hub$team_name)) # 34 submitting teams
+
+# plot n teams over time
+models_time %>%
+  mutate(target_variable = recode(target_variable,
+                                  "inc case" = "Cases",
+                                  "inc death" = "Deaths")) %>%
+  ggplot(aes(x = forecast_date, y = n_teams, 
+             colour = target_variable)) +
+  geom_point() +
+  geom_line() +
+  labs(x = NULL, y = "Number of teams",
+       colour = NULL) +
+  scale_colour_brewer(palette = "Set1") +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+ggsave(height = 3, width = 3,
+       filename = paste0(file_path, "/figures/", "teams-over-time.png"))
 
 #  by country
 team_countries <- team_countries %>% # excludes hub team
@@ -94,20 +112,55 @@ quantile_all <- n_predictions %>%
   filter(n_preds == 24) %>%
   pull(model) %>%
   unique()
+
 quantile_subset <- n_predictions %>%
   filter(n_preds > 1 & n_preds < 24) %>%
   pull(model) %>%
   unique()
+
 quantile_point <- n_predictions %>%
   filter(n_preds == 1) %>%
   pull(model) %>%
   unique()
+
 models_unique_name <- unique(forecasts$model) 
 
+# Number of models submitting all 23 quantiles
 models_quantile_all <- length(intersect(models_unique_name, quantile_all))
+# Number that added to create the full set from either a point or a subset of quantiles:
 models_quantile_added <- length(intersect(quantile_point, quantile_all)) + length(intersect(quantile_subset, quantile_all))
+# subset of quantiles only
 models_quantile_subset <- length(setdiff(quantile_subset, quantile_all)) # models that only ever had a subset of quantiles
+# point only
 models_quantile_point <- length(setdiff(quantile_point, quantile_all))
 
+# number submitting any quantile
 models_quantile_n <- models_unique - models_quantile_point
 models_quantile_pct <- round(models_quantile_n / models_unique * 100)
+
+
+# Heatmap: forecasts over time ---------------------------------------------
+
+forecasts_summary <- forecasts %>%
+  filter(horizon %in% c(1,2)) %>%
+  group_by(forecast_date, location_name, target_variable) %>%
+  summarise(n_predictions = n(),
+            n_models = length(unique(.$model)))
+
+forecasts_summary %>%
+  mutate(target_variable = recode(target_variable,
+                                  "inc case" = "Cases",
+                                  "inc death" = "Deaths")) %>%
+  ggplot(aes(x = forecast_date, y = location_name, fill = n_predictions)) +
+  geom_tile() +
+  labs(x = NULL, y = NULL,
+       fill = "Number of one and two week predictions") +
+  facet_wrap(~ target_variable) +
+  scale_fill_distiller(direction = 1) +
+  scale_x_date(date_breaks = "6 week", date_labels = "%b") +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+
+ggsave(height = 5, width = 5,
+       filename = paste0(file_path, "/figures/", "predictions-over-time.png"))

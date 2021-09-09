@@ -52,6 +52,7 @@ rwis_plot <- rel_score %>%
   facet_grid(rows = vars(target_variable), scales = "free_x") +
   theme_bw() +
   theme(legend.position = "bottom",
+        legend.justification = "right",
         axis.text.x = element_text(angle = 30, hjust = 1),
         plot.margin = unit(x = c(0.2,0.2,0.2,2), units = "cm"))
         
@@ -82,6 +83,7 @@ rae_plot <- rel_score %>%
   facet_grid(rows = vars(target_variable), scales = "free_x") +
   theme_bw() +
   theme(legend.position = "bottom",
+        legend.justification = "right",
         axis.text.x = element_text(angle = 30, hjust = 1),
         plot.margin = unit(x = c(0.2,0.2,0.2,2), units = "cm"))
 

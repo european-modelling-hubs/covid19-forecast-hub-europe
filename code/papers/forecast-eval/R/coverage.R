@@ -29,22 +29,28 @@ cov50 <- cov %>%
   ungroup()
 
 # Plot 50% Coverage ----------------------------------------------------------
-cov50 %>%
+cov %>% # cov50 %>%
   mutate(horizon = factor(horizon, ordered = TRUE)) %>%
   ggplot(aes(y = model, colour = horizon)) +
-  geom_point(aes(x = cov50.mean)) +
-  geom_linerange(aes(xmin = cov50.lower, xmax = cov50.upper)) +
+  # geom_point(aes(x = cov50.mean)) +
+  # geom_linerange(aes(xmin = cov50.lower, xmax = cov50.upper)) +
+  geom_boxplot(aes(x = cov_50), outlier.alpha = 0.2) +
   geom_vline(aes(xintercept = 0.5), lty = 2) +
   xlim(c(0,1)) +
-  scico::scale_colour_scico_d(palette = "bamako") +
   labs(y = NULL, 
-       x = "Coverage across all forecasts, mean and 95% CI",
+       x = "50% coverage across all forecasts",
        colour = "Weeks ahead", shape = "Weeks ahead") +
-  facet_wrap(~ target_variable) +
+  scale_fill_brewer(palette = "Set1") +
+  scale_colour_brewer(palette = "Set1") +  
+  coord_flip() +
+  facet_grid(rows = vars(target_variable), scales = "free") +
   theme_bw() +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom",
+        legend.justification = "right",
+        axis.text.x = element_text(angle = 30, hjust = 1),
+        plot.margin = unit(x = c(0.2,0.2,0.2,2), units = "cm"))
 
- ggsave(height = 6, width = 6,
+ ggsave(height = 5, width = 9,
         filename = paste0(file_path, "/figures/", "model-coverage.png"))
  
  # Caption
