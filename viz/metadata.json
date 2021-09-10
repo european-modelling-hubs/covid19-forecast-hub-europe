@@ -21,11 +21,11 @@
         "website_url": "https://www.itwm.fraunhofer.de/",
         "license": "mit",
         "team_model_designation": "primary",
-        "methods": "tba",
-        "team_funding": "tba",
-        "data_inputs": "tba",
+        "methods": "cohort based, integral equation",
+        "team_funding": "Fraunhofer Gesellschaft, Land Rheinland-Pfalz",
+        "data_inputs": "RKI",
         "citation": "https://www.itwm.fraunhofer.de/content/dam/itwm/de/documents/PressemitteilungenPDF/2020/20200429_Bericht_Prognosemodelle-f%C3%BCr-die-Coronapandemie.pdf",
-        "methods_long": "tba"
+        "methods_long": "Fraunhofer-ITWM's predictions are based on a cohort model that groups people according to four age groups and according to the status infected, detected and successfully vaccinated. The dynamics of the epidemic are described by integral equations. In particular, we assume an infectious period with fixed onset, end and infectivity. The most important parameters are contact rates between age groups, detection rates and times, and death rates and times. They are adjusted to the historical data of the RKI. For forecasts, the simulation is continued with the parameters determined for the last week. In principle, the forecast quality could still be improved by anticipating the effects of events such as the end of public holidays on contact and detection rates. However, this is not yet done in the automatic submissions. All calculations use automatic differentiation. This speeds up parameter adjustment and allows for error estimates. The latter are determined by comparing counted and simulated cases and by matching the empirical standard deviations with the standard deviations predicted by the calculated sensitivities. The model is described in detail in https://www.itwm.fraunhofer.de/de/presse-publikationen/presseinformationen/2021/2021-06-22_Dritte_Welle_Starker-Effekt-von-Schnelltests-an-Schulen.html"
     },
     "DSMPG-bayes": {
         "team_name": "Priesemann Group, MPI-DS",
