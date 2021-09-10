@@ -232,7 +232,7 @@ table <- score_df %>%
 
 
 # save --------------------------------------------------------------------
-write_csv(table, here("code", "papers", "ensemble-eval", "data", "2021-08-23-evaluation-all-forecasts.csv"))
+write_csv(table, here("code", "papers", "ensemble-eval", "data", "2021-08-23-evaluation-all-ensembles.csv"))
 
 # clean up ----------------------------------------------------------------
 del <- ls()
