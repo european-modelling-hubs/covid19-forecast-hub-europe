@@ -143,12 +143,9 @@ class WindowGenerator:
         ax.set_title(self.country)
 
         pred_cases_raw = model(x_test)
-        # pred_cases = (pred_cases_raw * self.df_std["cases"]) + self.df_mean["cases"]
-        # pred_cases = (pred_cases_raw * (self.df_train["cases"].max() - self.df_train["cases"].min()))\
-        #               + self.df_train["cases"].min()
         pred_cases = self.descale(predictions_raw=pred_cases_raw, col=plot_col)
         samples = pred_cases[:, :, label_col_index]
-        posterior_quantile = np.percentile(samples, [2.5, 25, 50, 75, 97.5], axis=-1)
+        posterior_quantile = np.percentile(samples, [2.5, 25, 50, 75, 97.5], axis=-1, interpolation="midpoint")
         ax.plot(range(num_days), posterior_quantile[2, :num_days], '--X', color='#ff7f0e', label='Posterior median',
                 lw=2, markersize=6)
         if plot_quantile:
@@ -158,8 +155,9 @@ class WindowGenerator:
                             color='b', label='95% quantile', alpha=.2)
 
         observed_raw = y_test[:, :, label_col_index]
-        observed = (observed_raw * (self.df_raw["cases"].max() - self.df_raw["cases"].min())) \
-                   + self.df_raw["cases"].min()
+        observed = self.descale(observed_raw, plot_col)
+        # observed = (observed_raw * (self.df_raw["cases"].max() - self.df_raw["cases"].min())) \
+        #            + self.df_raw["cases"].min()
         # observed = (observed_raw * self.df_std["cases"]) + self.df_mean["cases"]
         ax.plot(range(num_days), observed[:num_days], '--o', color='k', markersize=6, label='Observed '+plot_col)
 
@@ -271,14 +269,14 @@ class WindowGenerator:
         samples = predictions[:, :, label_col_index]
         posterior_quantile = np.percentile(samples, [2.5, 25, 50, 75, 97.5], axis=-1)
 
-        ax.plot(range(num_days), posterior_quantile[2, label_col_index], 'X', color='#ff7f0e',
+        ax.plot(num_days_prior + num_days, posterior_quantile[2, label_col_index], 'X', color='#ff7f0e',
                 label='Posterior median', lw=2, markersize=8)
         ax.fill_between(range(num_days), posterior_quantile[1, label_col_index], posterior_quantile[3, label_col_index],
                         color='b', label='50% quantile', alpha=.4)
         ax.fill_between(range(num_days), posterior_quantile[0, label_col_index], posterior_quantile[4, label_col_index],
                         color='b', label='95% quantile', alpha=.2)
 
-        ax.plot(range(num_days), observed[0, 0, 0], '--o', color='g', markersize=8, label='Observed ' + plot_col)
+        ax.plot(num_days_prior + num_days, observed[0, 0, 0], '--o', color='g', markersize=8, label='Observed ' + plot_col)
         ax.plot(range(num_days_prior), prior_observed[0, :num_days_prior, label_col_index], '--o', color='k',
                 markersize=8, label='Observed ' + plot_col)
 
@@ -301,8 +299,7 @@ class WindowGenerator:
     def descale(self, predictions_raw, col="cases"):
         col_index = self.column_indices[col]
         # predictions = (predictions_raw[:, :, col_index:col_index + 1] * self.df_std) + self.df_mean
-        predictions = (predictions_raw * (self.df_train["cases"].max() - self.df_train["cases"].min())) \
-                      + self.df_train["cases"].min()
+        predictions = (predictions_raw * (self.df_train[col].max() - self.df_train[col].min())) + self.df_train[col].min()
 
         return predictions
 
@@ -338,15 +335,13 @@ class WindowGenerator:
         #         ds = ds.take(-1)
         if self.mode == "all":
             self.ds_train = ds.take(train_size)
-            if data_type != "pred":
-                self.ds_train = self.ds_train.map(self.split_window)
             ds = ds.skip(train_size)
             self.ds_val = ds.take(valid_size)
-            if data_type != "pred":
-                self.ds_val = self.ds_val.map(self.split_window)
             ds = ds.skip(valid_size)
             self.ds_test = ds.take(-1)
-            # if data_type != "pred":
+            if data_type != "pred":
+                self.ds_train = self.ds_train.map(self.split_window)
+                self.ds_val = self.ds_val.map(self.split_window)
             self.ds_test = self.ds_test.map(self.split_window)
 
             return self.ds_train, self.ds_val, self.ds_test

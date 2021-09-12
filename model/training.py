@@ -13,7 +13,7 @@ import tensorflow_probability as tfp
 import tensorflow_probability.python.distributions as tfd
 import tensorflow_probability.python.bijectors as tfb
 import tensorflow_probability.python.layers as tfl
-from tensorflow.keras.layers import Input
+from tensorflow.keras.layers import Input, Dense, Dropout, GRU
 from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import Adam
 from visualizations import *
@@ -41,38 +41,33 @@ class Training:
         self.window = None
 
     def nll(self, y, distr):
-        return -distr.log_prob(y)
+        # print(distr)
+        # print(y)
+        if self.config.label_width == 1:
+            y_reshape = y
+        else:
+            y_reshape = tf.reshape(y, [-1, self.config.input_width, self.config.label_width])
+            # print(y_reshape)
+        return -distr.log_prob(y_reshape)
 
     def normal_sp(self, params):
-        return tfd.Normal(loc=params,  # loc=params[:, 0:1]
+        return tfd.Normal(loc=params,  # loc=params[:, 0:1],
                           scale=1e-3 + tf.math.softplus(0.05 * params[:, 1:2]))  # both parameters are learnable
 
-    def create_window(self):
-        num_features = len(self.config.target_cols)
+    def normal_exp(self, params):
+        return tfd.Normal(loc=params[:, 0:1], scale=tf.math.exp(params[:, 1:2]))  # both parameters are learnable
 
-        # if self.config.label_width is 1:
-        #     input_width = self.config.input_width
-        #     label_width = self.config.input_width
-        #     shift = self.config.shift
-        # else:
-        #     input_width = self.config.input_width
-        #     label_width = self.config.label_width
-        #     shift = self.config.shift
+    def train_flipout_model(self, country):
+        self.window = WindowGenerator(self.config, self.config.input_width, self.config.label_width, self.config.shift,
+                                      df=self.df, label_columns=self.config.target_cols,
+                                      country=country)
+        ds_train, ds_val, ds_test = self.window.make_dataset(shuffle=self.config.shuffle)
+        x, y = next(iter(ds_train))
 
-        # `WindowGenerator` returns all features as labels if you don't set the `label_columns` argument.
-        window = WindowGenerator(self.config, self.config.input_width, self.config.label_width, self.config.shift,
-                                 df=self.df, label_columns=self.config.target_cols)
+        kernel_divergence_fn = lambda q, p, _: tfd.kl_divergence(q, p) / (x.shape[1] * 1.0)
+        bias_divergence_fn = lambda q, p, _: tfd.kl_divergence(q, p) / (x.shape[1] * 1.0)
 
-        return window
-
-    def train_model(self):
-
-        window = self.create_window()
-
-        kernel_divergence_fn = lambda q, p, _: tfd.kl_divergence(q, p) / (len(self.df) * 1.0)
-        bias_divergence_fn = lambda q, p, _: tfd.kl_divergence(q, p) / (len(self.df) * 1.0)
-
-        inputs = Input(shape=(self.config.input_width, self.config.label_width))
+        inputs = Input(shape=(self.config.input_width, len(self.config.cols)))
 
         hidden = tfl.DenseFlipout(20, bias_posterior_fn=tfl.util.default_mean_field_normal_fn(),
                                   bias_prior_fn=tfl.default_multivariate_normal_fn,
@@ -93,46 +88,46 @@ class Training:
         dist = tfl.DistributionLambda(self.normal_sp)(params)
 
         model_vi = Model(inputs=inputs, outputs=dist)
-        model_vi.compile(Adam(learning_rate=0.0002), loss=self.nll)
-
+        model_vi.compile(Adam(learning_rate=0.001), loss=self.nll)
         model_params = Model(inputs=inputs, outputs=params)
+        result = model_vi.fit(ds_train, epochs=self.config.epochs, validation_data=ds_val, verbose=True)
+                              # steps_per_epoch=50, validation_steps=25)
 
-        # training
-        # early_stopping = EarlyStopping(monitor='val_loss', patience=self.config.patience, restore_best_weights=True)
-        # checkpointer = ModelCheckpoint(filepath=self.config.checkpoint_path + self.model_path, monitor='val_loss',
-        #                                save_best_only=True, save_weights_only=False)
-
-        # callbacks = [early_stopping, checkpointer]
-        result = model_vi.fit(window.train, epochs=self.config.epochs, validation_data=window.val, verbose=True)
-
-        for col in self.config.target_cols:
-            # window.plot(model, plot_model="train", plot_col=col)
-            # window.plot(model, plot_model="val", plot_col=col)
-            # window.plot(model_vi, plot_model="test", plot_col=col)
-            window.make_plot_runs(model=model_vi, plot_model="test", plot_col=col)
-        # if self.config.is_model_custom_name:
-        export_dir = self.config.final_model_path + self.config.model_custom_name
-        # else:
-        #     export_dir = self.config.final_model_path + self.model_path
-
-        # tf.saved_model.save(model_vi, export_dir=export_dir)
+        export_dir = self.config.final_model_path + self.model_path
         model_vi.save_weights(export_dir)
+        self.plot_results(model_vi, result, country, ds_train, ds_val, ds_test)
 
-        # plot model result
-        plot_train_history(result, 'Single Step Training and validation loss for ' +
-                           datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S.0Z") + " " +
-                           self.config.final_model_path + self.image_path)
-        plot_loss(result.history, "loss for " + datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S.0Z"),
-                  self.config.final_model_path + self.image_path)
+        return model_vi
 
-        train_performance = model_vi.evaluate(window.train, steps=self.config.validation_steps)
-        val_performance = model_vi.evaluate(window.val, steps=self.config.validation_steps)
-        performance = model_vi.evaluate(window.test, verbose=1, steps=self.config.validation_steps)
+    def train_mc_dropout_model(self, country):
+        self.window = WindowGenerator(self.config, self.config.input_width, self.config.label_width, self.config.shift,
+                                      df=self.df, label_columns=self.config.target_cols,
+                                      country=country)
+        ds_train, ds_val, ds_test = self.window.make_dataset(shuffle=self.config.shuffle)
 
-        return_data = {"model_path": self.model_path, "training_error": train_performance[0],
-                       "valid_error": val_performance[0], "test_error": performance[0]}
+        inputs = Input(shape=(self.config.input_width, len(self.config.cols)))
+        hidden = Dense(20, activation="relu")(inputs)
+        hidden = Dropout(0.1)(hidden, training=True)
+        hidden = Dense(50, activation="relu")(hidden)
+        hidden = Dropout(0.1)(hidden, training=True)
+        hidden = Dense(50, activation="relu")(hidden)
+        hidden = Dropout(0.1)(hidden, training=True)
+        hidden = Dense(50, activation="relu")(hidden)
+        hidden = Dropout(0.1)(hidden, training=True)
+        hidden = Dense(20, activation="relu")(hidden)
+        hidden = Dropout(0.1)(hidden, training=True)
+        params_mc = Dense(2)(hidden)
+        dist_mc = tfl.DistributionLambda(self.normal_exp, name='normal_exp')(params_mc)
 
-        return return_data
+        model_mc = Model(inputs=inputs, outputs=dist_mc)
+        model_mc.compile(Adam(learning_rate=0.01), loss=self.nll)
+        result = model_mc.fit(ds_train, epochs=self.config.epochs, validation_data=ds_val, verbose=True)
+
+        export_dir = self.config.final_model_path + self.model_path
+        model_mc.save_weights(export_dir)
+        self.plot_results(model_mc, result, country, ds_train, ds_val, ds_test)
+
+        return model_mc
 
     # Specify the surrogate posterior over `keras.layers.Dense` `kernel` and `bias`.
     def posterior_mean_field(self, kernel_size, bias_size=0, dtype=None):
@@ -156,6 +151,51 @@ class Training:
                 reinterpreted_batch_ndims=1)),
         ])
 
+    def train_linear_model(self, country):
+        self.window = WindowGenerator(self.config, self.config.input_width, self.config.label_width, self.config.shift,
+                                      df=self.df, label_columns=self.config.target_cols,
+                                      country=country)
+        ds_train, ds_val, ds_test = self.window.make_dataset(shuffle=self.config.shuffle)
+        x_train, y_train = next(iter(ds_train))
+
+        # Build model.
+        model = tf.keras.Sequential([
+            tf.keras.layers.Dense(1),
+            tfl.DistributionLambda(lambda t: tfd.Normal(loc=t, scale=1)),
+        ])
+
+        # Do inference.
+        model.compile(optimizer=tf.optimizers.Adam(learning_rate=0.01), loss=tf.keras.metrics.mse)
+        result = model.fit(ds_train, epochs=self.config.epochs, validation_data=ds_val, verbose=True)
+
+        export_dir = self.config.final_model_path + self.model_path
+        model.save_weights(export_dir)
+        self.plot_results(model, result, country, ds_train, ds_val, ds_test)
+
+        return model
+
+    def train_gru_model(self, country):
+        self.window = WindowGenerator(self.config, self.config.input_width, self.config.label_width, self.config.shift,
+                                      df=self.df, label_columns=self.config.target_cols,
+                                      country=country)
+        ds_train, ds_val, ds_test = self.window.make_dataset(shuffle=self.config.shuffle)
+        x_train, y_train = next(iter(ds_train))
+        model = tf.keras.Sequential([
+            tf.keras.layers.GRU(units=10, dropout=0.2, return_sequences=True, activation="relu"),
+            tf.keras.layers.GRU(units=10, dropout=0.2, return_sequences=True, activation="relu"),
+            tf.keras.layers.GRU(units=10, dropout=0.2, return_sequences=True, activation="relu"),
+            tf.keras.layers.Dense(self.config.label_width)  # kernel_initializer=tf.initializers.variance_scaling()
+        ])
+        # Do inference.
+        model.compile(optimizer=tf.optimizers.Adam(learning_rate=0.0001), loss=tf.metrics.mse)
+        result = model.fit(ds_train, epochs=self.config.epochs, validation_data=ds_val, verbose=True)
+
+        export_dir = self.config.final_model_path + self.model_path
+        model.save_weights(export_dir)
+        self.plot_results(model, result, country, ds_train, ds_val, ds_test)
+
+        return model
+
     def train_variational_model(self, country):
 
         self.window = WindowGenerator(self.config, self.config.input_width, self.config.label_width, self.config.shift,
@@ -170,13 +210,20 @@ class Training:
                               kl_weight=1 / self.window.df_train.shape[0]),
             tfl.DistributionLambda(
                 lambda t: tfd.Normal(loc=t[..., :1],
-                                     scale=1e-3 + tf.math.softplus(0.1 * t[..., 1:]))),
+                                     scale=1e-4 + tf.math.softplus(0.001 * t[..., 1:]))),
         ])
 
         # Do inference.
-        model.compile(optimizer=tf.optimizers.Adam(learning_rate=0.01), loss=self.nll)
+        model.compile(optimizer=tf.optimizers.Adam(learning_rate=0.005), loss=self.nll)
         result = model.fit(ds_train, epochs=self.config.epochs, validation_data=ds_val, verbose=True)
 
+        export_dir = self.config.final_model_path + self.model_path
+        model.save_weights(export_dir)
+        self.plot_results(model, result, country, ds_train, ds_val, ds_test)
+
+        return model
+
+    def plot_results(self, model, result, country, ds_train, ds_val, ds_test):
         for col in self.config.target_cols:
             self.window.plot_bayesian(model, plot_model="train", plot_col=col,
                                       image_path=self.config.graphs_path + self.image_path)
@@ -218,5 +265,5 @@ class Training:
             file.write("Test Evaluation: " + str(test_performance) + str("\n"))
             file.close()
 
-        return model
+        return
 

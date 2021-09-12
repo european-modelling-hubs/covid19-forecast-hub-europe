@@ -15,51 +15,28 @@ import model_config
 def main():
     config = Configuration()
 
-    countries = [
-        'Austria',
-        # 'Belgium',
-        # 'Bulgaria',
-        # 'Croatia',
-        # 'Cyprus',
-        # 'Czechia',
-        # 'Denmark',
-        # 'Estonia',
-        # 'Finland',
-        # 'France',
-        # 'Germany',
-        # 'Greece',
-        # 'Hungary',
-        # 'Iceland',
-        # 'Ireland',
-        # 'Italy',
-        # 'Latvia',
-        # 'Liechtenstein',
-        # 'Lithuania',
-        # 'Luxembourg',
-        # 'Malta',
-        # 'Netherlands',
-        # 'Norway',
-        # 'Poland',
-        # 'Portugal',
-        # 'Romania',
-        # 'Slovakia',
-        # 'Slovenia',
-        # 'Spain',
-        # 'Sweden',
-        # 'Switzerland',
-        # 'United Kingdom'
-    ]
-
-    for country in countries:
+    for country in config.countries:
         df = data_management.read_truth_data(config.data_path + "truth_JHU-Incident Cases.csv",
-                                             config.data_path + "truth_JHU-Incident Deaths.csv", country, config.period)
+                                             config.data_path + "truth_JHU-Incident Deaths.csv", country=country,
+                                             period=config.period, last_day=config.last_day)
 
         image_path = "{0}_{1}_{2}".format(country, config.target_cols, datetime.datetime.today().strftime("%Y%m%d"))
-        file_path = "{0}_{1}".format(country, datetime.datetime.today().strftime("%Y%m%d"))
+        if config.is_model_custom_name:
+            file_path = config.model_custom_name
+        else:
+            file_path = "{0}_{1}".format(country, datetime.datetime.today().strftime("%Y%m%d"))
         train = Training(df=df, config=config, model_path=file_path, image_path=image_path)
+        # model = train.train_linear_model(country)
+        # model = train.train_gru_model(country)
         model = train.train_variational_model(country)
-        # predict = Predictor(df=df, config=config, model_path=file_path, window=train.window, image_path=image_path)
-        # predict.predict_variational_model(country=country, model=model, num_preds=5)
+        # model = train.train_flipout_model(country)
+        # model = train.train_mc_dropout_model(country)
+
+        df_pred = data_management.read_truth_data(config.data_path + "truth_JHU-Incident Cases.csv",
+                                                  config.data_path + "truth_JHU-Incident Deaths.csv", country=country,
+                                                  period=config.period)
+        predict = Predictor(df=df_pred, config=config, model_path=file_path, image_path=image_path)
+        predict.predict_variational_model(country=country, model=model, num_preds=1)
 
     return
 
