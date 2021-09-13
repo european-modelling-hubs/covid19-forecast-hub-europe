@@ -17,7 +17,8 @@ raw_forecasts <- load_forecasts(
   # set forecast date to corresponding submission date
   mutate(forecast_date = ceiling_date(forecast_date, "week", week_start = 2) - 1) %>%
   filter(between(forecast_date, ymd("2021-03-08"), ymd(report_date))) %>%
-  rename(prediction = value)
+  rename(prediction = value) %>%
+  filter(horizon %in% horizons)
 
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(
