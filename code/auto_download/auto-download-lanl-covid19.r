@@ -16,6 +16,7 @@ raw_dir <- file.path(tempdir(), "data-raw", model_name)
 processed_dir <- here::here("data-processed", model_name)
 last_sunday <- floor_date(today(), unit = "week", week_start = 7)
 data_types <- c("inc case", "inc death")
+horizons <- get_hub_config("horizon")$values
 
 suppressWarnings(dir.create(raw_dir, recursive = TRUE))
 suppressWarnings(dir.create(processed_dir, recursive = TRUE))
@@ -85,7 +86,8 @@ df <- lapply(data_types, function(x) {
     mutate(type = x)
 }) %>%
   bind_rows() %>%
-  filter(!is.na(week_ahead)) %>%
+  filter(!is.na(week_ahead),
+         week_ahead %in% horizons) %>%
   rename(location_name = name) %>%
   inner_join(country_codes, by = "location_name") %>%
   mutate(scenario_id = "forecast",
