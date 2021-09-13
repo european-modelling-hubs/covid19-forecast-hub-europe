@@ -1,193 +1,193 @@
 scenario_id,forecast_date,target,target_end_date,location,type,quantile,value
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,AT,point,NA, 8954.365
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,AT,quantile,0.025,545.083
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,AT,quantile,0.25,2811.8293
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,AT,quantile,0.5,8954.365
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,AT,quantile,0.75,18350.914
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,AT,quantile,0.975,15947.161
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,BE,point,NA, 13997.173
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,BE,quantile,0.025,12800.338
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,BE,quantile,0.25,10933.326
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,BE,quantile,0.5,13997.173
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,BE,quantile,0.75,14531.532
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,BE,quantile,0.975,13983.18
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,BG,point,NA, 5732.1597
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,BG,quantile,0.025,0
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,BG,quantile,0.25,2348.5142
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,BG,quantile,0.5,5732.1597
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,BG,quantile,0.75,2704.456
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,BG,quantile,0.975,10676.505
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,HR,point,NA, 2810.131
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,HR,quantile,0.025,2275.5151
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,HR,quantile,0.25,1683.2053
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,HR,quantile,0.5,2810.131
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,HR,quantile,0.75,2248.3157
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,HR,quantile,0.975,3435.5444
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CY,point,NA, 3657.6736
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CY,quantile,0.025,6909.3813
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CY,quantile,0.25,3815.3174
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CY,quantile,0.5,3657.6736
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CY,quantile,0.75,4229.5254
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CY,quantile,0.975,2950.3435
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CZ,point,NA, 1194.4109
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CZ,quantile,0.025,1245.7296
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CZ,quantile,0.25,1407.3354
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CZ,quantile,0.5,1194.4109
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CZ,quantile,0.75,1422.6084
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CZ,quantile,0.975,1528.8452
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,DK,point,NA, 8558.5
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,DK,quantile,0.025,6803.029
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,DK,quantile,0.25,6036.547
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,DK,quantile,0.5,8558.5
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,DK,quantile,0.75,6941.491
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,DK,quantile,0.975,7964.741
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,EE,point,NA, 1700.7788
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,EE,quantile,0.025,923.735
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,EE,quantile,0.25,1552.1062
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,EE,quantile,0.5,1700.7788
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,EE,quantile,0.75,2838.4175
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,EE,quantile,0.975,2302.6992
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,FI,point,NA, 6442.651
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,FI,quantile,0.025,2542.2322
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,FI,quantile,0.25,3694.0884
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,FI,quantile,0.5,6442.651
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,FI,quantile,0.75,6240.1924
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,FI,quantile,0.975,2756.4863
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,FR,point,NA, 171268.22
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,FR,quantile,0.025,135561.22
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,FR,quantile,0.25,133178.2
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,FR,quantile,0.5,171268.22
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,FR,quantile,0.75,118359.04
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,FR,quantile,0.975,143459.78
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,DE,point,NA, 37512.02
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,DE,quantile,0.025,0
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,DE,quantile,0.25,7389.942
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,DE,quantile,0.5,37512.02
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,DE,quantile,0.75,32055.08
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,DE,quantile,0.975,54299.234
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,GR,point,NA, 17920.652
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,GR,quantile,0.025,19103.74
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,GR,quantile,0.25,21943.658
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,GR,quantile,0.5,17920.652
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,GR,quantile,0.75,20988.875
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,GR,quantile,0.975,17755.824
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,HU,point,NA, 493.11102
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,HU,quantile,0.025,328.93655
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,HU,quantile,0.25,495.22525
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,HU,quantile,0.5,493.11102
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,HU,quantile,0.75,546.3013
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,HU,quantile,0.975,1089.2374
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IS,point,NA, 539.321
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IS,quantile,0.025,805.33435
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IS,quantile,0.25,768.59424
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IS,quantile,0.5,539.321
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IS,quantile,0.75,445.4862
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IS,quantile,0.975,489.66135
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IE,point,NA, 9763.57
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IE,quantile,0.025,7337.6406
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IE,quantile,0.25,10474.144
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IE,quantile,0.5,9763.57
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IE,quantile,0.75,5504.366
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IE,quantile,0.975,8669.308
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IT,point,NA, 50124.344
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IT,quantile,0.025,46704.04
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IT,quantile,0.25,39396.586
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IT,quantile,0.5,50124.344
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IT,quantile,0.75,48731.867
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,IT,quantile,0.975,49540.77
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LV,point,NA, 1180.7559
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LV,quantile,0.025,119.30081
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LV,quantile,0.25,113.45264
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LV,quantile,0.5,1180.7559
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LV,quantile,0.75,615.69977
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LV,quantile,0.975,2374.4143
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LI,point,NA, 121.56928
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LI,quantile,0.025,60.824036
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LI,quantile,0.25,45.769638
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LI,quantile,0.5,121.56928
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LI,quantile,0.75,137.5498
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LI,quantile,0.975,81.5094
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LT,point,NA, 5470.4937
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LT,quantile,0.025,386.3733
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LT,quantile,0.25,6458.644
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LT,quantile,0.5,5470.4937
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LT,quantile,0.75,5105.373
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LT,quantile,0.975,6445.0215
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LU,point,NA, 203.72723
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LU,quantile,0.025,460.46497
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LU,quantile,0.25,352.09268
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LU,quantile,0.5,203.72723
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LU,quantile,0.75,291.81985
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,LU,quantile,0.975,378.02536
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,MT,point,NA, 709.02185
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,MT,quantile,0.025,774.67816
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,MT,quantile,0.25,489.3354
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,MT,quantile,0.5,709.02185
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,MT,quantile,0.75,308.71198
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,MT,quantile,0.975,377.06656
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,NL,point,NA, 15611.132
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,NL,quantile,0.025,20354.615
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,NL,quantile,0.25,21044.309
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,NL,quantile,0.5,15611.132
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,NL,quantile,0.75,17631.66
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,NL,quantile,0.975,26278.346
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,NO,point,NA, 1655.8319
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,NO,quantile,0.025,847.4164
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,NO,quantile,0.25,1302.6106
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,NO,quantile,0.5,1655.8319
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,NO,quantile,0.75,3427.745
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,NO,quantile,0.975,8103.891
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,PL,point,NA, 804.12683
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,PL,quantile,0.025,791.2978
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,PL,quantile,0.25,1263.2097
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,PL,quantile,0.5,804.12683
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,PL,quantile,0.75,1702.8992
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,PL,quantile,0.975,1089.7443
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,PT,point,NA, 15541.768
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,PT,quantile,0.025,18795.967
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,PT,quantile,0.25,17182.88
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,PT,quantile,0.5,15541.768
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,PT,quantile,0.75,17524.666
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,PT,quantile,0.975,16878.1
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,RO,point,NA, 4737.048
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,RO,quantile,0.025,0
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,RO,quantile,0.25,1398.2959
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,RO,quantile,0.5,4737.048
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,RO,quantile,0.75,3986.5679
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,RO,quantile,0.975,7509.36
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SK,point,NA, 421.83423
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SK,quantile,0.025,390.86124
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SK,quantile,0.25,420.43097
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SK,quantile,0.5,421.83423
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SK,quantile,0.75,351.1315
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SK,quantile,0.975,765.97
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SI,point,NA, 122.83594
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SI,quantile,0.025,285.63492
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SI,quantile,0.25,935.0458
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SI,quantile,0.5,122.83594
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SI,quantile,0.75,1760.0027
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SI,quantile,0.975,6499.912
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,ES,point,NA, 192874.2
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,ES,quantile,0.025,215549.92
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,ES,quantile,0.25,148007.47
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,ES,quantile,0.5,192874.2
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,ES,quantile,0.75,0
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,ES,quantile,0.975,88867.51
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SE,point,NA, 5566.1943
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SE,quantile,0.025,2964.9004
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SE,quantile,0.25,0
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SE,quantile,0.5,5566.1943
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SE,quantile,0.75,8897.451
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,SE,quantile,0.975,6227.5005
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CH,point,NA, 10727.848
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CH,quantile,0.025,0
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CH,quantile,0.25,7287.996
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CH,quantile,0.5,10727.848
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CH,quantile,0.75,18197.04
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,CH,quantile,0.975,34600.14
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,GB,point,NA, 210093.6
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,GB,quantile,0.025,209097.02
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,GB,quantile,0.25,178948.64
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,GB,quantile,0.5,210093.6
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,GB,quantile,0.75,247809.16
-forecast,2021-09-12,1 wk ahead inc case,2021-09-19,GB,quantile,0.975,241241.84
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,AT,point,NA, 8954.365
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,AT,quantile,0.025,545.083
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,AT,quantile,0.25,2811.8293
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,AT,quantile,0.5,8954.365
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,AT,quantile,0.75,18350.914
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,AT,quantile,0.975,15947.161
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,BE,point,NA, 13997.173
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,BE,quantile,0.025,12800.338
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,BE,quantile,0.25,10933.326
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,BE,quantile,0.5,13997.173
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,BE,quantile,0.75,14531.532
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,BE,quantile,0.975,13983.18
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,BG,point,NA, 5732.1597
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,BG,quantile,0.025,0
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,BG,quantile,0.25,2348.5142
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,BG,quantile,0.5,5732.1597
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,BG,quantile,0.75,2704.456
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,BG,quantile,0.975,10676.505
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,HR,point,NA, 2810.131
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,HR,quantile,0.025,2275.5151
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,HR,quantile,0.25,1683.2053
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,HR,quantile,0.5,2810.131
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,HR,quantile,0.75,2248.3157
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,HR,quantile,0.975,3435.5444
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CY,point,NA, 3657.6736
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CY,quantile,0.025,6909.3813
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CY,quantile,0.25,3815.3174
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CY,quantile,0.5,3657.6736
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CY,quantile,0.75,4229.5254
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CY,quantile,0.975,2950.3435
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CZ,point,NA, 1194.4109
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CZ,quantile,0.025,1245.7296
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CZ,quantile,0.25,1407.3354
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CZ,quantile,0.5,1194.4109
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CZ,quantile,0.75,1422.6084
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CZ,quantile,0.975,1528.8452
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,DK,point,NA, 8558.5
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,DK,quantile,0.025,6803.029
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,DK,quantile,0.25,6036.547
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,DK,quantile,0.5,8558.5
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,DK,quantile,0.75,6941.491
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,DK,quantile,0.975,7964.741
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,EE,point,NA, 1700.7788
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,EE,quantile,0.025,923.735
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,EE,quantile,0.25,1552.1062
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,EE,quantile,0.5,1700.7788
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,EE,quantile,0.75,2838.4175
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,EE,quantile,0.975,2302.6992
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,FI,point,NA, 6442.651
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,FI,quantile,0.025,2542.2322
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,FI,quantile,0.25,3694.0884
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,FI,quantile,0.5,6442.651
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,FI,quantile,0.75,6240.1924
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,FI,quantile,0.975,2756.4863
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,FR,point,NA, 171268.22
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,FR,quantile,0.025,135561.22
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,FR,quantile,0.25,133178.2
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,FR,quantile,0.5,171268.22
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,FR,quantile,0.75,118359.04
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,FR,quantile,0.975,143459.78
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,DE,point,NA, 37512.02
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,DE,quantile,0.025,0
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,DE,quantile,0.25,7389.942
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,DE,quantile,0.5,37512.02
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,DE,quantile,0.75,32055.08
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,DE,quantile,0.975,54299.234
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,GR,point,NA, 17920.652
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,GR,quantile,0.025,19103.74
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,GR,quantile,0.25,21943.658
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,GR,quantile,0.5,17920.652
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,GR,quantile,0.75,20988.875
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,GR,quantile,0.975,17755.824
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,HU,point,NA, 493.11102
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,HU,quantile,0.025,328.93655
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,HU,quantile,0.25,495.22525
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,HU,quantile,0.5,493.11102
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,HU,quantile,0.75,546.3013
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,HU,quantile,0.975,1089.2374
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IS,point,NA, 539.321
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IS,quantile,0.025,805.33435
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IS,quantile,0.25,768.59424
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IS,quantile,0.5,539.321
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IS,quantile,0.75,445.4862
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IS,quantile,0.975,489.66135
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IE,point,NA, 9763.57
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IE,quantile,0.025,7337.6406
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IE,quantile,0.25,10474.144
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IE,quantile,0.5,9763.57
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IE,quantile,0.75,5504.366
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IE,quantile,0.975,8669.308
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IT,point,NA, 50124.344
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IT,quantile,0.025,46704.04
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IT,quantile,0.25,39396.586
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IT,quantile,0.5,50124.344
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IT,quantile,0.75,48731.867
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,IT,quantile,0.975,49540.77
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LV,point,NA, 1180.7559
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LV,quantile,0.025,119.30081
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LV,quantile,0.25,113.45264
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LV,quantile,0.5,1180.7559
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LV,quantile,0.75,615.69977
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LV,quantile,0.975,2374.4143
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LI,point,NA, 121.56928
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LI,quantile,0.025,60.824036
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LI,quantile,0.25,45.769638
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LI,quantile,0.5,121.56928
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LI,quantile,0.75,137.5498
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LI,quantile,0.975,81.5094
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LT,point,NA, 5470.4937
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LT,quantile,0.025,386.3733
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LT,quantile,0.25,6458.644
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LT,quantile,0.5,5470.4937
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LT,quantile,0.75,5105.373
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LT,quantile,0.975,6445.0215
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LU,point,NA, 203.72723
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LU,quantile,0.025,460.46497
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LU,quantile,0.25,352.09268
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LU,quantile,0.5,203.72723
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LU,quantile,0.75,291.81985
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,LU,quantile,0.975,378.02536
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,MT,point,NA, 709.02185
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,MT,quantile,0.025,774.67816
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,MT,quantile,0.25,489.3354
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,MT,quantile,0.5,709.02185
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,MT,quantile,0.75,308.71198
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,MT,quantile,0.975,377.06656
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,NL,point,NA, 15611.132
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,NL,quantile,0.025,20354.615
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,NL,quantile,0.25,21044.309
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,NL,quantile,0.5,15611.132
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,NL,quantile,0.75,17631.66
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,NL,quantile,0.975,26278.346
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,NO,point,NA, 1655.8319
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,NO,quantile,0.025,847.4164
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,NO,quantile,0.25,1302.6106
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,NO,quantile,0.5,1655.8319
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,NO,quantile,0.75,3427.745
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,NO,quantile,0.975,8103.891
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,PL,point,NA, 804.12683
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,PL,quantile,0.025,791.2978
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,PL,quantile,0.25,1263.2097
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,PL,quantile,0.5,804.12683
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,PL,quantile,0.75,1702.8992
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,PL,quantile,0.975,1089.7443
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,PT,point,NA, 15541.768
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,PT,quantile,0.025,18795.967
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,PT,quantile,0.25,17182.88
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,PT,quantile,0.5,15541.768
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,PT,quantile,0.75,17524.666
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,PT,quantile,0.975,16878.1
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,RO,point,NA, 4737.048
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,RO,quantile,0.025,0
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,RO,quantile,0.25,1398.2959
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,RO,quantile,0.5,4737.048
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,RO,quantile,0.75,3986.5679
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,RO,quantile,0.975,7509.36
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SK,point,NA, 421.83423
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SK,quantile,0.025,390.86124
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SK,quantile,0.25,420.43097
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SK,quantile,0.5,421.83423
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SK,quantile,0.75,351.1315
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SK,quantile,0.975,765.97
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SI,point,NA, 122.83594
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SI,quantile,0.025,285.63492
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SI,quantile,0.25,935.0458
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SI,quantile,0.5,122.83594
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SI,quantile,0.75,1760.0027
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SI,quantile,0.975,6499.912
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,ES,point,NA, 192874.2
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,ES,quantile,0.025,215549.92
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,ES,quantile,0.25,148007.47
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,ES,quantile,0.5,192874.2
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,ES,quantile,0.75,0
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,ES,quantile,0.975,88867.51
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SE,point,NA, 5566.1943
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SE,quantile,0.025,2964.9004
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SE,quantile,0.25,0
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SE,quantile,0.5,5566.1943
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SE,quantile,0.75,8897.451
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,SE,quantile,0.975,6227.5005
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CH,point,NA, 10727.848
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CH,quantile,0.025,0
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CH,quantile,0.25,7287.996
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CH,quantile,0.5,10727.848
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CH,quantile,0.75,18197.04
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,CH,quantile,0.975,34600.14
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,GB,point,NA, 210093.6
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,GB,quantile,0.025,209097.02
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,GB,quantile,0.25,178948.64
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,GB,quantile,0.5,210093.6
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,GB,quantile,0.75,247809.16
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,GB,quantile,0.975,241241.84
