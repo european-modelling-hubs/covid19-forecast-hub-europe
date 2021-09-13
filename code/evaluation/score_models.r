@@ -1,133 +1,56 @@
 library(scoringutils)
 library(covidHubUtils)
 library(dplyr)
-library(data.table)
 library(tidyr)
 library(lubridate)
 library(here)
 library(readr)
+library(EuroForecastHub)
+
+data_types <- get_hub_config("target_variables")
 
 ## only evaluate if the last 4 weeks hae been submitted
 restrict_weeks <- 4
 
 suppressWarnings(dir.create(here::here("evaluation")))
 
-score_models <- function(file, data, report_date, restrict_weeks) {
-    last_forecast_date <- report_date - 7
-
-    score_data <- data[forecast_date <= last_forecast_date &
-        target_end_date <= report_date]
-
-    ## for overall, if more than 1 location exists, filter to have at least half
-    ## of them
-    overall_df <- score_data %>%
-        group_by(model, target_variable) %>%
-        mutate(n = length(unique(location))) %>%
-        ungroup() %>%
-        mutate(nall = length(unique(location))) %>%
-        filter(n >= nall / 2) %>%
-        select(-n, -nall) %>%
-        mutate(location = "Overall")
-
-    df <- data %>%
-        bind_rows(overall_df)
-
-    coverage <- eval_forecasts(
-        df %>% filter(type != "point"),
-      summarise_by = c("model", "target_variable", "range", "horizon",
-                       "location"),
-        compute_relative_skill = FALSE,
-    ) %>%
-        dplyr::filter(range %in% c(50, 95)) %>%
-      dplyr::select(model, target_variable, horizon, location, coverage,
-                    range) %>%
-        tidyr::pivot_wider(
-            names_from = range, values_from = coverage,
-            names_prefix = "cov_"
-        )
-
-    ## number of forecasts
-    num_fc <- df %>%
-        dplyr::filter(type == "point", !is.na(true_value)) %>%
-        dplyr::group_by(model, target_variable, horizon, location) %>%
-        dplyr::summarise(n = n(), .groups = "drop")
-
-    ## mean absolute error of point forecast
-    mae <- df %>%
-        dplyr::filter(type == "point", !is.na(true_value)) %>%
-        mutate(ae = abs(prediction - true_value)) %>%
-        group_by(model, target_variable, location, horizon) %>%
-        summarise(mae = mean(ae), .groups = "drop")
-
-    ## continuous weeks of submission
-    cont_weeks <- df %>%
-        filter(!is.na(model)) %>%
-        group_by(forecast_date, model, location, target_variable, horizon) %>%
-        summarise(present = 1, .groups = "drop") %>%
-        complete(model, location, target_variable, horizon, forecast_date) %>%
-        group_by(model, location, target_variable, horizon) %>%
-        mutate(continuous_weeks = cumsum(rev(present))) %>%
-        filter(!is.na(continuous_weeks)) %>%
-        summarise(continuous_weeks = max(continuous_weeks), .groups = "drop")
-
-    table <-
-        eval_forecasts(df %>% dplyr::filter(type != "point"),
-            summarise_by = c(
-                "model", "target_variable",
-                "horizon", "location"
-            ),
-            compute_relative_skill = TRUE
-        ) %>%
-        dplyr::left_join(coverage, by = c(
-            "model", "target_variable", "horizon",
-            "location"
-        )) %>%
-        dplyr::right_join(mae, by = c(
-            "model", "target_variable", "horizon",
-            "location"
-        )) %>%
-        dplyr::left_join(num_fc, by = c(
-            "model", "target_variable", "horizon",
-            "location"
-        )) %>%
-        dplyr::left_join(cont_weeks, by = c(
-            "model", "target_variable", "horizon",
-            "location"
-        )) %>%
-      replace_na(list(continuous_weeks = 0))
-
-    write_csv(table, file)
-}
-
 ## load forecasts --------------------------------------------------------------
-forecasts <- load_forecasts(source = "local_hub_repo",
-                            hub_repo_path = here(),
-                            hub = "ECDC")
-setDT(forecasts)
-## set forecast date to corresponding submision date
-forecasts[, forecast_date :=
-              ceiling_date(forecast_date, "week", week_start = 2) - 1]
-forecasts <- forecasts[forecast_date >= "2021-03-08"]
-setnames(forecasts, old = c("value"), new = c("prediction"))
+forecasts <- load_forecasts(
+  source = "local_hub_repo",
+  hub_repo_path = here(),
+  hub = "ECDC"
+) %>%
+  # set forecast date to corresponding submission date
+  mutate(forecast_date = ceiling_date(forecast_date, "week", week_start = 2) - 1) %>%
+  filter(forecast_date >= "2021-03-08") %>%
+  rename(prediction = value)
 
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(truth_source = "JHU",
-                        target_variable = c("inc case", "inc death"),
+                        temporal_resolution = "weekly",
                         hub = "ECDC")
 # get anomalies
 anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
-truth <- anti_join(raw_truth, anomalies)
+truth <- anti_join(raw_truth, anomalies) %>%
+  mutate(model = NULL) %>%
+  rename(true_value = value)
 
-setDT(truth)
-truth[, model := NULL]
-setnames(truth, old = c("value"),
-         new = c("true_value"))
+# remove forecasts made directly after a data anomaly
+forecasts <- forecasts %>%
+  mutate(previous_end_date = forecast_date - 2) %>%
+  left_join(anomalies %>%
+              rename(previous_end_date = target_end_date),
+            by = c("target_variable",
+                   "location", "location_name",
+                   "previous_end_date")) %>%
+  filter(is.na(anomaly)) %>%
+  select(-anomaly, -previous_end_date)
 
 data <- scoringutils::merge_pred_and_obs(forecasts, truth,
                                          join = "full")
 
-latest_date <-
-  lubridate::floor_date(lubridate::today(), "week", week_start = 7) + 1
+latest_date <- today()
+wday(latest_date) <- get_hub_config("forecast_week_day")
 
 ## can modify manually if wanting to re-run past evaluation
 re_run <- FALSE
@@ -142,5 +65,13 @@ for (chr_report_date in as.character(report_dates)) {
   report_date <- as.Date(chr_report_date)
   filename <-
     here::here("evaluation", paste0("evaluation-", report_date, ".csv"))
-  score_models(filename, data, report_date, restrict_weeks)
+
+  table <- score_models(
+    data,
+    report_date,
+    restrict_weeks = 4,
+    quantiles = get_hub_config("forecast_type")$quantiles
+  )
+
+  write_csv(table, filename)
 }

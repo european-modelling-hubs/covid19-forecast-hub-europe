@@ -1,7 +1,9 @@
 # Run and save past ensembles for all methods/dates
 library(here)
 library(vroom)
-source(here("code", "ensemble", "utils", "run-multiple-ensembles.R"))
+library(dplyr)
+library(purrr)
+library(EuroForecastHub)
 
 # Get exclusions for all weeks
 exclude_by_date <- vroom(here("code", "ensemble", "EuroCOVIDhub",

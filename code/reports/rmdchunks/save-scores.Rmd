@@ -1,0 +1,7 @@
+<!--- Save evaluation scores as csv -->
+```{r}
+filename <-
+  here::here("evaluation", paste0("evaluation-", report_date, ".csv"))
+
+write_csv(table, filename)
+```

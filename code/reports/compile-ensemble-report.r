@@ -4,14 +4,14 @@ library(here)
 library(readr)
 library(scoringutils)
 library(rmarkdown)
-library(data.table)
 library(covidHubUtils)
 library(lubridate)
+library(EuroForecastHub)
 
 options(knitr.duplicate.label = "allow")
 
-report_date <-
-  lubridate::floor_date(lubridate::today(), "week", week_start = 1)
+report_date <- today()
+wday(report_date) <- get_hub_config("forecast_week_day")
 
 dir.create(here::here("html"))
 

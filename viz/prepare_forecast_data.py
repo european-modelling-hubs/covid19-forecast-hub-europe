@@ -32,7 +32,8 @@ models_to_exclude = [k for k,v in metadata.items() if (v['team_model_designation
 models = [m for m in models if m not in models_to_exclude]
 
 VALID_TARGETS = [f"{_} wk ahead inc death" for _ in range(1, 5)] + \
-                [f"{_} wk ahead inc case" for _ in range(1, 5)]
+                [f"{_} wk ahead inc case" for _ in range(1, 5)] + \
+                [f"{_} wk ahead inc hosp" for _ in range(1, 5)]
 
 VALID_QUANTILES = [0.025, 0.25, 0.75, 0.975]
 
@@ -70,7 +71,7 @@ df['merge_target'] = 'inc_' + df.target.str.split().str[-1]
 truth = pd.read_csv('viz/truth_to_plot.csv')
 truth.date = pd.to_datetime(truth.date)
 
-truth = pd.melt(truth, id_vars=['date', 'location', 'location_name'], value_vars=['inc_death', 'inc_case'], 
+truth = pd.melt(truth, id_vars=['date', 'location', 'location_name'], value_vars=['inc_death', 'inc_case', 'inc_hosp'], 
                var_name='merge_target', value_name='truth')[['date', 'location', 'merge_target', 'truth']]
 
 df = df.merge(truth, left_on=['location', 'saturday0', 'merge_target'], 
@@ -107,6 +108,8 @@ def createForecastDataItem(row):
         target_type = 'death'
     elif (target == 'inc case'):
         target_type = 'cases'
+    elif (target == 'inc hosp'):
+        target_type = 'hosp'
     else:
         raise NameError('Invalid target')
     

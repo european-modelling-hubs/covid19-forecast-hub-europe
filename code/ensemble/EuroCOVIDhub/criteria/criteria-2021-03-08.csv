@@ -1,4 +1,5 @@
 model,target_variable,location,all_quantiles_all_horizons,all_horizons,not_excluded_manually,included_in_ensemble
+DSMPG-bayes,inc case,DE,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiExpert,inc case,AT,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiExpert,inc case,BE,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiExpert,inc case,BG,TRUE,TRUE,TRUE,TRUE
@@ -341,7 +342,6 @@ MOCOS-agent1,inc case,PL,TRUE,TRUE,TRUE,TRUE
 MOCOS-agent1,inc death,PL,TRUE,TRUE,TRUE,TRUE
 MUNI_DMS-SEIAR,inc case,CZ,TRUE,TRUE,TRUE,TRUE
 MUNI_DMS-SEIAR,inc death,CZ,TRUE,TRUE,TRUE,TRUE
-Priesemann-bayes,inc case,DE,TRUE,TRUE,TRUE,TRUE
 RobertWalraven-ESG,inc case,AT,FALSE,TRUE,TRUE,FALSE
 RobertWalraven-ESG,inc case,BE,FALSE,TRUE,TRUE,FALSE
 RobertWalraven-ESG,inc case,BG,FALSE,TRUE,TRUE,FALSE
