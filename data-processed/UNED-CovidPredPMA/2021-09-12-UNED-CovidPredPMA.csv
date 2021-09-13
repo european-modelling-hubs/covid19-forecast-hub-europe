@@ -1,0 +1,7 @@
+scenario_id,forecast_date,target,target_end_date,location,type,quantile,value
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,AT,point,NA,3158.602294921875
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,AT,quantile,0.025,2537.8008300781253
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,AT,quantile,0.25,3044.873046875
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,AT,quantile,0.5,3158.602294921875
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,AT,quantile,0.75,6058.6611328125
+forecast,2021-09-12,1 wk ahead inc case,2021-09-18,AT,quantile,0.975,8744.13720703125
