@@ -1,0 +1,134 @@
+---
+title: "Building a Forecast Hub: Feedback after 6 months of running the European COVID-19 Forecast Hub"
+abstract: |
+  Enter the text of your abstract here.
+keywords:
+  - blah
+  - blee
+  - bloo
+  - these are optional and can be removed
+bibliography: references.bib
+biblio-style: unsrt
+output: 
+  rticles::arxiv_article:
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r global-vars}
+gh_repo <- "epiforecasts/covid19-forecast-hub-europe"
+```
+
+The European COVID-19 Forecast Hub was launched in early 2021 and after six months of running it, it is time for us to gather some feedback about what worked and what did not. For reasons detailed later, it is difficult to make major changes in the hub while it is currently running but we want to make sure our experience allows the next forecast hub to be better. The COVID-19 European Forecast Hub is by no means the first forecast hub and it already benefited greatly from the US COVID-19 Forecast Hub, the Germany/Poland COVID-19 Forecast Hub, as well as the US influenza hub. We however believe that our fresh eyes on the already existing alternative place us in a perfect place to comment on challenges encountered when a new team tries to build a forecast hub and why tools that worked well for a specific team might create issues for others. Additionally, compared to influenza hub, the novelty, the urgency and the impact of the COVID-19 generated an amount of contributions unseen until then, thus generating new challenges.
+
+This report focuses on three areas that caused trouble during these 6 months the hub has been running:
+
+- the problems faced by forecasters
+- the problems faced by tools
+- the problems faced by maintainers
+
+# The problems faced by forecasters: improving user-friendliness
+
+```{r}
+library(gh)
+library(purrr)
+library(magrittr)
+
+pulls <- gh::gh("/repos/{gh_repo}/pulls?state=all", gh_repo = gh_repo)
+
+contributors <- gh::gh("/repos/{gh_repo}/contributors", gh_repo = gh_repo, .limit = Inf) %>%
+  map_chr("login")
+contributors <- contributors[contributors != "actions-user"]
+
+get_first_pr <- function(user) {
+ 
+  q <- glue::glue('
+  {
+    user(login: "<<user>>") {
+      pullRequests(first:1) {
+        edges {
+          node {
+            url
+          }
+        }
+      }
+    }
+  }', user = user, .open = "<<", .close = ">>")
+
+  dat <- gh::gh_gql(q)
+  
+  return(dat[[1]]$user$pullRequests$edges[[1]]$node$url)
+}
+
+first_prs <- map_chr(contributors, get_first_pr) 
+
+nb_new <- first_prs %>%
+  stringr::str_starts(glue::glue("https://github.com/{repo}", repo = gh_repo)) %>%
+  sum()
+```
+
+The European COVID-19 Forecast Hub uses GitHub as its platform to submit forecasts. Each week, participating teams submit a pull request with their forecasts for the coming weeks. As developers, it is easy to underestimate how complex this process can be for new users. Indeed, `r glue::glue("{percent_new}% ({nb_new}/{nb_total})", percent_new = round(nb_new/length(contributors)*100), nb_total = length(contributors))` of contributors to the hub were new GitHub users that made their first ever pull request in our repository.
+
+Although GitHub offers a more intuitive to git, we noticed some patterns that we common sources of issues for new contributors: starting from branches out-of-sync with upstream, uploading extra files (which is often a symptom of using `git commit -a` or `git add *`). Most of the time, the preferred option to solve these issue was to close the pull request and open another one.
+
+To limit friction and based on the experience of the US hub, we decided to always use a merge commit instead of rebasing on top of the current `HEAD`. This solves the case where users add their changes each week on the same branch instead of creating a new one. However, this has some consequences on the clarity of the git history, as detailed later.
+
+Since forecasters will most of the time only add new files each week, and rarely have to modify or delete files, a simple submission web form could be used instead of the current system.
+
+# The problems faced by tools
+
+## GitHub & git
+
+```{r}
+repo_stats <- gh::gh("/repos/{gh_repo}", gh_repo = gh_repo)
+```
+
+Beyond the issue of user-friendliness mentioned previously, git is primarily designed to work with code and plain text, not with data. Storing forecast data in the GitHub repository lead to a huge inflation of the repository size. At the time of this writing, the repository size lies at `r glue::glue("{repo_stats$size %/% 1024}MB")`. If growth is constant, this suggests this repository will exceed GitHub recommended limit of 1GB [^github-limit] within one year of activity.
+
+[^github-limit]: "We recommend repositories remain small, ideally less than 1 GB, and less than 5 GB is strongly recommended." [Source](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github).
+
+Storing data directly in the repository also lead to a messy git history. When looking at the output of `git log` or when running `git bisect`, it became very difficult to find the relevant code changes. This was made even worse by the fact that we use merge commits to include new forecasts, a mitigation measure mentioned previously to limit conflicts in weekly submission.
+
+Both these problems weigh strongly in favour of a different venue to store forecast data. A simple change would be to have a distinct git repository for the forecast data. A much better solution is to use a dedicated storage platform such as zoltar. This is related to the need for modularity that we develop later in this report.
+
+## Speed
+
+Somewhat related to the size issue, we also faced problems of performance, both in terms of display for the visualisation app, and in terms of computation time for the reports.
+
+Beyond the obvious option to optimize the relevant portions of the code, these performance issues can be addresses in two ways:
+
+- long running server side computations, such as the rendering of the weekly reports, could be improved to run in parallel and then moved to a computing cluster, instead of using GitHub Actions
+- slow display can be solved by using a content delivery network (CDN), which is the standard method to deliver heavy resource on the web efficiently.
+
+# Maintainability
+
+## The challenges of development in production
+
+Running the forecast hub One of the difficulties unusual for research software: in production.
+
+Expose a higher level interface to users to allow underlying changes (e.g., changes in metadata file extension).
+
+## Modular approach
+
+A modular approach rather than an integrated approach. Facilitate modifications
+and exchange of pieces between teams.
+
+Allows testing of the individual pieces
+
+## Hardcoded values
+
+Each column contains one piece of information
+
+## Diversity of programming languages
+
+It is not realistic to imagine to everyone (or really anyone) in the development
+team will have a deep understanding of more a couple of programming languages.
+Therefore, the use of multiple programming languages forces us to have a dedicated
+developer for each part of the hub, with no one having an overall understanding or
+overview of the whole project. It also increases dependency to a single individual,
+which might be otherwise committed in a time of need.
+
+
