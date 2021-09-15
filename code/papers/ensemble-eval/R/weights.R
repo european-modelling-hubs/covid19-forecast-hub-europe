@@ -1,5 +1,7 @@
 # Plot components + weights of contributing models
 
+# run: create-all-methods-ensembles.R
+
 # Get evaluation dataset
 library(here)
 library(readr)
