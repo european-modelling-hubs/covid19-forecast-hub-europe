@@ -919,3 +919,15 @@ Latest check of truth data: 2021-09-15 13:13:43
 
 No errors detected.
 
+Latest check of truth data: 2021-09-16 13:12:47
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Cases.csv' at 2021-09-15:
+
+- Negative incidence in the following locations: ['Ireland'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2021-09-15:
+
+- Negative incidence in the following locations: ['Finland'].
+
