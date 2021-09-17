@@ -24,12 +24,9 @@ def get_relevant_dates(dates):
 
 path = Path('data-processed')
 
-models = [f.name for f in path.iterdir() if not f.name.endswith('.csv')]
-
 # exclude models designated as "other"
 metadata = json.load(open("viz/metadata.json","r"))
-models_to_exclude = [k for k,v in metadata.items() if (v['team_model_designation'] == 'other')]
-models = [m for m in models if m not in models_to_exclude]
+models_to_include = [k for k,v in metadata.items() if (v['team_model_designation'] != 'other')]
 
 VALID_TARGETS = [f"{_} wk ahead inc death" for _ in range(1, 5)] + \
                 [f"{_} wk ahead inc case" for _ in range(1, 5)] + \
@@ -38,7 +35,7 @@ VALID_TARGETS = [f"{_} wk ahead inc death" for _ in range(1, 5)] + \
 VALID_QUANTILES = [0.025, 0.25, 0.75, 0.975]
 
 dfs = []
-for m in models:
+for m in models_to_include:
     p = path/m
     forecasts = [f.name for f in p.iterdir() if '.csv' in f.name]
     available_dates = pd.Series(pd.to_datetime(filename[:10]) for filename in forecasts)
