@@ -1,17 +1,12 @@
 ---
 title: "Building a Forecast Hub: Feedback after 6 months of running the European COVID-19 Forecast Hub"
-abstract: |
-  Enter the text of your abstract here.
-keywords:
-  - blah
-  - blee
-  - bloo
-  - these are optional and can be removed
 bibliography: references.bib
 biblio-style: unsrt
 output: 
-  rticles::arxiv_article:
-    keep_tex: true
+  rmarkdown::pdf_document:
+    keep_tex: false
+    latex_engine: xelatex
+mainfont: Fira Sans Light
 ---
 
 ```{r setup, include=FALSE}
