@@ -1,0 +1,5 @@
+metadata-change:
+- data-processed/**.txt
+
+data-submission:
+- data-processed/**.csv
