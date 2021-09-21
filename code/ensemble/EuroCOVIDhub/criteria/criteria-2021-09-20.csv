@@ -1,4 +1,5 @@
 model,target_variable,location,all_quantiles_all_horizons,all_horizons,not_excluded_manually,included_in_ensemble
+CovidMetrics-epiBATS,inc case,DE,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiNow2,inc case,AT,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiNow2,inc case,BE,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiNow2,inc case,BG,TRUE,TRUE,TRUE,TRUE
@@ -65,8 +66,12 @@ epiforecasts-EpiNow2,inc death,SI,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiNow2,inc death,SK,TRUE,TRUE,TRUE,TRUE
 epiMOX-SUIHTER,inc case,IT,TRUE,FALSE,TRUE,FALSE
 epiMOX-SUIHTER,inc death,IT,TRUE,FALSE,TRUE,FALSE
+FIAS_FZJ-Epi1Ger,inc case,DE,TRUE,TRUE,TRUE,TRUE
+FIAS_FZJ-Epi1Ger,inc death,DE,TRUE,TRUE,TRUE,TRUE
 HZI-AgeExtendedSEIR,inc case,DE,TRUE,TRUE,TRUE,TRUE
 HZI-AgeExtendedSEIR,inc death,DE,TRUE,TRUE,TRUE,TRUE
+ICM-agentModel,inc case,PL,TRUE,TRUE,TRUE,TRUE
+ICM-agentModel,inc death,PL,TRUE,TRUE,TRUE,TRUE
 IEM_Health-CovidProject,inc case,AT,TRUE,TRUE,TRUE,TRUE
 IEM_Health-CovidProject,inc case,BE,TRUE,TRUE,TRUE,TRUE
 IEM_Health-CovidProject,inc case,BG,TRUE,TRUE,TRUE,TRUE
@@ -255,6 +260,10 @@ Imperial-sbkp,inc death,SE,TRUE,FALSE,TRUE,FALSE
 Imperial-sbkp,inc death,SI,TRUE,FALSE,TRUE,FALSE
 itwm-dSEIR,inc case,DE,TRUE,TRUE,TRUE,TRUE
 itwm-dSEIR,inc death,DE,TRUE,TRUE,TRUE,TRUE
+ITWW-county_repro,inc case,DE,TRUE,TRUE,TRUE,TRUE
+ITWW-county_repro,inc case,PL,TRUE,TRUE,TRUE,TRUE
+ITWW-county_repro,inc death,DE,TRUE,TRUE,TRUE,TRUE
+ITWW-county_repro,inc death,PL,TRUE,TRUE,TRUE,TRUE
 Karlen-pypm,inc case,AT,TRUE,TRUE,TRUE,TRUE
 Karlen-pypm,inc case,BE,TRUE,TRUE,TRUE,TRUE
 Karlen-pypm,inc case,BG,TRUE,TRUE,TRUE,TRUE
@@ -388,6 +397,12 @@ LANL-GrowthRate,inc death,RO,TRUE,TRUE,TRUE,TRUE
 LANL-GrowthRate,inc death,SE,TRUE,TRUE,TRUE,TRUE
 LANL-GrowthRate,inc death,SI,TRUE,TRUE,TRUE,TRUE
 LANL-GrowthRate,inc death,SK,TRUE,TRUE,TRUE,TRUE
+MIT_CovidAnalytics-DELPHI,inc case,DE,TRUE,TRUE,TRUE,TRUE
+MIT_CovidAnalytics-DELPHI,inc case,PL,TRUE,TRUE,TRUE,TRUE
+MIT_CovidAnalytics-DELPHI,inc death,DE,TRUE,TRUE,TRUE,TRUE
+MIT_CovidAnalytics-DELPHI,inc death,PL,TRUE,TRUE,TRUE,TRUE
+MOCOS-agent1,inc case,PL,TRUE,TRUE,TRUE,TRUE
+MOCOS-agent1,inc death,PL,TRUE,TRUE,TRUE,TRUE
 MUNI_DMS-SEIAR,inc case,CZ,TRUE,TRUE,TRUE,TRUE
 MUNI_DMS-SEIAR,inc death,CZ,TRUE,TRUE,TRUE,TRUE
 MUNI-ARIMA,inc case,AT,TRUE,TRUE,TRUE,TRUE
