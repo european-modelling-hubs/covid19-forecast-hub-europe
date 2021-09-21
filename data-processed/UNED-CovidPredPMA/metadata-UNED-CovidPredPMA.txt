@@ -4,6 +4,6 @@ model_abbr: UNED-CovidPredPMA
 model_contributors: Pablo Marcos Alarcón (p.marcos.alarcon@gmail.com)
 website_url: https://www.com
 license: cc-by-4.0
-team_model_designation: primary
-methods: main
+team_model_designation: other
+methods: variational inference model
 data_inputs: JHU data
