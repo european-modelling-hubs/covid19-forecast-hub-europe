@@ -39,7 +39,7 @@ jobs:
         git push
 
     - name: Create issue about failure
-      if: failure()
+      if: failure() && github.event_name == 'workflow_dispatch'
       uses: JasonEtco/create-an-issue@v2.5.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
