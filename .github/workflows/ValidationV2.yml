@@ -3,6 +3,8 @@ name: Validations v2
 on:
   pull_request_target:
     branches: [ main ]
+    paths:
+      - 'data-processed/**'
 
 jobs:
   build:
