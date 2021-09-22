@@ -45,12 +45,12 @@ jobs:
 
     - name: Install R dependencies
       run: |
-       install.packages(c("remotes", "gh"))
-       remotes::install_github("epiforecasts/EuroForecastHub")
+        install.packages(c("remotes", "gh"))
+        remotes::install_github("epiforecasts/EuroForecastHub")
       shell: Rscript {0}
 
     - name: Post comment linking to preview shiny app
-      with:
+      env:
         PR_NUMBER: ${{ github.event.number }}
       run: |
         links <- EuroForecastHub::link_preview(
