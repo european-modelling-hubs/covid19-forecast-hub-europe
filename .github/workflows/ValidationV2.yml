@@ -64,6 +64,6 @@ jobs:
           gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
           pr_number = Sys.getenv("PR_NUMBER"),
           accept = "application/vnd.github.v3+json",
-          body = paste(c("Preview of submitted forecast:", links), collapse = "\n")
+          body = paste(c("Preview of submitted forecast:", links), collapse = "\n\n")
         )
       shell: Rscript {0}
