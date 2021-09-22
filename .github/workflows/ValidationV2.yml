@@ -30,3 +30,39 @@ jobs:
     - run: python3 main.py
       env:
         GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+  link-preview:
+    runs-on: ubuntu-20.04
+    env:
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: actions/checkout@master
+    - uses: r-lib/actions/setup-r@v1
+
+    - name: Install system dependencies
+      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
+
+    - name: Install R dependencies
+      run: |
+       install.packages(c("remotes", "gh"))
+       remotes::install_github("epiforecasts/EuroForecastHub")
+      shell: Rscript {0}
+
+    - name: Post comment linking to preview shiny app
+      with:
+        PR_NUMBER: ${{ github.event.number }}
+      run: |
+        links <- EuroForecastHub::link_preview(
+          gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
+          pr_number = Sys.getenv("PR_NUMBER"),
+          data-folder = "data-processed"
+        )
+        gh::gh(
+          "/repos/{gh_repo}/issues/{pr_number}/comments",
+          .method = "POST",
+          gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
+          pr_number = Sys.getenv("PR_NUMBER"),
+          accept = "application/vnd.github.v3+json",
+          body = paste(c("Preview of submitted forecast:", links), collapse = "\n")
+        )
