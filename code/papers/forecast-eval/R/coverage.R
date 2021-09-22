@@ -13,23 +13,8 @@ cov <- eval_wide %>%
          cov_50, cov_95,
          baseline_score, ensemble_score)
 
-# Coverage: mean average across all locations
-cov50 <- cov %>%
-  group_by(model, target_variable, horizon) %>%
-  summarise(cov50.mean = mean(cov_50, na.rm = TRUE),
-            cov50.sd = sd(cov_50, na.rm = TRUE),
-            cov50.n = n()) %>%
-  drop_na(cov50.mean) %>%
-  mutate(cov50.se = cov50.sd / sqrt(cov50.n),
-         cov50.lower = cov50.mean - qt(1 - (0.05 / 2), cov50.n - 1) * cov50.se,
-         cov50.upper = cov50.mean + qt(1 - (0.05 / 2), cov50.n - 1) * cov50.se,
-         diff = 0.5 - cov50.mean) %>%
-  group_by(target_variable) %>%
-  # mutate(model = fct_reorder(model, diff, min)) %>%
-  ungroup()
-
 # Plot 50% Coverage ----------------------------------------------------------
-cov %>% # cov50 %>%
+cov %>%
   mutate(horizon = factor(horizon, ordered = TRUE)) %>%
   ggplot(aes(y = model, colour = horizon)) +
   # geom_point(aes(x = cov50.mean)) +
@@ -69,6 +54,21 @@ cov %>% # cov50 %>%
  n_cov_group <- cov %>%
    distinct(horizon, target_variable, model) %>%
    count(horizon, target_variable) # 24 forecasting for cases and 26 for deaths with coverage stats
+ 
+  # Coverage: mean average across all locations
+ cov50 <- cov %>%
+   group_by(model, target_variable, horizon) %>%
+   summarise(cov50.mean = mean(cov_50, na.rm = TRUE),
+             cov50.sd = sd(cov_50, na.rm = TRUE),
+             cov50.n = n()) %>%
+   drop_na(cov50.mean) %>%
+   mutate(cov50.se = cov50.sd / sqrt(cov50.n),
+          cov50.lower = cov50.mean - qt(1 - (0.05 / 2), cov50.n - 1) * cov50.se,
+          cov50.upper = cov50.mean + qt(1 - (0.05 / 2), cov50.n - 1) * cov50.se,
+          diff = 0.5 - cov50.mean) %>%
+   group_by(target_variable) %>%
+   # mutate(model = fct_reorder(model, diff, min)) %>%
+   ungroup()
  
  # Overall summary
  cov50_summary <- cov50 %>%
