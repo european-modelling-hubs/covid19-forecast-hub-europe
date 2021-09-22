@@ -89,6 +89,7 @@ plot_component_models <- component_models %>%
                date_labels = "%b") +
   facet_wrap(facets = vars(target_variable, weighting),
              scales = "fixed", dir = "h",
+             nrow = 1,
              labeller = label_wrap_gen(multi_line = FALSE)) +
   theme_bw() +
   theme(legend.position = "bottom",
@@ -98,7 +99,7 @@ plot_component_models <- component_models %>%
 plot_component_models
 #save
 ggsave(here(file_path_ensemble, "figures", "n-component-models.png"),
-       height = 8)
+       height = 5, width = 10)
 
 
 # average weight by model per ensemble method --------------------------

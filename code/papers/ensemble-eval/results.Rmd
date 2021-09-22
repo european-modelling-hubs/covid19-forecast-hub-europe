@@ -12,6 +12,7 @@ library(here)
 file_path <- here("code", "papers", "ensemble-eval")
 source(here(file_path, "R", "weights.R"))
 source(here(file_path, "R", "description.R"))
+figure_number_roll <- 0
 ```
 
 ## Results
@@ -34,9 +35,12 @@ Ensemble forecasts consistently performed better compared to the baseline model 
 
 For all ensemble methods, the skill of ensemble forecasts varied from the near to further into the future, relative to the baseline model. For each model this was always a consistent trend in gradually improving or worsening skill over longer horizons. However the direction of trend varied by the epidemiological target being forecast. Forecasting cases proved more difficult at longer forecast targets than shorter horizons. However, the relative skill of ensembles in forecasting incident deaths improved over longer horizons.
 
-![Figure \#: Coverage](./figures/ensemble-coverage.png)
+![Figure \#: Coverage: *The proportion of observations that fell within the 50% prediction interval for each ensemble, by target count of cases and deaths and horizon. Ideally, a forecast model would achieve 50% coverage of 0.50 (meaning 50% of observations fall within the 50% prediction interval), shown as the vertical
+dotted line. Values of greater than 0.5 indicate that the forecasts are under-confident (prediction intervals are on average too wide), whereas values smaller than 0.5 indicate that the forecasts are overconfident (prediction
+intervals tend to be too narrow.)*
+](./figures/ensemble-coverage.png)
 
-When forecasting deaths, ensembles of any model across all horizons typically gave too broad a range of uncertainty. This was also true when forecasting case counts at the one-week ahead horizon for both mean and median varieties of ensemble.
+When forecasting deaths, ensembles of any model across all horizons typically gave too broad a range of uncertainty (figure \#). This was also true when forecasting case counts at the one-week ahead horizon for both mean and median varieties of ensemble.
 
 For both targets, the problem of underconfident prediction intervals improved over longer horizons. This only improved forecasts of incident deaths, with the coverage of the 50% prediction interval the most accurate at four weeks. However case forecasts became overconfident in nearly all locations by the three and four week horizon.
 

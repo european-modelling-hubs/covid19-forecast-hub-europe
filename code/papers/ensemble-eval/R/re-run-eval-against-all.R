@@ -34,3 +34,6 @@ file.rename(all_model_eval, ensemble_eval)
 
 # remove ensemble eval from forecast file + preserve original forecast eval
 file.rename(from = all_model_eval2, to = all_model_eval)
+
+# remove from data-processed
+file.remove(to_files)
