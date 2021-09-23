@@ -42,7 +42,7 @@ intervals tend to be too narrow.)*
 
 When forecasting deaths, ensembles of any model across all horizons typically gave too broad a range of uncertainty (figure \#). This was also true when forecasting case counts at the one-week ahead horizon for both mean and median varieties of ensemble.
 
-For both targets, the problem of underconfident prediction intervals improved over longer horizons. This only improved forecasts of incident deaths, with the coverage of the 50% prediction interval the most accurate at four weeks. However case forecasts became overconfident in nearly all locations by the three and four week horizon.
+For both targets, the problem of underconfident prediction intervals reduced over longer horizons. This only improved forecasts of incident deaths, with the coverage of the 50% prediction interval the most accurate at four weeks. However case forecasts became overconfident in nearly all locations by the three and four week horizon.
 
 #### Averaging methods
 
