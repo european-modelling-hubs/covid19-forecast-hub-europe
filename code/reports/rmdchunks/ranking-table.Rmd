@@ -35,10 +35,7 @@ if (nrow(df) > 0) {
         buttons = c('csv', 'excel'),
         dom = 'Bfrtip',
         scrollX = TRUE,
-        fixedColumns = TRUE,
-        columnDefs = list(
-          list(targets = seq(1, ncol(.) - 1), render = render)
-        )
+        fixedColumns = TRUE
       ),
       rownames = FALSE
     )
