@@ -63,15 +63,20 @@ report_dates <- seq(start_date, latest_date, by = "week")
 
 for (chr_report_date in as.character(report_dates)) {
   report_date <- as.Date(chr_report_date)
-  filename <-
+  eval_filename <-
     here::here("evaluation", paste0("evaluation-", report_date, ".csv"))
 
-  table <- score_models(
-    data,
-    report_date,
-    restrict_weeks = 4,
+  scores <- score_forecasts(
+    forecasts = data,
     quantiles = get_hub_config("forecast_type")$quantiles
   )
+  table <- summarise_scores(
+    scores = scores,
+    report_date = report_date,
+    restrict_weeks = restrict_weeks
+  )
 
-  write_csv(table, filename)
+  write_csv(table, eval_filename)
 }
+
+write_csv(scores, here::here("evaluation", "scores.csv"))
