@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, cache = TR
 gh_repo <- "epiforecasts/covid19-forecast-hub-europe"
 ```
 
-The European COVID-19 Forecast Hub was launched in early 2021 and after six months of running it, it is time for us to gather some feedback about what worked and what did not. For reasons detailed later, it is difficult to make major changes in the hub while it is currently running but we want to make sure our experience allows the next forecast hub to be better. The COVID-19 European Forecast Hub is by no means the first forecast hub and it already benefited greatly from the US COVID-19 Forecast Hub, the Germany/Poland COVID-19 Forecast Hub, as well as the US influenza hub. We however believe that our fresh eyes on the already existing alternatives put us in a perfect place to comment on challenges encountered when a new team tries to build a forecast hub and why tools that worked well for a specific team might create issues for others. Additionally, compared to influenza hub, the novelty, the urgency and the impact of the COVID-19 generated an amount of contributions unseen until then, thus generating new challenges.
+The European COVID-19 Forecast Hub was launched in early 2021 and after six months of running it, time has come for us to gather some feedback about what worked and what did not. For reasons detailed later, it is difficult to make major changes in the hub while it is currently running but we want to make sure our experience allows the next forecast hub to be better. The COVID-19 European Forecast Hub is by no means the first forecast hub and it already benefited greatly from the US COVID-19 Forecast Hub, the Germany/Poland COVID-19 Forecast Hub, as well as the US influenza hub. We however believe that our fresh eyes on the already existing alternatives put us in a perfect place to comment on challenges encountered when a new team tries to build a forecast hub and why tools that worked well for a specific team might create issues for others. Additionally, compared to influenza hub, the novelty, the urgency and the impact of the COVID-19 generated an amount of contributions unseen until then, thus generating new challenges.
 
 This report focuses on three areas that caused trouble during these 6 months the hub has been running:
 
@@ -83,11 +83,14 @@ repo_stats <- gh::gh("/repos/{gh_repo}", gh_repo = gh_repo)
 
 Beyond the issue of user-friendliness mentioned previously, git is primarily designed to work with code and plain text, not with data. Storing forecast data in the GitHub repository lead to a huge inflation of the repository size. At the time of this writing, the repository size lies at `r glue::glue("{repo_stats$size %/% 1024}MB")`. If growth is constant, this suggests this repository will exceed GitHub recommended limit of 1GB [^github-limit] within one year of activity.
 
-[^github-limit]: "We recommend repositories remain small, ideally less than 1 GB, and less than 5 GB is strongly recommended." [Source](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github).
+[^github-limit]: "We recommend repositories remain small, ideally less than 1 GB, and less than 5 GB is strongly recommended." Source: https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github.
 
 Storing data directly in the repository also lead to a messy git history. When looking at the output of `git log` or when running `git bisect`, it became very difficult to find the relevant code changes. This was made even worse by the fact that we use merge commits to include new forecasts, a mitigation measure mentioned previously to limit conflicts in weekly submission.
 
-Both these problems weigh strongly in favour of a different venue to store forecast data. A simple change would be to have a distinct git repository for the forecast data. A much better solution is to use a dedicated storage platform such as zoltar. This is related to the need for modularity that we develop later in this report.
+Both these problems weigh strongly in favour of a different venue to store forecast data. A simple change would be to have a distinct git repository for the forecast data. This is the choice other projects with a user-contributed database adopted [^zotero] or wish they had adopted [^https-everywhere]. An even better solution is to use a dedicated storage platform such as [zoltar](https://www.zoltardata.com/). This is related to the need for modularity that we develop later in this report.
+
+[^zotero]: https://github.com/zotero/translators
+[^https-everywhere]: https://github.com/EFForg/https-everywhere/issues/2697
 
 ## Speed
 
@@ -102,16 +105,17 @@ Beyond the obvious option to optimize the relevant portions of the code, these p
 
 ## The challenges of development in production
 
-Running the forecast hub One of the difficulties unusual for research software: in production.
+While running the forecast hub, we are faced by one difficulty that research software seldomly encounter. We are running a complex machinery in production, meaning that any change could immediately impact contributing teams. This problem is usually partially mitigating in traditional software through versioning. Changes in a piece of software results in a new version, that users are more or less free to install whenever convenient. Versioning is not possible in the case of the hub: all contributors have to deal with the same version. Even purely technical changes (like changing the format of the metadata file) requires an action from users to avoid git conflicts. For this reason, and for the sake of contributing teams, we sometimes had to delay or give up on technical improvements.
 
-Expose a higher level interface to users to allow underlying changes (e.g., changes in metadata file extension).
+A possible way to reduce the friction caused on users by technical changes would be to build an intermediate layer between the hub core and contributors. The contributors would only be exposed to this simple and stable intermediate layer. And maintainers of the hub would then be free to do any kind of changes to the core.
+This is not the case in the current iteration where there is a complete overlap between user input (weekly forecasts as csv and metadata file as yaml) and its internal representation in the hub machinery. The use of zoltar, mentioned earlier, would here again resolve this issue: the internal storage would be on zoltar, but any system could be used for forecast submission (including GitHub if we overlook the user-friendliness issue) with a series of scripts connecting the two.
 
 ## Modular approach
 
-A modular approach rather than an integrated approach. Facilitate modifications
-and exchange of pieces between teams.
+Perhaps one of the most important change recommended in this report is to adopt a modular approach rather than an integrated approach. The current implementations of forecast hubs, including the European COVID-19 Forecast Hub have strongly integrated approaches, where all the various pieces are interconnected. Integrated approaches are often easier to develop at first since it is not necessary to handle communication between the various pieces present in a modular approach. However, a modular approach facilitates modifications later down the line. Similarly, an integrated approach forces an all-or-nothing adoption of a technical solution. It is not possible to take some pieces and leave out others. On the opposite, a modular approach allows exchange of pieces between teams and collaboration despite having made different choices in some places.
+Additionally, a modular approach, allows testing of the individual pieces, which is crucial for a project that is directly in production [^ci-validations].
 
-Allows testing of the individual pieces
+[^ci-validations]: https://github.com/epiforecasts/covid19-forecast-hub-europe-validations/issues/8
 
 ## Hardcoded values
 
@@ -119,7 +123,7 @@ Each column contains one piece of information
 
 ## Diversity of programming languages
 
-It is not realistic to imagine to everyone (or really anyone) in the development
+It is not realistic to expect to everyone (or really anyone) in the development
 team will have a deep understanding of more a couple of programming languages.
 Therefore, the use of multiple programming languages forces us to have a dedicated
 developer for each part of the hub, with no one having an overall understanding or
