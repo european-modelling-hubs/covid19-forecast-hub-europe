@@ -56,10 +56,6 @@ quantiles <- get_hub_config("forecast_type")$quantiles
 ```{r score-forecasts, child = "../rmdchunks/score-forecasts.Rmd"}
 ```
 
-<!--- Save evaluation scores as csv -->
-```{r save-scores, child = if (params$location_name == "Overall") "../rmdchunks/save-scores.Rmd"}
-```
-
 <!--- Define targets and horizons -->
 ```{r define-targets-horizons, child = "../rmdchunks/define-targets-horizons.Rmd"}
 ```

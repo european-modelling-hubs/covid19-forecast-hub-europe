@@ -21,7 +21,7 @@ jobs:
       run: |
         install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "readr", "rlang"))
         remotes::install_github("reichlab/covidHubUtils")
-        remotes::install_github("epiforecasts/scoringutils")
+        remotes::install_github("epiforecasts/scoringutils@limit-viz")
         remotes::install_github("epiforecasts/EuroForecastHub")
       shell: Rscript {0}
 
@@ -52,7 +52,7 @@ jobs:
         commit_message: 'Evaluation reports'
 
     - name: Create issue about failure
-      if: failure()
+      if: failure() && github.event_name == 'workflow_dispatch'
       uses: JasonEtco/create-an-issue@v2.5.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
