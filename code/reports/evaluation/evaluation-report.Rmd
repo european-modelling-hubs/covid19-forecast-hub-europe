@@ -43,9 +43,10 @@ include_countries <- include_forecast_plot ||
 report_date <- ymd(params$report_date)
 restrict_weeks <- params$restrict_weeks
 facetting_var <- rlang::quo(model)
+```
 
-data_types <- get_hub_config("target_variables")
-quantiles <- get_hub_config("forecast_type")$quantiles
+<!--- Fetch various values from the config file --->
+```{r get-config-vars, child = "../rmdchunks/get-config-vars.Rmd"}
 ```
 
 <!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
@@ -58,10 +59,6 @@ quantiles <- get_hub_config("forecast_type")$quantiles
 
 <!--- Save evaluation scores as csv -->
 ```{r save-scores, child = if (params$location_name == "Overall") "../rmdchunks/save-scores.Rmd"}
-```
-
-<!--- Define targets and horizons -->
-```{r define-targets-horizons, child = "../rmdchunks/define-targets-horizons.Rmd"}
 ```
 
 <!--- Chunk to filter data and scores to keep only the relevant locations, horizons and target varaibles. Is is separated from the global scoring step
