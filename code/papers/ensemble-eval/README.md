@@ -10,7 +10,7 @@ Results text including numbers and figures can be created with
 rmarkdown::render(here::here("code", "papers", "ensemble-eval", "results.Rmd"))
 ```
 
-This draws on each file in the [`R`](R) directory.
+This draws on descriptive statistics and figures created from files in the [`R`](R) directory.
 
 ### Data access
 
