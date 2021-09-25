@@ -24,7 +24,6 @@ To entirely re-create the evaluation scores used here, use:
 source(here::here("code", "papers", "ensemble-eval", "R", "re-run-eval.R"))
 ```
 
-#### Additional material
-- Run the evaluation process for all ensemble models together with all models in `data-processed`
-   - This scores all ensemble types against both each other and all other forecasts. (The evaluation saved above only scores ensemble methods against each other)
-   - [R/re-run-eval-against-all.R](R/re-run-eval-against-all.R)
+### Unused code
+The evaluation saved above and used in the paper only scores ensemble methods against each other. Alternatively we could run the evaluation process for all ensemble models together with all models in `data-processed`, to see how each ensemble method scores relative to each individual model. This is **not run** and the results are not saved, but this could be created using:
+- [R/re-run-eval-against-all.R](R/re-run-eval-against-all.R)
