@@ -1,6 +1,5 @@
 Guide to code
 ================
-K Sherratt
 25/08/2021
 
 ### Generate results
