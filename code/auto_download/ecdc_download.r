@@ -26,8 +26,8 @@ if (!dir.exists(ecdc_dir)) dir.create(ecdc_dir, recursive = TRUE)
 ecdc_hosp_filepath <- here("data-truth", "ECDC",
                       paste(file_base, "Hospitalizations.csv")) # covidHubUtils format
 
-R.utils::downloadFile(Sys.getenv("DATA_URL"), # Uses set environment variables
-                      ecdc_hosp_filepath,
+temp_ecdc <- R.utils::downloadFile(Sys.getenv("DATA_URL"), # Uses set environment variables
+                      tempfile(fileext = ".csv"),
                       username = Sys.getenv("DATA_USERNAME"),
                       password = Sys.getenv("DATA_PASSWORD"),
                       skip = FALSE,
@@ -35,11 +35,22 @@ R.utils::downloadFile(Sys.getenv("DATA_URL"), # Uses set environment variables
 
 public_sources <- c("Country_Website", "Country_API", "Country_Github")
 
-ecdc_hosp <- read_csv(ecdc_hosp_filepath) %>%
+ecdc_present <- read_csv(temp_ecdc) %>%
   filter(Indicator %in% c("New_Hospitalised") &
            Source %in% public_sources) %>%
   rename(location_name = CountryName) %>%
   mutate(target_variable = "inc hosp") %>%
   left_join(locations, by = "location_name") %>%
   select(date = Date, location, location_name, value = Value) %>%
-  write_csv(file = ecdc_hosp_filepath, append = FALSE)
+  group_by(location, location_name) %>%
+  summarise(tot_value = sum(value))
+
+ecdc_past <- read_csv(ecdc_hosp_filepath) %>%
+  group_by(location, location_name) %>%
+  summarise(old_tot_value = sum(value))
+
+ecdc_hosp <- full_join(ecdc_past, ecdc_present) %>%
+  mutate(value = tot_value - old_tot_value, .keep = "unused")
+
+write_csv(ecdc_hosp, file = ecdc_hosp_filepath, append = FALSE)
+
