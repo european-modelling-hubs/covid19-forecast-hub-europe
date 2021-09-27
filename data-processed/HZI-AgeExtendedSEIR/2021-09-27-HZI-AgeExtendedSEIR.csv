@@ -95,7 +95,6 @@ forecast_date,scenario_id,target,target_end_date,location,type,quantile,value
 2021-09-27,forecast,4 wk ahead inc death,2021-10-23,DE,quantile,0.95,1123
 2021-09-27,forecast,4 wk ahead inc death,2021-10-23,DE,quantile,0.975,1423
 2021-09-27,forecast,4 wk ahead inc death,2021-10-23,DE,quantile,0.99,1578
-
 2021-09-27,forecast,1 wk ahead inc case,2021-10-02,DE,point,NA,45317
 2021-09-27,forecast,1 wk ahead inc case,2021-10-02,DE,quantile,0.01,29104
 2021-09-27,forecast,1 wk ahead inc case,2021-10-02,DE,quantile,0.025,31545
