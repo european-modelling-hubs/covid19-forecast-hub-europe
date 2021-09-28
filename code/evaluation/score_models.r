@@ -12,6 +12,9 @@ data_types <- get_hub_config("target_variables")
 ## only evaluate if the last 4 weeks hae been submitted
 restrict_weeks <- 4
 
+## history to keep
+histories <- c(5, 10, Inf)
+
 suppressWarnings(dir.create(here::here("evaluation")))
 
 ## load forecasts --------------------------------------------------------------
@@ -52,6 +55,15 @@ data <- scoringutils::merge_pred_and_obs(forecasts, truth,
 latest_date <- today()
 wday(latest_date) <- get_hub_config("forecast_week_day")
 
+cat("Scoring all forecasts.\n")
+
+scores <- score_forecasts(
+  forecasts = data,
+  quantiles = get_hub_config("forecast_type")$quantiles
+)
+
+write_csv(scores, here::here("evaluation", "scores.csv"))
+
 ## can modify manually if wanting to re-run past evaluation
 re_run <- FALSE
 if (re_run) {
@@ -62,21 +74,34 @@ if (re_run) {
 report_dates <- seq(start_date, latest_date, by = "week")
 
 for (chr_report_date in as.character(report_dates)) {
-  report_date <- as.Date(chr_report_date)
-  eval_filename <-
-    here::here("evaluation", paste0("evaluation-", report_date, ".csv"))
+  for (history in histories) {
+    dir_name <-
+      paste(if_else(is.finite(history),
+                    paste0(history, "_week", if_else(history > 1, "s", "")),
+                    "All"),
+            "history", sep = "_")
+    dir.create(here::here("evaluation", dir_name), recursive = TRUE, showWarnings = FALSE)
+    report_date <- as.Date(chr_report_date)
 
-  scores <- score_forecasts(
-    forecasts = data,
-    quantiles = get_hub_config("forecast_type")$quantiles
-  )
-  table <- summarise_scores(
-    scores = scores,
-    report_date = report_date,
-    restrict_weeks = restrict_weeks
-  )
+    use_scores <- scores %>%
+      filter(target_end_date > report_date - history * 7)
 
-  write_csv(table, eval_filename)
+    str <- paste("Evaluation as of", report_date)
+    if (history < Inf) {
+      str <- paste(str, "keeping", history, "weeks of history")
+    }
+    cat(paste0(str, ".\n"))
+
+    table <- summarise_scores(
+      scores = use_scores,
+      report_date = report_date,
+      restrict_weeks = restrict_weeks
+    )
+
+    eval_filename <-
+      here::here("evaluation", dir_name, paste0("evaluation-", report_date, ".csv"))
+
+    write_csv(table, eval_filename)
+  }
 }
 
-write_csv(scores, here::here("evaluation", "scores.csv"))

@@ -5,44 +5,48 @@ library(dplyr)
 library(purrr)
 library(EuroForecastHub)
 
-# Get exclusions for all weeks
-exclude_by_date <- vroom(here("code", "ensemble", "EuroCOVIDhub",
-                      "manual-exclusions.csv"))
+ensembles <- list()
+
+histories <- setdiff(list.dirs(here::here("evaluation"), full.names = FALSE), "")
 
 for (cutoff in c(TRUE, FALSE)) {
+  for (history in histories) {
+    ## Get all past weeks' forecast dates
+    all_dates <- vroom(here("code", "ensemble", "EuroCOVIDhub",
+                            "method-by-date.csv")) %>%
+      pull(forecast_date)
 
-  ## Get all past weeks' forecast dates
-  all_dates <- vroom(here("code", "ensemble", "EuroCOVIDhub",
-                          "method-by-date.csv")) %>%
-    pull(forecast_date)
+    if (cutoff) {
+      all_dates <- all_dates[-seq(1, 7)]
+    } else {
+      all_dates <- all_dates[-seq(1, 4)]
+    }
 
-  if (cutoff) {
-    all_dates <- all_dates[-seq(1, 7)]
+    ## Get all methods
+    all_methods <- c(paste0("relative_skill_weighted_", c("mean", "median")))
+
+    eval_dir <- here::here("evaluation", history)
+    ## Run all ensembles for all past dates ------------------------------------
+    ensembles[[length(ensembles) + 1]] <-
+      run_multiple_ensembles(forecast_dates = all_dates,
+                             methods = all_methods, # all_methods,
+                             verbose = TRUE,
+                             rel_wis_cutoff = if_else(cutoff, 1, Inf),
+                             eval_dir = eval_dir,
+                             identifier = paste0(if_else(cutoff, "cutoff_", ""),
+                                                 history))
   }
+}
 
-  ## Get all methods
-  all_methods <- c("mean", "median", paste0("relative_skill_weighted_", c("mean", "median"), c("", "_by_horizon")))
-
-  ## Run all ensembles for all past dates ------------------------------------
-  ensembles <- run_multiple_ensembles(forecast_dates = all_dates,
-                                      methods = all_methods, # all_methods,
-                                      exclude_models = exclude_by_date,
-                                      verbose = TRUE,
-                                      rel_wis_cutoff = if_else(cutoff, 1, Inf),
-                                      identifier = if_else(cutoff, "cutoff", "")) %>%
-  transpose() %>%
-  simplify_all()
-
-  results <- ensembles$result %>%
-    compact()
+for (i in 1:length(ensembles)) {
 
   ## Save in ensemble/data-processed/model
-  walk(results,
+  walk(ensembles[[i]],
        ~ suppressWarnings(dir.create(here("ensembles", "data-processed",
                                           paste0("EuroCOVIDhub-", .x$method)),
                                      recursive = TRUE)))
 
-  walk(results,
+  walk(ensembles[[i]],
        ~ vroom_write(x = .x$ensemble,
                      path = here("ensembles", "data-processed",
                                  paste0("EuroCOVIDhub-", .x$method),
@@ -51,12 +55,12 @@ for (cutoff in c(TRUE, FALSE)) {
                      delim = ","))
 
   ## Save weights in ensemble/weights/model
-  walk(results,
+  walk(ensembles[[i]],
        ~ suppressWarnings(dir.create(here("ensembles", "weights",
                                           paste0("EuroCOVIDhub-", .x$method)),
                                      recursive = TRUE)))
 
-  walk(results,
+  walk(ensembles[[i]],
        ~ vroom_write(x = .x$weights,
                      path = here("ensembles", "weights",
                                  paste0("EuroCOVIDhub-", .x$method),
