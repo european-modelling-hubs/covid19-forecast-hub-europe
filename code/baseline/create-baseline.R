@@ -14,7 +14,7 @@ if (!dir.exists(model_folder)) {
 }
 
 hub_quantiles <- get_hub_config("forecast_type")[["quantiles"]]
-hub_horizon <- get_hub_config("horizon")[["value"]]
+hub_horizon <- max(get_hub_config("horizon")[["values"]])
 hub_targets <- get_hub_config("target_variables")
 
 forecast_date <- today()
