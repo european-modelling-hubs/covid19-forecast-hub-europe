@@ -93,9 +93,6 @@ df = df.sort_values(['scenario_id', 'target_end_date', 'location', 'model', 'tar
 
 df = df[["scenario_id", "model", "location", "forecast_date", "timezero", "target", "target_end_date", "type", "quantile", "value"]]
 
-df.to_csv('viz/forecasts_to_plot.csv', index=False)
-
-
 ### Export to .json
 
 def createForecastDataItem(row):
