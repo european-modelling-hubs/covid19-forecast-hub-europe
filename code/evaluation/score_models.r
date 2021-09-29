@@ -85,5 +85,3 @@ for (chr_report_date in as.character(report_dates)) {
 
   write_csv(table, eval_filename)
 }
-
-write_csv(scores, here::here("evaluation", "scores.csv"))
