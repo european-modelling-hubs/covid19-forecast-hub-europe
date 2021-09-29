@@ -25,6 +25,9 @@ jobs:
         remotes::install_github("epiforecasts/EuroForecastHub")
       shell: Rscript {0}
 
+    - name: Create score csv
+      run: Rscript 'code/evaluation/score_models.r'
+
     - name: Create evaluation reports
       run: Rscript 'code/reports/compile-evaluation-reports.r'
 
