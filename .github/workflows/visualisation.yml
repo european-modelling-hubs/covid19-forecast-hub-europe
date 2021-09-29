@@ -27,15 +27,16 @@ jobs:
       uses: r-lib/actions/setup-r@v1
     - name: Install R requirements
       run: |
-        install.packages(c("dplyr", "here", "readr", "lubridate"))
+        install.packages(c("dplyr", "here", "readr", "lubridate", "fs", "purrr", "yaml", "jsonlite"))
       shell: Rscript {0}
     - name: Visualization (python)
       run: |
         cp data-locations/locations_eu.csv viz/location_codes.csv
-        python3 ./viz/prepare_metadata.py
         python3 ./viz/prepare_forecast_data.py
-    - name: Visualization (R)
+    - name: Prepare truth data
       run: Rscript viz/prepare_truth_data.R
+    - name: Prepare metadata
+      run: Rscript viz/prepare_metadata.R
     - name: Commit files
       env:
         AUTH: ${{ secrets.GITHUBTOKEN }}
