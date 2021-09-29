@@ -1,4 +1,0 @@
-viz/forecasts_to_plot.json filter=lfs diff=lfs merge=lfs -text
-viz/metadata.json filter=lfs diff=lfs merge=lfs -text
-viz/settings_model_selection.json filter=lfs diff=lfs merge=lfs -text
-viz/truth_to_plot.csv filter=lfs diff=lfs merge=lfs -text
