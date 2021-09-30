@@ -28,7 +28,7 @@ jobs:
       uses: r-lib/actions/setup-r@v1
     - name: Install R requirements
       run: |
-        install.packages(c("dplyr", "here", "readr", "lubridate", "fs", "purrr", "yaml", "jsonlite"))
+        install.packages(c("dplyr", "here", "readr", "lubridate", "fs", "purrr", "yaml", "jsonlite", "AzureStor"))
       shell: Rscript {0}
     - name: Visualization (python)
       run: |
@@ -38,18 +38,11 @@ jobs:
       run: Rscript viz/prepare_truth_data.R
     - name: Prepare metadata
       run: Rscript viz/prepare_metadata.R
-    - name: Commit files
+    - name: Upload files to Azure blob storage
       env:
-        AUTH: ${{ secrets.GITHUBTOKEN }}
-      run: |
-        git config user.email "action@github.com"
-        git config user.name "GitHub Action - Visualisation Update"
-        git add --all
-        git diff-index --quiet HEAD || git commit -m "Daily Visualisation update"
-        git pull --rebase
-        git push
-        echo "pushed to github"
-
+        AZURE_STORAGE_ENDPOINT: ${{ secrets.AZURE_STORAGE_ENDPOINT }}
+        AZURE_STORAGE_KEY: ${{ secrets:AZURE_STORAGE_KEY }}
+      run: Rscript viz/upload_to_azure.R
     - name: Create issue about failure
       if: failure() && github.event_name != 'workflow_dispatch'
       uses: JasonEtco/create-an-issue@v2.5.0
