@@ -30,14 +30,14 @@ jobs:
       run: |
         install.packages(c("dplyr", "here", "readr", "lubridate", "fs", "purrr", "yaml", "jsonlite", "AzureStor"))
       shell: Rscript {0}
-    - name: Visualization (python)
-      run: |
-        cp data-locations/locations_eu.csv viz/location_codes.csv
-        python3 ./viz/prepare_forecast_data.py
     - name: Prepare truth data
       run: Rscript viz/prepare_truth_data.R
     - name: Prepare metadata
       run: Rscript viz/prepare_metadata.R
+    - name: Visualization (python)
+      run: |
+        cp data-locations/locations_eu.csv viz/location_codes.csv
+        python3 ./viz/prepare_forecast_data.py
     - name: Upload files to Azure blob storage
       env:
         AZURE_STORAGE_ENDPOINT: ${{ secrets.AZURE_STORAGE_ENDPOINT }}
