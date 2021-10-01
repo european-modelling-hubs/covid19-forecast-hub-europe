@@ -60,12 +60,14 @@ jobs:
           pr_number = Sys.getenv("PR_NUMBER"),
           data_folder = "data-processed"
         )
-        gh::gh(
-          "/repos/{gh_repo}/issues/{pr_number}/comments",
-          .method = "POST",
-          gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
-          pr_number = Sys.getenv("PR_NUMBER"),
-          accept = "application/vnd.github.v3+json",
-          body = paste(c("Preview of submitted forecast:", links), collapse = "\n\n")
-        )
+        if (!is.null(links)) {
+          gh::gh(
+            "/repos/{gh_repo}/issues/{pr_number}/comments",
+            .method = "POST",
+            gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
+            pr_number = Sys.getenv("PR_NUMBER"),
+            accept = "application/vnd.github.v3+json",
+            body = paste(c("Preview of submitted forecast:", links), collapse = "\n\n")
+          )
+        }
       shell: Rscript {0}
