@@ -3,13 +3,14 @@ European data status
 
 #### Potential issues in the JHU dataset
 
-As at 2021-10-01 13:11:40
+As at 2021-10-02 13:10:59
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
 | country     | created    | updated    | issue                                                          | message                                             | url                                                      |
 | :---------- | :--------- | :--------- | :------------------------------------------------------------- | :-------------------------------------------------- | :------------------------------------------------------- |
+| italy       | 2021-10-01 | 2021-10-01 | error in italy’s covid cases                                   | Hello. There is an error in Italy’s COVID data: on… | <https://github.com/CSSEGISandData/COVID-19/issues/4713> |
 | cyprus      | 2021-09-29 | 2021-09-29 | discrepancy in cyprus data for new covid cases on 31st of july | Confirmed cases for 30th July and 31st July are …   | <https://github.com/CSSEGISandData/COVID-19/issues/4703> |
 | germany     | 2021-09-06 | 2021-09-06 | decrease of cumulative cases for germany 2021-09-05            | Hi, there is a decrease of **-1050** cases from 2…  | <https://github.com/CSSEGISandData/COVID-19/issues/4612> |
 | france      | 2021-09-03 | 2021-09-03 | france deaths revised following government change              | Hello all, Further to \#4588, the French Governmen… | <https://github.com/CSSEGISandData/COVID-19/issues/4605> |
