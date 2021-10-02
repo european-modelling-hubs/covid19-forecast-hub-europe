@@ -12,6 +12,9 @@ data_types <- get_hub_config("target_variables")
 ## only evaluate if the last 4 weeks hae been submitted
 restrict_weeks <- 4
 
+## history to keep
+histories <- c(10, Inf)
+
 suppressWarnings(dir.create(here::here("evaluation")))
 
 ## load forecasts --------------------------------------------------------------
@@ -71,17 +74,31 @@ if (re_run) {
 report_dates <- seq(start_date, latest_date, by = "week")
 
 for (chr_report_date in as.character(report_dates)) {
-  report_date <- as.Date(chr_report_date)
+  tables <- list()
+  for (str_history in histories) {
+    report_date <- as.Date(chr_report_date)
+
+    use_scores <- scores %>%
+      filter(target_end_date > report_date - history * 7)
+
+    str <- paste("Evaluation as of", report_date)
+    if (history < Inf) {
+      str <- paste(str, "keeping", history, "weeks of history")
+    }
+    message(paste0(str, "."))
+
+    tables[[as.character(history)]] <- summarise_scores(
+      scores = use_scores,
+      report_date = report_date,
+      restrict_weeks = restrict_weeks
+    )
+  }
+
+  combined_table <- bind_rows(tables, .id = "weeks_included") %>%
+    mutate(weeks_included = recode(weeks_included, `Inf` = "All"))
   eval_filename <-
     here::here("evaluation", paste0("evaluation-", report_date, ".csv"))
 
-  message("Summarising scores as of ", report_date, ".")
-
-  table <- summarise_scores(
-    scores = scores,
-    report_date = report_date,
-    restrict_weeks = restrict_weeks
-  )
-
-  write_csv(table, eval_filename)
+  write_csv(combined_table, eval_filename)
 }
+
