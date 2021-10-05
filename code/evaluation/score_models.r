@@ -52,6 +52,15 @@ data <- scoringutils::merge_pred_and_obs(forecasts, truth,
 latest_date <- today()
 wday(latest_date) <- get_hub_config("forecast_week_day")
 
+message("Scoring all forecasts.")
+
+scores <- score_forecasts(
+  forecasts = data,
+  quantiles = get_hub_config("forecast_type")$quantiles
+)
+
+write_csv(scores, here::here("evaluation", "scores.csv"))
+
 ## can modify manually if wanting to re-run past evaluation
 re_run <- FALSE
 if (re_run) {
@@ -63,15 +72,16 @@ report_dates <- seq(start_date, latest_date, by = "week")
 
 for (chr_report_date in as.character(report_dates)) {
   report_date <- as.Date(chr_report_date)
-  filename <-
+  eval_filename <-
     here::here("evaluation", paste0("evaluation-", report_date, ".csv"))
 
-  table <- score_models(
-    data,
-    report_date,
-    restrict_weeks = 4,
-    quantiles = get_hub_config("forecast_type")$quantiles
+  message("Summarising scores as of ", report_date, ".")
+
+  table <- summarise_scores(
+    scores = scores,
+    report_date = report_date,
+    restrict_weeks = restrict_weeks
   )
 
-  write_csv(table, filename)
+  write_csv(table, eval_filename)
 }
