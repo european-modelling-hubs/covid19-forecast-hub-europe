@@ -1,4 +1,7 @@
-library(here); library(dplyr); library(tidyr)
+# Get all email addresses in metadata and check they match those in the google group
+library(here)
+library(dplyr)
+library(tidyr)
 
 # Get metadata emails
 models <- covidHubUtils::get_all_models(source = "local_hub_repo", 
@@ -8,17 +11,17 @@ model_info <- purrr::map_dfr(paste0("data-processed/", models,
                                     "/metadata-", models, ".txt"),
                              ~ yaml::read_yaml(.x))
 
-ctb <- select(model_info, 
+model_contributors <- select(model_info, 
               model_abbr, model_contributors) %>%
   tidyr::separate(model_contributors, into = paste0("ctb_", 1:10), sep = ">", 
                   remove = FALSE) %>%
   mutate(has_email = grepl("@", model_contributors),
          across(ctb_1:ctb_10, ~ gsub(".*<", "", .)))
 
-missing_email <- filter(ctb, !has_email) %>%
+missing_email <- filter(model_contributors, !has_email) %>%
   select(model_abbr, model_contributors, has_email)
 
-email_metadata <- filter(ctb, has_email) %>%
+email_metadata <- filter(model_contributors, has_email) %>%
   pivot_longer(-c(model_contributors, model_abbr, has_email), 
                names_to = "ctb_order", values_to = "email_address") %>%
   mutate(has_email = grepl("@", email_address),
@@ -27,11 +30,11 @@ email_metadata <- filter(ctb, has_email) %>%
   distinct(email_address, .keep_all = TRUE) %>%
   bind_rows(missing_email)
 
-rm(ctb, missing_email, models)
+rm(model_contributors, missing_email, models)
 
 # Get google group emails
-# Download from google as member list csv
-email_google <- readr::read_csv("C:/Users/kaths/Downloads/euro-covid19-forecast-hub.csv",
+# email_google_file <- # filepath to csv saved from https://groups.google.com/u/1/g/euro-covid19-forecast-hub/members
+email_google <- readr::read_csv(email_google_file,
                                 skip = 1) %>%
   select(email_address = "Email address") %>%
   mutate(email_address = tolower(email_address))
