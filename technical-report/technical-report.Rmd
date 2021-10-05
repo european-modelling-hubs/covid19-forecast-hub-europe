@@ -121,6 +121,8 @@ Additionally, a modular approach, allows testing of the individual pieces, which
 
 Each column contains one piece of information
 
+Each metadata field should contain one piece of information (https://github.com/epiforecasts/covid19-forecast-hub-europe/pull/1016)
+
 ## Diversity of programming languages
 
 It is not realistic to expect to everyone (or really anyone) in the development
