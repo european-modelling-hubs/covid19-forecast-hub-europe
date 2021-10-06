@@ -5,8 +5,7 @@ model_contributors: Pablo Montero Manso (University of Sydney) <pablo.monteroman
 website_url: https://github.com/pmontman/covid19forec
 license: cc-by-4.0
 team_model_designation: primary
-methods: A single autoregressive model fit jointly to all European time series, adding time series from the top regions across the world. A high-dimensional manifold embedding is used capture the process. 
-team_funding: 
+methods: A single autoregressive model fit jointly to all European time series, adding time series from the top regions across the world. A high-dimensional manifold embedding is used capture the process.
 data_inputs: JHU (reported fatalities)
 citation: https://arxiv.org/abs/2008.00444
 methods_long: "The information of multiple time series can be shared in a single model via a large dimensional manifold embedding.\

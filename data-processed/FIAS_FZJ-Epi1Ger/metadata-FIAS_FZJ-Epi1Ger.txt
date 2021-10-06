@@ -3,13 +3,12 @@ model_name: Core Model, Germany
 model_abbr: FIAS_FZJ-Epi1Ger
 model_contributors: Maria V. Barbarossa <barbarossa@fias.uni-frankfurt.de>,
   \  Jan Fuhrmann <j.fuhrmann@fz-juelich.de>,
-  \  Stefan Krieg <s.krieg@fz-juelich.de>, 
+  \  Stefan Krieg <s.krieg@fz-juelich.de>,
   \  Jan H. Meinke <j.meinke@fz-juelich.de>
 website_url: https://www.fz-juelich.de/SharedDocs/Meldungen/IAS/JSC/DE/2021/2021-01-covid-19.html;jsessionid=F4D5FB4027E871A6F4C2FCAF0F08FC35
 license: other
 team_model_designation: primary
 methods: An extended SEIR model with additional compartments for undetected cases
-team_funding: 
 data_inputs: ECDC, confirmed cases, reported fatalities, population
 citation: https://doi.org/10.1101/2020.04.18.20069955
 methods_long: "An extended SEIR model with additional compartments for undetected cases is fit
