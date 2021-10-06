@@ -12,12 +12,12 @@ all_histories <- c("10", "All")
 unweighted_methods <- c("mean", "median")
 weighted_methods <- c(paste0("relative_skill_weighted_", unweighted_methods))
 
-for (cutoff in c(TRUE, FALSE)) {
-  ## Get all past weeks' forecast dates
-  all_dates <- vroom(here("code", "ensemble", "EuroCOVIDhub",
-                          "method-by-date.csv")) %>%
-    pull(forecast_date)
+## Get all past weeks' forecast dates
+all_dates <- vroom(here("code", "ensemble", "EuroCOVIDhub",
+                        "method-by-date.csv")) %>%
+  pull(forecast_date)
 
+for (cutoff in c(TRUE, FALSE)) {
   if (cutoff) {
     all_dates <- all_dates[-seq(1, 7)]
   } else {
@@ -30,19 +30,19 @@ for (cutoff in c(TRUE, FALSE)) {
                            methods = unweighted_methods,
                            verbose = TRUE,
                            rel_wis_cutoff = if_else(cutoff, 1, Inf),
-                           identifier = paste0(if_else(cutoff, "cutoff_", ""))
+                           identifier = paste0(if_else(cutoff, "cutoff", "")))
 
-  for (history in histories) {
-    ## Run weighted ensembles for all past dates ------------------------------------
-    ensembles[[length(ensembles) + 1]] <-
-      run_multiple_ensembles(forecast_dates = all_dates,
-                             methods = all_methods, # all_methods,
-                             history = history,
-                             verbose = TRUE,
-                             rel_wis_cutoff = if_else(cutoff, 1, Inf),
-                             identifier = paste0(if_else(cutoff, "cutoff_", ""),
-                                                 history))
-  }
+ for (history in all_histories) {
+   ## Run weighted ensembles for all past dates ------------------------------------
+   ensembles[[length(ensembles) + 1]] <-
+     run_multiple_ensembles(forecast_dates = all_dates,
+                            methods = weighted_methods, 
+                            history = history,
+                            verbose = TRUE,
+                            rel_wis_cutoff = if_else(cutoff, 1, Inf),
+                            identifier = paste0(if_else(cutoff, "cutoff_", ""),
+                                                history))
+ }
 }
 
 for (i in 1:length(ensembles)) {
