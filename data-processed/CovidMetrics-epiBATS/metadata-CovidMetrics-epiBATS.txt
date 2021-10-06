@@ -1,31 +1,13 @@
 team_name: University of Cologne Covid Metrics
-team_abbr: CovidMetrics
 model_contributors:  Tom Zimmermann (University of Cologne) <tom.zimmermann@uni-koeln.de>, Arne Rodloff (University of Cologne) <arne.rodlloff@uni-koeln.de>
 institution_affil: University of Cologne
 website_url: https://tomz.shinyapps.io/coronaLandkreise/
-
-model_name: epiBATS
-model_abbr: epiBATS
-model_output: https://tomz.shinyapps.io/coronaLandkreise/
+model_name: CovidMetrics-epiBATS
+model_abbr: CovidMetrics-epiBATS
 license: cc-by-4.0
 team_model_designation: primary
-
-model_targets: incident cases, cumulative cases
-target_loc: Germany
-Data_format: point + quantile(0.01,0.025,0.05,..,0.95,0.975,0.99)
-forecast_startdate: 01.06.2021
-forecast_frequency: once per week
-
-data_inputs_known: cases
-data_source_known: RKI
-
-this_model_is_an_ensemble: No
-this_model_is_unconditional: Yes
-
 methods: Forecasts are based on TBATS - models (DeLivera, Hyndman und Snyder (2011)) and are updated daily for each German state. Final models are based on comparing multiple models and selecting the best-performing model based on AIC in historical data.
-
 methods_long: >
   Forecasts are based on TBATS - models (DeLivera, Hyndman und Snyder (2011)) and are updated daily for each German state. Final models are based on comparing multiple models and selecting the best-performing model based on AIC in historical data.
   The models forecast the 7-day incidence. The forecasting model is the same that is used at our website below.
-
 citation: https://tomz.shinyapps.io/coronaLandkreise/
