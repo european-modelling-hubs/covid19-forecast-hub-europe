@@ -75,7 +75,7 @@ report_dates <- seq(start_date, latest_date, by = "week")
 
 for (chr_report_date in as.character(report_dates)) {
   tables <- list()
-  for (str_history in histories) {
+  for (history in histories) {
     report_date <- as.Date(chr_report_date)
 
     use_scores <- scores %>%
@@ -97,7 +97,8 @@ for (chr_report_date in as.character(report_dates)) {
   combined_table <- bind_rows(tables, .id = "weeks_included") %>%
     mutate(weeks_included = recode(weeks_included, `Inf` = "All"))
   eval_filename <-
-    here::here("evaluation", paste0("evaluation-", report_date, ".csv"))
+    here::here("evaluation", "weekly-summary",
+	       paste0("evaluation-", report_date, ".csv"))
 
   write_csv(combined_table, eval_filename)
 }
