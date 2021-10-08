@@ -22,7 +22,7 @@ forecast_dates <- data %>%
 # we add a new panel without adding a new row.
 nb_facets <- dplyr::n_distinct(rlang::eval_tidy(facetting_var, data = data))
 n_cols <- 3
-fa <- ((nb_facets-1) %/% n_cols + 1) / 7
+fa <- ((nb_facets - 1) %/% n_cols + 1) / 7
 ```
 
 ```{r prediction-plots, echo = FALSE, results='asis', fig.width = 8.5, fig.asp = fa}
@@ -48,12 +48,12 @@ for (forecast_date in as.character(forecast_dates)) {
         facet_formula =  rlang::expr(~ !!facetting_var),
         ncol = n_cols,
         allow_truth_without_pred = FALSE,
-        zoom_multiple_data =
-          c(ymin = 0, ymax = 3),
-        expand_limits =
-          list(x =
-                 max(plot_data$target_end_date),
-               y = 0),
+        # zoom_multiple_data =
+        #   c(ymin = 0, ymax = 3),
+        # expand_limits =
+        #   list(x =
+        #          max(plot_data$target_end_date),
+        #        y = 0),
         scales = "free_y") + 
         ggplot2::theme(legend.position = "bottom", 
                        strip.placement = "outside") + 
