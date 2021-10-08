@@ -38,5 +38,5 @@ safely_render <- purrr::safely(.f = ~ rmarkdown::render(here::here("code", "repo
                               otherwise = NA_real_)
 
 # Create report for each model
-render_results <- purrr::map(.x = models, 
+purrr::walk(.x = models, 
             .f = safely_render)
