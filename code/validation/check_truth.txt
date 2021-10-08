@@ -1018,3 +1018,10 @@ Latest check of truth data: 2021-10-07 13:13:14
 
 No errors detected.
 
+Latest check of truth data: 2021-10-08 13:11:39
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2021-10-07:
+
+- Negative incidence in the following locations: ['Slovenia' 'Switzerland'].
+
