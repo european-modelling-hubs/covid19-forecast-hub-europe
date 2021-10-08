@@ -21,6 +21,7 @@ models <- covidHubUtils::get_model_designations(source = "local_hub_repo",
   filter(designation %in% c("primary", "secondary")) %>%
   pull(model)
 
+# TODO remove (speeds up testing)
 models <- models[c(14,20,38)]
 
 # Create safe function for rendering report for each model
