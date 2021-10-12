@@ -10,6 +10,10 @@ metadata <- fs::dir_ls(
   sort(method = "radix") %>%
   map(yaml::read_yaml) %>%
   set_names(map(., ~ pluck(.x, "model_abbr"))) %>%
+  map(function(e) {
+    e$methods_long <- ifelse(is.null(e$methods_long), e$methods, e$methods_long)
+    return(e)
+  }) %>%
   # delete double spaces in all fields because they don't play nice with json
   rapply(function(x) gsub("\\s+", " ", x), how = "replace")
 
