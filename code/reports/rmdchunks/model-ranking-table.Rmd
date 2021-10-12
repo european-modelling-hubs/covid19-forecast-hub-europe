@@ -8,8 +8,8 @@ model_df <- df %>%
 
 if (all(is.na(model_df$rel_wis))) {
   cat("Skill is shown as relative absolute error; weighted interval score",
-      " is not calculated as the 23 quantile levels required are not being",
-      " provided by the model.")
+      "is not calculated as the 23 quantile levels required are not being",
+      "provided by the model.")
   df <- df %>%
     rename(skill = rel_ae)
   model_df <- model_df %>%
@@ -24,13 +24,12 @@ if (all(is.na(model_df$rel_wis))) {
 
 if (nrow(model_df) > 0) {
   cat("The table shows the skill of the ", params$model,
-      " model (`Model skill`), the ensemble model (`Ensemble skill`), and",
-      " the best individual model (`Best skill`).\n")
+      "model (`Model skill`), the ensemble model (`Ensemble skill`), and",
+      "the best individual model (`Best skill`).\n")
 
   top_ranked <- df %>%
-    arrange(location_name, skill) %>%
     group_by(location_name) %>%
-    slice(1) %>%
+    slice(which.min(skill)) %>%
     ungroup() %>%
     select(location_name, `Best skill` = skill)
 

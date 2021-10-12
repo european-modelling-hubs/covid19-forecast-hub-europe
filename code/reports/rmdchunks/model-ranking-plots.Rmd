@@ -1,18 +1,15 @@
 ```{r, results = 'asis'}
 library(forcats)
 
-lookup_variables <- names(target_variables)
-names(lookup_variables) <- target_variables
 skill_table <- table %>%
-  mutate(variable = lookup_variables[target_variable])
+  mutate(variable = fct_recode(target_variable, !!!target_variables))
 
 ## select best individual models
 selected <- skill_table %>%
   ## FIXME: do we need a better way to identify hub models?
   filter(!is.na(rel_wis), !grepl("hub-(ensemble|baseline)$", model)) %>%
-  arrange(location_name, target_variable, horizon, rel_wis) %>%
   group_by(location_name, target_variable, horizon) %>%
-  slice(1) %>%
+  slice(which.min(rel_wis)) %>%
   ungroup() %>%
   mutate(model = "Best individual model")
 
@@ -26,7 +23,7 @@ if (!grepl("hub-ensemble$", params$model)) {
 
 df <- skill_table %>%
   filter(model == params$model) %>%
-  bind_rows(selected, .) %>%
+  bind_rows(selected) %>%
   filter(!is.na(rel_wis)) %>%
   mutate(location_name = fct_rev(location_name))
 

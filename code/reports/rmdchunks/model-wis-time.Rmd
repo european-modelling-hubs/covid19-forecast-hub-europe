@@ -1,7 +1,7 @@
 ```{r, results = 'asis', fig.width = 8.5, fig.asp = fa}
 ## show 10 weeks score
 df <- read_csv(here::here("evaluation", "scores.csv")) %>%
-  filter(target_end_date > max(target_end_date) - 7 * 10,
+  filter(target_end_date > max(target_end_date) - weeks(10),
          target_variable == target_variables[variable],
          horizon == this_horizon)
 
@@ -10,8 +10,8 @@ model_df <- df %>%
 
 if (all(is.na(model_df$wis))) {
   cat("Skill is shown as weighted interval score",
-      " is not calculated as the 23 quantile levels required are not being",
-      " provided by the model.")
+      "is not calculated as the 23 quantile levels required are not being",
+      "provided by the model.")
   df <- df %>%
     rename(skill = aem)
   model_df <- model_df %>%

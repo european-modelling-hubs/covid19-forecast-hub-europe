@@ -5,7 +5,7 @@ an explanation text detailing the meaning of each column/index. --->
 
 ```{r ranking, results='asis'}
 cat("Scores separated by target and forecast horizon.")
-if (!("model" %in% names(params ))) {
+if (is.null(params$model)) {
   cat("Only models with submissions in each of the last ",
       restrict_weeks, "weeks are shown.")
 }

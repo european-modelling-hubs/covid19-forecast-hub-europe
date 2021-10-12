@@ -1,13 +1,13 @@
 <!--- Chunk to filter data and scores to keep only the relevant locations, horizons and target varaibles. Is is separated from the global scoring step
 so that we can cache the loading and scoring step.. -->
 ```{r}
-if ("location_name" %in% names(params) && params$location_name == "Overall") {
+if (identical(params$location_name, "Overall")) {
   table <- table %>%
     filter(location == "Overall")
 } else {
   table <- table %>%
     filter(location != "Overall")
-  if ("location_name" %in% names(params)) {
+  if (!is.null(params$location_name)) {
     table <- table %>%
       filter(location_name == params$location_name)
     data <- data %>%
@@ -25,10 +25,9 @@ data <- data %>%
 table <- table %>%
   filter(horizon %in% horizons)
 
-if ("model" %in% names(params)) {
-  select_model <- model
+if (!is.null(params$model)) {
   data <- data %>%
-    filter(model == select_model)
+    filter(model == {{model}})
 }
 ```
 
