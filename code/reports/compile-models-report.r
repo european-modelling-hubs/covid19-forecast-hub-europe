@@ -16,9 +16,10 @@ wday(report_date) <- get_hub_config("forecast_week_day")
 suppressWarnings(dir.create(here::here("html")))
 suppressWarnings(dir.create(here::here("html", "report-model-files")))
 
-models <- covidHubUtils::get_model_designations(source = "local_hub_repo",
-                                                hub_repo_path = here()) %>%
-  filter(designation %in% c("primary", "secondary")) %>%
+models <- covidHubUtils::get_model_metadata(source = "local_hub_repo",
+                                            hub_repo_path = here()) %>%
+  filter(designation %in% c("primary", "secondary"),
+         !grepl("hub-baseline$", model)) %>%
   pull(model)
 
 # TODO remove (speeds up testing)
