@@ -1,0 +1,8 @@
+<!--- Evaluate and score forecasts -->
+```{r, cache = TRUE, cache.extra = params$report_date, cache.vars="table"}
+filename <-
+  here::here("evaluation", "weekly-summary",
+	     paste0("evaluation-", params$report_date, ".csv"))
+
+table <- read_csv(filename)
+```
