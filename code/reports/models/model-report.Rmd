@@ -61,6 +61,10 @@ forecasting dates. -->
 ```{r forecast-vis, child = if (include_forecast_plot) "../rmdchunks/plot-forecasts.Rmd"}
 ```
 
+<!-- Visualisation of model scores. -->
+```{r model-scores, child = "../rmdchunks/model-scores.Rmd"}
+```
+
 <!--- 
 - Table with coverage by horizon for this week
 - Plot of coverage by target and horizon over time
