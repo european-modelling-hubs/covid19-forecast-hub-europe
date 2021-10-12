@@ -5,7 +5,7 @@ skill_table <- table %>%
   mutate(variable = fct_recode(target_variable, !!!target_variables))
 
 ## select best individual models
-selected <- skill_table %>%
+best_models <- skill_table %>%
   ## FIXME: do we need a better way to identify hub models?
   filter(!is.na(rel_wis), !grepl("hub-(ensemble|baseline)$", model)) %>%
   group_by(location_name, target_variable, horizon) %>%
@@ -17,13 +17,13 @@ selected <- skill_table %>%
 if (!grepl("hub-ensemble$", params$model)) {
   ensemble <- skill_table %>%
     filter(grepl("hub-ensemble$", model))
-  selected <- selected %>%
+  best_models <- best_models %>%
     rbind(ensemble)
 }
 
 df <- skill_table %>%
   filter(model == params$model) %>%
-  bind_rows(selected) %>%
+  bind_rows(best_models) %>%
   filter(!is.na(rel_wis)) %>%
   mutate(location_name = fct_rev(location_name))
 
