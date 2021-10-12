@@ -1,0 +1,47 @@
+```{r, results = 'asis', fig.width = 8.5, fig.asp = fa}
+## show 10 weeks score
+df <- read_csv(here::here("evaluation", "scores.csv")) %>%
+  filter(target_end_date > max(target_end_date) - weeks(10),
+         target_variable == target_variables[variable],
+         horizon == this_horizon)
+
+model_df <- df %>%
+  filter(model == params$model)
+
+if (all(is.na(model_df$wis))) {
+  cat("Skill is shown as weighted interval score",
+      "is not calculated as the 23 quantile levels required are not being",
+      "provided by the model.")
+  df <- df %>%
+    rename(skill = aem)
+  model_df <- model_df %>%
+    rename(skill = aem)
+} else {
+  cat("Skill is shown as weighted interval score.")
+  df <- df %>%
+    rename(skill = wis)
+  model_df <- model_df %>%
+    rename(skill = wis)
+}
+
+df <- df %>%
+  filter(grepl("hub-(baseline|ensemble)", model)) %>%
+  bind_rows(model_df)
+
+cat("\n")
+
+if (nrow(model_df) > 0) {
+  p <- ggplot(df, aes(x = target_end_date, y = skill, colour = model)) +
+    scale_colour_brewer("", palette = "Set1") +
+    facet_wrap(~ location_name, scales = "free_y", ncol = n_cols) +
+    scale_y_continuous("Skill", labels = scales::comma) +
+    xlab("Target date") +
+    geom_line() +
+    geom_point() +
+    theme_minimal() +
+    theme(legend.position = "top")
+  print(p)
+} else {
+  cat("Plots are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment the model does not fulfills that criterion." )
+}
+```

@@ -1,0 +1,31 @@
+<!--- Table comparing the performance of each model. The table is followed by
+an explanation text detailing the meaning of each column/index. --->
+
+## Predictive performance {.tabset .tabset-fade}
+
+```{r ranking, results='asis'}
+cat("Scores separated by target and forecast horizon.")
+if (is.null(params$model)) {
+  cat("Only models with submissions in each of the last ",
+      restrict_weeks, "weeks are shown.")
+}
+
+out <- NULL
+for (variable in names(target_variables)) {
+  out <- c(out, paste("\n\n###", variable, " {.tabset .tabset-fade}\n\n"))
+  for (this_horizon in horizons) {
+    horizon_string <-
+      paste0(this_horizon, " week",
+             if_else(this_horizon > 1, "s", ""), " ahead horizon")
+    out <- c(out, paste("\n\n####", horizon_string, "\n\n"))
+    out <- c(out, paste("\n\n##### Overall skill \n\n"))
+    out <- c(out, knit_child("model-ranking-table.Rmd", quiet = TRUE))
+    out <- c(out, paste("\n\n##### Skill over time \n\n"))
+    out <- c(out, knit_child("model-wis-time.Rmd", quiet = TRUE))
+  }
+}
+res <- knit(text = out, quiet = TRUE)
+cat(res, sep = '\n\n')
+```
+
+## {.unlisted .unnumbered}

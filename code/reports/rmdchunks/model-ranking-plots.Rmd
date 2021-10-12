@@ -1,0 +1,39 @@
+```{r, results = 'asis'}
+library(forcats)
+
+skill_table <- table %>%
+  mutate(variable = fct_recode(target_variable, !!!target_variables))
+
+## select best individual models
+best_models <- skill_table %>%
+  ## FIXME: do we need a better way to identify hub models?
+  filter(!is.na(rel_wis), !grepl("hub-(ensemble|baseline)$", model)) %>%
+  group_by(location_name, target_variable, horizon) %>%
+  slice(which.min(rel_wis)) %>%
+  ungroup() %>%
+  mutate(model = "Best individual model")
+
+## if not doing the ensemble, select the ensemble
+if (!grepl("hub-ensemble$", params$model)) {
+  ensemble <- skill_table %>%
+    filter(grepl("hub-ensemble$", model))
+  best_models <- best_models %>%
+    rbind(ensemble)
+}
+
+df <- skill_table %>%
+  filter(model == params$model) %>%
+  bind_rows(best_models) %>%
+  filter(!is.na(rel_wis)) %>%
+  mutate(location_name = fct_rev(location_name))
+
+ggplot(df, aes(x = location_name, y = rel_wis, colour = model)) +
+  facet_grid(variable ~ horizon, scales = "free") +
+  geom_point() +
+  scale_colour_brewer("", palette = "Set2") +
+  geom_hline(yintercept = 1, linetype = "dashed") +
+  theme_clean() +
+  xlab("") + ylab("Relative skill") +
+  coord_flip()
+
+```

@@ -1,4 +1,4 @@
-name: "Create ensemble report"
+name: "Create model reports"
 on:
   workflow_dispatch:
   schedule:
@@ -19,14 +19,14 @@ jobs:
 
     - name: Install R dependencies
       run: |
-        install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "readr", "rlang"))
+        install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "readr", "rlang", "forcats"))
         remotes::install_github("reichlab/covidHubUtils")
         remotes::install_github("epiforecasts/scoringutils@limit-viz")
         remotes::install_github("epiforecasts/EuroForecastHub")
       shell: Rscript {0}
 
     - name: Create ensemble reports
-      run: Rscript 'code/reports/compile-ensemble-report.r'
+      run: Rscript 'code/reports/compile-model-reports.r'
 
     - name: Push to web site
       uses: dmnemec/copy_file_to_another_repo_action@main
@@ -37,8 +37,8 @@ jobs:
         destination_repo: 'epiforecasts/covid19-forecast-hub-europe-website'
         destination_folder: 'reports'
         user_email: 'action@github.com'
-        user_name: 'GitHub Action - ensemble report'
-        commit_message: 'Ensemble report'
+        user_name: 'GitHub Action - model reports'
+        commit_message: 'Model reports'
 
     - name: Create issue about failure
       if: failure() && github.event_name != 'workflow_dispatch'

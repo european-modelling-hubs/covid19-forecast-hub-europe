@@ -1,32 +1,33 @@
 ---
+always_allow_html: true
 params: 
   report_date: "2021-06-21"
   restrict_weeks: 4
   model: "EuroCOVIDhub-ensemble"
-  location_name: NULL
-always_allow_html: true
 output:
   html_document:
     theme: yeti
     self_contained: true
     css: https://covid19forecasthub.eu/css/styles.css
-title: "European COVID-19 Forecast Hub Ensemble Report"
+title: "`r paste0('European COVID-19 Forecast Hub Evaluation Report for ', params$model)`"
 date: "`r params$report_date`"
 ---
 
 ```{r setup, include=FALSE}
+library(scoringutils)
 library(ggplot2)
 library(dplyr)
+library(tidyr)
 library(DT)
 library(knitr)
 library(covidHubUtils)
 library(lubridate)
 library(here)
-library(readr)
 library(EuroForecastHub)
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE,
-                      warning = FALSE)
+                      warning = FALSE,
+                      fig.path = here("html", "report-model-files/"))
 
 include_calibration <- TRUE
 include_forecast_plot <- TRUE
@@ -46,9 +47,27 @@ facetting_var <- rlang::quo(location_name)
 ```{r load-data, child = "../rmdchunks/load-data.Rmd"}
 ```
 
+<!--- Load forecast scores -->
+```{r load-scores, child = "../rmdchunks/load-scores.Rmd"}
+```
+
+<!--- Chunk to filter data and scores to keep only the relevant locations, horizons and target varaibles. Is is separated from the global scoring step
+so that we can cache the loading and scoring step.. -->
+```{r filter-forecasts, child = "../rmdchunks/filter-forecasts.Rmd"}
+```
+
 <!-- Visualisation of forecasts (cases or deaths across time) for multiple
 forecasting dates. -->
 ```{r forecast-vis, child = if (include_forecast_plot) "../rmdchunks/plot-forecasts.Rmd"}
+```
+
+<!-- Visualisation of model scores. -->
+```{r limit-scores, echo = FALSE}
+table <- table %>%
+  filter(weeks_included == "All")
+```
+
+```{r model-scores, child = "../rmdchunks/model-scores.Rmd"}
 ```
 
 <!--- 
