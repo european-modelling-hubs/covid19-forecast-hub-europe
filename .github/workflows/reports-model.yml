@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: "45 10 * * 2"
 jobs:
-  ensemble_report:
+  model_reports:
     runs-on: ubuntu-20.04
     if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
     env:
@@ -25,7 +25,7 @@ jobs:
         remotes::install_github("epiforecasts/EuroForecastHub")
       shell: Rscript {0}
 
-    - name: Create ensemble reports
+    - name: Create model reports
       run: Rscript 'code/reports/compile-model-reports.r'
 
     - name: Push to web site
