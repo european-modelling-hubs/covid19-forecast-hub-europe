@@ -20,7 +20,7 @@ scores <- scoringutils::eval_forecasts(
   ) %>%
   dplyr::filter(range %in% ranges)
 
-if (nrow(coverage) > 0) {
+if (nrow(scores) > 0) {
   coverage <- scores %>%
     select(range, target_variable, horizon, coverage) %>%
     distinct() %>%
