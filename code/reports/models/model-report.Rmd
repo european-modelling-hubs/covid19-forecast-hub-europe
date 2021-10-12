@@ -47,6 +47,10 @@ facetting_var <- rlang::quo(location_name)
 ```{r load-data, child = "../rmdchunks/load-data.Rmd"}
 ```
 
+<!--- Evaluate and score forecasts -->
+```{r score-forecasts, child = "../rmdchunks/score-forecasts.Rmd"}
+```
+
 <!--- Chunk to filter data and scores to keep only the relevant locations, horizons and target varaibles. Is is separated from the global scoring step
 so that we can cache the loading and scoring step.. -->
 ```{r filter-forecasts, child = "../rmdchunks/filter-forecasts.Rmd"}
