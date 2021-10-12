@@ -27,7 +27,7 @@ table <- table %>%
 
 if (!is.null(params$model)) {
   data <- data %>%
-    filter(model == {{model}})
+    filter(model == params$model)
 }
 ```
 
