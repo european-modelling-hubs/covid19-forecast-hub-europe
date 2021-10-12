@@ -19,6 +19,12 @@ data <- data %>%
   filter(horizon %in% horizons)
 table <- table %>%
   filter(horizon %in% horizons)
+
+if ("model" %in% names(params)) {
+  select_model <- model
+  data <- data %>%
+    filter(model == select_model)
+}
 ```
 
 ## {.unlisted .unnumbered}
