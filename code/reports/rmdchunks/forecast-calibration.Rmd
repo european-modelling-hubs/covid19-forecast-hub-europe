@@ -9,7 +9,9 @@ The table and plot below show this week's _coverage_ of the ensemble model at th
 
 ## Overall coverage
 
-```{r coverage, echo = FALSE, include = include_calibration, results = 'asis'}
+```{r coverage, echo = FALSE, include = include_calibration, results = 'asis', fig.width = 5, fig.height = 5}
+ranges <- c(50, 90)
+
 scores <- scoringutils::eval_forecasts(
   data,
   summarise_by = c("model", "range", "quantile",
@@ -18,34 +20,30 @@ scores <- scoringutils::eval_forecasts(
 )
 
 if (nrow(scores) > 0) {
-coverage <- scores %>%
-  dplyr::filter(range %in% c(50, 95)) %>%
-  select(range, `Target variable` = target_variable,
-         `Forecast horizon` = horizon, coverage) %>%
-  distinct() %>%
-  mutate(range = paste0(range, "% coverage"),
-         `Forecast horizon` =
-           paste0(`Forecast horizon`, " week",
-                  if_else(`Forecast horizon` == 1, "", "s")),
-         `Target variable` = recode_factor(`Target variable`,
-                                         `inc case` = "Cases",
-                                         `inc death` = "Deaths"),
-         coverage = round(coverage, 2))
+  coverage <- scores %>%
+    dplyr::filter(range %in% ranges) %>%
+    select(range, target_variable, horizon, coverage) %>%
+    distinct() %>%
+    mutate(horizon = as.integer(horizon),
+           range = paste0(range, "% interval"),
+           target_variable = recode_factor(target_variable,
+                                           `inc case` = "Cases",
+                                           `inc death` = "Deaths"),
+           coverage = round(coverage, 2))
 
-coverage %>%
-  tidyr::pivot_wider(names_from = range, values_from = coverage) %>%
-  group_by(`Forecast horizon`) %>%
-  DT::datatable(extensions = c('FixedColumns', 'Buttons'),
-                width = "100%",
-                options = list(
-                  paging = FALSE,
-                  info = FALSE,
-                  buttons = c('csv', 'excel'),
-                  dom = 'Bfrtip',
-                  scrollX = TRUE
-                ),
-                class = 'white-space: nowrap') %>%
-  htmltools::tagList()
+  hlines <- tibble(range = paste0(ranges, "% interval"),
+                   nominal = ranges / 100)
+
+  p <- ggplot(coverage, aes(y = coverage)) +
+    geom_line(aes(x = horizon)) +
+    geom_point(aes(x = horizon)) +
+    ylim(c(0, 1)) +
+    geom_hline(data = hlines, aes(yintercept = nominal), linetype = "dashed") +
+    facet_grid(range ~ target_variable) +
+    theme_minimal() +
+    ylab("Proportion of data within forecast interval") +
+    xlab("Forecast horizon (weeks )")
+  print(p)
 } else {
   cat("No coverage figures shown as now 50%/90% predictive intervals are available.\n")
 }
