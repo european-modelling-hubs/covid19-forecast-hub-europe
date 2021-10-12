@@ -10,6 +10,8 @@ if (is.null(params$model)) {
       restrict_weeks, "weeks are shown.")
 }
 
+scores <- read_csv(here::here("evaluation", "scores.csv"))
+
 out <- NULL
 for (variable in names(target_variables)) {
   out <- c(out, paste("\n\n###", variable, " {.tabset .tabset-fade}\n\n"))

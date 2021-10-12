@@ -1,6 +1,6 @@
 ```{r, results = 'asis', fig.width = 8.5, fig.asp = fa}
 ## show 10 weeks score
-df <- read_csv(here::here("evaluation", "scores.csv")) %>%
+df <- scores %>%
   filter(target_end_date > max(target_end_date) - weeks(10),
          target_variable == target_variables[variable],
          horizon == this_horizon)
