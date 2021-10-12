@@ -22,10 +22,14 @@ forecast_dates <- data %>%
 # we add a new panel without adding a new row.
 nb_facets <- dplyr::n_distinct(rlang::eval_tidy(facetting_var, data = data))
 n_cols <- 3
-fa <- ifelse(nb_facets > 0, ((nb_facets - 1) %/% n_cols + 1) / 7, 1)
+n_rows <- (nb_facets - 1) %/% n_cols + 1
+fa <- ifelse(nb_facets > 0, n_rows / n_cols, 1)
+reduce_size <- max(ifelse(nb_facets >= n_cols, 1, nb_facets / n_cols), 0.5)
+fw <- 8.5 * reduce_size
+ow <- paste0(reduce_size * 100, "%")
 ```
 
-```{r prediction-plots, echo = FALSE, results='asis', fig.width = 8.5, fig.asp = fa}
+```{r prediction-plots, echo = FALSE, results='asis', fig.width = fw, fig.asp = fa, out.width = ow}
 for (forecast_date in as.character(forecast_dates)) {
   cat(paste0("\n\n## ", forecast_date, "{.tabset .tabset-fade} \n\n"))
   
@@ -62,7 +66,7 @@ for (forecast_date in as.character(forecast_dates)) {
         plot <- plot +
           ggplot2::theme(legend.position = "bottom",
                          strip.placement = "outside") +
-          scale_y_continuous("True and predicted values per week per 100,000",
+          scale_y_continuous("Values per week per 100,000",
                              labels = scales::comma) +
           xlab("Week")
         print(plot)
