@@ -62,6 +62,11 @@ forecasting dates. -->
 ```
 
 <!-- Visualisation of model scores. -->
+```{r limit-scores, echo = FALSE}
+table <- table %>%
+  filter(weeks_included == "All")
+```
+
 ```{r model-scores, child = "../rmdchunks/model-scores.Rmd"}
 ```
 
