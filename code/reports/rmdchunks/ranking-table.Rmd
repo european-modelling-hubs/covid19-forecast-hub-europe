@@ -1,7 +1,8 @@
 ```{r, results = 'asis'}
 df <- table %>%
   filter(target_variable == target_variables[variable],
-         horizon == this_horizon)
+         horizon == this_horizon,
+         weeks_included == this_weeks)
 
 ## we want NA to be sorted as a high number, see https://stackoverflow.com/a/65897972
 render <- JS(
