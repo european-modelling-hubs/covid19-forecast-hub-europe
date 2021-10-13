@@ -34,9 +34,9 @@ if (nrow(model_df) > 0) {
     select(location_name, `Best skill` = skill)
 
   ## if not doing the ensemble, show the ensemble
-  if (!grepl("hub-ensemble$", params$model)) {
+  if (params$model != get_hub_config("ensemble")[["name"]])) {
     ensemble <- df %>%
-      filter(grepl("hub-ensemble$", model)) %>%
+      filter(model == get_hub_config("ensemble")[["name"]]) %>%
       select(location_name, `Ensemble skill` = skill)
     top_ranked <- ensemble %>%
       inner_join(top_ranked, by = "location_name")
