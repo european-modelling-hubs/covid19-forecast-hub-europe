@@ -7,7 +7,9 @@ skill_table <- table %>%
 ## select best individual models
 best_models <- skill_table %>%
   ## FIXME: do we need a better way to identify hub models?
-  filter(!is.na(rel_wis), !grepl("hub-(ensemble|baseline)$", model)) %>%
+  filter(!is.na(rel_wis)) %>%
+  filter(model != get_hub_config("ensemble")[["name"]],
+         model != get_hub_config("baseline")[["name"]]) %>%
   group_by(location_name, target_variable, horizon) %>%
   slice(which.min(rel_wis)) %>%
   ungroup() %>%
