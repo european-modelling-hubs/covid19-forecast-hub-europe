@@ -3,18 +3,17 @@ European data status
 
 #### Potential issues in the JHU dataset
 
-As at 2021-10-12 13:11:43
+As at 2021-10-13 13:11:38
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
-| country       | created    | updated    | issue                                               | message                                               | url                                                      |
-| :------------ | :--------- | :--------- | :-------------------------------------------------- | :---------------------------------------------------- | :------------------------------------------------------- |
-| liechtenstein | 2021-10-12 | 2021-10-12 | covid-19 data liechtenstein                         | The Data on <https://ourworldindata.org/coronavirus>… | <https://github.com/CSSEGISandData/COVID-19/issues/4759> |
-| greece        | 2021-10-06 | 2021-10-06 | error in september 4th covid deaths in greece.      | The data lists 106 new deaths on the 4th of Septem…   | <https://github.com/CSSEGISandData/COVID-19/issues/4726> |
-| germany       | 2021-09-06 | 2021-09-06 | decrease of cumulative cases for germany 2021-09-05 | Hi, there is a decrease of **-1050** cases from 2…    | <https://github.com/CSSEGISandData/COVID-19/issues/4612> |
-| france        | 2021-09-03 | 2021-09-03 | france deaths revised following government change   | Hello all, Further to \#4588, the French Governmen…   | <https://github.com/CSSEGISandData/COVID-19/issues/4605> |
-| switzerland   | 2021-08-25 | 2021-08-25 | switzerland deaths revised until august 15, 2021    | Hello all, Due to small historical errors we had …    | <https://github.com/CSSEGISandData/COVID-19/issues/4560> |
+| country     | created    | updated    | issue                                               | message                                             | url                                                      |
+| :---------- | :--------- | :--------- | :-------------------------------------------------- | :-------------------------------------------------- | :------------------------------------------------------- |
+| greece      | 2021-10-06 | 2021-10-06 | error in september 4th covid deaths in greece.      | The data lists 106 new deaths on the 4th of Septem… | <https://github.com/CSSEGISandData/COVID-19/issues/4726> |
+| germany     | 2021-09-06 | 2021-09-06 | decrease of cumulative cases for germany 2021-09-05 | Hi, there is a decrease of **-1050** cases from 2…  | <https://github.com/CSSEGISandData/COVID-19/issues/4612> |
+| france      | 2021-09-03 | 2021-09-03 | france deaths revised following government change   | Hello all, Further to \#4588, the French Governmen… | <https://github.com/CSSEGISandData/COVID-19/issues/4605> |
+| switzerland | 2021-08-25 | 2021-08-25 | switzerland deaths revised until august 15, 2021    | Hello all, Due to small historical errors we had …  | <https://github.com/CSSEGISandData/COVID-19/issues/4560> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
