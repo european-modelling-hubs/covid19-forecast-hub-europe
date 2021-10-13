@@ -17,15 +17,15 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, cache = TR
 gh_repo <- "epiforecasts/covid19-forecast-hub-europe"
 ```
 
-The European COVID-19 Forecast Hub was launched in early 2021 and after six months of running it, time has come for us to gather some feedback about what worked and what did not. For reasons detailed later, it is difficult to make major changes in the hub while it is currently running but we want to make sure our experience allows the next forecast hub to be better. The COVID-19 European Forecast Hub is by no means the first forecast hub and it already benefited greatly from the US COVID-19 Forecast Hub, the Germany/Poland COVID-19 Forecast Hub, as well as the US influenza hub. We however believe that our fresh eyes on the already existing alternatives put us in a perfect place to comment on challenges encountered when a new team tries to build a forecast hub and why tools that worked well for a specific team might create issues for others. Additionally, compared to influenza hub, the novelty, the urgency and the impact of the COVID-19 generated an amount of contributions unseen until then, thus generating new challenges.
+The European COVID-19 Forecast Hub was launched in early 2021 and after six months, time has come for us to gather some feedback about what worked and what did not. For reasons detailed later, it is difficult to make major changes in the hub while it is currently running but we want to make sure our experience allows the next forecast hub to be better. The COVID-19 European Forecast Hub is by no means the first forecast hub and it already benefited greatly from the US COVID-19 Forecast Hub, the Germany/Poland COVID-19 Forecast Hub, as well as the US influenza hub. We however believe that our fresh eyes on the already existing alternatives put us in a perfect place to comment on challenges encountered when a new team tries to build a forecast hub and why tools that worked well for a specific team might create issues for others. Additionally, compared to influenza hub, the novelty, the urgency and the impact of the COVID-19 generated an amount of contributions unseen until then, thus generating new challenges.
 
 This report focuses on three areas that caused trouble during these 6 months the hub has been running:
 
-- the problems faced by forecasters
-- the problems faced by tools
-- the problems faced by maintainers
+- the problems for the forecasters
+- the problems for the tools
+- the problems for the maintainers
 
-# The problems faced by forecasters: improving user-friendliness
+# The problems for the forecasters: improving user-friendliness
 
 ```{r}
 library(gh)
@@ -67,7 +67,7 @@ nb_new <- first_prs %>%
 
 The European COVID-19 Forecast Hub uses GitHub as its platform to submit forecasts. Each week, participating teams submit a pull request with their forecasts for the coming weeks. As developers, it is easy to underestimate how complex this process can be for new users. Indeed, `r glue::glue("{percent_new}% ({nb_new}/{nb_total})", percent_new = round(nb_new/length(contributors)*100), nb_total = length(contributors))` of contributors to the hub were new GitHub users that made their first ever pull request in our repository.
 
-Although GitHub offers a more intuitive to git, we noticed some patterns that were common sources of issues for new contributors: starting from branches out-of-sync with upstream, uploading extra files (which is often a symptom of using `git commit -a` or `git add *`). Most of the time, the preferred option to solve these issue was to close the pull request and open another one.
+Although GitHub offers a more intuitive interface to git, we noticed some patterns that were common sources of issues for new contributors: starting from branches out-of-sync with upstream or uploading extra files (which is often a symptom of using `git commit -a` or `git add *`). Most of the time, their preferred option to solve these issue was to close the pull request and open another one.
 
 To limit friction and based on the experience of the US hub, we decided to always use a merge commit instead of rebasing on top of the current `HEAD`. This solves the case where users add their changes each week on the same branch instead of creating a new one. However, this has some consequences on the clarity of the git history, as detailed later.
 
@@ -81,7 +81,7 @@ Since forecasters will most of the time only add new files each week, and rarely
 repo_stats <- gh::gh("/repos/{gh_repo}", gh_repo = gh_repo)
 ```
 
-Beyond the issue of user-friendliness mentioned previously, git is primarily designed to work with code and plain text, not with data. Storing forecast data in the GitHub repository lead to a huge inflation of the repository size. At the time of this writing, the repository size lies at `r glue::glue("{repo_stats$size %/% 1024}MB")`. If growth is constant, this suggests this repository will exceed GitHub recommended limit of 1GB [^github-limit] within one year of activity.
+Beyond the issue of user-friendliness mentioned previously, git is primarily designed to work with code and plain text, not with data. Storing forecast data in the GitHub repository lead to a huge inflation of the repository size. At the time of this writing, the repository size lies at `r glue::glue("{repo_stats$size %/% 1024}MB")` while GitHub recommended limit is 1GB [^github-limit].
 
 [^github-limit]: "We recommend repositories remain small, ideally less than 1 GB, and less than 5 GB is strongly recommended." Source: https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github.
 
@@ -112,16 +112,22 @@ This is not the case in the current iteration where there is a complete overlap 
 
 ## Modular approach
 
-Perhaps one of the most important change recommended in this report is to adopt a modular approach rather than an integrated approach. The current implementations of forecast hubs, including the European COVID-19 Forecast Hub have strongly integrated approaches, where all the various pieces are interconnected. Integrated approaches are often easier to develop at first since it is not necessary to handle communication between the various pieces present in a modular approach. However, a modular approach facilitates modifications later down the line. Similarly, an integrated approach forces an all-or-nothing adoption of a technical solution. It is not possible to take some pieces and leave out others. On the opposite, a modular approach allows exchange of pieces between teams and collaboration despite having made different choices in some places.
+Perhaps one of the most important change recommended in this report is to adopt a modular approach rather than an integrated approach. The current implementations of forecast hubs, including the European COVID-19 Forecast Hub, have strongly integrated approaches, where all the various pieces are interconnected. Integrated approaches are often easier to develop at first since it is not necessary to handle communication between the various pieces present in a modular approach. However, a modular approach facilitates modifications later down the line. Similarly, an integrated approach forces an all-or-nothing adoption of a technical solution. It is not possible to take some pieces and leave out others. On the opposite, a modular approach allows exchange of pieces between teams and collaboration despite having made different choices in some places.
 Additionally, a modular approach, allows testing of the individual pieces, which is crucial for a project that is directly in production [^ci-validations].
 
 [^ci-validations]: https://github.com/epiforecasts/covid19-forecast-hub-europe-validations/issues/8
 
 ## Hardcoded values
 
-Each column contains one piece of information
+On a similar note, the data and metadata files should be modular by including a single piece of information in each column [^split-cols] or each field [^split-fields]. This facilitates manipulation and reformatting in downstream scripts or in the future.
 
-Each metadata field should contain one piece of information (https://github.com/epiforecasts/covid19-forecast-hub-europe/pull/1016)
+For the forecast data, we currently store three bits of information in one column (`inc case 4wk ahead`): the target variable (cases, deaths, etc.), its type (cumulated or incident), and the horizon. A good argument that these should be separated in several columns is the fact that this is automatically done by `covidHubUtils::load_forecasts()`, which is the first step of all our downstream scripts. Beyond ease of use, this has practical impact because distincts columns would allow us to spell out the target variable (e.g., hospitalisations instead of hosps), which is a necessary step to make our script target-agnostic [^spell].
+
+This problem also became visible for the metadata file when we tried to isolate the email addresses of the participants. Since they were added within the `model_contributors` field, alongside the contributors' names, we had to rely on regular expressions to try and isolate the email addresses, or even resort to manual edition when there was no simple pattern to extract. This was still possible in our case because we have a limited number of participant but this approach does not scale.
+
+[^split-cols]: https://github.com/epiforecasts/covid19-forecast-hub-europe/issues/708
+[^split-fields]: https://github.com/epiforecasts/covid19-forecast-hub-europe/pull/1016
+[^spell]: https://github.com/epiforecasts/covid19-forecast-hub-europe/issues/796
 
 ## Diversity of programming languages
 
@@ -130,6 +136,6 @@ team will have a deep understanding of more a couple of programming languages.
 Therefore, the use of multiple programming languages forces us to have a dedicated
 developer for each part of the hub, with no one having an overall understanding or
 overview of the whole project. It also increases dependency to a single individual,
-which might be otherwise committed in a time of need.
+which might be otherwise committed in a time of need. This is akin to the problem of [bus factor](https://en.wikipedia.org/wiki/Bus_factor), common in software development. All software projects, including the forecast hubs, should try to increase the bus factor by using a limited number of programming languages and frameworks.
 
 
