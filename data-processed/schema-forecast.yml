@@ -53,7 +53,6 @@ properties:
     type: array
     items:
       type: integer
-      minimum: 0
 required:
   - forecast_date
   - target
