@@ -5,12 +5,22 @@
 --->
 # Forecast calibration
 
-The table and plot below show this week's _coverage_ of the ensemble model at the 50% and 95% level, across the 32 countries. This shows the proportion of observations that fall within a given prediction interval. Ideally, a forecast model would achieve 50% coverage of 0.50 (i.e., 50% of observations fall within the 50% prediction interval) and 95% coverage of 0.95 (i.e., 95% of observations fall within the 95% prediction interval). Values of coverage greater than these nominal values indicate that the forecasts are _underconfident_, i.e. prediction intervals tend to be too wide, whereas values of coverage smaller than these nominal values indicate that the ensemble forecasts are _overconfident_, i.e. prediction intervals tend to be too narrow.
+```{r calib_desc, results='asis'}
+cat("The plots below describe the _calibration_ of the model, that is its ability",
+    "to correctly quantify its uncertainty, across all predicted countries")
+if (params$score_weeks != "All") {
+  cat(".")
+} else {
+  cat(" in the past", params$score_weeks, "weeks.")
+}
+```
 
-## Overall coverage
+#### Overall coverage
 
-```{r coverage, echo = FALSE, include = include_calibration, results = 'asis', fig.width = 5, fig.height = 5}
-ranges <- c(50, 90)
+Coverage is the proportion of observations that fall within a given prediction interval. Ideally, a forecast model would achieve 50% coverage of 0.50 (i.e., 50% of observations fall within the 50% prediction interval) and 95% coverage of 0.95 (i.e., 95% of observations fall within the 95% prediction interval), incidcated by the dashed horizontal lines below. Values of coverage greater than these nominal values indicate that the forecasts are _underconfident_, i.e. prediction intervals tend to be too wide, whereas values of coverage smaller than these nominal values indicate that the ensemble forecasts are _overconfident_, i.e. prediction intervals tend to be too narrow.
+
+```{r coverage, echo = FALSE, include = include_calibration, results = 'asis', fig.width = 6, fig.height = 6}
+ranges <- c(50, 95)
 
 scores <- scoringutils::eval_forecasts(
   data,
@@ -18,39 +28,50 @@ scores <- scoringutils::eval_forecasts(
                   "target_variable", "horizon"),
   pit_plots = TRUE
   ) %>%
-  filter(!is.na(range))
+  filter(!is.na(range)) %>%
+  mutate(variable = fct_recode(target_variable, !!!target_variables))
 
-if (nrow(scores) > 0) {
+if (any(scores$model == params$model)) {
+  ## only show targets provided by the model (but all horizons)
+  targets <- scores %>%
+    filter(model == params$model) %>%
+    pull(target_variable) %>%
+    unique()
   coverage <- scores %>%
-    dplyr::filter(range %in% ranges) %>%
-    select(range, target_variable, horizon, coverage) %>%
+    dplyr::filter(range %in% ranges,
+                  target_variable %in% targets) %>%
+    select(model, range, variable, horizon, coverage) %>%
     distinct() %>%
     mutate(horizon = as.integer(horizon),
            range = paste0(range, "% interval"),
-           target_variable = recode_factor(target_variable,
-                                           `inc case` = "Cases",
-                                           `inc death` = "Deaths"),
            coverage = round(coverage, 2))
 
   hlines <- tibble(range = paste0(ranges, "% interval"),
                    nominal = ranges / 100)
 
-  p <- ggplot(coverage, aes(y = coverage)) +
+  p <- ggplot(coverage, aes(y = coverage, colour = model)) +
     geom_line(aes(x = horizon)) +
     geom_point(aes(x = horizon)) +
     ylim(c(0, 1)) +
     geom_hline(data = hlines, aes(yintercept = nominal), linetype = "dashed") +
-    facet_grid(range ~ target_variable) +
-    theme_minimal() +
+    scale_colour_brewer("", palette = "Set1",
+                        breaks =
+                          c(params$model, ensemble_model)
+                        ) +
+    facet_grid(range ~ variable) +
+    theme_light() +
+    theme(legend.position = "top",
+          strip.text = element_text(colour = 'black'),
+         strip.background = element_rect(fill = '#E7E7E7')) +
     ylab("Proportion of data within forecast interval") +
-    xlab("Forecast horizon (weeks )")
+    xlab("Forecast horizon (weeks)")
   print(p)
 } else {
-  cat("No coverage figures shown as now 50%/90% predictive intervals are available.\n")
+  cat("No coverage figures shown as now 50%/95% predictive intervals are available.\n")
 }
 ```
 
-## PIT histograms
+#### PIT histograms
 
 ```{r pit_width, echo = FALSE}
 width <- 0.1
@@ -58,28 +79,37 @@ width <- 0.1
 
 The figures below are _PIT histograms_ for the all past forecasts. These show the proportion of true values within each predictive quantile (width: `r width`). If the forecasts were perfectly calibrated, observations would fall evenly across these equally-spaced quantiles, i.e. the histograms would be flat.
 
-```{r pit, echo = FALSE, results = 'asis', include = include_calibration}
-if (nrow(scores) > 0) {
+```{r pit, echo = FALSE, results = 'asis', include = include_calibration, fig.width = 8 }
+if (any(scores$model == params$model)) {
   ## check if all quantiles are present
   quantiles <- round(seq(width, 1 - width, by = width), 3)
 
   core_quantiles <- scores %>%
+    filter(model == params$model) %>%
     mutate(quantile = round(quantile, 3)) %>%
     summarise(quantile = unique(quantile))
 
   if (length(setdiff(quantiles, core_quantiles$quantile)) == 0) {
     pit <- scores %>%
-      filter(round(quantile, 3) %in% round(quantiles, 3)) %>%
+      filter(target_variable %in% targets,
+             round(quantile, 3) %in% round(quantiles, 3)) %>%
       mutate(horizon = paste0(horizon, " week", if_else(horizon == 1, "", "s"))) %>%
-      arrange(target_variable, horizon, quantile) %>%
-      group_by(target_variable, horizon) %>%
+      arrange(model, variable, horizon, quantile) %>%
+      group_by(model, variable, horizon) %>%
       summarise(quantile = c(quantile, 1),
                 pit_bin = diff(c(0, quantile_coverage, 1)))
 
-    p <- ggplot(pit, aes(x = quantile - width / 2, y = pit_bin)) +
-      geom_col() +
+    p <- ggplot(pit, aes(x = quantile - width / 2, y = pit_bin, fill = model)) +
+      geom_col(position = "dodge") +
       theme_light() +
-      facet_grid(horizon ~ target_variable) +
+      scale_fill_brewer("", palette = "Set1",
+                        breaks =
+                          c(params$model, ensemble_model)
+                        ) +
+      theme(strip.text = element_text(colour = 'black'),
+            strip.background = element_rect(fill = '#E7E7E7'),
+            legend.position = "top") +
+      facet_grid(horizon ~ variable + model) +
       xlab("Quantile") + ylab("Proportion") +
       geom_hline(yintercept = width, linetype = "dashed")
 
