@@ -2,10 +2,10 @@ name: Validations (R)
 
 on:
   workflow_dispatch:
-  # pull_request_target:
-  #   branches: main
-  #   paths:
-  #     - 'data-processed/**'
+  pull_request_target:
+    branches: main
+    paths:
+      - 'data-processed/**'
 
 jobs:
   build:
