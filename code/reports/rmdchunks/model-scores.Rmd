@@ -23,10 +23,10 @@ adjusted_data <- data %>%
 ```{r prepare-scores, echo = FALSE, results = 'asis'}
 model_scores <- read_csv(here::here("evaluation", "scores.csv")) %>%
   filter(model %in% c(params$model, ensemble_model))
-if (params$score_weeks != "All") {
+if (params$data_weeks != "All") {
   model_scores <- model_scores %>%
     filter(target_end_date >
-           params$report_date - weeks(as.integer(params$score_weeks)))
+           params$report_date - weeks(as.integer(params$data_weeks)))
 }
 ```
 

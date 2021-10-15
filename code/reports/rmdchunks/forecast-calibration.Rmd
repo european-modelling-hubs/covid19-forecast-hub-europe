@@ -8,10 +8,10 @@
 ```{r calib_desc, results='asis'}
 cat("The plots below describe the _calibration_ of the model, that is its ability",
     "to correctly quantify its uncertainty, across all predicted countries")
-if (params$score_weeks != "All") {
+if (params$data_weeks != "All") {
   cat(".")
 } else {
-  cat(" in the past", params$score_weeks, "weeks.")
+  cat(" in the past", params$data_weeks, "weeks.")
 }
 ```
 

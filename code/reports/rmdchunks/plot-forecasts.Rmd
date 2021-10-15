@@ -5,7 +5,12 @@ forecasting dates. -->
 
 ```{r}
 forecast_dates <- data %>%
-  filter(!is.na(forecast_date), model == params$model) %>%
+  filter(!is.na(forecast_date))
+if (!is.null(params$model)) {
+  forecast_dates <- forecast_dates %>%
+    filter(model == params$model)
+}
+forecast_dates <- forecast_dates %>%
   select(forecast_date) %>%
   distinct() %>%
   filter(forecast_date <= params$report_date,
@@ -68,6 +73,9 @@ for (forecast_date in as.character(forecast_dates)) {
     cat(paste0("\n\n", paste0(rep("#", target_level), collapse = ""), " ", target, "\n\n"))
 
     filter_both <- list(paste0("target_variable %in% '", target_variables[[target]], "'"))
+    filter_truth <- list(paste0("target_end_date > '", as.Date(forecast_date) - 7 * 10, "'"),
+                         paste0("target_end_date <= '", as.Date(forecast_date) + 7 * 4, "'"))
+     
     filter_forecasts <- list(paste0("forecast_date == '", as.Date(forecast_date), "'"))
     if (!is.null(params$model)) {
       filter_forecasts <- c(filter_forecasts,

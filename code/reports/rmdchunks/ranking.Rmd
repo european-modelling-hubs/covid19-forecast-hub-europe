@@ -3,7 +3,7 @@ an explanation text detailing the meaning of each column/index. --->
 
 ## Forecast scores {.tabset .tabset-fade}
 
-Scores separated by target and forecast horizon. Only models with submissions in each of the last `r restrict_weeks` weeks are shown.
+Scores separated by target and forecast horizon. Only models with submissions in each of the last `r params$plot_weeks` weeks are shown.
 
 ```{r ranking, results='asis'}
 out <- NULL

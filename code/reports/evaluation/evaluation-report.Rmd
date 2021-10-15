@@ -4,6 +4,7 @@ params:
   report_date: "2021-06-21"
   location_name: "Overall"
   plot_weeks: 4
+  data_weeks: 10
 output:
   html_document:
     theme: yeti

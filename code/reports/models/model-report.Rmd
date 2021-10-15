@@ -3,7 +3,7 @@ always_allow_html: true
 params:
   report_date: "2021-06-21"
   plot_weeks: 1
-  score_weeks: "10"
+  data_weeks: "10"
   model: "EuroCOVIDhub-ensemble"
 output:
   html_document:
@@ -64,7 +64,7 @@ so that we can cache the loading and scoring step.. -->
 <!-- Focus on 10 week scores. -->
 ```{r limit-scores, echo = FALSE}
 table <- table %>%
-  filter(weeks_included == params$score_weeks)
+  filter(weeks_included == params$data_weeks)
 ```
 
 <!-- Visualisation of model scores. -->

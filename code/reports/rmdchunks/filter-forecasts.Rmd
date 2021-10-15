@@ -29,10 +29,10 @@ if (!is.null(params$model)) {
   data <- data %>%
     filter(model %in% c(params$model, ensemble_model))
 }
-if (params$score_weeks != "All") {
+if (!is.null(params$data_weeks) && params$data_weeks != "All") {
   data <- data %>%
     filter(target_end_date >
-           params$report_date - weeks(as.integer(params$score_weeks)))
+           params$report_date - weeks(as.integer(params$data_weeks)))
 }
 ```
 

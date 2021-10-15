@@ -21,7 +21,7 @@ for (country in c("Overall", hub_locations_ecdc$location_name)) {
                     output_format = "html_document",
                     params = list(location_name = country,
                                   report_date = report_date,
-                                  restrict_weeks = 4),
+                                  plot_weeks = 4),
                     output_file =
                       here::here("html",
                                  paste0("evaluation-report-",
