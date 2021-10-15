@@ -37,7 +37,7 @@ score_data <- model_scores %>%
 plot_data <- truth_data %>%
   filter(location %in% unique(panels$location)) %>%
   rbind(score_data) %>%
-  mutate(model = factor(model, levels = c(params$model, ensemble_model)))
+  mutate(model = factor(model, levels = unique(c(params$model, ensemble_model))))
 if (any(forecast_data$model == params$model)) {
   p <- ggplot(plot_data, aes(x = target_end_date, colour = model)) +
     geom_point(mapping = aes(y = value)) +

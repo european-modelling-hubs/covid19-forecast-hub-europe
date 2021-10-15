@@ -42,7 +42,7 @@ if (any(scores$model == params$model)) {
                   target_variable %in% targets) %>%
     select(model, range, variable, horizon, coverage) %>%
     distinct() %>%
-    mutate(model = factor(model, levels = c(params$model, ensemble_model)),
+    mutate(model = factor(model, levels = unique(c(params$model, ensemble_model))),
            horizon = as.integer(horizon),
            range = paste0(range, "% interval"),
            coverage = round(coverage, 2))
@@ -92,7 +92,7 @@ if (any(scores$model == params$model)) {
       filter(target_variable %in% targets,
              round(quantile, 3) %in% round(quantiles, 3)) %>%
       mutate(horizon = paste0(horizon, " week", if_else(horizon == 1, "", "s")),
-             model = factor(model, levels = c(params$model, ensemble_model))) %>%
+             model = factor(model, levels = unique(c(params$model, ensemble_model)))) %>%
       arrange(model, variable, horizon, quantile) %>%
       group_by(model, variable, horizon) %>%
       summarise(quantile = c(quantile, 1),
