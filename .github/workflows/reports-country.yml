@@ -1,10 +1,10 @@
-name: "Create evaluation reports"
+name: "Create country reports"
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 9 * * 0"
 jobs:
-  evaluation_reports:
+  country_reports:
     runs-on: ubuntu-20.04
     if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
     env:
@@ -28,7 +28,7 @@ jobs:
     - name: Create score csv
       run: Rscript 'code/evaluation/score_models.r'
 
-    - name: Create evaluation reports
+    - name: Create country reports
       run: Rscript 'code/reports/compile-country-reports.r'
 
     - name: Push evaluation csv
