@@ -1052,3 +1052,10 @@ Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-
 
 - Negative incidence in the following locations: ['Slovenia'].
 
+Latest check of truth data: 2021-10-15 13:11:15
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Cases.csv' at 2021-10-14:
+
+- Negative incidence in the following locations: ['Czechia'].
+
