@@ -15,9 +15,9 @@ for (variable in names(target_variables)) {
              if_else(this_horizon > 1, "s", ""), " ahead horizon")
     out <- c(out, paste("\n\n####", horizon_string, " {.tabset .tabset-fade}\n\n"))
     weeks_included <- unique(table$weeks_included)
-    ## sort weeks included numerically, ensuring non-numeric ("All") comes first
+    ## sort weeks included numerically, ensuring non-numeric ("All") comes last
     weeks_included <-
-      weeks_included[rev(order(suppressWarnings(as.integer(weeks_included))))]
+      weeks_included[order(suppressWarnings(as.integer(weeks_included)))]
     for (this_weeks in weeks_included) {
       weeks_string <-
         if_else(grepl("^[0-9]", this_weeks),
