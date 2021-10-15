@@ -29,7 +29,7 @@ jobs:
       run: Rscript 'code/evaluation/score_models.r'
 
     - name: Create evaluation reports
-      run: Rscript 'code/reports/compile-evaluation-reports.r'
+      run: Rscript 'code/reports/compile-country-reports.r'
 
     - name: Push evaluation csv
       env:
@@ -51,8 +51,8 @@ jobs:
         destination_repo: 'epiforecasts/covid19-forecast-hub-europe-website'
         destination_folder: 'reports'
         user_email: 'action@github.com'
-        user_name: 'GitHub Action - evaluation reports'
-        commit_message: 'Evaluation reports'
+        user_name: 'GitHub Action - country reports'
+        commit_message: 'Country reports'
 
     - name: Create issue about failure
       if: failure() && github.event_name != 'workflow_dispatch'
