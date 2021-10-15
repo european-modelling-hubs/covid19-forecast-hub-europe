@@ -42,7 +42,8 @@ if (any(scores$model == params$model)) {
                   target_variable %in% targets) %>%
     select(model, range, variable, horizon, coverage) %>%
     distinct() %>%
-    mutate(horizon = as.integer(horizon),
+    mutate(model = factor(model, levels = c(params$model, ensemble_model)),
+           horizon = as.integer(horizon),
            range = paste0(range, "% interval"),
            coverage = round(coverage, 2))
 
@@ -54,10 +55,7 @@ if (any(scores$model == params$model)) {
     geom_point(aes(x = horizon)) +
     ylim(c(0, 1)) +
     geom_hline(data = hlines, aes(yintercept = nominal), linetype = "dashed") +
-    scale_colour_brewer("", palette = "Set1",
-                        breaks =
-                          c(params$model, ensemble_model)
-                        ) +
+    scale_colour_brewer("", palette = "Set1") +
     facet_grid(range ~ variable) +
     theme_light() +
     theme(legend.position = "top",
@@ -93,7 +91,8 @@ if (any(scores$model == params$model)) {
     pit <- scores %>%
       filter(target_variable %in% targets,
              round(quantile, 3) %in% round(quantiles, 3)) %>%
-      mutate(horizon = paste0(horizon, " week", if_else(horizon == 1, "", "s"))) %>%
+      mutate(horizon = paste0(horizon, " week", if_else(horizon == 1, "", "s")),
+             model = factor(model, levels = c(params$model, ensemble_model))) %>%
       arrange(model, variable, horizon, quantile) %>%
       group_by(model, variable, horizon) %>%
       summarise(quantile = c(quantile, 1),
@@ -102,10 +101,7 @@ if (any(scores$model == params$model)) {
     p <- ggplot(pit, aes(x = quantile - width / 2, y = pit_bin, fill = model)) +
       geom_col(position = "dodge") +
       theme_light() +
-      scale_fill_brewer("", palette = "Set1",
-                        breaks =
-                          c(params$model, ensemble_model)
-                        ) +
+      scale_fill_brewer("", palette = "Set1") +
       theme(strip.text = element_text(colour = 'black'),
             strip.background = element_rect(fill = '#E7E7E7'),
             legend.position = "top") +
