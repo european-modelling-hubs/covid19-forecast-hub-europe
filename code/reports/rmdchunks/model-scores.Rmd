@@ -1,33 +1,77 @@
-<!--- Table comparing the performance of each model. The table is followed by
-an explanation text detailing the meaning of each column/index. --->
-
 ## Predictive performance {.tabset .tabset-fade}
 
-```{r ranking, results='asis'}
-cat("Scores separated by target and forecast horizon.")
-if (is.null(params$model)) {
-  cat("Only models with submissions in each of the last ",
-      restrict_weeks, "weeks are shown.")
-}
+In the following plots, the panels on the left show the skill of the model compared to the ensemble and baseline models, and the panels on the right the corresponding forecasts.
 
-scores <- read_csv(here::here("evaluation", "scores.csv"))
-
-out <- NULL
-for (variable in names(target_variables)) {
-  out <- c(out, paste("\n\n###", variable, " {.tabset .tabset-fade}\n\n"))
-  for (this_horizon in horizons) {
-    horizon_string <-
-      paste0(this_horizon, " week",
-             if_else(this_horizon > 1, "s", ""), " ahead horizon")
-    out <- c(out, paste("\n\n####", horizon_string, "\n\n"))
-    out <- c(out, paste("\n\n##### Overall skill \n\n"))
-    out <- c(out, knit_child("model-ranking-table.Rmd", quiet = TRUE))
-    out <- c(out, paste("\n\n##### Skill over time \n\n"))
-    out <- c(out, knit_child("model-wis-time.Rmd", quiet = TRUE))
-  }
-}
-res <- knit(text = out, quiet = TRUE)
-cat(res, sep = '\n\n')
+```{r prepare-data, echo = FALSE}
+## We use the median if given, otherwise the point forecast.
+## Here we first convert the point forecast to the median for any
+## models that don't provide the median.
+point_forecasts <- data %>%
+  filter(type == "point") %>%
+  mutate(type = "quantile", quantile = 0.5) %>%
+  rename(point_prediction = prediction)
+join_cols <- setdiff(colnames(point_forecasts), "point_prediction")
+adjusted_data <- data %>%
+  filter(type == "quantile") %>%
+  full_join(point_forecasts, by = join_cols) %>%
+  mutate(prediction =
+           if_else(is.na(prediction), point_prediction, prediction)) %>%
+  select(-point_prediction) %>%
+  filter(!is.na(true_value)) ## remove forecasts without truth (yet)aa
 ```
 
-## {.unlisted .unnumbered}
+```{r prepare-scores, echo = FALSE, results = 'asis'}
+model_scores <- read_csv(here::here("evaluation", "scores.csv")) %>%
+  filter(model %in% c(params$model, ensemble_model))
+if (params$score_weeks != "All") {
+  model_scores <- model_scores %>%
+    filter(target_end_date >
+           params$report_date - weeks(as.integer(params$score_weeks)))
+}
+```
+
+```{r define-skill, echo = FALSE, results = 'asis'}
+model_wis <- model_scores %>%
+  filter(model == params$model) %>%
+  pull(wis)
+if (all(is.na(model_wis))) {
+  cat("\n\nSkill is shown as absolute error of the point forecast.",
+      "Weighted interval scores are not calculated as the 23 quantile levels",
+      "required are not being provided by the model.\n")
+  model_scores <- model_scores %>%
+    rename(skill = aem)
+  skill <- "Absolute error"
+} else {
+  cat("\n\nSkill is shown as weighted interval score.\n")
+  model_scores <- model_scores %>%
+    rename(skill = wis)
+  skill <- "Weighted Interval Score"
+}
+```
+
+```{r compose-scores, echo = FALSE, results = 'asis'}
+for (variable in names(target_variables)) {
+  cat("\n\n###", variable, "{.tabset .tabset-fade}\n\n")
+  truth_data <- adjusted_data %>%
+    filter(target_variable == target_variables[[variable]]) %>%
+    select(location, target_variable, target_end_date, location_name,
+           value = true_value) %>%
+    distinct() %>%
+    mutate(model = NA_character_,
+           variable = variable)
+  for (horizon in horizons) {
+    horizon_string <-
+      paste0(horizon, " week",
+             if_else(horizon > 1, "s", ""), " ahead horizon")
+    message(variable, ", ", horizon_string)
+    cat("\n\n####", horizon_string, "\n\n")
+    cat("\n\n##### Overall predictive performance\n\n")
+    cat(partial(here::here("code", "reports", "rmdchunks", "model-score-table.Rmd")))
+    cat("\n\n</details>")
+    cat("\n\n##### Performance over time\n\n")
+    cat(partial(here::here("code", "reports", "rmdchunks", "model-score-plots.Rmd")))
+  }
+}
+```
+
+# {.unlisted .unnumbered}

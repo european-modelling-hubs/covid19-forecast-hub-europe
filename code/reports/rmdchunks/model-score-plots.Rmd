@@ -1,0 +1,82 @@
+```{r set-facets}
+# Programmatically determine figure aspect ratio:
+# It is based on the value of distinct values in the facetting variables with
+# some extra requirements. For example, we don't want the ratio to change when
+# we add a new panel without adding a new row.
+panels <- model_scores %>%
+  filter(model == params$model,
+         horizon == {{horizon}},
+         target_variable == target_variables[[variable]]) %>%
+  select(location) %>%
+  distinct()
+nb_facets <- nrow(panels) * 2
+n_cols <- 4
+n_rows <- ceiling(nb_facets / n_cols)
+reduce_size <-
+  max(ifelse(nb_facets >= n_cols, 1, nb_facets / n_cols), 0.5)
+fw <- 12 * reduce_size
+ow <- paste0(reduce_size * 100, "%")
+aspect <- ifelse(nb_facets > 0, n_rows / (reduce_size * n_cols), 1) * 0.7
+fh <- fw * aspect + 1
+```
+
+```{r score-plots, fig.width = fw, out.width = ow, fig.height = fh, results = 'asis'}
+forecast_data <- adjusted_data %>%
+  filter(target_variable == target_variables[variable],
+         horizon == {{horizon}},
+         location %in% unique(panels$location)) %>%
+  pivot_wider(names_from = "quantile", values_from = "prediction") %>%
+  mutate(variable = variable)
+score_data <- model_scores %>%
+  filter(target_variable == target_variables[variable],
+         horizon == {{horizon}},
+         location %in% unique(panels$location)) %>%
+  select(location, target_variable, target_end_date, location_name,
+         value = skill, model) %>%
+  mutate(variable = skill)
+plot_data <- truth_data %>%
+  filter(location %in% unique(panels$location)) %>%
+  rbind(score_data)
+if (any(forecast_data$model == params$model)) {
+  p <- ggplot(plot_data, aes(x = target_end_date, colour = model)) +
+    geom_point(mapping = aes(y = value)) +
+    geom_line(aes(y = value))
+
+  if ("0.5" %in% colnames(forecast_data)) {
+    p <- p + geom_point(data = forecast_data,
+                        aes(y = `0.5`),
+                        position = position_dodge(width = 3))
+  }
+  if ("0.25" %in% colnames(forecast_data) &&
+      "0.75" %in% colnames(forecast_data)) {
+    p <- p + geom_linerange(data = forecast_data,
+                            aes(ymin = `0.25`, ymax = `0.75`),
+                            alpha = 0.5, position = position_dodge(width = 3),
+                            size = 2)
+  }
+  if ("0.05" %in% colnames(forecast_data) &&
+      "0.95" %in% colnames(forecast_data)) {
+    p <- p + geom_linerange(data = forecast_data,
+                            aes(ymin = `0.05`, ymax = `0.95`),
+                            alpha = 0.25, position = position_dodge(width = 3),
+                            size = 2)
+  }
+  p <- p +
+    scale_colour_manual("",
+                        breaks =
+                          c(params$model, ensemble_model),
+                        values = brewer.pal(3, "Set1")[1:2], na.value = "black") +
+    scale_x_date("End of data/forecast week", date_breaks = "1 month",
+                 date_labels = "%b") +
+    scale_y_continuous(variable, labels = comma) +
+    theme_light() +
+    facet_rep_wrap(location_name ~ variable, scales =  "free_y", ncol = n_cols,
+                   repeat.tick.labels = TRUE) +
+    theme(legend.position = "top",
+          strip.text = element_text(colour = 'black'),
+          strip.background = element_rect(fill = '#E7E7E7'))
+  p
+} else {
+  cat("No recent forecasts available targeting the last 10 weeks.")
+}
+```
