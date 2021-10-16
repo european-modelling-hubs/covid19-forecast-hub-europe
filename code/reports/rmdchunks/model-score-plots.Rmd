@@ -1,3 +1,5 @@
+The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance. 
+
 ```{r set-facets}
 # Programmatically determine figure aspect ratio:
 # It is based on the value of distinct values in the facetting variables with
