@@ -27,7 +27,12 @@ table <- table %>%
 
 if (!is.null(params$model)) {
   data <- data %>%
-    filter(model == params$model)
+    filter(model %in% c(params$model, ensemble_model))
+}
+if (!is.null(params$data_weeks) && params$data_weeks != "All") {
+  data <- data %>%
+    filter(target_end_date >
+           params$report_date - weeks(as.integer(params$data_weeks)))
 }
 ```
 

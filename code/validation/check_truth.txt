@@ -1045,3 +1045,28 @@ Latest check of truth data: 2021-10-13 13:11:36
 
 No errors detected.
 
+Latest check of truth data: 2021-10-14 13:11:20
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Cases.csv' at 2021-10-13:
+
+- Negative incidence in the following locations: ['Slovenia'].
+
+Latest check of truth data: 2021-10-15 13:11:15
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Cases.csv' at 2021-10-14:
+
+- Negative incidence in the following locations: ['Czechia'].
+
+Latest check of truth data: 2021-10-16 13:10:31
+
+No errors detected.
+
+Latest check of truth data: 2021-10-17 13:10:02
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2021-10-16:
+
+- Negative incidence in the following locations: ['Switzerland'].
+
