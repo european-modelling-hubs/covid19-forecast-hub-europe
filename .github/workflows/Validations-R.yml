@@ -31,7 +31,7 @@ jobs:
           v <- ForecastHubValidations::validate_pr(
               gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
               pr_number = Sys.getenv("PR_NUMBER"),
-              data-folder = "data-processed"
+              data_folder = "data-processed"
           )
           print(v)
           check_for_errors(v)
