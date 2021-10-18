@@ -4,7 +4,7 @@ library("here")
 library("lubridate")
 library("ggplot2")
 
-scraped <- read_csv(here::here("data", "COVID.csv")) %>%
+scraped <- read_csv(here::here("data", "COVID-2021-10-17.csv")) %>%
   clean_names()
 
 pop <- scraped %>%
