@@ -43,7 +43,7 @@ ow <- paste0(reduce_size * 100, "%")
 ```{r wis_time, results = 'asis', fig.width = fw, fig.asp = fa, out.width = ow}
 if (nrow(model_df) > 0) {
   p <- ggplot(df, aes(x = target_end_date, y = skill, colour = model)) +
-    scale_colour_brewer("", palette = "Set1") +
+    scale_colour_manual("", values = palette) +
     facet_wrap(~ location_name, scales = "free_y", ncol = n_cols) +
     scale_y_continuous("Skill", labels = scales::comma) +
     xlab("Target date") +

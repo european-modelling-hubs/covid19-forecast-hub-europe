@@ -39,7 +39,7 @@ score_data <- model_scores %>%
 plot_data <- truth_data %>%
   filter(location %in% unique(panels$location)) %>%
   rbind(score_data) %>%
-  mutate(model = factor(model, levels = unique(c(params$model, ensemble_model))))
+  mutate(model = factor(model, levels = unique(c(ensemble_model, params$model))))
 if (any(forecast_data$model == params$model)) {
   p <- ggplot(plot_data, aes(x = target_end_date, colour = model)) +
     geom_point(mapping = aes(y = value)) +
@@ -65,10 +65,8 @@ if (any(forecast_data$model == params$model)) {
                             size = 2)
   }
   p <- p +
-    scale_colour_manual("",
-                        breaks =
-                          c(params$model, ensemble_model),
-                        values = brewer.pal(3, "Set1")[1:2], na.value = "black") +
+    scale_colour_manual("", levels(plot_data$model),
+                        values = palette, na.value = "black") +
     scale_x_date("End of data/forecast week", date_breaks = "1 month",
                  date_labels = "%b") +
     scale_y_continuous(variable, labels = comma) +
