@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
 
     steps:
       - uses: actions/checkout@v2
@@ -43,7 +44,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
+          sudo apt-get install libcurl4-openssl-dev libv8-dev
 
       - name: Install validation package
         run: |
