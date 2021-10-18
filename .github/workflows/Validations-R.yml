@@ -37,7 +37,7 @@ jobs:
               data_folder = "data-processed"
           )
           print(v)
-          check_for_errors(v)
+          ForecastHubValidations::check_for_errors(v)
         shell: Rscript {0}
 
   link-preview:
