@@ -54,7 +54,9 @@ jobs:
           v <- ForecastHubValidations::validate_pr(
               gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
               pr_number = Sys.getenv("PR_NUMBER"),
-              data_folder = "data-processed"
+              data_folder = "data-processed",
+              forecast_schema = "https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/data-processed/schema-forecast.yml",
+              metadata_schema = "https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/data-processed/schema-metadata.yml"
           )
           ForecastHubValidations::check_for_errors(v)
         shell: Rscript {0}
