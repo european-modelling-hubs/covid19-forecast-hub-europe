@@ -65,7 +65,7 @@ if (any(forecast_data$model == params$model)) {
                             size = 2)
   }
   p <- p +
-    scale_colour_manual("", levels(plot_data$model),
+    scale_colour_manual("", breaks = levels(plot_data$model),
                         values = palette, na.value = "black") +
     scale_x_date("End of data/forecast week", date_breaks = "1 month",
                  date_labels = "%b") +
