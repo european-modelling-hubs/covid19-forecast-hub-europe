@@ -3,11 +3,11 @@ European data status
 
 #### Potential issues in the JHU dataset
 
-As at 2021-10-19 13:11:43
+As at 2021-10-20 13:12:23
 
 | country     | created    | updated    | issue                                               | message                                             | url                                                      |
 | :---------- | :--------- | :--------- | :-------------------------------------------------- | :-------------------------------------------------- | :------------------------------------------------------- |
-| romania     | 2021-10-17 | 2021-10-17 | covid deaths data romania                           | Hi there\! This site is a great tool for informa…   | <https://github.com/CSSEGISandData/COVID-19/issues/4780> |
+| romania     | 2021-10-17 | 2021-10-19 | covid deaths data romania                           | Hi there\! This site is a great tool for informa…   | <https://github.com/CSSEGISandData/COVID-19/issues/4780> |
 | greece      | 2021-10-06 | 2021-10-06 | error in september 4th covid deaths in greece.      | The data lists 106 new deaths on the 4th of Septem… | <https://github.com/CSSEGISandData/COVID-19/issues/4726> |
 | germany     | 2021-09-06 | 2021-09-06 | decrease of cumulative cases for germany 2021-09-05 | Hi, there is a decrease of **-1050** cases from 2…  | <https://github.com/CSSEGISandData/COVID-19/issues/4612> |
 | france      | 2021-09-03 | 2021-09-03 | france deaths revised following government change   | Hello all, Further to \#4588, the French Governmen… | <https://github.com/CSSEGISandData/COVID-19/issues/4605> |
