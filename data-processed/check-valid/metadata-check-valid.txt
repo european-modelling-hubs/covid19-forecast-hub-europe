@@ -3,5 +3,6 @@ model_name: valid
 model_abbr: check-valid
 model_contributors: hub team
 license: cc-by-4.0
+website_url: https://example.com/
 team_model_designation: other
 methods: check that validation works to pass valid files
