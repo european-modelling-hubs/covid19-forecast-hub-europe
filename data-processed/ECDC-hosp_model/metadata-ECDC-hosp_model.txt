@@ -1,0 +1,8 @@
+team_name: ECDC Modelling Team
+model_name: hospitalisation model
+model_abbr: ECDC-hosp_model
+model_contributors: Rok Grah (rok.grah@ecdc.europa.eu), Rene Niehus (rene.niehus@ecdc.europa.eu)
+website_url: https://covid19-country-overviews.ecdc.europa.eu/
+license: cc-by-nc-4.0
+team_model_designation: primary
+methods: mechanistic estimation of hospitalisations using age disaggregated data of weekly cases, vaccination, and case hospitalisation rates

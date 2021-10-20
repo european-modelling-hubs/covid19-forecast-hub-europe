@@ -1,10 +1,10 @@
-name: "Create evaluation reports"
+name: "Create country reports"
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 9 * * 0"
 jobs:
-  evaluation_reports:
+  country_reports:
     runs-on: ubuntu-20.04
     if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
     env:
@@ -28,8 +28,8 @@ jobs:
     - name: Create score csv
       run: Rscript 'code/evaluation/score_models.r'
 
-    - name: Create evaluation reports
-      run: Rscript 'code/reports/compile-evaluation-reports.r'
+    - name: Create country reports
+      run: Rscript 'code/reports/compile-country-reports.r'
 
     - name: Push evaluation csv
       env:
@@ -43,7 +43,7 @@ jobs:
         echo "pushed to github"
 
     - name: Push HTML reports to web site
-      uses: dmnemec/copy_file_to_another_repo_action@main
+      uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
@@ -51,8 +51,8 @@ jobs:
         destination_repo: 'epiforecasts/covid19-forecast-hub-europe-website'
         destination_folder: 'reports'
         user_email: 'action@github.com'
-        user_name: 'GitHub Action - evaluation reports'
-        commit_message: 'Evaluation reports'
+        user_name: 'GitHub Action - country reports'
+        commit_message: 'Country reports'
 
     - name: Create issue about failure
       if: failure() && github.event_name != 'workflow_dispatch'

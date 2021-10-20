@@ -3,7 +3,8 @@ always_allow_html: true
 params: 
   report_date: "2021-06-21"
   location_name: "Overall"
-  restrict_weeks: 4
+  plot_weeks: 4
+  data_weeks: 10
 output:
   html_document:
     theme: yeti
@@ -41,7 +42,6 @@ include_countries <- include_forecast_plot ||
   include_ranks_over_time
 
 report_date <- ymd(params$report_date)
-restrict_weeks <- params$restrict_weeks
 facetting_var <- rlang::quo(model)
 ```
 
