@@ -1,0 +1,12 @@
+team_name: Epiforecasts
+model_name: ar_timeseries_ensemble
+model_abbr: epiforecasts-artimeseries
+model_contributors: Sophie Meakin <sophie.meakin@lshtm.ac.uk>
+website_url: https://epiforecasts.io/
+license: cc-by-4.0
+team_model_designation: secondary
+methods: A mean ensemble of three autoregressive time series models: ARIMA, ETS and "naive" (future admissions are equal to the last observed week, with expanding uncertainty).
+repo_url: https://github.com/sophiemeakin/ecdc-admissions
+twitter_handles: sophiemeakin
+data_inputs: weekly incident admissions
+methods_long: A mean ensemble of three autoregressive time series models: ARIMA, ETS and "naive" (future admissions are equal to the last observed week, with expanding uncertainty).
