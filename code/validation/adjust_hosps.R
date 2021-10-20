@@ -41,6 +41,6 @@ adjusted_hospdata <- all_hospdata_versions %>%
 
 write_csv(
   adjusted_hospdata,
-  "data-truth/ECDC/truth_ECDC-Incident Hospitalizations.csv"
+  "data-truth/ECDC/corrected_truth_ECDC-Incident Hospitalizations.csv"
 )
 
