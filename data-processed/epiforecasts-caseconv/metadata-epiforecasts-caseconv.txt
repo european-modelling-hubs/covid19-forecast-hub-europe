@@ -1,0 +1,12 @@
+team_name: Epiforecasts
+model_name: case_convolution
+model_abbr: epiforecasts-convolution
+model_contributors: Sophie Meakin <sophie.meakin@lshtm.ac.uk>
+website_url: https://epiforecasts.io/
+license: cc-by-4.0
+team_model_designation: primary
+methods: A convolution of cases and a delay distribution. Fit to weekly data.
+repo_url: https://github.com/sophiemeakin/ecdc-admissions
+twitter_handles: sophiemeakin
+data_inputs: weekly incident admissions and cases, and the EuroCOVIDhub-ensemble case forecast
+methods_long: A convolution of cases and a delay distribution. Fit to weekly data. Where needed, we use the hub-ensemble forecast of future COVID-19 cases.
