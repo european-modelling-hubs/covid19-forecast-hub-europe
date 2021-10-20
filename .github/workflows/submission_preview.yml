@@ -1,0 +1,67 @@
+name: Link to submission preview
+
+on:
+  pull_request:
+    branches: main
+    paths:
+      - 'data-processed/**'
+
+jobs:
+  submission_preview:
+    runs-on: ubuntu-20.04
+    env:
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@master
+
+      - uses: r-lib/actions/setup-r@v1
+
+      - name: Query dependencies
+        run: |
+          install.packages('remotes')
+          saveRDS(
+            remotes::package_deps(
+              "EuroForecastHub",
+              repos = c(epiforecasts = "https://epiforecasts.r-universe.dev",
+                        CRAN = "https://cloud.r-project.org")
+            ),
+            ".github/depends.Rds",
+            version = 2
+          )
+          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+        shell: Rscript {0}
+
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install libcurl4-openssl-dev
+
+    - name: Install R dependencies
+      run: |
+        install.packages(c("remotes", "gh"))
+        remotes::install_github("epiforecasts/EuroForecastHub")
+      shell: Rscript {0}
+
+    - name: Post comment linking to preview shiny app
+      env:
+        PR_NUMBER: ${{ github.event.number }}
+      run: |
+        try({
+          links <- EuroForecastHub::link_preview(
+            gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
+            pr_number = Sys.getenv("PR_NUMBER"),
+            data_folder = "data-processed"
+          )
+          if (!is.null(links)) {
+            gh::gh(
+              "/repos/{gh_repo}/issues/{pr_number}/comments",
+              .method = "POST",
+              gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
+              pr_number = Sys.getenv("PR_NUMBER"),
+              accept = "application/vnd.github.v3+json",
+              body = paste(c("Preview of submitted forecast:", links), collapse = "\n\n")
+            )
+          }
+        }, silent = TRUE)
+      shell: Rscript {0}
