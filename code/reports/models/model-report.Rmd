@@ -1,8 +1,9 @@
 ---
 always_allow_html: true
-params: 
+params:
   report_date: "2021-06-21"
-  restrict_weeks: 4
+  plot_weeks: 1
+  data_weeks: "10"
   model: "EuroCOVIDhub-ensemble"
 output:
   html_document:
@@ -37,6 +38,9 @@ restrict_weeks <- params$restrict_weeks
 report_date <- params$report_date
 model <- params$model
 facetting_var <- rlang::quo(location_name)
+
+## first model (ensemble) always in blue, others in red
+palette <- brewer.pal(3, "Set1")[2:1]
 ```
 
 <!--- Fetch various values from the config file --->
@@ -56,17 +60,17 @@ so that we can cache the loading and scoring step.. -->
 ```{r filter-forecasts, child = "../rmdchunks/filter-forecasts.Rmd"}
 ```
 
-<!-- Visualisation of forecasts (cases or deaths across time) for multiple
-forecasting dates. -->
-```{r forecast-vis, child = if (include_forecast_plot) "../rmdchunks/plot-forecasts.Rmd"}
+<!--- Visualise the latest forecasts. -->
+```{r plot-forecasts, child = "../rmdchunks/plot-forecasts.Rmd"}
+```
+
+<!-- Focus on 10 week scores. -->
+```{r limit-scores, echo = FALSE}
+table <- table %>%
+  filter(weeks_included == params$data_weeks)
 ```
 
 <!-- Visualisation of model scores. -->
-```{r limit-scores, echo = FALSE}
-table <- table %>%
-  filter(weeks_included == "All")
-```
-
 ```{r model-scores, child = "../rmdchunks/model-scores.Rmd"}
 ```
 

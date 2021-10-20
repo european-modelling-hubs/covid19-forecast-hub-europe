@@ -2,21 +2,49 @@ name: Validations (R)
 
 on:
   workflow_dispatch:
-  # pull_request_target:
-  #   branches: main
-  #   paths:
-  #     - 'data-processed/**'
+  pull_request:
+    branches: main
+    paths:
+      - 'data-processed/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
 
     steps:
       - uses: actions/checkout@v2
 
       - uses: r-lib/actions/setup-r@v1
+
+      - name: Query dependencies
+        run: |
+          install.packages('remotes')
+          saveRDS(
+            remotes::package_deps(
+              "ForecastHubValidations",
+              repos = c(epiforecasts = "https://epiforecasts.r-universe.dev",
+                        CRAN = "https://cloud.r-project.org")
+            ),
+            ".github/depends.Rds",
+            version = 2
+          )
+          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+        shell: Rscript {0}
+
+      - name: Cache R packages
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ubuntu-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ubuntu-${{ hashFiles('.github/R-version') }}-1-
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install libcurl4-openssl-dev libv8-dev
 
       - name: Install validation package
         run: |
@@ -31,10 +59,9 @@ jobs:
           v <- ForecastHubValidations::validate_pr(
               gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
               pr_number = Sys.getenv("PR_NUMBER"),
-              data-folder = "data-processed"
+              data_folder = "data-processed"
           )
-          print(v)
-          check_for_errors(v)
+          ForecastHubValidations::check_for_errors(v)
         shell: Rscript {0}
 
   link-preview:
@@ -47,7 +74,9 @@ jobs:
     - uses: r-lib/actions/setup-r@v1
 
     - name: Install system dependencies
-      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
+      run: |
+        sudo apt-get update
+        sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
 
     - name: Install R dependencies
       run: |
