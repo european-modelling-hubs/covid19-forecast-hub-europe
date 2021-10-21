@@ -8,7 +8,7 @@ params:
 output:
   html_document:
     theme: yeti
-    self_contained: true
+    self_contained: false
     css: https://covid19forecasthub.eu/css/styles.css
 title: "`r paste0('European COVID-19 Forecast Hub Evaluation Report for ', params$model)`"
 date: "`r params$report_date`"
