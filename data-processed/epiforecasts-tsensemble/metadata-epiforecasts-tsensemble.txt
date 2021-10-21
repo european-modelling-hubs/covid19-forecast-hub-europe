@@ -6,7 +6,7 @@ website_url: https://epiforecasts.io/
 license: cc-by-4.0
 team_model_designation: secondary
 methods: A mean ensemble of three autoregressive time series models (ARIMA, ETS and "naive" - future admissions are equal to the last observed week, with expanding uncertainty).
-repo_url: https://github.com/sophiemeakin/ecdc-admissions
+repo_url: https://github.com/sophiemeakin/ecdc-covid19-admissions
 twitter_handles: sophiemeakin
 data_inputs: weekly incident admissions
 methods_long: A mean ensemble of three autoregressive time series models (ARIMA, ETS and "naive" - future admissions are equal to the last observed week, with expanding uncertainty).
