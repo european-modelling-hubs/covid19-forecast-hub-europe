@@ -10,7 +10,7 @@ library(lubridate)
 ```{r load-data, cache = TRUE, cache.extra = params$report_date, cache.vars="data"}
 raw_forecasts <- load_forecasts(
   source = "local_hub_repo",
-  hub_repo_path = here(),
+  hub_repo_path = here(params$subdir),
   hub = "ECDC"
 ) %>%
   # set forecast date to corresponding submission date

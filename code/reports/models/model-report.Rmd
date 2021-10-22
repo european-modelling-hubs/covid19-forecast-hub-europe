@@ -2,6 +2,7 @@
 always_allow_html: true
 params:
   report_date: "2021-06-21"
+  subdir: ""
   plot_weeks: 1
   data_weeks: "10"
   model: "EuroCOVIDhub-ensemble"
