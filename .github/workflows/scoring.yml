@@ -1,0 +1,51 @@
+name: "Score forecasts"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 9 * * 0"
+jobs:
+  scores:
+    runs-on: ubuntu-20.04
+    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
+    env:
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: r-lib/actions/setup-r@v1
+
+    - name: Install system dependencies
+      run: sudo apt-get install -y libssl-dev libcurl4-openssl-dev pandoc
+
+    - name: Install R dependencies
+      run: |
+        install.packages(c("remotes", "here", "lubridate", "dplyr", "readr", "docopt"))
+        remotes::install_github("reichlab/covidHubUtils")
+        remotes::install_github("epiforecasts/scoringutils")
+        remotes::install_github("epiforecasts/EuroForecastHub")
+      shell: Rscript {0}
+
+    - name: Create score csv
+      run: Rscript 'code/evaluation/score_models.r'
+
+    - name: Create summary csv
+      run: Rscript 'code/evaluation/aggregate_scores.r'
+
+    - name: Push evaluation csv
+      env:
+        AUTH: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config user.email "action@github.com"
+        git config user.name "GitHub Action - evaluation csv"
+        git add evaluation/*
+        git diff-index --quiet HEAD || git commit -m "Upload evaluation csv"
+        git push
+        echo "pushed to github"
+
+    - name: Create issue about failure
+      if: failure() && github.event_name != 'workflow_dispatch'
+      uses: JasonEtco/create-an-issue@v2.5.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        filename: .github/action-issue-template.md

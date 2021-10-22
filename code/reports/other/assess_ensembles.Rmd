@@ -1,0 +1,153 @@
+---
+output:
+  pdf_document:
+    extra_dependencies: ["booktabs", "colortbl"]
+title: Ensembles
+---
+
+```{r setup, include = FALSE}
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(here)
+library(kableExtra)
+library(forcats)
+library(tidyr)
+
+table <- read_csv(here::here("ensembles", "evaluation", "weekly-summary",
+			     "evaluation-2021-10-18.csv")) %>%
+  filter(!(model == c("EuroCOVIDhub-baseline"))) %>%
+  filter(is.finite(rel_wis)) %>%
+  filter(weeks_included == "All") %>%
+  mutate(variable = sub("inc ", "", target_variable),
+         variable = stringi::stri_trans_totitle(variable),
+         variable = paste0(variable, "s"))
+
+main_ensembles <- table %>%
+  filter(model %in% c("EuroCOVIDhub-mean",
+                      "EuroCOVIDhub-median",
+                      "EuroCOVIDhub-All_relative_skill_weighted_mean",
+                      "EuroCOVIDhub-All_relative_skill_weighted_median")) %>%
+  mutate(model = sub("EuroCOVIDhub-All_relative_skill_weighted_", "Weighted ", model),
+         model = sub("EuroCOVIDhub-", "Unweighted ", model))
+```
+
+# Main ensembles
+
+Main ensembles considered are: unweighted mean/median; mean/median weighted by inverse scaled relative WIS.
+
+```{r wis_plot, fig.width = 10, height = 3, echo = FALSE, fig.cap = "Main ensembles, using all component models and considering all of the history. Each point is one country."}
+plot_table <- main_ensembles %>%
+	filter(location != "Overall", horizon == 2,
+	       target_variable != "inc hosp") %>%
+	mutate(model = factor(model),
+	       model = forcats::fct_rev(model))
+p <- ggplot(plot_table, aes(x = model, y = rel_wis)) +
+  geom_boxplot(aes(colour = model)) +
+  geom_point(aes(colour = model), alpha = 0.5) +
+  scale_colour_brewer(palette = "Set1") +
+  geom_hline(yintercept = 1, linetype = "dashed") +
+  xlab("Ensemble") +
+  ylab("Relative WIS") +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  facet_wrap(~ variable, scales = "free") +
+  coord_flip()
+suppressWarnings(print(p))
+```
+
+```{r wis_table, echo = FALSE}
+main_ensembles %>%
+  filter(location == "Overall") %>%
+  mutate(horizon = paste(horizon, if_else(horizon == 1, "week", "weeks"))) %>%
+  select(model, Target = variable, Horizon = horizon, rel_wis) %>%
+  pivot_wider(names_from = "model", values_from = "rel_wis") %>%
+  arrange(Target) %>%
+  select(-Target) %>%
+  kbl(booktabs = TRUE, caption = "Predictive performance of main ensembles, as measured by the scaled relative WIS.") %>%
+  kable_styling(latex_options = "striped") %>%
+  group_rows("Cases", 1, 4) %>%
+  group_rows("Deaths", 5, 8)
+```
+
+# Variations on main ensembles
+
+We further considered: a _cutoff_ (i.e., creating only ensembles from models that had relative scaled WIS < 1 across all forecast horizons for a given target/country); and _limited history_ (i.e., only considering the last 5/10 weeks of scores for the weighted ensemble, as opposed to the whole history). Each point in the countries below represent one country/method/target triplet at the 2-week horizon, with only one aspect of the ensemble varying between the top and bottom rows, connected by lines.
+
+```{r plot_aspects, echo = FALSE, fig.height = 3, fig.width = 10, fig.cap = "Variations on the main ensembles; each point is a country / method pair. Same countries/methods are connected by a line."}
+split <- table %>%
+  mutate(cutoff =
+	   if_else(grepl("cutoff", model), "Cutoff rel. WIS < 1", "No cutoff"),
+         average =
+	   if_else(grepl("mean", model), "Mean", "Median"),
+         weighted =
+	   if_else(grepl("weighted", model), "Weighted", "Unweighted"),
+         history =
+	   if_else(grepl("[0-9]+", model),
+		   paste(suppressWarnings(parse_number(gsub("-", "", model))),
+			 "weeks history"),
+		   "All history"))
+reference <- c(cutoff = "No cutoff",
+               average = "Mean",
+               weighted = "Unweighted",
+               history = "All history")
+plot_base <- split %>%
+	filter(location != "Overall", horizon == 2,
+	       target_variable != "inc hosp") %>%
+	mutate(model = factor(model),
+	       model = forcats::fct_rev(model))
+tests <- c("cutoff", "average", "weighted", "history")
+differences <- list()
+for (test in tests) {
+	plot_table <- plot_base %>%
+		filter(location != "Overall") %>%
+		select_at(c("variable", "horizon", "location_name",
+		            setdiff(tests, test), test, "rel_wis")) %>%
+		unite("matches", 2:(ncol(.)-2)) %>%
+		pivot_wider(names_from = all_of(test), values_from = "rel_wis") %>%
+		pivot_longer(3:ncol(.)) %>%
+		group_by(variable, matches) %>%
+		mutate(all_there = all(!is.na(value))) %>%
+		ungroup() %>%
+		filter(all_there) %>%
+		select(-all_there)
+ 	p <- ggplot(plot_table, aes(x = name, y = value)) +
+		geom_line(aes(group = matches), alpha = 0.25) +
+		geom_point(aes(colour = name)) +
+		scale_colour_brewer(palette = "Set1") +
+		geom_hline(yintercept = 1, linetype = "dashed") +
+		xlab("") +
+		ylab("Relative WIS") +
+		theme_minimal() +
+		theme(legend.position = "none") +
+		facet_wrap(~ variable, scales = "free") +
+		coord_flip()
+	print(p)
+	ptw <- plot_table %>%
+		pivot_wider()
+    alternative_columns <- setdiff(colnames(ptw), c("variable", "matches", reference[[test]]))
+    for (column in alternative_columns) {
+      raw_differences <- ptw[[column]] - ptw[[reference[[test]]]]
+      raw_differences <- raw_differences[is.finite(raw_differences)]
+      differences[[column]] <- tibble(mean = round(mean(raw_differences), 2),
+                                      median = round(median(raw_differences), 2),
+                                      low_48 = round(quantile(raw_differences, 0.26), 2),
+                                      high_48 = round(quantile(raw_differences, 0.74), 2),
+                                      low_96 = round(quantile(raw_differences, 0.02), 2),
+                                      high_96 = round(quantile(raw_differences, 0.98), 2))
+    }
+}
+```
+
+```{r plot_effects, echo = FALSE, fig.cap = "Aggregate differences between ensemble variants; shown are the central 48% and 96% intervals (thick/thin lines) and means of the distribution of difference in rel. WIS across all methods/countries."}
+dtb <- bind_rows(differences, .id = "change")
+ggplot(dtb, aes(x = change)) +
+  geom_point(aes(y = mean), pch = 2, size = 4) +
+  geom_linerange(aes(ymin = low_48, ymax = high_48), lwd = 2) +
+  geom_linerange(aes(ymin = low_96, ymax = high_96), lwd = 1) +
+  xlab("") + ylab("Change in relative WIS") +
+  theme_minimal() +
+  coord_flip() +
+  geom_hline(yintercept = 0, linetype = "dashed")
+```
+
