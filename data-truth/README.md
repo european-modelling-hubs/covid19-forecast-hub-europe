@@ -3,10 +3,7 @@ European data status
 
 #### Potential issues in the JHU dataset
 
-As at 2021-10-24 13:10:36
-
-    ## Warning in stri_replace_all_regex(string, pattern,
-    ## fix_replacement(replacement), : argument is not an atomic vector; coercing
+As at 2021-10-25 13:11:42
 
 | country | created    | updated    | issue                                                | message                                             | url                                                      |
 | :------ | :--------- | :--------- | :--------------------------------------------------- | :-------------------------------------------------- | :------------------------------------------------------- |
