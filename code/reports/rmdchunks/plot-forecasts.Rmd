@@ -1,18 +1,36 @@
 <!-- Visualisation of forecasts (cases or deaths across time) for multiple
 forecasting dates. -->
 
-# Forecast visualisation {.tabset .tabset_fade} 
-
-Forecasts of cases/deaths per week per 100,000. The date of the tab marks the date on which a forecast was made (only the latest forecasts and the previous `r restrict_weeks` weeks shown).
+# Latest forecasts {.tabset .tabset_fade}
 
 ```{r}
 forecast_dates <- data %>%
-  filter(!is.na(forecast_date)) %>%
+  filter(!is.na(forecast_date))
+if (!is.null(params$model)) {
+  forecast_dates <- forecast_dates %>%
+    filter(model == params$model)
+}
+forecast_dates <- forecast_dates %>%
   select(forecast_date) %>%
   distinct() %>%
-  filter(forecast_date > max(forecast_date) - restrict_weeks * 7) %>%
+  filter(forecast_date <= params$report_date,
+         forecast_date > params$report_date - params$plot_weeks * 7) %>%
   arrange(desc(forecast_date)) %>%
   pull(forecast_date)
+```
+
+```{r forecast-plot-test, results='asis'}
+if (length(forecast_dates) > 0) {
+  cat("Forecasts of cases/deaths per week per 100,000.")
+  if (length(forecast_dates) > 1) {
+    cat(" The date of the tab marks the date on which a forecast was made",
+        "(only the latest forecasts and the previous", params$plot_weeks,
+        "weeks shown).")
+  }
+} else {
+  cat("No recent forecasts to show.")
+}
+cat(" Click the `Forecast` tab above to view all past forecasts.\n")
 ```
 
 ```{r}
@@ -20,54 +38,81 @@ forecast_dates <- data %>%
 # It is based on the value of distinct values in the facetting variables with
 # some extra requirements. For example, we don't want the ratio to change when
 # we add a new panel without adding a new row.
-nb_facets <- dplyr::n_distinct(rlang::eval_tidy(facetting_var, data = data))
-n_cols <- 3
-fa <- ((nb_facets-1) %/% n_cols + 1) / 7
+panels <- data %>%
+  filter(forecast_date %in% forecast_dates)
+if (!is.null(params$model)) {
+  panels <- panels %>%
+    filter(model == params$model)
+}
+panels <- panels %>%
+  select(location, model) %>%
+  distinct()
+nb_facets <- nrow(panels)
+n_cols <- 4
+n_rows <- (nb_facets - 1) %/% n_cols + 1
+reduce_size <- max(ifelse(nb_facets >= n_cols, 1, nb_facets / n_cols), 0.5)
+fw <- 8.5 * reduce_size
+ow <- paste0(reduce_size * 100, "%")
+aspect <- ifelse(nb_facets > 0, n_rows / (reduce_size * n_cols) * 0.7, 1)
+fh <- fw * aspect + 1
 ```
 
-```{r prediction-plots, echo = FALSE, results='asis', fig.width = 8.5, fig.asp = fa}
-for (forecast_date in as.character(forecast_dates)) {
-  cat(paste0("\n\n## ", forecast_date, "{.tabset .tabset-fade} \n\n"))
-  
-    for (target in names(target_variables)) {
-      cat("\n\n###", target, "\n\n")
-      
-      filter_both <- list(paste0("target_variable %in% '", target_variables[[target]], "'"))
-      filter_truth <- list(paste0("target_end_date > '", as.Date(forecast_date) - 7 * 10, "'"), 
-                           paste0("target_end_date <= '", as.Date(forecast_date) + 7 * 4, "'"))
-      filter_forecasts <- list(paste0("forecast_date == '", as.Date(forecast_date), "'"))
-      plot_data <- data %>%
-        mutate(across(c("true_value", "prediction"), ~ .x / population * 1e+5))
-      
-      plot <- scoringutils::plot_predictions(
-        plot_data,
-        x = "target_end_date",
-        filter_both = filter_both,
-        filter_truth = filter_truth,
-        filter_forecasts = filter_forecasts,
-        facet_formula =  rlang::expr(~ !!facetting_var),
-        ncol = n_cols,
-        allow_truth_without_pred = FALSE,
-        zoom_multiple_data =
-          c(ymin = 0, ymax = 3),
-        expand_limits =
-          list(x =
-                 max(plot_data$target_end_date),
-               y = 0),
-        scales = "free_y") + 
-        ggplot2::theme(legend.position = "bottom", 
-                       strip.placement = "outside") + 
-        scale_y_continuous("True and predicted values per week per 100,000",
-                           labels = scales::comma) +
-        xlab("Week")
+```{r prediction-plots, echo = FALSE, results='asis', fig.width = fw, fig.height = fh, out.width = ow}
+scaled_data <- data %>%
+  filter(location %in% unique(panels$location)) %>%
+  mutate(across(c("true_value", "prediction"), ~ .x / population * 1e+5))
 
-      if (is.null(plot)) {
-        cat("No forecasts available, possibly because of recent anomalies in the available data." )
-      } else {
-        print(plot)
-      }
+for (forecast_date in as.character(forecast_dates)) {
+  target_level <- 2
+  if (length(forecast_dates) > 1) {
+    cat(paste0("\n\n## ", forecast_date, "{.tabset .tabset-fade} \n\n"))
+    target_level <- target_level + 1
+  }
+
+  for (target in names(target_variables)) {
+    cat(paste0("\n\n", paste0(rep("#", target_level), collapse = ""), " ", target, "\n\n"))
+
+    filter_both <- list(paste0("target_variable %in% '", target_variables[[target]], "'"))
+    filter_truth <- list(paste0("target_end_date > '", as.Date(forecast_date) - 7 * 10, "'"),
+                         paste0("target_end_date <= '", as.Date(forecast_date) + 7 * 4, "'"))
+     
+    filter_forecasts <- list(paste0("forecast_date == '", as.Date(forecast_date), "'"))
+    if (!is.null(params$model)) {
+      filter_forecasts <- c(filter_forecasts,
+                            list(paste0("model == '", params$model, "'")))
+    }
+
+    plot <- scoringutils::plot_predictions(
+      scaled_data,
+      x = "target_end_date",
+      filter_both = filter_both,
+      filter_forecasts = filter_forecasts,
+      facet_formula =  rlang::expr(~ !!facetting_var),
+      ncol = n_cols,
+      allow_truth_without_pred = TRUE,
+      zoom_multiple_data =
+        c(ymin = 0, ymax = 3),
+      expand_limits =
+        list(x = max(scaled_data$target_end_date),
+             y = 0),
+      scales = "free_y")
+
+    if (is.null(plot)) {
+      cat("No forecasts available, possibly because of recent anomalies in the available data." )
+    } else {
+      plot <- plot +
+        theme(legend.position = "bottom",
+              strip.placement = "outside",
+              strip.text = element_text(colour = 'black'),
+              strip.background = element_rect(fill = '#E7E7E7')) +
+        scale_y_continuous("Values per week per 100,000",
+                           labels = scales::comma) +
+        scale_x_date("End of data/forecast week", date_breaks = "1 month",
+                     date_labels = "%b")
+      print(plot)
     }
   }
+}
 ```
 
 # {.unlisted .unnumbered}
