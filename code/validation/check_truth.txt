@@ -1081,3 +1081,33 @@ Latest check of truth data: 2021-10-19 13:11:42
 
 No errors detected.
 
+Latest check of truth data: 2021-10-20 13:12:22
+
+No errors detected.
+
+Latest check of truth data: 2021-10-21 13:11:57
+
+No errors detected.
+
+Latest check of truth data: 2021-10-22 13:12:07
+
+No errors detected.
+
+Latest check of truth data: 2021-10-23 13:10:30
+
+No errors detected.
+
+Latest check of truth data: 2021-10-24 13:10:35
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2021-10-23:
+
+- Negative incidence in the following locations: ['Switzerland'].
+
+Latest check of truth data: 2021-10-25 13:11:41
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Cases.csv' at 2021-10-24:
+
+- Negative incidence in the following locations: ['Germany'].
+
