@@ -5,7 +5,7 @@ library(purrr)
 
 # FIXME: find a way to get this information directly from the config file
 # without hardcoding target types
-df <- c(
+truth <- c(
   "inc_death" = "JHU/truth_JHU-Incident Deaths.csv",
   "inc_case" = "JHU/truth_JHU-Incident Cases.csv",
   "inc_hosp" = "ECDC/truth_ECDC-Incident Hospitalizations.csv"
@@ -13,7 +13,7 @@ df <- c(
   imap(~ read_csv(here("data-truth", .x)) %>% rename(!!quo_name(.y) := value)) %>%
   reduce(full_join, by = c("date", "location", "location_name"))
 
-df <- df %>%
+truth <- truth %>%
   # add epi weeks for aggregation
   mutate(date = lubridate::ymd(date),
          epi_week = lubridate::epiweek(date),
@@ -29,4 +29,4 @@ df <- df %>%
   select(date, location, location_name, inc_case, inc_death, inc_hosp) %>%
   arrange(date, location)
 
-write_csv(df, "viz/truth_to_plot.csv", quote = "needed")
+write_csv(truth, "viz/truth_to_plot.csv", quote = "needed")
