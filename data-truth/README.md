@@ -3,14 +3,14 @@ European data status
 
 #### Potential issues in the JHU dataset
 
-As at 2021-10-25 13:11:42
+As at 2021-10-26 13:11:43
 
-| country | created    | updated    | issue                                                | message                                             | url                                                      |
-| :------ | :--------- | :--------- | :--------------------------------------------------- | :-------------------------------------------------- | :------------------------------------------------------- |
-| romania | 2021-10-17 | 2021-10-22 | covid deaths data romania                            | Hi there\! This site is a great tool for informa…   | <https://github.com/CSSEGISandData/COVID-19/issues/4780> |
-| greece  | 2021-10-22 | 2021-10-22 | drop in cumulative values - greece: number of deaths | Dear JHU, Could you please check your time series…  | <https://github.com/CSSEGISandData/COVID-19/issues/4808> |
-| germany | 2021-09-06 | 2021-09-06 | decrease of cumulative cases for germany 2021-09-05  | Hi, there is a decrease of **-1050** cases from 2…  | <https://github.com/CSSEGISandData/COVID-19/issues/4612> |
-| france  | 2021-09-03 | 2021-09-03 | france deaths revised following government change    | Hello all, Further to \#4588, the French Governmen… | <https://github.com/CSSEGISandData/COVID-19/issues/4605> |
+| country | created    | updated    | issue                                                         | message                                             | url                                                      |
+| :------ | :--------- | :--------- | :------------------------------------------------------------ | :-------------------------------------------------- | :------------------------------------------------------- |
+| romania | 2021-10-25 | 2021-10-25 | romania “at least one dose” counts people with boosters twice | The displayed number of Romanians that have taken … | <https://github.com/CSSEGISandData/COVID-19/issues/4818> |
+| romania | 2021-10-17 | 2021-10-22 | covid deaths data romania                                     | Hi there\! This site is a great tool for informa…   | <https://github.com/CSSEGISandData/COVID-19/issues/4780> |
+| germany | 2021-09-06 | 2021-09-06 | decrease of cumulative cases for germany 2021-09-05           | Hi, there is a decrease of **-1050** cases from 2…  | <https://github.com/CSSEGISandData/COVID-19/issues/4612> |
+| france  | 2021-09-03 | 2021-09-03 | france deaths revised following government change             | Hello all, Further to \#4588, the French Governmen… | <https://github.com/CSSEGISandData/COVID-19/issues/4605> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
