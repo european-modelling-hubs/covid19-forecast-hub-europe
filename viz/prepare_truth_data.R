@@ -27,6 +27,8 @@ truth <- truth %>%
   filter(lubridate::wday(date, label = TRUE) == "Sat") %>%
   # reformat
   select(date, location, location_name, inc_case, inc_death, inc_hosp) %>%
-  arrange(date, location)
+  arrange(date, location) %>%
+  as.data.frame()
 
 write_csv(truth, "viz/truth_to_plot.csv", quote = "needed")
+save(truth, file = "viz/truth.RData")
