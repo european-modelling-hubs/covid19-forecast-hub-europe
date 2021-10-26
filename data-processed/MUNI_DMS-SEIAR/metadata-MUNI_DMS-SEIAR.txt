@@ -2,7 +2,7 @@ team_name: Department of Mathematics and Statistics Masaryk University Team
 model_name: SEIAR
 model_abbr: MUNI_DMS-SEIAR
 model_contributors: Veronika Hajnova, Lenka Pribylova
-website_url: https://share.uzis.cz/s/cmFHjc4jbqPBAER/6_Metodicka_dokumentace_model_ZSEIAR.pdf
+website_url: https://webstudio.shinyapps.io/MAMES/
 license: cc-by-4.0
 team_model_designation: primary
 methods: SEIAR model with A compartment of absent unobserved infected estimated from hospital data with incorporated mobility data dependence; optimized to the compartment of all exposed (unobserved included)
