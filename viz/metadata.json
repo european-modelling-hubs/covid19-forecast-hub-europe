@@ -89,7 +89,7 @@
     "license": "cc-by-4.0",
     "team_model_designation": "secondary",
     "methods": "A regression model forecasting admissions from 1-week-lagged cases, with ARIMA errors. Fit to weekly data.",
-    "repo_url": "https://github.com/sophiemeakin/ecdc-admissions",
+    "repo_url": "https://github.com/sophiemeakin/ecdc-covid19-admissions",
     "twitter_handles": "sophiemeakin",
     "data_inputs": "weekly incident admissions and cases, and the EuroCOVIDhub-ensemble case forecast",
     "methods_long": "A regression model forecasting admissions from 1-week-lagged cases, with ARIMA errors. Fit to weekly data. Where needed, we use the hub-ensemble forecast of future COVID-19 cases."
@@ -103,7 +103,7 @@
     "license": "cc-by-4.0",
     "team_model_designation": "primary",
     "methods": "A convolution of cases and a delay distribution fit to weekly data.",
-    "repo_url": "https://github.com/sophiemeakin/ecdc-admissions",
+    "repo_url": "https://github.com/sophiemeakin/ecdc-covid19-admissions",
     "twitter_handles": "sophiemeakin",
     "data_inputs": "weekly incident admissions and cases, and the EuroCOVIDhub-ensemble case forecast",
     "methods_long": "A convolution of cases and a delay distribution fit to weekly data. Where needed, we use the hub-ensemble forecast of future COVID-19 cases."
@@ -176,7 +176,7 @@
     "license": "cc-by-4.0",
     "team_model_designation": "secondary",
     "methods": "A mean ensemble of three autoregressive time series models (ARIMA, ETS and \"naive\" - future admissions are equal to the last observed week, with expanding uncertainty).",
-    "repo_url": "https://github.com/sophiemeakin/ecdc-admissions",
+    "repo_url": "https://github.com/sophiemeakin/ecdc-covid19-admissions",
     "twitter_handles": "sophiemeakin",
     "data_inputs": "weekly incident admissions",
     "methods_long": "A mean ensemble of three autoregressive time series models (ARIMA, ETS and \"naive\" - future admissions are equal to the last observed week, with expanding uncertainty)."
