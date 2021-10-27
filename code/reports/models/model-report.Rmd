@@ -43,6 +43,9 @@ facetting_var <- rlang::quo(location_name)
 palette <- RColorBrewer::brewer.pal(3, "Set1")[2:1]
 ```
 
+```{r insert-dropdowns, child = "../rmdchunks/insert-dropdowns.Rmd"}
+```
+
 <!--- Fetch various values from the config file --->
 ```{r get-config-vars, child = "../rmdchunks/get-config-vars.Rmd"}
 ```

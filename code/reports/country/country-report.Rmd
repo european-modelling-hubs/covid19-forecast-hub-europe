@@ -45,6 +45,9 @@ report_date <- ymd(params$report_date)
 facetting_var <- rlang::quo(model)
 ```
 
+```{r insert-dropdowns, child = "../rmdchunks/insert-dropdowns.Rmd"}
+```
+
 <!--- Fetch various values from the config file --->
 ```{r get-config-vars, child = "../rmdchunks/get-config-vars.Rmd"}
 ```
