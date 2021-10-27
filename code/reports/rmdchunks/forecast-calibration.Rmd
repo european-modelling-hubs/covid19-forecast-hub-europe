@@ -29,7 +29,7 @@ scores <- scoringutils::eval_forecasts(
   pit_plots = TRUE
   ) %>%
   filter(!is.na(range)) %>%
-  mutate(variable = fct_recode(target_variable, !!!target_variables))
+  mutate(variable = forcats::fct_recode(target_variable, !!!target_variables))
 
 if (any(scores$model == params$model)) {
   ## only show targets provided by the model (but all horizons)

@@ -40,7 +40,7 @@ model <- params$model
 facetting_var <- rlang::quo(location_name)
 
 ## first model (ensemble) always in blue, others in red
-palette <- brewer.pal(3, "Set1")[2:1]
+palette <- RColorBrewer::brewer.pal(3, "Set1")[2:1]
 ```
 
 <!--- Fetch various values from the config file --->

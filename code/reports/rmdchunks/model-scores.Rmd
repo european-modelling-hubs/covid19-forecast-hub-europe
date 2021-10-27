@@ -26,7 +26,7 @@ model_scores <- read_csv(here::here("evaluation", "scores.csv")) %>%
 if (params$data_weeks != "All") {
   model_scores <- model_scores %>%
     filter(target_end_date >
-           params$report_date - weeks(as.integer(params$data_weeks)))
+           as.Date(params$report_date) - weeks(as.integer(params$data_weeks)))
 }
 ```
 
@@ -66,10 +66,10 @@ for (variable in names(target_variables)) {
     message(variable, ", ", horizon_string)
     cat("\n\n####", horizon_string, "\n\n")
     cat("\n\n##### Overall predictive performance\n\n")
-    cat(partial(here::here("code", "reports", "rmdchunks", "model-score-table.Rmd")))
+    cat(rmdpartials::partial(here::here("code", "reports", "rmdchunks", "model-score-table.Rmd")))
     cat("\n\n</details>")
     cat("\n\n##### Performance over time\n\n")
-    cat(partial(here::here("code", "reports", "rmdchunks", "model-score-plots.Rmd")))
+    cat(rmdpartials::partial(here::here("code", "reports", "rmdchunks", "model-score-plots.Rmd")))
   }
 }
 ```

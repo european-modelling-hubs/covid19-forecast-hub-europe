@@ -69,10 +69,10 @@ if (any(forecast_data$model == params$model)) {
                         values = palette, na.value = "black") +
     scale_x_date("End of data/forecast week", date_breaks = "1 month",
                  date_labels = "%b") +
-    scale_y_continuous(variable, labels = comma) +
+    scale_y_continuous(variable, labels = scales::comma) +
     theme_light() +
-    facet_rep_wrap(location_name ~ variable, scales =  "free_y", ncol = n_cols,
-                   repeat.tick.labels = TRUE) +
+    lemon::facet_rep_wrap(location_name ~ variable, scales =  "free_y", 
+                          ncol = n_cols, repeat.tick.labels = TRUE) +
     theme(legend.position = "top",
           strip.text = element_text(colour = 'black'),
           strip.background = element_rect(fill = '#E7E7E7'))
