@@ -27,8 +27,7 @@ library(here)
 library(EuroForecastHub)
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE,
-                      warning = FALSE,
-                      fig.path = here("html", "report-model-files/"))
+                      warning = FALSE)
 
 include_calibration <- TRUE
 include_forecast_plot <- TRUE
@@ -51,7 +50,7 @@ palette <- RColorBrewer::brewer.pal(3, "Set1")[2:1]
 ```
 
 <!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
-```{r load-data, child = "../rmdchunks/load-data.Rmd"}
+```{r load-data, child = "../rmdchunks/load-data.Rmd", fig.path = here("html", "report-model-files/")}
 ```
 
 <!--- Load forecast scores -->

@@ -27,9 +27,7 @@ library(here)
 library(EuroForecastHub)
 knitr::opts_chunk$set(echo = FALSE, 
                       message = FALSE, 
-                      warning = FALSE,
-                      # stabilize fig.path to avoid invalidating cache for each country
-                      fig.path = here("html", "report-country-files/"))
+                      warning = FALSE)
 
 include_ranking <- TRUE
 include_forecast_plot <- TRUE
@@ -53,7 +51,7 @@ facetting_var <- rlang::quo(model)
 ```
 
 <!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
-```{r load-data, child = "../rmdchunks/load-data.Rmd"}
+```{r load-data, child = "../rmdchunks/load-data.Rmd", fig.path = here("html", "report-country-files/")}
 ```
 
 <!--- Load forecast scores -->
