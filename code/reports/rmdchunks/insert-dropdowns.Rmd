@@ -4,6 +4,8 @@ library(htmltools)
 countries_hub <- read.csv(here::here("data-locations", "locations_eu.csv")) %>%
   pull(location_name)
 
+countries_hub <- c("Overall", countries_hub)
+
 l <- tags$ul(class = "dropdown-menu", `aria-labelledby` = "dropdownMenuButton")
 l$children <- lapply(countries_hub, function(c) {
   tags$li(
