@@ -66,8 +66,7 @@ jobs:
       run: |
         git config user.email "action@github.com"
         git config user.name "GitHub Action - Visualisation Update"
-        git add viz/truth_to_plot.csv viz/metadata.json viz/forecasts_to_plot.json
-        git diff-index --quiet HEAD || git commit -m "Daily Visualisation update"
+        git commit -am "Daily Visualisation update" || echo "No changes to commit"
         git pull --rebase
         git push
         echo "pushed to github"
