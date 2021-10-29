@@ -24,7 +24,7 @@ div(class = "dropdown", style = "display:inline-block",
     `data-toggle` = "dropdown", 
     `aria-haspopup` = "true", 
     `aria-expanded` = "false", 
-    "Country reports ▸"
+    "Country reports ▼"
   ),
   l
 )
@@ -58,7 +58,7 @@ div(class = "dropdown", style = "display:inline-block",
     `data-toggle` = "dropdown", 
     `aria-haspopup` = "true", 
     `aria-expanded` = "false", 
-    "Model reports ▸"
+    "Model reports ▼"
   ),
   l
 )
