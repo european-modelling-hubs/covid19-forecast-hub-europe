@@ -1,3 +1,5 @@
+Choose the type of report you wish do view using the dropdown menu. The Model reports shows the recent forecasts and performance of the ensemble or individual models, whereas the Country reports shows model-by-model performance, either overall or by country. The reports get updated every Tuesday. 
+
 ```{r insert-countries-dropdown, results='asis'}
 library(htmltools)
 
