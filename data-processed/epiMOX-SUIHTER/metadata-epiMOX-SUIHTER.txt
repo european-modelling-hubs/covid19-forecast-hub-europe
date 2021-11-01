@@ -8,3 +8,4 @@ team_model_designation: primary
 methods: Compartmental model SUIHTER
 methods_long: "The results are obtained using the compartmental model SUIHTER which simulates the evolution of COVID-19 epidemic in Italy. SUIHTER comprises the following compartments: Susceptibles(S), Undetected(U), Isolated(I), Hospitalized(H), Threatened(T), Extinct(E), Recovered(R). The model parameters are calibrated  thanks to a  combination of the least  squares  method  with the  Markov Chain Monte Carlo (MCMC) method. The current version of the model accounts for two additional compartments collecting individuals who have received the first and the second dose of vaccine, respectively. Different NPIs and vaccination scenarios can be accounted for in the model forecast."
 citation: https://doi.org/10.1098/rspa.2021.0027
+institution_affil: MOX, Dipartimento di Matematica, Politecnico di Milano
