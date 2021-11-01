@@ -64,22 +64,16 @@ all <- official %>%
   filter(target_end_date >= "2021-05-01")
 
 # select source by country
-sourced <- read_csv(here("code", "auto_download", "hospitalisation-sources.csv")) %>%
-  filter(source != "None") %>% 
+ecdc_sourced <- read_csv(here("code", "auto_download", "hospitalisation-sources.csv")) %>%
+  filter(!is.na(source)) %>% 
   left_join(all, by = c("country", "source", "type")) %>% 
   # truncate some countries
   group_by(country) %>% 
   filter(!(truncate_weeks == 1 & data_end_date == max(data_end_date))) %>%
+  ungroup() %>%
   left_join(pop, by = c("country" = "location_name")) %>% 
   select(location_name = country,
          location,
-         target_end_date,
+         date = target_end_date,
          value)
-
-# Write to csv
-ecdc_truth_filepath <- here("data-truth", "ECDC",
-                            "truth_ECDC-Incident Hospitalizations.csv")
-write_csv(sourced, ecdc_truth_filepath)
-
-
 

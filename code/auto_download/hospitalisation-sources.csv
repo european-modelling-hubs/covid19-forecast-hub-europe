@@ -1,4 +1,4 @@
-﻿country,source,type,truncate_weeks
+country,source,type,truncate_weeks
 Belgium,Public,Scraped,0
 Croatia,Public,Scraped,1
 Cyprus,TESSy,ECDC,0
@@ -6,7 +6,7 @@ Czechia,TESSy,ECDC,0
 Denmark,Public,Scraped,0
 Estonia,Public,Scraped,0
 France,Public,Scraped,0
-Germany,None,,
+Germany,NA,NA,NA
 Greece,TESSy,ECDC,0
 Iceland,TESSy,ECDC,0
 Ireland,Public,Scraped,1
@@ -20,8 +20,8 @@ Netherlands,TESSy,ECDC,0
 Norway,Public,ECDC,0
 Poland,TESSy,Scraped,0
 Portugal,TESSy,ECDC,0
-Romania,None,,
+Romania,NA,NA,NA
 Slovakia,TESSy,ECDC,0
 Slovenia,Public,ECDC,0
 Spain,TESSy,ECDC,0
-United Kingdom,None,,
+United Kingdom,NA,NA,NA
