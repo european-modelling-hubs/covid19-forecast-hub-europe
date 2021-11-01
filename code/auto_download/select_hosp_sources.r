@@ -48,11 +48,6 @@ official <- official %>%
   mutate(source = if_else(grepl("TESSy", source), "TESSy", "Public"),
          type = "ECDC")
 
-## shift +1 for comparison with weeks ending on the same weekday
-scraped_shifted <- scraped %>%
-  mutate(date = date + 1,
-         type = "Scraped, MMWR week")
-
 scraped_weekly <- scraped %>%
   bind_rows(scraped_shifted) %>%
   mutate(week_end = ceiling_date(date, unit = "week", week_start = 7)) %>%
@@ -70,7 +65,6 @@ all <- official %>%
   mutate(download_delay = ceiling(download_delay / 7))
 
 delays <- all %>%
-  filter(!grepl("MMWR", type)) %>%
   select(-download_date) %>%
   group_by(country, date, source, type) %>%
   mutate(final_value = value[which.max(download_delay)]) %>%
@@ -86,7 +80,6 @@ dont_use <- delays %>%
 
 ## filter out delays with unacceptable revisions
 filtered <- all %>%
-  filter(!grepl("MMWR", type)) %>%
   anti_join(dont_use, by = c("country", "source", "type", "download_delay")) %>%
   group_by(country) %>%
   filter(date == max(date))
