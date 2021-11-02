@@ -2,7 +2,7 @@ name: "Create model reports"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "45 10 * * 2"
+    - cron: "45 11 * * 2"
 jobs:
   model_reports:
     runs-on: ubuntu-20.04
