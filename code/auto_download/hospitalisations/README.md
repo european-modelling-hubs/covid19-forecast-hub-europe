@@ -15,7 +15,7 @@ country.
 -   The final dataset is saved as: [data-truth/ECDC/truth\_ECDC-Incident
     Hospitalizations.csv](./data-truth/ECDC/truth_ECDC-Incident%20Hospitalizations.csv)
 -   The full pipeline is run with
-    [`hospitalisations.R`](./code/auto_download/hospitalisations.R)
+    [`hospitalisations-download.R`](./code/auto_download/hospitalisations-download.R)
 
 #### Data sources
 
