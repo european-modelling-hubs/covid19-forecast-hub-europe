@@ -5,6 +5,8 @@ library(here)
 library(lubridate)
 data_dir <- here::here("data-truth", "ECDC")
 
+cat("Combining and selecting hospitalisation sources and saving\n")
+
 # ECDC data ---------------------------------------------------------------
 # Get downloaded ECDC data
 official <- read_csv(here(data_dir, "raw", "official.csv"))
