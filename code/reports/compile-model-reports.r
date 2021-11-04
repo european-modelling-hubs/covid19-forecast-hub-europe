@@ -35,7 +35,7 @@ render_report <- function(model) {
                     params = list(model = model,
                                   report_date = report_date,
                                   plot_weeks = 1,
-                                  score_weeks = 10),
+                                  data_weeks = 10),
                     output_format = "html_document",
                     output_file =
                       here::here("html",

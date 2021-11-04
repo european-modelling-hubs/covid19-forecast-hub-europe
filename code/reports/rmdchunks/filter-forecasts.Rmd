@@ -32,7 +32,7 @@ if (!is.null(params$model)) {
 if (!is.null(params$data_weeks) && params$data_weeks != "All") {
   data <- data %>%
     filter(target_end_date >
-           params$report_date - weeks(as.integer(params$data_weeks)))
+           as.Date(params$report_date) - weeks(as.integer(params$data_weeks)))
 }
 ```
 

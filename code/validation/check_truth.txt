@@ -1059,3 +1059,93 @@ Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-
 
 - Negative incidence in the following locations: ['Czechia'].
 
+Latest check of truth data: 2021-10-16 13:10:31
+
+No errors detected.
+
+Latest check of truth data: 2021-10-17 13:10:02
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2021-10-16:
+
+- Negative incidence in the following locations: ['Switzerland'].
+
+Latest check of truth data: 2021-10-18 13:12:04
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2021-10-17:
+
+- Negative incidence in the following locations: ['Switzerland'].
+
+Latest check of truth data: 2021-10-19 13:11:42
+
+No errors detected.
+
+Latest check of truth data: 2021-10-20 13:12:22
+
+No errors detected.
+
+Latest check of truth data: 2021-10-21 13:11:57
+
+No errors detected.
+
+Latest check of truth data: 2021-10-22 13:12:07
+
+No errors detected.
+
+Latest check of truth data: 2021-10-23 13:10:30
+
+No errors detected.
+
+Latest check of truth data: 2021-10-24 13:10:35
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2021-10-23:
+
+- Negative incidence in the following locations: ['Switzerland'].
+
+Latest check of truth data: 2021-10-25 13:11:41
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Cases.csv' at 2021-10-24:
+
+- Negative incidence in the following locations: ['Germany'].
+
+Latest check of truth data: 2021-10-26 13:11:42
+
+No errors detected.
+
+Latest check of truth data: 2021-10-27 13:12:04
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2021-10-26:
+
+- Negative incidence in the following locations: ['Finland'].
+
+Latest check of truth data: 2021-10-28 13:12:50
+
+No errors detected.
+
+Latest check of truth data: 2021-10-29 13:12:04
+
+No errors detected.
+
+Latest check of truth data: 2021-10-30 13:10:26
+
+No errors detected.
+
+Latest check of truth data: 2021-10-31 13:10:50
+
+No errors detected.
+
+Latest check of truth data: 2021-11-01 13:12:03
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Cases.csv' at 2021-10-31:
+
+- Negative incidence in the following locations: ['Germany'].
+
+Latest check of truth data: 2021-11-02 13:12:07
+
+No errors detected.
+

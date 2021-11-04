@@ -2,6 +2,7 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 import json
+from datetime import datetime
 
 def next_monday(date):
     return pd.date_range(start=date, end=date + pd.offsets.Day(6), freq='W-MON')[0]
@@ -20,6 +21,9 @@ def get_relevant_dates(dates):
                                    ~pd.Series(n in relevant_dates for n in (next_mondays - pd.offsets.Day(4))) &
                                    ~pd.Series(n in relevant_dates for n in (next_mondays - pd.offsets.Day(5)))
                                    ])
+
+    relevant_dates = [d for d in relevant_dates if d > datetime.strptime('2021-07-01', '%Y-%m-%d')]
+
     return [str(r.date()) for r in relevant_dates] # return as strings
 
 path = Path('data-processed')

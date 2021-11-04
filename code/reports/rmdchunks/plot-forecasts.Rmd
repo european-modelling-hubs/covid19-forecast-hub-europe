@@ -14,7 +14,7 @@ forecast_dates <- forecast_dates %>%
   select(forecast_date) %>%
   distinct() %>%
   filter(forecast_date <= params$report_date,
-         forecast_date > params$report_date - params$plot_weeks * 7) %>%
+         forecast_date > as.Date(params$report_date) - params$plot_weeks * 7) %>%
   arrange(desc(forecast_date)) %>%
   pull(forecast_date)
 ```

@@ -1,0 +1,10 @@
+team_name: Statgroup19
+model_name: richards
+model_abbr: Statgroup19-richards
+model_contributors: Marco Mingione (University of Rome "La Sapienza") <marco.mingione@uniroma1.it>, Pierfrancesco Alaimo Di Loro (University of Rome "La Sapienza") <pierfrancesco.alaimodiloro@uniroma1.it>
+website_url: https://statgroup19.shinyapps.io/Covid19App/
+license: cc-by-4.0
+team_model_designation: primary
+methods: Richards' curve based generalized growth model 
+data_inputs: Github repository of Italian Civil Protection
+citation: https://doi.org/10.1002/sim.9004
