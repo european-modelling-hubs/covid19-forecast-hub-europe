@@ -11,7 +11,7 @@ There is no single source covering hospitalisation data across all countries in 
 We therefore create a combined set of what we identify as the most reliable data source, truncated to an appropriate date, for each country.
 
 - The final dataset is saved as: [data-truth/ECDC/truth_ECDC-Incident Hospitalizations.csv](./data-truth/ECDC/truth_ECDC-Incident Hospitalizations.csv)
-- The full pipeline is run with [`hospitalisations.R`](./code/auto_download/hospitalisations.R)
+- The full pipeline is run with [`hospitalisations-download.R`](./code/auto_download/hospitalisations.R)
 
 #### Data sources
 We also provide the full version of each data source:
