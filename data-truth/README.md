@@ -3,11 +3,10 @@ European data status
 
 #### Potential issues in the JHU dataset
 
-As at 2021-11-04 13:11:54
+As at 2021-11-05 13:11:25
 
 | country | created    | updated    | issue                                              | message                                             | url                                                      |
 | :------ | :--------- | :--------- | :------------------------------------------------- | :-------------------------------------------------- | :------------------------------------------------------- |
-| germany | 2021-10-28 | 2021-10-30 | covid stats incorrect for germany                  | Covid cases for germany for 30 Dec,20 (49,044) and… | <https://github.com/CSSEGISandData/COVID-19/issues/4840> |
 | germany | 2021-10-26 | 2021-10-26 | issue in data feed for confirmed cases in germany. | There is a discrepancy in the confirmed cases data… | <https://github.com/CSSEGISandData/COVID-19/issues/4824> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
