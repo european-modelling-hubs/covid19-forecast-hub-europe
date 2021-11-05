@@ -3,7 +3,7 @@ library(dplyr)
 library(readr)
 library(here)
 library(lubridate)
-data_dir <- here::here("data-truth", "ECDC")
+data_dir <- here("data-truth", "ECDC")
 
 cat("Combining and selecting hospitalisation sources and saving\n")
 
