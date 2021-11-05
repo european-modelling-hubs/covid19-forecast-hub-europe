@@ -30,8 +30,8 @@ non_eu <- bind_rows(uk, ch) %>%
               select(-population),
             by = "location_name") %>%
   select(location_name, location, date, value = hosp_new) %>%
-  mutate(source = "Public",
-         type = "National")
+  mutate(source = "Hub",
+         type = "Scraped")
 
 # Save daily data ---------------------------------------------------------
 write_csv(non_eu, non_eu_filepath)

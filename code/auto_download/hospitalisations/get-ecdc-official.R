@@ -1,9 +1,11 @@
 # Get official weekly ECDC hospitalisation data
 library(dplyr)
 library(covidHubUtils)
+library(readr)
+library(here)
 
 # Set up
-data_dir <- here::here("data-truth", "ECDC")
+data_dir <- here("data-truth", "ECDC")
 ecdc_official_filepath <- here(data_dir, "raw", "official.csv")
 pop <- covidHubUtils::hub_locations_ecdc
 
