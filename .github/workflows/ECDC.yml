@@ -26,7 +26,7 @@ jobs:
       shell: Rscript {0}
 
     - name: ECDC Truth
-      run: Rscript 'code/auto_download/hospitalisations.R'
+      run: Rscript 'code/auto_download/hospitalisations-download.R'
       env:
         DATA_USERNAME: ${{secrets.DATA_USERNAME}}
         DATA_PASSWORD: ${{secrets.DATA_PASSWORD}}
