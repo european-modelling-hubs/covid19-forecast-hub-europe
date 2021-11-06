@@ -34,7 +34,7 @@ jobs:
 
     - name: Install R requirements
       run: |
-        install.packages(c("dplyr", "here", "readr", "lubridate", "fs", "purrr", "yaml", "jsonlite", "AzureStor"))
+        install.packages(c("dplyr", "here", "readr", "lubridate", "fs", "purrr", "yaml", "jsonlite", "AzureStor", "tidyr"))
       shell: Rscript {0}
 
     - name: Prepare truth data
