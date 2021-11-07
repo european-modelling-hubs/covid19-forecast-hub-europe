@@ -8,7 +8,7 @@ There is no single source covering hospitalisation data across all countries in 
 We therefore create a combined set of what we identify as the most reliable data source, truncated to an appropriate date, for each country.
 
 -   The final dataset is saved as: [data-truth/ECDC/truth\_ECDC-Incident Hospitalizations.csv](https://github.com/epiforecasts/covid19-forecast-hub-europe/blob/main/data-truth/ECDC/truth_ECDC-Incident%20Hospitalizations.csv)
--   The full pipeline is run with [`hospitalisations-download.R`](../code/auto_download/hospitalisations-download.R)
+-   The full pipeline is run with [`hospitalisations-download.R`](https://github.com/epiforecasts/covid19-forecast-hub-europe/blob/main/code/auto_download/hospitalisations-download.R)
 
 #### Data sources
 
