@@ -9,7 +9,7 @@ library(EuroForecastHub)
 
 # Set up ----------------------------------------------------------------
 # Get method
-method <- get_hub_config("ensemble_method")
+method <- get_hub_config("ensemble")[["method"]]
 
 # Set current submission date
 forecast_date <- today()

@@ -3,16 +3,14 @@ European data status
 
 #### Potential issues in the JHU dataset
 
-As at 2021-09-25 13:10:59
+As at 2021-11-08 13:11:50
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
-| country     | created    | updated    | issue                                               | message                                             | url                                                      |
-| :---------- | :--------- | :--------- | :-------------------------------------------------- | :-------------------------------------------------- | :------------------------------------------------------- |
-| germany     | 2021-09-06 | 2021-09-06 | decrease of cumulative cases for germany 2021-09-05 | Hi, there is a decrease of **-1050** cases from 2…  | <https://github.com/CSSEGISandData/COVID-19/issues/4612> |
-| france      | 2021-09-03 | 2021-09-03 | france deaths revised following government change   | Hello all, Further to \#4588, the French Governmen… | <https://github.com/CSSEGISandData/COVID-19/issues/4605> |
-| switzerland | 2021-08-25 | 2021-08-25 | switzerland deaths revised until august 15, 2021    | Hello all, Due to small historical errors we had …  | <https://github.com/CSSEGISandData/COVID-19/issues/4560> |
+| country | created    | updated    | issue                                              | message                                             | url                                                      |
+| :------ | :--------- | :--------- | :------------------------------------------------- | :-------------------------------------------------- | :------------------------------------------------------- |
+| germany | 2021-10-26 | 2021-10-26 | issue in data feed for confirmed cases in germany. | There is a discrepancy in the confirmed cases data… | <https://github.com/CSSEGISandData/COVID-19/issues/4824> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)

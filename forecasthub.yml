@@ -1,9 +1,14 @@
 shortname: EuroCOVIDhub
 repo_url: https://github.com/epiforecasts/covid19-forecast-hub-europe
-ensemble_method: median
+ensemble:
+  name: EuroCOVIDhub-ensemble
+  method: median
+baseline:
+  name: EuroCOVIDhub-baseline
 horizon:
   values: [1, 2, 3, 4]
   unit: weeks
+launch_date: 2021-03-08
 week_end_day: Saturday
 forecast_week_day: Monday
 target_variables:

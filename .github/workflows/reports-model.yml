@@ -1,0 +1,49 @@
+name: "Create model reports"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "45 11 * * 2"
+jobs:
+  model_reports:
+    runs-on: ubuntu-20.04
+    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
+    env:
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: r-lib/actions/setup-r@v1
+
+    - name: Install system dependencies
+      run: sudo apt-get install -y libssl-dev libcurl4-openssl-dev pandoc
+
+    - name: Install R dependencies
+      run: |
+        install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "readr", "rlang", "tidyr", "forcats", "lemon", "scales", "rmdpartials", "RColorBrewer", "cowplot"))
+        remotes::install_github("reichlab/covidHubUtils")
+        remotes::install_github("epiforecasts/scoringutils@limit-viz")
+        remotes::install_github("epiforecasts/EuroForecastHub")
+      shell: Rscript {0}
+
+    - name: Create model reports
+      run: Rscript 'code/reports/compile-model-reports.r'
+
+    - name: Push to web site
+      uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'html/.'
+        destination_repo: 'epiforecasts/covid19-forecast-hub-europe-website'
+        destination_folder: 'reports'
+        user_email: 'action@github.com'
+        user_name: 'GitHub Action - model reports'
+        commit_message: 'Model reports'
+
+    - name: Create issue about failure
+      if: failure() && github.event_name != 'workflow_dispatch'
+      uses: JasonEtco/create-an-issue@v2.5.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        filename: .github/action-issue-template.md
