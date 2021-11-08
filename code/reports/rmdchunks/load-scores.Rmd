@@ -2,7 +2,7 @@
 ```{r, cache = TRUE, cache.extra = params$report_date, cache.vars="table"}
 library(readr)
 filename <-
-  here::here("evaluation", "weekly-summary",
+  here::here(params$subdir, "evaluation", "weekly-summary",
 	     paste0("evaluation-", params$report_date, ".csv"))
 
 table <- read_csv(filename)

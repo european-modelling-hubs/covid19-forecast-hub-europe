@@ -8,7 +8,7 @@ suppressMessages(library("EuroForecastHub"))
 
 'Aggregate model scores by model
 Usage:
-    aggregate_scores.r [--histories=<histories>] [--restrict-weeks=<weeks>] [--re-run] [<subdir>]
+    aggregate_scores.r [--histories=<histories] [--restrict-weeks=<weeks>] [--re-run] [<subdir>]
     aggregate_scores.r -h | --help
 
 Options:
@@ -21,12 +21,10 @@ Arguments:
     subdir Subdirectory in which to score models if not scoring
            models in the main repo' -> doc
 
+opts <- docopt(doc)
+
 ## if running interactively can set opts to run with options
-if (interactive()) {
-  if (!exists("opts")) opts <- list()
-} else {
-  opts <- docopt(doc)
-}
+if (interactive() && !exists(opts)) opts <- list()
 
 ## default options
 histories_str <- ifelse(is.null(opts$histories), "10,Inf", opts$histories)

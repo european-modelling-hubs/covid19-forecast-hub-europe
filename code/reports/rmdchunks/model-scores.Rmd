@@ -21,7 +21,7 @@ adjusted_data <- data %>%
 ```
 
 ```{r prepare-scores, echo = FALSE, results = 'asis'}
-model_scores <- read_csv(here::here("evaluation", "scores.csv")) %>%
+model_scores <- read_csv(here::here(params$subdir, "evaluation", "scores.csv")) %>%
   filter(model %in% c(params$model, ensemble_model))
 if (params$data_weeks != "All") {
   model_scores <- model_scores %>%

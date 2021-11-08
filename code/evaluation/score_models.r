@@ -17,12 +17,10 @@ Arguments:
     subdir Subdirectory in which to score models if not scoring
            models in the main repo' -> doc
 
+opts <- docopt(doc)
+
 ## if running interactively can set opts to run with options
-if (interactive()) {
-  if (!exists("opts")) opts <- list()
-} else {
-  opts <- docopt(doc)
-}
+if (interactive() && !exists(opts)) opts <- list()
 
 subdir <- ifelse(is.null(opts$subdir), "", opts$subdir)
 
