@@ -96,6 +96,11 @@ final_table <- filtered %>%
   ## take top choice in each country
   slice(1)
 
+# remove some countries manually
+exclude_locations <- c("Poland")
+final_table <- final_table %>%
+  filter(!location_name %in% exclude_locations)
+
 write_csv(final_table, here::here("code", "auto_download", 
                                   "hospitalisations",  
                                   "check-sources", "sources.csv"))
