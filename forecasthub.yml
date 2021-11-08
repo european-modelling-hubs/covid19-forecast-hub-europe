@@ -8,6 +8,7 @@ baseline:
 horizon:
   values: [1, 2, 3, 4]
   unit: weeks
+launch_date: 2021-03-08
 week_end_day: Saturday
 forecast_week_day: Monday
 target_variables:
