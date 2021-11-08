@@ -13,7 +13,7 @@ library(ggplot2)
 library(covidHubUtils)
 library(EuroForecastHub)
 
-# get some cleaning variables
+# get eval
 source(here::here("code", "papers", "ensemble-eval", "R", "get-eval.R"))
 # max_date <- "2021-08-23"
   

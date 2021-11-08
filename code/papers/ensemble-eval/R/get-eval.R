@@ -59,3 +59,7 @@ eval_ensemble <- eval_ensemble %>%
          n, rel_wis, cov_50, cov_95) %>%
   filter(!location %in% "Overall" &
            ensemble != "baseline")
+
+# exclude ensembles by horizon? --------------------------------------------
+eval_ensemble <- filter(eval_ensemble,
+                          !grepl("by horizon", ensemble_name))

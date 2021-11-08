@@ -1,5 +1,5 @@
 # Basic hub description
-# See Results sections 1 and 2 (forecast community, forecast models)
+# See Results sections 1 and 2 (forecast models)
 library(here)
 library(purrr)
 library(readr)

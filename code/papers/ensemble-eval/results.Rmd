@@ -21,7 +21,7 @@ _Component models_
 
 _Figure #1: Number of component forecasts over time for each country, by target count and ensemble method (simple or weighted)._
 
-We created forecasts over the period `r min(weights$forecast_date)` to `r max(weights$forecast_date)`. For each week, we created six probabilistic ensemble forecasts of incident weekly case and death counts for 32 countries, forecasting over one through to four weeks (a combined `r 2*32*4` targets). This created `r n_targets` evaluated ensembles, after removing `r n_removed` weeks of forecasts in countries reporting data anomalies.
+We used forecasts over the period `r min(weights$forecast_date)` to `r max(weights$forecast_date)` to explore more principled ensembling methods. For each week, we created four probabilistic ensemble forecasts of incident weekly case and death counts for 32 countries, forecasting over one through to four weeks (a combined `r n_targets + n_removed` targets). This created `r n_targets` evaluated ensembles, after removing `r n_removed` weeks of forecasts in countries reporting data anomalies.
 
 We collected forecasts from a total `r length(unique(weights$model))` modelling teams. Ensembles taking the simple averages (mean, median) of all forecasts for each week included between `r component_models_desc$Simple$min` and `r component_models_desc$Simple$max` component models over time. The weighted average ensembles used a stricter set of inclusion criteria, reducing the number of component models to between `r component_models_desc$Weighted$min` and `r component_models_desc$Weighted$max`.
 

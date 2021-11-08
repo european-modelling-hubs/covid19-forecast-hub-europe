@@ -7,9 +7,14 @@ format_percent <- function(numerator, denominator, round_to = 0) {
 }
 
 # Dataset description -----------------------------------------------------
-# Number of location, ensemble method, horizon, and target combinations
+# Number of ensemble method, horizon, target, and location combinations
+n_ensembles <- length(unique(eval_ensemble$ensemble_name))
+n_horizons <- length(unique(eval_ensemble$horizon))
+n_target_vars <- length(unique(eval_ensemble$target_variable))
+n_locations <- length(unique(eval_ensemble$location))
+
 n_targets <- nrow(eval_ensemble) # because some removed for data anomalies
-n_removed <- (32 * 6 * 4 * 2) - n_targets
+n_removed <- (n_locations * n_ensembles * n_horizons * n_target_vars) - n_targets
 
 # WIS performance rel to baseline -----------------------------------------
 # Number of ensembles that perform worse, the same as, or better than the baseline

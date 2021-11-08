@@ -1,5 +1,7 @@
-source(here::here("code", "papers", "ensemble-eval", "R", "get-eval.R"))
 library(ggplot2)
+
+# get eval
+source(here::here("code", "papers", "ensemble-eval", "R", "get-eval.R"))
 
 # Average across time by horizon ------------------------------------------
 # Boxplot: spread of each model's relative performance across locations
