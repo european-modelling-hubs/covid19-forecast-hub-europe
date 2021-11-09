@@ -3,6 +3,8 @@ name: Validations v2
 on:
   pull_request_target:
     branches: [ main ]
+    paths:
+      - 'data-processed/**'
 
 jobs:
   build:
@@ -16,17 +18,18 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: 'epiforecasts/covid19-forecast-hub-europe-validations'
-#     - name: Use Node.js ${{ matrix.node-version }}
-#       uses: actions/setup-node@v1
-#       with:
-#         node-version: ${{ matrix.node-version }}
+
     - name: Setup Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.8' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
-#     - run: npm install
-    - run: pip3 install -r requirements.txt
-    - run: python3 main.py
+
+    - name: Install dependencies
+      run: pip3 install -r requirements.txt
+
+    - name: Run Validations
       env:
         GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      run: python3 main.py
+

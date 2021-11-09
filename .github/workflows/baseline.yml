@@ -1,0 +1,48 @@
+name: "Baseline"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 2 * * 1"
+
+jobs:
+  baseline:
+    runs-on: ubuntu-20.04
+    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
+    env:
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: actions/checkout@master
+    - uses: r-lib/actions/setup-r@v1
+
+    - name: Install system dependencies
+      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
+
+    - name: Install R dependencies
+      run: |
+       install.packages(c("dplyr", "purrr", "lubridate", "yaml", "here", "readr", "remotes"))
+       remotes::install_github("reichlab/covidModels/R-package")
+       remotes::install_github("reichlab/covidHubUtils")
+       remotes::install_github("epiforecasts/EuroForecastHub")
+      shell: Rscript {0}
+
+    - name: Create baseline
+      run: Rscript 'code/baseline/create-baseline.R'
+
+    - name: Commit files
+      run: |
+        git config user.email "actions@github.com"
+        git config user.name "GitHub Actions"
+        git add --all
+        git commit -m "Build baseline model"
+        git pull --rebase
+        git push
+        echo "pushed to github"
+
+    - name: Create issue about failure
+      if: failure() && github.event_name != 'workflow_dispatch'
+      uses: JasonEtco/create-an-issue@v2.5.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        filename: .github/action-issue-template.md

@@ -2,12 +2,15 @@ name: "ECDC"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 12 * * 4"
+    - cron: "0 12 * * *"
 
 jobs:
   get_ecdc:
     runs-on: ubuntu-20.04
     if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
+    env:
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - uses: actions/checkout@master
     - uses: r-lib/actions/setup-r@v1
@@ -16,18 +19,35 @@ jobs:
       run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
 
     - name: Install R dependencies
-      run: Rscript -e 'install.packages(c("here", "vroom", "eurostat", "dplyr", "countrycode", "tidyr", "ISOweek", "stringi"))'
+      run: |
+        install.packages(c("curl", "R.utils", "here", "readr", "lubridate", "dplyr", "tidyr", "ISOweek", "stringi", "remotes", "janitor"))
+        remotes::install_github("reichlab/covidHubUtils")
+        remotes::install_github("epiforecasts/covidregionaldata")
+      shell: Rscript {0}
 
     - name: ECDC Truth
-      run: Rscript 'code/auto_download/ecdc_download.r'
-        
-    - name: Commit files
+      run: Rscript 'code/auto_download/hospitalisations-download.R'
       env:
-        AUTH: ${{ secrets.GITHUBTOKEN }}
+        DATA_USERNAME: ${{secrets.DATA_USERNAME}}
+        DATA_PASSWORD: ${{secrets.DATA_PASSWORD}}
+        DATA_URL: ${{secrets.DATA_URL}}
+
+    - name: Commit files
       run: |
         git config user.email "action@github.com"
         git config user.name "GitHub Action - ECDC"
         git add --all
-        git commit -m "ECDC - daily"
-        git push 
+        git commit -m "ECDC - daily" || echo "No changes to commit"
+        git pull --rebase
+        git push
         echo "pushed to github"
+      env:
+        AUTH: ${{secrets.GITHUB_TOKEN}}
+
+    - name: Create issue about failure
+      if: failure() && github.event_name != 'workflow_dispatch'
+      uses: JasonEtco/create-an-issue@v2.5.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        filename: .github/action-issue-template.md

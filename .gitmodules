@@ -1,3 +1,4 @@
 [submodule "validation"]
 	path = validation
 	url = https://github.com/epiforecasts/covid19-forecast-hub-europe-validations
+	ignore = all

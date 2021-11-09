@@ -2,6 +2,7 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 import json
+from datetime import datetime
 
 def next_monday(date):
     return pd.date_range(start=date, end=date + pd.offsets.Day(6), freq='W-MON')[0]
@@ -20,24 +21,25 @@ def get_relevant_dates(dates):
                                    ~pd.Series(n in relevant_dates for n in (next_mondays - pd.offsets.Day(4))) &
                                    ~pd.Series(n in relevant_dates for n in (next_mondays - pd.offsets.Day(5)))
                                    ])
+
+    relevant_dates = [d for d in relevant_dates if d > datetime.strptime('2021-07-01', '%Y-%m-%d')]
+
     return [str(r.date()) for r in relevant_dates] # return as strings
 
 path = Path('data-processed')
 
-models = [f.name for f in path.iterdir() if not f.name.endswith('.csv')]
-
 # exclude models designated as "other"
 metadata = json.load(open("viz/metadata.json","r"))
-models_to_exclude = [k for k,v in metadata.items() if (v['team_model_designation'] == 'other')]
-models = [m for m in models if m not in models_to_exclude]
+models_to_include = [k for k,v in metadata.items() if (v['team_model_designation'] != 'other')]
 
 VALID_TARGETS = [f"{_} wk ahead inc death" for _ in range(1, 5)] + \
-                [f"{_} wk ahead inc case" for _ in range(1, 5)]
+                [f"{_} wk ahead inc case" for _ in range(1, 5)] + \
+                [f"{_} wk ahead inc hosp" for _ in range(1, 5)]
 
 VALID_QUANTILES = [0.025, 0.25, 0.75, 0.975]
 
 dfs = []
-for m in models:
+for m in models_to_include:
     p = path/m
     forecasts = [f.name for f in p.iterdir() if '.csv' in f.name]
     available_dates = pd.Series(pd.to_datetime(filename[:10]) for filename in forecasts)
@@ -70,7 +72,7 @@ df['merge_target'] = 'inc_' + df.target.str.split().str[-1]
 truth = pd.read_csv('viz/truth_to_plot.csv')
 truth.date = pd.to_datetime(truth.date)
 
-truth = pd.melt(truth, id_vars=['date', 'location', 'location_name'], value_vars=['inc_death', 'inc_case'], 
+truth = pd.melt(truth, id_vars=['date', 'location', 'location_name'], value_vars=['inc_death', 'inc_case', 'inc_hosp'], 
                var_name='merge_target', value_name='truth')[['date', 'location', 'merge_target', 'truth']]
 
 df = df.merge(truth, left_on=['location', 'saturday0', 'merge_target'], 
@@ -95,9 +97,6 @@ df = df.sort_values(['scenario_id', 'target_end_date', 'location', 'model', 'tar
 
 df = df[["scenario_id", "model", "location", "forecast_date", "timezero", "target", "target_end_date", "type", "quantile", "value"]]
 
-df.to_csv('viz/forecasts_to_plot.csv', index=False)
-
-
 ### Export to .json
 
 def createForecastDataItem(row):
@@ -107,6 +106,8 @@ def createForecastDataItem(row):
         target_type = 'death'
     elif (target == 'inc case'):
         target_type = 'cases'
+    elif (target == 'inc hosp'):
+        target_type = 'hosp'
     else:
         raise NameError('Invalid target')
     
@@ -145,4 +146,4 @@ for index, row in df.iterrows():
         result[location][target_type]['availableDates'].append(item['timezero'])
     result[location][target_type]['data'].append(item)
     
-json.dump(result, open("viz/forecasts_to_plot.json","w"), indent=4, sort_keys=True)
+json.dump(result, open("viz/forecasts_to_plot.json","w"), sort_keys=True)
