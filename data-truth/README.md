@@ -3,14 +3,13 @@ European data status
 
 #### Potential issues in the JHU dataset
 
-As at 2021-11-08 13:11:50
+As at 2021-11-09 13:12:25
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
-| country | created    | updated    | issue                                              | message                                             | url                                                      |
-| :------ | :--------- | :--------- | :------------------------------------------------- | :-------------------------------------------------- | :------------------------------------------------------- |
-| germany | 2021-10-26 | 2021-10-26 | issue in data feed for confirmed cases in germany. | There is a discrepancy in the confirmed cases data… | <https://github.com/CSSEGISandData/COVID-19/issues/4824> |
+| country | created | updated | issue | message | url |
+| :------ | :------ | :------ | :---- | :------ | :-- |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
