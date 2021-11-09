@@ -1,20 +1,9 @@
 European data status
 ================
 
-#### Potential issues in the JHU dataset
-
-As at 2021-11-09 13:12:25
-
-    ## Warning in stri_replace_all_regex(string, pattern,
-    ## fix_replacement(replacement), : argument is not an atomic vector; coercing
-
-| country | created | updated | issue | message | url |
-| :------ | :------ | :------ | :---- | :------ | :-- |
-
-Open issues updated over the last eight weeks: from [JHU CSSEGISandData
-Github](https://github.com/CSSEGISandData/COVID-19/)
-
 ## Truth data
+
+### Cases and deaths
 
 We evaluate forecasts of cases and deaths against [Johns Hopkins
 University data](https://github.com/CSSEGISandData/COVID-19), and we
@@ -32,6 +21,27 @@ Note there are some differences between the format of the JHU data and
 what we require in a forecast. Please check the
 [Wiki](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Targets-and-horizons#truth-data)
 for more on forecast formatting.
+
+#### Potential issues in the JHU dataset
+
+As at 2021-11-09 16:06:41
+
+    ## Warning in stri_replace_all_regex(string, pattern,
+    ## fix_replacement(replacement), : argument is not an atomic vector; coercing
+
+| country | created | updated | issue | message | url |
+| :------ | :------ | :------ | :---- | :------ | :-- |
+
+Open issues updated over the last eight weeks: from [JHU CSSEGISandData
+Github](https://github.com/CSSEGISandData/COVID-19/)
+
+### Hospitalisations
+
+We gather general hospital admissions data from various sources. See
+separate [Hospitalisations
+README](https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/code/auto_download/hospitalisations#readme).
+
+![](plots/hospitalisations.jpg)
 
 #### Additional data sources
 
