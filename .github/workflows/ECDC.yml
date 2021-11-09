@@ -20,9 +20,8 @@ jobs:
 
     - name: Install R dependencies
       run: |
-        install.packages(c("curl", "R.utils", "here", "readr", "lubridate", "dplyr", "tidyr", "ISOweek", "stringi", "remotes", "janitor"))
+        install.packages(c("curl", "R.utils", "here", "readr", "lubridate", "dplyr", "tidyr", "ISOweek", "stringi", "remotes", "janitor", "ggplot2", "scales"))
         remotes::install_github("reichlab/covidHubUtils")
-        remotes::install_github("epiforecasts/covidregionaldata")
       shell: Rscript {0}
 
     - name: ECDC Truth

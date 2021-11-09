@@ -9,7 +9,7 @@ source(here(script_dir, "get-ecdc-official.R"))
 source(here(script_dir, "get-ecdc-scraped.R"))
 source(here(script_dir, "get-non-eu.R"))
 
-# Combine sources across countries and save as "Hospitalizations - truth"
+# Combine sources across countries, plot, and save as "Hospitalizations - truth"
 source(here(script_dir, "save-selected-sources.R"))
 
 # Update countries with hosp data source (used by validation) in data-locations.csv
