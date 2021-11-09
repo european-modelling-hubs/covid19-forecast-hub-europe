@@ -1,8 +1,8 @@
 library(here)
-library(covidregionaldata)
 library(dplyr)
 library(lubridate)
-data_dir <- here::here("data-truth", "ECDC")
+library(readr)
+data_dir <- here("data-truth", "ECDC")
 non_eu_filepath <- here(data_dir, "raw", "non-eu.csv")
 
 # Get data ----------------------------------------------------------------
@@ -14,22 +14,21 @@ uk <- "https://coronavirus.data.gov.uk/api/v1/data?filters=areaType=overview&str
 uk <- read_csv(uk) %>%
   select(location_name = areaName,
          date,
-         hosp_new = newAdmissions)
+         value = newAdmissions) %>%
+  mutate(location = "GB")
 
 # Switzerland
-ch <- get_regional_data("Switzerland", localise = FALSE) %>%
-  filter(level_1_region != "Liechtenstein") %>%
-  mutate(location_name = "Switzerland") %>%
-  group_by(date, location_name) %>%
-  summarise(hosp_new = sum(hosp_new, na.rm = TRUE))
+#   https://opendata.swiss/en/dataset/covid-19-schweiz
+
+ch <- "https://www.covid19.admin.ch/api/data/20211109-zps7qksn/sources/COVID19Hosp_geoRegion.csv" 
+ch <- read_csv(ch) %>%
+  select(location = geoRegion, date = datum, value = entries) %>%
+  filter(location == "CH") %>%
+  mutate(location_name = "Switzerland")
 
 # Format ------------------------------------------------------------------
 non_eu <- bind_rows(uk, ch) %>%
-  select(date, location_name, hosp_new) %>%
-  left_join(covidHubUtils::hub_locations_ecdc %>%
-              select(-population),
-            by = "location_name") %>%
-  select(location_name, location, date, value = hosp_new) %>%
+  select(location_name, location, date, value) %>%
   mutate(source = "Hub",
          type = "Scraped")
 
