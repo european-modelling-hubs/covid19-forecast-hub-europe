@@ -3,9 +3,6 @@ Choose the type of report you wish do view using the dropdown menu. The Model re
 ```{r insert-countries-dropdown, results='asis'}
 library(htmltools)
 
-countries_hub <- read.csv(here::here("data-locations", "locations_eu.csv")) %>%
-  pull(location_name)
-
 countries_hub <- c("Overall", countries_hub)
 
 l <- tags$ul(class = "dropdown-menu", `aria-labelledby` = "dropdownMenuButton")

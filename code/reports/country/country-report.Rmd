@@ -5,6 +5,7 @@ params:
   location_name: "Overall"
   plot_weeks: 4
   data_weeks: 10
+  config: "https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/forecasthub.yml"
 output:
   html_document:
     theme: yeti

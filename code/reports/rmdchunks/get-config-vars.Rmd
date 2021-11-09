@@ -1,9 +1,11 @@
 <!--- Fetch various values from the config file --->
 ```{r}
-horizons <- get_hub_config("horizon")$values
-data_types <- get_hub_config("target_variables")
-quantiles <- get_hub_config("forecast_type")$quantiles
-ensemble_model <- get_hub_config("ensemble")[["name"]]
+horizons <- get_hub_config("horizon", config_file = config)$values
+data_types <- get_hub_config("target_variables", config_file = config)
+quantiles <- get_hub_config("forecast_type", config_file = config)$quantiles
+ensemble_model <- get_hub_config("ensemble", config_file = config)[["name"]]
+hub_repo <- get_hub_config("repo_url", config_file = config)
+countries_hub <- get_hub_config("forecast_locations", config_file = config)
 
 # FIXME: this breaks the fact that only changes in the config file should be 
 # necessary to add a new target
