@@ -24,7 +24,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2021-11-10 14:22:57
+As at 2021-11-10 14:25:23
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
@@ -50,7 +50,8 @@ forecasts for the following locations only:
     Iceland, Ireland, Italy, Latvia, Liechtenstein, Malta, Netherlands,
     Norway, Portugal, Slovenia, Switzerland, United Kingdom
 
-![](plots/hospitalisations.svg)
+![Plot of truth data from different sources for all countries covered by
+the forecast hub](plots/hospitalisations.svg)
 
 The Hub validates and evaluates forecasts against the single dataset in
 [ECDC/truth\_ECDC-Incident
