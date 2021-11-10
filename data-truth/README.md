@@ -9,11 +9,11 @@ We evaluate forecasts of cases and deaths against [Johns Hopkins
 University data](https://github.com/CSSEGISandData/COVID-19), and we
 recommend using this dataset as the basis for forecasts.
 
--   Daily numbers of cases and deaths are available to download from
+  - Daily numbers of cases and deaths are available to download from
     [JHU](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series),
     or from [our
     repository](https://github.com/epiforecasts/covid19-forecast-hub-europe/data-truth).
--   JHU also provide [country
+  - JHU also provide [country
     metadata](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv),
     including population counts and ISO-3 codes.
 
@@ -24,13 +24,13 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2021-11-10 12:13:29
+As at 2021-11-10 13:12:20
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
 | country | created | updated | issue | message | url |
-|:--------|:--------|:--------|:------|:--------|:----|
+| :------ | :------ | :------ | :---- | :------ | :-- |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
@@ -46,7 +46,7 @@ not consistent across all the countries in the ECDC Forecast Hub. To
 keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
--   Belgium, Croatia, Cyprus, Czechia, Denmark, Estonia, France,
+  - Belgium, Croatia, Cyprus, Czechia, Denmark, Estonia, France,
     Iceland, Ireland, Italy, Latvia, Liechtenstein, Malta, Netherlands,
     Norway, Portugal, Slovenia, Switzerland, United Kingdom
 
@@ -65,7 +65,7 @@ We do not use or evaluate against these data, but the following might be
 useful for modelling targets:
 
 | Data                | Description                                                                                                                              | Source | Link                                                                                                                            |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------|--------|---------------------------------------------------------------------------------------------------------------------------------|
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------- |
 | Vaccination         | Number of vaccine doses distributed by manufacturers, number of first, second and unspecified doses administered                         | ECDC   | [Data on COVID-19 vaccination in the EU/EEA](https://www.ecdc.europa.eu/en/publications-data/data-covid-19-vaccination-eu-eea)  |
 | Variants of concern | Volume of COVID-19 sequencing, the number and percentage distribution of VOC for each country, week and variant submitted since 2020-W40 | ECDC   | [Data on SARS-CoV-2 variants in the EU/EEA](https://www.ecdc.europa.eu/en/publications-data/data-virus-variants-covid-19-eueea) |
 | Testing             | Weekly testing rate and weekly test positivity                                                                                           | ECDC   | [Data on testing for COVID-19 by week and country](https://www.ecdc.europa.eu/en/publications-data/covid-19-testing)            |
