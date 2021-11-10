@@ -65,7 +65,8 @@ all <- bind_rows(ecdc_all,
   select(location_name, location, date, value, selected_source, origin)
 
 plot_all <- all %>%
-  filter(date >= Sys.Date() - 6*7) %>%
+  filter(date >= Sys.Date() - 6*7 &
+           location_name %in% c(sources$location_name, non_eu$location_name)) %>%
   mutate(selected_source = replace_na(selected_source, FALSE)) %>%
   ggplot(aes(x = date, y = value, 
              colour = origin, 

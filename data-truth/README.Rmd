@@ -76,9 +76,20 @@ Open issues updated over the last eight weeks: from [JHU CSSEGISandData Github](
 
 ### Hospitalisations
 
+```{r hospitalisations, echo=FALSE, message=FALSE}
+hosp_data <- readr::read_csv("https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/data-truth/ECDC/truth_ECDC-Incident%20Hospitalizations.csv")
+hosp_locations <- unique(hosp_data$location_name)
+```
+
 We gather general hospital admissions data from various sources. See separate [Hospitalisations README](https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/code/auto_download/hospitalisations#readme).
 
+Hospitalisation data can be difficult to produce and interpret, and is not consistent across all the countries in the ECDC Forecast Hub. To keep data and forecasts consistent, we include hospitalisations forecasts for the following locations only:
+
+`r hosp_locations`
+
 ![](plots/hospitalisations.jpg)
+
+The Hub validates and evaluates forecasts against the single dataset in [ECDC/truth_ECDC-Incident Hospitalizations.csv](ECDC/truth_ECDC-Incident%20Hospitalizations.csv). While we provide raw data files with multiple sources for hospitalisation data in each location, this is for reference only to cover daily as well as weekly data.
 
 #### Additional data sources
 
