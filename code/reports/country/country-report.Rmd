@@ -5,13 +5,13 @@ params:
   location_name: "Overall"
   plot_weeks: 4
   data_weeks: 10
+  config: "https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/forecasthub.yml"
 output:
   html_document:
     theme: yeti
-    self_contained: true
+    self_contained: false
     css: https://covid19forecasthub.eu/css/styles.css
-title: "`r paste0('European COVID-19 Forecast Hub Evaluation Report', ifelse(params$location_name == 'Overall', '', paste(' for', params$location_name)))`"
-date: "`r params$report_date`"
+title: Weekly reports
 ---
 
 ```{r setup, include=FALSE}
@@ -27,9 +27,7 @@ library(here)
 library(EuroForecastHub)
 knitr::opts_chunk$set(echo = FALSE, 
                       message = FALSE, 
-                      warning = FALSE,
-                      # stabilize fig.path to avoid invalidating cache for each country
-                      fig.path = here("html", "report-country-files/"))
+                      warning = FALSE)
 
 include_ranking <- TRUE
 include_forecast_plot <- TRUE
@@ -49,8 +47,13 @@ facetting_var <- rlang::quo(model)
 ```{r get-config-vars, child = "../rmdchunks/get-config-vars.Rmd"}
 ```
 
+```{r insert-dropdowns, child = "../rmdchunks/insert-dropdowns.Rmd"}
+```
+
+# `r paste0('European COVID-19 Forecast Hub Evaluation Report', ifelse(params$location_name == 'Overall', '', paste(' for', params$location_name)))`
+
 <!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
-```{r load-data, child = "../rmdchunks/load-data.Rmd"}
+```{r load-data, child = "../rmdchunks/load-data.Rmd", fig.path = here("html", "report-country-files/")}
 ```
 
 <!--- Load forecast scores -->

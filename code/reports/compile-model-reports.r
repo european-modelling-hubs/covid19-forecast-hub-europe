@@ -41,6 +41,7 @@ render_report <- function(model) {
                       here::here("html",
                                  paste0("model-report-",
                                         model, ".html")),
+	                  output_options = list(lib_dir = here::here("html", "libs")),
                     envir = new.env())
 }
 

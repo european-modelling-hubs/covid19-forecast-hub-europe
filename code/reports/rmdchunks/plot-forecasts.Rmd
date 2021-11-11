@@ -1,7 +1,7 @@
 <!-- Visualisation of forecasts (cases or deaths across time) for multiple
 forecasting dates. -->
 
-# Latest forecasts {.tabset .tabset_fade}
+## Latest forecasts {.tabset .tabset_fade}
 
 ```{r}
 forecast_dates <- data %>%
@@ -63,9 +63,9 @@ scaled_data <- data %>%
   mutate(across(c("true_value", "prediction"), ~ .x / population * 1e+5))
 
 for (forecast_date in as.character(forecast_dates)) {
-  target_level <- 2
+  target_level <- 3
   if (length(forecast_dates) > 1) {
-    cat(paste0("\n\n## ", forecast_date, "{.tabset .tabset-fade} \n\n"))
+    cat(paste0("\n\n### ", forecast_date, "{.tabset .tabset-fade} \n\n"))
     target_level <- target_level + 1
   }
 
@@ -115,4 +115,4 @@ for (forecast_date in as.character(forecast_dates)) {
 }
 ```
 
-# {.unlisted .unnumbered}
+## {.unlisted .unnumbered}

@@ -1,0 +1,63 @@
+Choose the type of report you wish do view using the dropdown menu. The Model reports shows the recent forecasts and performance of the ensemble or individual models, whereas the Country reports shows model-by-model performance, either overall or by country. The reports get updated every Tuesday. 
+
+```{r insert-countries-dropdown, results='asis'}
+library(htmltools)
+
+countries_hub <- c("Overall", countries_hub)
+
+l <- tags$ul(class = "dropdown-menu", `aria-labelledby` = "dropdownMenuButton")
+l$children <- lapply(countries_hub, function(c) {
+  tags$li(
+    class = "dropdown-item", 
+    a(href = paste0("country-report-", c, ".html"), c)
+  )
+})
+
+div(class = "dropdown", style = "display:inline-block",
+  tags$button( 
+    class = "btn btn-secondary dropdown-toggle", 
+    type = "button", 
+    id = "dropdownMenuButton",
+    `data-toggle` = "dropdown", 
+    `aria-haspopup` = "true", 
+    `aria-expanded` = "false", 
+    "Country reports ▼"
+  ),
+  l
+)
+```
+
+
+```{r insert-models-dropdown, results='asis'}
+metadata_files <- list.files(
+  here::here("data-processed"),
+  recursive = TRUE,
+  pattern = "metadata-([a-zA-Z0-9_+]+-[a-zA-Z0-9_+]+)\\.txt",
+  full.names = TRUE
+)
+metadata <- purrr::map(metadata_files, yaml::read_yaml)
+
+models <- purrr::map_chr(metadata, "model_abbr")
+
+l <- tags$ul(class = "dropdown-menu", `aria-labelledby` = "dropdownMenuButton")
+l$children <- lapply(models, function(m) {
+  tags$li(
+    class = "dropdown-item", 
+    a(href = paste0("model-report-", m, ".html"), m)
+  )
+})
+
+div(class = "dropdown", style = "display:inline-block",
+  tags$button( 
+    class = "btn btn-secondary dropdown-toggle", 
+    type = "button", 
+    id = "dropdownMenuButton",
+    `data-toggle` = "dropdown", 
+    `aria-haspopup` = "true", 
+    `aria-expanded` = "false", 
+    "Model reports ▼"
+  ),
+  l
+)
+```
+
