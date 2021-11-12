@@ -39,6 +39,9 @@ metadata <- purrr::map(metadata_files, yaml::read_yaml)
 
 models <- purrr::map_chr(metadata, "model_abbr")
 
+# Exclude baseline model
+models <- models[models != baseline_model]
+
 l <- tags$ul(class = "dropdown-menu", `aria-labelledby` = "dropdownMenuButton")
 l$children <- lapply(models, function(m) {
   tags$li(
