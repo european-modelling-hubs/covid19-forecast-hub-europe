@@ -24,14 +24,13 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2021-11-12 13:12:52
+As at 2021-11-13 13:10:50
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
-| country | created    | updated    | issue                                                | message                                             | url                                                      |
-| :------ | :--------- | :--------- | :--------------------------------------------------- | :-------------------------------------------------- | :------------------------------------------------------- |
-| denmark | 2021-11-10 | 2021-11-10 | denmark: same count of daily cases for 4th & 5th nov | Daily confirmed cases for Denmark for 4th & 5th No… | <https://github.com/CSSEGISandData/COVID-19/issues/4897> |
+| country | created | updated | issue | message | url |
+| :------ | :------ | :------ | :---- | :------ | :-- |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
