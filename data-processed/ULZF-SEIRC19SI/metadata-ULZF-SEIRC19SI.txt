@@ -1,0 +1,9 @@
+team_name: University of Ljubljana, Faculty of Health Sciences Team
+model_name: ULZF-SEIRC19SI
+model_abbr: ULZF-SEIRC19SI
+model_contributors: Janez Zibert (University of Ljubljana, Faculty of Health Sciences) <janez.zibert@zf.uni-lj.si>
+website_url: https://apps.lusy.fri.uni-lj.si/~janezz/analize/opis_modela_SEIR_C19SI.html
+license: cc-by-4.0
+team_model_designation: primary
+methods: SEIHR model with compartments for hospitals, intensive care units, asymptomatic cases, separate submodels for vaccinated and unvaccinated, divided to 5 age subgroups of population  
+data_inputs: "COVID-19-sledilnik, https://covid-19.sledilnik.org/en/"
