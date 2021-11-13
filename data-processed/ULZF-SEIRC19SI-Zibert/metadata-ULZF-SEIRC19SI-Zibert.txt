@@ -6,4 +6,4 @@ website_url: https://apps.lusy.fri.uni-lj.si/~janezz/analize/opis_modela_SEIR_C1
 license: cc-by-4.0
 team_model_designation: primary
 methods: SEIHR model with compartments for hospitals, intensive care units, asymptomatic cases, separate submodels for vaccinated and unvaccinated, divided to 5 age subgroups of population  
-data_inputs: COVID-19-sledilnik: https://covid-19.sledilnik.org/en/
+data_inputs: "COVID-19-sledilnik, https://covid-19.sledilnik.org/en/"
