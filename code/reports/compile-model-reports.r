@@ -36,11 +36,11 @@ render_report <- function(model) {
                                   report_date = report_date,
                                   plot_weeks = 1,
                                   data_weeks = 10),
-                    output_format = "md_document",
+                    output_format = "html_document",
                     output_file =
                       here::here("html",
                                  paste0("model-report-",
-                                        model, ".md")),
+                                        model, ".html")),
 	                  output_options = list(lib_dir = here::here("html", "libs")),
                     envir = new.env())
 }

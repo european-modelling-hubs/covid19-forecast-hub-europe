@@ -18,14 +18,14 @@ suppressWarnings(dir.create(here::here("html")))
 for (country in c("Overall", hub_locations_ecdc$location_name)) {
   rmarkdown::render(here::here("code", "reports", "country",
                                "country-report.Rmd"),
-                    output_format = "md_document",
+                    output_format = "html_document",
                     params = list(location_name = country,
                                   report_date = report_date,
                                   plot_weeks = 4),
                     output_file =
                       here::here("html",
                                  paste0("country-report-",
-                                        country, ".md")),
+                                        country, ".html")),
                     output_options = list(lib_dir = here::here("html", "libs")),
                     envir = new.env())
 }
