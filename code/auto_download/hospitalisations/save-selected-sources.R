@@ -84,7 +84,9 @@ plot_all <- all %>%
   theme(legend.position = "bottom")
 
 ggsave(here("data-truth", "plots", "hospitalisations.svg"),
-       plot_all, width = 13, height = 7)
+       plot_all, width = 13, height = 7,
+       system_fonts = list("sans" = "Fira Sans"),
+       web_fonts = list("sans" = "https://fonts.googleapis.com/css?family=Fira+Sans"))
 
 # Combine + save ------------------------------------------------------------
 # Include only countries with a selected source
