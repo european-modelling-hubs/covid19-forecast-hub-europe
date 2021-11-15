@@ -1,10 +1,13 @@
 # Create csv with data anomalies
-# 2021-06-01 placeholder before implementing automated detection
 library(here)
 library(dplyr)
 library(tibble)
-library(vroom)
+library(readr)
+library(EuroForecastHub)
+library(covidHubUtils)
+library(tidyr)
 
+# Enter anomalies manually as they occur
 anomalies <- tribble(
   ~target_end_date, ~target_variable, ~location, ~location_name, ~anomaly,
   # By week target end date
@@ -31,6 +34,17 @@ anomalies <- tribble(
 ) %>%
   mutate(target_end_date = as.Date(target_end_date))
 
-vroom_write(anomalies,
-            here("data-truth", "anomalies", "anomalies.csv"),
-            delim = ",")
+# Exclude hospitalisations for all locations
+#    before re-launch of "inc hosp" target on 2021-11-07
+hosp <- tibble(target_end_date = 
+                 seq.Date(as.Date(EuroForecastHub::get_hub_config("launch_date")),
+                          as.Date("2021-11-06"), by = 7)) %>%
+  bind_rows(covidHubUtils::hub_locations_ecdc %>% select(-population)) %>%
+  expand(nesting(location_name, location), target_end_date) %>%
+  drop_na() %>%
+  mutate(target_variable = "inc hosp",
+         anomaly = "Replaced data source")
+
+anomalies <- bind_rows(anomalies, hosp)
+
+write_csv(anomalies, here("data-truth", "anomalies", "anomalies.csv"))
