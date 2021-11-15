@@ -1,21 +1,9 @@
 European data status
 ================
 
-#### Potential issues in the JHU dataset
-
-As at 2021-11-08 13:11:50
-
-    ## Warning in stri_replace_all_regex(string, pattern,
-    ## fix_replacement(replacement), : argument is not an atomic vector; coercing
-
-| country | created    | updated    | issue                                              | message                                             | url                                                      |
-| :------ | :--------- | :--------- | :------------------------------------------------- | :-------------------------------------------------- | :------------------------------------------------------- |
-| germany | 2021-10-26 | 2021-10-26 | issue in data feed for confirmed cases in germany. | There is a discrepancy in the confirmed cases data… | <https://github.com/CSSEGISandData/COVID-19/issues/4824> |
-
-Open issues updated over the last eight weeks: from [JHU CSSEGISandData
-Github](https://github.com/CSSEGISandData/COVID-19/)
-
 ## Truth data
+
+### Cases and deaths
 
 We evaluate forecasts of cases and deaths against [Johns Hopkins
 University data](https://github.com/CSSEGISandData/COVID-19), and we
@@ -33,6 +21,44 @@ Note there are some differences between the format of the JHU data and
 what we require in a forecast. Please check the
 [Wiki](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Targets-and-horizons#truth-data)
 for more on forecast formatting.
+
+#### Potential issues in the JHU dataset
+
+As at 2021-11-15 13:12:18
+
+    ## Warning in stri_replace_all_regex(string, pattern,
+    ## fix_replacement(replacement), : argument is not an atomic vector; coercing
+
+| country | created | updated | issue | message | url |
+| :------ | :------ | :------ | :---- | :------ | :-- |
+
+Open issues updated over the last eight weeks: from [JHU CSSEGISandData
+Github](https://github.com/CSSEGISandData/COVID-19/)
+
+### Hospitalisations
+
+We gather general hospital admissions data from various sources. See
+separate [Hospitalisations
+README](https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/code/auto_download/hospitalisations#readme).
+
+Hospitalisation data can be difficult to produce and interpret, and is
+not consistent across all the countries in the ECDC Forecast Hub. To
+keep data and forecasts consistent, we include hospitalisations
+forecasts for the following locations only:
+
+  - Belgium, Croatia, Cyprus, Czechia, Denmark, Estonia, France, Greece,
+    Iceland, Ireland, Italy, Latvia, Malta, Netherlands, Norway,
+    Portugal, Slovenia, Switzerland, United Kingdom
+
+![Plot of truth data from different sources for all countries covered by
+the forecast hub](plots/hospitalisations.svg)
+
+The Hub validates and evaluates forecasts against the single dataset in
+[ECDC/truth\_ECDC-Incident
+Hospitalizations.csv](ECDC/truth_ECDC-Incident%20Hospitalizations.csv).
+While we provide raw data files with multiple sources for
+hospitalisation data in each location, this is for reference only to
+cover daily as well as weekly data.
 
 #### Additional data sources
 

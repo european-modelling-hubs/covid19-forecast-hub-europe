@@ -28,7 +28,7 @@ raw_truth <- load_truth(
 )
 
 # get anomalies
-anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
+anomalies <- read_csv(paste0(hub_repo, "/raw/main/data-truth/anomalies/anomalies.csv"))
 
 truth <- anti_join(raw_truth, anomalies) %>%
   mutate(model = NULL) %>%

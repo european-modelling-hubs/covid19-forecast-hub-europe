@@ -3,7 +3,7 @@
 - Plot of coverage by target and horizon over time
 - PIT histograms
 --->
-# Forecast calibration
+## Forecast calibration
 
 ```{r calib_desc, results='asis'}
 cat("The plots below describe the _calibration_ of the model, that is its ability",

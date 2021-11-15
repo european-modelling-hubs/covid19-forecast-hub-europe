@@ -61,5 +61,6 @@ for (country in countries) {
                       here::here("html", subdir,
                                  paste0("country-report-",
                                         country, ".html")),
+                    output_options = list(lib_dir = here::here("html", "libs")),
                     envir = new.env())
 }
