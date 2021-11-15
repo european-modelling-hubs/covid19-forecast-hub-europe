@@ -85,8 +85,7 @@ plot_all <- all %>%
 
 ggsave(here("data-truth", "plots", "hospitalisations.svg"),
        plot_all, width = 13, height = 7,
-       system_fonts = list("sans" = "Fira Sans"),
-       web_fonts = list("sans" = "https://fonts.googleapis.com/css?family=Fira+Sans"))
+       system_fonts = list("sans" = "Nimbus Sans"))
 
 # Combine + save ------------------------------------------------------------
 # Include only countries with a selected source
