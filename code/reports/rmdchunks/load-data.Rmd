@@ -27,12 +27,12 @@ raw_truth <- load_truth(
   hub = "ECDC"
 )
 
-# get anomalies
-anomalies <- read_csv(paste0(hub_repo, "/raw/main/data-truth/anomalies/anomalies.csv"))
-
-truth <- anti_join(raw_truth, anomalies) %>%
+truth <- raw_truth %>%
   mutate(model = NULL) %>%
   rename(true_value = value)
+
+# get anomalies
+anomalies <- read_csv(paste0(hub_repo, "/raw/main/data-truth/anomalies/anomalies.csv"))
 
 # remove forecasts made directly after a data anomaly
 forecasts <- raw_forecasts %>%
