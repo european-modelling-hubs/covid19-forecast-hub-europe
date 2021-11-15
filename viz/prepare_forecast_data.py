@@ -84,6 +84,7 @@ temp.loc[:, 'quantile'] = np.nan
 temp.target = '0 wk ahead ' + temp.merge_target.replace('_', ' ', regex=True)
 temp.value = temp.truth
 temp.target_end_date = temp.saturday0
+temp = temp.dropna(subset = ['value'])
 
 # concat newly added last observed values (0 wk ahead)
 df = pd.concat([df, temp])
