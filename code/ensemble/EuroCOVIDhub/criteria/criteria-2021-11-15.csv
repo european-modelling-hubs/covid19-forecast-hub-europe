@@ -1,5 +1,23 @@
 model,target_variable,location,all_quantiles_all_horizons,all_horizons,not_excluded_manually,included_in_ensemble
 CovidMetrics-epiBATS,inc case,DE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-arimareg,inc hosp,CH,TRUE,TRUE,TRUE,TRUE
+epiforecasts-arimareg,inc hosp,DK,TRUE,TRUE,TRUE,TRUE
+epiforecasts-arimareg,inc hosp,EE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-arimareg,inc hosp,FR,TRUE,TRUE,TRUE,TRUE
+epiforecasts-arimareg,inc hosp,GB,TRUE,TRUE,TRUE,TRUE
+epiforecasts-arimareg,inc hosp,SI,TRUE,TRUE,TRUE,TRUE
+epiforecasts-caseconv,inc hosp,CH,TRUE,TRUE,TRUE,TRUE
+epiforecasts-caseconv,inc hosp,DK,TRUE,TRUE,TRUE,TRUE
+epiforecasts-caseconv,inc hosp,EE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-caseconv,inc hosp,FR,TRUE,TRUE,TRUE,TRUE
+epiforecasts-caseconv,inc hosp,GB,TRUE,TRUE,TRUE,TRUE
+epiforecasts-caseconv,inc hosp,SI,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,CH,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,DK,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,EE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,FR,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,GB,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,SI,TRUE,TRUE,TRUE,TRUE
 epiMOX-SUIHTER,inc case,IT,TRUE,FALSE,TRUE,FALSE
 epiMOX-SUIHTER,inc death,IT,TRUE,FALSE,TRUE,FALSE
 epiMOX-SUIHTER,inc hosp,IT,TRUE,FALSE,TRUE,FALSE
