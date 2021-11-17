@@ -2,7 +2,7 @@ name: "Visualisation"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 8,11 * * *"
+    - cron: "0 8,12 * * *"
 
 jobs:
   create-files:
