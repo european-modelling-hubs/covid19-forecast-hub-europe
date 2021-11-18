@@ -40,18 +40,6 @@ jobs:
     - name: Prepare truth data
       run: Rscript viz/prepare_truth_data.R
 
-    - name: Send truth data to shiny app
-      uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      with:
-        source_file: 'viz/truth.RData'
-        destination_repo: 'epiforecasts/ForecastHubSubmissionApp'
-        destination_folder: 'data'
-        user_email: 'action@github.com'
-        user_name: 'GitHub Action'
-        commit_message: 'Update truth data'
-
     - name: Prepare metadata
       run: Rscript viz/prepare_metadata.R
 
