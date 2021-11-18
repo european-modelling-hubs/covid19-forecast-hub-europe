@@ -24,13 +24,14 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2021-11-17 13:12:15
+As at 2021-11-18 13:24:08
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
-| country | created | updated | issue | message | url |
-| :------ | :------ | :------ | :---- | :------ | :-- |
+| country | created    | updated    | issue                                                                 | message                                                | url                                                      |
+| :------ | :--------- | :--------- | :-------------------------------------------------------------------- | :----------------------------------------------------- | :------------------------------------------------------- |
+| ireland | 2021-11-17 | 2021-11-17 | ireland cases - yesterdays count is more than double the real number. | \[image\](<https://user-images.githubusercontent.com>… | <https://github.com/CSSEGISandData/COVID-19/issues/4919> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
