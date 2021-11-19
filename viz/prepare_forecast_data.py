@@ -112,7 +112,7 @@ def createForecastDataItem(row):
         'forecast_date': row['forecast_date'],
         'location': row['location'],
         'type': row['type'],
-        'value': row['value'],
+        'value': int(row['value']),
         'timezero': row['timezero'],
         'model': row['model'],
         'quantile': row['quantile'],
