@@ -5,64 +5,64 @@ library("lubridate")
 library("ggplot2")
 library("janitor")
 library("tidyr")
+library("gh")
 
-scraped_files <- list.files("data", pattern = "COVID-")
-official_files <- list.files("data", pattern = "official-")
+owner <- "epiforecasts"
+repo <- "covid19-forecast-hub-europe"
+path <- c(scraped = "data-truth/ECDC/raw/scraped.csv",
+          official = "data-truth/ECDC/raw/official.csv")
 
-scraped <- list()
-official <- list()
+commits <-
+  lapply(path, function(x) {
+    gh("/repos/{owner}/{repo}/commits?path={path}",
+       owner = owner,
+       repo = repo,
+       path = x,
+       .limit = Inf)
+  })
 
-for (file in scraped_files) {
-  file_date <- sub("^.*(202[0-9]-[0-9]+-[0-9]+).*$", "\\1", file)
-  scraped[[file_date]] <- read_csv(here::here("data", file)) %>%
-    clean_names() %>%
-    mutate(download_date = as.Date(file_date))
-}
+shas <- lapply(commits, lapply, function(x) {
+  return(tibble(sha = x$sha,
+                download_date = as.Date(x$commit$author$date)))
+})
+shas <- lapply(shas, bind_rows)
 
-pop <- scraped[[length(scraped)]] %>%
-  select(location_name = country_name, population) %>%
-  distinct()
+## thin scraped
+shas$scraped <- shas$scraped %>%
+  filter(as.integer(max(download_date) - download_date) %% 7 == 0,
+         !duplicated(download_date))
 
-scraped <- scraped %>%
-  bind_rows() %>%
-  filter(indicator == "New_Hospitalised") %>%
-  select(download_date, location_name = country_name, date, source, value) %>%
-  mutate(source = if_else(grepl("TESSy", source), "TESSy", "Public"),
-         type = "Scraped")
+hosp_data <-
+  lapply(names(path), function(source) {
+    apply(shas[[source]], 1, function(x) {
+      read_csv(
+        paste("https://raw.githubusercontent.com", owner, repo, x[["sha"]], path[[source]],
+              sep = "/")
+      ) %>%
+        mutate(download_date = as.Date(x[["download_date"]]))
+    })
+  })
 
-for (file in official_files) {
-  file_date <- sub("^.*(202[0-9]-[0-9]+-[0-9]+).*$", "\\1", file)
-  official[[file_date]] <- read_csv(here::here("data", file)) %>%
-    mutate(download_date = as.Date(file_date))
-}
+names(hosp_data) <- names(path)
+hosp_data <- lapply(hosp_data, bind_rows)
 
-official <- official %>%
-  bind_rows() %>%
-  rename(location_name = country) %>%
-  inner_join(pop, by = "location_name") %>%
-  rename(unscaled_value = value) %>%
-  filter(grepl("hospital admissions", indicator)) %>%
-  mutate(value = if_else(grepl("100k", indicator),
-                         round(unscaled_value * population / 1e+5),
-                         unscaled_value)) %>%
-  select(download_date, location_name, date, value, source) %>%
-  mutate(source = if_else(grepl("TESSy", source), "TESSy", "Public"),
-         type = "ECDC")
-
-scraped_weekly <- scraped %>%
+hosp_data$scraped <- hosp_data$scraped %>%
   mutate(week_end = ceiling_date(date, unit = "week", week_start = 7)) %>%
   group_by(location_name, date = week_end, source, type, download_date) %>%
   summarise(value = sum(value), n = n(), .groups = "drop") %>%
   filter(n == 7) %>%
   select(-n)
 
-all <- official %>%
-  bind_rows(scraped_weekly) %>%
+all <- bind_rows(hosp_data) %>%
   filter(date >= "2021-05-01") %>%
   ## download delay in days
   mutate(download_delay = as.integer(download_date - date)) %>%
+  group_by(location_name, source, type, download_date) %>%
+  mutate(data_delay = as.integer(max(date) - date)) %>%
+  ungroup() %>%
   ## download_delay in weeks
-  mutate(download_delay = ceiling(download_delay / 7))
+  mutate(download_delay = ceiling(download_delay / 7),
+         data_delay = data_delay / 7)
 
 delays <- all %>%
   select(-download_date) %>%
@@ -82,14 +82,15 @@ dont_use <- delays %>%
 filtered <- all %>%
   anti_join(dont_use, by = c("location_name", "source", "type", "download_delay")) %>%
   group_by(location_name) %>%
-  filter(date == max(date))
+  filter(date == max(date)) %>%
+  filter(download_date == max(download_date))
 
 ## filter out delays of > 2 weeks
 filtered <- filtered %>%
   filter(download_delay <= 2)
 
 final_table <- filtered %>%
-  select(location_name, source, type, truncate_weeks = download_delay) %>%
+  select(location_name, source, type, truncate_weeks = data_delay) %>%
   ## sort to prefer: remove fewer weeks, Scraped over ECDC (because daily)
   arrange(location_name, truncate_weeks, desc(type)) %>%
   group_by(location_name) %>%
@@ -101,8 +102,8 @@ exclude_locations <- c("Poland")
 final_table <- final_table %>%
   filter(!location_name %in% exclude_locations)
 
-write_csv(final_table, here::here("code", "auto_download", 
-                                  "hospitalisations",  
+write_csv(final_table, here::here("code", "auto_download",
+                                  "hospitalisations",
                                   "check-sources", "sources.csv"))
 
 ## main plot: hospitalisation data
