@@ -17,7 +17,7 @@ jobs:
     - name: Python set up
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x' # Version range
+        python-version: '3.9' # Version range
         architecture: 'x64'
 
     - name: Install requirements
@@ -34,7 +34,7 @@ jobs:
         Z_PASSWORD: ${{secrets.Z_PASSWORD}}
 
     - name: Create issue about failure
-      if: failure()
+      if: failure() && github.event_name != 'workflow_dispatch'
       uses: JasonEtco/create-an-issue@v2.5.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

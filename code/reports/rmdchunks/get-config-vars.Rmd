@@ -1,12 +1,20 @@
 <!--- Fetch various values from the config file --->
 ```{r}
-horizons <- get_hub_config("horizon")$values
-data_types <- get_hub_config("target_variables")
-quantiles <- get_hub_config("forecast_type")$quantiles
+horizons <- get_hub_config("horizon", config_file = params$config)$values
+data_types <- get_hub_config("target_variables", config_file = params$config)
+quantiles <- get_hub_config("forecast_type", config_file = params$config)$quantiles
+ensemble_model <- get_hub_config("ensemble", config_file = params$config)[["name"]]
+baseline_model <- get_hub_config("baseline", config_file = params$config)[["name"]]
+hub_repo <- get_hub_config("repo_url", config_file = params$config)
+countries_hub <- get_hub_config("forecast_locations", config_file = params$config)
 
 # FIXME: this breaks the fact that only changes in the config file should be 
 # necessary to add a new target
-target_variables <- c(Cases = "inc case", Deaths = "inc death")
+target_variables <- c(
+  Cases = "inc case", 
+  Deaths = "inc death",
+  Hospitalisations = "inc hosp"
+)
 ```
 
 ## {.unlisted .unnumbered}

@@ -2,47 +2,70 @@ name: "Visualisation"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 8,11 * * *"
+    - cron: "0 8,12 * * *"
 
 jobs:
-  build:
+  create-files:
     runs-on: ubuntu-latest
     if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
     env:
       RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
+
     - uses: actions/checkout@master
       with:
         fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
         lfs: true
+
     - name: Setup Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+
     - name: Install python requirements
       run: |
         pip3 install -r github-actions/viz_requirements.txt
+
     - name: Setup R
       uses: r-lib/actions/setup-r@v1
+
     - name: Install R requirements
       run: |
-        install.packages(c("dplyr", "here", "readr", "lubridate", "fs", "purrr", "yaml", "jsonlite", "AzureStor"))
+        install.packages(c("dplyr", "here", "readr", "lubridate", "fs", "purrr", "yaml", "jsonlite", "AzureStor", "tidyr"))
       shell: Rscript {0}
+
     - name: Prepare truth data
       run: Rscript viz/prepare_truth_data.R
+
+    - name: Send truth data to shiny app
+      uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'viz/truth.RData'
+        destination_repo: 'epiforecasts/ForecastHubSubmissionApp'
+        destination_folder: 'data'
+        user_email: 'action@github.com'
+        user_name: 'GitHub Action'
+        commit_message: 'Update truth data'
+
     - name: Prepare metadata
       run: Rscript viz/prepare_metadata.R
+
     - name: Visualization (python)
       run: |
         cp data-locations/locations_eu.csv viz/location_codes.csv
         python3 ./viz/prepare_forecast_data.py
+
     - name: Upload files to Azure blob storage
       env:
         AZURE_STORAGE_ENDPOINT: ${{ secrets.AZURE_STORAGE_ENDPOINT }}
         AZURE_STORAGE_KEY: ${{ secrets.AZURE_STORAGE_KEY }}
       run: Rscript viz/upload_to_azure.R
+
     - name: Create issue about failure
       if: failure() && github.event_name != 'workflow_dispatch'
       uses: JasonEtco/create-an-issue@v2.5.0

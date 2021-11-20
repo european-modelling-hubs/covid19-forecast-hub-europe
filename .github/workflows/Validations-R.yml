@@ -2,10 +2,10 @@ name: Validations (R)
 
 on:
   workflow_dispatch:
-  # pull_request_target:
-  #   branches: main
-  #   paths:
-  #     - 'data-processed/**'
+  pull_request:
+    branches: main
+    paths:
+      - 'data-processed/**'
 
 jobs:
   build:
@@ -17,6 +17,36 @@ jobs:
       - uses: actions/checkout@v2
 
       - uses: r-lib/actions/setup-r@v1
+        with:
+          install-r: false
+          use-public-rspm: true
+
+      - name: Query dependencies
+        run: |
+          install.packages('remotes')
+          saveRDS(
+            remotes::package_deps(
+              "ForecastHubValidations",
+              repos = c(epiforecasts = "https://epiforecasts.r-universe.dev",
+                        CRAN = "https://cloud.r-project.org")
+            ),
+            ".github/depends.Rds",
+            version = 2
+          )
+          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+        shell: Rscript {0}
+
+      - name: Cache R packages
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ubuntu-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ubuntu-${{ hashFiles('.github/R-version') }}-1-
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install libcurl4-openssl-dev libv8-dev
 
       - name: Install validation package
         run: |
@@ -31,47 +61,7 @@ jobs:
           v <- ForecastHubValidations::validate_pr(
               gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
               pr_number = Sys.getenv("PR_NUMBER"),
-              data-folder = "data-processed"
+              data_folder = "data-processed"
           )
-          print(v)
-          check_for_errors(v)
+          ForecastHubValidations::check_for_errors(v)
         shell: Rscript {0}
-
-  link-preview:
-    runs-on: ubuntu-20.04
-    env:
-      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-    steps:
-    - uses: actions/checkout@master
-    - uses: r-lib/actions/setup-r@v1
-
-    - name: Install system dependencies
-      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
-
-    - name: Install R dependencies
-      run: |
-        install.packages(c("remotes", "gh"))
-        remotes::install_github("epiforecasts/EuroForecastHub")
-      shell: Rscript {0}
-
-    - name: Post comment linking to preview shiny app
-      env:
-        PR_NUMBER: ${{ github.event.number }}
-      run: |
-        links <- EuroForecastHub::link_preview(
-          gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
-          pr_number = Sys.getenv("PR_NUMBER"),
-          data_folder = "data-processed"
-        )
-        if (!is.null(links)) {
-          gh::gh(
-            "/repos/{gh_repo}/issues/{pr_number}/comments",
-            .method = "POST",
-            gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
-            pr_number = Sys.getenv("PR_NUMBER"),
-            accept = "application/vnd.github.v3+json",
-            body = paste(c("Preview of submitted forecast:", links), collapse = "\n\n")
-          )
-        }
-      shell: Rscript {0}

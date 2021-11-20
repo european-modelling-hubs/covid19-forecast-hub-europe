@@ -20,12 +20,12 @@ jobs:
 
     - name: Install R dependencies
       run: |
-        install.packages(c("curl", "R.utils", "here", "readr", "lubridate", "dplyr", "tidyr", "ISOweek", "stringi", "remotes"))
+        install.packages(c("curl", "R.utils", "here", "readr", "lubridate", "dplyr", "tidyr", "ISOweek", "stringi", "remotes", "janitor", "ggplot2", "scales", "svglite"))
         remotes::install_github("reichlab/covidHubUtils")
       shell: Rscript {0}
 
     - name: ECDC Truth
-      run: Rscript 'code/auto_download/ecdc_download.r'
+      run: Rscript 'code/auto_download/hospitalisations-download.R'
       env:
         DATA_USERNAME: ${{secrets.DATA_USERNAME}}
         DATA_PASSWORD: ${{secrets.DATA_PASSWORD}}
@@ -50,4 +50,3 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         filename: .github/action-issue-template.md
-

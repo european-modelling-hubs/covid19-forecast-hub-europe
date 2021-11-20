@@ -1,0 +1,82 @@
+```{r score-table, results='asis'}
+df <- table %>%
+  filter(target_variable == target_variables[variable],
+         horizon == {{horizon}})
+
+model_df <- df %>%
+  filter(model == params$model)
+
+if (nrow(model_df) > 0) {
+  cat("The table shows the skill of the ", params$model,
+      "model relative to the baseline (`vs. baseline`)")
+
+  if (params$model != ensemble_model) {
+    cat(" and the ensemble model (`vs. ensemble`)")
+  }
+  cat(" for the past 10 weeks in terms of the Weighted Interval Score (`WIS`) and ",
+      "Absolute Error (`AE`). Values less than 1 indicate the model performs",
+      "better than the model it is being compared with, and values",
+      "greater than 1 that it performs worse. WIS values are only shown",
+      "if all 23 quantiles are provided.\n")
+
+  ## if not doing the ensemble, show the ensemble
+  if (params$model == ensemble_model) {
+    df <- model_df %>%
+      select(Location = location_name,
+             `WIS vs. baseline` = rel_wis,
+             `AE vs. baseline` = rel_ae) %>%
+      arrange(Location)
+  } else {
+    ensemble <- df %>%
+      filter(model == ensemble_model) %>%
+      select(location_name, rel_ensemble_wis = rel_wis, rel_ensemble_ae = rel_ae)
+    df <- model_df %>%
+      select(location_name, rel_wis, rel_ae) %>%
+      inner_join(ensemble, by = "location_name") %>%
+      pivot_longer(starts_with("rel")) %>%
+      mutate(relative_to =
+               if_else(grepl("ensemble", name), "ensemble", "baseline"),
+             score = toupper(sub("^.+_([a-z]+)$", "\\1", name))) %>%
+      select(-name) %>%
+      pivot_wider(names_from = "relative_to") %>%
+      mutate(ensemble = round(baseline / ensemble, 2)) %>%
+      pivot_longer(c(baseline, ensemble), names_to = "relative_to") %>%
+      mutate(name = paste(score, "vs.", relative_to)) %>%
+      select(-score, -relative_to) %>%
+      pivot_wider() %>%
+      rename(Location = location_name) %>%
+      arrange(Location)
+  }
+
+  ## we want NA to be sorted as a high number, see https://stackoverflow.com/a/65897972
+  render <- JS(
+    "function(data, type, row) {",
+    "  if(type === 'sort' && data === null) {",
+    "    return Infinity;",
+    "  }",
+    "  return data;",
+    "}"
+  )
+
+  ncols <- ncol(df)
+
+  df %>%
+    DT::datatable(
+      width = "100%",
+      options = list(
+        paging = FALSE,
+        info = FALSE,
+        dom = 'Bfrtip',
+        ## scrollY = '200px',
+        ## scrollCollapse =  TRUE,
+        columnDefs = list(
+          list(targets = seq(1, ncols - 1), render = render)
+        )
+      ),
+      rownames = FALSE
+      ) %>%
+    DT::formatStyle(columns = seq(1, ncols), fontSize = '90%')
+} else {
+  cat(" Overall scores are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment the model does not fulfill that criterion." )
+}
+```
