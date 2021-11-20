@@ -3,7 +3,7 @@ model_name: BSLCoV v0.1
 model_abbr: UB-BSLCoV
 model_contributors: David Moriña (UB) <dmorina@ub.edu>
 institution_affil: Universitat de Barcelona -- UB (www.ub.edu)
-website_url: https://dmorina.shinyapps.io/UB-CoV/
+website_url: https://dmorina.shinyapps.io/UB-BSLCoV/
 license: cc-by-sa-4.0
 team_model_designation: primary
 methods: Bayesian synthetic likelihood estimation for underreported non-stationary time series
