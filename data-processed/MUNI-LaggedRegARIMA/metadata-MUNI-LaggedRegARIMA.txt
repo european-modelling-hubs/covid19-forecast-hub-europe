@@ -1,0 +1,10 @@
+team_name: Masaryk University
+model_name: LaggedRegARIMA
+model_abbr: MUNI-LaggedRegARIMA
+model_contributors: Andrea Kraus, David Kraus <david.kraus@mail.muni.cz>
+website_url: https://krausstat.shinyapps.io/covid19global/
+license: cc-by-4.0
+team_model_designation: other
+methods: Regression of hospitalizations and deaths on lagged cases with ARIMA errors.
+methods_long: This is a regression of hospitalizations and deaths on lagged cases with ARIMA errors applied to outlier-corrected transformed weekly aggregated series. Forecasts of the predictor series of cases (and their uncertainty) are obtained from a univariate ARIMA model.
+data_inputs: JHU CSSE, ECDC

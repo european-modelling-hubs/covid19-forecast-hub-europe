@@ -4,8 +4,8 @@ model_abbr: bisop-seirfilterlite
 model_contributors: Martin Šmíd, Jan Trnka, Vít Tuček, Milan Zajíček
 license: mit
 team_model_designation: secondary
-website_url: https://www.medrxiv.org/content/10.1101/2021.02.16.21251834v1
-methods: smiplified version of our SeirFilter model
+website_url: https://www.bisop.eu/
+methods: A simple stochastic SEIR state space model
 team_funding: no funding
 data_inputs: John Hopkins data, Google Mobility Recors
-methods_long: a single-cohort version of the SeirFilter model, estimating the contact reduction by Google Mobility data. To be described in the forthcoming  version of https://www.medrxiv.org/content/10.1101/2021.02.16.21251834v1
+methods_long: A variant of SeirFilter (https://www.medrxiv.org/content/10.1101/2021.02.16.21251834v1) with compartnents S-E-Ia-Ip-Is-R-D where Ia are the asymptomatic, Ip the presymptomatic and Is the symptomatic. Only past data and the Google mobility indices used as inputs, the variability of R0 (virus variant, vaccination, seasonality) is handled via its estimation from past. In particular, R0 is estimated by the weighted time-average of reproduction number  (computed as R(t)=(C(t) - C(t-7))/(C(t-5)-C(t-12))) divided by the estimated number of contacts (obtained from the Google mobilty indices).

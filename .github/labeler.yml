@@ -1,0 +1,6 @@
+metadata-change:
+- data-processed/**/*.txt
+- data-processed/**/*.yml
+
+data-submission:
+- data-processed/**/*.csv
