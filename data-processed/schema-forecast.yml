@@ -36,7 +36,39 @@ properties:
     type: array
     items:
       type: string
-      pattern: ^[A-Z]{2}$
+      enum:
+        - AT
+        - BE
+        - BG
+        - CH
+        - CY
+        - CZ
+        - DK
+        - DE
+        - EE
+        - ES
+        - FI
+        - FR
+        - GB
+        - GR
+        - HR
+        - HU
+        - IE
+        - IS
+        - IT
+        - LI
+        - LT
+        - LU
+        - LV
+        - MT
+        - NL
+        - NO
+        - PL
+        - PT
+        - RO
+        - SE
+        - SI
+        - SK
   type:
     description: 'One of "point" or "quantile"'
     type: array
