@@ -2,7 +2,7 @@ name: "Visualisation"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 8,11 * * *"
+    - cron: "0 8,12 * * *"
 
 jobs:
   create-files:
@@ -40,18 +40,6 @@ jobs:
     - name: Prepare truth data
       run: Rscript viz/prepare_truth_data.R
 
-    - name: Send truth data to shiny app
-      uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      with:
-        source_file: 'viz/truth.RData'
-        destination_repo: 'epiforecasts/ForecastHubSubmissionApp'
-        destination_folder: 'data'
-        user_email: 'action@github.com'
-        user_name: 'GitHub Action'
-        commit_message: 'Update truth data'
-
     - name: Prepare metadata
       run: Rscript viz/prepare_metadata.R
 
@@ -60,16 +48,11 @@ jobs:
         cp data-locations/locations_eu.csv viz/location_codes.csv
         python3 ./viz/prepare_forecast_data.py
 
-    - name: Commit files
+    - name: Upload files to Azure blob storage
       env:
-        AUTH: ${{ secrets.GITHUBTOKEN }}
-      run: |
-        git config user.email "action@github.com"
-        git config user.name "GitHub Action - Visualisation Update"
-        git commit -am "Daily Visualisation update" || echo "No changes to commit"
-        git pull --rebase
-        git push
-        echo "pushed to github"
+        AZURE_STORAGE_ENDPOINT: ${{ secrets.AZURE_STORAGE_ENDPOINT }}
+        AZURE_STORAGE_KEY: ${{ secrets.AZURE_STORAGE_KEY }}
+      run: Rscript viz/upload_to_azure.R
 
     - name: Create issue about failure
       if: failure() && github.event_name != 'workflow_dispatch'

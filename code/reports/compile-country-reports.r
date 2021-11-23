@@ -26,5 +26,6 @@ for (country in c("Overall", hub_locations_ecdc$location_name)) {
                       here::here("html",
                                  paste0("country-report-",
                                         country, ".html")),
+                    output_options = list(lib_dir = here::here("html", "libs")),
                     envir = new.env())
 }

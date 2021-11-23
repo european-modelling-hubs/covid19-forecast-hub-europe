@@ -24,13 +24,18 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2021-11-09 16:06:41
+As at 2021-11-23 13:12:01
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
-| country | created | updated | issue | message | url |
-| :------ | :------ | :------ | :---- | :------ | :-- |
+| country  | created    | updated    | issue                                                                 | message                                                 | url                                                      |
+| :------- | :--------- | :--------- | :-------------------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
+| france   | 2021-11-23 | 2021-11-23 | daily deaths and cases in france                                      | Hello JHU, Is there possibly an error in France’s…      | <https://github.com/CSSEGISandData/COVID-19/issues/4939> |
+| france   | 2021-11-23 | 2021-11-23 | total\_tests in france                                                | Hi, ‘total\_tests’ (cumulative tests) seems to be …     | <https://github.com/CSSEGISandData/COVID-19/issues/4938> |
+| it       | 2020-03-22 | 2021-11-22 | it’s not taiwan country , it is taiwan province                       | Happens in line 214 of csse\_covid\_19\_data/csse\_cov… | <https://github.com/CSSEGISandData/COVID-19/issues/1253> |
+| slovakia | 2021-11-18 | 2021-11-18 | integration of probable/antigen cases for slovakia                    | Hello all, In \#4924, we have integrated probable/…     | <https://github.com/CSSEGISandData/COVID-19/issues/4925> |
+| ireland  | 2021-11-17 | 2021-11-17 | ireland cases - yesterdays count is more than double the real number. | \[image\](<https://user-images.githubusercontent.com>…  | <https://github.com/CSSEGISandData/COVID-19/issues/4919> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
@@ -41,7 +46,24 @@ We gather general hospital admissions data from various sources. See
 separate [Hospitalisations
 README](https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/code/auto_download/hospitalisations#readme).
 
-![](plots/hospitalisations.jpg)
+Hospitalisation data can be difficult to produce and interpret, and is
+not consistent across all the countries in the ECDC Forecast Hub. To
+keep data and forecasts consistent, we include hospitalisations
+forecasts for the following locations only:
+
+  - Belgium, Croatia, Cyprus, Czechia, Denmark, Estonia, France, Greece,
+    Iceland, Ireland, Italy, Latvia, Malta, Netherlands, Norway,
+    Portugal, Slovenia, Switzerland, United Kingdom
+
+![Plot of truth data from different sources for all countries covered by
+the forecast hub](plots/hospitalisations.svg)
+
+The Hub validates and evaluates forecasts against the single dataset in
+[ECDC/truth\_ECDC-Incident
+Hospitalizations.csv](ECDC/truth_ECDC-Incident%20Hospitalizations.csv).
+While we provide raw data files with multiple sources for
+hospitalisation data in each location, this is for reference only to
+cover daily as well as weekly data.
 
 #### Additional data sources
 
