@@ -24,13 +24,14 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2021-11-23 13:12:01
+As at 2021-11-24 13:11:51
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
 | country  | created    | updated    | issue                                                                 | message                                                 | url                                                      |
 | :------- | :--------- | :--------- | :-------------------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
+| slovenia | 2021-11-24 | 2021-11-24 | slovenia - incorrect total vaccine doses administered                 | \[JHU\_Slovenia\](<https://user-images.githubusercont>… | <https://github.com/CSSEGISandData/COVID-19/issues/4944> |
 | france   | 2021-11-23 | 2021-11-23 | daily deaths and cases in france                                      | Hello JHU, Is there possibly an error in France’s…      | <https://github.com/CSSEGISandData/COVID-19/issues/4939> |
 | france   | 2021-11-23 | 2021-11-23 | total\_tests in france                                                | Hi, ‘total\_tests’ (cumulative tests) seems to be …     | <https://github.com/CSSEGISandData/COVID-19/issues/4938> |
 | it       | 2020-03-22 | 2021-11-22 | it’s not taiwan country , it is taiwan province                       | Happens in line 214 of csse\_covid\_19\_data/csse\_cov… | <https://github.com/CSSEGISandData/COVID-19/issues/1253> |

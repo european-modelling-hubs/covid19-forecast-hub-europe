@@ -1243,3 +1243,10 @@ Latest check of truth data: 2021-11-23 13:12:00
 
 No errors detected.
 
+Latest check of truth data: 2021-11-24 13:11:50
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Cases.csv' at 2021-11-23:
+
+- Negative incidence in the following locations: ['France'].
+
