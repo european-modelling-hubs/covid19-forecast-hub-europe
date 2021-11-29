@@ -37,6 +37,7 @@ jobs:
               pr_number = Sys.getenv("PR_NUMBER"),
               data_folder = "data-processed"
             )
+            message("Preview link:\n  ", paste(links, collapse = "\n  "))
             if (!is.null(links)) {
               gh::gh(
                 "/repos/{gh_repo}/issues/{pr_number}/comments",
