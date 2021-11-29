@@ -30,7 +30,7 @@ jobs:
         env:
           PR_NUMBER: ${{ github.event.number }}
         run: |
-          source("https://gist.githubusercontent.com/Bisaloo/db50c50922dc5d8d71791fe210e625be/raw/c3a5866baacc65dd07c4f2a8c206ce07bc25e0df/link_preview_app.R")
+          source("https://gist.githubusercontent.com/Bisaloo/db50c50922dc5d8d71791fe210e625be/raw/cc635b080d59a7c3556516bfd47d717f5dc31088/link_preview_app.R")
           try({
             links <- link_preview(
               gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
