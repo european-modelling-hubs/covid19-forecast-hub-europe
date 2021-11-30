@@ -24,7 +24,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2021-11-29 13:12:57
+As at 2021-11-30 13:09:19
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
@@ -34,7 +34,6 @@ As at 2021-11-29 13:12:57
 | slovakia | 2021-11-18 | 2021-11-25 | integration of probable/antigen cases for slovakia                    | Hello all, In \#4924, we have integrated probable/…     | <https://github.com/CSSEGISandData/COVID-19/issues/4925> |
 | france   | 2021-11-24 | 2021-11-24 | cited data sources for france are stale                               | The README cites \[3 data sources\](<https://github.c>… | <https://github.com/CSSEGISandData/COVID-19/issues/4948> |
 | slovenia | 2021-11-24 | 2021-11-24 | slovenia - incorrect total vaccine doses administered                 | \[JHU\_Slovenia\](<https://user-images.githubusercont>… | <https://github.com/CSSEGISandData/COVID-19/issues/4944> |
-| france   | 2021-11-23 | 2021-11-23 | total\_tests in france                                                | Hi, ‘total\_tests’ (cumulative tests) seems to be …     | <https://github.com/CSSEGISandData/COVID-19/issues/4938> |
 | it       | 2020-03-22 | 2021-11-22 | it’s not taiwan country , it is taiwan province                       | Happens in line 214 of csse\_covid\_19\_data/csse\_cov… | <https://github.com/CSSEGISandData/COVID-19/issues/1253> |
 | ireland  | 2021-11-17 | 2021-11-17 | ireland cases - yesterdays count is more than double the real number. | \[image\](<https://user-images.githubusercontent.com>…  | <https://github.com/CSSEGISandData/COVID-19/issues/4919> |
 
