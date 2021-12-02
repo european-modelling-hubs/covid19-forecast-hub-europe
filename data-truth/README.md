@@ -24,10 +24,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2021-12-01 13:15:53
-
-    ## Warning in stri_replace_all_regex(string, pattern,
-    ## fix_replacement(replacement), : argument is not an atomic vector; coercing
+As at 2021-12-02 13:21:06
 
 | country  | created    | updated    | issue                                                 | message                                                 | url                                                      |
 | :------- | :--------- | :--------- | :---------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
@@ -51,8 +48,8 @@ keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
   - Belgium, Croatia, Cyprus, Czechia, Denmark, Estonia, France, Greece,
-    Iceland, Ireland, Latvia, Liechtenstein, Malta, Netherlands, Norway,
-    Slovenia, Switzerland, United Kingdom
+    Iceland, Ireland, Latvia, Liechtenstein, Malta, Norway, Slovenia,
+    Switzerland, United Kingdom
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)
