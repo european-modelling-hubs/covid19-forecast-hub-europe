@@ -24,14 +24,15 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2021-12-08 13:13:16
+As at 2021-12-09 13:13:09
 
-| country   | created    | updated    | issue                                                 | message                                                 | url                                                      |
-| :-------- | :--------- | :--------- | :---------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
-| lithuania | 2020-12-08 | 2021-12-02 | new source for lithuania data                         | From 2020-11-25 the data for Lithuania is provided…     | <https://github.com/CSSEGISandData/COVID-19/issues/3433> |
-| slovakia  | 2021-11-18 | 2021-11-25 | integration of probable/antigen cases for slovakia    | Hello all, In \#4924, we have integrated probable/…     | <https://github.com/CSSEGISandData/COVID-19/issues/4925> |
-| slovenia  | 2021-11-24 | 2021-11-24 | slovenia - incorrect total vaccine doses administered | \[JHU\_Slovenia\](<https://user-images.githubusercont>… | <https://github.com/CSSEGISandData/COVID-19/issues/4944> |
-| it        | 2020-03-22 | 2021-11-22 | it’s not taiwan country , it is taiwan province       | Happens in line 214 of csse\_covid\_19\_data/csse\_cov… | <https://github.com/CSSEGISandData/COVID-19/issues/1253> |
+| country   | created    | updated    | issue                                                        | message                                                 | url                                                      |
+| :-------- | :--------- | :--------- | :----------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
+| germany   | 2021-12-09 | 2021-12-09 | germany data wrong for 8th december reported on 9th december | Hello, the data submitted for germany on the 9th …      | <https://github.com/CSSEGISandData/COVID-19/issues/5014> |
+| lithuania | 2020-12-08 | 2021-12-02 | new source for lithuania data                                | From 2020-11-25 the data for Lithuania is provided…     | <https://github.com/CSSEGISandData/COVID-19/issues/3433> |
+| slovakia  | 2021-11-18 | 2021-11-25 | integration of probable/antigen cases for slovakia           | Hello all, In \#4924, we have integrated probable/…     | <https://github.com/CSSEGISandData/COVID-19/issues/4925> |
+| slovenia  | 2021-11-24 | 2021-11-24 | slovenia - incorrect total vaccine doses administered        | \[JHU\_Slovenia\](<https://user-images.githubusercont>… | <https://github.com/CSSEGISandData/COVID-19/issues/4944> |
+| it        | 2020-03-22 | 2021-11-22 | it’s not taiwan country , it is taiwan province              | Happens in line 214 of csse\_covid\_19\_data/csse\_cov… | <https://github.com/CSSEGISandData/COVID-19/issues/1253> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
