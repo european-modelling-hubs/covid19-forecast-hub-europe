@@ -25,7 +25,7 @@ uk <- read_csv(uk) %>%
 foph <- GET("https://www.covid19.admin.ch/api/data/context")
 foph <- fromJSON(rawToChar(foph$content))
 ch <- read.csv(foph$sources$individual$csv$daily$hosp)
-ch$datum <- ymd(hosp$datum)
+ch$datum <- ymd(ch$datum)
 ch <- subset(ch, geoRegion == "CH", c("datum", "entries"))
 names(ch) <- c("date", "value")
 ch$location_name <- "Switzerland"
