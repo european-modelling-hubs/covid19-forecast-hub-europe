@@ -24,10 +24,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2021-12-15 15:46:09
-
-    ## Warning in stri_replace_all_regex(string, pattern,
-    ## fix_replacement(replacement), : argument is not an atomic vector; coercing
+As at 2021-12-16 13:12:28
 
 | country   | created    | updated    | issue                                                        | message                                                 | url                                                      |
 | :-------- | :--------- | :--------- | :----------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
