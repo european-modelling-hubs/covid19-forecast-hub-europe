@@ -87,7 +87,8 @@ Cyprus,CY,2021-10-30,56,TESSy,ECDC
 Cyprus,CY,2021-11-06,52,TESSy,ECDC
 Cyprus,CY,2021-11-13,78,TESSy,ECDC
 Cyprus,CY,2021-11-20,90,TESSy,ECDC
-Cyprus,CY,2021-11-27,96,TESSy,ECDC
+Cyprus,CY,2021-11-27,98,TESSy,ECDC
+Cyprus,CY,2021-12-04,108,TESSy,ECDC
 Czechia,CZ,2020-01-04,0,TESSy,ECDC
 Czechia,CZ,2020-01-11,0,TESSy,ECDC
 Czechia,CZ,2020-01-18,0,TESSy,ECDC
@@ -182,13 +183,14 @@ Czechia,CZ,2021-09-25,306,TESSy,ECDC
 Czechia,CZ,2021-10-02,397,TESSy,ECDC
 Czechia,CZ,2021-10-09,550,TESSy,ECDC
 Czechia,CZ,2021-10-16,814,TESSy,ECDC
-Czechia,CZ,2021-10-23,1443,TESSy,ECDC
-Czechia,CZ,2021-10-30,2508,TESSy,ECDC
-Czechia,CZ,2021-11-06,4182,TESSy,ECDC
-Czechia,CZ,2021-11-13,6192,TESSy,ECDC
-Czechia,CZ,2021-11-20,8245,TESSy,ECDC
-Czechia,CZ,2021-11-27,9987,TESSy,ECDC
-Czechia,CZ,2021-12-04,10728,TESSy,ECDC
+Czechia,CZ,2021-10-23,1464,TESSy,ECDC
+Czechia,CZ,2021-10-30,2510,TESSy,ECDC
+Czechia,CZ,2021-11-06,4184,TESSy,ECDC
+Czechia,CZ,2021-11-13,6195,TESSy,ECDC
+Czechia,CZ,2021-11-20,8257,TESSy,ECDC
+Czechia,CZ,2021-11-27,10022,TESSy,ECDC
+Czechia,CZ,2021-12-04,10865,TESSy,ECDC
+Czechia,CZ,2021-12-11,10281,TESSy,ECDC
 Iceland,IS,2020-02-08,0,TESSy,ECDC
 Iceland,IS,2020-10-03,15,TESSy,ECDC
 Iceland,IS,2020-10-10,22,TESSy,ECDC
@@ -251,6 +253,7 @@ Iceland,IS,2021-11-13,14,TESSy,ECDC
 Iceland,IS,2021-11-20,16,TESSy,ECDC
 Iceland,IS,2021-11-27,7,TESSy,ECDC
 Iceland,IS,2021-12-04,12,TESSy,ECDC
+Iceland,IS,2021-12-11,7,TESSy,ECDC
 Latvia,LV,2020-01-04,0,TESSy,ECDC
 Latvia,LV,2020-01-11,0,TESSy,ECDC
 Latvia,LV,2020-01-18,0,TESSy,ECDC
@@ -352,10 +355,12 @@ Latvia,LV,2021-11-13,824,TESSy,ECDC
 Latvia,LV,2021-11-20,620,TESSy,ECDC
 Latvia,LV,2021-11-27,544,TESSy,ECDC
 Latvia,LV,2021-12-04,451,TESSy,ECDC
+Latvia,LV,2021-12-11,313,TESSy,ECDC
 Liechtenstein,LI,2021-11-13,4,TESSy,ECDC
 Liechtenstein,LI,2021-11-20,3,TESSy,ECDC
 Liechtenstein,LI,2021-11-27,8,TESSy,ECDC
 Liechtenstein,LI,2021-12-04,11,TESSy,ECDC
+Liechtenstein,LI,2021-12-11,14,TESSy,ECDC
 Malta,MT,2020-03-07,0,TESSy,ECDC
 Malta,MT,2020-03-14,6,TESSy,ECDC
 Malta,MT,2020-03-21,4,TESSy,ECDC
@@ -448,6 +453,7 @@ Malta,MT,2021-11-13,4,TESSy,ECDC
 Malta,MT,2021-11-20,5,TESSy,ECDC
 Malta,MT,2021-11-27,7,TESSy,ECDC
 Malta,MT,2021-12-04,8,TESSy,ECDC
+Malta,MT,2021-12-11,9,TESSy,ECDC
 Belgium,BE,2020-03-21,1291,Public,Scraped
 Belgium,BE,2020-03-28,3232,Public,Scraped
 Belgium,BE,2020-04-04,3756,Public,Scraped
@@ -624,6 +630,7 @@ Croatia,HR,2021-11-13,1674,Public,Scraped
 Croatia,HR,2021-11-20,1849,Public,Scraped
 Croatia,HR,2021-11-27,1730,Public,Scraped
 Croatia,HR,2021-12-04,1539,Public,Scraped
+Croatia,HR,2021-12-11,1467,Public,Scraped
 Denmark,DK,2020-03-07,7,Public,Scraped
 Denmark,DK,2020-03-14,105,Public,Scraped
 Denmark,DK,2020-03-21,320,Public,Scraped
@@ -802,7 +809,7 @@ Estonia,EE,2021-09-25,143,Public,Scraped
 Estonia,EE,2021-10-02,201,Public,Scraped
 Estonia,EE,2021-10-09,218,Public,Scraped
 Estonia,EE,2021-10-16,336,Public,Scraped
-Estonia,EE,2021-10-23,421,Public,Scraped
+Estonia,EE,2021-10-23,422,Public,Scraped
 Estonia,EE,2021-10-30,448,Public,Scraped
 Estonia,EE,2021-11-06,414,Public,Scraped
 Estonia,EE,2021-11-13,342,Public,Scraped
@@ -1364,7 +1371,7 @@ United Kingdom,GB,2020-07-11,1309,Hub,Scraped
 United Kingdom,GB,2020-07-18,1084,Hub,Scraped
 United Kingdom,GB,2020-07-25,1002,Hub,Scraped
 United Kingdom,GB,2020-08-01,853,Hub,Scraped
-United Kingdom,GB,2020-08-08,845,Hub,Scraped
+United Kingdom,GB,2020-08-08,846,Hub,Scraped
 United Kingdom,GB,2020-08-15,717,Hub,Scraped
 United Kingdom,GB,2020-08-22,701,Hub,Scraped
 United Kingdom,GB,2020-08-29,825,Hub,Scraped
@@ -1412,7 +1419,7 @@ United Kingdom,GB,2021-06-12,1340,Hub,Scraped
 United Kingdom,GB,2021-06-19,1591,Hub,Scraped
 United Kingdom,GB,2021-06-26,1795,Hub,Scraped
 United Kingdom,GB,2021-07-03,2716,Hub,Scraped
-United Kingdom,GB,2021-07-10,3977,Hub,Scraped
+United Kingdom,GB,2021-07-10,3976,Hub,Scraped
 United Kingdom,GB,2021-07-17,5222,Hub,Scraped
 United Kingdom,GB,2021-07-24,6333,Hub,Scraped
 United Kingdom,GB,2021-07-31,5710,Hub,Scraped
@@ -1422,15 +1429,15 @@ United Kingdom,GB,2021-08-21,6272,Hub,Scraped
 United Kingdom,GB,2021-08-28,6619,Hub,Scraped
 United Kingdom,GB,2021-09-04,6846,Hub,Scraped
 United Kingdom,GB,2021-09-11,7012,Hub,Scraped
-United Kingdom,GB,2021-09-18,5971,Hub,Scraped
+United Kingdom,GB,2021-09-18,5972,Hub,Scraped
 United Kingdom,GB,2021-09-25,5217,Hub,Scraped
 United Kingdom,GB,2021-10-02,5189,Hub,Scraped
-United Kingdom,GB,2021-10-09,5530,Hub,Scraped
+United Kingdom,GB,2021-10-09,5531,Hub,Scraped
 United Kingdom,GB,2021-10-16,6433,Hub,Scraped
-United Kingdom,GB,2021-10-23,7110,Hub,Scraped
-United Kingdom,GB,2021-10-30,7340,Hub,Scraped
-United Kingdom,GB,2021-11-06,6589,Hub,Scraped
-United Kingdom,GB,2021-11-13,6392,Hub,Scraped
-United Kingdom,GB,2021-11-20,5662,Hub,Scraped
-United Kingdom,GB,2021-11-27,5308,Hub,Scraped
-United Kingdom,GB,2021-12-04,5531,Hub,Scraped
+United Kingdom,GB,2021-10-23,7111,Hub,Scraped
+United Kingdom,GB,2021-10-30,7341,Hub,Scraped
+United Kingdom,GB,2021-11-06,6591,Hub,Scraped
+United Kingdom,GB,2021-11-13,6390,Hub,Scraped
+United Kingdom,GB,2021-11-20,5663,Hub,Scraped
+United Kingdom,GB,2021-11-27,5313,Hub,Scraped
+United Kingdom,GB,2021-12-04,5535,Hub,Scraped
