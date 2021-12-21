@@ -7,7 +7,6 @@ on:
 jobs:
   create-files:
     runs-on: ubuntu-latest
-    if: github.repository == 'covid19-forecast-hub-europe/covid19-forecast-hub-europe'
     env:
       RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
