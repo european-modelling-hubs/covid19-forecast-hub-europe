@@ -7,7 +7,7 @@ on:
 jobs:
   create-files:
     runs-on: ubuntu-latest
-    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
+    if: github.repository == 'covid19-forecast-hub-europe/covid19-forecast-hub-europe'
     env:
       RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -31,7 +31,7 @@ jobs:
 
     - name: Setup R
       uses: r-lib/actions/setup-r@v1
-      
+
     - name: Install system dependencies
       run: sudo apt-get install libcurl4-openssl-dev
 
