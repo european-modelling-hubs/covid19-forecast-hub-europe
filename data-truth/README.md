@@ -24,10 +24,11 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2021-12-17 13:12:02
+As at 2021-12-21 13:33:37
 
 | country   | created    | updated    | issue                                                        | message                                                 | url                                                      |
 | :-------- | :--------- | :--------- | :----------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
+| italy     | 2021-12-20 | 2021-12-20 | covid-19 integrated surveillance data in italy (iss)         | Hello, We’ve been redirected here from a \[discuss…     | <https://github.com/CSSEGISandData/COVID-19/issues/5070> |
 | france    | 2021-12-14 | 2021-12-14 | france covid-19 data file recent instability                 | Hello all, Over several days in the past two week…      | <https://github.com/CSSEGISandData/COVID-19/issues/5038> |
 | germany   | 2021-12-09 | 2021-12-09 | germany data wrong for 8th december reported on 9th december | Hello, the data submitted for germany on the 9th …      | <https://github.com/CSSEGISandData/COVID-19/issues/5014> |
 | lithuania | 2020-12-08 | 2021-12-02 | new source for lithuania data                                | From 2020-11-25 the data for Lithuania is provided…     | <https://github.com/CSSEGISandData/COVID-19/issues/3433> |
