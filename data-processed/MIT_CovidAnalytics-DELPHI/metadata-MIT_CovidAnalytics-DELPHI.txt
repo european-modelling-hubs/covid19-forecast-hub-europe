@@ -5,16 +5,15 @@ model_contributors: Michael Lingzhi Li (Model Creator and Maintainer), Hamza Taz
 website_url: https://www.covidanalytics.io/
 repo_url: https://github.com/COVIDAnalytics/DELPHI
 license: apache-2.0
-team_funding:
 team_model_designation: primary
-data_inputs: JHU, New York Times 
+data_inputs: JHU, New York Times
 methods: This model makes predictions for future cases based on a heavily modified SEIR model taking
     into account underdetection and government intervention. Current interventions are assumed to continue.
 methods_long: This model makes predictions for future cases based on a heavily modified SEIR model.
     New states are added to the SEIR model to account for cases that went undetected, and an explicit death state is included. The infection rate is
     corrected with a nonlinear curve that represents the governmental and societal response (which is assumed)
-    to continue until the end of the pandemic). Key parameters for the disease are fixed using a metanalysis 
+    to continue until the end of the pandemic). Key parameters for the disease are fixed using a metanalysis
     conducted by the CovidAnalytics group of over 150 parameters while epidemiological parameters are fitted
-    to hisorical death counts and detected cases. 
+    to hisorical death counts and detected cases.
 citation: https://www.covidanalytics.io/DELPHI_documentation_pdf
 

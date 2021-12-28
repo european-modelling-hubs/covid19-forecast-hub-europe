@@ -1,0 +1,35 @@
+name: Validations v2
+
+on:
+  pull_request_target:
+    branches: [ main ]
+    paths:
+      - 'data-processed/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.2]
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: 'epiforecasts/covid19-forecast-hub-europe-validations'
+
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+        architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+
+    - name: Install dependencies
+      run: pip3 install -r requirements.txt
+
+    - name: Run Validations
+      env:
+        GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      run: python3 main.py
+
