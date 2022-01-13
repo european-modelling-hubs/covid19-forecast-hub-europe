@@ -24,22 +24,23 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2022-01-12 13:19:37
+As at 2022-01-13 13:20:42
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
-| country   | created    | updated    | issue                                                        | message                                                 | url                                                      |
-| :-------- | :--------- | :--------- | :----------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
-| it        | 2020-03-22 | 2022-01-07 | it’s not taiwan country , it is taiwan province              | Happens in line 214 of csse\_covid\_19\_data/csse\_cov… | <https://github.com/CSSEGISandData/COVID-19/issues/1253> |
-| uk        | 2021-12-29 | 2022-01-06 | discrepancy in uk stats                                      | Confirmed cases for 26th dec in UK is 11891292 and…     | <https://github.com/CSSEGISandData/COVID-19/issues/5112> |
-| denmark   | 2021-12-25 | 2021-12-25 | denmark case and death data now include reinfections         | Hello all, As of December 21, the \[Denmark COVID-…     | <https://github.com/CSSEGISandData/COVID-19/issues/5094> |
-| italy     | 2021-12-20 | 2021-12-20 | covid-19 integrated surveillance data in italy (iss)         | Hello, We’ve been redirected here from a \[discuss…     | <https://github.com/CSSEGISandData/COVID-19/issues/5070> |
-| france    | 2021-12-14 | 2021-12-14 | france covid-19 data file recent instability                 | Hello all, Over several days in the past two week…      | <https://github.com/CSSEGISandData/COVID-19/issues/5038> |
-| germany   | 2021-12-09 | 2021-12-09 | germany data wrong for 8th december reported on 9th december | Hello, the data submitted for germany on the 9th …      | <https://github.com/CSSEGISandData/COVID-19/issues/5014> |
-| lithuania | 2020-12-08 | 2021-12-02 | new source for lithuania data                                | From 2020-11-25 the data for Lithuania is provided…     | <https://github.com/CSSEGISandData/COVID-19/issues/3433> |
-| slovakia  | 2021-11-18 | 2021-11-25 | integration of probable/antigen cases for slovakia           | Hello all, In \#4924, we have integrated probable/…     | <https://github.com/CSSEGISandData/COVID-19/issues/4925> |
-| slovenia  | 2021-11-24 | 2021-11-24 | slovenia - incorrect total vaccine doses administered        | \[JHU\_Slovenia\](<https://user-images.githubusercont>… | <https://github.com/CSSEGISandData/COVID-19/issues/4944> |
+| country   | created    | updated    | issue                                                                  | message                                                 | url                                                      |
+| :-------- | :--------- | :--------- | :--------------------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
+| czechia   | 2022-01-12 | 2022-01-12 | czechia data don’t account for reinfections (and are shifted by a day) | There seem to be two issues with Czech data 1. Re…      | <https://github.com/CSSEGISandData/COVID-19/issues/5192> |
+| it        | 2020-03-22 | 2022-01-07 | it’s not taiwan country , it is taiwan province                        | Happens in line 214 of csse\_covid\_19\_data/csse\_cov… | <https://github.com/CSSEGISandData/COVID-19/issues/1253> |
+| uk        | 2021-12-29 | 2022-01-06 | discrepancy in uk stats                                                | Confirmed cases for 26th dec in UK is 11891292 and…     | <https://github.com/CSSEGISandData/COVID-19/issues/5112> |
+| denmark   | 2021-12-25 | 2021-12-25 | denmark case and death data now include reinfections                   | Hello all, As of December 21, the \[Denmark COVID-…     | <https://github.com/CSSEGISandData/COVID-19/issues/5094> |
+| italy     | 2021-12-20 | 2021-12-20 | covid-19 integrated surveillance data in italy (iss)                   | Hello, We’ve been redirected here from a \[discuss…     | <https://github.com/CSSEGISandData/COVID-19/issues/5070> |
+| france    | 2021-12-14 | 2021-12-14 | france covid-19 data file recent instability                           | Hello all, Over several days in the past two week…      | <https://github.com/CSSEGISandData/COVID-19/issues/5038> |
+| germany   | 2021-12-09 | 2021-12-09 | germany data wrong for 8th december reported on 9th december           | Hello, the data submitted for germany on the 9th …      | <https://github.com/CSSEGISandData/COVID-19/issues/5014> |
+| lithuania | 2020-12-08 | 2021-12-02 | new source for lithuania data                                          | From 2020-11-25 the data for Lithuania is provided…     | <https://github.com/CSSEGISandData/COVID-19/issues/3433> |
+| slovakia  | 2021-11-18 | 2021-11-25 | integration of probable/antigen cases for slovakia                     | Hello all, In \#4924, we have integrated probable/…     | <https://github.com/CSSEGISandData/COVID-19/issues/4925> |
+| slovenia  | 2021-11-24 | 2021-11-24 | slovenia - incorrect total vaccine doses administered                  | \[JHU\_Slovenia\](<https://user-images.githubusercont>… | <https://github.com/CSSEGISandData/COVID-19/issues/4944> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
