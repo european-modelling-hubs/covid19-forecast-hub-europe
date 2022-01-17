@@ -1,0 +1,11 @@
+team_name: FD-AN, Folkhälsomyndigheten
+model_name: c19inbel
+model_abbr: fohm-c19inbel
+model_contributors: Sharon Kuhlmann-Berenzon <sharon.kuhlmann-b@folkhalsomyndigheten.se>, Martin Camitz <martin.camitz@folkhalsomyndigheten.se>
+website_url: https://git.folkhalsomyndigheten.se/martin.camitz/c19inlbel
+license: cc-by-4.0
+team_model_designation: primary
+methods: Negative binomial fit/projection on reported cases by age group, then converted to hospitalizations by risk assumptions updated circa monthly.
+team_funding: Folkhälsomyndigheten
+repo_url: https://git.folkhalsomyndigheten.se/martin.camitz/c19inlbel
+data_inputs: official reported cases

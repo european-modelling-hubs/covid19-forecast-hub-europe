@@ -6,7 +6,6 @@ on:
 jobs:
   scores:
     runs-on: ubuntu-20.04
-    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
     env:
       RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}

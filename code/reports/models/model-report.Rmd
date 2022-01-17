@@ -11,7 +11,7 @@ output:
     theme: yeti
     self_contained: false
     css: https://covid19forecasthub.eu/css/styles.css
-title: Weekly reports
+title: "Weekly reports (`r params$report_date`)"
 ---
 
 ```{r setup, include=FALSE}

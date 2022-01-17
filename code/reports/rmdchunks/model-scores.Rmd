@@ -1,7 +1,5 @@
 ## Predictive performance {.tabset .tabset-fade}
 
-In the following plots, the panels on the left show the skill of the model compared to the ensemble and baseline models, and the panels on the right the corresponding forecasts.
-
 ```{r prepare-data, echo = FALSE}
 ## We use the median if given, otherwise the point forecast.
 ## Here we first convert the point forecast to the median for any

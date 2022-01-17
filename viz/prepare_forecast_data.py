@@ -84,6 +84,7 @@ temp.loc[:, 'quantile'] = np.nan
 temp.target = '0 wk ahead ' + temp.merge_target.replace('_', ' ', regex=True)
 temp.value = temp.truth
 temp.target_end_date = temp.saturday0
+temp = temp.dropna(subset = ['value'])
 
 # concat newly added last observed values (0 wk ahead)
 df = pd.concat([df, temp])
@@ -111,7 +112,7 @@ def createForecastDataItem(row):
         'forecast_date': row['forecast_date'],
         'location': row['location'],
         'type': row['type'],
-        'value': row['value'],
+        'value': int(row['value']),
         'timezero': row['timezero'],
         'model': row['model'],
         'quantile': row['quantile'],
@@ -131,15 +132,18 @@ result = {}
 for index, row in df.iterrows():
     item = createForecastDataItem(row)
     
-    location = item['location']
-    target_type = item['target']['type']
+    location = item.pop('location')
     if(location not in result):
         result[location] = {}
+    
+    target_type = item['target'].pop('type')
     if(target_type not in result[location]):
         result[location][target_type] = {'data': [], 'availableDates': []}
     
-    if(item['timezero'] not in result[location][target_type]['availableDates']):
-        result[location][target_type]['availableDates'].append(item['timezero'])
+    timezero = item['timezero']
+    if(timezero not in result[location][target_type]['availableDates']):
+        result[location][target_type]['availableDates'].append(timezero)
+    
     result[location][target_type]['data'].append(item)
     
 json.dump(result, open("viz/forecasts_to_plot.json","w"), sort_keys=True)

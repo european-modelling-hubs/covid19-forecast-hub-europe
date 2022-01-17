@@ -2,6 +2,9 @@ library(here)
 library(dplyr)
 library(lubridate)
 library(readr)
+library(httr)
+library(jsonlite)
+
 data_dir <- here("data-truth", "ECDC")
 non_eu_filepath <- here(data_dir, "raw", "non-eu.csv")
 
@@ -18,13 +21,16 @@ uk <- read_csv(uk) %>%
   mutate(location = "GB")
 
 # Switzerland
-#   https://opendata.swiss/en/dataset/covid-19-schweiz
+# Retrieve hospitalization data from Swiss FOPH
+foph <- GET("https://www.covid19.admin.ch/api/data/context")
+foph <- fromJSON(rawToChar(foph$content))
+ch <- read.csv(foph$sources$individual$csv$daily$hosp)
+ch$datum <- ymd(ch$datum)
+ch <- subset(ch, geoRegion == "CH", c("datum", "entries"))
+names(ch) <- c("date", "value")
+ch$location_name <- "Switzerland"
+ch$location <- "CH"
 
-ch <- "https://www.covid19.admin.ch/api/data/20211109-zps7qksn/sources/COVID19Hosp_geoRegion.csv" 
-ch <- read_csv(ch) %>%
-  select(location = geoRegion, date = datum, value = entries) %>%
-  filter(location == "CH") %>%
-  mutate(location_name = "Switzerland")
 
 # Format ------------------------------------------------------------------
 non_eu <- bind_rows(uk, ch) %>%

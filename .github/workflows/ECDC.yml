@@ -7,7 +7,6 @@ on:
 jobs:
   get_ecdc:
     runs-on: ubuntu-20.04
-    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
     env:
       RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -20,7 +19,7 @@ jobs:
 
     - name: Install R dependencies
       run: |
-        install.packages(c("curl", "R.utils", "here", "readr", "lubridate", "dplyr", "tidyr", "ISOweek", "stringi", "remotes", "janitor", "ggplot2", "scales", "svglite"))
+        install.packages(c("curl", "R.utils", "here", "readr", "lubridate", "dplyr", "tidyr", "ISOweek", "stringi", "remotes", "janitor", "ggplot2", "scales", "svglite", "httr", "jsonlite"))
         remotes::install_github("reichlab/covidHubUtils")
       shell: Rscript {0}
 

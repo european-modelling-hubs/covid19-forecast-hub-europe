@@ -2,12 +2,11 @@ name: "Ensemble"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 11 * * 2"
+    - cron: "15 11 * * 2,3"
 
 jobs:
   ensemble:
     runs-on: ubuntu-20.04
-    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
     env:
       RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
