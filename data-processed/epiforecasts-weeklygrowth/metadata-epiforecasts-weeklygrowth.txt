@@ -4,8 +4,8 @@ model_abbr: epiforecasts-weeklygrowth
 model_contributors: Sam Abbott (London School of Hygiene and Tropical Medicine) <sam.abbott@lshtm.ac.uk>
 website_url: https://samabbott.co.uk
 license: MIT
-team_model_designation: primary
-methods: A Bayesian autoregressive model using weekly incidence data designed to run as a Github action. Both cases and the growth rate are assumed to be AR(1) processes with the growth rate being differenced and scaled by a decay parameter. An application of the forecast.vocs R package.
+team_model_designation: secondary
+methods: A Bayesian autoregressive model using weekly incidence data, application of the forecast.vocs R package.
 institution_affil: Centre for Mathematical Modelling, London School of Hygiene and Tropical Medicine
 data_inputs: Reported cases by date of report aggregated to weeks.
 citation: none
