@@ -24,13 +24,14 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2022-01-17 13:31:48
+As at 2022-01-18 13:21:54
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
 | country   | created    | updated    | issue                                                                  | message                                                 | url                                                      |
 | :-------- | :--------- | :--------- | :--------------------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
+| lithuania | 2022-01-18 | 2022-01-18 | daily cases are showing incorrect for lithuania on january 12 and 13   | Number of daily cases for Lithuania on 12th Januar…     | <https://github.com/CSSEGISandData/COVID-19/issues/5230> |
 | czechia   | 2022-01-12 | 2022-01-12 | czechia data don’t account for reinfections (and are shifted by a day) | There seem to be two issues with Czech data 1. Re…      | <https://github.com/CSSEGISandData/COVID-19/issues/5192> |
 | it        | 2020-03-22 | 2022-01-07 | it’s not taiwan country , it is taiwan province                        | Happens in line 214 of csse\_covid\_19\_data/csse\_cov… | <https://github.com/CSSEGISandData/COVID-19/issues/1253> |
 | uk        | 2021-12-29 | 2022-01-06 | discrepancy in uk stats                                                | Confirmed cases for 26th dec in UK is 11891292 and…     | <https://github.com/CSSEGISandData/COVID-19/issues/5112> |
