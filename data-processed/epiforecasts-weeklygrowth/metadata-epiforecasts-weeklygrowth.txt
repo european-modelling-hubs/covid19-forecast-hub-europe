@@ -3,7 +3,7 @@ model_name: weeklygrowth
 model_abbr: epiforecasts-weeklygrowth
 model_contributors: Sam Abbott (London School of Hygiene and Tropical Medicine) <sam.abbott@lshtm.ac.uk>
 website_url: https://samabbott.co.uk
-license: MIT
+license: mit
 team_model_designation: secondary
 methods: A Bayesian autoregressive model using weekly incidence data, application of the forecast.vocs R package.
 institution_affil: Centre for Mathematical Modelling, London School of Hygiene and Tropical Medicine
