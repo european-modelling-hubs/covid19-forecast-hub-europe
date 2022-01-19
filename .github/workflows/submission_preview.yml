@@ -6,6 +6,10 @@ on:
     paths:
       - 'data-processed/**'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   submission_preview:
     runs-on: ubuntu-20.04
