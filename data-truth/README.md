@@ -24,14 +24,14 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2022-01-20 13:23:48
+As at 2022-01-21 13:23:58
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
 | country   | created    | updated    | issue                                                                  | message                                                 | url                                                      |
 | :-------- | :--------- | :--------- | :--------------------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
-| france    | 2022-01-20 | 2022-01-20 | \[france\] wrong daily cases                                           | Since 3 days the number of new cases for France is…     | <https://github.com/CSSEGISandData/COVID-19/issues/5253> |
+| finland   | 2022-01-20 | 2022-01-20 | finland data outdated                                                  | Hi\! THL of Finland deprecated its old monitors at…     | <https://github.com/CSSEGISandData/COVID-19/issues/5264> |
 | lithuania | 2022-01-18 | 2022-01-18 | daily cases are showing incorrect for lithuania on january 12 and 13   | Number of daily cases for Lithuania on 12th Januar…     | <https://github.com/CSSEGISandData/COVID-19/issues/5230> |
 | czechia   | 2022-01-12 | 2022-01-12 | czechia data don’t account for reinfections (and are shifted by a day) | There seem to be two issues with Czech data 1. Re…      | <https://github.com/CSSEGISandData/COVID-19/issues/5192> |
 | it        | 2020-03-22 | 2022-01-07 | it’s not taiwan country , it is taiwan province                        | Happens in line 214 of csse\_covid\_19\_data/csse\_cov… | <https://github.com/CSSEGISandData/COVID-19/issues/1253> |
@@ -41,7 +41,6 @@ As at 2022-01-20 13:23:48
 | france    | 2021-12-14 | 2021-12-14 | france covid-19 data file recent instability                           | Hello all, Over several days in the past two week…      | <https://github.com/CSSEGISandData/COVID-19/issues/5038> |
 | germany   | 2021-12-09 | 2021-12-09 | germany data wrong for 8th december reported on 9th december           | Hello, the data submitted for germany on the 9th …      | <https://github.com/CSSEGISandData/COVID-19/issues/5014> |
 | lithuania | 2020-12-08 | 2021-12-02 | new source for lithuania data                                          | From 2020-11-25 the data for Lithuania is provided…     | <https://github.com/CSSEGISandData/COVID-19/issues/3433> |
-| slovakia  | 2021-11-18 | 2021-11-25 | integration of probable/antigen cases for slovakia                     | Hello all, In \#4924, we have integrated probable/…     | <https://github.com/CSSEGISandData/COVID-19/issues/4925> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
