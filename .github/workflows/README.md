@@ -14,7 +14,8 @@
 
 ## Submission checks
 
-| Action name                              | Language |
-|------------------------------------------|----------|
-| [`ValidationV2.yml`](ValidationV2.yml)   | Python   |
-| [`Validations-R.yml`](Validations-R.yml) | R        |
+| Action name                                        | Language |
+|----------------------------------------------------|----------|
+| [`submission_preview.yml`](submission_preview.yml) | R        |
+| [`ValidationV2.yml`](ValidationV2.yml)             | Python   |
+| [`Validations-R.yml`](Validations-R.yml)           | R        |
