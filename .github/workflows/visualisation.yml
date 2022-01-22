@@ -47,7 +47,6 @@ jobs:
 
     - name: Visualization (python)
       run: |
-        cp data-locations/locations_eu.csv viz/location_codes.csv
         python3 ./viz/prepare_forecast_data.py
 
     - name: Upload files to Azure blob storage

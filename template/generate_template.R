@@ -4,7 +4,7 @@
 
 # Get EU + EFTA + UK country names + codes ---------------------------------------------
 
-# 
+#
 # packages: countrycode eurostat dplyr readr
 
 library(dplyr)
@@ -57,30 +57,3 @@ forecast_date <- tibble::tibble(
   forecast_1_wk_ahead_end = forecast_1_wk_ahead_start + 6)
 
 write.csv(forecast_date, file = paste0(here::here("template/forecast-dates.csv")), row.names = FALSE)
-
-
-# Daily to epiweek conversion ---------------------------------------------
-
-library(magrittr)
-
-epiweeks <- tibble::tibble(
-    date = seq.Date(as.Date("2019-12-29"), as.Date("2023-01-02"), by = 1),
-    epi_week	= paste0("ew", lubridate::epiweek(date)),
-    epi_year = ifelse(weekdays(date) == "Sunday", lubridate::year(date), NA)) %>%
-  tidyr::fill(epi_year, .direction = "down") %>%
-  dplyr::mutate(epi_week = paste0(epi_year, "_", epi_week),
-                epi_year = NULL)
-
-write.csv(epiweeks, file = here::here("template/date-to-epiweek.csv"), row.names = FALSE)
-
-
-
-
-
-
-
-
-
-
-
-
