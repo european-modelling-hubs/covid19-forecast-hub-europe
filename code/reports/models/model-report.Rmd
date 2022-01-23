@@ -5,7 +5,7 @@ params:
   plot_weeks: 1
   data_weeks: "10"
   model: "EuroCOVIDhub-ensemble"
-  config: "https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/forecasthub.yml"
+  config: "https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/project-config.json"
 output:
   html_document:
     theme: yeti
