@@ -87,6 +87,20 @@ Hospitalisation data can be difficult to produce and interpret, and is not consi
 
 - `r hosp_locations`
 
+```{r hosp-data-warnings}
+gaps <- hosp_data %>%
+  group_by(location_name) %>%
+  slice_max(date, n = 2) %>%
+  mutate(date_diff = max(date) - date) %>%
+  filter(date < max(date) & date_diff > 14) %>%
+  pull(location_name)
+show_text_gaps <- length(gaps) > 0
+```
+
+```{r, eval=show_text_gaps, results="asis"}
+cat(paste0("- **Data warning!** Recent missing data in: ", knitr::combine_words(gaps)))
+```
+
 ![Plot of truth data from different sources for all countries covered by the forecast hub](plots/hospitalisations.svg)
 
 The Hub validates and evaluates forecasts against the single dataset in [ECDC/truth_ECDC-Incident Hospitalizations.csv](ECDC/truth_ECDC-Incident%20Hospitalizations.csv). While we provide raw data files with multiple sources for hospitalisation data in each location, this is for reference only to cover daily as well as weekly data.
