@@ -57,14 +57,25 @@ non_eu <- read_csv(here(data_dir, "raw", "non-eu.csv")) %>%
             .groups = "drop") %>%
   filter(n == 7)
 
-# Plot all countries/sources ----------------------------------------------
+# Join all sources, all countries -----------------------------------------
 all <- bind_rows(ecdc_all,
-                 non_eu %>%
-                   mutate(selected_source = TRUE)) %>%
-  mutate(origin = paste(source, type, sep = "-")) %>%
-  select(location_name, location, date, value, selected_source, origin)
+                 non_eu %>% mutate(selected_source = TRUE))
 
+# Check selected data are fresh (< 2 weeks old) -----------------------
+location_stale <- all %>%
+  filter(selected_source) %>%
+  group_by(location, source, type) %>%
+  summarise(n = n(),
+            max_date = max(date)) %>%
+  mutate(stale = ifelse(max_date < Sys.Date() - 16, TRUE, FALSE)) %>%
+  filter(stale) %>%
+  pull(location)
+
+all <- filter(all, !location %in% location_stale)
+
+# Plot all countries/sources ----------------------------------------------
 plot_all <- all %>%
+  mutate(origin = paste(source, type, sep = "-")) %>%
   filter(date >= Sys.Date() - 6*7 &
            location_name %in% c(sources$location_name, non_eu$location_name)) %>%
   mutate(selected_source = replace_na(selected_source, FALSE)) %>%
@@ -88,9 +99,8 @@ ggsave(here("data-truth", "plots", "hospitalisations.svg"),
 
 # Combine + save ------------------------------------------------------------
 # Include only countries with a selected source
-ecdc <- ecdc_all %>%
-  filter(selected_source)
-hosp_data <- bind_rows(ecdc, non_eu) %>%
+hosp_data <- all %>% 
+  filter(selected_source) %>%
   select(location_name, location, date, value, source, type)
 
 # Shift dates to represent Sun-Sat MMWR epiweek
