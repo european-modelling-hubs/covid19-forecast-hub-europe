@@ -65,10 +65,8 @@ all <- bind_rows(ecdc_all,
 location_stale <- all %>%
   filter(selected_source) %>%
   group_by(location, source, type) %>%
-  summarise(n = n(),
-            max_date = max(date)) %>%
-  mutate(stale = ifelse(max_date < Sys.Date() - 16, TRUE, FALSE)) %>%
-  filter(stale) %>%
+  summarise(max_date = max(date), .groups = "drop") %>%
+  filter(max_date < Sys.Date() - 16) %>%
   pull(location)
 
 all <- filter(all, !location %in% location_stale)
