@@ -24,13 +24,14 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2022-01-26 13:13:44
+As at 2022-01-27 13:17:07
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
 | country   | created    | updated    | issue                                                                  | message                                                 | url                                                      |
 | :-------- | :--------- | :--------- | :--------------------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
+| italy     | 2022-01-27 | 2022-01-27 | italy cases                                                            | Good morning. Italy COVID cases are wrong since …       | <https://github.com/CSSEGISandData/COVID-19/issues/5295> |
 | finland   | 2022-01-20 | 2022-01-26 | finland data outdated                                                  | Hi\! THL of Finland deprecated its old monitors at…     | <https://github.com/CSSEGISandData/COVID-19/issues/5264> |
 | austria   | 2022-01-23 | 2022-01-23 | incorrect data for 19/01/2022 to 22/01/2022 for austria                | I originally filed this against ourworldindata as …     | <https://github.com/CSSEGISandData/COVID-19/issues/5279> |
 | czechia   | 2022-01-12 | 2022-01-12 | czechia data don’t account for reinfections (and are shifted by a day) | There seem to be two issues with Czech data 1. Re…      | <https://github.com/CSSEGISandData/COVID-19/issues/5192> |
@@ -56,9 +57,8 @@ not consistent across all the countries in the ECDC Forecast Hub. To
 keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
-  - Belgium, Croatia, Cyprus, Czechia, Denmark, Estonia, France, Greece,
-    Iceland, Ireland, Latvia, Liechtenstein, Malta, Norway, Slovenia,
-    Switzerland, United Kingdom
+  - Belgium, Czechia, Denmark, Estonia, France, Iceland, Ireland,
+    Latvia, Malta, Norway, Slovenia, Switzerland, United Kingdom
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)
