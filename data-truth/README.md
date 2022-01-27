@@ -9,11 +9,11 @@ We evaluate forecasts of cases and deaths against [Johns Hopkins
 University data](https://github.com/CSSEGISandData/COVID-19), and we
 recommend using this dataset as the basis for forecasts.
 
--   Daily numbers of cases and deaths are available to download from
+  - Daily numbers of cases and deaths are available to download from
     [JHU](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series),
     or from [our
     repository](https://github.com/epiforecasts/covid19-forecast-hub-europe/data-truth).
--   JHU also provide [country
+  - JHU also provide [country
     metadata](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv),
     including population counts and ISO-3 codes.
 
@@ -24,14 +24,15 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2022-01-25 12:16:02
+As at 2022-01-27 13:26:38
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
 | country   | created    | updated    | issue                                                                  | message                                                 | url                                                      |
-|:----------|:-----------|:-----------|:-----------------------------------------------------------------------|:--------------------------------------------------------|:---------------------------------------------------------|
-| finland   | 2022-01-20 | 2022-01-25 | finland data outdated                                                  | Hi! THL of Finland deprecated its old monitors at…      | <https://github.com/CSSEGISandData/COVID-19/issues/5264> |
+| :-------- | :--------- | :--------- | :--------------------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
+| italy     | 2022-01-27 | 2022-01-27 | italy cases                                                            | Good morning. Italy COVID cases are wrong since …       | <https://github.com/CSSEGISandData/COVID-19/issues/5295> |
+| finland   | 2022-01-20 | 2022-01-26 | finland data outdated                                                  | Hi\! THL of Finland deprecated its old monitors at…     | <https://github.com/CSSEGISandData/COVID-19/issues/5264> |
 | austria   | 2022-01-23 | 2022-01-23 | incorrect data for 19/01/2022 to 22/01/2022 for austria                | I originally filed this against ourworldindata as …     | <https://github.com/CSSEGISandData/COVID-19/issues/5279> |
 | czechia   | 2022-01-12 | 2022-01-12 | czechia data don’t account for reinfections (and are shifted by a day) | There seem to be two issues with Czech data 1. Re…      | <https://github.com/CSSEGISandData/COVID-19/issues/5192> |
 | it        | 2020-03-22 | 2022-01-07 | it’s not taiwan country , it is taiwan province                        | Happens in line 214 of csse\_covid\_19\_data/csse\_cov… | <https://github.com/CSSEGISandData/COVID-19/issues/1253> |
@@ -56,11 +57,10 @@ not consistent across all the countries in the ECDC Forecast Hub. To
 keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
--   Belgium, Croatia, Cyprus, Czechia, Denmark, Estonia, France, Greece,
-    Iceland, Ireland, Latvia, Liechtenstein, Malta, Norway, Slovenia,
-    Switzerland, United Kingdom
+  - Belgium, Czechia, Denmark, Estonia, France, Iceland, Ireland,
+    Latvia, Malta, Norway, Slovenia, Switzerland, United Kingdom
 
--   **Data warning!** Recent missing data in: Denmark
+  - **Data warning\!** Recent missing data in: Denmark
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)
@@ -78,7 +78,7 @@ We do not use or evaluate against these data, but the following might be
 useful for modelling targets:
 
 | Data                | Description                                                                                                                              | Source | Link                                                                                                                            |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------|--------|---------------------------------------------------------------------------------------------------------------------------------|
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------- |
 | Vaccination         | Number of vaccine doses distributed by manufacturers, number of first, second and unspecified doses administered                         | ECDC   | [Data on COVID-19 vaccination in the EU/EEA](https://www.ecdc.europa.eu/en/publications-data/data-covid-19-vaccination-eu-eea)  |
 | Variants of concern | Volume of COVID-19 sequencing, the number and percentage distribution of VOC for each country, week and variant submitted since 2020-W40 | ECDC   | [Data on SARS-CoV-2 variants in the EU/EEA](https://www.ecdc.europa.eu/en/publications-data/data-virus-variants-covid-19-eueea) |
 | Testing             | Weekly testing rate and weekly test positivity                                                                                           | ECDC   | [Data on testing for COVID-19 by week and country](https://www.ecdc.europa.eu/en/publications-data/covid-19-testing)            |
