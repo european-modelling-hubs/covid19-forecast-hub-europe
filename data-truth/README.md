@@ -24,7 +24,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2022-01-29 13:22:22
+As at 2022-01-30 13:21:56
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
@@ -59,8 +59,6 @@ forecasts for the following locations only:
   - Belgium, Cyprus, Czechia, Denmark, Estonia, France, Iceland,
     Ireland, Latvia, Liechtenstein, Malta, Norway, Slovenia,
     Switzerland, United Kingdom
-
-  - **Data warning\!** Recent missing data in: Denmark
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)
