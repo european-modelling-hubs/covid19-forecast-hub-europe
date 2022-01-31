@@ -22,6 +22,16 @@ properties:
     format: uri
   license:
     type: string
+    enum:
+      - "apache-2.0"
+      - "cc-by-4.0"
+      - "cc-by-nc-4.0"
+      - "cc-by-nc-nd-4.0"
+      - "cc-by-sa-4.0"
+      - "gpl-3.0"
+      - "lgpl-3.0"
+      - "mit"
+      - "other"
   team_model_designation:
     type: string
     enum:
