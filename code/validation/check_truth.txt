@@ -1540,3 +1540,10 @@ Latest check of truth data: 2022-01-31 13:25:04
 
 No errors detected.
 
+Latest check of truth data: 2022-02-01 13:13:29
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2022-01-31:
+
+- Negative incidence in the following locations: ['Estonia'].
+
