@@ -34,7 +34,7 @@ jobs:
         git config user.email "action@github.com"
         git config user.name "GitHub Action - mean ensemble"
         git add --all
-        git commit -m "Build ensemble"
+        git diff-index --quiet HEAD || git commit -m "Build ensemble"
         git pull --rebase
         git push
         echo "pushed to github"
