@@ -1,4 +1,7 @@
 location_name,location,date,value,source,type
+Belgium,BE,2020-12-12,185,Public,Scraped
+Belgium,BE,2020-12-13,187,Public,Scraped
+Belgium,BE,2020-12-14,125,Public,Scraped
 Belgium,BE,2020-12-15,225,Public,Scraped
 Belgium,BE,2020-12-16,201,Public,Scraped
 Belgium,BE,2020-12-17,208,Public,Scraped
@@ -464,10 +467,6 @@ Belgium,BE,2020-12-08,215,Public,Scraped
 Belgium,BE,2020-12-09,185,Public,Scraped
 Belgium,BE,2020-12-10,207,Public,Scraped
 Belgium,BE,2020-12-11,184,Public,Scraped
-Belgium,BE,2020-12-12,185,Public,Scraped
-Belgium,BE,2020-12-13,187,Public,Scraped
-Belgium,BE,2020-12-14,125,Public,Scraped
-Belgium,BE,2021-07-05,11,Public,Scraped
 Belgium,BE,2021-07-06,24,Public,Scraped
 Belgium,BE,2021-07-07,28,Public,Scraped
 Belgium,BE,2021-07-08,7,Public,Scraped
@@ -623,7 +622,7 @@ Belgium,BE,2021-07-01,7,Public,Scraped
 Belgium,BE,2021-07-02,22,Public,Scraped
 Belgium,BE,2021-07-03,17,Public,Scraped
 Belgium,BE,2021-07-04,16,Public,Scraped
-Belgium,BE,2021-12-08,295,Public,Scraped
+Belgium,BE,2021-07-05,11,Public,Scraped
 Belgium,BE,2021-12-09,309,Public,Scraped
 Belgium,BE,2021-12-10,292,Public,Scraped
 Belgium,BE,2021-12-11,265,Public,Scraped
@@ -677,17 +676,19 @@ Belgium,BE,2022-01-27,412,Public,Scraped
 Belgium,BE,2022-01-28,417,Public,Scraped
 Belgium,BE,2022-01-29,360,Public,Scraped
 Belgium,BE,2022-01-30,265,Public,Scraped
-Belgium,BE,2022-01-31,336,Public,Scraped
-Belgium,BE,2022-02-01,414,Public,Scraped
-Belgium,BE,2021-12-03,298,Public,Scraped
-Belgium,BE,2021-12-04,312,Public,Scraped
-Belgium,BE,2021-11-29,277,Public,Scraped
+Belgium,BE,2022-01-31,335,Public,Scraped
+Belgium,BE,2022-02-01,422,Public,Scraped
+Belgium,BE,2022-02-02,363,Public,Scraped
 Belgium,BE,2021-11-30,386,Public,Scraped
 Belgium,BE,2021-12-01,350,Public,Scraped
 Belgium,BE,2021-12-02,325,Public,Scraped
-Belgium,BE,2021-12-05,226,Public,Scraped
+Belgium,BE,2021-12-03,298,Public,Scraped
+Belgium,BE,2021-12-04,312,Public,Scraped
+Belgium,BE,2021-11-29,277,Public,Scraped
 Belgium,BE,2021-12-06,208,Public,Scraped
 Belgium,BE,2021-12-07,332,Public,Scraped
+Belgium,BE,2021-12-08,295,Public,Scraped
+Belgium,BE,2021-12-05,226,Public,Scraped
 Croatia,HR,2020-04-15,8,Public,Scraped
 Croatia,HR,2020-04-16,22,Public,Scraped
 Croatia,HR,2020-04-17,28,Public,Scraped
@@ -1323,6 +1324,27 @@ Croatia,HR,2022-01-06,209,Public,Scraped
 Croatia,HR,2022-01-07,121,Public,Scraped
 Croatia,HR,2022-01-08,208,Public,Scraped
 Croatia,HR,2022-01-09,147,Public,Scraped
+Croatia,HR,2022-01-10,123,Public,Scraped
+Croatia,HR,2022-01-11,165,Public,Scraped
+Croatia,HR,2022-01-12,188,Public,Scraped
+Croatia,HR,2022-01-13,171,Public,Scraped
+Croatia,HR,2022-01-14,163,Public,Scraped
+Croatia,HR,2022-01-15,179,Public,Scraped
+Croatia,HR,2022-01-16,147,Public,Scraped
+Croatia,HR,2022-01-17,135,Public,Scraped
+Croatia,HR,2022-01-18,224,Public,Scraped
+Croatia,HR,2022-01-19,195,Public,Scraped
+Croatia,HR,2022-01-20,230,Public,Scraped
+Croatia,HR,2022-01-21,207,Public,Scraped
+Croatia,HR,2022-01-22,246,Public,Scraped
+Croatia,HR,2022-01-23,169,Public,Scraped
+Croatia,HR,2022-01-24,177,Public,Scraped
+Croatia,HR,2022-01-25,252,Public,Scraped
+Croatia,HR,2022-01-26,279,Public,Scraped
+Croatia,HR,2022-01-27,253,Public,Scraped
+Croatia,HR,2022-01-28,224,Public,Scraped
+Croatia,HR,2022-01-29,246,Public,Scraped
+Croatia,HR,2022-01-30,201,Public,Scraped
 Cyprus,CY,2019-12-04,1,TESSy,Scraped
 Cyprus,CY,2020-01-01,1,TESSy,Scraped
 Cyprus,CY,2020-02-02,1,TESSy,Scraped
@@ -3083,6 +3105,7 @@ Denmark,DK,2022-01-29,271,Public,Scraped
 Denmark,DK,2022-01-30,231,Public,Scraped
 Denmark,DK,2022-01-31,255,Public,Scraped
 Denmark,DK,2022-02-01,337,Public,Scraped
+Denmark,DK,2022-02-02,342,Public,Scraped
 Estonia,EE,2020-01-06,1,Public,Scraped
 Estonia,EE,2020-01-18,1,Public,Scraped
 Estonia,EE,2020-02-12,0,Public,Scraped
@@ -4478,6 +4501,7 @@ France,FR,2022-01-29,1911,Public,Scraped
 France,FR,2022-01-30,1090,Public,Scraped
 France,FR,2022-01-31,3147,Public,Scraped
 France,FR,2022-02-01,3917,Public,Scraped
+France,FR,2022-02-02,3230,Public,Scraped
 Germany,DE,2020-01-01,6,TESSy,Scraped
 Germany,DE,2020-01-02,6,TESSy,Scraped
 Germany,DE,2020-01-03,2,TESSy,Scraped
@@ -5157,6 +5181,34 @@ Germany,DE,2021-11-06,213,TESSy,Scraped
 Germany,DE,2021-11-07,155,TESSy,Scraped
 Germany,DE,2021-11-08,55,TESSy,Scraped
 Germany,DE,2021-11-09,1,TESSy,Scraped
+Greece,GR,2020-04-20,7,Public,Scraped
+Greece,GR,2020-04-21,11,Public,Scraped
+Greece,GR,2020-04-22,8,Public,Scraped
+Greece,GR,2020-04-23,19,Public,Scraped
+Greece,GR,2020-04-24,13,Public,Scraped
+Greece,GR,2020-04-25,7,Public,Scraped
+Greece,GR,2020-04-26,2,Public,Scraped
+Greece,GR,2020-04-27,4,Public,Scraped
+Greece,GR,2020-04-28,12,Public,Scraped
+Greece,GR,2020-04-29,4,Public,Scraped
+Greece,GR,2020-04-30,5,Public,Scraped
+Greece,GR,2020-05-01,6,Public,Scraped
+Greece,GR,2020-05-02,2,Public,Scraped
+Greece,GR,2020-05-03,5,Public,Scraped
+Greece,GR,2020-05-04,4,Public,Scraped
+Greece,GR,2020-05-05,9,Public,Scraped
+Greece,GR,2020-05-06,10,Public,Scraped
+Greece,GR,2020-05-07,10,Public,Scraped
+Greece,GR,2020-05-08,3,Public,Scraped
+Greece,GR,2020-05-09,2,Public,Scraped
+Greece,GR,2020-05-10,5,Public,Scraped
+Greece,GR,2020-05-11,6,Public,Scraped
+Greece,GR,2020-05-12,3,Public,Scraped
+Greece,GR,2020-05-13,4,Public,Scraped
+Greece,GR,2020-05-14,2,Public,Scraped
+Greece,GR,2020-05-15,2,Public,Scraped
+Greece,GR,2020-05-16,1,Public,Scraped
+Greece,GR,2020-05-17,2,Public,Scraped
 Greece,GR,2020-05-18,3,Public,Scraped
 Greece,GR,2020-05-19,2,Public,Scraped
 Greece,GR,2020-05-20,2,Public,Scraped
@@ -5684,34 +5736,86 @@ Greece,GR,2021-12-14,353,Public,Scraped
 Greece,GR,2021-12-15,398,Public,Scraped
 Greece,GR,2021-12-16,319,Public,Scraped
 Greece,GR,2021-12-17,332,Public,Scraped
-Greece,GR,2020-05-02,2,Public,Scraped
-Greece,GR,2020-05-03,5,Public,Scraped
-Greece,GR,2020-05-04,4,Public,Scraped
-Greece,GR,2020-05-05,9,Public,Scraped
-Greece,GR,2020-05-06,10,Public,Scraped
-Greece,GR,2020-05-07,10,Public,Scraped
-Greece,GR,2020-05-08,3,Public,Scraped
-Greece,GR,2020-05-09,2,Public,Scraped
-Greece,GR,2020-05-10,5,Public,Scraped
-Greece,GR,2020-05-11,6,Public,Scraped
-Greece,GR,2020-05-12,3,Public,Scraped
-Greece,GR,2020-05-13,4,Public,Scraped
-Greece,GR,2020-05-14,2,Public,Scraped
-Greece,GR,2020-05-15,2,Public,Scraped
-Greece,GR,2020-05-16,1,Public,Scraped
-Greece,GR,2020-05-17,2,Public,Scraped
-Greece,GR,2020-03-23,45,Public,Scraped
-Greece,GR,2020-03-24,48,Public,Scraped
-Greece,GR,2020-03-25,43,Public,Scraped
-Greece,GR,2020-03-26,45,Public,Scraped
-Greece,GR,2020-03-27,61,Public,Scraped
+Greece,GR,2021-12-22,312,Public,Scraped
+Greece,GR,2021-12-23,342,Public,Scraped
+Greece,GR,2021-12-24,312,Public,Scraped
+Greece,GR,2021-12-25,302,Public,Scraped
+Greece,GR,2021-12-26,289,Public,Scraped
+Greece,GR,2021-12-27,343,Public,Scraped
+Greece,GR,2021-12-28,413,Public,Scraped
+Greece,GR,2021-12-29,422,Public,Scraped
+Greece,GR,2021-12-30,439,Public,Scraped
+Greece,GR,2021-12-31,442,Public,Scraped
+Greece,GR,2022-01-01,400,Public,Scraped
+Greece,GR,2022-01-02,438,Public,Scraped
+Greece,GR,2022-01-03,453,Public,Scraped
+Greece,GR,2022-01-04,642,Public,Scraped
+Greece,GR,2022-01-05,592,Public,Scraped
+Greece,GR,2022-01-06,614,Public,Scraped
+Greece,GR,2022-01-07,522,Public,Scraped
+Greece,GR,2022-01-08,635,Public,Scraped
+Greece,GR,2022-01-09,535,Public,Scraped
+Greece,GR,2022-01-10,497,Public,Scraped
+Greece,GR,2022-01-11,669,Public,Scraped
+Greece,GR,2022-01-12,588,Public,Scraped
+Greece,GR,2022-01-13,563,Public,Scraped
+Greece,GR,2022-01-14,551,Public,Scraped
+Greece,GR,2022-01-15,571,Public,Scraped
+Greece,GR,2022-01-16,472,Public,Scraped
+Greece,GR,2022-01-17,478,Public,Scraped
+Greece,GR,2022-01-18,556,Public,Scraped
+Greece,GR,2022-01-19,511,Public,Scraped
+Greece,GR,2022-01-20,470,Public,Scraped
+Greece,GR,2022-01-21,546,Public,Scraped
+Greece,GR,2022-01-22,423,Public,Scraped
+Greece,GR,2022-01-23,466,Public,Scraped
+Greece,GR,2022-01-24,433,Public,Scraped
+Greece,GR,2022-01-25,399,Public,Scraped
+Greece,GR,2022-01-26,417,Public,Scraped
+Greece,GR,2022-01-27,474,Public,Scraped
+Greece,GR,2022-01-28,434,Public,Scraped
+Greece,GR,2022-01-29,490,Public,Scraped
 Greece,GR,2020-02-21,1,Public,Scraped
 Greece,GR,2020-02-25,1,Public,Scraped
+Greece,GR,2020-02-26,1,Public,Scraped
+Greece,GR,2020-02-27,3,Public,Scraped
+Greece,GR,2020-02-28,3,Public,Scraped
+Greece,GR,2020-02-29,1,Public,Scraped
+Greece,GR,2020-03-01,2,Public,Scraped
+Greece,GR,2020-03-02,2,Public,Scraped
+Greece,GR,2020-03-03,1,Public,Scraped
+Greece,GR,2020-03-04,7,Public,Scraped
+Greece,GR,2020-03-05,4,Public,Scraped
+Greece,GR,2020-03-06,3,Public,Scraped
+Greece,GR,2020-03-07,5,Public,Scraped
+Greece,GR,2020-03-08,8,Public,Scraped
+Greece,GR,2020-03-09,6,Public,Scraped
+Greece,GR,2020-03-10,11,Public,Scraped
+Greece,GR,2020-03-11,8,Public,Scraped
+Greece,GR,2020-03-12,6,Public,Scraped
+Greece,GR,2020-03-13,13,Public,Scraped
+Greece,GR,2020-03-14,10,Public,Scraped
+Greece,GR,2020-03-15,12,Public,Scraped
+Greece,GR,2020-03-16,14,Public,Scraped
+Greece,GR,2020-03-17,20,Public,Scraped
 Greece,GR,2020-03-18,30,Public,Scraped
 Greece,GR,2020-03-19,25,Public,Scraped
 Greece,GR,2020-03-20,20,Public,Scraped
 Greece,GR,2020-03-21,34,Public,Scraped
 Greece,GR,2020-03-22,32,Public,Scraped
+Greece,GR,2020-03-23,45,Public,Scraped
+Greece,GR,2020-03-24,48,Public,Scraped
+Greece,GR,2020-03-25,43,Public,Scraped
+Greece,GR,2020-03-26,45,Public,Scraped
+Greece,GR,2020-03-27,61,Public,Scraped
+Greece,GR,2020-03-28,31,Public,Scraped
+Greece,GR,2020-03-29,42,Public,Scraped
+Greece,GR,2020-03-30,31,Public,Scraped
+Greece,GR,2020-03-31,26,Public,Scraped
+Greece,GR,2020-04-01,24,Public,Scraped
+Greece,GR,2020-04-02,21,Public,Scraped
+Greece,GR,2020-04-03,24,Public,Scraped
+Greece,GR,2020-04-04,28,Public,Scraped
 Greece,GR,2020-04-05,17,Public,Scraped
 Greece,GR,2020-04-06,11,Public,Scraped
 Greece,GR,2020-04-07,24,Public,Scraped
@@ -5726,48 +5830,11 @@ Greece,GR,2020-04-15,10,Public,Scraped
 Greece,GR,2020-04-16,8,Public,Scraped
 Greece,GR,2020-04-17,5,Public,Scraped
 Greece,GR,2020-04-18,4,Public,Scraped
-Greece,GR,2020-03-09,6,Public,Scraped
-Greece,GR,2020-02-26,1,Public,Scraped
-Greece,GR,2020-02-27,3,Public,Scraped
-Greece,GR,2020-02-28,3,Public,Scraped
-Greece,GR,2020-02-29,1,Public,Scraped
-Greece,GR,2020-03-01,2,Public,Scraped
-Greece,GR,2020-03-02,2,Public,Scraped
-Greece,GR,2020-03-03,1,Public,Scraped
-Greece,GR,2020-03-04,7,Public,Scraped
-Greece,GR,2020-03-05,4,Public,Scraped
-Greece,GR,2020-03-06,3,Public,Scraped
-Greece,GR,2020-03-07,5,Public,Scraped
-Greece,GR,2020-03-08,8,Public,Scraped
-Greece,GR,2020-03-10,11,Public,Scraped
-Greece,GR,2020-03-11,8,Public,Scraped
-Greece,GR,2020-03-12,6,Public,Scraped
-Greece,GR,2020-03-13,13,Public,Scraped
-Greece,GR,2020-03-14,10,Public,Scraped
-Greece,GR,2020-03-15,12,Public,Scraped
-Greece,GR,2020-03-16,14,Public,Scraped
-Greece,GR,2020-03-17,20,Public,Scraped
-Greece,GR,2020-04-28,12,Public,Scraped
-Greece,GR,2020-04-29,4,Public,Scraped
-Greece,GR,2020-04-30,5,Public,Scraped
-Greece,GR,2020-05-01,6,Public,Scraped
-Greece,GR,2020-03-31,26,Public,Scraped
-Greece,GR,2020-04-20,7,Public,Scraped
-Greece,GR,2020-04-21,11,Public,Scraped
-Greece,GR,2020-04-22,8,Public,Scraped
-Greece,GR,2020-03-28,31,Public,Scraped
-Greece,GR,2020-03-29,42,Public,Scraped
-Greece,GR,2020-03-30,31,Public,Scraped
-Greece,GR,2020-04-01,24,Public,Scraped
-Greece,GR,2020-04-02,21,Public,Scraped
-Greece,GR,2020-04-03,24,Public,Scraped
-Greece,GR,2020-04-04,28,Public,Scraped
 Greece,GR,2020-04-19,3,Public,Scraped
-Greece,GR,2020-04-27,4,Public,Scraped
-Greece,GR,2020-04-23,19,Public,Scraped
-Greece,GR,2020-04-24,13,Public,Scraped
-Greece,GR,2020-04-26,2,Public,Scraped
-Greece,GR,2020-04-25,7,Public,Scraped
+Greece,GR,2021-12-18,359,Public,Scraped
+Greece,GR,2021-12-19,258,Public,Scraped
+Greece,GR,2021-12-20,295,Public,Scraped
+Greece,GR,2021-12-21,370,Public,Scraped
 Iceland,IS,2020-02-03,0,TESSy,Scraped
 Iceland,IS,2020-02-04,0,TESSy,Scraped
 Iceland,IS,2020-02-05,0,TESSy,Scraped
@@ -8033,7 +8100,7 @@ Netherlands,NL,2021-01-28,203,Public,Scraped
 Netherlands,NL,2021-01-29,218,Public,Scraped
 Netherlands,NL,2021-01-30,130,Public,Scraped
 Netherlands,NL,2021-01-31,149,Public,Scraped
-Netherlands,NL,2021-02-01,233,Public,Scraped
+Netherlands,NL,2021-02-01,234,Public,Scraped
 Netherlands,NL,2021-02-02,179,Public,Scraped
 Netherlands,NL,2021-02-03,169,Public,Scraped
 Netherlands,NL,2021-02-04,186,Public,Scraped
@@ -8119,7 +8186,7 @@ Netherlands,NL,2021-04-24,198,Public,Scraped
 Netherlands,NL,2021-04-25,221,Public,Scraped
 Netherlands,NL,2021-04-26,332,Public,Scraped
 Netherlands,NL,2021-04-27,182,Public,Scraped
-Netherlands,NL,2021-04-28,326,Public,Scraped
+Netherlands,NL,2021-04-28,325,Public,Scraped
 Netherlands,NL,2021-04-29,283,Public,Scraped
 Netherlands,NL,2021-04-30,250,Public,Scraped
 Netherlands,NL,2021-05-01,178,Public,Scraped
@@ -8350,7 +8417,7 @@ Netherlands,NL,2021-12-11,207,Public,Scraped
 Netherlands,NL,2021-12-12,189,Public,Scraped
 Netherlands,NL,2021-12-13,259,Public,Scraped
 Netherlands,NL,2021-12-14,231,Public,Scraped
-Netherlands,NL,2021-12-15,232,Public,Scraped
+Netherlands,NL,2021-12-15,231,Public,Scraped
 Netherlands,NL,2021-12-16,206,Public,Scraped
 Netherlands,NL,2021-12-17,203,Public,Scraped
 Netherlands,NL,2021-12-18,131,Public,Scraped
@@ -8365,41 +8432,42 @@ Netherlands,NL,2021-12-26,112,Public,Scraped
 Netherlands,NL,2021-12-27,213,Public,Scraped
 Netherlands,NL,2021-12-28,184,Public,Scraped
 Netherlands,NL,2021-12-29,147,Public,Scraped
-Netherlands,NL,2021-12-30,146,Public,Scraped
-Netherlands,NL,2021-12-31,136,Public,Scraped
+Netherlands,NL,2021-12-30,147,Public,Scraped
+Netherlands,NL,2021-12-31,135,Public,Scraped
 Netherlands,NL,2022-01-01,103,Public,Scraped
 Netherlands,NL,2022-01-02,102,Public,Scraped
 Netherlands,NL,2022-01-03,162,Public,Scraped
 Netherlands,NL,2022-01-04,149,Public,Scraped
 Netherlands,NL,2022-01-05,132,Public,Scraped
 Netherlands,NL,2022-01-06,121,Public,Scraped
-Netherlands,NL,2022-01-07,172,Public,Scraped
+Netherlands,NL,2022-01-07,173,Public,Scraped
 Netherlands,NL,2022-01-08,89,Public,Scraped
 Netherlands,NL,2022-01-09,124,Public,Scraped
-Netherlands,NL,2022-01-10,150,Public,Scraped
+Netherlands,NL,2022-01-10,151,Public,Scraped
 Netherlands,NL,2022-01-11,119,Public,Scraped
-Netherlands,NL,2022-01-12,102,Public,Scraped
+Netherlands,NL,2022-01-12,103,Public,Scraped
 Netherlands,NL,2022-01-13,98,Public,Scraped
-Netherlands,NL,2022-01-14,131,Public,Scraped
+Netherlands,NL,2022-01-14,132,Public,Scraped
 Netherlands,NL,2022-01-15,100,Public,Scraped
-Netherlands,NL,2022-01-16,93,Public,Scraped
-Netherlands,NL,2022-01-17,143,Public,Scraped
+Netherlands,NL,2022-01-16,94,Public,Scraped
+Netherlands,NL,2022-01-17,144,Public,Scraped
 Netherlands,NL,2022-01-18,114,Public,Scraped
-Netherlands,NL,2022-01-19,160,Public,Scraped
+Netherlands,NL,2022-01-19,161,Public,Scraped
 Netherlands,NL,2022-01-20,158,Public,Scraped
-Netherlands,NL,2022-01-21,157,Public,Scraped
+Netherlands,NL,2022-01-21,161,Public,Scraped
 Netherlands,NL,2022-01-22,118,Public,Scraped
-Netherlands,NL,2022-01-23,138,Public,Scraped
-Netherlands,NL,2022-01-24,188,Public,Scraped
-Netherlands,NL,2022-01-25,156,Public,Scraped
-Netherlands,NL,2022-01-26,170,Public,Scraped
+Netherlands,NL,2022-01-23,140,Public,Scraped
+Netherlands,NL,2022-01-24,189,Public,Scraped
+Netherlands,NL,2022-01-25,158,Public,Scraped
+Netherlands,NL,2022-01-26,172,Public,Scraped
 Netherlands,NL,2022-01-27,174,Public,Scraped
-Netherlands,NL,2022-01-28,163,Public,Scraped
-Netherlands,NL,2022-01-29,147,Public,Scraped
-Netherlands,NL,2022-01-30,140,Public,Scraped
-Netherlands,NL,2022-01-31,196,Public,Scraped
-Netherlands,NL,2022-02-01,115,Public,Scraped
-Netherlands,NL,2022-02-02,19,Public,Scraped
+Netherlands,NL,2022-01-28,167,Public,Scraped
+Netherlands,NL,2022-01-29,149,Public,Scraped
+Netherlands,NL,2022-01-30,142,Public,Scraped
+Netherlands,NL,2022-01-31,214,Public,Scraped
+Netherlands,NL,2022-02-01,174,Public,Scraped
+Netherlands,NL,2022-02-02,104,Public,Scraped
+Netherlands,NL,2022-02-03,12,Public,Scraped
 Norway,NO,2020-01-26,0,Public,Scraped
 Norway,NO,2020-01-27,0,Public,Scraped
 Norway,NO,2020-01-28,0,Public,Scraped
@@ -9131,12 +9199,13 @@ Norway,NO,2022-01-22,15,Public,Scraped
 Norway,NO,2022-01-23,27,Public,Scraped
 Norway,NO,2022-01-24,31,Public,Scraped
 Norway,NO,2022-01-25,26,Public,Scraped
-Norway,NO,2022-01-26,36,Public,Scraped
+Norway,NO,2022-01-26,39,Public,Scraped
 Norway,NO,2022-01-27,34,Public,Scraped
 Norway,NO,2022-01-28,18,Public,Scraped
-Norway,NO,2022-01-29,21,Public,Scraped
-Norway,NO,2022-01-30,24,Public,Scraped
-Norway,NO,2022-01-31,9,Public,Scraped
+Norway,NO,2022-01-29,26,Public,Scraped
+Norway,NO,2022-01-30,27,Public,Scraped
+Norway,NO,2022-01-31,27,Public,Scraped
+Norway,NO,2022-02-01,11,Public,Scraped
 Poland,PL,2019-12-12,1,TESSy,Scraped
 Poland,PL,2020-04-06,84,TESSy,Scraped
 Poland,PL,2020-04-07,82,TESSy,Scraped
@@ -12090,15 +12159,16 @@ Slovenia,SI,2022-01-21,78,Public,Scraped
 Slovenia,SI,2022-01-22,71,Public,Scraped
 Slovenia,SI,2022-01-23,60,Public,Scraped
 Slovenia,SI,2022-01-24,73,Public,Scraped
-Slovenia,SI,2022-01-25,104,Public,Scraped
-Slovenia,SI,2022-01-26,93,Public,Scraped
-Slovenia,SI,2022-01-27,103,Public,Scraped
-Slovenia,SI,2022-01-28,90,Public,Scraped
-Slovenia,SI,2022-01-29,107,Public,Scraped
-Slovenia,SI,2022-01-30,66,Public,Scraped
-Slovenia,SI,2022-01-31,97,Public,Scraped
-Slovenia,SI,2022-02-01,156,Public,Scraped
-Slovenia,SI,2022-02-02,151,Public,Scraped
+Slovenia,SI,2022-01-25,166,Public,Scraped
+Slovenia,SI,2022-01-26,91,Public,Scraped
+Slovenia,SI,2022-01-27,98,Public,Scraped
+Slovenia,SI,2022-01-28,87,Public,Scraped
+Slovenia,SI,2022-01-29,102,Public,Scraped
+Slovenia,SI,2022-01-30,67,Public,Scraped
+Slovenia,SI,2022-01-31,103,Public,Scraped
+Slovenia,SI,2022-02-01,103,Public,Scraped
+Slovenia,SI,2022-02-02,135,Public,Scraped
+Slovenia,SI,2022-02-03,100,Public,Scraped
 Spain,ES,2020-01-01,8,Public,Scraped
 Spain,ES,2020-01-02,69,Public,Scraped
 Spain,ES,2020-01-03,8,Public,Scraped
@@ -12179,9 +12249,9 @@ Spain,ES,2020-03-17,2427,Public,Scraped
 Spain,ES,2020-03-18,3091,Public,Scraped
 Spain,ES,2020-03-19,3350,Public,Scraped
 Spain,ES,2020-03-20,3913,Public,Scraped
-Spain,ES,2020-03-21,3494,Public,Scraped
+Spain,ES,2020-03-21,3493,Public,Scraped
 Spain,ES,2020-03-22,3333,Public,Scraped
-Spain,ES,2020-03-23,4936,Public,Scraped
+Spain,ES,2020-03-23,4937,Public,Scraped
 Spain,ES,2020-03-24,5305,Public,Scraped
 Spain,ES,2020-03-25,5201,Public,Scraped
 Spain,ES,2020-03-26,5036,Public,Scraped
@@ -12195,11 +12265,11 @@ Spain,ES,2020-04-02,2850,Public,Scraped
 Spain,ES,2020-04-03,2761,Public,Scraped
 Spain,ES,2020-04-04,1949,Public,Scraped
 Spain,ES,2020-04-05,1523,Public,Scraped
-Spain,ES,2020-04-06,2263,Public,Scraped
+Spain,ES,2020-04-06,2264,Public,Scraped
 Spain,ES,2020-04-07,2189,Public,Scraped
 Spain,ES,2020-04-08,1979,Public,Scraped
 Spain,ES,2020-04-09,1629,Public,Scraped
-Spain,ES,2020-04-10,1454,Public,Scraped
+Spain,ES,2020-04-10,1455,Public,Scraped
 Spain,ES,2020-04-11,1200,Public,Scraped
 Spain,ES,2020-04-12,929,Public,Scraped
 Spain,ES,2020-04-13,1179,Public,Scraped
@@ -12209,10 +12279,10 @@ Spain,ES,2020-04-16,1053,Public,Scraped
 Spain,ES,2020-04-17,930,Public,Scraped
 Spain,ES,2020-04-18,621,Public,Scraped
 Spain,ES,2020-04-19,561,Public,Scraped
-Spain,ES,2020-04-20,732,Public,Scraped
-Spain,ES,2020-04-21,742,Public,Scraped
+Spain,ES,2020-04-20,733,Public,Scraped
+Spain,ES,2020-04-21,741,Public,Scraped
 Spain,ES,2020-04-22,549,Public,Scraped
-Spain,ES,2020-04-23,517,Public,Scraped
+Spain,ES,2020-04-23,516,Public,Scraped
 Spain,ES,2020-04-24,558,Public,Scraped
 Spain,ES,2020-04-25,349,Public,Scraped
 Spain,ES,2020-04-26,261,Public,Scraped
@@ -12224,10 +12294,10 @@ Spain,ES,2020-05-01,241,Public,Scraped
 Spain,ES,2020-05-02,213,Public,Scraped
 Spain,ES,2020-05-03,192,Public,Scraped
 Spain,ES,2020-05-04,330,Public,Scraped
-Spain,ES,2020-05-05,294,Public,Scraped
+Spain,ES,2020-05-05,295,Public,Scraped
 Spain,ES,2020-05-06,285,Public,Scraped
 Spain,ES,2020-05-07,255,Public,Scraped
-Spain,ES,2020-05-08,227,Public,Scraped
+Spain,ES,2020-05-08,228,Public,Scraped
 Spain,ES,2020-05-09,142,Public,Scraped
 Spain,ES,2020-05-10,116,Public,Scraped
 Spain,ES,2020-05-11,153,Public,Scraped
@@ -12254,7 +12324,7 @@ Spain,ES,2020-05-31,34,Public,Scraped
 Spain,ES,2020-06-01,46,Public,Scraped
 Spain,ES,2020-06-02,57,Public,Scraped
 Spain,ES,2020-06-03,78,Public,Scraped
-Spain,ES,2020-06-04,49,Public,Scraped
+Spain,ES,2020-06-04,50,Public,Scraped
 Spain,ES,2020-06-05,63,Public,Scraped
 Spain,ES,2020-06-06,36,Public,Scraped
 Spain,ES,2020-06-07,43,Public,Scraped
@@ -12380,7 +12450,7 @@ Spain,ES,2020-10-04,568,Public,Scraped
 Spain,ES,2020-10-05,749,Public,Scraped
 Spain,ES,2020-10-06,850,Public,Scraped
 Spain,ES,2020-10-07,805,Public,Scraped
-Spain,ES,2020-10-08,898,Public,Scraped
+Spain,ES,2020-10-08,899,Public,Scraped
 Spain,ES,2020-10-09,911,Public,Scraped
 Spain,ES,2020-10-10,724,Public,Scraped
 Spain,ES,2020-10-11,727,Public,Scraped
@@ -12389,7 +12459,7 @@ Spain,ES,2020-10-13,958,Public,Scraped
 Spain,ES,2020-10-14,1072,Public,Scraped
 Spain,ES,2020-10-15,1034,Public,Scraped
 Spain,ES,2020-10-16,1132,Public,Scraped
-Spain,ES,2020-10-17,898,Public,Scraped
+Spain,ES,2020-10-17,899,Public,Scraped
 Spain,ES,2020-10-18,858,Public,Scraped
 Spain,ES,2020-10-19,1178,Public,Scraped
 Spain,ES,2020-10-20,1244,Public,Scraped
@@ -12419,7 +12489,7 @@ Spain,ES,2020-11-12,1396,Public,Scraped
 Spain,ES,2020-11-13,1400,Public,Scraped
 Spain,ES,2020-11-14,1071,Public,Scraped
 Spain,ES,2020-11-15,898,Public,Scraped
-Spain,ES,2020-11-16,1350,Public,Scraped
+Spain,ES,2020-11-16,1351,Public,Scraped
 Spain,ES,2020-11-17,1343,Public,Scraped
 Spain,ES,2020-11-18,1152,Public,Scraped
 Spain,ES,2020-11-19,1064,Public,Scraped
@@ -12436,7 +12506,7 @@ Spain,ES,2020-11-29,554,Public,Scraped
 Spain,ES,2020-11-30,735,Public,Scraped
 Spain,ES,2020-12-01,778,Public,Scraped
 Spain,ES,2020-12-02,697,Public,Scraped
-Spain,ES,2020-12-03,669,Public,Scraped
+Spain,ES,2020-12-03,670,Public,Scraped
 Spain,ES,2020-12-04,697,Public,Scraped
 Spain,ES,2020-12-05,495,Public,Scraped
 Spain,ES,2020-12-06,472,Public,Scraped
@@ -12448,7 +12518,7 @@ Spain,ES,2020-12-11,742,Public,Scraped
 Spain,ES,2020-12-12,557,Public,Scraped
 Spain,ES,2020-12-13,488,Public,Scraped
 Spain,ES,2020-12-14,743,Public,Scraped
-Spain,ES,2020-12-15,719,Public,Scraped
+Spain,ES,2020-12-15,720,Public,Scraped
 Spain,ES,2020-12-16,707,Public,Scraped
 Spain,ES,2020-12-17,689,Public,Scraped
 Spain,ES,2020-12-18,726,Public,Scraped
@@ -12456,9 +12526,9 @@ Spain,ES,2020-12-19,528,Public,Scraped
 Spain,ES,2020-12-20,535,Public,Scraped
 Spain,ES,2020-12-21,800,Public,Scraped
 Spain,ES,2020-12-22,814,Public,Scraped
-Spain,ES,2020-12-23,803,Public,Scraped
+Spain,ES,2020-12-23,802,Public,Scraped
 Spain,ES,2020-12-24,622,Public,Scraped
-Spain,ES,2020-12-25,562,Public,Scraped
+Spain,ES,2020-12-25,563,Public,Scraped
 Spain,ES,2020-12-26,606,Public,Scraped
 Spain,ES,2020-12-27,721,Public,Scraped
 Spain,ES,2020-12-28,899,Public,Scraped
@@ -12475,13 +12545,13 @@ Spain,ES,2021-01-07,1335,Public,Scraped
 Spain,ES,2021-01-08,1431,Public,Scraped
 Spain,ES,2021-01-09,1056,Public,Scraped
 Spain,ES,2021-01-10,1179,Public,Scraped
-Spain,ES,2021-01-11,1712,Public,Scraped
+Spain,ES,2021-01-11,1713,Public,Scraped
 Spain,ES,2021-01-12,1834,Public,Scraped
-Spain,ES,2021-01-13,1967,Public,Scraped
+Spain,ES,2021-01-13,1968,Public,Scraped
 Spain,ES,2021-01-14,2118,Public,Scraped
 Spain,ES,2021-01-15,2193,Public,Scraped
 Spain,ES,2021-01-16,1874,Public,Scraped
-Spain,ES,2021-01-17,1828,Public,Scraped
+Spain,ES,2021-01-17,1829,Public,Scraped
 Spain,ES,2021-01-18,2531,Public,Scraped
 Spain,ES,2021-01-19,2693,Public,Scraped
 Spain,ES,2021-01-20,2589,Public,Scraped
@@ -12489,13 +12559,13 @@ Spain,ES,2021-01-21,2666,Public,Scraped
 Spain,ES,2021-01-22,2581,Public,Scraped
 Spain,ES,2021-01-23,2085,Public,Scraped
 Spain,ES,2021-01-24,1873,Public,Scraped
-Spain,ES,2021-01-25,2589,Public,Scraped
+Spain,ES,2021-01-25,2590,Public,Scraped
 Spain,ES,2021-01-26,2517,Public,Scraped
 Spain,ES,2021-01-27,2400,Public,Scraped
 Spain,ES,2021-01-28,2390,Public,Scraped
 Spain,ES,2021-01-29,2350,Public,Scraped
 Spain,ES,2021-01-30,1791,Public,Scraped
-Spain,ES,2021-01-31,1532,Public,Scraped
+Spain,ES,2021-01-31,1533,Public,Scraped
 Spain,ES,2021-02-01,2025,Public,Scraped
 Spain,ES,2021-02-02,2010,Public,Scraped
 Spain,ES,2021-02-03,1774,Public,Scraped
@@ -12574,7 +12644,7 @@ Spain,ES,2021-04-16,810,Public,Scraped
 Spain,ES,2021-04-17,600,Public,Scraped
 Spain,ES,2021-04-18,553,Public,Scraped
 Spain,ES,2021-04-19,800,Public,Scraped
-Spain,ES,2021-04-20,791,Public,Scraped
+Spain,ES,2021-04-20,792,Public,Scraped
 Spain,ES,2021-04-21,738,Public,Scraped
 Spain,ES,2021-04-22,723,Public,Scraped
 Spain,ES,2021-04-23,667,Public,Scraped
@@ -12616,34 +12686,34 @@ Spain,ES,2021-05-28,305,Public,Scraped
 Spain,ES,2021-05-29,234,Public,Scraped
 Spain,ES,2021-05-30,226,Public,Scraped
 Spain,ES,2021-05-31,308,Public,Scraped
-Spain,ES,2021-06-01,275,Public,Scraped
+Spain,ES,2021-06-01,276,Public,Scraped
 Spain,ES,2021-06-02,266,Public,Scraped
 Spain,ES,2021-06-03,242,Public,Scraped
 Spain,ES,2021-06-04,239,Public,Scraped
 Spain,ES,2021-06-05,193,Public,Scraped
 Spain,ES,2021-06-06,194,Public,Scraped
-Spain,ES,2021-06-07,279,Public,Scraped
-Spain,ES,2021-06-08,241,Public,Scraped
-Spain,ES,2021-06-09,218,Public,Scraped
-Spain,ES,2021-06-10,197,Public,Scraped
+Spain,ES,2021-06-07,280,Public,Scraped
+Spain,ES,2021-06-08,242,Public,Scraped
+Spain,ES,2021-06-09,219,Public,Scraped
+Spain,ES,2021-06-10,198,Public,Scraped
 Spain,ES,2021-06-11,232,Public,Scraped
-Spain,ES,2021-06-12,161,Public,Scraped
+Spain,ES,2021-06-12,162,Public,Scraped
 Spain,ES,2021-06-13,177,Public,Scraped
-Spain,ES,2021-06-14,192,Public,Scraped
+Spain,ES,2021-06-14,193,Public,Scraped
 Spain,ES,2021-06-15,202,Public,Scraped
 Spain,ES,2021-06-16,204,Public,Scraped
-Spain,ES,2021-06-17,166,Public,Scraped
-Spain,ES,2021-06-18,164,Public,Scraped
-Spain,ES,2021-06-19,114,Public,Scraped
+Spain,ES,2021-06-17,167,Public,Scraped
+Spain,ES,2021-06-18,165,Public,Scraped
+Spain,ES,2021-06-19,115,Public,Scraped
 Spain,ES,2021-06-20,134,Public,Scraped
 Spain,ES,2021-06-21,173,Public,Scraped
 Spain,ES,2021-06-22,166,Public,Scraped
-Spain,ES,2021-06-23,154,Public,Scraped
-Spain,ES,2021-06-24,142,Public,Scraped
+Spain,ES,2021-06-23,155,Public,Scraped
+Spain,ES,2021-06-24,144,Public,Scraped
 Spain,ES,2021-06-25,182,Public,Scraped
 Spain,ES,2021-06-26,140,Public,Scraped
 Spain,ES,2021-06-27,164,Public,Scraped
-Spain,ES,2021-06-28,173,Public,Scraped
+Spain,ES,2021-06-28,174,Public,Scraped
 Spain,ES,2021-06-29,187,Public,Scraped
 Spain,ES,2021-06-30,184,Public,Scraped
 Spain,ES,2021-07-01,229,Public,Scraped
@@ -12653,44 +12723,44 @@ Spain,ES,2021-07-04,205,Public,Scraped
 Spain,ES,2021-07-05,281,Public,Scraped
 Spain,ES,2021-07-06,291,Public,Scraped
 Spain,ES,2021-07-07,310,Public,Scraped
-Spain,ES,2021-07-08,379,Public,Scraped
-Spain,ES,2021-07-09,353,Public,Scraped
+Spain,ES,2021-07-08,380,Public,Scraped
+Spain,ES,2021-07-09,355,Public,Scraped
 Spain,ES,2021-07-10,326,Public,Scraped
-Spain,ES,2021-07-11,344,Public,Scraped
-Spain,ES,2021-07-12,500,Public,Scraped
+Spain,ES,2021-07-11,343,Public,Scraped
+Spain,ES,2021-07-12,501,Public,Scraped
 Spain,ES,2021-07-13,516,Public,Scraped
-Spain,ES,2021-07-14,573,Public,Scraped
+Spain,ES,2021-07-14,574,Public,Scraped
 Spain,ES,2021-07-15,587,Public,Scraped
 Spain,ES,2021-07-16,617,Public,Scraped
-Spain,ES,2021-07-17,564,Public,Scraped
+Spain,ES,2021-07-17,565,Public,Scraped
 Spain,ES,2021-07-18,587,Public,Scraped
 Spain,ES,2021-07-19,812,Public,Scraped
-Spain,ES,2021-07-20,867,Public,Scraped
+Spain,ES,2021-07-20,866,Public,Scraped
 Spain,ES,2021-07-21,838,Public,Scraped
-Spain,ES,2021-07-22,898,Public,Scraped
-Spain,ES,2021-07-23,915,Public,Scraped
+Spain,ES,2021-07-22,899,Public,Scraped
+Spain,ES,2021-07-23,916,Public,Scraped
 Spain,ES,2021-07-24,721,Public,Scraped
-Spain,ES,2021-07-25,722,Public,Scraped
+Spain,ES,2021-07-25,723,Public,Scraped
 Spain,ES,2021-07-26,927,Public,Scraped
-Spain,ES,2021-07-27,935,Public,Scraped
+Spain,ES,2021-07-27,937,Public,Scraped
 Spain,ES,2021-07-28,900,Public,Scraped
 Spain,ES,2021-07-29,852,Public,Scraped
 Spain,ES,2021-07-30,881,Public,Scraped
 Spain,ES,2021-07-31,760,Public,Scraped
-Spain,ES,2021-08-01,617,Public,Scraped
-Spain,ES,2021-08-02,761,Public,Scraped
+Spain,ES,2021-08-01,616,Public,Scraped
+Spain,ES,2021-08-02,760,Public,Scraped
 Spain,ES,2021-08-03,943,Public,Scraped
-Spain,ES,2021-08-04,849,Public,Scraped
+Spain,ES,2021-08-04,850,Public,Scraped
 Spain,ES,2021-08-05,816,Public,Scraped
 Spain,ES,2021-08-06,809,Public,Scraped
 Spain,ES,2021-08-07,649,Public,Scraped
-Spain,ES,2021-08-08,587,Public,Scraped
-Spain,ES,2021-08-09,787,Public,Scraped
+Spain,ES,2021-08-08,585,Public,Scraped
+Spain,ES,2021-08-09,788,Public,Scraped
 Spain,ES,2021-08-10,775,Public,Scraped
 Spain,ES,2021-08-11,734,Public,Scraped
-Spain,ES,2021-08-12,705,Public,Scraped
+Spain,ES,2021-08-12,707,Public,Scraped
 Spain,ES,2021-08-13,608,Public,Scraped
-Spain,ES,2021-08-14,556,Public,Scraped
+Spain,ES,2021-08-14,558,Public,Scraped
 Spain,ES,2021-08-15,488,Public,Scraped
 Spain,ES,2021-08-16,610,Public,Scraped
 Spain,ES,2021-08-17,578,Public,Scraped
@@ -12701,9 +12771,9 @@ Spain,ES,2021-08-21,442,Public,Scraped
 Spain,ES,2021-08-22,357,Public,Scraped
 Spain,ES,2021-08-23,526,Public,Scraped
 Spain,ES,2021-08-24,475,Public,Scraped
-Spain,ES,2021-08-25,485,Public,Scraped
+Spain,ES,2021-08-25,486,Public,Scraped
 Spain,ES,2021-08-26,445,Public,Scraped
-Spain,ES,2021-08-27,431,Public,Scraped
+Spain,ES,2021-08-27,434,Public,Scraped
 Spain,ES,2021-08-28,329,Public,Scraped
 Spain,ES,2021-08-29,302,Public,Scraped
 Spain,ES,2021-08-30,381,Public,Scraped
@@ -12716,29 +12786,29 @@ Spain,ES,2021-09-05,225,Public,Scraped
 Spain,ES,2021-09-06,288,Public,Scraped
 Spain,ES,2021-09-07,315,Public,Scraped
 Spain,ES,2021-09-08,239,Public,Scraped
-Spain,ES,2021-09-09,195,Public,Scraped
-Spain,ES,2021-09-10,211,Public,Scraped
+Spain,ES,2021-09-09,194,Public,Scraped
+Spain,ES,2021-09-10,210,Public,Scraped
 Spain,ES,2021-09-11,162,Public,Scraped
 Spain,ES,2021-09-12,149,Public,Scraped
-Spain,ES,2021-09-13,208,Public,Scraped
+Spain,ES,2021-09-13,206,Public,Scraped
 Spain,ES,2021-09-14,180,Public,Scraped
 Spain,ES,2021-09-15,201,Public,Scraped
 Spain,ES,2021-09-16,173,Public,Scraped
 Spain,ES,2021-09-17,154,Public,Scraped
 Spain,ES,2021-09-18,116,Public,Scraped
 Spain,ES,2021-09-19,109,Public,Scraped
-Spain,ES,2021-09-20,149,Public,Scraped
+Spain,ES,2021-09-20,148,Public,Scraped
 Spain,ES,2021-09-21,149,Public,Scraped
 Spain,ES,2021-09-22,123,Public,Scraped
-Spain,ES,2021-09-23,137,Public,Scraped
+Spain,ES,2021-09-23,139,Public,Scraped
 Spain,ES,2021-09-24,131,Public,Scraped
-Spain,ES,2021-09-25,102,Public,Scraped
-Spain,ES,2021-09-26,83,Public,Scraped
+Spain,ES,2021-09-25,101,Public,Scraped
+Spain,ES,2021-09-26,82,Public,Scraped
 Spain,ES,2021-09-27,105,Public,Scraped
 Spain,ES,2021-09-28,108,Public,Scraped
-Spain,ES,2021-09-29,113,Public,Scraped
+Spain,ES,2021-09-29,114,Public,Scraped
 Spain,ES,2021-09-30,96,Public,Scraped
-Spain,ES,2021-10-01,113,Public,Scraped
+Spain,ES,2021-10-01,114,Public,Scraped
 Spain,ES,2021-10-02,85,Public,Scraped
 Spain,ES,2021-10-03,71,Public,Scraped
 Spain,ES,2021-10-04,96,Public,Scraped
@@ -12748,7 +12818,7 @@ Spain,ES,2021-10-07,88,Public,Scraped
 Spain,ES,2021-10-08,87,Public,Scraped
 Spain,ES,2021-10-09,86,Public,Scraped
 Spain,ES,2021-10-10,88,Public,Scraped
-Spain,ES,2021-10-11,112,Public,Scraped
+Spain,ES,2021-10-11,113,Public,Scraped
 Spain,ES,2021-10-12,73,Public,Scraped
 Spain,ES,2021-10-13,142,Public,Scraped
 Spain,ES,2021-10-14,106,Public,Scraped
@@ -12766,102 +12836,103 @@ Spain,ES,2021-10-25,121,Public,Scraped
 Spain,ES,2021-10-26,102,Public,Scraped
 Spain,ES,2021-10-27,137,Public,Scraped
 Spain,ES,2021-10-28,123,Public,Scraped
-Spain,ES,2021-10-29,136,Public,Scraped
+Spain,ES,2021-10-29,137,Public,Scraped
 Spain,ES,2021-10-30,100,Public,Scraped
 Spain,ES,2021-10-31,87,Public,Scraped
 Spain,ES,2021-11-01,122,Public,Scraped
 Spain,ES,2021-11-02,185,Public,Scraped
-Spain,ES,2021-11-03,126,Public,Scraped
+Spain,ES,2021-11-03,127,Public,Scraped
 Spain,ES,2021-11-04,121,Public,Scraped
 Spain,ES,2021-11-05,154,Public,Scraped
 Spain,ES,2021-11-06,100,Public,Scraped
 Spain,ES,2021-11-07,114,Public,Scraped
-Spain,ES,2021-11-08,205,Public,Scraped
+Spain,ES,2021-11-08,206,Public,Scraped
 Spain,ES,2021-11-09,170,Public,Scraped
 Spain,ES,2021-11-10,175,Public,Scraped
 Spain,ES,2021-11-11,160,Public,Scraped
-Spain,ES,2021-11-12,158,Public,Scraped
-Spain,ES,2021-11-13,153,Public,Scraped
-Spain,ES,2021-11-14,140,Public,Scraped
-Spain,ES,2021-11-15,200,Public,Scraped
-Spain,ES,2021-11-16,223,Public,Scraped
+Spain,ES,2021-11-12,160,Public,Scraped
+Spain,ES,2021-11-13,152,Public,Scraped
+Spain,ES,2021-11-14,142,Public,Scraped
+Spain,ES,2021-11-15,202,Public,Scraped
+Spain,ES,2021-11-16,222,Public,Scraped
 Spain,ES,2021-11-17,210,Public,Scraped
-Spain,ES,2021-11-18,205,Public,Scraped
-Spain,ES,2021-11-19,257,Public,Scraped
-Spain,ES,2021-11-20,205,Public,Scraped
+Spain,ES,2021-11-18,206,Public,Scraped
+Spain,ES,2021-11-19,256,Public,Scraped
+Spain,ES,2021-11-20,208,Public,Scraped
 Spain,ES,2021-11-21,216,Public,Scraped
-Spain,ES,2021-11-22,312,Public,Scraped
-Spain,ES,2021-11-23,301,Public,Scraped
+Spain,ES,2021-11-22,309,Public,Scraped
+Spain,ES,2021-11-23,302,Public,Scraped
 Spain,ES,2021-11-24,333,Public,Scraped
-Spain,ES,2021-11-25,273,Public,Scraped
+Spain,ES,2021-11-25,274,Public,Scraped
 Spain,ES,2021-11-26,279,Public,Scraped
 Spain,ES,2021-11-27,241,Public,Scraped
 Spain,ES,2021-11-28,245,Public,Scraped
 Spain,ES,2021-11-29,316,Public,Scraped
-Spain,ES,2021-11-30,383,Public,Scraped
-Spain,ES,2021-12-01,353,Public,Scraped
-Spain,ES,2021-12-02,353,Public,Scraped
-Spain,ES,2021-12-03,348,Public,Scraped
+Spain,ES,2021-11-30,381,Public,Scraped
+Spain,ES,2021-12-01,350,Public,Scraped
+Spain,ES,2021-12-02,355,Public,Scraped
+Spain,ES,2021-12-03,346,Public,Scraped
 Spain,ES,2021-12-04,307,Public,Scraped
-Spain,ES,2021-12-05,303,Public,Scraped
-Spain,ES,2021-12-06,337,Public,Scraped
+Spain,ES,2021-12-05,302,Public,Scraped
+Spain,ES,2021-12-06,339,Public,Scraped
 Spain,ES,2021-12-07,396,Public,Scraped
 Spain,ES,2021-12-08,360,Public,Scraped
-Spain,ES,2021-12-09,429,Public,Scraped
-Spain,ES,2021-12-10,493,Public,Scraped
-Spain,ES,2021-12-11,473,Public,Scraped
-Spain,ES,2021-12-12,387,Public,Scraped
-Spain,ES,2021-12-13,467,Public,Scraped
-Spain,ES,2021-12-14,512,Public,Scraped
-Spain,ES,2021-12-15,529,Public,Scraped
-Spain,ES,2021-12-16,523,Public,Scraped
-Spain,ES,2021-12-17,574,Public,Scraped
-Spain,ES,2021-12-18,503,Public,Scraped
-Spain,ES,2021-12-19,493,Public,Scraped
-Spain,ES,2021-12-20,654,Public,Scraped
-Spain,ES,2021-12-21,713,Public,Scraped
-Spain,ES,2021-12-22,712,Public,Scraped
-Spain,ES,2021-12-23,698,Public,Scraped
-Spain,ES,2021-12-24,680,Public,Scraped
-Spain,ES,2021-12-25,665,Public,Scraped
-Spain,ES,2021-12-26,745,Public,Scraped
-Spain,ES,2021-12-27,1034,Public,Scraped
-Spain,ES,2021-12-28,1099,Public,Scraped
-Spain,ES,2021-12-29,1145,Public,Scraped
-Spain,ES,2021-12-30,1106,Public,Scraped
-Spain,ES,2021-12-31,902,Public,Scraped
-Spain,ES,2022-01-01,832,Public,Scraped
-Spain,ES,2022-01-02,957,Public,Scraped
-Spain,ES,2022-01-03,1223,Public,Scraped
-Spain,ES,2022-01-04,1360,Public,Scraped
-Spain,ES,2022-01-05,1334,Public,Scraped
-Spain,ES,2022-01-06,1114,Public,Scraped
-Spain,ES,2022-01-07,1311,Public,Scraped
-Spain,ES,2022-01-08,1220,Public,Scraped
-Spain,ES,2022-01-09,1091,Public,Scraped
-Spain,ES,2022-01-10,1470,Public,Scraped
-Spain,ES,2022-01-11,1656,Public,Scraped
-Spain,ES,2022-01-12,1648,Public,Scraped
+Spain,ES,2021-12-09,433,Public,Scraped
+Spain,ES,2021-12-10,494,Public,Scraped
+Spain,ES,2021-12-11,476,Public,Scraped
+Spain,ES,2021-12-12,389,Public,Scraped
+Spain,ES,2021-12-13,468,Public,Scraped
+Spain,ES,2021-12-14,515,Public,Scraped
+Spain,ES,2021-12-15,530,Public,Scraped
+Spain,ES,2021-12-16,522,Public,Scraped
+Spain,ES,2021-12-17,576,Public,Scraped
+Spain,ES,2021-12-18,504,Public,Scraped
+Spain,ES,2021-12-19,496,Public,Scraped
+Spain,ES,2021-12-20,655,Public,Scraped
+Spain,ES,2021-12-21,712,Public,Scraped
+Spain,ES,2021-12-22,711,Public,Scraped
+Spain,ES,2021-12-23,701,Public,Scraped
+Spain,ES,2021-12-24,681,Public,Scraped
+Spain,ES,2021-12-25,671,Public,Scraped
+Spain,ES,2021-12-26,750,Public,Scraped
+Spain,ES,2021-12-27,1038,Public,Scraped
+Spain,ES,2021-12-28,1103,Public,Scraped
+Spain,ES,2021-12-29,1153,Public,Scraped
+Spain,ES,2021-12-30,1117,Public,Scraped
+Spain,ES,2021-12-31,903,Public,Scraped
+Spain,ES,2022-01-01,854,Public,Scraped
+Spain,ES,2022-01-02,988,Public,Scraped
+Spain,ES,2022-01-03,1246,Public,Scraped
+Spain,ES,2022-01-04,1376,Public,Scraped
+Spain,ES,2022-01-05,1345,Public,Scraped
+Spain,ES,2022-01-06,1127,Public,Scraped
+Spain,ES,2022-01-07,1326,Public,Scraped
+Spain,ES,2022-01-08,1230,Public,Scraped
+Spain,ES,2022-01-09,1097,Public,Scraped
+Spain,ES,2022-01-10,1442,Public,Scraped
+Spain,ES,2022-01-11,1619,Public,Scraped
+Spain,ES,2022-01-12,1652,Public,Scraped
 Spain,ES,2022-01-13,1549,Public,Scraped
-Spain,ES,2022-01-14,1547,Public,Scraped
-Spain,ES,2022-01-15,1277,Public,Scraped
-Spain,ES,2022-01-16,1137,Public,Scraped
-Spain,ES,2022-01-17,1541,Public,Scraped
-Spain,ES,2022-01-18,1457,Public,Scraped
-Spain,ES,2022-01-19,1460,Public,Scraped
-Spain,ES,2022-01-20,1358,Public,Scraped
-Spain,ES,2022-01-21,1342,Public,Scraped
-Spain,ES,2022-01-22,1063,Public,Scraped
-Spain,ES,2022-01-23,960,Public,Scraped
-Spain,ES,2022-01-24,1264,Public,Scraped
-Spain,ES,2022-01-25,1172,Public,Scraped
-Spain,ES,2022-01-26,1149,Public,Scraped
-Spain,ES,2022-01-27,998,Public,Scraped
-Spain,ES,2022-01-28,881,Public,Scraped
-Spain,ES,2022-01-29,720,Public,Scraped
-Spain,ES,2022-01-30,600,Public,Scraped
-Spain,ES,2022-01-31,330,Public,Scraped
-Spain,ES,2022-02-01,1,Public,Scraped
+Spain,ES,2022-01-14,1556,Public,Scraped
+Spain,ES,2022-01-15,1278,Public,Scraped
+Spain,ES,2022-01-16,1150,Public,Scraped
+Spain,ES,2022-01-17,1564,Public,Scraped
+Spain,ES,2022-01-18,1471,Public,Scraped
+Spain,ES,2022-01-19,1477,Public,Scraped
+Spain,ES,2022-01-20,1384,Public,Scraped
+Spain,ES,2022-01-21,1358,Public,Scraped
+Spain,ES,2022-01-22,1076,Public,Scraped
+Spain,ES,2022-01-23,983,Public,Scraped
+Spain,ES,2022-01-24,1303,Public,Scraped
+Spain,ES,2022-01-25,1206,Public,Scraped
+Spain,ES,2022-01-26,1204,Public,Scraped
+Spain,ES,2022-01-27,1054,Public,Scraped
+Spain,ES,2022-01-28,950,Public,Scraped
+Spain,ES,2022-01-29,780,Public,Scraped
+Spain,ES,2022-01-30,706,Public,Scraped
+Spain,ES,2022-01-31,748,Public,Scraped
+Spain,ES,2022-02-01,420,Public,Scraped
+Spain,ES,2022-02-02,7,Public,Scraped
 United Kingdom,GB,2020-03-01,7,Public,Scraped
 United Kingdom,GB,2020-03-02,12,Public,Scraped
 United Kingdom,GB,2020-03-03,13,Public,Scraped
@@ -13299,7 +13370,7 @@ United Kingdom,GB,2021-05-08,109,Public,Scraped
 United Kingdom,GB,2021-05-09,104,Public,Scraped
 United Kingdom,GB,2021-05-10,104,Public,Scraped
 United Kingdom,GB,2021-05-11,116,Public,Scraped
-United Kingdom,GB,2021-05-12,118,Public,Scraped
+United Kingdom,GB,2021-05-12,119,Public,Scraped
 United Kingdom,GB,2021-05-13,109,Public,Scraped
 United Kingdom,GB,2021-05-14,93,Public,Scraped
 United Kingdom,GB,2021-05-15,92,Public,Scraped
@@ -13519,7 +13590,7 @@ United Kingdom,GB,2021-12-14,949,Public,Scraped
 United Kingdom,GB,2021-12-15,948,Public,Scraped
 United Kingdom,GB,2021-12-16,923,Public,Scraped
 United Kingdom,GB,2021-12-17,880,Public,Scraped
-United Kingdom,GB,2021-12-18,833,Public,Scraped
+United Kingdom,GB,2021-12-18,834,Public,Scraped
 United Kingdom,GB,2021-12-19,1018,Public,Scraped
 United Kingdom,GB,2021-12-20,1213,Public,Scraped
 United Kingdom,GB,2021-12-21,1250,Public,Scraped
@@ -13530,40 +13601,41 @@ United Kingdom,GB,2021-12-25,1407,Public,Scraped
 United Kingdom,GB,2021-12-26,1539,Public,Scraped
 United Kingdom,GB,2021-12-27,1953,Public,Scraped
 United Kingdom,GB,2021-12-28,2298,Public,Scraped
-United Kingdom,GB,2021-12-29,2610,Public,Scraped
-United Kingdom,GB,2021-12-30,2383,Public,Scraped
+United Kingdom,GB,2021-12-29,2609,Public,Scraped
+United Kingdom,GB,2021-12-30,2384,Public,Scraped
 United Kingdom,GB,2021-12-31,2089,Public,Scraped
 United Kingdom,GB,2022-01-01,2064,Public,Scraped
 United Kingdom,GB,2022-01-02,2107,Public,Scraped
-United Kingdom,GB,2022-01-03,2458,Public,Scraped
+United Kingdom,GB,2022-01-03,2459,Public,Scraped
 United Kingdom,GB,2022-01-04,2382,Public,Scraped
 United Kingdom,GB,2022-01-05,2391,Public,Scraped
 United Kingdom,GB,2022-01-06,2319,Public,Scraped
 United Kingdom,GB,2022-01-07,2018,Public,Scraped
-United Kingdom,GB,2022-01-08,2080,Public,Scraped
+United Kingdom,GB,2022-01-08,2081,Public,Scraped
 United Kingdom,GB,2022-01-09,2206,Public,Scraped
-United Kingdom,GB,2022-01-10,2438,Public,Scraped
-United Kingdom,GB,2022-01-11,2389,Public,Scraped
-United Kingdom,GB,2022-01-12,2171,Public,Scraped
-United Kingdom,GB,2022-01-13,2135,Public,Scraped
-United Kingdom,GB,2022-01-14,1919,Public,Scraped
+United Kingdom,GB,2022-01-10,2439,Public,Scraped
+United Kingdom,GB,2022-01-11,2390,Public,Scraped
+United Kingdom,GB,2022-01-12,2173,Public,Scraped
+United Kingdom,GB,2022-01-13,2136,Public,Scraped
+United Kingdom,GB,2022-01-14,1920,Public,Scraped
 United Kingdom,GB,2022-01-15,1771,Public,Scraped
 United Kingdom,GB,2022-01-16,1923,Public,Scraped
-United Kingdom,GB,2022-01-17,1999,Public,Scraped
+United Kingdom,GB,2022-01-17,2001,Public,Scraped
 United Kingdom,GB,2022-01-18,1983,Public,Scraped
 United Kingdom,GB,2022-01-19,1961,Public,Scraped
 United Kingdom,GB,2022-01-20,1875,Public,Scraped
 United Kingdom,GB,2022-01-21,1635,Public,Scraped
 United Kingdom,GB,2022-01-22,1409,Public,Scraped
-United Kingdom,GB,2022-01-23,1663,Public,Scraped
-United Kingdom,GB,2022-01-24,1743,Public,Scraped
-United Kingdom,GB,2022-01-25,1843,Public,Scraped
-United Kingdom,GB,2022-01-26,1827,Public,Scraped
-United Kingdom,GB,2022-01-27,1629,Public,Scraped
-United Kingdom,GB,2022-01-28,1472,Public,Scraped
-United Kingdom,GB,2022-01-29,1353,Public,Scraped
-United Kingdom,GB,2022-01-30,1317,Public,Scraped
-United Kingdom,GB,2022-01-31,33,Public,Scraped
+United Kingdom,GB,2022-01-23,1662,Public,Scraped
+United Kingdom,GB,2022-01-24,1744,Public,Scraped
+United Kingdom,GB,2022-01-25,1844,Public,Scraped
+United Kingdom,GB,2022-01-26,1829,Public,Scraped
+United Kingdom,GB,2022-01-27,1631,Public,Scraped
+United Kingdom,GB,2022-01-28,1474,Public,Scraped
+United Kingdom,GB,2022-01-29,1356,Public,Scraped
+United Kingdom,GB,2022-01-30,1324,Public,Scraped
+United Kingdom,GB,2022-01-31,1500,Public,Scraped
+United Kingdom,GB,2022-02-01,53,Public,Scraped
 Ireland,IE,2019-12-01,1,TESSy,Scraped
 Ireland,IE,2019-12-13,1,TESSy,Scraped
 Ireland,IE,2019-12-20,1,TESSy,Scraped
@@ -14303,4 +14375,5 @@ Ireland,IE,2022-01-29,89,Public,Scraped
 Ireland,IE,2022-01-30,67,Public,Scraped
 Ireland,IE,2022-01-31,84,Public,Scraped
 Ireland,IE,2022-02-01,102,Public,Scraped
-Ireland,IE,2022-02-02,101,Public,Scraped
+Ireland,IE,2022-02-02,108,Public,Scraped
+Ireland,IE,2022-02-03,88,Public,Scraped
