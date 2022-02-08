@@ -24,7 +24,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2022-02-03 13:24:01
+As at 2022-02-07 13:24:49
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
@@ -42,7 +42,6 @@ As at 2022-02-03 13:24:01
 | denmark        | 2021-12-25 | 2021-12-25 | denmark case and death data now include reinfections                                              | Hello all, As of December 21, the \[Denmark COVID-…     | <https://github.com/CSSEGISandData/COVID-19/issues/5094> |
 | italy          | 2021-12-20 | 2021-12-20 | covid-19 integrated surveillance data in italy (iss)                                              | Hello, We’ve been redirected here from a \[discuss…     | <https://github.com/CSSEGISandData/COVID-19/issues/5070> |
 | france         | 2021-12-14 | 2021-12-14 | france covid-19 data file recent instability                                                      | Hello all, Over several days in the past two week…      | <https://github.com/CSSEGISandData/COVID-19/issues/5038> |
-| germany        | 2021-12-09 | 2021-12-09 | germany data wrong for 8th december reported on 9th december                                      | Hello, the data submitted for germany on the 9th …      | <https://github.com/CSSEGISandData/COVID-19/issues/5014> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
@@ -58,7 +57,7 @@ not consistent across all the countries in the ECDC Forecast Hub. To
 keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
-  - Belgium, Croatia, Czechia, Denmark, Estonia, France, Greece,
+  - Belgium, Croatia, Cyprus, Czechia, Denmark, Estonia, France, Greece,
     Iceland, Ireland, Latvia, Liechtenstein, Malta, Norway, Slovenia,
     Switzerland, United Kingdom
 

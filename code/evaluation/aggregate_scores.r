@@ -12,10 +12,10 @@ Usage:
     aggregate_scores.r -h | --help
 
 Options:
-    -h, --help  Show this screen
-    -s <histories>, --histories=<histories>  Weeks of history to produce, separated by commas (default: 10,Inf)
-    -w --restrict-weeks  Number of recent weeks of submission to require (default: 4)
-    -r --re-run  If given, will re-run all dates instead of just the latest
+    -h, --help                   Show this screen
+    -s --histories <histories>   Weeks of history to produce, separated by commas (default: 10,Inf)
+    -w --restrict-weeks <weeks>  Number of recent weeks of submission to require (default: 4)
+    -r --re-run                  If given, will re-run all dates instead of just the latest
 
 Arguments:
     subdir Subdirectory in which to score models if not scoring
@@ -34,7 +34,7 @@ histories <- as.numeric(unlist(strsplit(histories_str, split = ",")))
 restrict_weeks <-
   ifelse(is.null(opts$restrict_weeks), 4L, as.integer(opts$restrict_weeks))
 subdir <- ifelse(is.null(opts$subdir), "", opts$subdir)
-re_run <- opts$re_run
+re_run <- !is.null(opts$re_run) && opts$re_run
 
 latest_date <- today()
 wday(latest_date) <- get_hub_config("forecast_week_day")
