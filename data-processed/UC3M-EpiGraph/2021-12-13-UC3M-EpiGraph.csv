@@ -1,0 +1,25 @@
+forecast_date,scenario_id,target,target_end_date,location,type,quantile,value
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,point,NA,73058
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.01",66919
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.025",66919
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.05",66919
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.1",66919
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.15",67693
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.2",68467
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.25",69240
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.3",70014
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.35",70120
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.4",70226
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.45",70331
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.5",70437
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.55",70489
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.6",70541
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.65",70593
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.7",70645
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.75",74802
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.8",78959
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.85",83116
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.9",87273
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.95",87273
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.975",87273
+2021-12-13,forecast,1 wk ahead inc case,2021-12-18,ES,quantile,"0.99",87273

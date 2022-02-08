@@ -1540,42 +1540,18 @@ Latest check of truth data: 2022-01-31 13:25:04
 
 No errors detected.
 
-Latest check of truth data: 2022-02-01 13:13:29
+Latest check of truth data: 2022-02-01 13:23:51
 
 WARNING
 Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2022-01-31:
 
 - Negative incidence in the following locations: ['Estonia'].
 
-Latest check of truth data: 2022-02-02 13:14:45
+Latest check of truth data: 2022-02-02 13:24:21
 
 No errors detected.
 
-Latest check of truth data: 2022-02-03 13:14:40
-
-No errors detected.
-
-Latest check of truth data: 2022-02-04 13:09:00
-
-No errors detected.
-
-Latest check of truth data: 2022-02-05 13:08:01
-
-No errors detected.
-
-Latest check of truth data: 2022-02-06 13:11:07
-
-WARNING
-Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Cases.csv' at 2022-02-05:
-
-- Negative incidence in the following locations: ['Spain'].
-
-WARNING
-Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2022-02-05:
-
-- Negative incidence in the following locations: ['Spain'].
-
-Latest check of truth data: 2022-02-07 13:14:03
+Latest check of truth data: 2022-02-03 13:24:00
 
 No errors detected.
 
