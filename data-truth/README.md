@@ -24,7 +24,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2022-02-08 13:25:06
+As at 2022-02-09 13:24:42
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
@@ -41,7 +41,6 @@ As at 2022-02-08 13:25:06
 | uk             | 2021-12-29 | 2022-01-06 | discrepancy in uk stats                                                                           | Confirmed cases for 26th dec in UK is 11891292 and…     | <https://github.com/CSSEGISandData/COVID-19/issues/5112> |
 | denmark        | 2021-12-25 | 2021-12-25 | denmark case and death data now include reinfections                                              | Hello all, As of December 21, the \[Denmark COVID-…     | <https://github.com/CSSEGISandData/COVID-19/issues/5094> |
 | italy          | 2021-12-20 | 2021-12-20 | covid-19 integrated surveillance data in italy (iss)                                              | Hello, We’ve been redirected here from a \[discuss…     | <https://github.com/CSSEGISandData/COVID-19/issues/5070> |
-| france         | 2021-12-14 | 2021-12-14 | france covid-19 data file recent instability                                                      | Hello all, Over several days in the past two week…      | <https://github.com/CSSEGISandData/COVID-19/issues/5038> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
