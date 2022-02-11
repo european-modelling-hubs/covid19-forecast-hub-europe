@@ -25,10 +25,7 @@ jobs:
         run: |
           sudo apt-get install libcurl4-openssl-dev
 
-      - name: Install R dependencies
-        run: |
-          install.packages('gh')
-        shell: Rscript {0}
+      - uses: r-lib/actions/setup-renv@v2
 
       - name: Post comment linking to preview shiny app
         env:
