@@ -25,8 +25,6 @@ jobs:
       run: Rscript 'code/ensemble/EuroCOVIDhub/create-weekly-ensemble.R'
 
     - name: Commit files
-      env:
-        AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git config user.email "action@github.com"
         git config user.name "GitHub Action - mean ensemble"

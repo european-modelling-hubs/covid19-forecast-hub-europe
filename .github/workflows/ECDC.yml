@@ -37,8 +37,6 @@ jobs:
         git pull --rebase
         git push
         echo "pushed to github"
-      env:
-        AUTH: ${{secrets.GITHUB_TOKEN}}
 
     - name: Create issue about failure
       if: failure() && github.event_name != 'workflow_dispatch'

@@ -27,13 +27,12 @@ jobs:
       run: Rscript 'code/evaluation/aggregate_scores.r'
 
     - name: Push evaluation csv
-      env:
-        AUTH: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git config user.email "action@github.com"
         git config user.name "GitHub Action - evaluation csv"
         git add evaluation/*
         git diff-index --quiet HEAD || git commit -m "Upload evaluation csv"
+        git pull --rebase
         git push
         echo "pushed to github"
 
