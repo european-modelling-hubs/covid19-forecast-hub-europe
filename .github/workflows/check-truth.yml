@@ -46,8 +46,6 @@ jobs:
         Rscript -e 'rmarkdown::render("data-truth/README.Rmd")'
 
     - name: Commit files
-      env:
-        AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git config user.email "action@github.com"
         git config user.name "GitHub Action - check truth"

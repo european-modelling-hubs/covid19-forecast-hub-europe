@@ -24,8 +24,6 @@ jobs:
       run: python3 ./code/auto_download/jhu_download.py
 
     - name: Commit files
-      env:
-        AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git config user.email "action@github.com"
         git config user.name "GitHub Action - JHU"
