@@ -98,6 +98,49 @@
         "yaml"
       ]
     },
+    "ForecastHubValidations": {
+      "Package": "ForecastHubValidations",
+      "Version": "0.0.0.9000",
+      "Source": "GitHub",
+      "Remotes": "r-lib/rlang",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "ForecastHubValidations",
+      "RemoteUsername": "epiforecasts",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "738449dca342243a5dcabb02f2794ca954b8913f",
+      "Hash": "0349506463f2ddae42f98a61e84e609e",
+      "Requirements": [
+        "dplyr",
+        "fs",
+        "gert",
+        "gh",
+        "jsonlite",
+        "jsonvalidate",
+        "purrr",
+        "readr",
+        "rlang",
+        "yaml"
+      ]
+    },
+    "ISOweek": {
+      "Package": "ISOweek",
+      "Version": "0.6-2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ad7e2b013b9379cb560caa9b168202f0",
+      "Requirements": [
+        "stringr"
+      ]
+    },
+    "KernSmooth": {
+      "Package": "KernSmooth",
+      "Version": "2.23-20",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "8dcfa99b14c296bc9f1fd64d52fd3ce7",
+      "Requirements": []
+    },
     "MASS": {
       "Package": "MASS",
       "Version": "7.3-55",
@@ -197,6 +240,18 @@
         "Rcpp"
       ]
     },
+    "V8": {
+      "Package": "V8",
+      "Version": "4.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c6bdc74e7e3a095102a6326d5a8f0224",
+      "Requirements": [
+        "Rcpp",
+        "curl",
+        "jsonlite"
+      ]
+    },
     "askpass": {
       "Package": "askpass",
       "Version": "1.1",
@@ -251,6 +306,14 @@
         "bit"
       ]
     },
+    "boot": {
+      "Package": "boot",
+      "Version": "1.3-28",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "0baa960e3b49c6176a4f42addcbacc59",
+      "Requirements": []
+    },
     "brio": {
       "Package": "brio",
       "Version": "1.1.3",
@@ -282,6 +345,16 @@
         "processx"
       ]
     },
+    "class": {
+      "Package": "class",
+      "Version": "7.3-20",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "da09d82223e669d270e47ed24ac8686e",
+      "Requirements": [
+        "MASS"
+      ]
+    },
     "cli": {
       "Package": "cli",
       "Version": "3.1.1",
@@ -298,6 +371,14 @@
       "Source": "Repository",
       "Repository": "RSPM",
       "Hash": "ebaa97ac99cc2daf04e77eecc7b781d7",
+      "Requirements": []
+    },
+    "cluster": {
+      "Package": "cluster",
+      "Version": "2.1.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ce49bfe5bc0b3ecd43a01fe1b01c2243",
       "Requirements": []
     },
     "codetools": {
@@ -400,6 +481,20 @@
       "Repository": "RSPM",
       "Hash": "0a6a65d92bd45b47b94b84244b528d17",
       "Requirements": []
+    },
+    "credentials": {
+      "Package": "credentials",
+      "Version": "1.3.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "93762d0a34d78e6a025efdbfb5c6bb41",
+      "Requirements": [
+        "askpass",
+        "curl",
+        "jsonlite",
+        "openssl",
+        "sys"
+      ]
     },
     "crul": {
       "Package": "crul",
@@ -578,6 +673,14 @@
         "iterators"
       ]
     },
+    "foreign": {
+      "Package": "foreign",
+      "Version": "0.8-82",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "32b25c97ce306a760c4d9f787991b5d9",
+      "Requirements": []
+    },
     "fs": {
       "Package": "fs",
       "Version": "1.5.2",
@@ -593,6 +696,21 @@
       "Repository": "RSPM",
       "Hash": "177475892cf4a55865868527654a7741",
       "Requirements": []
+    },
+    "gert": {
+      "Package": "gert",
+      "Version": "1.5.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "8fddce7cbd59467106266a6e93e253b4",
+      "Requirements": [
+        "askpass",
+        "credentials",
+        "openssl",
+        "rstudioapi",
+        "sys",
+        "zip"
+      ]
     },
     "ggnewscale": {
       "Package": "ggnewscale",
@@ -819,6 +937,16 @@
       "Hash": "68c37fd8f863c6273dcd24928c17d6e1",
       "Requirements": []
     },
+    "jsonvalidate": {
+      "Package": "jsonvalidate",
+      "Version": "1.3.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "cdc2843ef7f44f157198bb99aea7552d",
+      "Requirements": [
+        "V8"
+      ]
+    },
     "knitr": {
       "Package": "knitr",
       "Version": "1.37",
@@ -948,6 +1076,14 @@
       "Requirements": [
         "lattice"
       ]
+    },
+    "nnet": {
+      "Package": "nnet",
+      "Version": "7.3-17",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "cb1d8d9f300a7e536b89c8a88c53f610",
+      "Requirements": []
     },
     "openssl": {
       "Package": "openssl",
@@ -1106,6 +1242,14 @@
         "tibble"
       ]
     },
+    "remotes": {
+      "Package": "remotes",
+      "Version": "2.4.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "227045be9aee47e6dda9bb38ac870d67",
+      "Requirements": []
+    },
     "renv": {
       "Package": "renv",
       "Version": "0.15.2-1",
@@ -1147,6 +1291,14 @@
         "xfun",
         "yaml"
       ]
+    },
+    "rpart": {
+      "Package": "rpart",
+      "Version": "4.1.16",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ea3ca1d9473daabb3cd0f1b4f974c1ed",
+      "Requirements": []
     },
     "rprojroot": {
       "Package": "rprojroot",
@@ -1218,6 +1370,14 @@
         "stringr"
       ]
     },
+    "spatial": {
+      "Package": "spatial",
+      "Version": "7.3-12",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "58a02ce0150652b96c044bc67a0df2e5",
+      "Requirements": []
+    },
     "stringi": {
       "Package": "stringi",
       "Version": "1.7.6",
@@ -1238,6 +1398,27 @@
         "stringi"
       ]
     },
+    "survival": {
+      "Package": "survival",
+      "Version": "3.2-13",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "6f0a0fadc63bc6570fe172770f15bbc4",
+      "Requirements": [
+        "Matrix"
+      ]
+    },
+    "svglite": {
+      "Package": "svglite",
+      "Version": "2.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "68dfdf211af6aa4e5f050f064f64d401",
+      "Requirements": [
+        "cpp11",
+        "systemfonts"
+      ]
+    },
     "sys": {
       "Package": "sys",
       "Version": "3.4",
@@ -1245,6 +1426,16 @@
       "Repository": "RSPM",
       "Hash": "b227d13e29222b4574486cfcbde077fa",
       "Requirements": []
+    },
+    "systemfonts": {
+      "Package": "systemfonts",
+      "Version": "1.0.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "5be9fcf8ef6763e8cb13ab009e273a1d",
+      "Requirements": [
+        "cpp11"
+      ]
     },
     "testthat": {
       "Package": "testthat",
@@ -1496,6 +1687,14 @@
       "Source": "Repository",
       "Repository": "RSPM",
       "Hash": "4597f73aad7d32c2913ec33a345f900b",
+      "Requirements": []
+    },
+    "zip": {
+      "Package": "zip",
+      "Version": "2.2.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c7eef2996ac270a18c2715c997a727c5",
       "Requirements": []
     },
     "zoltr": {
