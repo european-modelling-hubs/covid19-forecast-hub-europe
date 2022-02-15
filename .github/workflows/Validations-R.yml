@@ -21,38 +21,12 @@ jobs:
           install-r: false
           use-public-rspm: true
 
-      - name: Query dependencies
-        run: |
-          install.packages('remotes')
-          saveRDS(
-            remotes::package_deps(
-              "ForecastHubValidations",
-              repos = c(epiforecasts = "https://epiforecasts.r-universe.dev",
-                        CRAN = "https://cloud.r-project.org")
-            ),
-            ".github/depends.Rds",
-            version = 2
-          )
-          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
-        shell: Rscript {0}
-
-      - name: Cache R packages
-        uses: actions/cache@v2
-        with:
-          path: ${{ env.R_LIBS_USER }}
-          key: ubuntu-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
-          restore-keys: ubuntu-${{ hashFiles('.github/R-version') }}-1-
-
       - name: Install system dependencies
         run: |
           sudo apt-get update
           sudo apt-get install libcurl4-openssl-dev libv8-dev
 
-      - name: Install validation package
-        run: |
-          install.packages("remotes")
-          remotes::install_github("epiforecasts/ForecastHubValidations")
-        shell: Rscript {0}
+      - uses: r-lib/actions/setup-renv@v2
 
       - name: Run validations
         env:

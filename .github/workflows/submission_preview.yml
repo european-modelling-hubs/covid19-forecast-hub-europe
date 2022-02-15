@@ -25,6 +25,7 @@ jobs:
         run: |
           sudo apt-get install libcurl4-openssl-dev
 
+      # This workflow cannot work with renv since we never check out the repo.
       - name: Install R dependencies
         run: |
           install.packages('gh')

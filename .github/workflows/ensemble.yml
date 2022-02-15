@@ -8,34 +8,29 @@ jobs:
   ensemble:
     runs-on: ubuntu-20.04
     env:
-      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - uses: actions/checkout@master
-    - uses: r-lib/actions/setup-r@v1
+
+    - uses: r-lib/actions/setup-r@v2
+      with:
+        use-public-rspm: true
 
     - name: Install system dependencies
       run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
 
-    - name: Install R dependencies
-      run: |
-       install.packages(c("here", "vroom", "dplyr", "tibble", "lubridate", "remotes", "cNORM", "yaml"))
-       remotes::install_github("reichlab/covidHubUtils")
-       remotes::install_github("epiforecasts/EuroForecastHub")
-      shell: Rscript {0}
+    - uses: r-lib/actions/setup-renv@v2
 
     - name: Create ensembles
       run: Rscript 'code/ensemble/EuroCOVIDhub/create-weekly-ensemble.R'
 
     - name: Commit files
-      env:
-        AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git config user.email "action@github.com"
         git config user.name "GitHub Action - mean ensemble"
         git add --all
         git diff-index --quiet HEAD || git commit -m "Build ensemble"
-        git pull --rebase
+        git pull --rebase origin main
         git push
         echo "pushed to github"
 

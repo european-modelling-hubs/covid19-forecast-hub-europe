@@ -24,14 +24,12 @@ jobs:
       run: python3 ./code/auto_download/jhu_download.py
 
     - name: Commit files
-      env:
-        AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git config user.email "action@github.com"
         git config user.name "GitHub Action - JHU"
         git add --all
         git commit -m "JHU - daily"
-        git pull --rebase
+        git pull --rebase origin main
         git push
         echo "pushed to github"
 
