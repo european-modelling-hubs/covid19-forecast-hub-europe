@@ -32,7 +32,7 @@ jobs:
         git config user.name "GitHub Action - evaluation csv"
         git add evaluation/*
         git diff-index --quiet HEAD || git commit -m "Upload evaluation csv"
-        git pull --rebase
+        git pull --rebase origin main
         git push
         echo "pushed to github"
 
