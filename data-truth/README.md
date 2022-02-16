@@ -24,7 +24,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2022-02-15 13:22:59
+As at 2022-02-16 13:23:55
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
@@ -55,8 +55,8 @@ not consistent across all the countries in the ECDC Forecast Hub. To
 keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
-  - Belgium, Croatia, Cyprus, Czechia, Denmark, Estonia, France, Greece,
-    Iceland, Ireland, Latvia, Liechtenstein, Malta, Norway, Slovenia,
+  - Belgium, Croatia, Czechia, Denmark, Estonia, France, Iceland,
+    Ireland, Latvia, Liechtenstein, Malta, Norway, Slovenia,
     Switzerland, United Kingdom
 
 ![Plot of truth data from different sources for all countries covered by
