@@ -24,14 +24,13 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2022-02-17 13:24:04
+As at 2022-02-18 13:23:40
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
 | country        | created    | updated    | issue                                                                                             | message                                                 | url                                                      |
 | :------------- | :--------- | :--------- | :------------------------------------------------------------------------------------------------ | :------------------------------------------------------ | :------------------------------------------------------- |
-| spain          | 2022-02-17 | 2022-02-17 | bad data for spain series - number of deaths                                                      | Hi Team, We have observed that data published for…      | <https://github.com/CSSEGISandData/COVID-19/issues/5412> |
 | germany        | 2022-02-01 | 2022-02-01 | official sources for germany                                                                      | Dear all, since you cite a newspaper as your sour…      | <https://github.com/CSSEGISandData/COVID-19/issues/5327> |
 | germany        | 2022-02-01 | 2022-02-01 | discrepancy in germany new cases data of 29th & 30th jan.                                         | For Germany, As per the \[feed\](<https://github.com/>… | <https://github.com/CSSEGISandData/COVID-19/issues/5324> |
 | united kingdom | 2022-01-28 | 2022-01-28 | united kingdom data to include reinfections january 31, 2022: upcoming spikes in cases and deaths | Please see the below text from the \[UK Coronavirus…    | <https://github.com/CSSEGISandData/COVID-19/issues/5310> |
@@ -56,8 +55,8 @@ not consistent across all the countries in the ECDC Forecast Hub. To
 keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
-  - Belgium, Croatia, Czechia, Denmark, Estonia, France, Iceland,
-    Ireland, Latvia, Liechtenstein, Malta, Norway, Slovenia,
+  - Belgium, Croatia, Cyprus, Czechia, Denmark, Estonia, France,
+    Iceland, Ireland, Latvia, Liechtenstein, Malta, Norway, Slovenia,
     Switzerland, United Kingdom
 
 ![Plot of truth data from different sources for all countries covered by
