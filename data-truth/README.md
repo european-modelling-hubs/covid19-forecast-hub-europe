@@ -24,13 +24,15 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2022-02-20 13:21:58
+As at 2022-02-21 13:24:31
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
 | country        | created    | updated    | issue                                                                                             | message                                                 | url                                                      |
 | :------------- | :--------- | :--------- | :------------------------------------------------------------------------------------------------ | :------------------------------------------------------ | :------------------------------------------------------- |
+| poland         | 2022-02-21 | 2022-02-21 | poland daily confirmed cases discrepancy wrt to other sources                                     | For Poland, As per the \[JHU\](<https://github.com/CS>… | <https://github.com/CSSEGISandData/COVID-19/issues/5436> |
+| france         | 2022-02-21 | 2022-02-21 | some wrong cases for france in the past two weeks                                                 | Hi, I noted some mistakes in the daily cases for F…     | <https://github.com/CSSEGISandData/COVID-19/issues/5433> |
 | germany        | 2022-02-01 | 2022-02-01 | official sources for germany                                                                      | Dear all, since you cite a newspaper as your sour…      | <https://github.com/CSSEGISandData/COVID-19/issues/5327> |
 | germany        | 2022-02-01 | 2022-02-01 | discrepancy in germany new cases data of 29th & 30th jan.                                         | For Germany, As per the \[feed\](<https://github.com/>… | <https://github.com/CSSEGISandData/COVID-19/issues/5324> |
 | united kingdom | 2022-01-28 | 2022-01-28 | united kingdom data to include reinfections january 31, 2022: upcoming spikes in cases and deaths | Please see the below text from the \[UK Coronavirus…    | <https://github.com/CSSEGISandData/COVID-19/issues/5310> |
