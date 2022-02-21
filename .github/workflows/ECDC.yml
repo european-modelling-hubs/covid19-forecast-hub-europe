@@ -31,8 +31,6 @@ jobs:
 
     - name: Commit files
       run: |
-        git config user.email "action@github.com"
-        git config user.name "GitHub Action - ECDC"
         git add --all
         git commit -m "ECDC - daily" || echo "No changes to commit"
         git pull --rebase origin main
