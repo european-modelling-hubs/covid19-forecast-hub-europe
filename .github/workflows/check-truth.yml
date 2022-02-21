@@ -40,6 +40,10 @@ jobs:
       run: |
         python3 code/validation/check_truth.py
 
+    - name: Check data for revisions
+      run: |
+        Rscript code/auto_download/check_revisions.R
+
     - name: Create status page
       run: |
         Rscript -e 'rmarkdown::render("data-truth/README.Rmd")'
