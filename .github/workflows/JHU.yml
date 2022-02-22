@@ -8,7 +8,7 @@ jobs:
   get_jhu:
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v2
       with:
         fetch-depth: 0
 
