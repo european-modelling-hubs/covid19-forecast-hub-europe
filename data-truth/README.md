@@ -24,14 +24,14 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2022-02-23 13:13:59
+As at 2022-02-24 13:14:03
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
 | country        | created    | updated    | issue                                                                                             | message                                                 | url                                                      |
 | :------------- | :--------- | :--------- | :------------------------------------------------------------------------------------------------ | :------------------------------------------------------ | :------------------------------------------------------- |
-| poland         | 2022-02-23 | 2022-02-23 | poland data now includes reinfections                                                             | Thanks to the help of @jbracher and @eMaerthin, we…     | <https://github.com/CSSEGISandData/COVID-19/issues/5456> |
+| poland         | 2022-02-23 | 2022-02-24 | poland data now includes reinfections                                                             | Thanks to the help of @jbracher and @eMaerthin, we…     | <https://github.com/CSSEGISandData/COVID-19/issues/5456> |
 | france         | 2022-02-22 | 2022-02-22 | bad data for france series - number of deaths                                                     | Hi Team, We have observed that data published for…      | <https://github.com/CSSEGISandData/COVID-19/issues/5444> |
 | france         | 2022-02-21 | 2022-02-21 | some wrong cases for france in the past two weeks                                                 | Hi, I noted some mistakes in the daily cases for F…     | <https://github.com/CSSEGISandData/COVID-19/issues/5433> |
 | germany        | 2022-02-01 | 2022-02-01 | official sources for germany                                                                      | Dear all, since you cite a newspaper as your sour…      | <https://github.com/CSSEGISandData/COVID-19/issues/5327> |
