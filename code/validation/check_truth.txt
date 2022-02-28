@@ -1676,3 +1676,10 @@ Latest check of truth data: 2022-02-27 13:21:47
 
 No errors detected.
 
+Latest check of truth data: 2022-02-28 13:23:38
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2022-02-27:
+
+- Negative incidence in the following locations: ['Switzerland'].
+
