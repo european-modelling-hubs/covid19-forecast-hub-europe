@@ -24,13 +24,14 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As at 2022-02-28 13:14:21
+As at 2022-03-01 13:14:54
 
     ## Warning in stri_replace_all_regex(string, pattern,
     ## fix_replacement(replacement), : argument is not an atomic vector; coercing
 
 | country        | created    | updated    | issue                                                                                             | message                                                 | url                                                      |
 | :------------- | :--------- | :--------- | :------------------------------------------------------------------------------------------------ | :------------------------------------------------------ | :------------------------------------------------------- |
+| spain          | 2022-03-01 | 2022-03-01 | negative data entry for country spain, france                                                     | Hi, There are many negative entries on a dataset …      | <https://github.com/CSSEGISandData/COVID-19/issues/5480> |
 | france         | 2022-02-22 | 2022-02-24 | bad data for france series - number of deaths                                                     | Hi Team, We have observed that data published for…      | <https://github.com/CSSEGISandData/COVID-19/issues/5444> |
 | france         | 2022-02-24 | 2022-02-24 | france: incorrect data of 22nd feb.                                                               | For France, daily death counts for 22nd of Februar…     | <https://github.com/CSSEGISandData/COVID-19/issues/5460> |
 | poland         | 2022-02-23 | 2022-02-24 | poland data now includes reinfections                                                             | Thanks to the help of @jbracher and @eMaerthin, we…     | <https://github.com/CSSEGISandData/COVID-19/issues/5456> |
