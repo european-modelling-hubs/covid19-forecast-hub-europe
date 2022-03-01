@@ -17,8 +17,7 @@ properties:
     type: array
     items:
       type: string
-      enum:
-        - forecast
+      pattern: ^forecast$
   target:
     description: >
       '"# wk ahead inc case" or "# wk ahead inc death" where # is usually
