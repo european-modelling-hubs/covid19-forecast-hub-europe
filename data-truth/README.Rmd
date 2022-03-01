@@ -4,7 +4,7 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 library(gh)
 library(dplyr)
 library(stringr)
@@ -27,7 +27,7 @@ Note there are some differences between the format of the JHU data and what we r
 
 #### Potential issues in the JHU dataset
 
-As at `r Sys.time()`
+As of `r Sys.Date()`
 
 ```{r issues, echo=FALSE, message=FALSE}
 
