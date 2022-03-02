@@ -6,6 +6,10 @@ on:
     branches: main
     paths:
       - 'data-processed/**'
+  push:
+    branches: main
+    paths:
+      - 'data-processed/**'
 
 jobs:
   build:
