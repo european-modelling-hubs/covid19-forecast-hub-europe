@@ -113,8 +113,8 @@ anomalies <- anomalies %>%
   filter(!(target_variable == "inc hosp" &
            location_name %in% hosp_sources$location_name))
 
-existing_anomalies <-
-  read_csv(here::here("data-truth", "anomalies", "anomalies.csv"))
+anomalies_file <- here::here("data-truth", "anomalies", "anomalies.csv")
+existing_anomalies <- read_csv(anomalies_file)
 
 new_anomalies <- anomalies %>%
   anti_join(existing_anomalies,
@@ -123,3 +123,5 @@ new_anomalies <- anomalies %>%
 
 all_anomalies <- rbind(existing_anomalies, new_anomalies) %>%
   arrange(target_end_date, target_variable, location, location_name)
+
+write_csv(all_anomalies, anomalies_file)
