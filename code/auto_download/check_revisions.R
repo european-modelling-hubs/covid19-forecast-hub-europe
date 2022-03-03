@@ -45,7 +45,7 @@ for (source in names(sources)) {
 
   shas <- vapply(commits, "[[", "", "sha")
   dates <- vapply(commits, function(x) x[["commit"]][["author"]][["date"]], "")
-  dates <- as.Date(substr(dates, 1, 10))
+  dates <- as_date(ymd_hms(dates))
 
   ## keep multiples of 7 since today
   select_commits <- which(as.integer(max(dates) - dates) %% 7 == 0)
@@ -55,7 +55,7 @@ for (source in names(sources)) {
       select_commits,
       function(id)
         readr::read_csv(
-                 gsub(" ", "%20", ## for URLs
+                 URLencode(
                       paste("https://raw.githubusercontent.com", owner, repo,
                             shas[id], path[source], sep = "/"))) %>%
         mutate(commit_date = dates[id])
@@ -95,7 +95,7 @@ for (source in names(sources)) {
 anomalies_raw <- data %>%
   group_by(location, location_name, target_end_date, type) %>%
   summarise(abs_diff = max(value) - min(value),
-            rel_diff = (max(value) - min(value)) / max(value),
+            rel_diff = abs_diff / max(value),
             .groups = "drop") %>%
   filter(target_end_date >= min_data, !is.na(rel_diff), rel_diff > 0.05)
 anomalies <- anomalies_raw %>%
