@@ -36,10 +36,10 @@ jobs:
         env:
           PR_NUMBER: ${{ github.event.number }}
         run: |
-          v <- ForecastHubValidations::validate_pr(
+          v <- HubValidations::validate_pr(
               gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
               pr_number = Sys.getenv("PR_NUMBER"),
               data_folder = "data-processed"
           )
-          ForecastHubValidations::check_for_errors(v)
+          HubValidations::check_for_errors(v)
         shell: Rscript {0}
