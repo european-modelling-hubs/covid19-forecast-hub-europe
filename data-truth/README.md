@@ -24,7 +24,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-03-04
+As of 2022-03-05
 
 | country        | created    | updated    | issue                                                                                             | message                                                 | url                                                      |
 | :------------- | :--------- | :--------- | :------------------------------------------------------------------------------------------------ | :------------------------------------------------------ | :------------------------------------------------------- |
@@ -40,7 +40,6 @@ As of 2022-03-04
 | switzerland    | 2022-01-27 | 2022-01-27 | the covid cases are inaccurate for switzerland                                                    | The new cases on 24th Jan is 87,281, which is quit…     | <https://github.com/CSSEGISandData/COVID-19/issues/5301> |
 | austria        | 2022-01-23 | 2022-01-23 | incorrect data for 19/01/2022 to 22/01/2022 for austria                                           | I originally filed this against ourworldindata as …     | <https://github.com/CSSEGISandData/COVID-19/issues/5279> |
 | czechia        | 2022-01-12 | 2022-01-12 | czechia data don’t account for reinfections (and are shifted by a day)                            | There seem to be two issues with Czech data 1. Re…      | <https://github.com/CSSEGISandData/COVID-19/issues/5192> |
-| it             | 2020-03-22 | 2022-01-07 | it’s not taiwan country , it is taiwan province                                                   | Happens in line 214 of csse\_covid\_19\_data/csse\_cov… | <https://github.com/CSSEGISandData/COVID-19/issues/1253> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
