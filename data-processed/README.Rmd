@@ -6,16 +6,33 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 library(here)
-library(covidHubUtils)
-library(readr)
-
-metadata <- covidHubUtils::get_model_metadata(hub = "ECDC",
-                                              source = "local_hub_repo",
-                                              hub_repo_path = here())
-write_csv(metadata, here("data-processed", "metadata.csv"))
+library(purrr)
+library(yaml)
 ```
 
 ```{r table-metadata, include = TRUE}
+# Get all model metadata files
+models <- list.files(here("data-processed"), recursive = TRUE, full.names = TRUE)
+model_metadata_paths <- models[grepl("(metadata-).+(\\.txt)", models)]
+# Get metadata
+metadata <- map_dfr(model_metadata_paths, ~ suppressWarnings(read_yaml(.x)))
 knitr::kable(metadata, 
              col.names = tools::toTitleCase(gsub("_", " ", names(metadata))))
+```
+
+---
+
+Example R code to reproduce this table without cloning the github repository:
+```
+library(gh)
+library(purrr)
+library(yaml)
+# Get all model names
+models <- gh("/repos/covid19-forecast-hub-europe/covid19-forecast-hub-europe/contents/data-processed?recursive=1")
+models <- unlist(transpose(models)$name)
+models <- models[!grepl("schema.+yml", models)] # exclude hub schema files
+# Get paths for metadata files
+model_metadata_paths <- map_chr(models, ~ paste0("https://raw.githubusercontent.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe/main/data-processed/", .x, "/metadata-", .x, ".txt"))
+# Download metadata into single data frame
+metadata <- map_dfr(model_metadata_paths, ~ read_yaml(.x))
 ```
