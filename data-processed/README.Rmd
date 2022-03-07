@@ -1,0 +1,21 @@
+---
+title: "Forecasting models"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+library(here)
+library(covidHubUtils)
+library(readr)
+
+metadata <- covidHubUtils::get_model_metadata(hub = "ECDC",
+                                              source = "local_hub_repo",
+                                              hub_repo_path = here())
+write_csv(metadata, here("data-processed", "metadata.csv"))
+```
+
+```{r table-metadata, include = TRUE}
+knitr::kable(metadata, 
+             col.names = tools::toTitleCase(gsub("_", " ", names(metadata))))
+```
