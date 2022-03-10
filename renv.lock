@@ -72,10 +72,10 @@
     },
     "DT": {
       "Package": "DT",
-      "Version": "0.20",
+      "Version": "0.21",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "0163cd2ce6c7995005a0fc363d570963",
+      "Hash": "45fa28dbf288cd606e13ca35d3d72437",
       "Requirements": [
         "crosstalk",
         "htmltools",
@@ -95,13 +95,12 @@
       "RemoteUsername": "covid19-forecast-hub-europe",
       "RemoteRepo": "EuroForecastHub",
       "RemoteRef": "main",
-      "RemoteSha": "fabe26a3d54d9bfb15c9ff8c5227313cdd32dad9",
+      "RemoteSha": "265f05d99bf0bb705f152391658597ac1f897a8c",
       "Remotes": "reichlab/covidHubUtils, anthonynorth/roxyglobals",
-      "Hash": "fe1b9d85779196adf91f8f931a58b8aa",
+      "Hash": "1521498c4cb745604b43364d75c2480b",
       "Requirements": [
         "cNORM",
         "covidHubUtils",
-        "covidModels",
         "dplyr",
         "gh",
         "here",
@@ -458,14 +457,14 @@
       "Package": "covidHubUtils",
       "Version": "0.1.6",
       "Source": "GitHub",
-      "Remotes": "reichlab/zoltr",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "covidHubUtils",
       "RemoteUsername": "reichlab",
-      "RemoteRef": "HEAD",
+      "RemoteRepo": "covidHubUtils",
+      "RemoteRef": "master",
       "RemoteSha": "cc3ef283e5a72b27d5ea151a575fccdcef934180",
-      "Hash": "a2f218dfeff6fb4c977b7293b7e0e6b3",
+      "Remotes": "reichlab/zoltr",
+      "Hash": "029de4469b168bb824abb80b5ba1a730",
       "Requirements": [
         "MMWRweek",
         "RColorBrewer",
@@ -513,6 +512,19 @@
         "purrr",
         "tibble",
         "tidyr"
+      ]
+    },
+    "cowplot": {
+      "Package": "cowplot",
+      "Version": "1.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "b418e8423699d11c7f2087c2bfd07da2",
+      "Requirements": [
+        "ggplot2",
+        "gtable",
+        "rlang",
+        "scales"
       ]
     },
     "cpp11": {
@@ -852,6 +864,16 @@
       "Hash": "dbe0201f91eeb15918dd3fbf01ee689a",
       "Requirements": []
     },
+    "gridExtra": {
+      "Package": "gridExtra",
+      "Version": "2.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "7d7f283939f563670a697165b2cf5560",
+      "Requirements": [
+        "gtable"
+      ]
+    },
     "gtable": {
       "Package": "gtable",
       "Version": "0.3.0",
@@ -1115,6 +1137,23 @@
       "Hash": "e7023edcf59fd695d92eb01a7f37f991",
       "Requirements": []
     },
+    "lemon": {
+      "Package": "lemon",
+      "Version": "0.4.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "0d3c29dada626b9d9391b98dac977e79",
+      "Requirements": [
+        "ggplot2",
+        "gridExtra",
+        "gtable",
+        "knitr",
+        "lattice",
+        "plyr",
+        "rlang",
+        "scales"
+      ]
+    },
     "lifecycle": {
       "Package": "lifecycle",
       "Version": "1.0.1",
@@ -1263,6 +1302,16 @@
         "rprojroot",
         "rstudioapi",
         "withr"
+      ]
+    },
+    "plyr": {
+      "Package": "plyr",
+      "Version": "1.8.6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ec0e5ab4e5f851f6ef32cd1d1984957f",
+      "Requirements": [
+        "Rcpp"
       ]
     },
     "png": {
@@ -1434,6 +1483,18 @@
         "yaml"
       ]
     },
+    "rmdpartials": {
+      "Package": "rmdpartials",
+      "Version": "0.5.8",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c24127330f45f18c14dfb97a83895d9b",
+      "Requirements": [
+        "digest",
+        "knitr",
+        "rlang"
+      ]
+    },
     "rpart": {
       "Package": "rpart",
       "Version": "4.1.16",
@@ -1503,10 +1564,15 @@
     },
     "scoringutils": {
       "Package": "scoringutils",
-      "Version": "0.1.7.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "99d02383a80320efbc38c20b8ed698ae",
+      "Version": "0.1.8",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "epiforecasts",
+      "RemoteRepo": "scoringutils",
+      "RemoteRef": "limit-viz",
+      "RemoteSha": "5d261fc9912d4bf00189bad1fda6c0e0233de95d",
+      "Hash": "9c1808912ebc783d98be1b5283b6d419",
       "Requirements": [
         "data.table",
         "forcats",
