@@ -1,0 +1,25 @@
+"target_end_date","location","target","forecast_date","type","value","quantile"
+2022-03-05,"IT","1 wk ahead inc case","2022-03-14","quantile",125126,0.025
+2022-03-12,"IT","2 wk ahead inc case","2022-03-14","quantile",96630,0.025
+2022-03-19,"IT","3 wk ahead inc case","2022-03-14","quantile",77296,0.025
+2022-03-26,"IT","4 wk ahead inc case","2022-03-14","quantile",60086,0.025
+2022-03-05,"IT","1 wk ahead inc case","2022-03-14","point",321402,NA
+2022-03-12,"IT","2 wk ahead inc case","2022-03-14","point",240381,NA
+2022-03-19,"IT","3 wk ahead inc case","2022-03-14","point",179598,NA
+2022-03-26,"IT","4 wk ahead inc case","2022-03-14","point",135008,NA
+2022-03-05,"IT","1 wk ahead inc case","2022-03-14","quantile",562979,0.975
+2022-03-12,"IT","2 wk ahead inc case","2022-03-14","quantile",426037,0.975
+2022-03-19,"IT","3 wk ahead inc case","2022-03-14","quantile",312963,0.975
+2022-03-26,"IT","4 wk ahead inc case","2022-03-14","quantile",233347,0.975
+2022-03-19,"IT","1 wk ahead inc death","2022-03-14","quantile",337,0.025
+2022-03-26,"IT","2 wk ahead inc death","2022-03-14","quantile",169,0.025
+2022-04-02,"IT","3 wk ahead inc death","2022-03-14","quantile",81,0.025
+2022-04-09,"IT","4 wk ahead inc death","2022-03-14","quantile",36,0.025
+2022-03-19,"IT","1 wk ahead inc death","2022-03-14","point",559,NA
+2022-03-26,"IT","2 wk ahead inc death","2022-03-14","point",325,NA
+2022-04-02,"IT","3 wk ahead inc death","2022-03-14","point",182,NA
+2022-04-09,"IT","4 wk ahead inc death","2022-03-14","point",101,NA
+2022-03-19,"IT","1 wk ahead inc death","2022-03-14","quantile",821,0.975
+2022-03-26,"IT","2 wk ahead inc death","2022-03-14","quantile",526,0.975
+2022-04-02,"IT","3 wk ahead inc death","2022-03-14","quantile",350,0.975
+2022-04-09,"IT","4 wk ahead inc death","2022-03-14","quantile",217,0.975
