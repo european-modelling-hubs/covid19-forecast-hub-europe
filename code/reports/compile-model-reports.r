@@ -25,7 +25,6 @@ suppressWarnings(dir.create(here::here("html", "report-model-files")))
 
 models <- covidHubUtils::get_model_metadata(source = "local_hub_repo",
                                             hub_repo_path = here()) %>%
-  filter(!grepl("hub-baseline$", model)) %>%
   pull(model)
 
 # Create function for rendering report for each model
