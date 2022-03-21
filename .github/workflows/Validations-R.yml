@@ -8,7 +8,7 @@ on:
       - 'data-processed/**'
 
 jobs:
-  build:
+  validate-submission:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
