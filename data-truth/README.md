@@ -24,11 +24,11 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-03-27
+As of 2022-03-28
 
 | country | created    | updated    | issue                                                                                                   | message                                                 | url                                                      |
 | :------ | :--------- | :--------- | :------------------------------------------------------------------------------------------------------ | :------------------------------------------------------ | :------------------------------------------------------- |
-| germany | 2022-03-25 | 2022-03-25 | germany, niedersachsen to unknown no update in cases since 2022-03-21 (csse\_covid\_19\_daily\_reports) | Hi all, Half of the German states (+Unknown) do n…      | <https://github.com/CSSEGISandData/COVID-19/issues/5556> |
+| germany | 2022-03-25 | 2022-03-28 | germany, niedersachsen to unknown no update in cases since 2022-03-21 (csse\_covid\_19\_daily\_reports) | Hi all, Half of the German states (+Unknown) do n…      | <https://github.com/CSSEGISandData/COVID-19/issues/5556> |
 | france  | 2022-03-03 | 2022-03-09 | death data is not correct for france: negative value & discrepancy                                      | \[JHU Feed\](<https://github.com/CSSEGISandData/COVID>… | <https://github.com/CSSEGISandData/COVID-19/issues/5489> |
 | spain   | 2022-03-01 | 2022-03-01 | negative data entry for country spain, france                                                           | Hi, There are many negative entries on a dataset …      | <https://github.com/CSSEGISandData/COVID-19/issues/5480> |
 | poland  | 2022-02-23 | 2022-02-24 | poland data now includes reinfections                                                                   | Thanks to the help of @jbracher and @eMaerthin, we…     | <https://github.com/CSSEGISandData/COVID-19/issues/5456> |
