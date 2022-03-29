@@ -3,10 +3,10 @@ model_name: agentModel
 model_abbr: ICM-agentModel
 model_contributors: Rafał Bartczuk, Łukasz Górski, Magdalena Gruziel-Słomka, Artur Kaczorek, Jan Kisielewski, Antoni Moszyński, Karol Niedzielewski <k.niedzielewski@icm.edu.pl>, Jędrzej Nowosielski, Maciej Radwan, Franciszek Rakowski, Marcin Semeniuk, Jakub Zieliński
 website_url: https://covid-19.icm.edu.pl/en/model-description/
-license: other
+license: cc-by-4.0
 team_model_designation: primary
 methods: Agent-based model
-team_funding: --
+team_funding: funded by the Ministry of Science and Higher Education of Poland with grants 51/WFSN/2020T and 28/WFSN/2021 to the University of Warsaw
 data_inputs: "Polish Ministry of Health (general epidemic data: number of cases, deaths, etc.) and Polish National Institute for Public Health (Detailed epidemic data: time of hospitalization, age, symptoms, contact tracing etc.)"
-citation: https://www.sciencedirect.com/science/article/pii/S0378437110003687
+citation: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4039054
 methods_long: "The main idea behind our agent-based model is a representation of the social structure of population of Poland to the level of individual citizen and its social contacts. Our model has resolution in space and contexts. It means it can follow development of epidemic on geographical grid in 1x1km resolution as well as through physical contact in various characteristic contexts of social life."
