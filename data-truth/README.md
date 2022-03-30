@@ -24,17 +24,19 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-03-29
+As of 2022-03-30
 
 | country | created    | updated    | issue                                                                                                   | message                                                 | url                                                      |
 | :------ | :--------- | :--------- | :------------------------------------------------------------------------------------------------------ | :------------------------------------------------------ | :------------------------------------------------------- |
+| france  | 2022-03-29 | 2022-03-30 | france: under reported cases on 24th and 25th feb                                                       | For France, daily cases on the dates Feb 24th 2022…     | <https://github.com/CSSEGISandData/COVID-19/issues/5567> |
+| germany | 2022-03-30 | 2022-03-30 | suspicious data for germany series - number of confirmed cases                                          | Hi Team, We have observed that the value publishe…      | <https://github.com/CSSEGISandData/COVID-19/issues/5570> |
+| germany | 2022-03-29 | 2022-03-29 | discrepancy in the data of germany.                                                                     | For Germany, As per the \[JHU\](<https://github.com/C>… | <https://github.com/CSSEGISandData/COVID-19/issues/5566> |
+| germany | 2022-02-01 | 2022-03-29 | discrepancy in germany new cases data of 29th & 30th jan.                                               | For Germany, As per the \[feed\](<https://github.com/>… | <https://github.com/CSSEGISandData/COVID-19/issues/5324> |
 | germany | 2022-03-25 | 2022-03-28 | germany, niedersachsen to unknown no update in cases since 2022-03-21 (csse\_covid\_19\_daily\_reports) | Hi all, Half of the German states (+Unknown) do n…      | <https://github.com/CSSEGISandData/COVID-19/issues/5556> |
 | france  | 2022-03-03 | 2022-03-09 | death data is not correct for france: negative value & discrepancy                                      | \[JHU Feed\](<https://github.com/CSSEGISandData/COVID>… | <https://github.com/CSSEGISandData/COVID-19/issues/5489> |
 | spain   | 2022-03-01 | 2022-03-01 | negative data entry for country spain, france                                                           | Hi, There are many negative entries on a dataset …      | <https://github.com/CSSEGISandData/COVID-19/issues/5480> |
 | poland  | 2022-02-23 | 2022-02-24 | poland data now includes reinfections                                                                   | Thanks to the help of @jbracher and @eMaerthin, we…     | <https://github.com/CSSEGISandData/COVID-19/issues/5456> |
 | france  | 2022-02-21 | 2022-02-21 | some wrong cases for france in the past two weeks                                                       | Hi, I noted some mistakes in the daily cases for F…     | <https://github.com/CSSEGISandData/COVID-19/issues/5433> |
-| germany | 2022-02-01 | 2022-02-01 | official sources for germany                                                                            | Dear all, since you cite a newspaper as your sour…      | <https://github.com/CSSEGISandData/COVID-19/issues/5327> |
-| germany | 2022-02-01 | 2022-02-01 | discrepancy in germany new cases data of 29th & 30th jan.                                               | For Germany, As per the \[feed\](<https://github.com/>… | <https://github.com/CSSEGISandData/COVID-19/issues/5324> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
@@ -50,9 +52,9 @@ not consistent across all the countries in the ECDC Forecast Hub. To
 keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
-  - Belgium, Croatia, Cyprus, Czechia, Denmark, Estonia, France,
-    Ireland, Latvia, Liechtenstein, Malta, Norway, Slovenia,
-    Switzerland, United Kingdom
+  - Belgium, Croatia, Czechia, Denmark, Estonia, France, Ireland,
+    Latvia, Liechtenstein, Malta, Norway, Slovenia, Switzerland, United
+    Kingdom
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)
