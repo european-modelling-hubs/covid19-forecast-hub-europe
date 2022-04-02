@@ -24,10 +24,11 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-04-01
+As of 2022-04-02
 
 | country | created    | updated    | issue                                                                                                   | message                                                 | url                                                      |
 | :------ | :--------- | :--------- | :------------------------------------------------------------------------------------------------------ | :------------------------------------------------------ | :------------------------------------------------------- |
+| germany | 2022-04-02 | 2022-04-02 | germany wrong cases                                                                                     | 1 April 2022: Positive:+252,530 Recovered:+207,100…     | <https://github.com/CSSEGISandData/COVID-19/issues/5590> |
 | germany | 2022-03-30 | 2022-04-01 | suspicious data for germany series - number of confirmed cases                                          | Hi Team, We have observed that the value publishe…      | <https://github.com/CSSEGISandData/COVID-19/issues/5570> |
 | belgium | 2022-03-31 | 2022-03-31 | in daily reports, belgium data includes zero deaths                                                     | For example, this is the entirety of the Belgium d…     | <https://github.com/CSSEGISandData/COVID-19/issues/5580> |
 | germany | 2022-03-25 | 2022-03-31 | germany, niedersachsen to unknown no update in cases since 2022-03-21 (csse\_covid\_19\_daily\_reports) | Hi all, Half of the German states (+Unknown) do n…      | <https://github.com/CSSEGISandData/COVID-19/issues/5556> |
