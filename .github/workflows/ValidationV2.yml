@@ -1,10 +1,11 @@
 name: Validations v2
 
 on:
-  pull_request_target:
-    branches: [ main ]
-    paths:
-      - 'data-processed/**'
+#  pull_request_target:
+#    branches: [ main ]
+#    paths:
+#      - 'data-processed/**'
+  workflow_dispatch:
 
 jobs:
   build:
