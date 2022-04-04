@@ -24,15 +24,13 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-04-03
+As of 2022-04-04
 
 | country | created    | updated    | issue                                                                                                   | message                                                 | url                                                      |
 | :------ | :--------- | :--------- | :------------------------------------------------------------------------------------------------------ | :------------------------------------------------------ | :------------------------------------------------------- |
+| germany | 2022-03-29 | 2022-04-04 | discrepancy in the data of germany.                                                                     | For Germany, As per the \[JHU\](<https://github.com/C>… | <https://github.com/CSSEGISandData/COVID-19/issues/5566> |
 | germany | 2022-04-02 | 2022-04-02 | germany wrong cases                                                                                     | 1 April 2022: Positive:+252,530 Recovered:+207,100…     | <https://github.com/CSSEGISandData/COVID-19/issues/5590> |
-| germany | 2022-03-30 | 2022-04-01 | suspicious data for germany series - number of confirmed cases                                          | Hi Team, We have observed that the value publishe…      | <https://github.com/CSSEGISandData/COVID-19/issues/5570> |
-| belgium | 2022-03-31 | 2022-03-31 | in daily reports, belgium data includes zero deaths                                                     | For example, this is the entirety of the Belgium d…     | <https://github.com/CSSEGISandData/COVID-19/issues/5580> |
 | germany | 2022-03-25 | 2022-03-31 | germany, niedersachsen to unknown no update in cases since 2022-03-21 (csse\_covid\_19\_daily\_reports) | Hi all, Half of the German states (+Unknown) do n…      | <https://github.com/CSSEGISandData/COVID-19/issues/5556> |
-| germany | 2022-03-29 | 2022-03-31 | discrepancy in the data of germany.                                                                     | For Germany, As per the \[JHU\](<https://github.com/C>… | <https://github.com/CSSEGISandData/COVID-19/issues/5566> |
 | france  | 2022-03-03 | 2022-03-31 | death data is not correct for france: negative value & discrepancy                                      | \[JHU Feed\](<https://github.com/CSSEGISandData/COVID>… | <https://github.com/CSSEGISandData/COVID-19/issues/5489> |
 | france  | 2022-03-29 | 2022-03-31 | france: under reported cases on 24th and 25th mar                                                       | For France, daily cases on the dates Mar 24th 2022…     | <https://github.com/CSSEGISandData/COVID-19/issues/5567> |
 | germany | 2022-02-01 | 2022-03-29 | discrepancy in germany new cases data of 29th & 30th jan.                                               | For Germany, As per the \[feed\](<https://github.com/>… | <https://github.com/CSSEGISandData/COVID-19/issues/5324> |
