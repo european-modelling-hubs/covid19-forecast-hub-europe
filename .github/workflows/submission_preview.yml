@@ -1,7 +1,8 @@
 name: Link to submission preview
 
 on:
-  pull_request:
+  # Instead of pull_request to be able to post comments
+  pull_request_target:
     branches: main
     paths:
       - 'data-processed/**'
