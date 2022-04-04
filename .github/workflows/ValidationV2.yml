@@ -26,5 +26,8 @@ jobs:
       run: pip3 install -r stable-req.txt
 
     - name: Run Validations
+      env:
+        # Necessary for posting comments
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: python3 main.py
 
