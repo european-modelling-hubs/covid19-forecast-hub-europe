@@ -23,7 +23,7 @@ jobs:
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
 
     - name: Install dependencies
-      run: pip3 install -r requirements.txt
+      run: pip3 install -r stable-req.txt
 
     - name: Run Validations
       run: python3 main.py
