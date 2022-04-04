@@ -1,10 +1,10 @@
 name: Validations v2
 
 on:
-#  pull_request_target:
-#    branches: [ main ]
-#    paths:
-#      - 'data-processed/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'data-processed/**'
   workflow_dispatch:
 
 jobs:
@@ -30,7 +30,5 @@ jobs:
       run: pip3 install -r requirements.txt
 
     - name: Run Validations
-      env:
-        GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       run: python3 main.py
 
