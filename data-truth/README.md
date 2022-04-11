@@ -24,11 +24,11 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-04-10
+As of 2022-04-11
 
 | country     | created    | updated    | issue                                                              | message                                                 | url                                                      |
 | :---------- | :--------- | :--------- | :----------------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
-| spain       | 2022-04-09 | 2022-04-09 | spain data missing for past week                                   | It looks like the J.H.U. data reports 0 new cases …     | <https://github.com/CSSEGISandData/COVID-19/issues/5619> |
+| spain       | 2022-04-11 | 2022-04-11 | bad data for spain series - number of deaths                       | Hi Team, We have observed that data published for…      | <https://github.com/CSSEGISandData/COVID-19/issues/5626> |
 | germany     | 2022-03-29 | 2022-04-08 | discrepancy in the data of germany.                                | For Germany, As per the \[JHU\](<https://github.com/C>… | <https://github.com/CSSEGISandData/COVID-19/issues/5566> |
 | switzerland | 2022-01-27 | 2022-04-08 | the covid cases are inaccurate for switzerland                     | The new cases on 24th Jan is 87,281, which is quit…     | <https://github.com/CSSEGISandData/COVID-19/issues/5301> |
 | portugal    | 2022-04-04 | 2022-04-04 | portugal data                                                      | Portugal is reporting daily data again. It can be …     | <https://github.com/CSSEGISandData/COVID-19/issues/5598> |
