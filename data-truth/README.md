@@ -24,10 +24,11 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-04-14
+As of 2022-04-15
 
 | country     | created    | updated    | issue                                                              | message                                                 | url                                                      |
 | :---------- | :--------- | :--------- | :----------------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
+| germany     | 2022-04-14 | 2022-04-14 | issue with germany number of confirmed cases                       | Dear JHU, Please double check closed issue \#5632 a…    | <https://github.com/CSSEGISandData/COVID-19/issues/5646> |
 | germany     | 2022-04-13 | 2022-04-13 | germany: number of confirmed cases: drop in cumulative values      | Dear JHU, Could you please check your time series…      | <https://github.com/CSSEGISandData/COVID-19/issues/5640> |
 | germany     | 2022-03-29 | 2022-04-08 | discrepancy in the data of germany.                                | For Germany, As per the \[JHU\](<https://github.com/C>… | <https://github.com/CSSEGISandData/COVID-19/issues/5566> |
 | switzerland | 2022-01-27 | 2022-04-08 | the covid cases are inaccurate for switzerland                     | The new cases on 24th Jan is 87,281, which is quit…     | <https://github.com/CSSEGISandData/COVID-19/issues/5301> |
