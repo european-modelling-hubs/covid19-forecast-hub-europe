@@ -24,21 +24,20 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-04-20
+As of 2022-04-21
 
-| country     | created    | updated    | issue                                                                              | message                                                 | url                                                      |
-| :---------- | :--------- | :--------- | :--------------------------------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
-| spain       | 2022-04-18 | 2022-04-19 | \[issue type: data updation\] data has not been updated for spain since 9th april. | As per other sources \[WHO\](<https://covid19.who.int>… | <https://github.com/CSSEGISandData/COVID-19/issues/5656> |
-| germany     | 2022-04-14 | 2022-04-14 | issue with germany number of confirmed cases                                       | Dear JHU, Please double check closed issue \#5632 a…    | <https://github.com/CSSEGISandData/COVID-19/issues/5646> |
-| germany     | 2022-04-13 | 2022-04-13 | germany: number of confirmed cases: drop in cumulative values                      | Dear JHU, Could you please check your time series…      | <https://github.com/CSSEGISandData/COVID-19/issues/5640> |
-| germany     | 2022-03-29 | 2022-04-08 | discrepancy in the data of germany.                                                | For Germany, As per the \[JHU\](<https://github.com/C>… | <https://github.com/CSSEGISandData/COVID-19/issues/5566> |
-| switzerland | 2022-01-27 | 2022-04-08 | the covid cases are inaccurate for switzerland                                     | The new cases on 24th Jan is 87,281, which is quit…     | <https://github.com/CSSEGISandData/COVID-19/issues/5301> |
-| portugal    | 2022-04-04 | 2022-04-04 | portugal data                                                                      | Portugal is reporting daily data again. It can be …     | <https://github.com/CSSEGISandData/COVID-19/issues/5598> |
-| germany     | 2022-04-02 | 2022-04-02 | germany wrong cases                                                                | 1 April 2022: Positive:+252,530 Recovered:+207,100…     | <https://github.com/CSSEGISandData/COVID-19/issues/5590> |
-| france      | 2022-03-03 | 2022-03-31 | death data is not correct for france: negative value & discrepancy                 | \[JHU Feed\](<https://github.com/CSSEGISandData/COVID>… | <https://github.com/CSSEGISandData/COVID-19/issues/5489> |
-| germany     | 2022-02-01 | 2022-03-29 | discrepancy in germany new cases data of 29th & 30th jan.                          | For Germany, As per the \[feed\](<https://github.com/>… | <https://github.com/CSSEGISandData/COVID-19/issues/5324> |
-| spain       | 2022-03-01 | 2022-03-01 | negative data entry for country spain, france                                      | Hi, There are many negative entries on a dataset …      | <https://github.com/CSSEGISandData/COVID-19/issues/5480> |
-| poland      | 2022-02-23 | 2022-02-24 | poland data now includes reinfections                                              | Thanks to the help of @jbracher and @eMaerthin, we…     | <https://github.com/CSSEGISandData/COVID-19/issues/5456> |
+| country     | created    | updated    | issue                                                              | message                                                 | url                                                      |
+| :---------- | :--------- | :--------- | :----------------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------------- |
+| germany     | 2022-04-14 | 2022-04-14 | issue with germany number of confirmed cases                       | Dear JHU, Please double check closed issue \#5632 a…    | <https://github.com/CSSEGISandData/COVID-19/issues/5646> |
+| germany     | 2022-04-13 | 2022-04-13 | germany: number of confirmed cases: drop in cumulative values      | Dear JHU, Could you please check your time series…      | <https://github.com/CSSEGISandData/COVID-19/issues/5640> |
+| germany     | 2022-03-29 | 2022-04-08 | discrepancy in the data of germany.                                | For Germany, As per the \[JHU\](<https://github.com/C>… | <https://github.com/CSSEGISandData/COVID-19/issues/5566> |
+| switzerland | 2022-01-27 | 2022-04-08 | the covid cases are inaccurate for switzerland                     | The new cases on 24th Jan is 87,281, which is quit…     | <https://github.com/CSSEGISandData/COVID-19/issues/5301> |
+| portugal    | 2022-04-04 | 2022-04-04 | portugal data                                                      | Portugal is reporting daily data again. It can be …     | <https://github.com/CSSEGISandData/COVID-19/issues/5598> |
+| germany     | 2022-04-02 | 2022-04-02 | germany wrong cases                                                | 1 April 2022: Positive:+252,530 Recovered:+207,100…     | <https://github.com/CSSEGISandData/COVID-19/issues/5590> |
+| france      | 2022-03-03 | 2022-03-31 | death data is not correct for france: negative value & discrepancy | \[JHU Feed\](<https://github.com/CSSEGISandData/COVID>… | <https://github.com/CSSEGISandData/COVID-19/issues/5489> |
+| germany     | 2022-02-01 | 2022-03-29 | discrepancy in germany new cases data of 29th & 30th jan.          | For Germany, As per the \[feed\](<https://github.com/>… | <https://github.com/CSSEGISandData/COVID-19/issues/5324> |
+| spain       | 2022-03-01 | 2022-03-01 | negative data entry for country spain, france                      | Hi, There are many negative entries on a dataset …      | <https://github.com/CSSEGISandData/COVID-19/issues/5480> |
+| poland      | 2022-02-23 | 2022-02-24 | poland data now includes reinfections                              | Thanks to the help of @jbracher and @eMaerthin, we…     | <https://github.com/CSSEGISandData/COVID-19/issues/5456> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
