@@ -21,11 +21,6 @@ jobs:
           install-r: false
           use-public-rspm: true
 
-      - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install libcurl4-openssl-dev libv8-dev
-
       - uses: r-lib/actions/setup-renv@v2
 
       - name: Run validations

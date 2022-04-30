@@ -16,9 +16,6 @@ jobs:
         install-r: false
         use-public-rspm: true
 
-    - name: Install system dependencies
-      run: sudo apt-get install -y libssl-dev libcurl4-openssl-dev pandoc
-
     - uses: r-lib/actions/setup-renv@v2
 
     - name: Create score csv
