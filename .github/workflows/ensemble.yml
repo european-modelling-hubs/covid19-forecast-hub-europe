@@ -17,9 +17,6 @@ jobs:
         install-r: false
         use-public-rspm: true
 
-    - name: Install system dependencies
-      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
-
     - uses: r-lib/actions/setup-renv@v2
 
     - name: Create ensembles
