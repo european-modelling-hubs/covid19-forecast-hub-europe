@@ -1,0 +1,36 @@
+name: Validations (R)
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: main
+    paths:
+      - 'data-processed/**'
+
+jobs:
+  validate-submission:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: r-lib/actions/setup-r@v1
+        with:
+          install-r: false
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-renv@v2
+
+      - name: Run validations
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+        run: |
+          v <- HubValidations::validate_pr(
+              gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
+              pr_number = Sys.getenv("PR_NUMBER"),
+              data_folder = "data-processed"
+          )
+          HubValidations::check_for_errors(v)
+        shell: Rscript {0}

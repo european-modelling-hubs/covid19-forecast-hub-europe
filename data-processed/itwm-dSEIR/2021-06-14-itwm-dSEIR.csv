@@ -1,8 +1,8 @@
 forecast_date,target,target_end_date,location,type,quantile,value,scenario_id
-2021-06-14,1 wk ahead inc case,2021-06-19,DE,point,,8074,forecast
-2021-06-14,2 wk ahead inc case,2021-06-26,DE,point,,3971,forecast
-2021-06-14,3 wk ahead inc case,2021-07-03,DE,point,,1616,forecast
-2021-06-14,4 wk ahead inc case,2021-07-10,DE,point,,85,forecast
+2021-06-14,1 wk ahead inc case,2021-06-19,DE,point,NA,8074,forecast
+2021-06-14,2 wk ahead inc case,2021-06-26,DE,point,NA,3971,forecast
+2021-06-14,3 wk ahead inc case,2021-07-03,DE,point,NA,1616,forecast
+2021-06-14,4 wk ahead inc case,2021-07-10,DE,point,NA,85,forecast
 2021-06-14,1 wk ahead inc case,2021-06-19,DE,quantile,0.01,2874,forecast
 2021-06-14,2 wk ahead inc case,2021-06-26,DE,quantile,0.01,0,forecast
 2021-06-14,3 wk ahead inc case,2021-07-03,DE,quantile,0.01,0,forecast
@@ -95,10 +95,10 @@ forecast_date,target,target_end_date,location,type,quantile,value,scenario_id
 2021-06-14,2 wk ahead inc case,2021-06-26,DE,quantile,0.99,12808,forecast
 2021-06-14,3 wk ahead inc case,2021-07-03,DE,quantile,0.99,13429,forecast
 2021-06-14,4 wk ahead inc case,2021-07-10,DE,quantile,0.99,14367,forecast
-2021-06-14,1 wk ahead inc death,2021-06-19,DE,point,,240,forecast
-2021-06-14,2 wk ahead inc death,2021-06-26,DE,point,,169,forecast
-2021-06-14,3 wk ahead inc death,2021-07-03,DE,point,,96,forecast
-2021-06-14,4 wk ahead inc death,2021-07-10,DE,point,,0,forecast
+2021-06-14,1 wk ahead inc death,2021-06-19,DE,point,NA,240,forecast
+2021-06-14,2 wk ahead inc death,2021-06-26,DE,point,NA,169,forecast
+2021-06-14,3 wk ahead inc death,2021-07-03,DE,point,NA,96,forecast
+2021-06-14,4 wk ahead inc death,2021-07-10,DE,point,NA,0,forecast
 2021-06-14,1 wk ahead inc death,2021-06-19,DE,quantile,0.01,92,forecast
 2021-06-14,2 wk ahead inc death,2021-06-26,DE,quantile,0.01,17,forecast
 2021-06-14,3 wk ahead inc death,2021-07-03,DE,quantile,0.01,0,forecast

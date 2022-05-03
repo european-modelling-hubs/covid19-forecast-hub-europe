@@ -1,4 +1,5 @@
 team_name: Karlen Working Group
+institution_affil: University of Victoria and TRIUMF
 model_name: python Population Modeller
 model_abbr: Karlen-pypm
 model_contributors: Dean Karlen (University of Victoria and TRIUMF) <karlen@uvic.ca>
@@ -7,5 +8,5 @@ license: gpl-3.0
 team_model_designation: primary
 methods: Discrete-time difference equations with long periods of constant transmission rate
 team_funding: none
-data_inputs: RKI (confirmed cases, deaths), DIVI (ICU data)
+data_inputs: JHU (cases and deaths), Google open-data (vaccinations), GISAID (genomic data)
 citation: https://arxiv.org/abs/2007.07156

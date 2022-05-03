@@ -1,45 +1,25 @@
-## European hub ensemble
+This folder contains code for running and evaluating ensemble methods.
 
-The European hub produces weekly ensemble forecasts from valid submitted models. Ensembles are saved in [data-processed](./data-processed/EuroCOVIDhub) with the team name "EuroCOVIDhub".
+To run a single ensemble on hub forecasts, use the `run_ensemble()` function combined with one of the [supported methods](#methods) for any given forecast date.
 
-### Inclusion criteria
+See the [EuroCOVIDhub](EuroCOVIDhub) folder for the code and history of the European forecasting hub ensemble published each week.
 
-For each location and target (cases or deaths), forecasts must have all of the following to be included in the ensemble:
+## Methods
 
-- Includes all quantiles
-- Includes forecasts over a four week horizon
-- Not manually specified for exclusion (e.g. because of late submission)
+Currently, our code supports the following ensemble methods. Find ensemble forecasts for all methods over time in [Forecasts](../../ensembles/data-processed).
 
-We detail the inclusion and exclusion of models in a csv updated [weekly](./code/ensemble/EuroCOVIDhub-ensemble/criteria).
-
-### Ensemble methods
-
-**Current methods**
-
-Ensembling methods combine forecast values by target, location, horizon, and quantile. The ensemble we use in evaluation is the "EuroCOVIDhub-ensemble". See [here](./code/ensemble/current-method.txt) for the current ensemble method used this week.
-
-We are continually reviewing the performance of the default ensemble compared to other ensembling methods. We will make a change if we find a different method to consistently outperform the current default.
-
-**Past methods**
-
-- See all past [ensemble forecasts](./data-processed/EuroCOVIDhub-ensemble)
-- Check the history of which [methods](./code/ensemble/EuroCOVIDhub-ensemble/method-by-date.csv) we've used
-- See which [models](./code/ensemble/EuroCOVIDhub-ensemble/criteria) were used to create each ensemble
-
-**Guide to ensemble code**
-
-_Creating the EuroCOVIDhub weekly ensemble_
-
-- Add any models for manual exclusion to [`manual-exclusions.csv`](./code/ensemble/EuroCOVIDhub/manual-exclusions.csv)
-   - If already in R, optionally add these by [`create-manual-exclusions.R`](./code/ensemble/utils/create-manual-exclusions.R)
-- Define the forecast method in [`current-method.txt`](./code/ensemble/EuroCOVIDhub/current-method.txt)
-- The weekly ensemble is created with [`create-weekly-ensemble.R`](./code/ensemble/EuroCOVIDhub/create-weekly-ensemble.R)
-
-_General purpose ensemble code_
-
-Purpose | Function | Description   
+Type | Method | Function
 ---|---|---
-Method | [`create_ensemble_average()`](./code/ensemble/methods/create-ensemble-average.R) | Create a mean or a median ensemble
-Utility | [`run_ensemble()`](./code/ensemble/utils/run-ensemble.R) | Specify a method and a (set of) valid dates to create a single formatted ensemble
-Utility | [`use_ensemble_criteria()`](./code/ensemble/utils/use-ensemble-criteria.R) | Filter given forecasts based on the [inclusion criteria](#Inclusion criteria)
-Utility | [`format_ensemble()`](./code/ensemble/utils/format-ensemble.R) | Prepare an ensemble according to the standard submission format
+Unweighted | Mean | [`create_ensemble_average(method = "mean")`](https://github.com/epiforecasts/EuroForecastHub/blob/main/R/create_ensemble_average.R)
+Unweighted | Median | [`create_ensemble_average(method = "median")`](https://github.com/epiforecasts/EuroForecastHub/blob/main/R/create_ensemble_average.R)
+
+## Implementation
+
+These functions support running and formatting ensembles.
+
+Function | Description
+---|---
+[`run_ensemble()`](https://github.com/epiforecasts/EuroForecastHub/blob/main/R/run_ensemble.R) | Specify a supported method and a valid date to create a single formatted ensemble
+[`use_ensemble_criteria()`](https://github.com/epiforecasts/EuroForecastHub/blob/main/R/use_ensemble_criteria.R) | Filter given forecasts based on the [hub inclusion criteria](EuroCOVIDhub/README.md#inclusion-criteria)
+[`format_ensemble()`](https://github.com/epiforecasts/EuroForecastHub/blob/main/R/format_ensemble.R) | Prepare an ensemble according to the standard submission format
+[`run_multiple_ensembles()`](https://github.com/epiforecasts/EuroForecastHub/blob/main/R/run_multiple_ensembles.R) | Specify one or more supported methods and forecast dates to create a list of ensembles for each method/date combination. This is implemented for all methods and forecast dates in [`create-all-methods-ensembles.R`](utils/create-all-methods-ensembles.R)

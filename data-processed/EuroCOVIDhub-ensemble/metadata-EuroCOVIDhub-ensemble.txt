@@ -10,4 +10,4 @@ team_funding: This model's development is funded by the European Centres for Dis
 repo_url: https://github.com/epiforecasts/covid19-forecast-hub-europe
 twitter_handles: kathsherratt, ftargument, sbfnk
 data_inputs: incident case and death forecasts from other models.
-methods_long: Mean quantile ensemble.
+methods_long: The current ensemble is specified in https://github.com/epiforecasts/covid19-forecast-hub-europe/blob/main/forecasthub.yml and a history of methods used for the ensemble in https://github.com/epiforecasts/covid19-forecast-hub-europe/blob/main/code/ensemble/EuroCOVIDhub/method-by-date.csv

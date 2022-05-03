@@ -1,0 +1,13 @@
+# Catch-all rule
+/data-processed/ @Bisaloo
+
+# Sophie Meakin's models
+/data-processed/epiforecasts-arimareg/ @Bisaloo @sophiemeakin
+/data-processed/epiforecasts-caseconv/ @Bisaloo @sophiemeakin
+/data-processed/epiforecasts-tsensemble/ @Bisaloo @sophiemeakin
+
+# Sam Abbott's model
+/data-processed/epiforecasts-EpiNow2/ @Bisaloo @seabbs
+
+# UpgUmibUsi's model
+/data-processed/UpgUmibUsi-MultiBayes/ @Bisaloo @penful

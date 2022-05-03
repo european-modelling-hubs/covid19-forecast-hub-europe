@@ -8,7 +8,6 @@ team_model_designation: secondary
 methods: Forecasts of county level incidence based on regional reproduction numbers.
 team_funding: ECDC
 data_inputs: RKI, ECDC, Polish patient data, county level incidences by age group, distribution for time to death and proportion of deaths in each age group
-citation: 
 methods_long: "Using county level incidence data we estimate regional reproduction numbers \
   \ with a small area estimation approach. These estimates are the basis for \
   \ simulations of future incidences which are then aggregated to the state or \
