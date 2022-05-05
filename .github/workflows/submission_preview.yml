@@ -22,6 +22,11 @@ jobs:
           install-r: false
           use-public-rspm: true
 
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install libcurl4-openssl-dev
+
       # This workflow cannot work with renv since we never check out the repo.
       - name: Install R dependencies
         run: |
