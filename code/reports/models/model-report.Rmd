@@ -85,3 +85,7 @@ table <- table %>%
 --->
 ```{r forecast-calibration, child = "../rmdchunks/forecast-calibration.Rmd"}
 ```
+
+<!--- Number of models included in the ensemble for each country and target --->
+```{r nmodels-ensemble, child = if (params$model == ensemble_model) "../rmdchunks/nmodels-ensemble.Rmd"}
+```
