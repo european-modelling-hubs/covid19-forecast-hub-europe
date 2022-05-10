@@ -10,14 +10,16 @@ nmodels <- paste0("https://raw.githubusercontent.com/covid19-forecast-hub-europe
 ```
 
 ```{r}
-DT::datatable(
-  nmodels, 
-  caption = "Number of models included in ensemble for each location and target",
-  extensions = 'Buttons',
-  options = list(
-    dom = 'Bfrtip',
-    buttons = c('copy', 'csv', 'excel'),
-    pageLength = 50
+nmodels |> 
+  dplyr::rename(!!!target_variables) |> 
+  DT::datatable(
+    nmodels, 
+    caption = "Number of models included in ensemble for each location and target",
+    extensions = 'Buttons',
+    options = list(
+      dom = 'Bfrtip',
+      buttons = c('copy', 'csv', 'excel'),
+      pageLength = 50
+    )
   )
-)
 ```
