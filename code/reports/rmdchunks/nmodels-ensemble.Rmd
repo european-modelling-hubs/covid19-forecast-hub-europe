@@ -2,7 +2,7 @@
 
 <!--- Number of models included in the ensemble for each country and target --->
 ```{r}
-nmodels <- paste0("https://raw.githubusercontent.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe/main/code/ensemble/EuroCOVIDhub/criteria/criteria-", report_date, ".csv") |> 
+nmodels <- paste0(hub_repo, "/raw/main/code/ensemble/EuroCOVIDhub/criteria/criteria-", report_date, ".csv") |> 
   read_csv() |>
   group_by(location, target_variable) |> 
   count() |> 
