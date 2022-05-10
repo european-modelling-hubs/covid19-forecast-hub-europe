@@ -8,10 +8,16 @@ nmodels <- paste0(hub_repo, "/raw/main/code/ensemble/EuroCOVIDhub/criteria/crite
   count() |> 
   pivot_wider(names_from = target_variable, values_from = n) 
 ```
+```{r}
+locations <- paste0(hub_repo, "/raw/main/data-locations/locations_eu.csv") |> 
+  read_csv() 
+```
+
 
 ```{r}
 nmodels |> 
-  dplyr::rename(!!!target_variables) |> 
+  dplyr::full_join(locations) |> 
+  dplyr::select(location = location_name, target_variables) |> 
   DT::datatable(
     nmodels, 
     caption = "Number of models included in ensemble for each location and target",
