@@ -73,6 +73,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-03-20,inc case,FR,France,large data revision
 2021-03-20,inc case,LI,Liechtenstein,large data revision
 2021-03-20,inc case,SK,Slovakia,large data revision
+2021-03-20,inc death,AT,Austria,large data revision
 2021-03-20,inc death,CH,Switzerland,large data revision
 2021-03-20,inc death,CY,Cyprus,large data revision
 2021-03-20,inc death,FI,Finland,large data revision
@@ -118,6 +119,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-03-27,inc case,DE,Germany,large data revision
 2021-03-27,inc case,LI,Liechtenstein,large data revision
 2021-03-27,inc case,SK,Slovakia,large data revision
+2021-03-27,inc death,AT,Austria,large data revision
 2021-03-27,inc death,CH,Switzerland,large data revision
 2021-03-27,inc death,FI,Finland,large data revision
 2021-03-27,inc hosp,CH,Switzerland,large data revision
@@ -159,6 +161,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-03-29,inc hosp,SK,Slovakia,Replaced data source
 2021-04-03,inc case,FI,Finland,large data revision
 2021-04-03,inc case,SK,Slovakia,large data revision
+2021-04-03,inc death,AT,Austria,large data revision
 2021-04-03,inc death,CH,Switzerland,large data revision
 2021-04-03,inc death,CY,Cyprus,large data revision
 2021-04-03,inc death,FI,Finland,large data revision
@@ -203,6 +206,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-04-10,inc case,FI,Finland,large data revision
 2021-04-10,inc case,LI,Liechtenstein,large data revision
 2021-04-10,inc case,SK,Slovakia,large data revision
+2021-04-10,inc death,AT,Austria,large data revision
 2021-04-10,inc death,CH,Switzerland,large data revision
 2021-04-10,inc death,CY,Cyprus,large data revision
 2021-04-10,inc death,DE,Germany,large data revision
@@ -247,6 +251,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-04-12,inc hosp,SK,Slovakia,Replaced data source
 2021-04-17,inc case,FI,Finland,large data revision
 2021-04-17,inc case,SK,Slovakia,large data revision
+2021-04-17,inc death,AT,Austria,large data revision
 2021-04-17,inc death,CH,Switzerland,large data revision
 2021-04-17,inc death,CY,Cyprus,large data revision
 2021-04-17,inc death,FI,Finland,large data revision
@@ -290,6 +295,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-04-19,inc hosp,SK,Slovakia,Replaced data source
 2021-04-24,inc case,LI,Liechtenstein,large data revision
 2021-04-24,inc case,SK,Slovakia,large data revision
+2021-04-24,inc death,AT,Austria,large data revision
 2021-04-24,inc death,FI,Finland,large data revision
 2021-04-24,inc death,LI,Liechtenstein,large data revision
 2021-04-24,inc hosp,CH,Switzerland,large data revision
@@ -332,6 +338,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-05-01,inc case,CY,Cyprus,large data revision
 2021-05-01,inc case,DE,Germany,large data revision
 2021-05-01,inc case,SK,Slovakia,large data revision
+2021-05-01,inc death,AT,Austria,large data revision
 2021-05-01,inc death,CY,Cyprus,large data revision
 2021-05-01,inc death,DE,Germany,large data revision
 2021-05-01,inc death,FI,Finland,large data revision
@@ -372,9 +379,11 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-05-03,inc hosp,SE,Sweden,Replaced data source
 2021-05-03,inc hosp,SI,Slovenia,Replaced data source
 2021-05-03,inc hosp,SK,Slovakia,Replaced data source
+2021-05-08,inc case,AT,Austria,large data revision
 2021-05-08,inc case,CY,Cyprus,large data revision
 2021-05-08,inc case,LI,Liechtenstein,large data revision
 2021-05-08,inc case,SK,Slovakia,large data revision
+2021-05-08,inc death,AT,Austria,large data revision
 2021-05-08,inc death,CH,Switzerland,large data revision
 2021-05-08,inc death,CY,Cyprus,large data revision
 2021-05-08,inc death,FI,Finland,large data revision
@@ -415,11 +424,13 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-05-10,inc hosp,SE,Sweden,Replaced data source
 2021-05-10,inc hosp,SI,Slovenia,Replaced data source
 2021-05-10,inc hosp,SK,Slovakia,Replaced data source
+2021-05-15,inc case,AT,Austria,large data revision
 2021-05-15,inc case,CY,Cyprus,large data revision
 2021-05-15,inc case,DE,Germany,large data revision
 2021-05-15,inc case,LI,Liechtenstein,large data revision
 2021-05-15,inc case,NL,Netherlands,large data revision
 2021-05-15,inc case,SK,Slovakia,large data revision
+2021-05-15,inc death,AT,Austria,large data revision
 2021-05-15,inc death,FI,Finland,large data revision
 2021-05-15,inc hosp,CH,Switzerland,large data revision
 2021-05-15,inc hosp,ES,Spain,large data revision
@@ -458,6 +469,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-05-17,inc hosp,SE,Sweden,Replaced data source
 2021-05-17,inc hosp,SI,Slovenia,Replaced data source
 2021-05-17,inc hosp,SK,Slovakia,Replaced data source
+2021-05-22,inc case,AT,Austria,large data revision
 2021-05-22,inc case,FR,France,Removed double counting
 2021-05-22,inc case,IE,Ireland,No data reported
 2021-05-22,inc case,LI,Liechtenstein,large data revision
@@ -510,6 +522,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-05-29,inc case,IS,Iceland,large data revision
 2021-05-29,inc case,LI,Liechtenstein,large data revision
 2021-05-29,inc case,SK,Slovakia,large data revision
+2021-05-29,inc death,AT,Austria,large data revision
 2021-05-29,inc death,CY,Cyprus,large data revision
 2021-05-29,inc death,FI,Finland,large data revision
 2021-05-29,inc death,IE,Ireland,No data reported
@@ -551,11 +564,13 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-05-31,inc hosp,SE,Sweden,Replaced data source
 2021-05-31,inc hosp,SI,Slovenia,Replaced data source
 2021-05-31,inc hosp,SK,Slovakia,Replaced data source
+2021-06-05,inc case,AT,Austria,large data revision
 2021-06-05,inc case,CY,Cyprus,large data revision
 2021-06-05,inc case,IE,Ireland,"2 days missing, 1 day spike"
 2021-06-05,inc case,IS,Iceland,large data revision
 2021-06-05,inc case,NL,Netherlands,large data revision
 2021-06-05,inc case,SK,Slovakia,large data revision
+2021-06-05,inc death,AT,Austria,large data revision
 2021-06-05,inc death,CH,Switzerland,large data revision
 2021-06-05,inc death,CY,Cyprus,large data revision
 2021-06-05,inc death,DE,Germany,large data revision
@@ -598,6 +613,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-06-07,inc hosp,SE,Sweden,Replaced data source
 2021-06-07,inc hosp,SI,Slovenia,Replaced data source
 2021-06-07,inc hosp,SK,Slovakia,Replaced data source
+2021-06-12,inc case,AT,Austria,large data revision
 2021-06-12,inc case,CY,Cyprus,large data revision
 2021-06-12,inc case,ES,Spain,Historic cases added but not backdistributed in Catalonia
 2021-06-12,inc case,IE,Ireland,Spike removed after case count backdistributed
@@ -605,6 +621,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-06-12,inc case,LI,Liechtenstein,large data revision
 2021-06-12,inc case,NL,Netherlands,large data revision
 2021-06-12,inc case,SK,Slovakia,large data revision
+2021-06-12,inc death,AT,Austria,large data revision
 2021-06-12,inc death,CH,Switzerland,large data revision
 2021-06-12,inc death,FI,Finland,large data revision
 2021-06-12,inc death,IE,Ireland,No data reported
@@ -645,10 +662,12 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-06-14,inc hosp,SE,Sweden,Replaced data source
 2021-06-14,inc hosp,SI,Slovenia,Replaced data source
 2021-06-14,inc hosp,SK,Slovakia,Replaced data source
+2021-06-19,inc case,AT,Austria,large data revision
 2021-06-19,inc case,DE,Germany,large data revision
 2021-06-19,inc case,IS,Iceland,large data revision
 2021-06-19,inc case,NL,Netherlands,large data revision
 2021-06-19,inc case,SK,Slovakia,large data revision
+2021-06-19,inc death,AT,Austria,large data revision
 2021-06-19,inc death,CH,Switzerland,large data revision
 2021-06-19,inc death,CY,Cyprus,large data revision
 2021-06-19,inc death,DE,Germany,large data revision
@@ -692,11 +711,13 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-06-21,inc hosp,SE,Sweden,Replaced data source
 2021-06-21,inc hosp,SI,Slovenia,Replaced data source
 2021-06-21,inc hosp,SK,Slovakia,Replaced data source
+2021-06-26,inc case,AT,Austria,large data revision
 2021-06-26,inc case,CY,Cyprus,large data revision
 2021-06-26,inc case,DE,Germany,large data revision
 2021-06-26,inc case,FI,Finland,large data revision
 2021-06-26,inc case,IS,Iceland,large data revision
 2021-06-26,inc case,SK,Slovakia,large data revision
+2021-06-26,inc death,AT,Austria,large data revision
 2021-06-26,inc death,CH,Switzerland,large data revision
 2021-06-26,inc death,DE,Germany,large data revision
 2021-06-26,inc hosp,CH,Switzerland,large data revision
@@ -736,11 +757,13 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-06-28,inc hosp,SE,Sweden,Replaced data source
 2021-06-28,inc hosp,SI,Slovenia,Replaced data source
 2021-06-28,inc hosp,SK,Slovakia,Replaced data source
+2021-07-03,inc case,AT,Austria,large data revision
 2021-07-03,inc case,FI,Finland,large data revision
 2021-07-03,inc case,IS,Iceland,large data revision
 2021-07-03,inc case,LI,Liechtenstein,large data revision
 2021-07-03,inc case,NL,Netherlands,large data revision
 2021-07-03,inc case,SK,Slovakia,large data revision
+2021-07-03,inc death,AT,Austria,large data revision
 2021-07-03,inc death,CH,Switzerland,large data revision
 2021-07-03,inc death,DE,Germany,large data revision
 2021-07-03,inc death,FI,Finland,large data revision
@@ -787,6 +810,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-07-10,inc case,LI,Liechtenstein,large data revision
 2021-07-10,inc case,NL,Netherlands,large data revision
 2021-07-10,inc case,SK,Slovakia,large data revision
+2021-07-10,inc death,AT,Austria,large data revision
 2021-07-10,inc death,CH,Switzerland,large data revision
 2021-07-10,inc death,DE,Germany,large data revision
 2021-07-10,inc death,FI,Finland,large data revision
@@ -827,10 +851,12 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-07-12,inc hosp,SE,Sweden,Replaced data source
 2021-07-12,inc hosp,SI,Slovenia,Replaced data source
 2021-07-12,inc hosp,SK,Slovakia,Replaced data source
+2021-07-17,inc case,AT,Austria,large data revision
 2021-07-17,inc case,FI,Finland,large data revision
 2021-07-17,inc case,IS,Iceland,large data revision
 2021-07-17,inc case,LI,Liechtenstein,large data revision
 2021-07-17,inc case,SK,Slovakia,large data revision
+2021-07-17,inc death,AT,Austria,large data revision
 2021-07-17,inc death,CH,Switzerland,large data revision
 2021-07-17,inc death,CY,Cyprus,large data revision
 2021-07-17,inc death,DE,Germany,large data revision
@@ -878,6 +904,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-07-24,inc case,NL,Netherlands,large data revision
 2021-07-24,inc case,NO,Norway,large data revision
 2021-07-24,inc case,SK,Slovakia,large data revision
+2021-07-24,inc death,AT,Austria,large data revision
 2021-07-24,inc death,CH,Switzerland,large data revision
 2021-07-24,inc death,CY,Cyprus,large data revision
 2021-07-24,inc death,DE,Germany,large data revision
@@ -923,6 +950,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-07-31,inc case,FI,Finland,large data revision
 2021-07-31,inc case,NL,Netherlands,large data revision
 2021-07-31,inc case,SK,Slovakia,large data revision
+2021-07-31,inc death,AT,Austria,large data revision
 2021-07-31,inc death,CH,Switzerland,large data revision
 2021-07-31,inc death,CY,Cyprus,large data revision
 2021-07-31,inc death,FI,Finland,large data revision
@@ -967,6 +995,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-08-07,inc case,FI,Finland,large data revision
 2021-08-07,inc case,LI,Liechtenstein,large data revision
 2021-08-07,inc case,SK,Slovakia,large data revision
+2021-08-07,inc death,AT,Austria,large data revision
 2021-08-07,inc death,CH,Switzerland,large data revision
 2021-08-07,inc death,FI,Finland,large data revision
 2021-08-07,inc hosp,CH,Switzerland,large data revision
@@ -1006,9 +1035,11 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-08-09,inc hosp,SE,Sweden,Replaced data source
 2021-08-09,inc hosp,SI,Slovenia,Replaced data source
 2021-08-09,inc hosp,SK,Slovakia,Replaced data source
+2021-08-14,inc case,AT,Austria,large data revision
 2021-08-14,inc case,FR,France,large data revision
 2021-08-14,inc case,LI,Liechtenstein,large data revision
 2021-08-14,inc case,SK,Slovakia,large data revision
+2021-08-14,inc death,AT,Austria,large data revision
 2021-08-14,inc death,CY,Cyprus,large data revision
 2021-08-14,inc death,DE,Germany,large data revision
 2021-08-14,inc death,FI,Finland,large data revision
@@ -1052,6 +1083,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-08-16,inc hosp,SK,Slovakia,Replaced data source
 2021-08-21,inc case,LI,Liechtenstein,large data revision
 2021-08-21,inc case,SK,Slovakia,large data revision
+2021-08-21,inc death,AT,Austria,large data revision
 2021-08-21,inc death,CH,Switzerland,large data revision
 2021-08-21,inc death,CY,Cyprus,large data revision
 2021-08-21,inc death,DE,Germany,large data revision
@@ -1096,6 +1128,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-08-23,inc hosp,SK,Slovakia,Replaced data source
 2021-08-28,inc case,LI,Liechtenstein,large data revision
 2021-08-28,inc case,SK,Slovakia,large data revision
+2021-08-28,inc death,AT,Austria,large data revision
 2021-08-28,inc death,CH,Switzerland,large data revision
 2021-08-28,inc death,CY,Cyprus,large data revision
 2021-08-28,inc death,FI,Finland,large data revision
@@ -1141,6 +1174,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-09-04,inc case,LI,Liechtenstein,large data revision
 2021-09-04,inc case,PT,Portugal,large data revision
 2021-09-04,inc case,SK,Slovakia,large data revision
+2021-09-04,inc death,AT,Austria,large data revision
 2021-09-04,inc death,CY,Cyprus,large data revision
 2021-09-04,inc death,FI,Finland,large data revision
 2021-09-04,inc death,GR,Greece,large data revision
@@ -1185,6 +1219,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-09-11,inc case,FI,Finland,large data revision
 2021-09-11,inc case,LI,Liechtenstein,large data revision
 2021-09-11,inc case,SK,Slovakia,large data revision
+2021-09-11,inc death,AT,Austria,large data revision
 2021-09-11,inc death,CY,Cyprus,large data revision
 2021-09-11,inc death,DE,Germany,large data revision
 2021-09-11,inc death,FI,Finland,large data revision
@@ -1230,6 +1265,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-09-18,inc case,CY,Cyprus,large data revision
 2021-09-18,inc case,LI,Liechtenstein,large data revision
 2021-09-18,inc case,SK,Slovakia,large data revision
+2021-09-18,inc death,AT,Austria,large data revision
 2021-09-18,inc death,CY,Cyprus,large data revision
 2021-09-18,inc death,DE,Germany,large data revision
 2021-09-18,inc death,FI,Finland,large data revision
@@ -1270,9 +1306,11 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-09-20,inc hosp,SE,Sweden,Replaced data source
 2021-09-20,inc hosp,SI,Slovenia,Replaced data source
 2021-09-20,inc hosp,SK,Slovakia,Replaced data source
+2021-09-25,inc case,AT,Austria,large data revision
 2021-09-25,inc case,CY,Cyprus,large data revision
 2021-09-25,inc case,LI,Liechtenstein,large data revision
 2021-09-25,inc case,SK,Slovakia,large data revision
+2021-09-25,inc death,AT,Austria,large data revision
 2021-09-25,inc death,CY,Cyprus,large data revision
 2021-09-25,inc death,FI,Finland,large data revision
 2021-09-25,inc hosp,CH,Switzerland,large data revision
@@ -1314,6 +1352,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-09-27,inc hosp,SK,Slovakia,Replaced data source
 2021-10-02,inc case,LI,Liechtenstein,large data revision
 2021-10-02,inc case,SK,Slovakia,large data revision
+2021-10-02,inc death,AT,Austria,large data revision
 2021-10-02,inc death,FI,Finland,large data revision
 2021-10-02,inc hosp,CH,Switzerland,large data revision
 2021-10-02,inc hosp,ES,Spain,large data revision
@@ -1356,6 +1395,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-10-09,inc case,LI,Liechtenstein,large data revision
 2021-10-09,inc case,NL,Netherlands,large data revision
 2021-10-09,inc case,SK,Slovakia,large data revision
+2021-10-09,inc death,AT,Austria,large data revision
 2021-10-09,inc death,FI,Finland,large data revision
 2021-10-09,inc hosp,CH,Switzerland,large data revision
 2021-10-09,inc hosp,ES,Spain,large data revision
@@ -1397,6 +1437,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-10-16,inc case,FI,Finland,large data revision
 2021-10-16,inc case,NL,Netherlands,large data revision
 2021-10-16,inc case,SK,Slovakia,large data revision
+2021-10-16,inc death,AT,Austria,large data revision
 2021-10-16,inc death,FI,Finland,large data revision
 2021-10-16,inc hosp,CH,Switzerland,large data revision
 2021-10-16,inc hosp,ES,Spain,large data revision
@@ -1439,6 +1480,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-10-23,inc case,FI,Finland,large data revision
 2021-10-23,inc case,NL,Netherlands,large data revision
 2021-10-23,inc case,SK,Slovakia,large data revision
+2021-10-23,inc death,AT,Austria,large data revision
 2021-10-23,inc death,FI,Finland,large data revision
 2021-10-23,inc hosp,CH,Switzerland,large data revision
 2021-10-23,inc hosp,ES,Spain,large data revision
@@ -1477,9 +1519,11 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-10-25,inc hosp,SE,Sweden,Replaced data source
 2021-10-25,inc hosp,SI,Slovenia,Replaced data source
 2021-10-25,inc hosp,SK,Slovakia,Replaced data source
+2021-10-30,inc case,AT,Austria,large data revision
 2021-10-30,inc case,DE,Germany,large data revision
 2021-10-30,inc case,FI,Finland,large data revision
 2021-10-30,inc case,SK,Slovakia,large data revision
+2021-10-30,inc death,AT,Austria,large data revision
 2021-10-30,inc death,FI,Finland,large data revision
 2021-10-30,inc hosp,CH,Switzerland,large data revision
 2021-10-30,inc hosp,ES,Spain,large data revision
@@ -1517,10 +1561,12 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-11-01,inc hosp,SE,Sweden,Replaced data source
 2021-11-01,inc hosp,SI,Slovenia,Replaced data source
 2021-11-01,inc hosp,SK,Slovakia,Replaced data source
+2021-11-06,inc case,AT,Austria,large data revision
 2021-11-06,inc case,DE,Germany,large data revision
 2021-11-06,inc case,DK,Denmark,large data revision
 2021-11-06,inc case,NL,Netherlands,large data revision
 2021-11-06,inc case,SK,Slovakia,large data revision
+2021-11-06,inc death,AT,Austria,large data revision
 2021-11-06,inc death,DE,Germany,large data revision
 2021-11-06,inc death,DK,Denmark,large data revision
 2021-11-06,inc death,FI,Finland,large data revision
@@ -1531,6 +1577,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-11-13,inc case,DE,Germany,large data revision
 2021-11-13,inc case,FI,Finland,large data revision
 2021-11-13,inc case,SK,Slovakia,large data revision
+2021-11-13,inc death,AT,Austria,large data revision
 2021-11-13,inc death,DE,Germany,large data revision
 2021-11-13,inc death,FI,Finland,large data revision
 2021-11-13,inc hosp,CH,Switzerland,large data revision
@@ -1538,16 +1585,22 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-11-20,inc case,DE,Germany,large data revision
 2021-11-20,inc case,FI,Finland,large data revision
 2021-11-20,inc case,NL,Netherlands,large data revision
+2021-11-20,inc death,AT,Austria,large data revision
 2021-11-20,inc death,FI,Finland,large data revision
 2021-11-20,inc hosp,CH,Switzerland,large data revision
 2021-11-20,inc hosp,GB,United Kingdom,large data revision
 2021-11-27,inc case,FI,Finland,large data revision
+2021-11-27,inc death,AT,Austria,large data revision
 2021-11-27,inc hosp,CH,Switzerland,large data revision
 2021-11-27,inc hosp,GB,United Kingdom,large data revision
+2021-12-04,inc case,AT,Austria,large data revision
+2021-12-04,inc death,AT,Austria,large data revision
 2021-12-04,inc death,FI,Finland,large data revision
 2021-12-04,inc hosp,CH,Switzerland,large data revision
 2021-12-04,inc hosp,GB,United Kingdom,large data revision
+2021-12-11,inc case,AT,Austria,large data revision
 2021-12-11,inc case,FR,France,large data revision
+2021-12-11,inc death,AT,Austria,large data revision
 2021-12-11,inc death,DE,Germany,large data revision
 2021-12-11,inc death,FI,Finland,large data revision
 2021-12-11,inc death,FR,France,large data revision
@@ -1561,32 +1614,43 @@ target_end_date,target_variable,location,location_name,anomaly
 2021-12-25,inc case,DE,Germany,large data revision
 2021-12-25,inc case,DK,Denmark,large data revision
 2021-12-25,inc case,FI,Finland,large data revision
+2021-12-25,inc death,AT,Austria,large data revision
 2021-12-25,inc death,DK,Denmark,large data revision
 2021-12-25,inc death,FI,Finland,large data revision
 2021-12-25,inc hosp,CH,Switzerland,large data revision
 2021-12-25,inc hosp,DK,Denmark,No data reported
+2022-01-01,inc case,AT,Austria,large data revision
 2022-01-01,inc case,DE,Germany,large data revision
 2022-01-01,inc case,FI,Finland,large data revision
+2022-01-01,inc death,AT,Austria,large data revision
 2022-01-01,inc death,FI,Finland,large data revision
 2022-01-01,inc hosp,CH,Switzerland,large data revision
+2022-01-08,inc case,AT,Austria,large data revision
 2022-01-08,inc case,DE,Germany,large data revision
 2022-01-08,inc case,FI,Finland,large data revision
 2022-01-08,inc case,NL,Netherlands,large data revision
 2022-01-08,inc case,PT,Portugal,large data revision
+2022-01-08,inc death,AT,Austria,large data revision
 2022-01-08,inc death,FI,Finland,large data revision
 2022-01-08,inc death,PT,Portugal,large data revision
 2022-01-08,inc hosp,CH,Switzerland,large data revision
+2022-01-15,inc case,AT,Austria,large data revision
 2022-01-15,inc case,DE,Germany,large data revision
 2022-01-15,inc case,FI,Finland,large data revision
 2022-01-15,inc death,FI,Finland,large data revision
 2022-01-15,inc hosp,CH,Switzerland,large data revision
+2022-01-22,inc case,AT,Austria,large data revision
 2022-01-22,inc case,DE,Germany,large data revision
 2022-01-22,inc case,FI,Finland,large data revision
+2022-01-22,inc death,AT,Austria,large data revision
 2022-01-22,inc death,FI,Finland,large data revision
 2022-01-22,inc hosp,CH,Switzerland,large data revision
+2022-01-29,inc case,AT,Austria,large data revision
 2022-01-29,inc case,DE,Germany,large data revision
+2022-01-29,inc death,AT,Austria,large data revision
 2022-01-29,inc hosp,CH,Switzerland,large data revision
 2022-02-05,inc case,ES,Spain,large data revision
+2022-02-05,inc death,AT,Austria,large data revision
 2022-02-05,inc death,ES,Spain,large data revision
 2022-02-05,inc hosp,CH,Switzerland,large data revision
 2022-02-12,inc case,ES,Spain,large data revision
@@ -1601,20 +1665,30 @@ target_end_date,target_variable,location,location_name,anomaly
 2022-02-26,inc hosp,CH,Switzerland,large data revision
 2022-03-05,inc hosp,CH,Switzerland,large data revision
 2022-03-12,inc hosp,CH,Switzerland,large data revision
+2022-03-19,inc death,AT,Austria,large data revision
 2022-03-19,inc hosp,CH,Switzerland,large data revision
+2022-03-26,inc case,AT,Austria,large data revision
 2022-03-26,inc case,DE,Germany,large data revision
 2022-03-26,inc death,DE,Germany,large data revision
 2022-03-26,inc hosp,CH,Switzerland,large data revision
+2022-04-02,inc case,AT,Austria,large data revision
 2022-04-02,inc hosp,CH,Switzerland,large data revision
+2022-04-09,inc case,AT,Austria,large data revision
 2022-04-09,inc case,ES,Spain,large data revision
 2022-04-09,inc death,ES,Spain,large data revision
 2022-04-09,inc hosp,CH,Switzerland,large data revision
+2022-04-16,inc case,AT,Austria,large data revision
 2022-04-16,inc case,ES,Spain,large data revision
+2022-04-16,inc death,AT,Austria,large data revision
 2022-04-16,inc hosp,CH,Switzerland,large data revision
 2022-04-23,inc case,ES,Spain,large data revision
+2022-04-23,inc death,AT,Austria,large data revision
 2022-04-23,inc death,ES,Spain,large data revision
 2022-04-23,inc hosp,CH,Switzerland,large data revision
+2022-04-30,inc case,AT,Austria,large data revision
 2022-04-30,inc case,ES,Spain,large data revision
 2022-04-30,inc death,ES,Spain,large data revision
 2022-04-30,inc hosp,CH,Switzerland,large data revision
+2022-05-07,inc death,AT,Austria,large data revision
 2022-05-07,inc hosp,CH,Switzerland,large data revision
+2022-05-14,inc hosp,CH,Switzerland,large data revision

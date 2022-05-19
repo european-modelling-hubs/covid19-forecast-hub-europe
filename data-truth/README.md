@@ -24,10 +24,12 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-05-12
+As of 2022-05-19
 
 | country     | created    | updated    | issue                                                                                 | message                                                 | url                                                      |
 |:------------|:-----------|:-----------|:--------------------------------------------------------------------------------------|:--------------------------------------------------------|:---------------------------------------------------------|
+| uk          | 2022-05-19 | 2022-05-19 | uk data anomaly                                                                       | The UK is currently showing 2,269,738 cases over t…     | <https://github.com/CSSEGISandData/COVID-19/issues/5743> |
+| uk          | 2022-05-18 | 2022-05-19 | uk unknown 2022-05-17                                                                 | Can you confirm that the United Kingdom added 1,93…     | <https://github.com/CSSEGISandData/COVID-19/issues/5740> |
 | belgium     | 2022-05-04 | 2022-05-04 | request to add data in three regions i.e. flanders, wallonia and brussels for belgium | <https://datastudio.google.com/c/embed/u/0/reportin>…   | <https://github.com/CSSEGISandData/COVID-19/issues/5704> |
 | germany     | 2022-04-14 | 2022-04-14 | issue with germany number of confirmed cases                                          | Dear JHU, Please double check closed issue #5632 a…     | <https://github.com/CSSEGISandData/COVID-19/issues/5646> |
 | germany     | 2022-04-13 | 2022-04-13 | germany: number of confirmed cases: drop in cumulative values                         | Dear JHU, Could you please check your time series…      | <https://github.com/CSSEGISandData/COVID-19/issues/5640> |
@@ -52,9 +54,9 @@ not consistent across all the countries in the ECDC Forecast Hub. To
 keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
--   Belgium, Croatia, Cyprus, Czechia, Denmark, Estonia, France,
-    Ireland, Latvia, Liechtenstein, Malta, Norway, Slovenia,
-    Switzerland, United Kingdom
+-   Belgium, Croatia, Czechia, Denmark, Estonia, France, Ireland,
+    Latvia, Liechtenstein, Malta, Norway, Slovenia, Switzerland, United
+    Kingdom
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)
