@@ -24,10 +24,11 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-05-21
+As of 2022-05-22
 
 | country     | created    | updated    | issue                                                                                 | message                                                 | url                                                      |
 |:------------|:-----------|:-----------|:--------------------------------------------------------------------------------------|:--------------------------------------------------------|:---------------------------------------------------------|
+| portugal    | 2022-05-22 | 2022-05-22 | portugal datapoint for cases                                                          | \[Global cases file\](<https://raw.githubusercontent>…. | <https://github.com/CSSEGISandData/COVID-19/issues/5752> |
 | france      | 2022-05-20 | 2022-05-20 | discrepancy in france data                                                            | For France, it was found that the number of New ca…     | <https://github.com/CSSEGISandData/COVID-19/issues/5746> |
 | belgium     | 2022-05-04 | 2022-05-04 | request to add data in three regions i.e. flanders, wallonia and brussels for belgium | <https://datastudio.google.com/c/embed/u/0/reportin>…   | <https://github.com/CSSEGISandData/COVID-19/issues/5704> |
 | germany     | 2022-04-14 | 2022-04-14 | issue with germany number of confirmed cases                                          | Dear JHU, Please double check closed issue #5632 a…     | <https://github.com/CSSEGISandData/COVID-19/issues/5646> |
