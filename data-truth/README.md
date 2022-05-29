@@ -24,7 +24,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-05-28
+As of 2022-05-29
 
 | country     | created    | updated    | issue                                                                                 | message                                                 | url                                                      |
 |:------------|:-----------|:-----------|:--------------------------------------------------------------------------------------|:--------------------------------------------------------|:---------------------------------------------------------|
@@ -35,7 +35,6 @@ As of 2022-05-28
 | germany     | 2022-03-29 | 2022-04-08 | discrepancy in the data of germany.                                                   | For Germany, As per the \[JHU\](<https://github.com/C>… | <https://github.com/CSSEGISandData/COVID-19/issues/5566> |
 | switzerland | 2022-01-27 | 2022-04-08 | the covid cases are inaccurate for switzerland                                        | The new cases on 24th Jan is 87,281, which is quit…     | <https://github.com/CSSEGISandData/COVID-19/issues/5301> |
 | portugal    | 2022-04-04 | 2022-04-04 | portugal data                                                                         | Portugal is reporting daily data again. It can be …     | <https://github.com/CSSEGISandData/COVID-19/issues/5598> |
-| germany     | 2022-04-02 | 2022-04-02 | germany wrong cases                                                                   | 1 April 2022: Positive:+252,530 Recovered:+207,100…     | <https://github.com/CSSEGISandData/COVID-19/issues/5590> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
