@@ -24,17 +24,15 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-06-03
+As of 2022-06-04
 
-| country     | created    | updated    | issue                                                                                 | message                                                 | url                                                      |
-|:------------|:-----------|:-----------|:--------------------------------------------------------------------------------------|:--------------------------------------------------------|:---------------------------------------------------------|
-| luxembourg  | 2022-05-30 | 2022-06-01 | luxembourg confirmed cases stale for 16 days (csse_covid_19_daily_reports)            | Hi all, cases for Luxembourg (country) are stale …      | <https://github.com/CSSEGISandData/COVID-19/issues/5768> |
-| france      | 2022-05-20 | 2022-05-26 | discrepancy in france data                                                            | For France, it was found that the number of New ca…     | <https://github.com/CSSEGISandData/COVID-19/issues/5746> |
-| belgium     | 2022-05-04 | 2022-05-04 | request to add data in three regions i.e. flanders, wallonia and brussels for belgium | <https://datastudio.google.com/c/embed/u/0/reportin>…   | <https://github.com/CSSEGISandData/COVID-19/issues/5704> |
-| germany     | 2022-04-14 | 2022-04-14 | issue with germany number of confirmed cases                                          | Dear JHU, Please double check closed issue #5632 a…     | <https://github.com/CSSEGISandData/COVID-19/issues/5646> |
-| germany     | 2022-04-13 | 2022-04-13 | germany: number of confirmed cases: drop in cumulative values                         | Dear JHU, Could you please check your time series…      | <https://github.com/CSSEGISandData/COVID-19/issues/5640> |
-| germany     | 2022-03-29 | 2022-04-08 | discrepancy in the data of germany.                                                   | For Germany, As per the \[JHU\](<https://github.com/C>… | <https://github.com/CSSEGISandData/COVID-19/issues/5566> |
-| switzerland | 2022-01-27 | 2022-04-08 | the covid cases are inaccurate for switzerland                                        | The new cases on 24th Jan is 87,281, which is quit…     | <https://github.com/CSSEGISandData/COVID-19/issues/5301> |
+| country    | created    | updated    | issue                                                                                 | message                                               | url                                                      |
+|:-----------|:-----------|:-----------|:--------------------------------------------------------------------------------------|:------------------------------------------------------|:---------------------------------------------------------|
+| luxembourg | 2022-05-30 | 2022-06-01 | luxembourg confirmed cases stale for 16 days (csse_covid_19_daily_reports)            | Hi all, cases for Luxembourg (country) are stale …    | <https://github.com/CSSEGISandData/COVID-19/issues/5768> |
+| france     | 2022-05-20 | 2022-05-26 | discrepancy in france data                                                            | For France, it was found that the number of New ca…   | <https://github.com/CSSEGISandData/COVID-19/issues/5746> |
+| belgium    | 2022-05-04 | 2022-05-04 | request to add data in three regions i.e. flanders, wallonia and brussels for belgium | <https://datastudio.google.com/c/embed/u/0/reportin>… | <https://github.com/CSSEGISandData/COVID-19/issues/5704> |
+| germany    | 2022-04-14 | 2022-04-14 | issue with germany number of confirmed cases                                          | Dear JHU, Please double check closed issue #5632 a…   | <https://github.com/CSSEGISandData/COVID-19/issues/5646> |
+| germany    | 2022-04-13 | 2022-04-13 | germany: number of confirmed cases: drop in cumulative values                         | Dear JHU, Could you please check your time series…    | <https://github.com/CSSEGISandData/COVID-19/issues/5640> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
