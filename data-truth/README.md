@@ -24,16 +24,15 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-06-09
+As of 2022-06-10
 
 | country     | created    | updated    | issue                                                                                 | message                                                | url                                                      |
 |:------------|:-----------|:-----------|:--------------------------------------------------------------------------------------|:-------------------------------------------------------|:---------------------------------------------------------|
+| ireland     | 2022-06-07 | 2022-06-09 | northern ireland ended covid-19 data reporting may 20, 2022                           | The last update for cumulative cases and deaths fo…    | <https://github.com/CSSEGISandData/COVID-19/issues/5795> |
 | netherlands | 2022-06-08 | 2022-06-08 | netherlands cases and deaths back distributed feb 22, 2022 to june 7, 2022            | Hello all, \[This commit\](<https://github.com/CSSEG>… | <https://github.com/CSSEGISandData/COVID-19/issues/5800> |
 | france      | 2022-05-20 | 2022-06-08 | discrepancy in france data                                                            | For France, it was found that the number of New ca…    | <https://github.com/CSSEGISandData/COVID-19/issues/5746> |
-| ireland     | 2022-06-07 | 2022-06-07 | northern ireland ended covid-19 data reporting may 20, 2022                           | The last update for cumulative cases and deaths fo…    | <https://github.com/CSSEGISandData/COVID-19/issues/5795> |
 | luxembourg  | 2022-05-30 | 2022-06-01 | luxembourg confirmed cases stale for 16 days (csse_covid_19_daily_reports)            | Hi all, cases for Luxembourg (country) are stale …     | <https://github.com/CSSEGISandData/COVID-19/issues/5768> |
 | belgium     | 2022-05-04 | 2022-05-04 | request to add data in three regions i.e. flanders, wallonia and brussels for belgium | <https://datastudio.google.com/c/embed/u/0/reportin>…  | <https://github.com/CSSEGISandData/COVID-19/issues/5704> |
-| germany     | 2022-04-14 | 2022-04-14 | issue with germany number of confirmed cases                                          | Dear JHU, Please double check closed issue #5632 a…    | <https://github.com/CSSEGISandData/COVID-19/issues/5646> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
