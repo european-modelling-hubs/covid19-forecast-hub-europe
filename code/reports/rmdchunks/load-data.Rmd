@@ -32,7 +32,8 @@ truth <- raw_truth %>%
   rename(true_value = value)
 
 # get anomalies
-anomalies <- read_csv(paste0(hub_repo, "/raw/main/data-truth/anomalies/anomalies.csv"))
+anomalies <- read_csv(paste0(hub_repo, "/raw/main/data-truth/anomalies/anomalies.csv"),
+                      show_col_types = FALSE)
 
 # remove forecasts made directly after a data anomaly
 forecasts <- raw_forecasts %>%
