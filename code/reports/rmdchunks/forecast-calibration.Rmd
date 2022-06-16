@@ -65,7 +65,7 @@ if (any(scores$model == params$model)) {
     xlab("Forecast horizon (weeks)")
   print(p)
 } else {
-  cat("No coverage figures shown as now 50%/95% predictive intervals are available.\n")
+  cat("No coverage figures shown as no 50%/95% predictive intervals are available.\n")
 }
 ```
 
