@@ -62,12 +62,14 @@ scaled_data <- data %>%
   filter(location %in% unique(panels$location)) %>%
   mutate(across(c("true_value", "prediction"), ~ .x / population * 1e+5))
 
-for (forecast_date in as.character(forecast_dates)) {
+for (fcast_date in as.character(forecast_dates)) {
+  fcast_date <- ymd(fcast_date)
   target_level <- 3
   if (length(forecast_dates) > 1) {
     cat(paste0("\n\n### ", forecast_date, "{.tabset .tabset-fade} \n\n"))
     target_level <- target_level + 1
   }
+
 
   for (target in names(target_variables)) {
     cat(paste0("\n\n", paste0(rep("#", target_level), collapse = ""), " ", target, "\n\n"))
@@ -81,21 +83,28 @@ for (forecast_date in as.character(forecast_dates)) {
       filter_forecasts <- c(filter_forecasts,
                             list(paste0("model == '", params$model, "'")))
     }
-
-    plot <- scoringutils::plot_predictions(
-      scaled_data,
-      x = "target_end_date",
-      filter_both = filter_both,
-      filter_forecasts = filter_forecasts,
-      facet_formula =  rlang::expr(~ !!facetting_var),
-      ncol = n_cols,
-      allow_truth_without_pred = TRUE,
-      zoom_multiple_data =
-        c(ymin = 0, ymax = 3),
-      expand_limits =
-        list(x = max(scaled_data$target_end_date),
-             y = 0),
-      scales = "free_y")
+    
+    plot <- plot_data <- scaled_data |>
+      scoringutils::make_NA(
+        target_variable != target_variables[[target]], what = "both"
+      ) |>
+      scoringutils::make_NA(
+        target_end_date <= fcast_date - weeks(10),
+        target_end_date > fcast_date + weeks(4),
+        what = "truth"
+      ) |>
+      scoringutils::make_NA(
+        forecast_date != fcast_date,
+        what = "forecast"
+      ) |>
+      scoringutils::plot_predictions(
+        x = "target_end_date"
+      ) +
+      facet_wrap(
+        vars(model),
+        ncol = n_cols,
+        scales = "free_y"
+      )
 
     if (is.null(plot)) {
       cat("No forecasts available, possibly because of recent anomalies in the available data." )
