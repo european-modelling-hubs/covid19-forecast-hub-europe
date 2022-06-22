@@ -37,7 +37,8 @@ hosp_data <-
     apply(shas[[source]], 1, function(x) {
       read_csv(
         paste("https://raw.githubusercontent.com", owner, repo, x[["sha"]], path[[source]],
-              sep = "/")
+              sep = "/"),
+        show_col_types = FALSE
       ) %>%
         mutate(download_date = as.Date(x[["download_date"]]))
     })
@@ -104,24 +105,4 @@ final_table <- final_table %>%
 
 write_csv(final_table, here::here("code", "auto_download",
                                   "hospitalisations",
-                                  "check-sources", "sources.csv"))
-
-## main plot: hospitalisation data
-plot_data <- all %>%
-  inner_join(final_table, by = c("location_name", "type")) %>%
-  group_by(location_name) %>%
-  filter(download_date == max(download_date)) %>%
-  ungroup() %>%
-  filter(download_delay >= truncate_weeks)
-
-p <- ggplot(plot_data, aes(x = date, y = value, colour = type)) +
-  scale_colour_brewer("", palette = "Set1") +
-  facet_wrap(~location_name, scale = "free_y") +
-  theme_minimal() +
-  theme(legend.position = "bottom") +
-  geom_point() +
-  geom_line() +
-  xlab("Last day of week shown (Saturday)") +
-  ylab("Number of weekly hospitalisations")
-
-ggsave(here::here("code", "auto_download", "hospitalisations.png"), p, width = 14, height = 10)
+                                  "check-sources", "sources_update.csv"))
