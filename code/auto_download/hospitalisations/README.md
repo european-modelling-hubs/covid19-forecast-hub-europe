@@ -32,6 +32,13 @@ We also provide the full version of each data source:
     -   Released: Daily. Data are raw counts.
     -   Download with: [`get-non-eu.R`](./get-non-eu.R)
 
+-   Our World in Data: (currently not used)
+    [data-truth/owid/covid-hospitalizations.csv](https://github.com/epiforecasts/covid19-forecast-hub-europe/blob/main/data-truth/OWID/covid-hospitalizations.csv)
+    -   Source: https://github.com/owid/covid-19-data/tree/master/public/data/hospitalizations
+    -   Released: Daily. Data are raw counts.
+    -   Download with: [`get-owid.R`](./get-owid.R)
+
+
 These datasets are combined and filtered to produce a single dataset covering as many countries as possible. This is created with:
 
 -   [`save-selected-sources.R`](./save-selected-sources.R)
