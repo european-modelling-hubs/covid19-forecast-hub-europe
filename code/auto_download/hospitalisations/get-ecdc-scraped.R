@@ -21,7 +21,7 @@ R.utils::downloadFile(Sys.getenv("DATA_URL"), # Uses set environment variables
                       password = Sys.getenv("DATA_PASSWORD"),
                       skip = FALSE, overwrite = TRUE)
 # Clean
-scraped <- read_csv(ecdc_scraped_filepath) %>%
+scraped <- read_csv(ecdc_scraped_filepath, show_col_types = FALSE) %>%
   clean_names() %>%
   filter(indicator == "New_Hospitalised") %>%
   select(location_name = country_name, date, source, value) %>%

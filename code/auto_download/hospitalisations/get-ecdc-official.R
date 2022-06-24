@@ -11,7 +11,8 @@ pop <- covidHubUtils::hub_locations_ecdc
 
 # Get ECDC published data
 cat("Downloading ECDC published data\n")
-official <- read_csv("https://opendata.ecdc.europa.eu/covid19/hospitalicuadmissionrates/csv/data.csv") %>%
+official <- read_csv("https://opendata.ecdc.europa.eu/covid19/hospitalicuadmissionrates/csv/data.csv",
+                     show_col_types = FALSE) %>%
   filter(grepl("hospital admissions", indicator)) %>%
   rename(unscaled_value = value,
          location_name = country) %>%
