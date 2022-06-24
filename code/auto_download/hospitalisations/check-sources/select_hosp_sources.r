@@ -72,9 +72,10 @@ delays <- all %>%
   ungroup() %>%
   mutate(rel_diff = (final_value - value) / final_value)
 
-## don't use delays that would have recently resulted in final relative differences of >5%
+## don't use delays that would have recently resulted in
+## final relative differences of >5% in the last 3 months
 dont_use <- delays %>%
-  filter(date >= "2021-10-10", rel_diff > 0.05) %>%
+  filter(date >= max(date) - 12 * 7, rel_diff > 0.05) %>%
   select(location_name, source, type, download_delay) %>%
   distinct() %>%
   arrange(location_name)
