@@ -24,10 +24,11 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-06-24
+As of 2022-06-25
 
 | country     | created    | updated    | issue                                                                                 | message                                                | url                                                      |
 |:------------|:-----------|:-----------|:--------------------------------------------------------------------------------------|:-------------------------------------------------------|:---------------------------------------------------------|
+| lithuania   | 2022-06-25 | 2022-06-25 | wrong data reported for lithuania. please use official source!                        | Dear JHU team, I am writing you on behalf of Sta…      | <https://github.com/CSSEGISandData/COVID-19/issues/5839> |
 | ireland     | 2022-06-07 | 2022-06-09 | northern ireland ended covid-19 data reporting may 20, 2022                           | The last update for cumulative cases and deaths fo…    | <https://github.com/CSSEGISandData/COVID-19/issues/5795> |
 | netherlands | 2022-06-08 | 2022-06-08 | netherlands cases and deaths back distributed feb 22, 2022 to june 7, 2022            | Hello all, \[This commit\](<https://github.com/CSSEG>… | <https://github.com/CSSEGISandData/COVID-19/issues/5800> |
 | france      | 2022-05-20 | 2022-06-08 | discrepancy in france data                                                            | For France, it was found that the number of New ca…    | <https://github.com/CSSEGISandData/COVID-19/issues/5746> |
