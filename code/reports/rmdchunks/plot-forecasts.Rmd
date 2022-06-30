@@ -70,7 +70,6 @@ for (fcast_date in as.character(forecast_dates)) {
     target_level <- target_level + 1
   }
 
-
   for (target in names(target_variables)) {
     cat(paste0("\n\n", paste0(rep("#", target_level), collapse = ""), " ", target, "\n\n"))
 
@@ -84,21 +83,22 @@ for (fcast_date in as.character(forecast_dates)) {
                             list(paste0("model == '", params$model, "'")))
     }
     
-    plot_data <- scoringutils::make_NA(
-      scaled_data,
-      target_variable != target_variables[[target]], what = "both"
-    )
-    plot_data <- scoringutils::make_NA(
-      plot_data,
-      target_end_date <= fcast_date - weeks(10),
-      target_end_date > fcast_date + weeks(4),
-      what = "truth"
-    )
-    plot_data <- scoringutils::make_NA(
-      plot_data, 
-      forecast_date != fcast_date,
-      what = "forecast"
-    )
+    plot_data <- scaled_data |>
+      mutate(
+        prediction = if_else(
+          target_variable != target_variables[[target]] |
+          forecast_date != fcast_date,
+          NA_real_,
+          prediction
+        ),
+        true_value = if_else(
+          target_variable != target_variables[[target]] |
+          target_end_date <= fcast_date - weeks(10) |
+          target_end_date > fcast_date + weeks(4),
+          NA_real_,
+          true_value
+        )
+      )
     plot <- scoringutils::plot_predictions(
       plot_data, 
       x = "target_end_date"
