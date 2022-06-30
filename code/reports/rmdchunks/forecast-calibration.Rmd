@@ -22,31 +22,32 @@ Coverage is the proportion of observations that fall within a given prediction i
 ```{r coverage, echo = FALSE, include = include_calibration, results = 'asis', fig.width = 6, fig.height = 6}
 ranges <- c(50, 95)
 
-scores <- scoringutils::eval_forecasts(
-  data,
-  summarise_by = c("model", "range", "quantile",
-                  "target_variable", "horizon"),
-  pit_plots = TRUE
+coverage <- scoringutils::score(
+    data |>
+      filter(!is.na(true_value)),
+    metrics = "coverage"
   ) %>%
-  filter(!is.na(range)) %>%
+  filter(!is.na(range), range %in% ranges) %>%
+  summarise_scores(by = c("model", "range", "target_variable", "horizon")) %>%
   mutate(variable = forcats::fct_recode(target_variable, !!!target_variables))
 
 if (any(scores$model == params$model)) {
   ## only show targets provided by the model (but all horizons)
-  targets <- scores %>%
+  targets <- coverage %>%
     filter(model == params$model) %>%
     pull(target_variable) %>%
     unique()
-  coverage <- scores %>%
-    dplyr::filter(range %in% ranges,
-                  target_variable %in% targets) %>%
+  coverage <- coverage %>%
+    dplyr::filter(target_variable %in% targets) %>%
     select(model, range, variable, horizon, coverage) %>%
     distinct() %>%
-    mutate(model = factor(model, levels = unique(c(ensemble_model, params$model))),
+    mutate(model =
+             factor(model, levels = unique(c(ensemble_model, params$model))),
            horizon = as.integer(horizon),
            range = paste0(range, "% interval"),
-           coverage = round(coverage, 2))
-
+           coverage = round(coverage, 2)) |>
+    filter(!is.na(model))
+  
   hlines <- tibble(range = paste0(ranges, "% interval"),
                    nominal = ranges / 100)
 
@@ -88,17 +89,20 @@ if (any(scores$model == params$model)) {
     summarise(quantile = unique(quantile))
 
   if (length(setdiff(quantiles, core_quantiles$quantile)) == 0) {
-    pit <- scores %>%
+    pit_data <- data %>%
       filter(target_variable %in% targets,
              round(quantile, 3) %in% round(quantiles, 3)) %>%
       mutate(horizon = paste0(horizon, " week", if_else(horizon == 1, "", "s")),
-             model = factor(model, levels = unique(c(ensemble_model, params$model)))) %>%
-      arrange(model, variable, horizon, quantile) %>%
-      group_by(model, variable, horizon) %>%
-      summarise(quantile = c(quantile, 1),
-                pit_bin = diff(c(0, quantile_coverage, 1)))
+             model = factor(
+               model,
+               levels = unique(c(ensemble_model, params$model)))
+             ) %>%
+      filter(!is.na(model))  %>%
+      mutate(variable =
+               forcats::fct_recode(target_variable, !!!target_variables))  %>%
+      pit(by = c("model", "variable", "horizon"))
 
-    p <- ggplot(pit, aes(x = quantile - width / 2, y = pit_bin, fill = model)) +
+    p <- ggplot(pit, aes(x = quantile, y = pit_value, fill = model)) +
       geom_col(position = "dodge") +
       theme_light() +
       scale_fill_manual("", values = palette) +
