@@ -53,6 +53,11 @@ jobs:
           path: |
             html/
 
+      - name: Trigger website rebuild
+        if: github.event_name != 'pull_request'
+        run: |
+           gh workflow run main.yml -R covid19-forecast-hub-europe/covid19-forecast-hub-europe-website
+
       - name: Create issue about failure
         if: failure() && github.event_name != 'workflow_dispatch' && github.event_name != 'pull_request'
         env:
