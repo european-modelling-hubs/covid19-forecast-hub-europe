@@ -1,0 +1,43 @@
+name: "Create country reports"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 16 * * 0"
+
+jobs:
+  country_reports:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: r-lib/actions/setup-r@v1
+        with:
+          install-r: false
+          use-public-rspm: true
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libssl-dev libcurl4-openssl-dev
+
+      - uses: r-lib/actions/setup-pandoc@v1
+
+      - uses: r-lib/actions/setup-renv@v2
+
+      - name: Create country reports
+        run: Rscript 'code/reports/compile-country-reports.r'
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: country-reports
+          retention-days: 8
+          path: |
+            html/
+
+      - name: Create issue about failure
+        if: failure() && github.event_name != 'workflow_dispatch'
+        uses: JasonEtco/create-an-issue@v2.5.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: .github/action-issue-template.md
