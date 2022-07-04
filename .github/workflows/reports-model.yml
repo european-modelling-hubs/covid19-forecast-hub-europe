@@ -6,6 +6,9 @@ on:
   push:
     paths:
       - code/reports/**
+  pull_request:
+    paths:
+      - code/reports/**
 
 jobs:
   model_reports:
@@ -31,14 +34,25 @@ jobs:
         run: Rscript 'code/reports/compile-model-reports.r'
 
       - uses: actions/upload-artifact@v2
+        if: github.event_name != 'pull_request'
         with:
           name: model-reports
           retention-days: 8
           path: |
             html/
 
+      - uses: actions/upload-artifact@v2
+        # If we are in a PR, we want to access the artifacts but we don't want
+        # them to be used to build the site
+        if: github.event_name == 'pull_request'
+        with:
+          name: model-reports-${{ env.GITHUB_RUN_ID }}
+          retention-days: 8
+          path: |
+            html/
+
       - name: Create issue about failure
-        if: failure() && github.event_name != 'workflow_dispatch'
+        if: failure() && github.event_name != 'workflow_dispatch' && github.event_name != 'pull_request'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
