@@ -55,6 +55,8 @@ jobs:
 
       - name: Trigger website rebuild
         if: github.event_name != 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.FORECASTHUB_TOKEN }}
         run: |
            gh workflow run main.yml -R covid19-forecast-hub-europe/covid19-forecast-hub-europe-website
 
