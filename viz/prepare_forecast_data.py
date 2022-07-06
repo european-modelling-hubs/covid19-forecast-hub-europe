@@ -109,7 +109,6 @@ def createForecastDataItem(row):
         raise NameError('Invalid target')
     
     return {
-        'forecast_date': row['forecast_date'],
         'location': row['location'],
         'type': row['type'],
         'value': int(row['value']),
