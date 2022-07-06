@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.2.0",
+    "Version": "4.2.1",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -90,14 +90,14 @@
       "Package": "EuroForecastHub",
       "Version": "0.0.0.9000",
       "Source": "GitHub",
-      "Remotes": "reichlab/covidHubUtils, anthonynorth/roxyglobals",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "EuroForecastHub",
       "RemoteUsername": "covid19-forecast-hub-europe",
-      "RemoteRef": "HEAD",
+      "RemoteRepo": "EuroForecastHub",
+      "RemoteRef": "main",
       "RemoteSha": "e55031202350d28112bee4a89ff4380aa015c8d5",
-      "Hash": "149104c747ef3e3c651cb0e9bdac0a0d",
+      "Remotes": "reichlab/covidHubUtils, anthonynorth/roxyglobals",
+      "Hash": "c904ab89b0ad05381639a89837ed7045",
       "Requirements": [
         "cNORM",
         "covidHubUtils",
