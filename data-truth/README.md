@@ -24,17 +24,16 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-06-28
+As of 2022-07-06
 
 | country     | created    | updated    | issue                                                                                 | message                                                | url                                                      |
 |:------------|:-----------|:-----------|:--------------------------------------------------------------------------------------|:-------------------------------------------------------|:---------------------------------------------------------|
+| belgium     | 2022-05-04 | 2022-06-30 | request to add data in three regions i.e. flanders, wallonia and brussels for belgium | <https://datastudio.google.com/c/embed/u/0/reportin>…  | <https://github.com/CSSEGISandData/COVID-19/issues/5704> |
 | france      | 2022-05-20 | 2022-06-28 | discrepancy in france data                                                            | For France, it was found that the number of New ca…    | <https://github.com/CSSEGISandData/COVID-19/issues/5746> |
 | spain       | 2022-06-27 | 2022-06-27 | decrease in cases in castilla la mancha, spain on 6/24/2022                           | Hello all, Castilla La Mancha, Spain had a decrea…     | <https://github.com/CSSEGISandData/COVID-19/issues/5845> |
-| lithuania   | 2022-06-25 | 2022-06-26 | wrong data reported for lithuania. please use official source!                        | Dear JHU team, I am writing to you on behalf of …      | <https://github.com/CSSEGISandData/COVID-19/issues/5839> |
 | ireland     | 2022-06-07 | 2022-06-09 | northern ireland ended covid-19 data reporting may 20, 2022                           | The last update for cumulative cases and deaths fo…    | <https://github.com/CSSEGISandData/COVID-19/issues/5795> |
 | netherlands | 2022-06-08 | 2022-06-08 | netherlands cases and deaths back distributed feb 22, 2022 to june 7, 2022            | Hello all, \[This commit\](<https://github.com/CSSEG>… | <https://github.com/CSSEGISandData/COVID-19/issues/5800> |
 | luxembourg  | 2022-05-30 | 2022-06-01 | luxembourg confirmed cases stale for 16 days (csse_covid_19_daily_reports)            | Hi all, cases for Luxembourg (country) are stale …     | <https://github.com/CSSEGISandData/COVID-19/issues/5768> |
-| belgium     | 2022-05-04 | 2022-05-04 | request to add data in three regions i.e. flanders, wallonia and brussels for belgium | <https://datastudio.google.com/c/embed/u/0/reportin>…  | <https://github.com/CSSEGISandData/COVID-19/issues/5704> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
@@ -50,10 +49,8 @@ not consistent across all the countries in the ECDC Forecast Hub. To
 keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
--   Belgium, Cyprus, Czechia, Estonia, France, Iceland, Ireland, Latvia,
-    Liechtenstein, Malta, Norway, Slovenia, Switzerland, United Kingdom
-
--   **Data warning!** Recent missing data in: Iceland
+-   Belgium, Croatia, Czechia, Estonia, France, Ireland, Latvia,
+    Liechtenstein, Malta, Norway, Slovenia, Switzerland
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)
