@@ -8,21 +8,21 @@ over the next four weeks in countries across Europe and the UK.
 
 ##### Latest forecasts
 
--   View the [current
+  - View the [current
     forecasts](https://covid19forecasthub.eu/visualisation)
--   We publish a weekly
+  - We publish a weekly
     [evaluation](https://covid19forecasthub.eu/reports) of current
     forecasts
--   Raw forecast files are in the
+  - Raw forecast files are in the
     [data-processed](https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/data-processed)
     folder
 
 ##### README contents
 
--   [Quick start](#quick-start)
--   [About Covid-19 forecast hubs](#about-covid-19-forecasting-hubs)
-    -   [European forecast hub team](#european-forecast-hub-team)
-    -   [Data license and reuse](#data-license-and-reuse)
+  - [Quick start](#quick-start)
+  - [About Covid-19 forecast hubs](#about-covid-19-forecasting-hubs)
+      - [European forecast hub team](#european-forecast-hub-team)
+      - [Data license and reuse](#data-license-and-reuse)
 
 ## Quick start
 
@@ -43,7 +43,7 @@ We require some forecast parameters so that we can compare and ensemble
 forecasts. All forecasts should use the following structure:
 
 | Parameter | Description                           |
-|-----------|---------------------------------------|
+| --------- | ------------------------------------- |
 | Target    | Cases, hospitalisations and/or deaths |
 | Count     | Incident                              |
 | Geography | EU/EFTA/UK nations (any/all)          |
@@ -97,12 +97,12 @@ This effort parallels forecasting hubs in the US and Germany. We follow
 a similar structure and data format, and re-use software provided by the
 ReichLab.
 
--   The [US COVID-19 Forecast
+  - The [US COVID-19 Forecast
     Hub](https://github.com/reichlab/covid19-forecast-hub) is run by the
     UMass-Amherst Influenza Forecasting Center of Excellence based at
     the [Reich Lab](https://reichlab.io/).
 
--   The [German and Polish COVID-19 Forecast
+  - The [German and Polish COVID-19 Forecast
     Hub](https://github.com/KITmetricslab/covid19-forecast-hub-de) is
     run by members of the [Karlsruher Institut für Technologie
     (KIT)](https://statistik.econ.kit.edu/index.ph) and the
@@ -120,36 +120,36 @@ and supported by grant funding from the ECDC.
 
 Direct contributors to this repository include (in alphabetical order):
 
--   Daniel Wolffram
--   Hugo Gruson
--   Jannik Deuschel
--   [Johannes
+  - Daniel Wolffram
+  - Hugo Gruson
+  - Jannik Deuschel
+  - [Johannes
     Bracher](https://statistik.econ.kit.edu/mitarbeiter_2902.php)
--   Katharine Sherratt
--   Nikos Bosse
--   [Sebastian
+  - Katharine Sherratt
+  - Nikos Bosse
+  - [Sebastian
     Funk](https://www.lshtm.ac.uk/aboutus/people/funk.sebastian)
 
 The [interactive visualization
 tool](https://covid19forecasthub.eu/visualisation/) (code available
 [here](https://github.com/SignaleRKI/forecast-europe)) has been
 developed by the [Signale Team at Robert Koch
-Institute](https://www.rki.de/EN/Content/infections/epidemiology/signals/signals_node.html): -
-Fabian Eckelmann - Knut Perseke - Alexander Ullrich
+Institute](https://www.rki.de/EN/Content/infections/epidemiology/signals/signals_node.html):
+- Fabian Eckelmann - Knut Perseke - Alexander Ullrich
 
 ### Data license and reuse
 
--   The forecasts assembled in this repository have been created by
+  - The forecasts assembled in this repository have been created by
     independent teams. Most provide a license in their respective
     subfolder of `data-processed`.
--   Parts of the processing, analysis and validation code have been
+  - Parts of the processing, analysis and validation code have been
     taken or adapted from the [US Covid-19 forecast
     hub](https://github.com/reichlab/covid19-forecast-hub) and the
     [Germany/Poland Covid-19 forecast
     hub](https://github.com/KITmetricslab/covid19-forecast-hub-de) both
     under an [MIT
     license](https://github.com/reichlab/covid19-forecast-hub/blob/master/LICENSE).
--   All code contained in this repository is under the [MIT
+  - All code contained in this repository is under the [MIT
     license](/LICENSE). **Please get in touch with us to re-use
     materials from this repository.**
 
