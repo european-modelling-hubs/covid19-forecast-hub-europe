@@ -152,3 +152,140 @@ Fabian Eckelmann - Knut Perseke - Alexander Ullrich
 -   All code contained in this repository is under the [MIT
     license](/LICENSE). **Please get in touch with us to re-use
     materials from this repository.**
+
+To cite the European Covid-19 Forecast Hub in project in publications,
+please use the following reference:
+
+``` bibtex
+@dataset{katharine_sherratt_2022_6806583,
+  author       = {Katharine Sherratt and
+                  Hugo Gruson and
+                  Helen Johnson and
+                  Rene Niehus and
+                  Bastian Prasse and
+                  Frank Sandman and
+                  Jannik Deuschel and
+                  Daniel Wolffram and
+                  Sam Abbott and
+                  Alexander Ullrich and
+                  Graham Gibson and
+                  Evan L Ray and
+                  Nicholas G Reich and
+                  Daniel Sheldon and
+                  Yijin Wang and
+                  Nutcha Wattanachit and
+                  Lijing Wang and
+                  Jan Trnka and
+                  Guillaume Obozinski and
+                  Tao Sun and
+                  Dorina Thanou and
+                  Loic Pottier and
+                  Ekaterina Krymova and
+                  Maria Vittoria Barbarossa and
+                  Neele Leithauser and
+                  Jan Mohring and
+                  Johanna Schneider and
+                  Jaroslaw Wlazlo and
+                  Jan Fuhrmann and
+                  Berit Lange and
+                  Isti Rodiah and
+                  Prasith Baccam and
+                  Heidi Gurung and
+                  Steven Stage and
+                  Bradley Suchoski and
+                  Jozef Budzinski and
+                  Robert Walraven and
+                  Inmaculada Villanueva and
+                  Vit Tucek and
+                  Martin Smid and
+                  Milan Zajicek and
+                  Cesar Perez Alvarez and
+                  Borja Reina and
+                  Nikos I Bosse and
+                  Sophie Meakin and
+                  Pierfrancesco Alaimo Di Loro and
+                  Antonello Maruotti and
+                  Veronika Eclerova and
+                  Andrea Kraus and
+                  David Kraus and
+                  Lenka Pribylova and
+                  Bertsimas Dimitris and
+                  Michael Lingzhi Li and
+                  Soni Saksham and
+                  Jonas Dehning and
+                  Sebastian Mohr and
+                  Viola Priesemann and
+                  Grzegorz Redlarski and
+                  Benjamin Bejar and
+                  Giovanni Ardenghi and
+                  Nicola Parolini and
+                  Giovanni Ziarelli and
+                  Wolfgang Bock and
+                  Stefan Heyder and
+                  Thomas Hotz and
+                  David E Singh and
+                  Miguel Guzman-Merino and
+                  Jose L Aznarte and
+                  David Morina and
+                  Sergio Alonso and
+                  Enric Alvarez and
+                  Daniel Lopez and
+                  Clara Prats and
+                  Jan Pablo Burgard and
+                  Arne Rodloff and
+                  Tom Zimmermann and
+                  Alexander Kuhlmann and
+                  Janez Zibert and
+                  Fulvia Pennoni and
+                  Fabio Divino and
+                  Marti Catala and
+                  Gianfranco Lovison and
+                  Paolo Giudici and
+                  Barbara Tarantino and
+                  Francesco Bartolucci and
+                  Giovanna Jona Lasinio and
+                  Marco Mingione and
+                  Alessio Farcomeni and
+                  Ajitesh Srivastava and
+                  Pablo Montero-Manso and
+                  Aniruddha Adiga and
+                  Benjamin Hurt and
+                  Bryan Lewis and
+                  Madhav Marathe and
+                  Przemyslaw Porebski and
+                  Srinivasan Venkatramanan and
+                  Rafal Bartczuk and
+                  Filip Dreger and
+                  Anna Gambin and
+                  Krzysztof Gogolewski and
+                  Magdalena Gruziel-Slomka and
+                  Bartosz Krupa and
+                  Antoni Moszynski and
+                  Karol Niedzielewski and
+                  Jedrzej Nowosielski and
+                  Maciej Radwan and
+                  Franciszek Rakowski and
+                  Marcin Semeniuk and
+                  Ewa Szczurek and
+                  Jakub Zielinski and
+                  Jan Kisielewski and
+                  Barbara Pabjan and
+                  Kirsten Holger and
+                  Yuri Kheifetz and
+                  Markus Scholz and
+                  Marcin Bodych and
+                  Maciej Filinski and
+                  Radoslaw Idzikowski and
+                  Tyll Krueger and
+                  Tomasz Ozanski and
+                  Johannes Bracher and
+                  Sebastian Funk},
+  title        = {European Covid-19 Forecast Hub},
+  month        = jul,
+  year         = 2022,
+  publisher    = {Zenodo},
+  version      = {v2022.07.07},
+  doi          = {10.5281/zenodo.6806583},
+  url          = {https://doi.org/10.5281/zenodo.6806583}
+}
+```

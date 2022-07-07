@@ -105,3 +105,19 @@ The [interactive visualization tool](https://covid19forecasthub.eu/visualisation
 - The forecasts assembled in this repository have been created by independent teams. Most provide a license in their respective subfolder of `data-processed`.
 - Parts of the processing, analysis and validation code have been taken or adapted from the [US Covid-19 forecast hub](https://github.com/reichlab/covid19-forecast-hub) and the [Germany/Poland Covid-19 forecast hub](https://github.com/KITmetricslab/covid19-forecast-hub-de) both under an [MIT license](https://github.com/reichlab/covid19-forecast-hub/blob/master/LICENSE).
 - All code contained in this repository is under the [MIT license](/LICENSE). **Please get in touch with us to re-use materials from this repository.**
+
+To cite the European Covid-19 Forecast Hub in project in publications, please use the following reference:
+
+```{r zenodo, echo=FALSE, results = 'asis', warning=FALSE}
+# Chunk copied straight from rOpenSci's devguide: https://github.com/ropensci/dev_guide/blob/e72faf882c0b7faf4efb982875037f50468032c0/index.Rmd#L31-L41
+cat("\n```bibtex\n")
+u <- "https://zenodo.org/record/6401421" # universal URL redirects to latest
+s <- rvest::session(u)
+u <- paste0(s$url, "/export/hx") # redirected
+out <- rvest::read_html(u)
+bibentry <- rvest::html_text(rvest::html_element(out, "pre"))
+writeLines(strsplit(bibentry, "\n")[[1]], "dev_citation_BibTeX.bib")
+cat(bibentry)
+cat("\n```\n")
+```
+
