@@ -165,9 +165,8 @@ please use the following reference:
 > <https://doi.org/10.5281/zenodo.6806583>
 
 <details>
-<summary>
-Bibtex
-</summary>
+
+<summary>Bibtex</summary>
 
 ``` bibtex
 @dataset{katharine_sherratt_2022_6806583,
