@@ -156,6 +156,14 @@ Institute](https://www.rki.de/EN/Content/infections/epidemiology/signals/signals
 To cite the European Covid-19 Forecast Hub in project in publications,
 please use the following reference:
 
+> Katharine Sherratt, Hugo Gruson, Helen Johnson, Rene Niehus, Bastian
+> Prasse, Frank Sandman, Jannik Deuschel, Daniel Wolffram, Sam Abbott,
+> Alexander Ullrich, Graham Gibson, Evan L Ray, Nicholas G Reich, Daniel
+> Sheldon, Yijin Wang, Nutcha Wattanachit, Lijing Wang, Jan Trnka,
+> Guillaume Obozinski, … Sebastian Funk. (2022). European Covid-19
+> Forecast Hub (v2022.07.07) \[Data set\]. Zenodo.
+> <https://doi.org/10.5281/zenodo.6806583>
+
 ``` bibtex
 @dataset{katharine_sherratt_2022_6806583,
   author       = {Katharine Sherratt and

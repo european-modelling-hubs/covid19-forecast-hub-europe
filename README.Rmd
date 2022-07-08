@@ -108,16 +108,27 @@ The [interactive visualization tool](https://covid19forecasthub.eu/visualisation
 
 To cite the European Covid-19 Forecast Hub in project in publications, please use the following reference:
 
-```{r zenodo, echo=FALSE, results = 'asis', warning=FALSE}
+```{r zenodo, echo=FALSE, warning=FALSE}
 # Chunk copied straight from rOpenSci's devguide: https://github.com/ropensci/dev_guide/blob/e72faf882c0b7faf4efb982875037f50468032c0/index.Rmd#L31-L41
-cat("\n```bibtex\n")
 u <- "https://zenodo.org/record/6401421" # universal URL redirects to latest
 s <- rvest::session(u)
 u <- paste0(s$url, "/export/hx") # redirected
 out <- rvest::read_html(u)
 bibentry <- rvest::html_text(rvest::html_element(out, "pre"))
-writeLines(strsplit(bibentry, "\n")[[1]], "dev_citation_BibTeX.bib")
+```
+
+```{r parsed_ref, echo = FALSE, results = 'asis'}
+cat("> ")
+u |> 
+  xml2::read_html() |> 
+  xml2::xml_find_first("//invenio-csl") |> 
+  xml2::xml_attr("ng-init") |> 
+  stringr::str_replace("^.*'(.*)'$", "\\1") |> 
+  cat()
+```
+
+```{r bibtex_ref, echo=FALSE, results = 'asis'}
+cat("\n```bibtex\n")
 cat(bibentry)
 cat("\n```\n")
 ```
-
