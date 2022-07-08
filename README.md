@@ -164,6 +164,11 @@ please use the following reference:
 > Forecast Hub (v2022.07.07) \[Data set\]. Zenodo.
 > <https://doi.org/10.5281/zenodo.6806583>
 
+<details>
+<summary>
+Bibtex
+</summary>
+
 ``` bibtex
 @dataset{katharine_sherratt_2022_6806583,
   author       = {Katharine Sherratt and
@@ -297,3 +302,5 @@ please use the following reference:
   url          = {https://doi.org/10.5281/zenodo.6806583}
 }
 ```
+
+</details>

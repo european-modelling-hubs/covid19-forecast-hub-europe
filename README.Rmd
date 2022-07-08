@@ -128,7 +128,9 @@ u |>
 ```
 
 ```{r bibtex_ref, echo=FALSE, results = 'asis'}
+cat("<details><summary>Bibtex</summary>\n")
 cat("\n```bibtex\n")
 cat(bibentry)
 cat("\n```\n")
+cat("\n</details>")
 ```
