@@ -97,17 +97,17 @@ for (fcast_date in as.character(forecast_dates)) {
       plot_data, 
       x = "target_end_date",
       by = rlang::as_name(facetting_var)
-    ) +
-      facet_wrap(
-        facetting_var, 
-        ncol = n_cols,
-        scales = "free_y"
-      )
+    ) 
 
     if (is.null(plot)) {
       cat("No forecasts available, possibly because of recent anomalies in the available data." )
     } else {
       plot <- plot +
+        facet_wrap(
+          facetting_var, 
+          ncol = n_cols,
+          scales = "free_y"
+        ) +
         theme(legend.position = "bottom",
               strip.placement = "outside",
               strip.text = element_text(colour = 'black'),
