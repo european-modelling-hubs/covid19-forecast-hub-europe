@@ -92,17 +92,15 @@ for (fcast_date in as.character(forecast_dates)) {
       ) |> 
       ungroup() |>
       mutate(prediction = ifelse(forecast_date == fcast_date, prediction, NA))
-    
-    plot <- scoringutils::plot_predictions(
-      plot_data, 
-      x = "target_end_date",
-      by = rlang::as_name(facetting_var)
-    ) 
 
-    if (is.null(plot)) {
+    if (nrow(plot_data) == 0) {
       cat("No forecasts available, possibly because of recent anomalies in the available data." )
     } else {
-      plot <- plot +
+      plot <- scoringutils::plot_predictions(
+          plot_data, 
+          x = "target_end_date",
+          by = rlang::as_name(facetting_var)
+        )  +
         facet_wrap(
           facetting_var, 
           ncol = n_cols,
