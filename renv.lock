@@ -1572,6 +1572,22 @@
       "Hash": "06c85365a03fdaf699966cc1d3cf53ea",
       "Requirements": []
     },
+    "rvest": {
+      "Package": "rvest",
+      "Version": "1.0.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "bb099886deffecd6f9b298b7d4492943",
+      "Requirements": [
+        "httr",
+        "lifecycle",
+        "magrittr",
+        "rlang",
+        "selectr",
+        "tibble",
+        "xml2"
+      ]
+    },
     "sass": {
       "Package": "sass",
       "Version": "0.4.0",
@@ -1639,6 +1655,17 @@
         "ggplot2",
         "rlang",
         "scoringRules"
+      ]
+    },
+    "selectr": {
+      "Package": "selectr",
+      "Version": "0.4-2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "3838071b66e0c566d55cc26bd6e27bf4",
+      "Requirements": [
+        "R6",
+        "stringr"
       ]
     },
     "shiny": {
