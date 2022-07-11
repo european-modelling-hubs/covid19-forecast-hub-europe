@@ -80,26 +80,23 @@ for (fcast_date in as.character(forecast_dates)) {
     }
 
     plot_data <- scaled_data |>
-      mutate(
-        prediction = if_else(
-          target_variable != target_variables[[target]] |
-          forecast_date != fcast_date |
-          model != compare_model,
-          NA_real_,
-          prediction
-        ),
-        true_value = if_else(
-          target_variable != target_variables[[target]] |
-          target_end_date <= fcast_date - weeks(10) |
-          target_end_date > fcast_date + weeks(4),
-          NA_real_,
-          true_value
-        )
-      )
+      filter(
+        target_variable == target_variables[[target]],
+        model == compare_model,
+        target_end_date >= fcast_date - weeks(10),
+        target_end_date < fcast_date + weeks(4)
+      ) |> 
+      group_by(model) |> 
+      filter(
+        any(forecast_date == fcast_date)
+      ) |> 
+      ungroup() |>
+      mutate(prediction = ifelse(forecast_date == fcast_date, prediction, NA))
+    
     plot <- scoringutils::plot_predictions(
       plot_data, 
       x = "target_end_date",
-      by = as_name(facetting_var)
+      by = rlang::as_name(facetting_var)
     ) +
       facet_wrap(
         facetting_var, 
