@@ -24,7 +24,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-07-13
+As of 2022-07-14
 
 | country     | created    | updated    | issue                                                                                 | message                                                | url                                                      |
 |:------------|:-----------|:-----------|:--------------------------------------------------------------------------------------|:-------------------------------------------------------|:---------------------------------------------------------|
@@ -50,7 +50,7 @@ keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
 -   Belgium, Czechia, Estonia, France, Ireland, Latvia, Liechtenstein,
-    Malta, Netherlands, Norway, Slovenia, Switzerland
+    Malta, Norway, Slovenia, Switzerland, United Kingdom
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)
