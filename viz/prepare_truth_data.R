@@ -19,7 +19,7 @@ truth <- truth |>
   mutate(date = lubridate::ymd(date),
          epi_week = lubridate::epiweek(date),
          epi_year = lubridate::epiyear(date)) |>
-  group_by(location, location_name, epi_year, epi_week, name) |>
+  group_by(location, epi_year, epi_week, name) |>
   # aggregate to weekly incidence
   summarise(date = max(date),
             value = sum(value),
@@ -29,6 +29,7 @@ truth <- truth |>
   filter(lubridate::wday(date, label = TRUE) == "Sat") |>
   # reformat
   arrange(date, location) |>
+  select(-epi_week, -epi_year) |>
   as.data.frame()
 
 write_csv(truth, "viz/truth_to_plot.csv", quote = "needed")
