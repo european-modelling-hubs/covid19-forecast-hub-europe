@@ -46,8 +46,19 @@ forecasts <- raw_forecasts %>%
   filter(is.na(anomaly)) %>%
   select(-anomaly, -previous_end_date)
 
-data <- scoringutils::merge_pred_and_obs(forecasts, truth,
-                                         join = "full")
+# Horizon 0 data that will be filled with truth data as prediction later. This
+# is useful to connect truth data and predictions in the plots.
+horizon_0 <- forecasts |> 
+  group_by(model, forecast_date, location, location_name, population, temporal_resolution, target_variable, quantile) |> 
+  summarise(
+    horizon = "0",
+    target_end_date = unique(forecast_date) - 2,
+    type = "point"
+  )
+
+data <- full_join(horizon_0, forecasts) |> 
+  scoringutils::merge_pred_and_obs(truth, join = "full") |> 
+  mutate(prediction = ifelse(horizon == "0", true_value, prediction))
 ```
 
 ## {.unlisted .unnumbered}

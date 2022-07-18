@@ -21,7 +21,7 @@ table <- table %>%
   filter(target_variable %in% target_variables)
 
 data <- data %>%
-  filter(horizon %in% horizons)
+  filter(horizon %in% c(0, horizons))
 table <- table %>%
   filter(horizon %in% horizons)
 
