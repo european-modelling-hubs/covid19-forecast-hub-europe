@@ -1,9 +1,0 @@
-team_name: DirkBeckmann
-model_name: Gompertz
-model_abbr: DirkBeckmann-Gompertz
-model_contributors: Dr. Dirk Beckmann <dbeckm@gmx.de>
-website_url: https://github.com/HoddleHH
-license: cc-by-4.0
-team_model_designation: primary
-methods: gompertz model
-methods_long: This model uses the Gompertz function in combination with some kind of "clever parameter adjustment" to already existing data for a covid infection wave. The model focuses currently on infection cases, but could easily be extended to other data like hospitalization or death cases. Based on the initial period of a Covid wave, the model provides a prediction for the expected maximum in terms of highest value and point of time. This approach delivered already excellent results for Germany last March & April when many forcasts reported in German media were extrtemely far from later actual values.
