@@ -2,7 +2,7 @@ library(purrr)
 
 metadata <- fs::dir_ls(
   here::here("data-processed"),
-  regexp = "([a-zA-Z0-9_+]+\\-[a-zA-Z0-9_+]+)/metadata\\-\\1\\.txt$",
+  regexp = "([a-zA-Z0-9_+]+\\-[a-zA-Z0-9_+]+)/metadata\\-\\1\\.yml$",
   type = "file",
   recurse = TRUE
 ) %>%
