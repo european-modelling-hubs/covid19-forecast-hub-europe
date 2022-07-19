@@ -22,9 +22,12 @@ Coverage is the proportion of observations that fall within a given prediction i
 ```{r coverage, echo = FALSE, include = include_calibration, results = 'asis', fig.width = 6, fig.height = 6}
 ranges <- c(50, 95)
 
-scores <- scoringutils::score(
-    data |>
-      filter(!is.na(true_value)),
+scores <- data |>
+  filter(
+    !is.na(true_value),
+    horizon != 0
+  ) |> 
+  scoringutils::score(
     metrics = "coverage"
   ) %>%
   filter(!is.na(range), range %in% ranges) %>%
@@ -94,7 +97,8 @@ if (any(scores$model == params$model)) {
   if (length(setdiff(quantiles, core_quantiles$quantile)) == 0) {
     pit_data <- data %>%
       filter(target_variable %in% targets,
-             round(quantile, 3) %in% round(quantiles, 3)) %>%
+             round(quantile, 3) %in% round(quantiles, 3),
+             horizon != 0) %>%
       mutate(horizon = paste0(horizon, " week", if_else(horizon == 1, "", "s")),
              model = factor(
                model,
