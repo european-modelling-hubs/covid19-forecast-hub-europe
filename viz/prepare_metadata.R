@@ -1,10 +1,7 @@
 library(purrr)
 
 metadata <- fs::dir_ls(
-  here::here("data-processed"),
-  regexp = "([a-zA-Z0-9_+]+\\-[a-zA-Z0-9_+]+)/metadata\\-\\1\\.yml$",
-  type = "file",
-  recurse = TRUE
+  here::here("model-metadata")
 ) %>%
   # sort with radix method ensures locale-independent output
   sort(method = "radix") %>%
