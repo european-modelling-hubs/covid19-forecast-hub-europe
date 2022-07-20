@@ -25,9 +25,7 @@ suppressWarnings(dir.create(here::here("html")))
 suppressWarnings(dir.create(here::here("html", "report-model-files")))
 
 models <- list.files(
-  here::here("data-processed"),
-  recursive = TRUE,
-  pattern = "metadata-([a-zA-Z0-9_+]+-[a-zA-Z0-9_+]+)\\.yml",
+  here::here("metadata"),
   full.names = TRUE
 ) |>
   purrr::map(yaml::read_yaml) |>
