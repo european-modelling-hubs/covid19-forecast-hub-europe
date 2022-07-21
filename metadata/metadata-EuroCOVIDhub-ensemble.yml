@@ -1,10 +1,8 @@
 team_name: European COVID-19 Forecast Hub:
 model_name: ensemble
-model_abbr: EuroCOVIDhub-ensemble
 model_contributors: Katharine Sherratt <katharine.sherratt@lshtm.ac.uk>, Nikos Bosse
   <nikos.bosse@lshtm.ac.uk>, Sebastian Funk <sebastian.funk@lshtm.ac.uk>
 website_url: https://covid19forecasthub.eu/
-license: cc-by-4.0
 team_model_designation: primary
 methods: An ensemble, or model average, of submitted forecasts to the European COVID-19
   Forecast Hub.
