@@ -1,5 +1,6 @@
 location_name,source,type,truncate_weeks
 Belgium,Public,Scraped,0
+Croatia,Public,Scraped,0
 Czechia,TESSy,ECDC,1
 Estonia,Public,Scraped,1
 France,Public,Scraped,0
@@ -11,3 +12,4 @@ Malta,TESSy,ECDC,0
 Netherlands,Public,ECDC,1
 Slovakia,TESSy,ECDC,0
 Slovenia,Public,Scraped,0
+United Kingdom,Public,Scraped,1
