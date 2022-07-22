@@ -15,13 +15,9 @@ if (identical(params$location_name, "Overall")) {
   }
 }
 
-data <- data %>%
-  filter(target_variable %in% target_variables)
 table <- table %>%
   filter(target_variable %in% target_variables)
 
-data <- data %>%
-  filter(horizon %in% c(0, horizons))
 table <- table %>%
   filter(horizon %in% horizons)
 
