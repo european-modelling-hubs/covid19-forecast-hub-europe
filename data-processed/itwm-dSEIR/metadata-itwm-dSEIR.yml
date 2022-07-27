@@ -6,7 +6,7 @@ model_contributors: Jan Mohring <jan.mohring@itwm.fraunhofer.de>, Neele Leithäu
 website_url: https://www.itwm.fraunhofer.de/
 license: mit
 team_model_designation: primary
-methods: cohort based, integral equation
+methods: Integral equation model based on age cohorts taking into account vaccination and testing. The parameters are adjusted to the counted cases and deaths.
 team_funding: Fraunhofer Gesellschaft, Land Rheinland-Pfalz
 data_inputs: RKI
 citation: https://www.itwm.fraunhofer.de/content/dam/itwm/de/documents/PressemitteilungenPDF/2020/20200429_Bericht_Prognosemodelle-f%C3%BCr-die-Coronapandemie.pdf
