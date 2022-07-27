@@ -6,7 +6,7 @@ on:
     branches: main
     paths:
       - 'data-processed/**'
-      - 'metadata/*'
+      - 'model-metadata/*'
 
 jobs:
   validate-submission:
@@ -36,7 +36,8 @@ jobs:
           v <- HubValidations::validate_pr(
               gh_repo = Sys.getenv("GITHUB_REPOSITORY"),
               pr_number = Sys.getenv("PR_NUMBER"),
-              data_folder = "data-processed"
+              data_folder = "data-processed",
+              metadata_folder = "model-metadata"
           )
           HubValidations::check_for_errors(v)
         shell: Rscript {0}
