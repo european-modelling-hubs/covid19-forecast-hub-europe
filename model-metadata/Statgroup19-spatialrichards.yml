@@ -1,8 +1,13 @@
 team_name: Statgroup19
 model_name: spatialrichards
 model_abbr: Statgroup19-spatialrichards
-model_contributors: Marco Mingione (University of Rome "La Sapienza") <marco.mingione@uniroma1.it>,
-  Pierfrancesco Alaimo Di Loro (University of Rome "La Sapienza") <pierfrancesco.alaimodiloro@uniroma1.it>
+model_contributors:
+  - name: Marco Mingione
+    affiliation: University of Rome "La Sapienza"
+    email: marco.mingione@uniroma1.it
+  - name: Pierfrancesco Alaimo Di Loro
+    affiliation: University of Rome "La Sapienza"
+    email: pierfrancesco.alaimodiloro@uniroma1.it
 website_url: https://statgroup19.shinyapps.io/Covid19App/
 license: cc-by-4.0
 team_model_designation: proposed

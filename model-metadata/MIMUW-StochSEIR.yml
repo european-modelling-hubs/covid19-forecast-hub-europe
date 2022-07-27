@@ -1,8 +1,13 @@
 team_name: Faculty of Mathematics, Informatics, and Mechanics, University of Warsaw
 model_name: StochSEIR
 model_abbr: MIMUW-StochSEIR
-model_contributors: Anna Gambin, Krzysztof Gogolewski, Blażej Miasojedow, Ewa Szczurek,
-  Daniel Rabczenko, Magdalena Rosińska
+model_contributors:
+  - name: Anna Gambin
+  - name: Krzysztof Gogolewski
+  - name: Blażej Miasojedow
+  - name: Ewa Szczurek
+  - name: Daniel Rabczenko
+  - name: Magdalena Rosińska
 website_url: https://covid19.mimuw.edu.pl
 license: other
 team_model_designation: primary

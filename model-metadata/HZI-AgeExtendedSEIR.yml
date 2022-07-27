@@ -1,8 +1,16 @@
 team_name: Helmholtz Zentrum fuer Infektionsforschung
-model_contributors: Isti Rodiah <Isti.Rodiah@helmholtz-hzi.de>, Berit Lange  <Berit.Lange@helmholtz-hzi.de>,
-  Pratizio Vanella, Alexander Kuhlmann, Wolfgang Bock
-institution_affil: Helmholtz Zentrum fuer Infektionsforschung,  Leibniz Universitaet
-  Hannover, Technische Universitaet Kaiserslautern
+model_contributors:
+  - name: Isti Rodiah
+    email: Isti.Rodiah@helmholtz-hzi.de
+    affiliation: Helmholtz Zentrum fuer Infektionsforschung
+  - name: Berit Lange
+    email: Berit.Lange@helmholtz-hzi.de
+    affiliation: Helmholtz Zentrum fuer Infektionsforschung
+  - name: Pratizio Vanella
+    affiliation:  Pratizio Vanella
+  - name: Alexander Kuhlmann
+  - name: Wolfgang Bock
+    affiliation: Technische Universitaet Kaiserslautern
 model_name: age-structured and extended SEIR model
 model_abbr: HZI-AgeExtendedSEIR
 website_url: https://www.helmholtz-hzi.de/en/nc/research/research-topics/bacterial-and-viral-pathogens/epidemiology/team/

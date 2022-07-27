@@ -1,7 +1,12 @@
 team_name: GoeWroc
 model_name: BaseBayes
 model_abbr: GoeWroc-BaseBayes
-model_contributors: Tobias Weber <tobias.weber01@stud.uni-goettingen.de>, Viktor Bezborodov, Tyll Krueger, Dominic Schuhmacher
+model_contributors:
+  - name: Tobias Weber
+    email: tobias.weber01@stud.uni-goettingen.de
+  - name: Viktor Bezborodov
+  - name: Tyll Krueger
+  - name: Dominic Schuhmacher
 website_url: https://github.com/2bys/covid19-forecast-hub-europe
 license: cc-by-4.0
 team_model_designation: primary

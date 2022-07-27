@@ -1,7 +1,9 @@
 team_name: Robert Walraven
 model_name: EmpericalSkewedGaussian
 model_abbr: RobertWalraven-ESG
-model_contributors: Robert Walraven <walraven@multiwareinc.com>
+model_contributors:
+  - name: Robert Walraven
+    email: walraven@multiwareinc.com
 website_url: http://rwalraven.com/COVID19
 license: cc-by-4.0
 team_model_designation: primary

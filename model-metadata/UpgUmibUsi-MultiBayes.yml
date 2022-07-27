@@ -1,9 +1,16 @@
 team_name: UNIPG_UNIMIB_USI_UNINSUBRIA
 model_name: MULTINOMIAL_BAYESIAN
 model_abbr: UpgUmibUsi-MultiBayes
-model_contributors: Francesco Bartolucci (Università di Perugia) <francesco.bartolucci@unipg.it>,
-  Fulvia Pennoni (Università di Milano Bicocca) <fulvia.pennoni@unimib.it>, Antonietta
-  Mira (Università della Svizzera italiana and Università dell’Insubria) <antonietta.mira@usi.ch>
+model_contributors:
+  - name: Francesco Bartolucci
+    affiliation: Università di Perugia
+    email: francesco.bartolucci@unipg.it
+  - name: Fulvia Pennoni
+    affiliation: Università di Milano Bicocca
+    email: fulvia.pennoni@unimib.it
+  - name: Antonietta Mira
+    affiliation: Università della Svizzera italiana and Università dell’Insubria
+    email: antonietta.mira@usi.ch
 website_url: https://github.com/francescobartolucci/ARMultinomial
 license: cc-by-4.0
 team_model_designation: primary

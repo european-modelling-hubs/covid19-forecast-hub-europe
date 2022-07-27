@@ -1,7 +1,11 @@
 team_name: University of Cologne Covid Metrics
-model_contributors: Tom Zimmermann (University of Cologne) <tom.zimmermann@uni-koeln.de>,
-  Arne Rodloff (University of Cologne) <arne.rodloff@uni-koeln.de>
-institution_affil: University of Cologne
+model_contributors:
+  - name: Tom Zimmermann
+    affiliation: University of Cologne
+    email: tom.zimmermann@uni-koeln.de
+  - name: Arne Rodloff
+    affiliation: University of Cologne
+    email: arne.rodloff@uni-koeln.de
 website_url: https://tomz.shinyapps.io/coronaLandkreise/
 model_name: CovidMetrics-epiBATS
 model_abbr: CovidMetrics-epiBATS

@@ -1,8 +1,14 @@
 team_name: Universitaet Leipzig IMISE/GenStat
 model_name: SECIR
 model_abbr: LeipzigIMISE-SECIR
-model_contributors: Yuri Kheifetz <Yuri.Kheifetz@imise.uni-leipzig.de>, Holger Kirsten
-  <holger.kirsten@imise.uni-leipzig.de>, Markus Scholz <Markus.Scholz@imise.uni-leipzig.de>
+model_contributors:
+  - name: Yuri Kheifetz
+    email: Yuri.Kheifetz@imise.uni-leipzig.de
+  - name: Holger Kirsten
+    email: holger.kirsten@imise.uni-leipzig.de
+  - name: Markus Scholz
+    email: Markus.Scholz@imise.uni-leipzig.de
+    twitter: GenStatLeipzig
 website_url: https://github.com/holgerman/covid19-forecast-hub-europe
 repo_url: https://github.com/holgerman/covid19-forecast-hub-europe
 license: mit
@@ -23,4 +29,3 @@ methods_long: We integrate an adapted mechanistic epidemiologic model of the SEC
   also be time-dependent. Public data is translated to model outputs not identical
   but related to hidden states of the model. The model is fitted to data by a full
   information approach.
-twitter_handles: GenStatLeipzig

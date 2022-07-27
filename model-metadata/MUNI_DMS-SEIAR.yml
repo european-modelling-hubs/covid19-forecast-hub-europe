@@ -1,7 +1,9 @@
 team_name: Department of Mathematics and Statistics Masaryk University Team
 model_name: SEIAR
 model_abbr: MUNI_DMS-SEIAR
-model_contributors: Veronika Eclerova, Lenka Pribylova
+model_contributors:
+  - name: Veronika Eclerova
+  - name: Lenka Pribylova
 website_url: https://webstudio.shinyapps.io/MAMES/
 license: cc-by-4.0
 team_model_designation: primary

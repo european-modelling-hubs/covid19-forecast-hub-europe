@@ -1,8 +1,15 @@
 team_name: European COVID-19 Forecast Hub
 model_name: ensemble
 model_abbr: EuroCOVIDhub-ensemble
-model_contributors: Katharine Sherratt <katharine.sherratt@lshtm.ac.uk>, Nikos Bosse
-  <nikos.bosse@lshtm.ac.uk>, Sebastian Funk <sebastian.funk@lshtm.ac.uk>
+model_contributors:
+  - name: Katharine Sherratt
+    email: katharine.sherratt@lshtm.ac.uk
+    twitter: kathsherratt
+  - name: Nikos Bosse
+    email: nikos.bosse@lshtm.ac.uk
+    twitter: ftargument
+  - name: Sebastian Funk
+    email: sebastian.funk@lshtm.ac.uk
 website_url: https://covid19forecasthub.eu/
 license: cc-by-4.0
 team_model_designation: primary
@@ -11,7 +18,6 @@ methods: An ensemble, or model average, of submitted forecasts to the European C
 team_funding: This model's development is funded by the European Centres for Disease
   Countrol.
 repo_url: https://github.com/epiforecasts/covid19-forecast-hub-europe
-twitter_handles: kathsherratt, ftargument, sbfnk
 data_inputs: incident case and death forecasts from other models.
 methods_long: The current ensemble is specified in https://github.com/epiforecasts/covid19-forecast-hub-europe/blob/main/forecasthub.yml
   and a history of methods used for the ensemble in https://github.com/epiforecasts/covid19-forecast-hub-europe/blob/main/code/ensemble/EuroCOVIDhub/method-by-date.csv

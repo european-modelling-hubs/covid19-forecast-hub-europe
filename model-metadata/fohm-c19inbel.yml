@@ -1,8 +1,11 @@
 team_name: FD-AN, Folkhälsomyndigheten
 model_name: c19inbel
 model_abbr: fohm-c19inbel
-model_contributors: Sharon Kuhlmann-Berenzon <sharon.kuhlmann-b@folkhalsomyndigheten.se>,
-  Martin Camitz <martin.camitz@folkhalsomyndigheten.se>
+model_contributors:
+  - name: Sharon Kuhlmann-Berenzon
+    email: sharon.kuhlmann-b@folkhalsomyndigheten.se
+  - name: Martin Camitz
+    email: martin.camitz@folkhalsomyndigheten.se
 website_url: https://git.folkhalsomyndigheten.se/martin.camitz/c19inlbel
 license: cc-by-4.0
 team_model_designation: primary

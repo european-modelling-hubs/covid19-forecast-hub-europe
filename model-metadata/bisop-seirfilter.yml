@@ -1,7 +1,11 @@
 team_name: Centre for Modelling of Biological and Social Processes
 model_name: SeirFilter
 model_abbr: bisop-seirfilter
-model_contributors: Martin Šmíd, Jan Trnka, Vít Tuček, Milan Zajíček
+model_contributors:
+  - name: Martin Šmíd
+  - name: Jan Trnka
+  - name: Vít Tuček
+  - name: Milan Zajíček
 license: mit
 team_model_designation: primary
 website_url: https://www.medrxiv.org/content/10.1101/2021.02.16.21251834v1

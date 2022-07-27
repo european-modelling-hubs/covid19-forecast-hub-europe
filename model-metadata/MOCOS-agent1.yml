@@ -1,9 +1,19 @@
 team_name: MOCOS group
 model_name: agent1
 model_abbr: MOCOS-agent1
-model_contributors: Marek Bawiec, Marcin Bodych, Tyll Krueger, Tomasz Ozanski, Barbara
-  Pabjan, Agata Migalska, Przemyslaw Biecak, Viktor Bezborodov, Ewa Szczurek, Ewaryst
-  Rafajłowicz, Ewa Rafajłowicz, Wojciech Rafajłowicz
+model_contributors:
+  - name: Marek Bawiec
+  - name: Marcin Bodych
+  - name: Tyll Krueger
+  - name: Tomasz Ozanski
+  - name: Barbara Pabjan
+  - name: Agata Migalska
+  - name: Przemyslaw Biecak
+  - name: Viktor Bezborodov
+  - name: Ewa Szczurek
+  - name: Ewaryst Rafajłowicz
+  - name: Ewa Rafajłowicz
+  - name: Wojciech Rafajłowicz
 website_url: https://mocos.pl/
 license: other
 team_model_designation: primary
