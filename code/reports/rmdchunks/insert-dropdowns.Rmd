@@ -6,9 +6,7 @@ library(htmltools)
 
 ```{r insert-models-dropdown, results='asis'}
 metadata_files <- list.files(
-  here::here("data-processed"),
-  recursive = TRUE,
-  pattern = "metadata-([a-zA-Z0-9_+]+-[a-zA-Z0-9_+]+)\\.yml",
+  here::here("model-metadata"),
   full.names = TRUE
 )
 metadata <- purrr::map(metadata_files, yaml::read_yaml)
