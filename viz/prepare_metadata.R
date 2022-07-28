@@ -11,6 +11,13 @@ metadata <- fs::dir_ls(
     e$methods_long <- ifelse(is.null(e$methods_long), e$methods, e$methods_long)
     return(e)
   }) %>%
+  map(function(e) {
+    e$model_contributors <- glue::glue_collapse(
+      purrr::map(e$model_contributors, "name"),
+      sep = ", "
+    )
+    return(e)
+  }) %>%
   # delete double spaces in all fields because they don't play nice with json
   rapply(function(x) gsub("\\s+", " ", x), how = "replace")
 
