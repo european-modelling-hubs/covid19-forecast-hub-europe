@@ -1,8 +1,12 @@
 team_name: Epiforecasts / London School of Hygiene and Tropical Medicine
 model_name: EpiExpert (epiforecasts)
 model_abbr: epiforecasts-EpiExpert
-model_contributors: Nikos Bosse <nikos.bosse@lshtm.ac.uk>, Sam Abbott <sam.abbott@lshtm.ac.uk>,
-  Sebastian Funk
+model_contributors:
+  - name: Nikos Bosse
+    email: nikos.bosse@lshtm.ac.uk
+  - name: Sam Abbott
+    email: sam.abbott@lshtm.ac.uk
+  - name: Sebastian Funk
 website_url: https://epiforecasts.io/
 license: mit
 team_model_designation: primary

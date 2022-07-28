@@ -1,7 +1,9 @@
 team_name: DirkBeckmann
 model_name: Gompertz
 model_abbr: DirkBeckmann-Gompertz
-model_contributors: Dr. Dirk Beckmann <dbeckm@gmx.de>
+model_contributors:
+  - name: Dr. Dirk Beckmann
+    email: dbeckm@gmx.de
 website_url: https://github.com/HoddleHH
 license: cc-by-4.0
 team_model_designation: primary

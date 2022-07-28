@@ -16,7 +16,24 @@ properties:
     pattern: ^[a-zA-Z0-9_+]+-[a-zA-Z0-9_+]+$
     maxLength: 32
   model_contributors:
-    type: string
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+        affiliation:
+          type: string
+        orcid:
+          type: string
+          # This is a quite loose pattern. See https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier
+          pattern: ^\d{4}\-\d{4}\-\d{4}\-[\dX]{4}$
+        email:
+          type: string
+          format: email
+        twitter:
+          type: string
+        additionalProperties: false
   website_url:
     type: string
     format: uri
@@ -49,11 +66,7 @@ properties:
     type: boolean
   citation:
     type: string
-  institution_affil:
-    type: string
   team_funding:
-    type: string
-  twitter_handles:
     type: string
   data_inputs:
     type: string

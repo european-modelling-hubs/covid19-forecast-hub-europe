@@ -1,7 +1,10 @@
 team_name: University of Southern California
 model_name: SIkJalpha
 model_abbr: USC-SIkJalpha
-model_contributors: Ajitesh Srivastava <ajiteshs@usc.edu>,  Frost Tianjian Xu
+model_contributors:
+  - name: Ajitesh Srivastava
+    email: ajiteshs@usc.edu
+  - name: Frost Tianjian Xu
 website_url: https://scc-usc.github.io/ReCOVER-COVID-19
 license: mit
 team_model_designation: primary

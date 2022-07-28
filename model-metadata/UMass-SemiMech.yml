@@ -1,8 +1,12 @@
 team_name: UMass-Amherst
 model_name: SemiMech
 model_abbr: UMass-SemiMech
-model_contributors: Graham Gibson<gcgibson@umass.edu>, Evan Ray, Dan Sheldon Nick
-  Reich
+model_contributors:
+  - name: Dan Sheldon
+    email: sheldon@cs.umass.edu
+  - name: Graham Gibson
+    email: gcgibson@umass.edu
+  - name: Nick Reich
 website_url: https://github.com/dsheldon/covid
 license: cc-by-4.0
 team_model_designation: primary

@@ -1,8 +1,11 @@
 team_name: UB
 model_name: BSLCoV v0.1
 model_abbr: UB-BSLCoV
-model_contributors: David Moriña (UB) <dmorina@ub.edu>
-institution_affil: Universitat de Barcelona -- UB (www.ub.edu)
+model_contributors:
+  - name: David Moriña
+    affiliation: Universitat de Barcelona -- UB (www.ub.edu)
+    email: dmorina@ub.edu
+    twitter: dmorinya
 website_url: https://dmorina.shinyapps.io/UB-CoV/
 license: cc-by-sa-4.0
 team_model_designation: primary
@@ -11,4 +14,3 @@ methods: Bayesian synthetic likelihood estimation for underreported non-stationa
 team_funding: UB, Instituto de Salud Carlos III, Gobierno de España
 data_inputs: JHU (https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Targets-and-horizons#truth-data)
 citation: https://arxiv.org/abs/2003.09202
-twitter_handles: dmorinya

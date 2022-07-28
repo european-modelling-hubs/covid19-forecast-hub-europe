@@ -1,7 +1,11 @@
 team_name: ILM
 model_name: EKF
 model_abbr: ILM-EKF
-model_contributors: Stefan Heyder <stefan.heyder@tu-ilmenau.de>, Thomas Hotz <thomas.hotz@tu-ilmenau.de>
+model_contributors:
+  - name: Stefan Heyder
+    email: stefan.heyder@tu-ilmenau.de
+  - name: Thomas Hotz
+    email: thomas.hotz@tu-ilmenau.de
 website_url: https://github.com/Stochastik-TU-Ilmenau
 license: cc-by-4.0
 team_model_designation: primary

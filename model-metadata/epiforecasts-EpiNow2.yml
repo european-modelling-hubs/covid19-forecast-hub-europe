@@ -1,14 +1,23 @@
 team_name: Epiforecasts / London School of Hygiene and Tropical Medicine
 model_name: EpiNow2 (epiforecasts)
 model_abbr: epiforecasts-EpiNow2
-model_contributors: Nikos Bosse <nikos.bosse@lshtm.ac.uk>, Sam Abbott <sam.abbott@lshtm.ac.uk>,
-  Sebastian Funk
+model_contributors:
+  - name: Nikos Bosse
+    email: nikos.bosse@lshtm.ac.uk
+    affiliation: London School of Hygiene and Tropical Medicine
+    twitter: ftargument
+  - name: Sam Abbott
+    email: sam.abbott@lshtm.ac.uk
+    affiliation: London School of Hygiene and Tropical Medicine
+    twitter: seabbs
+  - name: Sebastian Funk
+    affiliation: London School of Hygiene and Tropical Medicine
+    twitter: sbfnk
 website_url: https://epiforecasts.io/EpiNow2
 repo_url: https://github.com/epiforecasts/europe-covid-forecast
 license: mit
 team_funding: Wellcome Trust via a Senior Research Fellowship to Sebastian Funk (210758/Z/18/Z)
   and the Health Protection Research Unit (grant code NIHR200908)
-institution_affil: London School of Hygiene and Tropical Medicine
 team_model_designation: secondary
 data_inputs: ECDC deaths and cases
 methods: Semi-mechanistic estimation of the time-varying reproduction number for latent
@@ -30,4 +39,3 @@ methods_long: EpiNow2 implements a Bayesian latent variable approach using the p
   cases combined with some scaling factor, a day of the week effect and a negative
   binomial observation model.
 citation: https://doi.org/10.5281/zenodo.3957489
-twitter_handles: ftargument, seabbs, sbfnk

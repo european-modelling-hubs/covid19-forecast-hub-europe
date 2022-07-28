@@ -1,7 +1,9 @@
 team_name: European COVID-19 Forecast Hub
 model_name: baseline
 model_abbr: EuroCOVIDhub-baseline
-model_contributors: European COVID-19 Forecast Hub team <hugo.gruson@lshtm.ac.uk>
+model_contributors:
+  - name: Hugo Gruson
+    email: hugo.gruson@lshtm.ac.uk
 website_url: https://covid19forecasthub.eu/
 license: cc-by-4.0
 team_model_designation: other

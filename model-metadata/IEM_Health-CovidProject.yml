@@ -1,9 +1,19 @@
 team_name: IEM Health
 model_name: CovidProjections
 model_abbr: IEM_Health-CovidProject
-model_contributors: Brad Suchoski (IEM) <bradley.suchoski@iem.com>, Steve Stage (IEM)
-  <steve.stage@iem.com>, Heidi Gurung (IEM) <heidi.gurung@iem.com>, Sid Baccam (IEM)
-  <sid.baccam@iem.com>
+model_contributors:
+  - name: Brad Suchoski
+    affiliation: IEM
+    email: bradley.suchoski@iem.com
+  - name: Steve Stage
+    affiliation: IEM
+    email: steve.stage@iem.com
+  - name: Heidi Gurung
+    affiliation: IEM
+    email: heidi.gurung@iem.com
+  - name: Sid Baccam
+    affiliation: IEM
+    email: sid.baccam@iem.com
 website_url: https://iem.com/
 license: cc-by-4.0
 team_model_designation: primary

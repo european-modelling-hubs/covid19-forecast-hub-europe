@@ -1,10 +1,28 @@
 team_name: Los Alamos National Labs
 model_name: GrowthRate
 model_abbr: LANL-GrowthRate
-model_contributors: Dave Osthus <dosthus@lanl.gov>,  Sara Del Valle,  Carrie Manore,  Brian
-  Weaver,  Lauren Castro,  Courtney Shelley,  Manhong (Mandy) Smith,  Julie Spencer,  Geoffrey
-  Fairchild,  Travis Pitts,  Dax Gerts,  Lori Dauelsberg,  Ashlynn Daughton, Morgan
-  Gorris,  Beth Hornbein,  Daniel Israel,  Nidhi Parikh,  Deborah Shutt,  Amanda Ziemann
+model_contributors:
+  - name: Dave Osthus
+    email: dosthus@lanl.gov
+  - name: Sara Del Valle
+  - name: Carrie Manore
+  - name: Brian Weaver
+  - name: Lauren Castro
+  - name: Courtney Shelley
+  - name: Manhong (Mandy) Smith
+  - name: Julie Spencer
+  - name: Geoffrey Fairchild
+  - name: Travis Pitts
+  - name: Dax Gerts
+  - name: Lori Dauelsberg
+  - name: Ashlynn Daughton
+  - name: Morgan
+  - name: Gorris
+  - name: Beth Hornbein
+  - name: Daniel Israel
+  - name: Nidhi Parikh
+  - name: Deborah Shutt
+  - name: Amanda Ziemann
 website_url: https://covid-19.bsvgateway.org/
 license: other
 team_model_designation: primary

@@ -1,8 +1,10 @@
 team_name: University of Ljubljana, Faculty of Health Sciences Team
 model_name: ULZF-SEIRC19SI
 model_abbr: ULZF-SEIRC19SI
-model_contributors: Janez Zibert (University of Ljubljana, Faculty of Health Sciences)
-  <janez.zibert@zf.uni-lj.si>
+model_contributors:
+  - name: Janez Zibert
+    affiliation: University of Ljubljana, Faculty of Health Sciences
+    email: janez.zibert@zf.uni-lj.si
 website_url: https://apps.lusy.fri.uni-lj.si
 license: cc-by-4.0
 team_model_designation: primary

@@ -1,9 +1,10 @@
 team_name: CovidAnalytics at MIT
 model_name: DELPHI
 model_abbr: MIT_CovidAnalytics-DELPHI
-model_contributors: Michael Lingzhi Li (Model Creator and Maintainer), Hamza Tazi
-  Bouardi (Maintainer), Dimitris Bertsimas (Advisor). For a full list of general contributors
-  to the team, see https://www.covidanalytics.io/team.
+model_contributors:
+  - name: Michael Lingzhi Li
+  - name: Hamza Tazi Bouardi
+  - name: Dimitris Bertsimas
 website_url: https://www.covidanalytics.io/
 repo_url: https://github.com/COVIDAnalytics/DELPHI
 license: apache-2.0

@@ -1,7 +1,10 @@
 team_name: University of Sydney Forecast Lab
 model_name: One Model by Manifold Embedding
 model_abbr: USyd-OneModelMan
-model_contributors: Pablo Montero Manso (University of Sydney) <pablo.monteromanso@sydney.edu.au>
+model_contributors:
+  - name: Pablo Montero Manso
+    affiliation: University of Sydney
+    email: pablo.monteromanso@sydney.edu.au
 website_url: https://github.com/pmontman/covid19forec
 license: cc-by-4.0
 team_model_designation: primary

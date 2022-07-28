@@ -1,10 +1,24 @@
 team_name: University of Virginia, Biocomplexity COVID-19 Response Team
 model_name: Ensemble model
 model_abbr: UVA-Ensemble
-model_contributors: Aniruddha Adiga (UVA)<aniruddha@virginia.edu>,  Lijing Wang(UVA),
-  Srinivasan Venkatramanan (UVA), Akhil Sai Peddireddy (UVA), Benjamin Hurt (UVA),
-  Przemyslaw Porebski, Bryan Lewis (UVA), Madhav Marathe (UVA), Jiangzhou Chen, Anil
-  Vullikanti.
+model_contributors:
+  - name: Aniruddha Adiga
+    affiliation: UVA
+    email: aniruddha@virginia.edu
+  - name: Lijing Wang
+    affiliation: UVA
+  - name: Srinivasan Venkatramanan
+  - name: Akhil Sai Peddireddy
+    affiliation: UVA
+  - name: Benjamin Hurt
+    affiliation: UVA
+  - name: Przemyslaw Porebski
+    affiliation: UVA
+  - name: Bryan Lewis
+  - name: Madhav Marathe
+    affiliation: UVA
+  - name: Jiangzhou Chen
+  - name: Anil Vullikanti
 website_url: https://biocomplexity.virginia.edu/
 license: cc-by-4.0
 team_model_designation: primary

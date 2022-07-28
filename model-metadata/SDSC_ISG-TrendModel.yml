@@ -1,12 +1,26 @@
 team_name: Swiss Data Science Center / University of Geneva
 model_name: Trend Model
 model_abbr: SDSC_ISG-TrendModel
-model_contributors: Ekaterina Krymova (Swiss Data Science Center), Dorina Thanou (Center
-  for Intelligent Systems, EPFL), Benjamin Bejar Haro (Swiss Data Science Center),
-  Tao Sun (Swiss Data Science Center) <tao.sun@datascience.ch>, Gavin Lee (Swiss Data
-  Science Center), Elisa Manetti (University of Geneva), Christine Choirat (Swiss
-  Data Science Center), Antoine Flahault (University of Geneva), Guillaume Obozinski
-  (Swiss Data Science Center)
+model_contributors:
+  - name: Ekaterina Krymova
+    affiliation: Swiss Data Science Center
+  - name: Dorina Thanou
+    affiliation: Center for Intelligent Systems, EPFL
+  - name: Benjamin Bejar Haro
+    affiliation: Swiss Data Science Center
+  - name: Tao Sun
+    affiliation: Swiss Data Science Center
+    email: tao.sun@datascience.ch
+  - name: Gavin Lee
+    affiliation: Swiss Data Science Center
+  - name: Elisa Manetti
+    affiliation: University of Geneva
+  - name: Christine Choirat
+    affiliation: Swiss Data Science Center
+  - name: Antoine Flahault
+    affiliation: University of Geneva
+  - name: Guillaume Obozinski
+    affiliation: Swiss Data Science Center
 website_url: https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/
 license: cc-by-4.0
 team_model_designation: primary

@@ -1,13 +1,27 @@
 team_name: UNED
 model_name: PreCoV2 v0.1
 model_abbr: UNED-PreCoV2
-model_contributors: José L. Aznarte (UNED) <jlaznarte@dia.uned.es>, César Pérez (Inverence)
-  <cesar.perez@inverence.com>, José Almagro (Inverence) <jose.almagro@inverence.com>,
-  Pedro Álvarez - Roxu <pag@xsto.info>, Álvaro Ortiz (POPULATE) <alvaro@populate.tools>,
-  Fernando Blat (POPULATE) <fernando@populate.tools>
-institution_affil: Universidad Nacional de Educacion a Distancia -- UNED (www.uned.es),
-  Inverence -- Bayesian Data Modelling to drive Business Strategy (www.inverence.com),
-  Populate (www.populate.tools)
+model_contributors:
+  - name: José L. Aznarte
+    affiliation: Universidad Nacional de Educacion a Distancia -- UNED (www.uned.es)
+    email: jlaznarte@dia.uned.es
+    twitter: jlaznarte
+  - name: César Pérez
+    affiliation: Inverence -- Bayesian Data Modelling to drive Business Strategy (www.inverence.com)
+    email: cesar.perez@inverence.com
+    twitter: inverence
+  - name: José Almagro
+    affiliation: Inverence -- Bayesian Data Modelling to drive Business Strategy (www.inverence.com)
+    email: jose.almagro@inverence.com
+  - name: Pedro Álvarez
+    affiliation: Roxu
+    email: pag@xsto.info
+  - name: Álvaro Ortiz
+    affiliation: Populate (www.populate.tools)
+    email: alvaro@populate.tools
+  - name: Fernando Blat
+    affiliation: Populate (www.populate.tools)
+    email: fernando@populate.tools
 website_url: https://precov2.org
 license: cc-by-sa-4.0
 team_model_designation: primary
@@ -17,4 +31,3 @@ team_funding: UNED, Inverence, POPULATE, Instituto de Salud Carlos III, Gobierno
   España
 data_inputs: EsCovid19Data (https://github.com/montera34/escovid19data) and Google.
 citation: https://precov2.org/metodologia
-twitter_handles: jlaznarte, inverence
