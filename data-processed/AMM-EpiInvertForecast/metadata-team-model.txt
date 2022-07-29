@@ -1,1 +1,27 @@
-
+team_name: AMM
+model_name: EpiInvert
+model_abbr: AMM-EpiInvert
+model_contributors:
+  - name: Martí Català
+    affiliation: Centre for Comparative Medicine and Bioimage (CMCiB) Germans Trias i Pujol Research Institute (IGTP), Barcelona, Spain
+    email: mcatala@igtp.cat
+  - name: Enric Álvarez
+    affiliation: Department of Physics, Universitat Politècnica de Catalunya, Barcelona, Spain
+    email: enric.alvarez@upc.edu
+  - name: Sergio Alonso
+    affiliation: Department of Physics, Universitat Politècnica de Catalunya, Barcelona, Spain
+    email: s.alonso@upc.edu
+  - name: Daniel López
+    affiliation: Department of Physics, Universitat Politècnica de Catalunya, Barcelona, Spain
+    email: daniel.lopez-codina@upc.edu
+  - name: Clara Prats
+    affiliation: Department of Physics, Universitat Politècnica de Catalunya, Barcelona, Spain
+    email: clara.prats@upc.edu
+    twitter: BIOCOMSC1
+website_url: https://biocomsc.upc.edu/en/covid-19
+license: cc-by-4.0
+team_model_designation: primary
+methods: Empirical model based on cases and deaths dynamics.
+team_funding: European Commission, DG-CONNECT (CNECT/LUX/2020/LVP/0085, LC-01591965);
+  Ministerio de Ciencia e Innovación, Gobierno de España (PGC2018-095456-B-I00)
+citation: https://doi.org/10.1371/journal.pcbi.1008431  https://europepmc.org/article/ppr/ppr492063
