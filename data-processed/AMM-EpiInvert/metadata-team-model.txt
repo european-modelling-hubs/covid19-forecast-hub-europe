@@ -15,3 +15,4 @@ using real data. The forecast of the current incidence trend is obtained as a we
 curves where the weight of each database curve depends on the similarity between the current curve and the database 
 curve in the past. We also compute empirical confidence intervals for the forecast estimation and, using the weekly
 seasonality computed by EpiInvert, we also estimate a forecast of the original incidence curve. 
+citation: https://doi.org/10.1073/pnas.2105112118, https://doi.org/10.3390/biology11040540
