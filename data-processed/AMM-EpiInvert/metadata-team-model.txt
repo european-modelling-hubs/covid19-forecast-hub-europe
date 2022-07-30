@@ -16,3 +16,4 @@ curves where the weight of each database curve depends on the similarity between
 curve in the past. We also compute empirical confidence intervals for the forecast estimation and, using the weekly
 seasonality computed by EpiInvert, we also estimate a forecast of the original incidence curve. 
 citation: https://doi.org/10.1073/pnas.2105112118, https://doi.org/10.3390/biology11040540
+data_inputs: https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe/tree/main/data-truth/JHU
