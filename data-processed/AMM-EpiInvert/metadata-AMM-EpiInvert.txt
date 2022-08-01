@@ -2,9 +2,15 @@ team_name: AMM
 model_name: EpiInvert
 model_abbr: AMM-EpiInvert
 model_contributors: 
-   Luis Alvarez (Universidad de Las Palmas de Gran Canaria, Spain) <lalvarez@ulpgc.es>, 
-   Jean-David Morel (Ecole Polytechnique Fédérale de Lausanne, Switzerland) <jeandavid.morel@gmail.com>,
-   Jean-Michel Morel (Université Paris-Saclay, France) <moreljeanmichel@gmail.com>
+ - name: Luis Alvarez
+   affiliation: Universidad de Las Palmas de Gran Canaria, Spain
+   email: lalvarez@ulpgc.es
+ - name: Jean-David Morel
+   affiliation: Ecole Polytechnique Fédérale de Lausanne, Switzerland
+   email: jeandavid.morel@gmail.com
+ - name: Jean-Michel Morel
+   affiliation: Université Paris-Saclay, France
+   email: moreljeanmichel@gmail.com
 website_url: https://github.com/lalvarezmat/EpiInvert
 license: cc-by-4.0
 team_model_designation: primary
