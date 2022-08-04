@@ -2310,3 +2310,14 @@ Latest check of truth data: 2022-08-01
 
 No errors detected.
 
+Latest check of truth data: 2022-08-02
+
+No errors detected.
+
+Latest check of truth data: 2022-08-03
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2022-08-02:
+
+- Negative incidence in the following locations: ['Spain'].
+
