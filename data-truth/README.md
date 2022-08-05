@@ -24,7 +24,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-08-04
+As of 2022-08-05
 
 | country        | created    | updated    | issue                                                                                 | message                                               | url                                                      |
 |:---------------|:-----------|:-----------|:--------------------------------------------------------------------------------------|:------------------------------------------------------|:---------------------------------------------------------|
@@ -33,7 +33,6 @@ As of 2022-08-04
 | united kingdom | 2022-07-20 | 2022-07-20 | united kingdom: date                                                                  | Hi, We were wondering if it is in your plans to us…   | <https://github.com/CSSEGISandData/COVID-19/issues/5904> |
 | belgium        | 2022-05-04 | 2022-06-30 | request to add data in three regions i.e. flanders, wallonia and brussels for belgium | <https://datastudio.google.com/c/embed/u/0/reportin>… | <https://github.com/CSSEGISandData/COVID-19/issues/5704> |
 | spain          | 2022-06-27 | 2022-06-27 | decrease in cases in castilla la mancha, spain on 6/24/2022                           | Hello all, Castilla La Mancha, Spain had a decrea…    | <https://github.com/CSSEGISandData/COVID-19/issues/5845> |
-| ireland        | 2022-06-07 | 2022-06-09 | northern ireland ended covid-19 data reporting may 20, 2022                           | The last update for cumulative cases and deaths fo…   | <https://github.com/CSSEGISandData/COVID-19/issues/5795> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
