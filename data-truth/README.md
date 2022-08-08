@@ -24,10 +24,11 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-08-07
+As of 2022-08-08
 
 | country        | created    | updated    | issue                                                                                 | message                                               | url                                                      |
 |:---------------|:-----------|:-----------|:--------------------------------------------------------------------------------------|:------------------------------------------------------|:---------------------------------------------------------|
+| belgium        | 2022-08-08 | 2022-08-08 | incorrect covid death cases of 7th july 2022 for belgium.                             | For location Belgium the data is provided on Tuesd…   | <https://github.com/CSSEGISandData/COVID-19/issues/5973> |
 | greece         | 2022-08-03 | 2022-08-03 | regarding covid data from greece                                                      | Dear all, In Greece, we have recently started rep…    | <https://github.com/CSSEGISandData/COVID-19/issues/5957> |
 | france         | 2022-05-20 | 2022-07-28 | discrepancy in france data                                                            | For France, it was found that the number of New ca…   | <https://github.com/CSSEGISandData/COVID-19/issues/5746> |
 | united kingdom | 2022-07-20 | 2022-07-20 | united kingdom: date                                                                  | Hi, We were wondering if it is in your plans to us…   | <https://github.com/CSSEGISandData/COVID-19/issues/5904> |
