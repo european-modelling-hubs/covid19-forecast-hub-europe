@@ -12,12 +12,6 @@ properties:
     items:
       type: string
       format: date
-  scenario_id:
-    description: One of forecast or a specified scenario ID
-    type: array
-    items:
-      type: string
-      pattern: ^forecast$
   target:
     description: >
       '"# wk ahead inc case" or "# wk ahead inc death" where # is usually
