@@ -44,9 +44,10 @@ raw_forecasts <- arrow::open_dataset(
   ) |>
   dplyr::rename(prediction = value) |> 
   dplyr::left_join(locations) |> 
-  collect() |> 
   # set forecast date to corresponding submission date
-  mutate(forecast_date = ceiling_date(forecast_date, "week", week_start = 2) - 1)
+  mutate(
+    forecast_date = ceiling_date(forecast_date, "week", week_start = 3)
+  )
 
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(
@@ -66,14 +67,15 @@ anomalies <- read_csv(paste0(hub_repo, "/raw/main/data-truth/anomalies/anomalies
 
 # remove forecasts made directly after a data anomaly
 forecasts <- raw_forecasts %>%
-  mutate(previous_end_date = forecast_date - 2) %>%
+  mutate(previous_end_date = floor_date(forecast_date, "week", week_start = 1)) %>%
   left_join(anomalies %>%
             rename(previous_end_date = target_end_date),
             by = c("target_variable",
                    "location", "location_name",
                    "previous_end_date")) %>%
   filter(is.na(anomaly)) %>%
-  select(-anomaly, -previous_end_date)
+  select(-anomaly, -previous_end_date) |> 
+  collect()
 
 # Horizon 0 data that will be filled with truth data as prediction later. This
 # is useful to connect truth data and predictions in the plots.
