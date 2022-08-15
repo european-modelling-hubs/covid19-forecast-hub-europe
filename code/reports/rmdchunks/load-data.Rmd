@@ -5,6 +5,7 @@ library(readr)
 library(dplyr)
 library(here)
 library(lubridate)
+library(arrow)
 ```
 
 ```{r load-data, cache = TRUE, cache.extra = params$report_date, cache.vars="data"}
@@ -16,8 +17,17 @@ locations <- read_csv(
 raw_forecasts <- arrow::open_dataset(
   here::here("data-processed"),
   format = "csv",
-  partitioning = c("model"),
-  hive_style = FALSE
+  partitioning = schema(model = string()),
+  hive_style = FALSE,
+  col_types = schema(
+    forecast_date = date32(),
+    target = string(),
+    target_end_date = date32(),
+    location = string(),
+    type = string(),
+    quantile = float32(),
+    value = float32()
+  )
 ) |> 
   # Ideally, we would handle this with separate() but it's not yet implemented 
   # in arrow
