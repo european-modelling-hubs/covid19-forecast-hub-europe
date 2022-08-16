@@ -29,10 +29,12 @@ jobs:
         library(arrow)
         library(dplyr)
         library(lubridate)
+
         locations <- read_csv(
           here::here("data-locations", "locations_eu.csv")
         ) |>
           dplyr::select(location, location_name, population)
+
         raw_forecasts <- arrow::open_dataset(
           here::here("data-processed"),
           format = "csv",
@@ -64,10 +66,11 @@ jobs:
           mutate(
             forecast_date = ceiling_date(forecast_date, "week", week_start = 3)
           )
-        arrow::write_parquet(raw_forecasts, "${{ github.action_repository }}.parquet")
+
+        arrow::write_parquet(raw_forecasts, "covid19-forecast-hub-europe.parquet")
       shell: Rscript {0}
 
     - uses: actions/upload-artifact@v3
       with:
         name: parquet-dataset
-        path: ${{ github.action_repository }}.parquet
+        path: covid19-forecast-hub-europe.parquet
