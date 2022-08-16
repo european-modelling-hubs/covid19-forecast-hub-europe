@@ -52,8 +52,8 @@ facetting_var <- rlang::quo(model)
 
 # `r paste0('European COVID-19 Forecast Hub Evaluation Report', ifelse(params$location_name == 'Overall', '', paste(' for', params$location_name)))`
 
-<!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
-```{r load-data, child = "../rmdchunks/load-data.Rmd", fig.path = here("html", "report-country-files/")}
+<!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. -->
+```{r load-data, child = "../rmdchunks/load-data.Rmd"}
 ```
 
 <!--- Load forecast scores -->

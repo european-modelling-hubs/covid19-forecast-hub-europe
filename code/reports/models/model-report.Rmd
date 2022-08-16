@@ -51,8 +51,8 @@ palette <- RColorBrewer::brewer.pal(3, "Set1")[2:1]
 
 # `r paste0('European COVID-19 Forecast Hub Evaluation Report for ', params$model)` 
 
-<!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
-```{r load-data, child = "../rmdchunks/load-data.Rmd", fig.path = here("html", "report-model-files/")}
+<!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. -->
+```{r load-data, child = "../rmdchunks/load-data.Rmd"}
 ```
 
 <!--- Load forecast scores -->
