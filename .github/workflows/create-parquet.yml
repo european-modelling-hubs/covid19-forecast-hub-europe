@@ -24,7 +24,6 @@ jobs:
     - uses: r-lib/actions/setup-renv@v2
 
     - name: Generate parquet file
-      shell: Rscript {0}
       run: |
         library(readr)
         library(arrow)
@@ -66,6 +65,7 @@ jobs:
             forecast_date = ceiling_date(forecast_date, "week", week_start = 3)
           )
         arrow::write_parquet(raw_forecasts, "${{ github.action_repository }}.parquet")
+      shell: Rscript {0}
 
     - uses: actions/upload-artifact@v3
       with:
