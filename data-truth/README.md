@@ -24,14 +24,14 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-08-31
+As of 2022-09-01
 
 | country        | created    | updated    | issue                                                                                               | message                                             | url                                                      |
 |:---------------|:-----------|:-----------|:----------------------------------------------------------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------------|
-| united kingdom | 2022-08-25 | 2022-08-29 | suspicious data for united kingdom series - number of deaths                                        | Hi Team, We observe a large drop published for Un…  | <https://github.com/CSSEGISandData/COVID-19/issues/6028> |
+| united kingdom | 2022-08-25 | 2022-09-01 | suspicious data for united kingdom series - number of deaths                                        | Hi Team, We observe a large drop published for Un…  | <https://github.com/CSSEGISandData/COVID-19/issues/6028> |
+| slovakia       | 2022-08-23 | 2022-08-31 | missing covid cases for slovakia                                                                    | Seems like covid cases for slovakia have not been … | <https://github.com/CSSEGISandData/COVID-19/issues/6018> |
 | uk             | 2022-08-25 | 2022-08-25 | uk deaths still look funny                                                                          | I can see they have been revised now. However, the… | <https://github.com/CSSEGISandData/COVID-19/issues/6027> |
 | uk             | 2022-08-24 | 2022-08-24 | uk deaths revised to match “deaths with covid-19 on the death certificate” on uk covid-19 dashboard | Hello all, We have recently revised our historica…  | <https://github.com/CSSEGISandData/COVID-19/issues/6021> |
-| slovakia       | 2022-08-23 | 2022-08-23 | missing covid cases for slovakia                                                                    | Seems like covid cases for slovakia have not been … | <https://github.com/CSSEGISandData/COVID-19/issues/6018> |
 | greece         | 2022-08-03 | 2022-08-03 | regarding covid data from greece                                                                    | Dear all, In Greece, we have recently started rep…  | <https://github.com/CSSEGISandData/COVID-19/issues/5957> |
 | france         | 2022-05-20 | 2022-07-28 | discrepancy in france data                                                                          | For France, it was found that the number of New ca… | <https://github.com/CSSEGISandData/COVID-19/issues/5746> |
 | united kingdom | 2022-07-20 | 2022-07-20 | united kingdom: date                                                                                | Hi, We were wondering if it is in your plans to us… | <https://github.com/CSSEGISandData/COVID-19/issues/5904> |
@@ -51,7 +51,7 @@ keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
 -   Belgium, Croatia, Czechia, Estonia, France, Ireland, Latvia,
-    Liechtenstein, Malta, Norway, Slovenia, Switzerland
+    Liechtenstein, Malta, Norway, Slovenia, Switzerland, United Kingdom
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)
