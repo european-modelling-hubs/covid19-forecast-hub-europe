@@ -24,10 +24,11 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-09-04
+As of 2022-09-05
 
 | country        | created    | updated    | issue                                                                                               | message                                             | url                                                      |
 |:---------------|:-----------|:-----------|:----------------------------------------------------------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------------|
+| netherlands    | 2022-09-05 | 2022-09-05 | drop in netherlands’ cases from 8m+ to 7m+. any explanation?                                        | NULL…                                               | <https://github.com/CSSEGISandData/COVID-19/issues/6055> |
 | united kingdom | 2022-08-25 | 2022-09-01 | suspicious data for united kingdom series - number of deaths                                        | Hi Team, We observe a large drop published for Un…  | <https://github.com/CSSEGISandData/COVID-19/issues/6028> |
 | slovakia       | 2022-08-23 | 2022-08-31 | missing covid cases for slovakia                                                                    | Seems like covid cases for slovakia have not been … | <https://github.com/CSSEGISandData/COVID-19/issues/6018> |
 | uk             | 2022-08-25 | 2022-08-25 | uk deaths still look funny                                                                          | I can see they have been revised now. However, the… | <https://github.com/CSSEGISandData/COVID-19/issues/6027> |
