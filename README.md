@@ -32,9 +32,9 @@ read the [technical wiki](../../wiki).
 
 #### Set up
 
-Before contributing for the first time: \* Read the guide for [preparing
-to submit](../../wiki/Preparing-to-submit) \* Create a [team
-directory](../../wiki/Creating-a-team-directory) \* Add your
+Before contributing for the first time: - Read the guide for [preparing
+to submit](../../wiki/Preparing-to-submit) - Create a [team
+directory](../../wiki/Creating-a-team-directory) - Add your
 [metadata](../../wiki/Metadata) and a [license](../../wiki/Licensing)
 
 #### Forecasting
@@ -111,12 +111,11 @@ ReichLab.
 
 ### European forecast hub team
 
-This repository is maintained by
-[Epiforecasts](https://epiforecasts.io). It is based on and supported by
-members of the US, and German and Polish Forecast Hubs. A small team is
-adapting this work for the European forecasting hub. We are based at the
-[London School of Hygiene & Tropical Medicine](https://www.lshtm.ac.uk)
-and supported by grant funding from the ECDC.
+This repository was created by [Epiforecasts](https://epiforecasts.io),
+supported by grant funding from the [European Centre for Disease Control
+and Prevention (ECDC)](https://www.ecdc.europa.eu/). It was based on and
+supported by members of the US, and German and Polish Forecast Hubs and
+is now maintained by the ECDC.
 
 Direct contributors to this repository include (in alphabetical order):
 
