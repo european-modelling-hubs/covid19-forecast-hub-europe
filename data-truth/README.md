@@ -24,12 +24,12 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-09-07
+As of 2022-09-08
 
 | country        | created    | updated    | issue                                                                                               | message                                             | url                                                      |
 |:---------------|:-----------|:-----------|:----------------------------------------------------------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------------|
-| netherlands    | 2022-09-05 | 2022-09-05 | drop in netherlands’ cases from 8m+ to 7m+. any explanation?                                        | NULL…                                               | <https://github.com/CSSEGISandData/COVID-19/issues/6055> |
-| united kingdom | 2022-08-25 | 2022-09-01 | suspicious data for united kingdom series - number of deaths                                        | Hi Team, We observe a large drop published for Un…  | <https://github.com/CSSEGISandData/COVID-19/issues/6028> |
+| united kingdom | 2022-08-25 | 2022-09-08 | suspicious data for united kingdom series - number of deaths                                        | Hi Team, We observe a large drop published for Un…  | <https://github.com/CSSEGISandData/COVID-19/issues/6028> |
+| netherlands    | 2022-09-05 | 2022-09-07 | drop in netherlands’ cases from 8m+ to 7m+. any explanation?                                        | NULL…                                               | <https://github.com/CSSEGISandData/COVID-19/issues/6055> |
 | slovakia       | 2022-08-23 | 2022-08-31 | missing covid cases for slovakia                                                                    | Seems like covid cases for slovakia have not been … | <https://github.com/CSSEGISandData/COVID-19/issues/6018> |
 | uk             | 2022-08-25 | 2022-08-25 | uk deaths still look funny                                                                          | I can see they have been revised now. However, the… | <https://github.com/CSSEGISandData/COVID-19/issues/6027> |
 | uk             | 2022-08-24 | 2022-08-24 | uk deaths revised to match “deaths with covid-19 on the death certificate” on uk covid-19 dashboard | Hello all, We have recently revised our historica…  | <https://github.com/CSSEGISandData/COVID-19/issues/6021> |
@@ -51,8 +51,8 @@ not consistent across all the countries in the ECDC Forecast Hub. To
 keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
--   Belgium, Czechia, Estonia, France, Ireland, Latvia, Liechtenstein,
-    Malta, Norway, Slovenia, Switzerland
+-   Belgium, Cyprus, Czechia, Estonia, France, Ireland, Latvia,
+    Liechtenstein, Malta, Norway, Slovenia, Switzerland
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)
