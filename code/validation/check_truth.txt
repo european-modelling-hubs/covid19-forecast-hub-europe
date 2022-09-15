@@ -2521,3 +2521,15 @@ Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-
 
 - Negative incidence in the following locations: ['Lithuania'].
 
+Latest check of truth data: 2022-09-15
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2022-09-14:
+
+- Negative incidence in the following locations: ['Austria'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Cases.csv' at 2022-09-14:
+
+- Negative incidence in the following locations: ['Austria'].
+
