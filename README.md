@@ -160,15 +160,15 @@ please use the following reference:
 > Alexander Ullrich, Graham Gibson, Evan L Ray, Nicholas G Reich, Daniel
 > Sheldon, Yijin Wang, Nutcha Wattanachit, Lijing Wang, Jan Trnka,
 > Guillaume Obozinski, … Sebastian Funk. (2022). European Covid-19
-> Forecast Hub (v2022.09.08) \[Data set\]. Zenodo.
-> <https://doi.org/10.5281/zenodo.7060393>
+> Forecast Hub (v2022.09.15) \[Data set\]. Zenodo.
+> <https://doi.org/10.5281/zenodo.7081687>
 
 <details>
 
 <summary>Bibtex</summary>
 
 ``` bibtex
-@dataset{katharine_sherratt_2022_7060393,
+@dataset{katharine_sherratt_2022_7081687,
   author       = {Katharine Sherratt and
                   Hugo Gruson and
                   Helen Johnson and
@@ -295,9 +295,9 @@ please use the following reference:
   month        = sep,
   year         = 2022,
   publisher    = {Zenodo},
-  version      = {v2022.09.08},
-  doi          = {10.5281/zenodo.7060393},
-  url          = {https://doi.org/10.5281/zenodo.7060393}
+  version      = {v2022.09.15},
+  doi          = {10.5281/zenodo.7081687},
+  url          = {https://doi.org/10.5281/zenodo.7081687}
 }
 ```
 
