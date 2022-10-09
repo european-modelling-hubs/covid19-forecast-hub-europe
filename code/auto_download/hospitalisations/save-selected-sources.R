@@ -8,31 +8,37 @@ library(tidyr)
 library(scales)
 
 data_dir <- here("data-truth", "ECDC")
+owid_dir <- here("data-truth", "OWID")
 
 cat("Combining and selecting hospitalisation sources and saving\n")
 
 # ECDC data ---------------------------------------------------------------
 # Get downloaded ECDC data
 official <- read_csv(here(data_dir, "raw", "official.csv"))
-scraped <- read_csv(here(data_dir, "raw", "scraped.csv"))
+scraped <- list()
+scraped[["ECDC"]] <- read_csv(here(data_dir, "raw", "scraped.csv"))
+# OWID data ---------------------------------------------------------------
+# Get downloaded OWID data
+scraped[["OWID"]] <- read_csv(here(owid_dir, "covid-hospitalizations.csv"))
 
 # Aggregate scraped daily data into weekly
 #    using ISO weeks (Monday-Sunday), to match official data source
-scraped_weekly <- scraped %>%
+scraped_weekly <- lapply(scraped, function(x) x %>%
   mutate(week_end = ceiling_date(date, unit = "week", week_start = 7)) %>%
   group_by(location_name, location,
            date = week_end, source, type) %>%
   summarise(value = sum(value), n = n(), .groups = "drop") %>%
   filter(n == 7) %>%
   select(-n)
+)
 
 # Select appropriate source (pre-set)
 sources <- read_csv(here("code", "auto_download", "hospitalisations",
                          "check-sources", "sources.csv")) %>%
   mutate(selected_source = TRUE)
 
-# Combine all ECDC sources
-ecdc_all <- bind_rows(official, scraped_weekly) %>%
+# Combine ECDC and OWID sources
+ecdc_all <- bind_rows(official, bind_rows(scraped_weekly)) %>%
   # Identify the named source-type combination for each country
   left_join(sources, by = c("location_name", "source", "type")) %>%
   # Truncate weeks
@@ -59,7 +65,8 @@ non_eu <- read_csv(here(data_dir, "raw", "non-eu.csv")) %>%
 
 # Join all sources, all countries -----------------------------------------
 all <- bind_rows(ecdc_all,
-                 non_eu %>% mutate(selected_source = TRUE))
+                 non_eu %>% mutate(selected_source = TRUE)) %>%
+  arrange(location)
 
 # Check selected data are fresh (< 2 weeks old) -----------------------
 location_stale <- all %>%
