@@ -7,10 +7,15 @@ library("janitor")
 library("tidyr")
 library("gh")
 
+use_sources <- c("scraped", "official")
+
 owner <- "epiforecasts"
 repo <- "covid19-forecast-hub-europe"
 path <- c(scraped = "data-truth/ECDC/raw/scraped.csv",
-          official = "data-truth/ECDC/raw/official.csv")
+          official = "data-truth/ECDC/raw/official.csv",
+          owid = "data-truth/OWID/covid-hospitalizations.csv")
+
+path <- path[use_sources]
 
 commits <-
   lapply(path, function(x) {
@@ -27,10 +32,12 @@ shas <- lapply(commits, lapply, function(x) {
 })
 shas <- lapply(shas, bind_rows)
 
-## thin scraped
-shas$scraped <- shas$scraped %>%
-  filter(as.integer(max(download_date) - download_date) %% 7 == 0,
-         !duplicated(download_date))
+## thin scraped, prioritising Thursdays
+for (to_thin in intersect(c("scraped", "owid"), names(shas))) {
+  shas[[to_thin]] <- shas[[to_thin]] %>%
+    filter(lubridate::wday(download_date, week_start = 1) == 4,
+           !duplicated(download_date))
+}
 
 hosp_data <-
   lapply(names(path), function(source) {
@@ -47,12 +54,20 @@ hosp_data <-
 names(hosp_data) <- names(path)
 hosp_data <- lapply(hosp_data, bind_rows)
 
-hosp_data$scraped <- hosp_data$scraped %>%
-  mutate(week_end = ceiling_date(date, unit = "week", week_start = 7)) %>%
-  group_by(location_name, date = week_end, source, type, download_date) %>%
-  summarise(value = sum(value), n = n(), .groups = "drop") %>%
-  filter(n == 7) %>%
-  select(-n)
+if ("scraped" %in% names(hosp_data)) {
+  hosp_data$scraped <- hosp_data$scraped %>%
+    mutate(week_end = ceiling_date(date, unit = "week", week_start = 7)) %>%
+    group_by(location_name, date = week_end, source, type, download_date) %>%
+    summarise(value = sum(value), n = n(), .groups = "drop") %>%
+    filter(n == 7) %>%
+    select(-n)
+}
+
+if ("owid" %in% names(hosp_data)) {
+  hosp_data$owid <- hosp_data$owid |>
+    filter(lubridate::wday(date, week_start = 1) == 7) |>
+    select(location_name, location, date, value, source, type, download_date)
+}
 
 all <- bind_rows(hosp_data) %>%
   filter(date >= "2021-05-01") %>%
@@ -93,8 +108,8 @@ filtered <- filtered %>%
 
 final_table <- filtered %>%
   select(location_name, source, type, truncate_weeks = data_delay) %>%
-  ## sort to prefer: remove fewer weeks, Scraped over ECDC (because daily)
-  arrange(location_name, truncate_weeks, desc(type)) %>%
+  ## sort to prefer: remove fewer weeks, Scraped over ECDC (because daily), ECDC over OWID
+  arrange(location_name, truncate_weeks, desc(type), desc(source)) %>%
   group_by(location_name) %>%
   ## take top choice in each country
   slice(1)
