@@ -92,67 +92,26 @@ for (source in names(sources)) {
          p,  width = 20, height = 12)
 }
 
-source_path <-
-  "code/auto_download/hospitalisations/check-sources/sources.csv"
-source_commits <-
-  gh::gh(query,
-    owner = owner,
-    repo = repo,
-    path = source_path,
-    date = earliest_date,
-    .limit = Inf
-    )
-source_shas <- vapply(source_commits, "[[", "", "sha")
-source_dates <-
-  vapply(source_commits, function(x) x[["commit"]][["author"]][["date"]], "")
-source_dates <- as_date(ymd_hms(source_dates))
-
-sources <-
-  lapply(
-    seq_along(revision_commits),
-    function(id)
-      readr::read_csv(
-               URLencode(
-                 paste("https://raw.githubusercontent.com", owner, repo,
-                       revision_shas[id], revision_path, sep = "/"))) %>%
-      mutate(commit_date = revision_dates[id])
-  )
-
-sources <- bind_rows(sources) |>
-  group_by(location_name) |>
-  filter(commit_date == max(commit_date)) |>
-  ungroup() |>
-  select(location_name, commit_date)
-anomalies_sources <- data |>
-  filter(type == "Hospitalizations") |>
-  mutate(target_variable = "inc hosp",
-         anomaly = "Replaced data source") |>
-  select(target_end_date, target_variable, location, location_name, anomaly) |>
-  inner_join(sources, by = "location_name") |>
-  filter(target_end_date <= commit_date) |>
-  distinct() |>
-  select(-commit_date)
-
 anomalies_raw <- data %>%
   group_by(location, location_name, target_end_date, type) %>%
   summarise(abs_diff = max(value) - min(value),
             rel_diff = abs_diff / max(value),
             .groups = "drop") %>%
   filter(target_end_date >= min_data, !is.na(rel_diff), rel_diff > 0.05)
-anomalies_revisions <- anomalies_raw %>%
+anomalies <- anomalies_raw %>%
   group_by(location, location_name, target_end_date, type) %>%
   summarise(anomaly = "large data revision", .groups = "drop") %>%
   mutate(target_variable = target_variables[type]) %>%
   select(target_end_date, target_variable, location, location_name, anomaly)
 
-anomalies <- bind_rows(anomalies_sources, anomalies_revisions) |>
-  group_by(target_end_date, target_variable, location, location_name) |>
-  slice(1) |>
-  ungroup()
-
 hosp_sources <-
   read_csv(here::here("code", "auto_download", "hospitalisations",
                       "check-sources", "sources.csv"))
+
+## exclude data sources not modelled
+anomalies <- anomalies %>%
+  filter(!(target_variable == "inc hosp" &
+           location_name %in% hosp_sources$location_name))
 
 anomalies_file <- here::here("data-truth", "anomalies", "anomalies.csv")
 existing_anomalies <- read_csv(anomalies_file)
