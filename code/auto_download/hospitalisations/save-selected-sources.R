@@ -8,6 +8,7 @@ library(tidyr)
 library(scales)
 
 data_dir <- here("data-truth", "ECDC")
+owid_dir <- here("data-truth", "OWID")
 
 cat("Combining and selecting hospitalisation sources and saving\n")
 
@@ -15,6 +16,9 @@ cat("Combining and selecting hospitalisation sources and saving\n")
 # Get downloaded ECDC data
 official <- read_csv(here(data_dir, "raw", "official.csv"))
 scraped <- read_csv(here(data_dir, "raw", "scraped.csv"))
+# OWID data ---------------------------------------------------------------
+# Get downloaded OWID data
+owid <- read_csv(here(owid_dir, "covid-hospitalizations.csv"))
 
 # Aggregate scraped daily data into weekly
 #    using ISO weeks (Monday-Sunday), to match official data source
@@ -26,13 +30,19 @@ scraped_weekly <- scraped %>%
   filter(n == 7) %>%
   select(-n)
 
+# extract weekly owid data
+# using ISO weeks (Monday-Sunday), to match official data source
+owid_weekly <- owid |>
+  filter(lubridate::wday(date, week_start = 1) == 7) |>
+  select(location_name, location, date, value, source, type)
+
 # Select appropriate source (pre-set)
 sources <- read_csv(here("code", "auto_download", "hospitalisations",
                          "check-sources", "sources.csv")) %>%
   mutate(selected_source = TRUE)
 
-# Combine all ECDC sources
-ecdc_all <- bind_rows(official, scraped_weekly) %>%
+# Combine ECDC and OWID sources
+ecdc_all <- bind_rows(official, scraped_weekly, owid_weekly) %>%
   # Identify the named source-type combination for each country
   left_join(sources, by = c("location_name", "source", "type")) %>%
   # Truncate weeks
@@ -59,7 +69,8 @@ non_eu <- read_csv(here(data_dir, "raw", "non-eu.csv")) %>%
 
 # Join all sources, all countries -----------------------------------------
 all <- bind_rows(ecdc_all,
-                 non_eu %>% mutate(selected_source = TRUE))
+                 non_eu %>% mutate(selected_source = TRUE)) %>%
+  arrange(location)
 
 # Check selected data are fresh (< 2 weeks old) -----------------------
 location_stale <- all %>%
@@ -67,7 +78,8 @@ location_stale <- all %>%
   group_by(location, source, type) %>%
   summarise(max_date = max(date), .groups = "drop") %>%
   filter(max_date < Sys.Date() - 16) %>%
-  pull(location)
+  pull(location) %>%
+  unique()
 
 all <- filter(all, !location %in% location_stale)
 

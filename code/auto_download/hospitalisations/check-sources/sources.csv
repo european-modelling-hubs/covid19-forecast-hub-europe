@@ -1,19 +1,13 @@
 location_name,source,type,truncate_weeks
-Belgium,Public,Scraped,0
-Croatia,Public,Scraped,0
-Cyprus,TESSy,ECDC,1
-Czechia,TESSy,ECDC,0
-Denmark,Public,Scraped,0
-Estonia,Public,Scraped,0
-France,Public,Scraped,0
-Greece,Public,Scraped,0
-Iceland,TESSy,ECDC,0
-Ireland,Public,Scraped,0
+Belgium,TESSy,ECDC,1
+Czechia,TESSy,ECDC,1
+Estonia,Public,ECDC,1
+France,TESSy,ECDC,0
+Greece,TESSy,ECDC,0
+Ireland,Public,ECDC,0
 Latvia,TESSy,ECDC,0
 Liechtenstein,TESSy,ECDC,0
 Malta,TESSy,ECDC,0
-Netherlands,Public,ECDC,0
-Norway,Public,Scraped,0
-Slovenia,Public,Scraped,0
 Slovakia,TESSy,ECDC,0
+Slovenia,Public,ECDC,0
 United Kingdom,Public,Scraped,1
