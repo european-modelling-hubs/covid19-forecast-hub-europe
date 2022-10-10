@@ -3,17 +3,17 @@ library(dplyr)
 library(covidHubUtils)
 library(readr)
 library(here)
-library(lubridate)
 
 # Set up
 data_dir <- here("data-truth", "ECDC")
-ecdc_official_filepath <- here(data_dir, "raw", paste0("official_", today(), ".csv"))
+ecdc_official_filepath <- here(data_dir, "raw", "official.csv")
 pop <- covidHubUtils::hub_locations_ecdc
 
 # Get ECDC published data
 cat("Downloading ECDC published data\n")
 official <- read_csv("https://opendata.ecdc.europa.eu/covid19/hospitalicuadmissionrates/csv/data.csv",
                      show_col_types = FALSE) %>%
+  filter(grepl("hospital admissions", indicator)) %>%
   rename(unscaled_value = value,
          location_name = country) %>%
   inner_join(pop, by = "location_name") %>%
@@ -21,7 +21,7 @@ official <- read_csv("https://opendata.ecdc.europa.eu/covid19/hospitalicuadmissi
   mutate(value = if_else(grepl("100k", indicator),
                          round(unscaled_value * population / 1e+5),
                          unscaled_value)) %>%
-  select(location_name, location, indicator, date, value, source) %>%
+  select(location_name, location, date, value, source) %>%
   mutate(source = if_else(grepl("TESSy", source), "TESSy", "Public"),
          type = "ECDC")
 

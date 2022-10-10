@@ -6,7 +6,7 @@ library(httr)
 library(jsonlite)
 
 data_dir <- here("data-truth", "ECDC")
-non_eu_filepath <- here(data_dir, "raw", paste0("non-eu_", today(), ".csv"))
+non_eu_filepath <- here(data_dir, "raw", "non-eu.csv")
 
 # Get data ----------------------------------------------------------------
 cat("Downloading non-EU public data\n")

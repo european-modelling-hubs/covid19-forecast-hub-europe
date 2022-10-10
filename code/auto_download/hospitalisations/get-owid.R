@@ -2,11 +2,10 @@
 library(dplyr)
 library(readr)
 library(here)
-library(lubridate)
 
 # Set up
 data_dir <- here("data-truth", "OWID")
-owid_filepath <- here(data_dir, paste0("covid-hospitalizations_", today(), ".csv"))
+owid_filepath <- here(data_dir, "covid-hospitalizations.csv")
 pop <- covidHubUtils::hub_locations_ecdc
 
 # Get ECDC published data
