@@ -7,7 +7,7 @@ library("janitor")
 library("tidyr")
 library("gh")
 
-use_sources <- c("scraped", "official")
+use_sources <- c("official")
 
 owner <- "epiforecasts"
 repo <- "covid19-forecast-hub-europe"
@@ -54,8 +54,14 @@ hosp_data <-
 names(hosp_data) <- names(path)
 hosp_data <- lapply(hosp_data, bind_rows)
 
+if ("official" %in% names(hosp_data)) {
+  hosp_data$official <- hosp_data$official %>%
+    filter(is.na(indicator) | grepl("new hospital admissions", indicator))
+}
+
 if ("scraped" %in% names(hosp_data)) {
   hosp_data$scraped <- hosp_data$scraped %>%
+    filter(is.na(indicator) | grepl("New_Hospitalised", indicator)) %>%
     mutate(week_end = ceiling_date(date, unit = "week", week_start = 7)) %>%
     group_by(location_name, date = week_end, source, type, download_date) %>%
     summarise(value = sum(value), n = n(), .groups = "drop") %>%
@@ -108,8 +114,8 @@ filtered <- filtered %>%
 
 final_table <- filtered %>%
   select(location_name, source, type, truncate_weeks = data_delay) %>%
-  ## sort to prefer: remove fewer weeks, Scraped over ECDC (because daily), ECDC over OWID
-  arrange(location_name, truncate_weeks, desc(type), desc(source)) %>%
+  ## sort to prefer: remove fewer weeks, ECDC over OWID
+  arrange(location_name, truncate_weeks, type) %>%
   group_by(location_name) %>%
   ## take top choice in each country
   slice(1)
