@@ -14,8 +14,10 @@ cat("Combining and selecting hospitalisation sources and saving\n")
 
 # ECDC data ---------------------------------------------------------------
 # Get downloaded ECDC data
-official <- read_csv(here(data_dir, "raw", "official.csv"))
-scraped <- read_csv(here(data_dir, "raw", "scraped.csv"))
+official <- read_csv(here(data_dir, "raw", "official.csv")) %>%
+  filter(grepl("new hospital admissions", indicator))
+scraped <- read_csv(here(data_dir, "raw", "scraped.csv")) %>%
+  filter(grepl("New_Hospitalised", indicator))
 # OWID data ---------------------------------------------------------------
 # Get downloaded OWID data
 owid <- read_csv(here(owid_dir, "covid-hospitalizations.csv"))
@@ -42,7 +44,9 @@ sources <- read_csv(here("code", "auto_download", "hospitalisations",
   mutate(selected_source = TRUE)
 
 # Combine ECDC and OWID sources
-ecdc_all <- bind_rows(official, scraped_weekly, owid_weekly) %>%
+ecdc_all <- bind_rows(
+    official, scraped_weekly, owid_weekly
+  ) %>%
   # Identify the named source-type combination for each country
   left_join(sources, by = c("location_name", "source", "type")) %>%
   # Truncate weeks
@@ -69,7 +73,7 @@ non_eu <- read_csv(here(data_dir, "raw", "non-eu.csv")) %>%
 
 # Join all sources, all countries -----------------------------------------
 all <- bind_rows(ecdc_all,
-                 non_eu %>% mutate(selected_source = TRUE)) %>%
+                 non_eu %>% mutate(selected_source = FALSE)) %>%
   arrange(location)
 
 # Check selected data are fresh (< 2 weeks old) -----------------------

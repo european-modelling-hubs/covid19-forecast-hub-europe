@@ -1,7 +1,7 @@
 location_name,location,population,inc_hosp,inc_case,inc_death
 Belgium,BE,11372068,ECDC,JHU,JHU
-Bulgaria,BG,7075991,NA,JHU,JHU
-Czechia,CZ,10591323,ECDC,JHU,JHU
+Bulgaria,BG,7075991,ECDC,JHU,JHU
+Czechia,CZ,10591323,NA,JHU,JHU
 Denmark,DK,5769603,NA,JHU,JHU
 Germany,DE,82695000,NA,JHU,JHU
 Estonia,EE,1315480,ECDC,JHU,JHU
@@ -30,4 +30,4 @@ United Kingdom,GB,66022273,NA,JHU,JHU
 Iceland,IS,341284,NA,JHU,JHU
 Liechtenstein,LI,37922,ECDC,JHU,JHU
 Norway,NO,5282223,NA,JHU,JHU
-Switzerland,CH,8466017,ECDC,JHU,JHU
+Switzerland,CH,8466017,NA,JHU,JHU
