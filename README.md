@@ -153,7 +153,16 @@ Institute](https://www.rki.de/EN/Content/infections/epidemiology/signals/signals
     materials from this repository.**
 
 To cite the European Covid-19 Forecast Hub in project in publications,
-please use the following reference:
+please use the following references:
+
+Methodology and evaluation:
+
+> Sherratt, K., Gruson, H., Johnson, H., Niehus, R., Prasse, B.,
+> Sandman, F., … & Funk, S. (2022). Predictive performance of
+> multi-model ensemble forecasts of COVID-19 across European nations.
+> *medRxiv*. DOI: <https://doi.org/10.1101/2022.06.16.22276024>
+
+Data:
 
 > Katharine Sherratt, Hugo Gruson, Helen Johnson, Rene Niehus, Bastian
 > Prasse, Frank Sandman, Jannik Deuschel, Daniel Wolffram, Sam Abbott,
