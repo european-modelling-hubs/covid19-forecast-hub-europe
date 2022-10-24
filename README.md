@@ -153,7 +153,7 @@ Institute](https://www.rki.de/EN/Content/infections/epidemiology/signals/signals
     materials from this repository.**
 
 To cite the European Covid-19 Forecast Hub in project in publications,
-please use the following references:
+please use the following reference:
 
 > Katharine Sherratt, Hugo Gruson, Helen Johnson, Rene Niehus, Bastian
 > Prasse, Frank Sandman, Jannik Deuschel, Daniel Wolffram, Sam Abbott,
