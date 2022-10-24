@@ -106,7 +106,13 @@ The [interactive visualization tool](https://covid19forecasthub.eu/visualisation
 - Parts of the processing, analysis and validation code have been taken or adapted from the [US Covid-19 forecast hub](https://github.com/reichlab/covid19-forecast-hub) and the [Germany/Poland Covid-19 forecast hub](https://github.com/KITmetricslab/covid19-forecast-hub-de) both under an [MIT license](https://github.com/reichlab/covid19-forecast-hub/blob/master/LICENSE).
 - All code contained in this repository is under the [MIT license](/LICENSE). **Please get in touch with us to re-use materials from this repository.**
 
-To cite the European Covid-19 Forecast Hub in project in publications, please use the following reference:
+To cite the European Covid-19 Forecast Hub in project in publications, please use the following references:
+
+Methodology and evaluation:
+
+> Sherratt, K., Gruson, H., Johnson, H., Niehus, R., Prasse, B., Sandman, F., ... & Funk, S. (2022). Predictive performance of multi-model ensemble forecasts of COVID-19 across European nations. _medRxiv_. DOI: https://doi.org/10.1101/2022.06.16.22276024
+
+Data:
 
 ```{r zenodo, echo=FALSE, warning=FALSE}
 # Chunk copied straight from rOpenSci's devguide: https://github.com/ropensci/dev_guide/blob/e72faf882c0b7faf4efb982875037f50468032c0/index.Rmd#L31-L41
