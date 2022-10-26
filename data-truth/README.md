@@ -9,13 +9,13 @@ We evaluate forecasts of cases and deaths against [Johns Hopkins
 University data](https://github.com/CSSEGISandData/COVID-19), and we
 recommend using this dataset as the basis for forecasts.
 
--   Daily numbers of cases and deaths are available to download from
-    [JHU](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series),
-    or from [our
-    repository](https://github.com/epiforecasts/covid19-forecast-hub-europe/data-truth).
--   JHU also provide [country
-    metadata](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv),
-    including population counts and ISO-3 codes.
+- Daily numbers of cases and deaths are available to download from
+  [JHU](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series),
+  or from [our
+  repository](https://github.com/epiforecasts/covid19-forecast-hub-europe/data-truth).
+- JHU also provide [country
+  metadata](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv),
+  including population counts and ISO-3 codes.
 
 Note there are some differences between the format of the JHU data and
 what we require in a forecast. Please check the
@@ -24,7 +24,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-10-25
+As of 2022-10-26
 
 | country  | created    | updated    | issue                                                                                               | message                                             | url                                                      |
 |:---------|:-----------|:-----------|:----------------------------------------------------------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------------|
@@ -47,8 +47,8 @@ not consistent across all the countries in the ECDC Forecast Hub. To
 keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
--   Belgium, Bulgaria, Estonia, France, Greece, Ireland, Latvia,
-    Liechtenstein, Malta, Slovakia, Slovenia
+- Bulgaria, France, Greece, Ireland, Latvia, Liechtenstein, Malta,
+  Slovakia
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)
