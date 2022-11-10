@@ -3213,6 +3213,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2022-09-17,inc hosp,MT,Malta,large data revision
 2022-09-17,inc hosp,NO,Norway,large data revision
 2022-09-17,inc hosp,SI,Slovenia,Replaced data source
+2022-09-17,inc hosp,SK,Slovakia,large data revision
 2022-09-24,inc death,GB,United Kingdom,large data revision
 2022-09-24,inc hosp,BE,Belgium,Replaced data source
 2022-09-24,inc hosp,BG,Bulgaria,Replaced data source
@@ -3226,6 +3227,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2022-09-24,inc hosp,MT,Malta,large data revision
 2022-09-24,inc hosp,NO,Norway,large data revision
 2022-09-24,inc hosp,SI,Slovenia,Replaced data source
+2022-09-24,inc hosp,SK,Slovakia,large data revision
 2022-10-01,inc death,GB,United Kingdom,large data revision
 2022-10-01,inc hosp,BE,Belgium,Replaced data source
 2022-10-01,inc hosp,BG,Bulgaria,Replaced data source
@@ -3251,7 +3253,9 @@ target_end_date,target_variable,location,location_name,anomaly
 2022-10-08,inc hosp,LV,Latvia,large data revision
 2022-10-08,inc hosp,MT,Malta,large data revision
 2022-10-08,inc hosp,SI,Slovenia,Replaced data source
+2022-10-08,inc hosp,SK,Slovakia,large data revision
 2022-10-15,inc death,GB,United Kingdom,large data revision
+2022-10-15,inc hosp,BE,Belgium,large data revision
 2022-10-15,inc hosp,BG,Bulgaria,Replaced data source
 2022-10-15,inc hosp,CH,Switzerland,large data revision
 2022-10-15,inc hosp,CZ,Czechia,large data revision
@@ -3273,6 +3277,9 @@ target_end_date,target_variable,location,location_name,anomaly
 2022-10-22,inc hosp,MT,Malta,large data revision
 2022-10-22,inc hosp,SK,Slovakia,large data revision
 2022-10-29,inc death,GB,United Kingdom,large data revision
+2022-10-29,inc hosp,EE,Estonia,large data revision
 2022-10-29,inc hosp,FR,France,large data revision
 2022-10-29,inc hosp,MT,Malta,large data revision
 2022-10-29,inc hosp,SK,Slovakia,large data revision
+2022-11-05,inc hosp,MT,Malta,large data revision
+2022-11-05,inc hosp,SK,Slovakia,large data revision
