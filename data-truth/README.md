@@ -24,7 +24,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-11-20
+As of 2022-11-21
 
 | country | created    | updated    | issue                                                                                               | message                                            | url                                                      |
 |:--------|:-----------|:-----------|:----------------------------------------------------------------------------------------------------|:---------------------------------------------------|:---------------------------------------------------------|
@@ -46,8 +46,8 @@ not consistent across all the countries in the ECDC Forecast Hub. To
 keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
-- Bulgaria, France, Greece, Ireland, Latvia, Liechtenstein, Malta,
-  Slovakia
+- Bulgaria, Estonia, France, Greece, Ireland, Latvia, Liechtenstein,
+  Malta, Slovakia
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)
