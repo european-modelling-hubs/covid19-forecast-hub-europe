@@ -24,13 +24,12 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-11-21
+As of 2022-11-22
 
 | country | created    | updated    | issue                                                                                               | message                                            | url                                                      |
 |:--------|:-----------|:-----------|:----------------------------------------------------------------------------------------------------|:---------------------------------------------------|:---------------------------------------------------------|
 | finland | 2022-10-13 | 2022-10-13 | finland confirmed cases jump on 10/7/2022                                                           | Finland Confirmed Cases 10/6/2022: 1297708 10/7/2… | <https://github.com/CSSEGISandData/COVID-19/issues/6168> |
 | uk      | 2022-08-24 | 2022-10-05 | uk deaths revised to match “deaths with covid-19 on the death certificate” on uk covid-19 dashboard | Hello all, We have recently revised our historica… | <https://github.com/CSSEGISandData/COVID-19/issues/6021> |
-| greece  | 2022-08-03 | 2022-09-26 | regarding covid data from greece                                                                    | Dear all, In Greece, we have recently started rep… | <https://github.com/CSSEGISandData/COVID-19/issues/5957> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
