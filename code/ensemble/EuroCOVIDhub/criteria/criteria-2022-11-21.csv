@@ -75,6 +75,8 @@ epiforecasts-weeklygrowth,inc case,PL,TRUE,TRUE,TRUE,TRUE,TRUE
 epiforecasts-weeklygrowth,inc case,RO,TRUE,TRUE,TRUE,TRUE,TRUE
 epiforecasts-weeklygrowth,inc case,SE,TRUE,TRUE,TRUE,TRUE,TRUE
 epiforecasts-weeklygrowth,inc case,SI,TRUE,TRUE,TRUE,TRUE,TRUE
+HZI-AgeExtendedSEIR,inc case,DE,TRUE,TRUE,TRUE,TRUE,TRUE
+HZI-AgeExtendedSEIR,inc death,DE,TRUE,TRUE,TRUE,TRUE,TRUE
 ICM-agentModel,inc case,PL,TRUE,TRUE,TRUE,TRUE,TRUE
 ICM-agentModel,inc death,PL,TRUE,TRUE,TRUE,TRUE,TRUE
 ILM-EKF,inc case,AT,TRUE,TRUE,TRUE,TRUE,TRUE
@@ -135,6 +137,8 @@ ILM-EKF,inc death,PT,TRUE,TRUE,TRUE,TRUE,TRUE
 ILM-EKF,inc death,RO,TRUE,TRUE,TRUE,TRUE,TRUE
 ILM-EKF,inc death,SE,TRUE,TRUE,TRUE,TRUE,TRUE
 ILM-EKF,inc death,SI,TRUE,TRUE,TRUE,TRUE,TRUE
+itwm-dSEIR,inc case,DE,TRUE,TRUE,TRUE,TRUE,TRUE
+itwm-dSEIR,inc death,DE,TRUE,TRUE,TRUE,TRUE,TRUE
 Karlen-pypm,inc case,BE,TRUE,TRUE,TRUE,TRUE,TRUE
 Karlen-pypm,inc case,CH,TRUE,TRUE,TRUE,TRUE,TRUE
 Karlen-pypm,inc case,FR,TRUE,TRUE,TRUE,TRUE,TRUE
