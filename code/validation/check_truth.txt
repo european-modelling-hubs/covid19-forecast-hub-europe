@@ -2863,3 +2863,10 @@ Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-
 
 - Negative incidence in the following locations: ['United Kingdom'].
 
+Latest check of truth data: 2022-11-30
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/JHU/truth_JHU-Incident Deaths.csv' at 2022-11-29:
+
+- Negative incidence in the following locations: ['Lithuania' 'United Kingdom'].
+
