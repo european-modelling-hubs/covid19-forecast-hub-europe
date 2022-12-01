@@ -24,13 +24,12 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-11-30
+As of 2022-12-01
 
-| country | created    | updated    | issue                                                                                               | message                                             | url                                                      |
-|:--------|:-----------|:-----------|:----------------------------------------------------------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------------|
-| czechia | 2022-11-30 | 2022-11-30 | issue - czechia: number of confirmed cases                                                          | Hello, Team! Could you please check the data for t… | <https://github.com/CSSEGISandData/COVID-19/issues/6310> |
-| finland | 2022-10-13 | 2022-10-13 | finland confirmed cases jump on 10/7/2022                                                           | Finland Confirmed Cases 10/6/2022: 1297708 10/7/2…  | <https://github.com/CSSEGISandData/COVID-19/issues/6168> |
-| uk      | 2022-08-24 | 2022-10-05 | uk deaths revised to match “deaths with covid-19 on the death certificate” on uk covid-19 dashboard | Hello all, We have recently revised our historica…  | <https://github.com/CSSEGISandData/COVID-19/issues/6021> |
+| country | created    | updated    | issue                                       | message                                                | url                                                      |
+|:--------|:-----------|:-----------|:--------------------------------------------|:-------------------------------------------------------|:---------------------------------------------------------|
+| czechia | 2022-11-30 | 2022-11-30 | czechia case data now includes reinfections | Hello all, \[#6312\](<https://github.com/CSSEGISandD>… | <https://github.com/CSSEGISandData/COVID-19/issues/6313> |
+| finland | 2022-10-13 | 2022-10-13 | finland confirmed cases jump on 10/7/2022   | Finland Confirmed Cases 10/6/2022: 1297708 10/7/2…     | <https://github.com/CSSEGISandData/COVID-19/issues/6168> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
@@ -46,7 +45,8 @@ not consistent across all the countries in the ECDC Forecast Hub. To
 keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
-- France, Greece, Ireland, Latvia, Liechtenstein, Malta, Slovakia
+- Belgium, France, Greece, Ireland, Latvia, Liechtenstein, Malta,
+  Slovakia
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)
