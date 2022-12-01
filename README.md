@@ -169,15 +169,15 @@ Data:
 > Alexander Ullrich, Graham Gibson, Evan L Ray, Nicholas G Reich, Daniel
 > Sheldon, Yijin Wang, Nutcha Wattanachit, Lijing Wang, Jan Trnka,
 > Guillaume Obozinski, … Sebastian Funk. (2022). European Covid-19
-> Forecast Hub (v2022.11.24) \[Data set\]. Zenodo.
-> <https://doi.org/10.5281/zenodo.7356267>
+> Forecast Hub (v2022.12.01) \[Data set\]. Zenodo.
+> <https://doi.org/10.5281/zenodo.7385956>
 
 <details>
 
 <summary>Bibtex</summary>
 
 ``` bibtex
-@dataset{katharine_sherratt_2022_7356267,
+@dataset{katharine_sherratt_2022_7385956,
   author       = {Katharine Sherratt and
                   Hugo Gruson and
                   Helen Johnson and
@@ -301,12 +301,12 @@ Data:
                   Johannes Bracher and
                   Sebastian Funk},
   title        = {European Covid-19 Forecast Hub},
-  month        = nov,
+  month        = dec,
   year         = 2022,
   publisher    = {Zenodo},
-  version      = {v2022.11.24},
-  doi          = {10.5281/zenodo.7356267},
-  url          = {https://doi.org/10.5281/zenodo.7356267}
+  version      = {v2022.12.01},
+  doi          = {10.5281/zenodo.7385956},
+  url          = {https://doi.org/10.5281/zenodo.7385956}
 }
 ```
 
