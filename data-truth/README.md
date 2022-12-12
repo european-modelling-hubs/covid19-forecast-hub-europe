@@ -24,12 +24,11 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-12-05
+As of 2022-12-12
 
 | country | created    | updated    | issue                                       | message                                                | url                                                      |
 |:--------|:-----------|:-----------|:--------------------------------------------|:-------------------------------------------------------|:---------------------------------------------------------|
 | czechia | 2022-11-30 | 2022-11-30 | czechia case data now includes reinfections | Hello all, \[#6312\](<https://github.com/CSSEGISandD>… | <https://github.com/CSSEGISandData/COVID-19/issues/6313> |
-| finland | 2022-10-13 | 2022-10-13 | finland confirmed cases jump on 10/7/2022   | Finland Confirmed Cases 10/6/2022: 1297708 10/7/2…     | <https://github.com/CSSEGISandData/COVID-19/issues/6168> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
@@ -46,7 +45,7 @@ keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
 - Belgium, France, Greece, Ireland, Latvia, Liechtenstein, Malta,
-  Slovakia
+  Slovakia, Slovenia
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)
