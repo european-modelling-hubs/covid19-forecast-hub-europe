@@ -1,4 +1,5 @@
 # packages ---------------------------------------------------------------------
+library(rlang)
 library(dplyr)
 library(tidyr)
 library(lemon)
@@ -23,9 +24,12 @@ wday(report_date) <- get_hub_config("forecast_week_day")
 suppressWarnings(dir.create(here::here("html")))
 suppressWarnings(dir.create(here::here("html", "report-model-files")))
 
-models <- covidHubUtils::get_model_metadata(source = "local_hub_repo",
-                                            hub_repo_path = here()) %>%
-  pull(model)
+models <- list.files(
+  here::here("model-metadata"),
+  full.names = TRUE
+) |>
+  purrr::map(yaml::read_yaml) |>
+  purrr::map_chr("model_abbr")
 
 # Create function for rendering report for each model
 render_report <- function(model) {

@@ -5,5 +5,5 @@ filename <-
   here::here("evaluation", "weekly-summary",
 	     paste0("evaluation-", params$report_date, ".csv"))
 
-table <- read_csv(filename)
+table <- read_csv(filename, show_col_types = FALSE)
 ```

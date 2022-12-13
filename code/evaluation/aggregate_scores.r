@@ -47,7 +47,8 @@ if (re_run) {
 }
 report_dates <- seq(start_date, latest_date, by = "week")
 
-scores <- read_csv(here::here(subdir, "evaluation", "scores.csv"))
+scores <- read_csv(here::here(subdir, "evaluation", "scores.csv"),
+                   show_col_types = FALSE)
 ## get default baseline if not included in the scores
 if (!(get_hub_config("baseline")[["name"]] %in% unique(scores$model))) {
   baseline_scores <- read_csv(here::here("evaluation", "scores.csv")) %>%

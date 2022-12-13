@@ -26,7 +26,9 @@ jobs:
     - uses: r-lib/actions/setup-renv@v2
 
     - name: ECDC Truth
-      run: Rscript 'code/auto_download/hospitalisations-download.R'
+      run: |
+        Rscript 'code/auto_download/hospitalisations-download.R'
+        Rscript 'code/auto_download/hospitalisations/check-sources/select_hosp_sources.r'
       env:
         DATA_USERNAME: ${{secrets.DATA_USERNAME}}
         DATA_PASSWORD: ${{secrets.DATA_PASSWORD}}
@@ -50,4 +52,4 @@ jobs:
         gh issue create \
           --label bug \
           --title "${{ env.GITHUB_WORKFLOW }} GitHub Action is failing" \
-          --body-file ../action-issue-template.md
+          --body-file .github/action-issue-template.md

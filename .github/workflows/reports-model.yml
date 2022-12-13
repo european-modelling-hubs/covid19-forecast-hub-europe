@@ -1,0 +1,71 @@
+name: "Create model reports"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "45 11 * * 2,3"
+  push:
+    branches: main
+    paths:
+      - code/reports/**
+  pull_request:
+    branches: main
+    paths:
+      - code/reports/**
+
+jobs:
+  model_reports:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: r-lib/actions/setup-r@v1
+        with:
+          install-r: false
+          use-public-rspm: true
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libssl-dev libcurl4-openssl-dev
+
+      - uses: r-lib/actions/setup-pandoc@v1
+
+      - uses: r-lib/actions/setup-renv@v2
+
+      - name: Create model reports
+        run: Rscript 'code/reports/compile-model-reports.r'
+
+      - uses: actions/upload-artifact@v2
+        if: github.event_name != 'pull_request'
+        with:
+          name: model-reports
+          retention-days: 8
+          path: |
+            html/
+
+      - uses: actions/upload-artifact@v2
+        # If we are in a PR, we want to access the artifacts but we don't want
+        # them to be used to build the site
+        if: github.event_name == 'pull_request'
+        with:
+          name: model-reports-${{ env.GITHUB_RUN_ID }}
+          retention-days: 8
+          path: |
+            html/
+
+      - name: Trigger website rebuild
+        if: github.event_name != 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.FORECASTHUB_TOKEN }}
+        run: |
+           gh workflow run build-and-deploy.yml -R covid19-forecast-hub-europe/covid19-forecast-hub-europe-website
+
+      - name: Create issue about failure
+        if: failure() && github.event_name != 'workflow_dispatch' && github.event_name != 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --label bug \
+            --title "${{ env.GITHUB_WORKFLOW }} GitHub Action is failing" \
+            --body-file .github/action-issue-template.md

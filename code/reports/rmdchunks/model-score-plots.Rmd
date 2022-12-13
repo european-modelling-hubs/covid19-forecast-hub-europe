@@ -38,8 +38,10 @@ score_data <- model_scores %>%
   mutate(variable = skill)
 plot_data <- truth_data %>%
   filter(location %in% unique(panels$location)) %>%
+  mutate(model = "truth") %>%
   rbind(score_data) %>%
-  mutate(model = factor(model, levels = unique(c(ensemble_model, params$model))))
+  mutate(model = factor(model)) %>%
+  mutate(model = forcats::fct_relevel(model, "truth", ensemble_model))
 if (any(forecast_data$model == params$model)) {
   p <- ggplot(plot_data, aes(x = target_end_date, colour = model)) +
     geom_point(mapping = aes(y = value)) +
@@ -55,7 +57,7 @@ if (any(forecast_data$model == params$model)) {
     p <- p + geom_linerange(data = forecast_data,
                             aes(ymin = `0.25`, ymax = `0.75`),
                             alpha = 0.5, position = position_dodge(width = 3),
-                            size = 2)
+                            size = 2, key_glyph = "point")
   }
   if ("0.05" %in% colnames(forecast_data) &&
       "0.95" %in% colnames(forecast_data)) {
@@ -66,7 +68,7 @@ if (any(forecast_data$model == params$model)) {
   }
   p <- p +
     scale_colour_manual("", breaks = levels(plot_data$model),
-                        values = palette, na.value = "black") +
+                        values = c("black", palette), na.value = "black") +
     scale_x_date("End of data/forecast week", date_breaks = "1 month",
                  date_labels = "%b") +
     scale_y_continuous(variable, labels = scales::comma) +

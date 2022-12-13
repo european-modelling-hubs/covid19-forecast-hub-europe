@@ -9,13 +9,13 @@ We evaluate forecasts of cases and deaths against [Johns Hopkins
 University data](https://github.com/CSSEGISandData/COVID-19), and we
 recommend using this dataset as the basis for forecasts.
 
--   Daily numbers of cases and deaths are available to download from
-    [JHU](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series),
-    or from [our
-    repository](https://github.com/epiforecasts/covid19-forecast-hub-europe/data-truth).
--   JHU also provide [country
-    metadata](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv),
-    including population counts and ISO-3 codes.
+- Daily numbers of cases and deaths are available to download from
+  [JHU](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series),
+  or from [our
+  repository](https://github.com/epiforecasts/covid19-forecast-hub-europe/data-truth).
+- JHU also provide [country
+  metadata](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv),
+  including population counts and ISO-3 codes.
 
 Note there are some differences between the format of the JHU data and
 what we require in a forecast. Please check the
@@ -24,15 +24,11 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-06-06
+As of 2022-12-12
 
-| country    | created    | updated    | issue                                                                                 | message                                               | url                                                      |
-|:-----------|:-----------|:-----------|:--------------------------------------------------------------------------------------|:------------------------------------------------------|:---------------------------------------------------------|
-| luxembourg | 2022-05-30 | 2022-06-01 | luxembourg confirmed cases stale for 16 days (csse_covid_19_daily_reports)            | Hi all, cases for Luxembourg (country) are stale …    | <https://github.com/CSSEGISandData/COVID-19/issues/5768> |
-| france     | 2022-05-20 | 2022-05-26 | discrepancy in france data                                                            | For France, it was found that the number of New ca…   | <https://github.com/CSSEGISandData/COVID-19/issues/5746> |
-| belgium    | 2022-05-04 | 2022-05-04 | request to add data in three regions i.e. flanders, wallonia and brussels for belgium | <https://datastudio.google.com/c/embed/u/0/reportin>… | <https://github.com/CSSEGISandData/COVID-19/issues/5704> |
-| germany    | 2022-04-14 | 2022-04-14 | issue with germany number of confirmed cases                                          | Dear JHU, Please double check closed issue #5632 a…   | <https://github.com/CSSEGISandData/COVID-19/issues/5646> |
-| germany    | 2022-04-13 | 2022-04-13 | germany: number of confirmed cases: drop in cumulative values                         | Dear JHU, Could you please check your time series…    | <https://github.com/CSSEGISandData/COVID-19/issues/5640> |
+| country | created    | updated    | issue                                       | message                                                | url                                                      |
+|:--------|:-----------|:-----------|:--------------------------------------------|:-------------------------------------------------------|:---------------------------------------------------------|
+| czechia | 2022-11-30 | 2022-11-30 | czechia case data now includes reinfections | Hello all, \[#6312\](<https://github.com/CSSEGISandD>… | <https://github.com/CSSEGISandData/COVID-19/issues/6313> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
@@ -48,8 +44,8 @@ not consistent across all the countries in the ECDC Forecast Hub. To
 keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
--   Belgium, Croatia, Cyprus, Czechia, Estonia, France, Ireland, Latvia,
-    Liechtenstein, Malta, Norway, Slovenia, Switzerland, United Kingdom
+- Belgium, France, Greece, Ireland, Latvia, Liechtenstein, Malta,
+  Slovakia, Slovenia
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)

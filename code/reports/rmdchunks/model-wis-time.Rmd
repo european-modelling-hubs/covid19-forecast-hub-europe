@@ -13,9 +13,9 @@ if (all(is.na(model_df$wis))) {
       "is not calculated as the 23 quantile levels required are not being",
       "provided by the model.")
   df <- df %>%
-    rename(skill = aem)
+    rename(skill = ae_median)
   model_df <- model_df %>%
-    rename(skill = aem)
+    rename(skill = ae_median)
 } else {
   cat("Skill is shown as weighted interval score.")
   df <- df %>%

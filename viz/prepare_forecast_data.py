@@ -2,6 +2,7 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 import json
+from datetime import datetime, timedelta
 
 def next_monday(date):
     return pd.date_range(start=date, end=date + pd.offsets.Day(6), freq='W-MON')[0]
@@ -20,6 +21,9 @@ def get_relevant_dates(dates):
                                    ~pd.Series(n in relevant_dates for n in (next_mondays - pd.offsets.Day(4))) &
                                    ~pd.Series(n in relevant_dates for n in (next_mondays - pd.offsets.Day(5)))
                                    ])
+
+    relevant_dates = [d for d in relevant_dates if d > datetime.now() - timedelta(weeks = 12)]
+
     return [str(r.date()) for r in relevant_dates] # return as strings
 
 path = Path('data-processed')
@@ -52,13 +56,13 @@ for m in models_to_include:
         dfs.append(df_temp)
 
 df = pd.concat(dfs)
-df.forecast_date = pd.to_datetime(df.forecast_date)
-df.target_end_date = pd.to_datetime(df.target_end_date)
+df.forecast_date = pd.to_datetime(df.forecast_date).dt.date
+df.target_end_date = pd.to_datetime(df.target_end_date).dt.date
 
 df = df[df.target.isin(VALID_TARGETS) & 
         (df['quantile'].isin(VALID_QUANTILES) | (df.type=='point'))].reset_index(drop=True)
 
-df['timezero'] = df.forecast_date.apply(next_monday)
+df['timezero'] = df.forecast_date.apply(next_monday).dt.date
 
 ### Adding last observations
 
@@ -66,9 +70,9 @@ df['saturday0'] = df.timezero - pd.to_timedelta('2 days')
 df['merge_target'] = 'inc_' + df.target.str.split().str[-1]
 
 truth = pd.read_csv('viz/truth_to_plot.csv')
-truth.date = pd.to_datetime(truth.date)
+truth.date = pd.to_datetime(truth.date).dt.date
 
-truth = pd.melt(truth, id_vars=['date', 'location', 'location_name'], value_vars=['inc_death', 'inc_case', 'inc_hosp'], 
+truth = pd.melt(truth, id_vars=['date', 'location'], value_vars=['inc_death', 'inc_case', 'inc_hosp'], 
                var_name='merge_target', value_name='truth')[['date', 'location', 'merge_target', 'truth']]
 
 df = df.merge(truth, left_on=['location', 'saturday0', 'merge_target'], 
@@ -109,7 +113,6 @@ def createForecastDataItem(row):
         raise NameError('Invalid target')
     
     return {
-        'forecast_date': row['forecast_date'],
         'location': row['location'],
         'type': row['type'],
         'value': int(row['value']),

@@ -62,45 +62,50 @@ scaled_data <- data %>%
   filter(location %in% unique(panels$location)) %>%
   mutate(across(c("true_value", "prediction"), ~ .x / population * 1e+5))
 
-for (forecast_date in as.character(forecast_dates)) {
+for (fcast_date in as.character(forecast_dates)) {
+  fcast_date <- ymd(fcast_date)
   target_level <- 3
   if (length(forecast_dates) > 1) {
-    cat(paste0("\n\n### ", forecast_date, "{.tabset .tabset-fade} \n\n"))
+    cat(paste0("\n\n### ", fcast_date, "{.tabset .tabset-fade} \n\n"))
     target_level <- target_level + 1
   }
 
   for (target in names(target_variables)) {
     cat(paste0("\n\n", paste0(rep("#", target_level), collapse = ""), " ", target, "\n\n"))
 
-    filter_both <- list(paste0("target_variable %in% '", target_variables[[target]], "'"))
-    filter_truth <- list(paste0("target_end_date > '", as.Date(forecast_date) - 7 * 10, "'"),
-                         paste0("target_end_date <= '", as.Date(forecast_date) + 7 * 4, "'"))
-     
-    filter_forecasts <- list(paste0("forecast_date == '", as.Date(forecast_date), "'"))
-    if (!is.null(params$model)) {
-      filter_forecasts <- c(filter_forecasts,
-                            list(paste0("model == '", params$model, "'")))
+    if (is.null(params$model)) {
+      scaled_data$compare_model <- scaled_data$model
+    } else {
+      scaled_data$compare_model <- params$model
     }
 
-    plot <- scoringutils::plot_predictions(
-      scaled_data,
-      x = "target_end_date",
-      filter_both = filter_both,
-      filter_forecasts = filter_forecasts,
-      facet_formula =  rlang::expr(~ !!facetting_var),
-      ncol = n_cols,
-      allow_truth_without_pred = TRUE,
-      zoom_multiple_data =
-        c(ymin = 0, ymax = 3),
-      expand_limits =
-        list(x = max(scaled_data$target_end_date),
-             y = 0),
-      scales = "free_y")
+    plot_data <- scaled_data |>
+      filter(
+        target_variable == target_variables[[target]],
+        model == compare_model,
+        target_end_date >= fcast_date - weeks(10),
+        target_end_date < fcast_date + weeks(4)
+      ) |> 
+      group_by(model) |> 
+      filter(
+        any(forecast_date == fcast_date)
+      ) |> 
+      ungroup() |>
+      mutate(prediction = ifelse(forecast_date == fcast_date, prediction, NA))
 
-    if (is.null(plot)) {
+    if (nrow(plot_data) == 0) {
       cat("No forecasts available, possibly because of recent anomalies in the available data." )
     } else {
-      plot <- plot +
+      plot <- scoringutils::plot_predictions(
+          plot_data, 
+          x = "target_end_date",
+          by = rlang::as_name(facetting_var)
+        )  +
+        facet_wrap(
+          facetting_var, 
+          ncol = n_cols,
+          scales = "free_y"
+        ) +
         theme(legend.position = "bottom",
               strip.placement = "outside",
               strip.text = element_text(colour = 'black'),
