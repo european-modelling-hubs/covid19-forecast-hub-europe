@@ -7,7 +7,7 @@ library(EuroForecastHub)
 
 ensembles <- list()
 
-all_histories <- c("10", "All")
+all_histories <- c("All") #"10",
 
 unweighted_methods <- c("mean", "median")
 weighted_methods <- c(paste0("relative_skill_weighted_", unweighted_methods))
@@ -17,8 +17,13 @@ all_dates <- vroom(here("code", "ensemble", "EuroCOVIDhub",
                         "method-by-date.csv")) %>%
   pull(forecast_date)
 
-all_cutoffs <- c(FALSE, TRUE)
+# restrict to evaluation period
+all_dates <- all_dates[all_dates <= as.Date("2022-03-07")]
 
+# Cutoff early weeks with no score available
+all_cutoffs <- c(FALSE) #TRUE
+
+# Run
 for (cutoff in all_cutoffs) {
   if (cutoff) {
     all_dates <- all_dates[-seq(1, 7)]
@@ -32,7 +37,8 @@ for (cutoff in all_cutoffs) {
                            methods = unweighted_methods,
                            verbose = TRUE,
                            rel_wis_cutoff = if_else(cutoff, 1, Inf),
-                           identifier = paste0(if_else(cutoff, "cutoff", "")))
+                           identifier = paste0(if_else(cutoff, "cutoff", "")),
+                           min_nmodels = 3)
 
  for (history in all_histories) {
    ## Run weighted ensembles for all past dates ------------------------------------
@@ -43,7 +49,8 @@ for (cutoff in all_cutoffs) {
                             verbose = TRUE,
                             rel_wis_cutoff = if_else(cutoff, 1, Inf),
                             identifier = paste0(if_else(cutoff, "cutoff_", ""),
-                                                history))
+                                                history),
+                            min_nmodels = 3)
  }
 }
 
