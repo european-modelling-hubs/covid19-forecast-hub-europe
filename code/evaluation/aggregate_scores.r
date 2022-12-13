@@ -35,8 +35,8 @@ restrict_weeks <-
   ifelse(is.null(opts$restrict_weeks), 4L, as.integer(opts$restrict_weeks))
 subdir <- ifelse(is.null(opts$subdir), "", opts$subdir)
 re_run <- !is.null(opts$re_run) && opts$re_run
+latest_date <- ifelse(is.null(opts$latest_date), today(), as.Date(opts$latest_date))
 
-latest_date <- today()
 wday(latest_date) <- get_hub_config("forecast_week_day")
 
 ## can modify manually if wanting to re-run past evaluation
