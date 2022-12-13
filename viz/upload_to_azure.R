@@ -4,7 +4,8 @@ to_upload <- c(
   "viz/settings_model_selection.json",
   "viz/metadata.json",
   "viz/forecasts_to_plot.json",
-  "viz/truth_to_plot.csv"
+  "viz/truth_to_plot.csv",
+  "data-locations/locations_eu.csv"
 )
 
 bl_endp_key <- storage_endpoint(
