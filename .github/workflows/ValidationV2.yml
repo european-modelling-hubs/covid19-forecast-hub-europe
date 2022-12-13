@@ -1,18 +1,16 @@
 name: Validations v2
 
 on:
+  # Instead of pull_request to be able to post comments
   pull_request_target:
     branches: [ main ]
     paths:
       - 'data-processed/**'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.2]
 
     steps:
     - uses: actions/checkout@v2
@@ -22,14 +20,14 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-        architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+        python-version: '3.8'
 
     - name: Install dependencies
-      run: pip3 install -r requirements.txt
+      run: pip3 install -r stable-req.txt
 
     - name: Run Validations
       env:
-        GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        # Necessary for posting comments
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: python3 main.py
 

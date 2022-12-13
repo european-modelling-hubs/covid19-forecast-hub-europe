@@ -1,0 +1,26 @@
+team_name: Universidad Carlos III de Madrid
+model_name: EpiGraph simulator
+model_abbr: UC3M-EpiGraph
+model_contributors:
+  - name: David E. Singh
+    affiliation: Universidad Carlos III de Madrid
+    email: dexposit@inf.uc3m.es
+  - name: Miguel Guzman Merino
+    affiliation: Universidad Carlos III de Madrid
+    email: mguzman@pa.uc3m.es
+  - name: Maria Cristina Marinescu
+    affiliation: Barcelona Supercomputing Center
+    email: mariacristina.marinescu@gmail.com
+  - name: Jesus Carretero
+    affiliation: Universidad Carlos III de Madrid
+    email: jesus.carretero@uc3m.es
+  - name: Alberto Cascajo Garcia
+    affiliation: Universidad Carlos III de Madrid
+    email: acascajo@inf.uc3m.es
+website_url: https://www.arcos.inf.uc3m.es/epigraph/
+license: cc-by-4.0
+team_model_designation: primary
+methods: Agent-based parallel simulator that models individual interactions extracted
+  from social networks and demographical data.
+team_funding: U3CM, Instituto de Salud Carlos III, Gobierno de España, European Commission
+citation: https://doi.org/10.3389/fpubh.2021.636023

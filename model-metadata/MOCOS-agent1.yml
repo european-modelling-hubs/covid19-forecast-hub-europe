@@ -1,0 +1,28 @@
+team_name: MOCOS group
+model_name: agent1
+model_abbr: MOCOS-agent1
+model_contributors:
+  - name: Marek Bawiec
+  - name: Marcin Bodych
+  - name: Tyll Krueger
+  - name: Tomasz Ozanski
+  - name: Barbara Pabjan
+  - name: Agata Migalska
+  - name: Przemyslaw Biecak
+  - name: Viktor Bezborodov
+  - name: Ewa Szczurek
+  - name: Ewaryst Rafajłowicz
+  - name: Ewa Rafajłowicz
+  - name: Wojciech Rafajłowicz
+website_url: https://mocos.pl/
+license: other
+team_model_designation: primary
+methods: Agent-based microsimulation model
+team_funding: ECDC
+data_inputs: tba
+citation: https://www.medrxiv.org/content/10.1101/2020.03.25.20043109v2
+methods_long: Agent based model. Continuous time stochastic microsimulation on the
+  base of census data for household composition , age distribution, working places
+  etc.). Model includes contact tracing - classic and app based- , testing and quarantine
+  . All relevant duration times like incubation time , time till hospitalization,
+  time till testing are sampled fom distributions based on empirical data

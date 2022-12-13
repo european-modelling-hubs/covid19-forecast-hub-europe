@@ -1,0 +1,33 @@
+team_name: UNED
+model_name: PreCoV2 v0.1
+model_abbr: UNED-PreCoV2
+model_contributors:
+  - name: José L. Aznarte
+    affiliation: Universidad Nacional de Educacion a Distancia -- UNED (www.uned.es)
+    email: jlaznarte@dia.uned.es
+    twitter: jlaznarte
+  - name: César Pérez
+    affiliation: Inverence -- Bayesian Data Modelling to drive Business Strategy (www.inverence.com)
+    email: cesar.perez@inverence.com
+    twitter: inverence
+  - name: José Almagro
+    affiliation: Inverence -- Bayesian Data Modelling to drive Business Strategy (www.inverence.com)
+    email: jose.almagro@inverence.com
+  - name: Pedro Álvarez
+    affiliation: Roxu
+    email: pag@xsto.info
+  - name: Álvaro Ortiz
+    affiliation: Populate (www.populate.tools)
+    email: alvaro@populate.tools
+  - name: Fernando Blat
+    affiliation: Populate (www.populate.tools)
+    email: fernando@populate.tools
+website_url: https://precov2.org
+license: cc-by-sa-4.0
+team_model_designation: primary
+methods: Bayesian time series models with ARIMA noise and fixed transfer functions
+  for each input.
+team_funding: UNED, Inverence, POPULATE, Instituto de Salud Carlos III, Gobierno de
+  España
+data_inputs: EsCovid19Data (https://github.com/montera34/escovid19data) and Google.
+citation: https://precov2.org/metodologia

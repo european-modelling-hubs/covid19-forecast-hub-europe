@@ -7,10 +7,15 @@ library("janitor")
 library("tidyr")
 library("gh")
 
+use_sources <- c("official")
+
 owner <- "epiforecasts"
 repo <- "covid19-forecast-hub-europe"
 path <- c(scraped = "data-truth/ECDC/raw/scraped.csv",
-          official = "data-truth/ECDC/raw/official.csv")
+          official = "data-truth/ECDC/raw/official.csv",
+          owid = "data-truth/OWID/covid-hospitalizations.csv")
+
+path <- path[use_sources]
 
 commits <-
   lapply(path, function(x) {
@@ -27,17 +32,20 @@ shas <- lapply(commits, lapply, function(x) {
 })
 shas <- lapply(shas, bind_rows)
 
-## thin scraped
-shas$scraped <- shas$scraped %>%
-  filter(as.integer(max(download_date) - download_date) %% 7 == 0,
-         !duplicated(download_date))
+## thin scraped, prioritising Thursdays
+for (to_thin in intersect(c("scraped", "owid"), names(shas))) {
+  shas[[to_thin]] <- shas[[to_thin]] %>%
+    filter(lubridate::wday(download_date, week_start = 1) == 4,
+           !duplicated(download_date))
+}
 
 hosp_data <-
   lapply(names(path), function(source) {
     apply(shas[[source]], 1, function(x) {
       read_csv(
         paste("https://raw.githubusercontent.com", owner, repo, x[["sha"]], path[[source]],
-              sep = "/")
+              sep = "/"),
+        show_col_types = FALSE
       ) %>%
         mutate(download_date = as.Date(x[["download_date"]]))
     })
@@ -46,12 +54,26 @@ hosp_data <-
 names(hosp_data) <- names(path)
 hosp_data <- lapply(hosp_data, bind_rows)
 
-hosp_data$scraped <- hosp_data$scraped %>%
-  mutate(week_end = ceiling_date(date, unit = "week", week_start = 7)) %>%
-  group_by(location_name, date = week_end, source, type, download_date) %>%
-  summarise(value = sum(value), n = n(), .groups = "drop") %>%
-  filter(n == 7) %>%
-  select(-n)
+if ("official" %in% names(hosp_data)) {
+  hosp_data$official <- hosp_data$official %>%
+    filter(is.na(indicator) | grepl("new hospital admissions", indicator))
+}
+
+if ("scraped" %in% names(hosp_data)) {
+  hosp_data$scraped <- hosp_data$scraped %>%
+    filter(is.na(indicator) | grepl("New_Hospitalised", indicator)) %>%
+    mutate(week_end = ceiling_date(date, unit = "week", week_start = 7)) %>%
+    group_by(location_name, date = week_end, source, type, download_date) %>%
+    summarise(value = sum(value), n = n(), .groups = "drop") %>%
+    filter(n == 7) %>%
+    select(-n)
+}
+
+if ("owid" %in% names(hosp_data)) {
+  hosp_data$owid <- hosp_data$owid |>
+    filter(lubridate::wday(date, week_start = 1) == 7) |>
+    select(location_name, location, date, value, source, type, download_date)
+}
 
 all <- bind_rows(hosp_data) %>%
   filter(date >= "2021-05-01") %>%
@@ -71,9 +93,10 @@ delays <- all %>%
   ungroup() %>%
   mutate(rel_diff = (final_value - value) / final_value)
 
-## don't use delays that would have recently resulted in final relative differences of >5%
+## don't use delays that would have recently resulted in
+## final relative differences of >5% in the last 3 months
 dont_use <- delays %>%
-  filter(date >= "2021-10-10", rel_diff > 0.05) %>%
+  filter(date >= max(date) - 12 * 7, rel_diff > 0.05) %>%
   select(location_name, source, type, download_delay) %>%
   distinct() %>%
   arrange(location_name)
@@ -91,8 +114,8 @@ filtered <- filtered %>%
 
 final_table <- filtered %>%
   select(location_name, source, type, truncate_weeks = data_delay) %>%
-  ## sort to prefer: remove fewer weeks, Scraped over ECDC (because daily)
-  arrange(location_name, truncate_weeks, desc(type)) %>%
+  ## sort to prefer: remove fewer weeks, ECDC over OWID
+  arrange(location_name, truncate_weeks, type) %>%
   group_by(location_name) %>%
   ## take top choice in each country
   slice(1)
@@ -104,24 +127,4 @@ final_table <- final_table %>%
 
 write_csv(final_table, here::here("code", "auto_download",
                                   "hospitalisations",
-                                  "check-sources", "sources.csv"))
-
-## main plot: hospitalisation data
-plot_data <- all %>%
-  inner_join(final_table, by = c("location_name", "type")) %>%
-  group_by(location_name) %>%
-  filter(download_date == max(download_date)) %>%
-  ungroup() %>%
-  filter(download_delay >= truncate_weeks)
-
-p <- ggplot(plot_data, aes(x = date, y = value, colour = type)) +
-  scale_colour_brewer("", palette = "Set1") +
-  facet_wrap(~location_name, scale = "free_y") +
-  theme_minimal() +
-  theme(legend.position = "bottom") +
-  geom_point() +
-  geom_line() +
-  xlab("Last day of week shown (Saturday)") +
-  ylab("Number of weekly hospitalisations")
-
-ggsave(here::here("code", "auto_download", "hospitalisations.png"), p, width = 14, height = 10)
+                                  "check-sources", "sources_update.csv"))

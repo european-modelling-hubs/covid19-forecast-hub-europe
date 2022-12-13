@@ -1,10 +1,7 @@
 library(purrr)
 
 metadata <- fs::dir_ls(
-  here::here("data-processed"),
-  regexp = "([a-zA-Z0-9_+]+\\-[a-zA-Z0-9_+]+)/metadata\\-\\1\\.txt$",
-  type = "file",
-  recurse = TRUE
+  here::here("model-metadata")
 ) %>%
   # sort with radix method ensures locale-independent output
   sort(method = "radix") %>%
@@ -12,6 +9,13 @@ metadata <- fs::dir_ls(
   set_names(map(., ~ pluck(.x, "model_abbr"))) %>%
   map(function(e) {
     e$methods_long <- ifelse(is.null(e$methods_long), e$methods, e$methods_long)
+    return(e)
+  }) %>%
+  map(function(e) {
+    e$model_contributors <- glue::glue_collapse(
+      purrr::map(e$model_contributors, "name"),
+      sep = ", "
+    )
     return(e)
   }) %>%
   # delete double spaces in all fields because they don't play nice with json

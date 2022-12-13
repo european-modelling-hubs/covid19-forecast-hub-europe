@@ -6,17 +6,12 @@ library(htmltools)
 
 ```{r insert-models-dropdown, results='asis'}
 metadata_files <- list.files(
-  here::here("data-processed"),
-  recursive = TRUE,
-  pattern = "metadata-([a-zA-Z0-9_+]+-[a-zA-Z0-9_+]+)\\.txt",
+  here::here("model-metadata"),
   full.names = TRUE
 )
 metadata <- purrr::map(metadata_files, yaml::read_yaml)
 
 models <- purrr::map_chr(metadata, "model_abbr")
-
-# Exclude baseline model
-models <- models[models != baseline_model]
 
 l <- tags$ul(class = "dropdown-menu", `aria-labelledby` = "dropdownMenuButton")
 l$children <- lapply(models, function(m) {

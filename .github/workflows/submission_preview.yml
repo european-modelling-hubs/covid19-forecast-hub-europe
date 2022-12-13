@@ -1,6 +1,7 @@
 name: Link to submission preview
 
 on:
+  # Instead of pull_request to be able to post comments
   pull_request_target:
     branches: main
     paths:
@@ -23,6 +24,7 @@ jobs:
 
       - name: Install system dependencies
         run: |
+          sudo apt-get update
           sudo apt-get install libcurl4-openssl-dev
 
       # This workflow cannot work with renv since we never check out the repo.
@@ -35,7 +37,7 @@ jobs:
         env:
           PR_NUMBER: ${{ github.event.number }}
         run: |
-          source("https://gist.github.com/Bisaloo/db50c50922dc5d8d71791fe210e625be/raw/b214beb168c5ab54db6ca7bc58eb19475742825e/link_preview_app.R")
+          source("https://gist.github.com/Bisaloo/db50c50922dc5d8d71791fe210e625be/raw/9eff642b8f481f34de2671e940327645498f972f/link_preview_app.R")
           try({
             links <- link_preview(
               gh_repo = Sys.getenv("GITHUB_REPOSITORY"),

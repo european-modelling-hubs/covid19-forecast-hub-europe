@@ -1,0 +1,18 @@
+team_name: epiforecasts
+model_name: ar_timeseries_ensemble
+model_abbr: epiforecasts-tsensemble
+model_contributors:
+  - name: Sophie Meakin
+    email: sophie.meakin@lshtm.ac.uk
+    twitter: sophiemeakin
+website_url: https://epiforecasts.io/
+license: cc-by-4.0
+team_model_designation: secondary
+methods: A mean ensemble of three autoregressive time series models (ARIMA, ETS and
+  "naive" - future admissions are equal to the last observed week, with expanding
+  uncertainty).
+repo_url: https://github.com/sophiemeakin/ecdc-covid19-admissions
+data_inputs: weekly incident admissions
+methods_long: A mean ensemble of three autoregressive time series models (ARIMA, ETS
+  and "naive" - future admissions are equal to the last observed week, with expanding
+  uncertainty).

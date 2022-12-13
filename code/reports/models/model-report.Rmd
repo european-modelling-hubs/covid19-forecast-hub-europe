@@ -1,8 +1,7 @@
 ---
 always_allow_html: true
 params:
-  report_date: "2021-06-21"
-  subdir: ""
+  report_date: "2022-05-02"
   plot_weeks: 1
   data_weeks: "10"
   model: "EuroCOVIDhub-ensemble"
@@ -85,4 +84,8 @@ table <- table %>%
 - PIT histograms
 --->
 ```{r forecast-calibration, child = "../rmdchunks/forecast-calibration.Rmd"}
+```
+
+<!--- Number of models included in the ensemble for each country and target --->
+```{r nmodels-ensemble, child = if (params$model == ensemble_model) "../rmdchunks/nmodels-ensemble.Rmd"}
 ```
