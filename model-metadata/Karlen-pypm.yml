@@ -13,4 +13,6 @@ methods: Discrete-time difference equations with long periods of constant transm
 team_funding: none
 data_inputs: JHU (cases and deaths), Google open-data (vaccinations), GISAID (genomic
   data)
-citation: https://arxiv.org/abs/2007.07156
+citation: 
+  - link: https://arxiv.org/abs/2007.07156
+    DOI: 10.48550/arXiv.2007.07156

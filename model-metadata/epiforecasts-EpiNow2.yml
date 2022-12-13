@@ -38,4 +38,8 @@ methods_long: EpiNow2 implements a Bayesian latent variable approach using the p
   population that was susceptible. Deaths were then modelled as a convolution of forecast
   cases combined with some scaling factor, a day of the week effect and a negative
   binomial observation model.
-citation: https://doi.org/10.5281/zenodo.3957489
+citation: 
+  - link: https://doi.org/10.5281/zenodo.3957489
+    DOI: doi.org/10.5281/zenodo.3957489
+  - link: https://wellcomeopenresearch.org/articles/5-112
+    DOI: 10.12688/wellcomeopenres.16006.1

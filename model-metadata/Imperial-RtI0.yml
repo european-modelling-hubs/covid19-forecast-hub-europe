@@ -14,5 +14,7 @@ website_url: https://mrc-ide.github.io/covid19-short-term-forecasts
 license: cc-by-4.0
 team_model_designation: secondary
 methods: Jointly estimates initial incidence and reproduction number
+citation: 
+  - link: https://mrc-ide.github.io/covid19-short-term-forecasts
 repo_url: https://github.com/mrc-ide/covid19-forecasts-orderly
 data_inputs: Deaths from WHO dashboard

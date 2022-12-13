@@ -19,7 +19,9 @@ team_model_designation: primary
 methods: Bayesian inference of SIR-dynamics
 repo_url: https://github.com/Priesemann-Group/covid19-forecast-hub-europe
 data_inputs: JHU CSSE (confirmed cases; reported fatalities)
-citation: https://science.sciencemag.org/content/369/6500/eabb9789
+citation: 
+  - link: https://science.sciencemag.org/content/369/6500/eabb9789
+    DOI: 10.1126/science.abb9789
 methods_long: This model simulates SIR-dynamics with a log-normal convolutions  of
   infections to obtain the delayed reported cases. Parameters of the model are  sampled
   with Hamiltonian Monte-Carlo using the PyMC3 Python library. We assume that  the

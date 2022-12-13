@@ -11,7 +11,9 @@ team_model_designation: secondary
 methods: A Bayesian autoregressive model using weekly incidence data, application
   of the forecast.vocs R package.
 data_inputs: Reported cases by date of report aggregated to weeks.
-citation: none
+citation:
+  - link: https://doi.org/10.1101/2022.10.12.22280917
+    DOI: 10.1101/2022.10.12.22280917
 methods_long: A Bayesian autoregressive model using weekly incidence data designed
   to run as a Github action. Both cases and the growth rate are assumed to be AR(1)
   processes with the growth rate being differenced and scaled by a decay parameter.

@@ -9,6 +9,8 @@ website_url: https://krausstat.shinyapps.io/covid19global/
 license: cc-by-4.0
 team_model_designation: other
 methods: Regression of hospitalizations and deaths on lagged cases with ARIMA errors.
+citation:
+  - link: https://krausstat.shinyapps.io/covid19global/
 methods_long: This is a regression of hospitalizations and deaths on lagged cases
   with ARIMA errors applied to outlier-corrected transformed weekly aggregated series.
   Forecasts of the predictor series of cases (and their uncertainty) are obtained

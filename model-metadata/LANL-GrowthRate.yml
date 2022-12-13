@@ -29,6 +29,8 @@ team_model_designation: primary
 methods: This model makes predictions about the future, unconditional on particular
   intervention strategies. Statistical dynamical growth model accounting for population
   susceptibility.
+citation: 
+  - link: https://covid-19.bsvgateway.org/
 team_funding: U.S. Department of Energy
 data_inputs: JHU (confirmed cases; reported fatalities), population
 methods_long: 'This model makes predictions about the future, unconditional on particular  intervention

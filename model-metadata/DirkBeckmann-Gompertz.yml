@@ -8,6 +8,8 @@ website_url: https://github.com/HoddleHH
 license: cc-by-4.0
 team_model_designation: primary
 methods: gompertz model
+citation: 
+  - link: https://github.com/HoddleHH
 methods_long: This model uses the Gompertz function in combination with some kind
   of "clever parameter adjustment" to already existing data for a covid infection
   wave. The model focuses currently on infection cases, but could easily be extended

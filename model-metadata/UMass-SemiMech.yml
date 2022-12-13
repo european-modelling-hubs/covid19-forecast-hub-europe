@@ -13,6 +13,8 @@ team_model_designation: primary
 methods: 'Bayesian semi-compartmental model with observations on incident case counts
   and incident deaths. Model is fit independently to each state. Model includes observation
   noise and a case detection rate. '
+citation: 
+  - link: https://github.com/dsheldon/covid
 data_inputs: JHU -CSSEGISandData
 methods_long: See GitHub for full description
 team_funding: This model development is supported by NIGMS grant R35GM119582. The

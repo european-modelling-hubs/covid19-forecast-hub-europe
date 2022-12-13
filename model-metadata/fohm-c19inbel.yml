@@ -11,6 +11,8 @@ license: cc-by-4.0
 team_model_designation: primary
 methods: Negative binomial fit/projection on reported cases by age group, then converted
   to hospitalizations by risk assumptions updated circa monthly.
+citation:
+  - link: https://git.folkhalsomyndigheten.se/martin.camitz/c19inlbel
 team_funding: Folkhälsomyndigheten
 repo_url: https://git.folkhalsomyndigheten.se/martin.camitz/c19inlbel
 data_inputs: official reported cases

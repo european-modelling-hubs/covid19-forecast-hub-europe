@@ -10,6 +10,8 @@ license: cc-by-4.0
 team_model_designation: proposed
 methods: Vector autoregression model fitted to outlier-corrected transformed weekly
   aggregated series.
+citation:
+  - link: https://krausstat.shinyapps.io/covid19global/
 methods_long: This is a vector autoregression model fitted to outlier-corrected transformed
   weekly aggregated series.
 data_inputs: JHU CSSE

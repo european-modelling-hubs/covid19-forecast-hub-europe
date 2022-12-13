@@ -12,7 +12,8 @@ team_model_designation: primary
 methods: Integral equation model based on age cohorts taking into account vaccination and testing. The parameters are adjusted to the counted cases and deaths.
 team_funding: Fraunhofer Gesellschaft, Land Rheinland-Pfalz
 data_inputs: RKI
-citation: https://www.itwm.fraunhofer.de/content/dam/itwm/de/documents/PressemitteilungenPDF/2020/20200429_Bericht_Prognosemodelle-f%C3%BCr-die-Coronapandemie.pdf
+citation: 
+  - link: https://www.itwm.fraunhofer.de/content/dam/itwm/de/documents/PressemitteilungenPDF/2020/20200429_Bericht_Prognosemodelle-f%C3%BCr-die-Coronapandemie.pdf
 methods_long: Fraunhofer-ITWM's predictions are based on a cohort model that groups
   people according to four age groups and according to the status infected, detected
   and successfully vaccinated. The dynamics of the epidemic are described by integral

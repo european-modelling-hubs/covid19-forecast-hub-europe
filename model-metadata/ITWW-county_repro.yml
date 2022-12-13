@@ -20,6 +20,8 @@ website_url: https://github.com/Stochastik-TU-Ilmenau
 license: mit
 team_model_designation: secondary
 methods: Forecasts of county level incidence based on regional reproduction numbers.
+citation: 
+  - link: https://github.com/Stochastik-TU-Ilmenau
 team_funding: ECDC
 data_inputs: RKI, ECDC, Polish patient data, county level incidences by age group,
   distribution for time to death and proportion of deaths in each age group

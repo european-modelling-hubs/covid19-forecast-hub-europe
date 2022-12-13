@@ -14,7 +14,9 @@ methods: A heterogeneous infection rate model with human mobility for epidemic m
 team_funding: Supported by US National Science Foundation Award No. 2027007 (RAPID) [May 2020 - April 2021]
 repo_url: https://github.com/scc-usc/ReCOVER-COVID-19
 data_inputs: JHU (cases, deaths), Our World in Data (vaccinations)
-citation: https://arxiv.org/abs/2007.05180
+citation: 
+  - link: https://arxiv.org/abs/2007.05180
+    DOI: 10.48550/arXiv.2007.05180
 methods_long: We use our own epidemic model called SI-kJalpha, preliminary version
   of which we have successfully used during DARPA Grand Challenge 2014. Our model
   can consider the effect of many complexities of the epidemic process and yet be

@@ -14,7 +14,8 @@ methods: Mean ensemble of human predictions of Rt which get mapped to cases and 
   using a renewal equation
 team_funding: Funding by the Health Protection Research Unit (grant code NIHR200908)
 data_inputs: ECDC deaths and cases
-citation: https://github.com/epiforecasts/covid-german-forecasts
+citation: 
+  - link: https://github.com/epiforecasts/covid-german-forecasts
 methods_long: Forecasts of Rt from experts and non-experts are elicited using a shinyApp.  Individuals
   choose a distribution (default is normal) for Rt and change the  median and width
   of that predictive distribution for evey forecast horizon.  Based on individual

@@ -25,6 +25,8 @@ team_model_designation: primary
 methods: An ensemble of multiple methods such as auto-regressive (AR)models with exogenous
   variables, Long short-term memory (lSTM) models,Kalman filter and PatchSim (an SEIR
   model).
+citation:
+  - link: https://biocomplexity.virginia.edu/
 methods_long: This is a national-level (specific to DE, PL, GB in this round) multi-method
   model forecasting the new confirmed cases. Multiple methods include AR methods,
   an LSTM model(not included in this round),Kalman filters, ARIMA(not included in

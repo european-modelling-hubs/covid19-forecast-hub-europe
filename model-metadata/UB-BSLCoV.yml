@@ -13,4 +13,6 @@ methods: Bayesian synthetic likelihood estimation for underreported non-stationa
   time series
 team_funding: UB, Instituto de Salud Carlos III, Gobierno de España
 data_inputs: JHU (https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Targets-and-horizons#truth-data)
-citation: https://arxiv.org/abs/2003.09202
+citation: 
+  - link: https://arxiv.org/abs/2003.09202
+    DOI: 10.48550/arXiv.2003.09202

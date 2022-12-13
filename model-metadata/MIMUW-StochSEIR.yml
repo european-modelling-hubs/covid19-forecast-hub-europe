@@ -14,7 +14,6 @@ team_model_designation: primary
 methods: Extended SEIR model
 team_funding: tba
 data_inputs: tba
-citation: https://arxiv.org/abs/2007.07156
 methods_long: 'SEIR model with extensions:  introduction of the undiagnosed compartment;
   testing limits  influencing number of diagnosed cases; stochastic perturbations
   of time-dependent contact rate'

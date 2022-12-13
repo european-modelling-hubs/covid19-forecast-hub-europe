@@ -22,6 +22,10 @@ website_url: https://biocomsc.upc.edu/en/covid-19
 license: cc-by-4.0
 team_model_designation: primary
 methods: Empirical model based on cases and deaths dynamics.
+citation: 
+  - link: https://doi.org/10.1371/journal.pcbi.1008431
+    DOI: 10.1371/journal.pcbi.1008431
+  - link: https://europepmc.org/article/ppr/ppr492063
+    DOI: 10.21203/rs.3.rs-1581688/v1
 team_funding: European Commission, DG-CONNECT (CNECT/LUX/2020/LVP/0085, LC-01591965);
   Ministerio de Ciencia e Innovación, Gobierno de España (PGC2018-095456-B-I00)
-citation: https://doi.org/10.1371/journal.pcbi.1008431  https://europepmc.org/article/ppr/ppr492063

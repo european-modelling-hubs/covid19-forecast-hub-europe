@@ -15,5 +15,7 @@ license: cc-by-4.0
 team_model_designation: primary
 methods: Uses both cases and deaths to estimate an observed CFR. Projections are based
   on the estimated CFR.
+citation: 
+  - link: https://mrc-ide.github.io/covid19-short-term-forecasts
 repo_url: https://github.com/mrc-ide/covid19-forecasts-orderly
 data_inputs: Cases and deaths from WHO dashboard

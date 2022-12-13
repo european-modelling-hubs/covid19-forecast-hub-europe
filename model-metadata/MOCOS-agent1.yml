@@ -20,7 +20,9 @@ team_model_designation: primary
 methods: Agent-based microsimulation model
 team_funding: ECDC
 data_inputs: tba
-citation: https://www.medrxiv.org/content/10.1101/2020.03.25.20043109v2
+citation: 
+  - link: https://www.medrxiv.org/content/10.1101/2020.03.25.20043109v2
+    DOI: 10.1101/2020.03.25.20043109 
 methods_long: Agent based model. Continuous time stochastic microsimulation on the
   base of census data for household composition , age distribution, working places
   etc.). Model includes contact tracing - classic and app based- , testing and quarantine

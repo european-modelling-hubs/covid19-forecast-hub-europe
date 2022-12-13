@@ -9,6 +9,8 @@ license: cc-by-4.0
 team_model_designation: primary
 methods: Multiple skewed gaussian distribution peaks fit to raw data
 team_funding: None (I'm a retired Experimental Physicist working at home)
+citation: 
+  - link: http://rwalraven.com/COVID19
 data_inputs: Existing case and death raw JHU data plus hospitalization data from HealthData.gov.
 methods_long: 'The incremental cases and deaths of a single outbreak predicted by
   a simple SEIR model can be approximated closely with a particular skewed gaussian

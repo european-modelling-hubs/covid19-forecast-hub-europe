@@ -11,6 +11,8 @@ team_model_designation: primary
 methods: Delta-variant and other cases are modelled as independent branching processes,
   with weekly growth\ \ rates following random walks. Forecasts for 3 and 4 wk are
   likely unreliable.
+citation:
+  - link: https://github.com/jbracher/branching_process_delta
 team_funding: Helmholtz Innovation and Data Science Project "SIMCARD"
 data_inputs: JHU (confirmed cases), RKI sequencing data (variants)
 methods_long: The total weekly incidence is modelled as the sum of two independent

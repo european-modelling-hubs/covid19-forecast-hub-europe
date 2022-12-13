@@ -29,4 +29,6 @@ methods_long: 'The results are obtained using the compartmental model SUIHTER wh
   The current version of the model accounts for two additional compartments collecting
   individuals who have received the first and the second dose of vaccine, respectively.
   Different NPIs and vaccination scenarios can be accounted for in the model forecast.'
-citation: https://doi.org/10.1098/rspa.2021.0027
+citation: 
+  - link: https://doi.org/10.1098/rspa.2021.0027
+    DOI: 10.1098/rspa.2021.0027

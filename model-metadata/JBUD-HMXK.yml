@@ -9,5 +9,7 @@ license: cc-by-nc-nd-4.0
 team_model_designation: primary
 methods: 'Heavily modified infection-age SIR-X model with waning immunity, vaccinations,
   seasonality and undetected cases. '
+citation:
+  - link: https://joebud.github.io/covid-19-analyses/
 data_inputs: See GitHub for full description
 methods_long: See GitHub for full description

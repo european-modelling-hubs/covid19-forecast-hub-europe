@@ -10,6 +10,8 @@ website_url: https://github.com/Stochastik-TU-Ilmenau
 license: cc-by-4.0
 team_model_designation: primary
 methods: Extended Kalman filter based on reproduction equation
+citation: 
+  - link: https://github.com/Stochastik-TU-Ilmenau
 data_inputs: JHU
 methods_long: We use the reproduction equation to obtain a state space model whose
   states  comprise incidences, the current reproduction number, the generation time

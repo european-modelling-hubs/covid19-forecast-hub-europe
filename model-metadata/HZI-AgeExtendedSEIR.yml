@@ -18,6 +18,8 @@ license: mit
 data_inputs: RKI (reported cases, reported deaths)
 team_model_designation: primary
 methods: Deterministic SEIR type model
+citation: 
+  - link: https://www.helmholtz-hzi.de/en/nc/research/research-topics/bacterial-and-viral-pathogens/epidemiology/team/
 methods_long: This model is an extended SEIR model with additional compartments for
   the hospitalized, intensive unit, long-COVID, and death. The model is also developed
   as an age-structured model. The model is fitted to reported cases and reported cumulative

@@ -13,7 +13,8 @@ team_model_designation: primary
 methods: Mean ensemble of human predictions
 team_funding: Funding by the Health Protection Research Unit (grant code NIHR200908)
 data_inputs: ECDC deaths and cases
-citation: https://github.com/epiforecasts/covid-german-forecasts
+citation: 
+  - link: https://github.com/epiforecasts/covid-german-forecasts
 methods_long: Forecasts from experts and non-experts are elicited using a shinyApp.  Two
   variants of this shiynApp exist. In one, forecasters are asked to predict  cases
   and deaths directly. In the other, forecasters are asked to predict Rt.  The Rt

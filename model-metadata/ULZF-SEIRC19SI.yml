@@ -11,4 +11,6 @@ team_model_designation: primary
 methods: SEIHR model extended with compartments for hospitals, intensive care units,
   asymptomatic cases, separate submodels for vaccinated and unvaccinated, divided
   to 5 age subgroups of population
+citation:
+  - link: https://apps.lusy.fri.uni-lj.si
 data_inputs: COVID-19-sledilnik, https://covid-19.sledilnik.org/en/

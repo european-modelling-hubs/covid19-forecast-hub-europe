@@ -19,6 +19,8 @@ license: cc-by-4.0
 team_model_designation: primary
 methods: SEIR model projections for daily incident confirmed COVID cases and deaths
   by using AI to fit actual cases observed.
+citation: 
+  - link: https://iem.com/
 data_inputs: JHU reported daily confirmed cases and deaths
 methods_long: IEM is currently using an AI model to fit data from various sources  and
   project new cases of COVID-19. We do not assume the average number of secondary  infections

@@ -17,6 +17,8 @@ team_model_designation: primary
 methods: Bayesian Dirichlet-Multinomial models for counts of patients in mutually
   exclusive and exhaustive categories such as hospitalized in regular wards and in
   intensive care units, deceased and recovered
+citation: 
+  - link: https://github.com/francescobartolucci/ARMultinomial
 methods_long: We us a Bayesian Dirichlet-Multinomial autoregressive models for time-series
   of counts of patients in mutually exclusive and exhaustive observational categories,
   defined according to the severity of the patient status and the required treatment.

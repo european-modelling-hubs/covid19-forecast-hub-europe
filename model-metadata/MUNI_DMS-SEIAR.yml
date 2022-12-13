@@ -14,6 +14,8 @@ team_funding: MUNI/11/02202001/2020
 data_inputs: UZIS data for predictive models (anonymized set modely_05_datumy.csv
   of confirmed subjects https://onemocneni-aktualne.mzcr.cz/api/account/dokumentace),
   google mobility reports (https://github.com/ActiveConclusion/COVID19_mobility/tree/master/google_reports)
+citation: 
+  - link: https://webstudio.shinyapps.io/MAMES/
 methods_long: This is a model based on a mechanistic compartmental approach, where
   some parameters are taken from literature, some parameters are estimated from an
   anonymized dataset of confirmed subjects. It estimates moving ascertainment rate

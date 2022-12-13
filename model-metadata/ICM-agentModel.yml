@@ -24,7 +24,9 @@ team_funding: funded by the Ministry of Science and Higher Education of Poland w
 data_inputs: 'Polish Ministry of Health (general epidemic data: number of cases, deaths,
   etc.) and Polish National Institute for Public Health (Detailed epidemic data: time
   of hospitalization, age, symptoms, contact tracing etc.)'
-citation: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4039054
+citation: 
+  - link: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4039054
+    DOI: 10.2139/ssrn.4039054
 methods_long: The main idea behind our agent-based model is a representation of the
   social structure of population of Poland to the level of individual citizen and
   its social contacts. Our model has resolution in space and contexts. It means it

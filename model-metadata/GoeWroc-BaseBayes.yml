@@ -11,3 +11,5 @@ website_url: https://github.com/2bys/covid19-forecast-hub-europe
 license: cc-by-4.0
 team_model_designation: primary
 methods: A mixture between a SIR and Bayesian modelling approach, with regard to a possible spatial extension and local r values in later versions.
+citation: 
+  - link: https://github.com/2bys/covid19-forecast-hub-europe

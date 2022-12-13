@@ -19,3 +19,6 @@ methods_long: A variant of SeirFilter (https://www.medrxiv.org/content/10.1101/2
   estimation from past. In particular, R0 is estimated by the weighted time-average
   of reproduction number  (computed as R(t)=(C(t) - C(t-7))/(C(t-5)-C(t-12))) divided
   by the estimated number of contacts (obtained from the Google mobilty indices).
+citation:
+  - link: https://www.medrxiv.org/content/10.1101/2021.02.16.21251834v1
+    DOI: 10.1101/2021.02.16.21251834

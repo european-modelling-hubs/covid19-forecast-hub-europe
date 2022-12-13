@@ -30,4 +30,5 @@ methods: Bayesian time series models with ARIMA noise and fixed transfer functio
 team_funding: UNED, Inverence, POPULATE, Instituto de Salud Carlos III, Gobierno de
   España
 data_inputs: EsCovid19Data (https://github.com/montera34/escovid19data) and Google.
-citation: https://precov2.org/metodologia
+citation: 
+  - link: https://precov2.org/metodologia

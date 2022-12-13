@@ -16,6 +16,8 @@ team_model_designation: primary
 data_inputs: RKI and DIVI, ECDC, age distributions for cases and deaths from RKI as
   described in methods, case & ICU  & death counts
 methods: SECIR type model
+citation:
+  - link: https://github.com/holgerman/covid19-forecast-hub-europe
 methods_long: We integrate an adapted mechanistic epidemiologic model of the SECIR
   type into Input-Output Non-Linear Dynamical Systems (IO-NLDS) serving as hidden
   layers, i.e. the true dynamics cannot directly be observed. Thereby, we include

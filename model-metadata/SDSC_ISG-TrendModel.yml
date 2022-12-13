@@ -29,7 +29,8 @@ methods: The Trend Model predicts daily cases and deaths using linear extrapolat
   decomposition model.
 repo_url: https://renkulab.io/gitlab/covid-19/covid-19-forecast
 data_inputs: JHU CSSE (confirmed cases; reported fatalities)
-citation: https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/
+citation: 
+  - link: https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/
 methods_long: Our forecasts are based on the reported numbers of cases and deaths
   at the country or regional level. Our modeling substantially relies on estimation
   of the underlying trend by a robust LOESS seasonal-trend decomposition model, which

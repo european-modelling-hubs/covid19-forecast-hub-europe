@@ -21,4 +21,7 @@ methods_long: This model makes predictions for future cases based on a heavily m
   are fixed using a metanalysis conducted by the CovidAnalytics group of over 150
   parameters while epidemiological parameters are fitted to hisorical death counts
   and detected cases.
-citation: https://www.covidanalytics.io/DELPHI_documentation_pdf
+citation: 
+  - link: https://pubsonline.informs.org/doi/10.1287/opre.2022.2306
+    DOI: 10.1287/opre.2022.2306
+  - link: https://www.covidanalytics.io/DELPHI_documentation_pdf
