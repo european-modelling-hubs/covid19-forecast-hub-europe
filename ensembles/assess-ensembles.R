@@ -1,0 +1,23 @@
+# Workflow for evaluating experimental ensembles from forecasts from the Euro Forecast Hub.
+  # Create ensembles using a variety of different methods,
+  # save them in a separate /ensembles/ directory, and score them using the
+  # same process for scoring individual real-time weekly forecasts.
+
+# Uses scoringutils dev
+  # remotes::install_github("epiforecasts/scoringutils", dependencies = TRUE)
+
+library(here)
+library(EuroForecastHub)
+# Create and save ensembles to separate ensembles/ directory
+source(here("code", "ensemble", "utils", "create-all-methods-ensembles.R"))
+
+# Score and aggregate scores
+opts <- list(
+  subdir = "ensembles",
+  restrict_weeks = 4L,
+  histories = c("All"),
+  re_run = TRUE,
+  latest_date = as.Date("2022-03-07")
+)
+source(here("code", "evaluation", "score_models.r"))
+source(here("code", "evaluation", "aggregate_scores.r"))
