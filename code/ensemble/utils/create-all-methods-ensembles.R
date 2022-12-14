@@ -5,34 +5,32 @@ library(dplyr)
 library(purrr)
 library(EuroForecastHub)
 
-ensembles <- list()
+# Settings
+if (!exists("opts")) opts <- list(
+  subdir = "ensembles",
+  latest_date = as.Date("2022-03-07"),
+  histories = c("All"), #"10"
+)
 
-all_histories <- c("All") #"10",
-
+# Methods ---------------------------------------------------------------
 unweighted_methods <- c("mean", "median")
 weighted_methods <- c(paste0("relative_skill_weighted_", unweighted_methods))
 
+# Dates -----------------------------------------------------------------
 ## Get all past weeks' forecast dates
 all_dates <- vroom(here("code", "ensemble", "EuroCOVIDhub",
                         "method-by-date.csv")) %>%
   pull(forecast_date)
 
 # restrict to evaluation period
-all_dates <- all_dates[all_dates <= as.Date("2022-03-07")]
+all_dates <- all_dates[all_dates <= opts$latest_date]
+all_dates <- all_dates[-seq(1, 4)]
 
-# Cutoff early weeks with no score available
-all_cutoffs <- c(FALSE) #TRUE
+# Run ---------------------------------------------------------------------
+ensembles <- list()
 
-# Run
-for (cutoff in all_cutoffs) {
-  if (cutoff) {
-    all_dates <- all_dates[-seq(1, 7)]
-  } else {
-    all_dates <- all_dates[-seq(1, 4)]
-  }
-
-  ## Run unweighted ensembles for all past dates ------------------------------------
-  ensembles[[length(ensembles) + 1]] <-
+## Run unweighted ensembles for all past dates ---
+ensembles[[length(ensembles) + 1]] <-
     run_multiple_ensembles(forecast_dates = all_dates,
                            methods = unweighted_methods,
                            verbose = TRUE,
@@ -40,8 +38,8 @@ for (cutoff in all_cutoffs) {
                            identifier = paste0(if_else(cutoff, "cutoff", "")),
                            min_nmodels = 3)
 
- for (history in all_histories) {
-   ## Run weighted ensembles for all past dates ------------------------------------
+## Run weighted ensembles for all past dates ---
+ for (history in histories) {
    ensembles[[length(ensembles) + 1]] <-
      run_multiple_ensembles(forecast_dates = all_dates,
                             methods = weighted_methods,
@@ -52,19 +50,19 @@ for (cutoff in all_cutoffs) {
                                                 history),
                             min_nmodels = 3)
  }
-}
 
+# Save --------------------------------------------------------------------
 for (i in 1:length(ensembles)) {
 
   ## Save in ensemble/data-processed/model
   walk(ensembles[[i]],
-       ~ suppressWarnings(dir.create(here("ensembles", "data-processed",
+       ~ suppressWarnings(dir.create(here(subdir, "data-processed",
                                           paste0("EuroCOVIDhub-", .x$method)),
                                      recursive = TRUE)))
 
   walk(ensembles[[i]],
        ~ vroom_write(x = .x$ensemble,
-                     path = here("ensembles", "data-processed",
+                     path = here(subdir, "data-processed",
                                  paste0("EuroCOVIDhub-", .x$method),
                                  paste0(.x$forecast_date, "-EuroCOVIDhub-",
                                         .x$method, ".csv")),
@@ -72,13 +70,13 @@ for (i in 1:length(ensembles)) {
 
   ## Save weights in ensemble/weights/model
   walk(ensembles[[i]],
-       ~ suppressWarnings(dir.create(here("ensembles", "weights",
+       ~ suppressWarnings(dir.create(here(subdir, "weights",
                                           paste0("EuroCOVIDhub-", .x$method)),
                                      recursive = TRUE)))
 
   walk(ensembles[[i]],
        ~ vroom_write(x = .x$weights,
-                     path = here("ensembles", "weights",
+                     path = here(subdir, "weights",
                                  paste0("EuroCOVIDhub-", .x$method),
                                  paste0(.x$forecast_date, "-EuroCOVIDhub-",
                                         .x$method, ".csv")),
