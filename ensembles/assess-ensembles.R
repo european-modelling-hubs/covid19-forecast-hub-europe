@@ -2,9 +2,11 @@
   # Create ensembles using a variety of different methods,
   # save them in a separate /ensembles/ directory, and score them using the
   # same process for scoring individual real-time weekly forecasts.
-
-# Uses scoringutils dev
+# Requires:
+# Scoringutils dev version
   # remotes::install_github("epiforecasts/scoringutils", dependencies = TRUE)
+# EuroForecastHub
+  # remotes::install_github("covid19-forecast-hub-europe/EuroForecastHub")
 
 library(here)
 library(EuroForecastHub)
