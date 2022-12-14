@@ -30,12 +30,13 @@ if (interactive()) {
 
 ## default options
 histories_str <- ifelse(is.null(opts$histories), "10,Inf", opts$histories)
+histories_str <- gsub("All", "Inf", histories_str)
 histories <- as.numeric(unlist(strsplit(histories_str, split = ",")))
 restrict_weeks <-
   ifelse(is.null(opts$restrict_weeks), 4L, as.integer(opts$restrict_weeks))
 subdir <- ifelse(is.null(opts$subdir), "", opts$subdir)
 re_run <- !is.null(opts$re_run) && opts$re_run
-latest_date <- ifelse(is.null(opts$latest_date), today(), as.Date(opts$latest_date))
+latest_date <- opts$latest_date
 
 wday(latest_date) <- get_hub_config("forecast_week_day")
 
@@ -73,7 +74,7 @@ for (chr_report_date in as.character(report_dates)) {
     }
     message(paste0(str, "."))
 
-    tables[[as.character(history)]] <- summarise_scores(
+    tables[[as.character(history)]] <- scoringutils::summarise_scores(
       scores = use_scores,
       report_date = report_date,
       restrict_weeks = restrict_weeks
