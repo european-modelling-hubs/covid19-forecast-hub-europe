@@ -102,10 +102,10 @@
       "RemoteUsername": "covid19-forecast-hub-europe",
       "RemoteRepo": "EuroForecastHub",
       "RemoteRef": "main",
-      "RemoteSha": "d3c169b4f0b618edf5da22b08853d54798c5b02e",
+      "RemoteSha": "14b43e2dc615c0c218748c65cc209ac83c6faa0e",
       "RemoteHost": "api.github.com",
       "Remotes": "reichlab/covidHubUtils, anthonynorth/roxyglobals",
-      "Hash": "e1e71eb8c59a0c1975c1c7e0eead1bae",
+      "Hash": "26043330bbac24d921cd7f75512b2ec3",
       "Requirements": [
         "cNORM",
         "covidHubUtils",
@@ -525,13 +525,13 @@
       "Version": "0.1.7",
       "Source": "GitHub",
       "RemoteType": "github",
+      "RemoteHost": "api.github.com",
       "RemoteUsername": "reichlab",
       "RemoteRepo": "covidHubUtils",
-      "RemoteRef": "HEAD",
+      "RemoteRef": "master",
       "RemoteSha": "c2f12bcc2230cca2f3a33ddb80d45fe6f488ff99",
-      "RemoteHost": "api.github.com",
       "Remotes": "reichlab/zoltr, epiforecasts/scoringutils",
-      "Hash": "39c0b12e89771697bccb69afa1e9ac64",
+      "Hash": "b72bbe882e996261c40b324391297376",
       "Requirements": [
         "DBI",
         "MMWRweek",
@@ -1045,6 +1045,26 @@
       "Repository": "CRAN",
       "Hash": "8954069286b4b2b0d023d1b288dce978",
       "Requirements": []
+    },
+    "janitor": {
+      "Package": "janitor",
+      "Version": "2.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "6de84a8c67fb247e721166049c84695f",
+      "Requirements": [
+        "dplyr",
+        "lifecycle",
+        "lubridate",
+        "magrittr",
+        "purrr",
+        "rlang",
+        "snakecase",
+        "stringi",
+        "stringr",
+        "tidyr",
+        "tidyselect"
+      ]
     },
     "jose": {
       "Package": "jose",
@@ -1573,12 +1593,12 @@
       "Version": "1.0.1",
       "Source": "GitHub",
       "RemoteType": "github",
+      "RemoteHost": "api.github.com",
       "RemoteUsername": "epiforecasts",
       "RemoteRepo": "scoringutils",
-      "RemoteRef": "HEAD",
+      "RemoteRef": "master",
       "RemoteSha": "3e1a9d691985c27dd912e4aed3897a5d32b9ebfb",
-      "RemoteHost": "api.github.com",
-      "Hash": "2edc176ace913a1938a1c8e074341857",
+      "Hash": "25cdfb8d6c4cc1272fc00ecb99cbd100",
       "Requirements": [
         "data.table",
         "ggdist",
@@ -1625,6 +1645,17 @@
         "sourcetools",
         "withr",
         "xtable"
+      ]
+    },
+    "snakecase": {
+      "Package": "snakecase",
+      "Version": "0.11.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "4079070fc210c7901c0832a3aeab894f",
+      "Requirements": [
+        "stringi",
+        "stringr"
       ]
     },
     "sourcetools": {
@@ -1850,15 +1881,15 @@
     },
     "zoltr": {
       "Package": "zoltr",
-      "Version": "0.941",
+      "Version": "0.98",
       "Source": "GitHub",
       "RemoteType": "github",
+      "RemoteHost": "api.github.com",
       "RemoteUsername": "reichlab",
       "RemoteRepo": "zoltr",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "d101deb2f7cfa50bbead93e216aa65596a54f15c",
-      "RemoteHost": "api.github.com",
-      "Hash": "27ed7277cf66a91f0947d5dfce120213",
+      "RemoteRef": "master",
+      "RemoteSha": "0ef9f02cbaea78a930867de9685375c2a0ee8376",
+      "Hash": "624303c334251f1b1c555a0ec83d6924",
       "Requirements": [
         "MMWRweek",
         "base64url",
