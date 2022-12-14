@@ -74,7 +74,7 @@ for (chr_report_date in as.character(report_dates)) {
     }
     message(paste0(str, "."))
 
-    tables[[as.character(history)]] <- scoringutils::summarise_scores(
+    tables[[as.character(history)]] <- EuroForecastHub::summarise_scores(
       scores = use_scores,
       report_date = report_date,
       restrict_weeks = restrict_weeks
