@@ -6,6 +6,7 @@ library(lubridate)
 library(ggplot2)
 library(tidyr)
 library(scales)
+library(svglite)
 
 data_dir <- here("data-truth", "ECDC")
 owid_dir <- here("data-truth", "OWID")
