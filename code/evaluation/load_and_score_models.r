@@ -47,7 +47,7 @@ load_and_score_models <- function(subdir = "") {
 
   message("Scoring all forecasts.")
 
-  scores <- score_forecasts(
+  scores <- EuroForecastHub::score_forecasts(
     forecasts = data,
     quantiles = get_hub_config("forecast_type")$quantiles
   )
