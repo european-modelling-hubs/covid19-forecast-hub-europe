@@ -134,7 +134,9 @@ tool](https://covid19forecasthub.eu/visualisation/) (code available
 [here](https://github.com/SignaleRKI/forecast-europe)) has been
 developed by the [Signale Team at Robert Koch
 Institute](https://www.rki.de/EN/Content/infections/epidemiology/signals/signals_node.html):
-- Fabian Eckelmann - Knut Perseke - Alexander Ullrich
+  - Fabian Eckelmann 
+  - Knut Perseke 
+  - Alexander Ullrich
 
 ### Data license and reuse
 
