@@ -34,20 +34,19 @@ ensembles[[length(ensembles) + 1]] <-
     run_multiple_ensembles(forecast_dates = all_dates,
                            methods = unweighted_methods,
                            verbose = TRUE,
-                           rel_wis_cutoff = if_else(cutoff, 1, Inf),
-                           identifier = paste0(if_else(cutoff, "cutoff", "")),
+                           rel_wis_cutoff = Inf,
+                           identifier = "",
                            min_nmodels = 3)
 
 ## Run weighted ensembles for all past dates ---
- for (history in histories) {
+ for (history in opts$histories) {
    ensembles[[length(ensembles) + 1]] <-
      run_multiple_ensembles(forecast_dates = all_dates,
                             methods = weighted_methods,
                             history = history,
                             verbose = TRUE,
-                            rel_wis_cutoff = if_else(cutoff, 1, Inf),
-                            identifier = paste0(if_else(cutoff, "cutoff_", ""),
-                                                history),
+                            rel_wis_cutoff = Inf,
+                            identifier = paste0("", history),
                             min_nmodels = 3)
  }
 
@@ -56,13 +55,13 @@ for (i in 1:length(ensembles)) {
 
   ## Save in ensemble/data-processed/model
   walk(ensembles[[i]],
-       ~ suppressWarnings(dir.create(here(subdir, "data-processed",
+       ~ suppressWarnings(dir.create(here(opts$subdir, "data-processed",
                                           paste0("EuroCOVIDhub-", .x$method)),
                                      recursive = TRUE)))
 
   walk(ensembles[[i]],
        ~ vroom_write(x = .x$ensemble,
-                     path = here(subdir, "data-processed",
+                     path = here(opts$subdir, "data-processed",
                                  paste0("EuroCOVIDhub-", .x$method),
                                  paste0(.x$forecast_date, "-EuroCOVIDhub-",
                                         .x$method, ".csv")),
@@ -70,13 +69,13 @@ for (i in 1:length(ensembles)) {
 
   ## Save weights in ensemble/weights/model
   walk(ensembles[[i]],
-       ~ suppressWarnings(dir.create(here(subdir, "weights",
+       ~ suppressWarnings(dir.create(here(opts$subdir, "weights",
                                           paste0("EuroCOVIDhub-", .x$method)),
                                      recursive = TRUE)))
 
   walk(ensembles[[i]],
        ~ vroom_write(x = .x$weights,
-                     path = here(subdir, "weights",
+                     path = here(opts$subdir, "weights",
                                  paste0("EuroCOVIDhub-", .x$method),
                                  paste0(.x$forecast_date, "-EuroCOVIDhub-",
                                         .x$method, ".csv")),
