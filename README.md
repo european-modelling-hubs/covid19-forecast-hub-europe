@@ -134,9 +134,7 @@ tool](https://covid19forecasthub.eu/visualisation/) (code available
 [here](https://github.com/SignaleRKI/forecast-europe)) has been
 developed by the [Signale Team at Robert Koch
 Institute](https://www.rki.de/EN/Content/infections/epidemiology/signals/signals_node.html):
-  - Fabian Eckelmann 
-  - Knut Perseke 
-  - Alexander Ullrich
+- Fabian Eckelmann - Knut Perseke - Alexander Ullrich
 
 ### Data license and reuse
 
@@ -171,15 +169,15 @@ Data:
 > Alexander Ullrich, Graham Gibson, Evan L Ray, Nicholas G Reich, Daniel
 > Sheldon, Yijin Wang, Nutcha Wattanachit, Lijing Wang, Jan Trnka,
 > Guillaume Obozinski, … Sebastian Funk. (2022). European Covid-19
-> Forecast Hub (v2022.12.08) \[Data set\]. Zenodo.
-> <https://doi.org/10.5281/zenodo.7414276>
+> Forecast Hub (v2022.12.15) \[Data set\]. Zenodo.
+> <https://doi.org/10.5281/zenodo.7441795>
 
 <details>
 
 <summary>Bibtex</summary>
 
 ``` bibtex
-@dataset{katharine_sherratt_2022_7414276,
+@dataset{katharine_sherratt_2022_7441795,
   author       = {Katharine Sherratt and
                   Hugo Gruson and
                   Helen Johnson and
@@ -306,9 +304,9 @@ Data:
   month        = dec,
   year         = 2022,
   publisher    = {Zenodo},
-  version      = {v2022.12.08},
-  doi          = {10.5281/zenodo.7414276},
-  url          = {https://doi.org/10.5281/zenodo.7414276}
+  version      = {v2022.12.15},
+  doi          = {10.5281/zenodo.7441795},
+  url          = {https://doi.org/10.5281/zenodo.7441795}
 }
 ```
 
