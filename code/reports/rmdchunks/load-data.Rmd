@@ -1,0 +1,97 @@
+<!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
+```{r}
+library(covidHubUtils)
+library(readr)
+library(dplyr)
+library(here)
+library(lubridate)
+library(arrow)
+```
+
+```{r}
+locations <- read_csv(
+  here::here("data-locations", "locations_eu.csv")
+) |> 
+  dplyr::select(location, location_name, population)
+```
+
+```{r load-data, cache = TRUE, cache.extra = params$report_date, cache.vars="data"}
+raw_forecasts <- arrow::open_dataset(
+  here::here("data-processed"),
+  format = "csv",
+  partitioning = schema(model = string()),
+  hive_style = FALSE,
+  col_types = schema(
+    forecast_date = date32(),
+    target = string(),
+    target_end_date = date32(),
+    location = string(),
+    type = string(),
+    quantile = float32(),
+    value = float32()
+  )
+) |> 
+  # Ideally, we would handle this with separate() but it's not yet implemented 
+  # in arrow
+  dplyr::mutate(
+    horizon = as.integer(gsub("^(\\d+) .*", "\\1", target)),
+    target_variable = gsub(".* (\\w+ \\w+)$", "\\1", target),
+    .keep = "unused"
+  ) |> 
+  dplyr::filter(
+    target_variable %in% target_variables,
+    horizon %in% horizons,
+    forecast_date >= ymd("2021-03-08"),
+    forecast_date <= ymd(report_date)
+  ) |>
+  dplyr::rename(prediction = value) |> 
+  dplyr::left_join(locations) |> 
+  # set forecast date to corresponding submission date
+  mutate(
+    forecast_date = ceiling_date(forecast_date, "week", week_start = 3)
+  )
+
+## load truth data -------------------------------------------------------------
+raw_truth <- load_truth(
+  truth_source = "JHU",
+  temporal_resolution = "weekly",
+  truth_end_date = report_date,
+  hub = "ECDC"
+)
+
+truth <- raw_truth %>%
+  mutate(model = NULL) %>%
+  rename(true_value = value)
+
+# get anomalies
+anomalies <- read_csv(paste0(hub_repo, "/raw/main/data-truth/anomalies/anomalies.csv"),
+                      show_col_types = FALSE)
+
+# remove forecasts made directly after a data anomaly
+forecasts <- raw_forecasts %>%
+  mutate(previous_end_date = floor_date(forecast_date, "week", week_start = 1)) %>%
+  left_join(anomalies %>%
+            rename(previous_end_date = target_end_date),
+            by = c("target_variable",
+                   "location", "location_name",
+                   "previous_end_date")) %>%
+  filter(is.na(anomaly)) %>%
+  select(-anomaly, -previous_end_date) |> 
+  collect()
+
+# Horizon 0 data that will be filled with truth data as prediction later. This
+# is useful to connect truth data and predictions in the plots.
+horizon_0 <- forecasts |> 
+  group_by(model, forecast_date, location, location_name, population, target_variable, quantile) |> 
+  summarise(
+    horizon = 0L,
+    target_end_date = unique(forecast_date) - 2,
+    type = "point"
+  )
+
+data <- full_join(horizon_0, forecasts) |> 
+  scoringutils::merge_pred_and_obs(truth, join = "full") |> 
+  mutate(prediction = ifelse(horizon == "0", true_value, prediction))
+```
+
+## {.unlisted .unnumbered}

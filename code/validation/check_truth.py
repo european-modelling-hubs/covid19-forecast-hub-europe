@@ -18,7 +18,7 @@ locations['JHU'] = pd.read_csv(here('./data-truth/JHU/truth_JHU-Incident Deaths.
 
 with open(here('./code/validation/check_truth.txt'), 'a', encoding='utf-8') as txtfile:
   
-    latest_check = 'Latest check of truth data: {}\n'.format(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    latest_check = 'Latest check of truth data: {}\n'.format(datetime.now().strftime("%Y-%m-%d"))
     txtfile.write(latest_check + '\n')
 
     error_count = 0

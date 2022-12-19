@@ -1,5 +1,5 @@
-"forecast_date","target","target_end_date","location","type","quantile","value","scenario_id"
-"2021-03-22","1 wk ahead inc case","2021-03-27","ES","point","NA",29803.61,"forecast"
-"2021-03-22","1 wk ahead inc death","2021-03-27","ES","point","NA",713.14,"forecast"
-"2021-03-22","2 wk ahead inc case",2021-04-03,"ES","point","NA",28282.97,"forecast"
-"2021-03-22","2 wk ahead inc death",2021-04-03,"ES","point","NA",618.87,"forecast"
+forecast_date,target,target_end_date,location,type,quantile,value,scenario_id
+2021-03-22,1 wk ahead inc case,2021-03-27,ES,point,NA,29804,forecast
+2021-03-22,1 wk ahead inc death,2021-03-27,ES,point,NA,713,forecast
+2021-03-22,2 wk ahead inc case,2021-04-03,ES,point,NA,28283,forecast
+2021-03-22,2 wk ahead inc death,2021-04-03,ES,point,NA,619,forecast

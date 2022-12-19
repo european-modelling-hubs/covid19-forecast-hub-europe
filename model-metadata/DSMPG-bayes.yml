@@ -1,0 +1,28 @@
+team_name: Priesemann Group, MPI-DS
+model_name: Bayesian SIR
+model_abbr: DSMPG-bayes
+model_contributors:
+  - name: Sebastian B. Mohr
+    affiliation: Max Planck Institute for Dynamics and Self-Organization
+    email: sebastian.mohr@ds.mpg.de
+  - name: Jonas Dehning
+    affiliation: Max Planck Institute for Dynamics and Self-Organization
+    email: jonas.dehning@ds.mpg.de
+    twitter: JonasDehning
+  - name: Viola Priesemann
+    affiliation: Max Planck Institute for Dynamics and Self-Organization
+    email: viola.priesemann@ds.mpg.de
+    twitter: ViolaPriesemann
+website_url: https://github.com/Priesemann-Group/covid19_inference_forecast
+license: lgpl-3.0
+team_model_designation: primary
+methods: Bayesian inference of SIR-dynamics
+repo_url: https://github.com/Priesemann-Group/covid19-forecast-hub-europe
+data_inputs: JHU CSSE (confirmed cases; reported fatalities)
+citation: https://science.sciencemag.org/content/369/6500/eabb9789
+methods_long: This model simulates SIR-dynamics with a log-normal convolutions  of
+  infections to obtain the delayed reported cases. Parameters of the model are  sampled
+  with Hamiltonian Monte-Carlo using the PyMC3 Python library. We assume that  the
+  infection rate can change every week, with a standard deviation that is also an    optimized
+  parameter. When new governmental restrictions are enacted or lifted, we    include
+  a small prior to the change of the infection rate.

@@ -2,32 +2,47 @@ name: "Ensemble"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 11 * * 2"
-  
+    - cron: "15 11 * * 2,3"
+
 jobs:
   ensemble:
     runs-on: ubuntu-20.04
-    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-    - uses: actions/checkout@master
-    - uses: r-lib/actions/setup-r@v1
+    - uses: actions/checkout@v2
+
+    - uses: r-lib/actions/setup-r@v2
+      with:
+        install-r: false
+        use-public-rspm: true
 
     - name: Install system dependencies
-      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
+      run: |
+        sudo apt-get update
+        sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
 
-    - name: Install R dependencies
-      run: Rscript -e 'install.packages(c("here", "vroom", "purrr", "dplyr", "stringr", "lubridate"))'
+    - uses: r-lib/actions/setup-renv@v2
 
-    - name: Create mean ensemble
-      run: Rscript 'code/ensemble/simple-averages.R'
-        
+    - name: Create ensembles
+      run: Rscript 'code/ensemble/EuroCOVIDhub/create-weekly-ensemble.R'
+
     - name: Commit files
-      env:
-        AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git config user.email "action@github.com"
         git config user.name "GitHub Action - mean ensemble"
         git add --all
-        git commit -m "Build ensemble"
-        git push 
+        git diff-index --quiet HEAD || git commit -m "Build ensemble"
+        git pull --rebase origin main
+        git push
         echo "pushed to github"
+
+    - name: Create issue about failure
+      if: failure() && github.event_name != 'workflow_dispatch'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh issue create \
+          --label bug \
+          --title "${{ env.GITHUB_WORKFLOW }} GitHub Action is failing" \
+          --body-file .github/action-issue-template.md

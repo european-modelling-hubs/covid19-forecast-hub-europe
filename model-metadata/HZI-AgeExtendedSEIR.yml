@@ -1,0 +1,24 @@
+team_name: Helmholtz Zentrum fuer Infektionsforschung
+model_contributors:
+  - name: Isti Rodiah
+    email: Isti.Rodiah@helmholtz-hzi.de
+    affiliation: Helmholtz Zentrum fuer Infektionsforschung
+  - name: Berit Lange
+    email: Berit.Lange@helmholtz-hzi.de
+    affiliation: Helmholtz Zentrum fuer Infektionsforschung
+  - name: Pratizio Vanella
+    affiliation:  Pratizio Vanella
+  - name: Alexander Kuhlmann
+  - name: Wolfgang Bock
+    affiliation: Technische Universitaet Kaiserslautern
+model_name: age-structured and extended SEIR model
+model_abbr: HZI-AgeExtendedSEIR
+website_url: https://www.helmholtz-hzi.de/en/nc/research/research-topics/bacterial-and-viral-pathogens/epidemiology/team/
+license: mit
+data_inputs: RKI (reported cases, reported deaths)
+team_model_designation: primary
+methods: Deterministic SEIR type model
+methods_long: This model is an extended SEIR model with additional compartments for
+  the hospitalized, intensive unit, long-COVID, and death. The model is also developed
+  as an age-structured model. The model is fitted to reported cases and reported cumulative
+  deaths. The fitted parameters are used to predict the number of cases and deaths.

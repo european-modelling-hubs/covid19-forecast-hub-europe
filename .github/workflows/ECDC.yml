@@ -2,32 +2,54 @@ name: "ECDC"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 12 * * 4"
+    - cron: "7 12 * * *"
+    - cron: "7 8-20 * * 4"
 
 jobs:
   get_ecdc:
     runs-on: ubuntu-20.04
-    if: github.repository == 'epiforecasts/covid19-forecast-hub-europe'
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-    - uses: actions/checkout@master
-    - uses: r-lib/actions/setup-r@v1
+    - uses: actions/checkout@v2
+
+    - uses: r-lib/actions/setup-r@v2
+      with:
+        install-r: false
+        use-public-rspm: true
 
     - name: Install system dependencies
-      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
+      run: |
+        sudo apt-get update
+        sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
 
-    - name: Install R dependencies
-      run: Rscript -e 'install.packages(c("here", "vroom", "eurostat", "dplyr", "countrycode", "tidyr", "ISOweek", "stringi"))'
+    - uses: r-lib/actions/setup-renv@v2
 
     - name: ECDC Truth
-      run: Rscript 'code/auto_download/ecdc_download.r'
-        
-    - name: Commit files
+      run: |
+        Rscript 'code/auto_download/hospitalisations-download.R'
+        Rscript 'code/auto_download/hospitalisations/check-sources/select_hosp_sources.r'
       env:
-        AUTH: ${{ secrets.GITHUBTOKEN }}
+        DATA_USERNAME: ${{secrets.DATA_USERNAME}}
+        DATA_PASSWORD: ${{secrets.DATA_PASSWORD}}
+        DATA_URL: ${{secrets.DATA_URL}}
+
+    - name: Commit files
       run: |
         git config user.email "action@github.com"
         git config user.name "GitHub Action - ECDC"
         git add --all
-        git commit -m "ECDC - daily"
-        git push 
+        git commit -m "ECDC - daily" || echo "No changes to commit"
+        git pull --rebase origin main
+        git push
         echo "pushed to github"
+
+    - name: Create issue about failure
+      if: failure() && github.event_name != 'workflow_dispatch'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh issue create \
+          --label bug \
+          --title "${{ env.GITHUB_WORKFLOW }} GitHub Action is failing" \
+          --body-file .github/action-issue-template.md

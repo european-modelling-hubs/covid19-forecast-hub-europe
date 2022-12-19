@@ -1,0 +1,374 @@
+{
+    "license": "other-open",
+    "title": "European Covid-19 Forecast Hub",
+    "upload_type": "dataset",
+    "creators": [
+      {
+          "name": "Katharine Sherratt"
+      },
+      {
+          "name": "Hugo Gruson"
+      },
+      {
+          "name": "Helen Johnson"
+      },
+      {
+          "name": "Rene Niehus"
+      },
+      {
+          "name": "Bastian Prasse"
+      },
+      {
+          "name": "Frank Sandman"
+      },
+      {
+          "name": "Jannik Deuschel"
+      },
+      {
+          "name": "Daniel Wolffram"
+      },
+      {
+          "name": "Sam Abbott"
+      },
+      {
+          "name": "Alexander Ullrich"
+      },
+      {
+          "name": "Graham Gibson"
+      },
+      {
+          "name": "Evan L Ray"
+      },
+      {
+          "name": "Nicholas G Reich"
+      },
+      {
+          "name": "Daniel Sheldon"
+      },
+      {
+          "name": "Yijin Wang"
+      },
+      {
+          "name": "Nutcha Wattanachit"
+      },
+      {
+          "name": "Lijing Wang"
+      },
+      {
+          "name": "Jan Trnka"
+      },
+      {
+          "name": "Guillaume Obozinski"
+      },
+      {
+          "name": "Tao Sun"
+      },
+      {
+          "name": "Dorina Thanou"
+      },
+      {
+          "name": "Loic Pottier"
+      },
+      {
+          "name": "Ekaterina Krymova"
+      },
+      {
+          "name": "Maria Vittoria Barbarossa"
+      },
+      {
+          "name": "Neele Leithauser"
+      },
+      {
+          "name": "Jan Mohring"
+      },
+      {
+          "name": "Johanna Schneider"
+      },
+      {
+          "name": "Jaroslaw Wlazlo"
+      },
+      {
+          "name": "Jan Fuhrmann"
+      },
+      {
+          "name": "Berit Lange"
+      },
+      {
+          "name": "Isti Rodiah"
+      },
+      {
+          "name": "Prasith Baccam"
+      },
+      {
+          "name": "Heidi Gurung"
+      },
+      {
+          "name": "Steven Stage"
+      },
+      {
+          "name": "Bradley Suchoski"
+      },
+      {
+          "name": "Jozef Budzinski"
+      },
+      {
+          "name": "Robert Walraven"
+      },
+      {
+          "name": "Inmaculada Villanueva"
+      },
+      {
+          "name": "Vit Tucek"
+      },
+      {
+          "name": "Martin Smid"
+      },
+      {
+          "name": "Milan Zajicek"
+      },
+      {
+          "name": "Cesar Perez Alvarez"
+      },
+      {
+          "name": "Borja Reina"
+      },
+      {
+          "name": "Nikos I Bosse"
+      },
+      {
+          "name": "Sophie Meakin"
+      },
+      {
+          "name": "Pierfrancesco Alaimo Di Loro"
+      },
+      {
+          "name": "Antonello Maruotti"
+      },
+      {
+          "name": "Veronika Eclerova"
+      },
+      {
+          "name": "Andrea Kraus"
+      },
+      {
+          "name": "David Kraus"
+      },
+      {
+          "name": "Lenka Pribylova"
+      },
+      {
+          "name": "Bertsimas Dimitris"
+      },
+      {
+          "name": "Michael Lingzhi Li"
+      },
+      {
+          "name": "Soni Saksham"
+      },
+      {
+          "name": "Jonas Dehning"
+      },
+      {
+          "name": "Sebastian Mohr"
+      },
+      {
+          "name": "Viola Priesemann"
+      },
+      {
+          "name": "Grzegorz Redlarski"
+      },
+      {
+          "name": "Benjamin Bejar"
+      },
+      {
+          "name": "Giovanni Ardenghi"
+      },
+      {
+          "name": "Nicola Parolini"
+      },
+      {
+          "name": "Giovanni Ziarelli"
+      },
+      {
+          "name": "Wolfgang Bock"
+      },
+      {
+          "name": "Stefan Heyder"
+      },
+      {
+          "name": "Thomas Hotz"
+      },
+      {
+          "name": "David E Singh"
+      },
+      {
+          "name": "Miguel Guzman-Merino"
+      },
+      {
+          "name": "Jose L Aznarte"
+      },
+      {
+          "name": "David Morina"
+      },
+      {
+          "name": "Sergio Alonso"
+      },
+      {
+          "name": "Enric Alvarez"
+      },
+      {
+          "name": "Daniel Lopez"
+      },
+      {
+          "name": "Clara Prats"
+      },
+      {
+          "name": "Jan Pablo Burgard"
+      },
+      {
+          "name": "Arne Rodloff"
+      },
+      {
+          "name": "Tom Zimmermann"
+      },
+      {
+          "name": "Alexander Kuhlmann"
+      },
+      {
+          "name": "Janez Zibert"
+      },
+      {
+          "name": "Fulvia Pennoni"
+      },
+      {
+          "name": "Fabio Divino"
+      },
+      {
+          "name": "Marti Catala"
+      },
+      {
+          "name": "Gianfranco Lovison"
+      },
+      {
+          "name": "Paolo Giudici"
+      },
+      {
+          "name": "Barbara Tarantino"
+      },
+      {
+          "name": "Francesco Bartolucci"
+      },
+      {
+          "name": "Giovanna Jona Lasinio"
+      },
+      {
+          "name": "Marco Mingione"
+      },
+      {
+          "name": "Alessio Farcomeni"
+      },
+      {
+          "name": "Ajitesh Srivastava"
+      },
+      {
+          "name": "Pablo Montero-Manso"
+      },
+      {
+          "name": "Aniruddha Adiga"
+      },
+      {
+          "name": "Benjamin Hurt"
+      },
+      {
+          "name": "Bryan Lewis"
+      },
+      {
+          "name": "Madhav Marathe"
+      },
+      {
+          "name": "Przemyslaw Porebski"
+      },
+      {
+          "name": "Srinivasan Venkatramanan"
+      },
+      {
+          "name": "Rafal Bartczuk"
+      },
+      {
+          "name": "Filip Dreger"
+      },
+      {
+          "name": "Anna Gambin"
+      },
+      {
+          "name": "Krzysztof Gogolewski"
+      },
+      {
+          "name": "Magdalena Gruziel-Slomka"
+      },
+      {
+          "name": "Bartosz Krupa"
+      },
+      {
+          "name": "Antoni Moszynski"
+      },
+      {
+          "name": "Karol Niedzielewski"
+      },
+      {
+          "name": "Jedrzej Nowosielski"
+      },
+      {
+          "name": "Maciej Radwan"
+      },
+      {
+          "name": "Franciszek Rakowski"
+      },
+      {
+          "name": "Marcin Semeniuk"
+      },
+      {
+          "name": "Ewa Szczurek"
+      },
+      {
+          "name": "Jakub Zielinski"
+      },
+      {
+          "name": "Jan Kisielewski"
+      },
+      {
+          "name": "Barbara Pabjan"
+      },
+      {
+          "name": "Kirsten Holger"
+      },
+      {
+          "name": "Yuri Kheifetz"
+      },
+      {
+          "name": "Markus Scholz"
+      },
+      {
+          "name": "Marcin Bodych"
+      },
+      {
+          "name": "Maciej Filinski"
+      },
+      {
+          "name": "Radoslaw Idzikowski"
+      },
+      {
+          "name": "Tyll Krueger"
+      },
+      {
+          "name": "Tomasz Ozanski"
+      },
+      {
+          "name": "Johannes Bracher"
+      },
+      {
+          "name": "Sebastian Funk"
+      }
+    ],
+    "access_right": "open"
+}

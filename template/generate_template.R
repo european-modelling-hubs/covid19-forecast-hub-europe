@@ -4,12 +4,14 @@
 
 # Get EU + EFTA + UK country names + codes ---------------------------------------------
 
-# 
+#
 # packages: countrycode eurostat dplyr readr
 
 library(dplyr)
 library(tidyr)
 library(eurostat)
+library(stringr)
+# devtools::install_github("reichlab/covidHubUtils")
 
 data(world_bank_pop)
 
@@ -27,6 +29,21 @@ locations <- eurostat::eu_countries %>%
   left_join(pop, by = "iso3c") %>%
   select(location_name, location, population)
 
+# add truth source by target variable
+truth_source <- covidHubUtils::load_truth(data_location = "local_hub_repo",
+                                          local_repo_path = here(),
+                                          hub = "ECDC") %>%
+  # clean source name
+  mutate(source = str_extract(model, "\\(.+$"),
+         source = str_remove_all(source, "\\(|\\)")) %>%
+  # unique source-location-variable
+  distinct(source, location, target_variable) %>%
+  # pivot so that each country's sources are in columns by target variable
+  mutate(target_variable = str_replace_all(target_variable, "\\s", "_")) %>%
+  pivot_wider(names_from = target_variable,
+              values_from = source)
+locations <- left_join(locations, truth_source, by = "location")
+
 readr::write_csv(locations,
                  file = here::here("data-locations", "locations_eu.csv"),
                  append = FALSE)
@@ -40,30 +57,3 @@ forecast_date <- tibble::tibble(
   forecast_1_wk_ahead_end = forecast_1_wk_ahead_start + 6)
 
 write.csv(forecast_date, file = paste0(here::here("template/forecast-dates.csv")), row.names = FALSE)
-
-
-# Daily to epiweek conversion ---------------------------------------------
-
-library(magrittr)
-
-epiweeks <- tibble::tibble(
-    date = seq.Date(as.Date("2019-12-29"), as.Date("2023-01-02"), by = 1),
-    epi_week	= paste0("ew", lubridate::epiweek(date)),
-    epi_year = ifelse(weekdays(date) == "Sunday", lubridate::year(date), NA)) %>%
-  tidyr::fill(epi_year, .direction = "down") %>%
-  dplyr::mutate(epi_week = paste0(epi_year, "_", epi_week),
-                epi_year = NULL)
-
-write.csv(epiweeks, file = here::here("template/date-to-epiweek.csv"), row.names = FALSE)
-
-
-
-
-
-
-
-
-
-
-
-
