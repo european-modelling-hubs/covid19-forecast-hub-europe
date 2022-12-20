@@ -27,6 +27,11 @@ load_and_score_models <- function(subdir = "") {
                           hub = "ECDC")
   ## get anomalies
   anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
+  #
+  # alternative: as of March 7 2022
+  # anomalies <- read_csv("https://raw.githubusercontent.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe/9c76f48555913286d1ea5e9ddb4ef3d77a2add2b/data-truth/anomalies/anomalies.csv")
+  #
+  #
   truth <- anti_join(raw_truth, anomalies) %>%
     mutate(model = NULL) %>%
     rename(true_value = value)

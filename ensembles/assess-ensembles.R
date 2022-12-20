@@ -16,7 +16,7 @@ opts <- list(
   subdir = "ensembles",
   restrict_weeks = 4L,
   histories = c("All"),
-  latest_date = as.Date("2022-02-07")# "2022-03-07")
+  latest_date = as.Date("2022-03-07")
 )
 
 # Create and save ensembles to separate ensembles/ directory
@@ -26,5 +26,5 @@ source(here("code", "ensemble", "utils", "create-all-methods-ensembles.R"))
 source(here("code", "evaluation", "score_models.r"))
 
 # Score, relative
-opts$re_run <- TRUE # only create a single aggregated score as of the `latest_date`
+opts$re_run <- FALSE # only create a single aggregated score as of the `latest_date`
 source(here("code", "evaluation", "aggregate_scores.r"))
