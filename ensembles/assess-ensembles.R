@@ -26,5 +26,5 @@ source(here("code", "ensemble", "utils", "create-all-methods-ensembles.R"))
 source(here("code", "evaluation", "score_models.r"))
 
 # Score, relative
-opts$re_run <- FALSE # only create a single aggregated score as of the `latest_date`
+opts$re_run <- TRUE # only create a single aggregated score as of the `latest_date`
 source(here("code", "evaluation", "aggregate_scores.r"))
