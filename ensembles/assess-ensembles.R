@@ -16,7 +16,7 @@ opts <- list(
   subdir = "ensembles",
   restrict_weeks = 4L,
   histories = c("All"),
-  latest_date = as.Date("2022-02-28")# "2022-03-07")
+  latest_date = as.Date("2022-02-07")# "2022-03-07")
 )
 
 # Create and save ensembles to separate ensembles/ directory
