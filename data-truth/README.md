@@ -24,11 +24,11 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2022-12-30
+As of 2022-12-31
 
 | country | created    | updated    | issue                                                       | message                                                | url                                                      |
 |:--------|:-----------|:-----------|:------------------------------------------------------------|:-------------------------------------------------------|:---------------------------------------------------------|
-| france  | 2022-12-26 | 2022-12-30 | martinique (france) cases not updating data from 11/22/2022 | The latest update I found on the WHO website was o…    | <https://github.com/CSSEGISandData/COVID-19/issues/6401> |
+| france  | 2022-12-26 | 2022-12-31 | martinique (france) cases not updating data from 11/22/2022 | The latest update I found on the WHO website was o…    | <https://github.com/CSSEGISandData/COVID-19/issues/6401> |
 | czechia | 2022-11-30 | 2022-11-30 | czechia case data now includes reinfections                 | Hello all, \[#6312\](<https://github.com/CSSEGISandD>… | <https://github.com/CSSEGISandData/COVID-19/issues/6313> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
