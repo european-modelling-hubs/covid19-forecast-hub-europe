@@ -6,6 +6,7 @@ library(lubridate)
 library(here)
 library(tibble)
 library(EuroForecastHub)
+library(tidyr)
 
 # Set up ----------------------------------------------------------------
 # Get method
@@ -78,11 +79,24 @@ hub_ensemble_all <- run_ensemble(
   return_criteria = TRUE
 )
 
-# Save in data-processed
+# get number of models
+n_models <- hub_ensemble_all$criteria |>
+  filter(included_in_ensemble) |>
+  group_by(location, target_variable) |>
+  summarise(n_models = n_distinct(model),
+            .groups = "drop")
+
+hub_ensemble_all$ensemble <- hub_ensemble_all$ensemble |>
+  separate(col = target, into = c("horizon", "target_variable"),
+           sep = " wk ahead ", remove = FALSE) |>
+  left_join(n_models, by = c("location", "target_variable")) |>
+  select(-c(horizon, target_variable))
+
+# Save in ensemble/data-processed
 vroom_write(hub_ensemble_all$ensemble,
             here("ensembles",
                  "data-processed",
                  paste0("EuroCOVIDhub-ensemble_all"),
-                 paste0(hub_ensemble$forecast_date,
+                 paste0(hub_ensemble_all$forecast_date,
                         "-EuroCOVIDhub-ensemble_all.csv")),
             delim = ",")
