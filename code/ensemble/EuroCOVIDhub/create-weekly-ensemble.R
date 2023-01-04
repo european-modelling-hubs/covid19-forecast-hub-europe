@@ -68,3 +68,21 @@ methods_by_date %>%
   vroom_write(here("code", "ensemble", "EuroCOVIDhub",
                  "method-by-date.csv"),
             delim = ",")
+
+# Create ensemble with all available models -------------------------------
+hub_ensemble_all <- run_ensemble(
+  method = method,
+  forecast_date = forecast_date,
+  exclude_models = c(exclude_models, "EuroCOVIDhub-baseline"),
+  min_nmodels = 0,
+  return_criteria = TRUE
+)
+
+# Save in data-processed
+vroom_write(hub_ensemble_all$ensemble,
+            here("ensembles",
+                 "data-processed",
+                 paste0("EuroCOVIDhub-ensemble_all"),
+                 paste0(hub_ensemble$forecast_date,
+                        "-EuroCOVIDhub-ensemble_all.csv")),
+            delim = ",")
