@@ -88,6 +88,7 @@ Hospitalisation data can be difficult to produce and interpret, and is not consi
 - `r hosp_locations`
 
 ```{r hosp-data-warnings}
+if (nrow(hosp_data > 0)) {
 gaps <- hosp_data %>%
   group_by(location_name) %>%
   slice_max(date, n = 2) %>%
@@ -95,6 +96,7 @@ gaps <- hosp_data %>%
   filter(date < max(date) & date_diff > 14) %>%
   pull(location_name)
 show_text_gaps <- length(gaps) > 0
+} else { cat("--- Recent data unavailable ---")}
 ```
 
 ```{r, eval=show_text_gaps, results="asis"}
