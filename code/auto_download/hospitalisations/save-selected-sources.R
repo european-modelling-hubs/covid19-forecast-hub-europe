@@ -77,12 +77,12 @@ all <- bind_rows(ecdc_all,
                  non_eu %>% mutate(selected_source = FALSE)) %>%
   arrange(location)
 
-# Check selected data are fresh (< 2 weeks old) -----------------------
+# Check selected data are fresh (< a month old) -----------------------
 location_stale <- all %>%
   filter(selected_source) %>%
   group_by(location, source, type) %>%
   summarise(max_date = max(date), .groups = "drop") %>%
-  filter(max_date < Sys.Date() - 16) %>%
+  filter(max_date < Sys.Date() - 30) %>%
   pull(location) %>%
   unique()
 
@@ -114,7 +114,7 @@ ggsave(here("data-truth", "plots", "hospitalisations.svg"),
 
 # Combine + save ------------------------------------------------------------
 # Include only countries with a selected source
-hosp_data <- all %>% 
+hosp_data <- all %>%
   filter(selected_source) %>%
   select(location_name, location, date, value, source, type)
 
