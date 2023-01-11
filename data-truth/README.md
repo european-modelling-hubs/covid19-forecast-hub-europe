@@ -24,10 +24,11 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2023-01-10
+As of 2023-01-11
 
 | country     | created    | updated    | issue                                                               | message                                                | url                                                      |
 |:------------|:-----------|:-----------|:--------------------------------------------------------------------|:-------------------------------------------------------|:---------------------------------------------------------|
+| iceland     | 2023-01-11 | 2023-01-11 | patch iceland data from 11/01/2022 to 01/10/2023                    | November 1, 2022: 206571 cases November 8, 2022: 2…    | <https://github.com/CSSEGISandData/COVID-19/issues/6462> |
 | france      | 2023-01-04 | 2023-01-06 | martinique (france) cases and deaths does not match source          | In the WHO report there are 225249 cases and 1079 …    | <https://github.com/CSSEGISandData/COVID-19/issues/6432> |
 | netherlands | 2023-01-06 | 2023-01-06 | netherlands rivm ceases reporting covid-19 deaths as of jan 1, 2023 | Hello all, On January 1, 2023, the Netherlands’ R…     | <https://github.com/CSSEGISandData/COVID-19/issues/6446> |
 | france      | 2022-12-26 | 2022-12-31 | martinique (france) cases not updating data from 11/22/2022         | The latest update I found on the WHO website was o…    | <https://github.com/CSSEGISandData/COVID-19/issues/6401> |
@@ -47,8 +48,7 @@ not consistent across all the countries in the ECDC Forecast Hub. To
 keep data and forecasts consistent, we include hospitalisations
 forecasts for the following locations only:
 
-- Belgium, France, Greece, Ireland, Latvia, Liechtenstein, Malta,
-  Slovakia, Slovenia
+- France, Greece, Ireland, Liechtenstein, Malta, Slovakia, Slovenia
 
 ![Plot of truth data from different sources for all countries covered by
 the forecast hub](plots/hospitalisations.svg)
