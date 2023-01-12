@@ -32,7 +32,7 @@ if (nrow(model_df) > 0) {
       select(location_name, rel_ensemble_wis = rel_wis, rel_ensemble_ae = rel_ae)
     df <- model_df %>%
       select(location_name, rel_wis, rel_ae) %>%
-      inner_join(ensemble, by = "location_name") %>%
+      left_join(ensemble, by = "location_name") %>%
       pivot_longer(starts_with("rel")) %>%
       mutate(relative_to =
                if_else(grepl("ensemble", name), "ensemble", "baseline"),
