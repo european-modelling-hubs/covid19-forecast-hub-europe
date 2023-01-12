@@ -8,6 +8,8 @@ library(lubridate)
 # Set up
 data_dir <- here("data-truth", "ECDC")
 ecdc_official_filepath <- here(data_dir, "raw", paste0("official.csv"))
+ecdc_official_filepath_dated <-
+  here(data_dir, "raw", paste0("official_", today(), ".csv"))
 pop <- covidHubUtils::hub_locations_ecdc
 
 # Get ECDC published data
@@ -27,3 +29,4 @@ official <- read_csv("https://opendata.ecdc.europa.eu/covid19/hospitalicuadmissi
 
 # Save
 write_csv(official, ecdc_official_filepath)
+write_csv(official, ecdc_official_filepath_dated)

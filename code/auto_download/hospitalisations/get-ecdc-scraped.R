@@ -10,6 +10,8 @@ library("covidHubUtils")
 # Set up
 data_dir <- here::here("data-truth", "ECDC")
 ecdc_scraped_filepath <- here(data_dir, "raw", paste0("scraped.csv"))
+ecdc_scraped_filepath_dated <-
+  here(data_dir, "raw", paste0("scraped_", today(), ".csv"))
 pop <- covidHubUtils::hub_locations_ecdc %>%
   select(-population)
 
@@ -31,3 +33,4 @@ scraped <- read_csv(ecdc_scraped_filepath, show_col_types = FALSE) %>%
 
 # Save daily
 write_csv(scraped, ecdc_scraped_filepath)
+write_csv(scraped, ecdc_scraped_filepath_dated)
