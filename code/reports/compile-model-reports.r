@@ -33,6 +33,7 @@ models <- list.files(
 
 # Create function for rendering report for each model
 render_report <- function(model) {
+  message("Generating report for ", model)
 	rmarkdown::render(here::here("code", "reports", "models",
                                "model-report.Rmd"),
                     params = list(model = model,
