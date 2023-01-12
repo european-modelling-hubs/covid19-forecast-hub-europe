@@ -17,8 +17,8 @@ pop <- covidHubUtils::hub_locations_ecdc %>%
 cat("Downloading ECDC scraped data\n")
 R.utils::downloadFile("https://opendata.ecdc.europa.eu/covid19/modellinghub/csv/COVID.zip",
                       ecdc_scraped_filepath,
-                      username = "modellinghub",
-                      password = "j@inv3=O1FYfr",
+                      username = Sys.getenv("DATA_USERNAME"),
+                      password = Sys.getenv("DATA_PASSWORD"),
                       skip = FALSE, overwrite = TRUE)
 # Clean
 scraped <- read_csv(ecdc_scraped_filepath, show_col_types = FALSE) %>%
