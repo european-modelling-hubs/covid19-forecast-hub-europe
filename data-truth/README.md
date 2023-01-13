@@ -24,15 +24,16 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2023-01-12
+As of 2023-01-13
 
-| country     | created    | updated    | issue                                                               | message                                                | url                                                      |
-|:------------|:-----------|:-----------|:--------------------------------------------------------------------|:-------------------------------------------------------|:---------------------------------------------------------|
-| iceland     | 2023-01-11 | 2023-01-11 | patch iceland data from 11/01/2022 to 01/10/2023                    | November 1, 2022: 206571 cases November 8, 2022: 2…    | <https://github.com/CSSEGISandData/COVID-19/issues/6462> |
-| france      | 2023-01-04 | 2023-01-06 | martinique (france) cases and deaths does not match source          | In the WHO report there are 225249 cases and 1079 …    | <https://github.com/CSSEGISandData/COVID-19/issues/6432> |
-| netherlands | 2023-01-06 | 2023-01-06 | netherlands rivm ceases reporting covid-19 deaths as of jan 1, 2023 | Hello all, On January 1, 2023, the Netherlands’ R…     | <https://github.com/CSSEGISandData/COVID-19/issues/6446> |
-| france      | 2022-12-26 | 2022-12-31 | martinique (france) cases not updating data from 11/22/2022         | The latest update I found on the WHO website was o…    | <https://github.com/CSSEGISandData/COVID-19/issues/6401> |
-| czechia     | 2022-11-30 | 2022-11-30 | czechia case data now includes reinfections                         | Hello all, \[#6312\](<https://github.com/CSSEGISandD>… | <https://github.com/CSSEGISandData/COVID-19/issues/6313> |
+| country        | created    | updated    | issue                                                               | message                                                | url                                                      |
+|:---------------|:-----------|:-----------|:--------------------------------------------------------------------|:-------------------------------------------------------|:---------------------------------------------------------|
+| united kingdom | 2023-01-12 | 2023-01-12 | united kingdom inconsistent data since december 9, 2022             | I understand that there must be some problem with …    | <https://github.com/CSSEGISandData/COVID-19/issues/6469> |
+| iceland        | 2023-01-11 | 2023-01-11 | patch iceland data from 11/01/2022 to 01/10/2023                    | November 1, 2022: 206571 cases November 8, 2022: 2…    | <https://github.com/CSSEGISandData/COVID-19/issues/6462> |
+| france         | 2023-01-04 | 2023-01-06 | martinique (france) cases and deaths does not match source          | In the WHO report there are 225249 cases and 1079 …    | <https://github.com/CSSEGISandData/COVID-19/issues/6432> |
+| netherlands    | 2023-01-06 | 2023-01-06 | netherlands rivm ceases reporting covid-19 deaths as of jan 1, 2023 | Hello all, On January 1, 2023, the Netherlands’ R…     | <https://github.com/CSSEGISandData/COVID-19/issues/6446> |
+| france         | 2022-12-26 | 2022-12-31 | martinique (france) cases not updating data from 11/22/2022         | The latest update I found on the WHO website was o…    | <https://github.com/CSSEGISandData/COVID-19/issues/6401> |
+| czechia        | 2022-11-30 | 2022-11-30 | czechia case data now includes reinfections                         | Hello all, \[#6312\](<https://github.com/CSSEGISandD>… | <https://github.com/CSSEGISandData/COVID-19/issues/6313> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
