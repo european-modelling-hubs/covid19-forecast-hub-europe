@@ -30,16 +30,17 @@
 </defs>
 <g clip-path='url(#cpMjcuMTl8MjI3LjA0fDM4LjI4fDE1OS4yNA==)'>
 <rect x='27.19' y='38.28' width='199.84' height='120.96' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
-<polyline points='36.28,151.58 72.61,115.65 108.95,55.13 145.28,43.78 181.62,79.71 ' style='stroke-width: 1.07; stroke: #7CAE00; stroke-opacity: 0.10; stroke-linecap: butt;' />
-<polyline points='36.28,153.74 72.61,118.62 108.95,58.91 ' style='stroke-width: 1.07; stroke: #C77CFF; stroke-linecap: butt;' />
-<polygon points='36.28,150.70 38.91,155.26 33.65,155.26 ' style='stroke-width: 0.71; stroke: none; fill: #C77CFF;' />
-<polygon points='72.61,115.58 75.25,120.14 69.98,120.14 ' style='stroke-width: 0.71; stroke: none; fill: #C77CFF;' />
-<polygon points='108.95,55.87 111.58,60.43 106.32,60.43 ' style='stroke-width: 0.71; stroke: none; fill: #C77CFF;' />
-<circle cx='36.28' cy='151.58' r='1.95' style='stroke-width: 0.71; stroke: none; fill: #7CAE00;' />
-<circle cx='72.61' cy='115.65' r='1.95' style='stroke-width: 0.71; stroke: none; fill: #7CAE00;' />
-<circle cx='108.95' cy='55.13' r='1.95' style='stroke-width: 0.71; stroke: none; fill: #7CAE00;' />
+<polyline points='36.28,149.25 72.61,114.09 108.95,54.88 145.28,43.78 181.62,78.94 217.95,153.74 ' style='stroke-width: 1.07; stroke: #7CAE00; stroke-opacity: 0.10; stroke-linecap: butt;' />
+<polyline points='36.28,151.36 72.61,117.00 108.95,58.58 ' style='stroke-width: 1.07; stroke: #C77CFF; stroke-linecap: butt;' />
+<polygon points='36.28,148.33 38.91,152.88 33.65,152.88 ' style='stroke-width: 0.71; stroke: none; fill: #C77CFF;' />
+<polygon points='72.61,113.96 75.25,118.52 69.98,118.52 ' style='stroke-width: 0.71; stroke: none; fill: #C77CFF;' />
+<polygon points='108.95,55.54 111.58,60.10 106.32,60.10 ' style='stroke-width: 0.71; stroke: none; fill: #C77CFF;' />
+<circle cx='36.28' cy='149.25' r='1.95' style='stroke-width: 0.71; stroke: none; fill: #7CAE00;' />
+<circle cx='72.61' cy='114.09' r='1.95' style='stroke-width: 0.71; stroke: none; fill: #7CAE00;' />
+<circle cx='108.95' cy='54.88' r='1.95' style='stroke-width: 0.71; stroke: none; fill: #7CAE00;' />
 <circle cx='145.28' cy='43.78' r='1.95' style='stroke-width: 0.71; stroke: none; fill: #7CAE00;' />
-<circle cx='181.62' cy='79.71' r='1.95' style='stroke-width: 0.71; stroke: none; fill: #7CAE00;' />
+<circle cx='181.62' cy='78.94' r='1.95' style='stroke-width: 0.71; stroke: none; fill: #7CAE00;' />
+<circle cx='217.95' cy='153.74' r='1.95' style='stroke-width: 0.71; stroke: none; fill: #7CAE00;' />
 </g>
 <g clip-path='url(#cpMC4wMHw5MzYuMDB8MC4wMHw1MDQuMDA=)'>
 </g>
@@ -565,14 +566,16 @@
 <polyline points='251.49,366.12 254.23,366.12 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='251.49,340.06 254.23,340.06 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='27.19,159.24 27.19,38.28 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
-<text x='22.26' y='136.69' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='16.78px' lengthAdjust='spacingAndGlyphs'>600</text>
-<text x='22.26' y='109.67' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='16.78px' lengthAdjust='spacingAndGlyphs'>700</text>
-<text x='22.26' y='82.65' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='16.78px' lengthAdjust='spacingAndGlyphs'>800</text>
-<text x='22.26' y='55.63' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='16.78px' lengthAdjust='spacingAndGlyphs'>900</text>
-<polyline points='24.45,133.48 27.19,133.48 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<polyline points='24.45,106.46 27.19,106.46 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<polyline points='24.45,79.44 27.19,79.44 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<polyline points='24.45,52.42 27.19,52.42 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<text x='22.26' y='161.18' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='16.78px' lengthAdjust='spacingAndGlyphs'>500</text>
+<text x='22.26' y='134.75' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='16.78px' lengthAdjust='spacingAndGlyphs'>600</text>
+<text x='22.26' y='108.31' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='16.78px' lengthAdjust='spacingAndGlyphs'>700</text>
+<text x='22.26' y='81.88' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='16.78px' lengthAdjust='spacingAndGlyphs'>800</text>
+<text x='22.26' y='55.45' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='16.78px' lengthAdjust='spacingAndGlyphs'>900</text>
+<polyline points='24.45,157.97 27.19,157.97 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='24.45,131.54 27.19,131.54 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='24.45,105.11 27.19,105.11 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='24.45,78.67 27.19,78.67 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='24.45,52.24 27.19,52.24 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='27.19,302.69 27.19,181.73 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
 <text x='22.26' y='286.12' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='16.78px' lengthAdjust='spacingAndGlyphs'>400</text>
 <text x='22.26' y='257.56' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='16.78px' lengthAdjust='spacingAndGlyphs'>500</text>
