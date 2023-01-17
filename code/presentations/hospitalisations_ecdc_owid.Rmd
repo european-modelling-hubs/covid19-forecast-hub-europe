@@ -1,0 +1,59 @@
+---
+title: Hospitalisation ECDC vs. OWID
+author: Sebastian Funk & Kath Sherratt
+date: 17 January, 2023
+output: ioslides_presentation
+---
+
+```{r setup, include = FALSE}
+library("dplyr")
+library("here")
+library("vroom")
+library("purrr")
+library("ggplot2")
+```
+
+```{r functions, include = FALSE}
+plot_hosp <- function(df) {
+  country <- unique(df$location_name)
+  cat("\n\n##", country, "\n")
+  p <- ggplot(df, aes(x = date, y = value, colour = source)) +
+    geom_line() +
+    theme_bw() +
+    xlab("") +
+    ylab("Hospitalisations") +
+    scale_colour_brewer("", palette = "Set1") +
+    theme(legend.position = "top")
+  suppressWarnings(suppressMessages(print(p)))
+}
+```
+
+```{r load_data, include = FALSE}
+pop <- covidHubUtils::hub_locations_ecdc
+
+ecdc_data <- vroom::vroom(here::here(
+  "data-truth", "ECDC", "raw", "official.csv")
+) |>
+  dplyr::filter(
+    is.na(indicator) |
+      indicator %in%
+      c("Weekly new hospital admissions per 100k", "New_Hospitalised")
+  ) |>
+  dplyr::select(
+    location_name, location, date, value, source
+  ) |>
+  dplyr::mutate(source = "ECDC")
+
+owid_data <- vroom::vroom(here::here(
+  "data-truth", "OWID", "covid-hospitalizations.csv"
+))
+
+all_data <- dplyr::bind_rows(ecdc_data, owid_data) |>
+  dplyr::group_split(location_name)
+```
+
+```{r plot, results = 'asis', echo = FALSE}
+purrr::walk(all_data,
+  ~ plot_hosp(.x)
+)
+```
