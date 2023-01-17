@@ -56,7 +56,7 @@ get_owid_historical <- function(earliest_date = lubridate::today()) {
       dplyr::select(location_name, location, date, value) %>%
       dplyr::mutate(source = "OWID")
 
-    data_dir <- here::here("data-truth", "OWID")
+    data_dir <- here::here("data-truth", "OWID", "snapshots")
     owid_filepath_dated <- here::here(data_dir,
       paste0("covid-hospitalizations_", x, ".csv")
     )
