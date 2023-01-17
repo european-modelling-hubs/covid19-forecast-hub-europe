@@ -28,6 +28,7 @@ jobs:
     - name: ECDC Truth
       run: |
         Rscript 'code/auto_download/hospitalisations-download.R'
+        Rscript 'code/auto_download/check-revisions-owid.r'
       env:
         DATA_USERNAME: ${{secrets.DATA_USERNAME}}
         DATA_PASSWORD: ${{secrets.DATA_PASSWORD}}
