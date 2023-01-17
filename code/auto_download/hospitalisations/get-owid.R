@@ -25,8 +25,7 @@ owid <- read_csv(
              by = "location_name") %>%
   # Rescale to count from per 100k
   select(location_name, location, date, value) %>%
-  mutate(source = "OWID",
-         type = "Scraped")
+  mutate(source = "OWID")
 
 # Save
 write_csv(owid, owid_filepath)
