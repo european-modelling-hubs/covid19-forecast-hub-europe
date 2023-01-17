@@ -3,7 +3,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "7 12 * * *"
-    - cron: "7 8-20 * * 4"
 
 jobs:
   get_ecdc:
@@ -28,7 +27,6 @@ jobs:
     - name: ECDC Truth
       run: |
         Rscript 'code/auto_download/hospitalisations-download.R'
-        Rscript 'code/auto_download/hospitalisations/check-sources/select_hosp_sources.r'
       env:
         DATA_USERNAME: ${{secrets.DATA_USERNAME}}
         DATA_PASSWORD: ${{secrets.DATA_PASSWORD}}

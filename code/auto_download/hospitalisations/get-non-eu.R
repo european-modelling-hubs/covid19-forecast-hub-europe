@@ -7,6 +7,8 @@ library(jsonlite)
 
 data_dir <- here("data-truth", "ECDC")
 non_eu_filepath <- here(data_dir, "raw", paste0("non-eu.csv"))
+non_eu_filepath_dated <-
+  here(data_dir, "raw", paste0("non-eu_", today(), ".csv"))
 
 # Get data ----------------------------------------------------------------
 cat("Downloading non-EU public data\n")
@@ -40,3 +42,4 @@ non_eu <- bind_rows(uk, ch) %>%
 
 # Save daily data ---------------------------------------------------------
 write_csv(non_eu, non_eu_filepath)
+write_csv(non_eu, non_eu_filepath_dated)
