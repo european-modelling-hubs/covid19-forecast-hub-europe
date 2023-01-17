@@ -17,6 +17,10 @@ library("ggplot2")
 plot_hosp <- function(df) {
   country <- unique(df$location_name)
   cat("\n\n##", country, "\n")
+  source <- owid_sources |>
+    dplyr::filter(location_name == country) |>
+    dplyr::pull(source_website)
+  cat("OWID source:" , source, "\n")
   p <- ggplot(df, aes(x = date, y = value, colour = source)) +
     geom_line() +
     theme_bw() +
@@ -50,6 +54,10 @@ owid_data <- vroom::vroom(here::here(
 
 all_data <- dplyr::bind_rows(ecdc_data, owid_data) |>
   dplyr::group_split(location_name)
+
+owid_sources <- vroom::vroom("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/hospitalizations/locations.csv") |>
+  dplyr::rename(location_name = location) |>
+  dplyr::inner_join(pop, by = "location_name")
 ```
 
 ```{r plot, results = 'asis', echo = FALSE}
