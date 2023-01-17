@@ -7,6 +7,7 @@ on:
 
 jobs:
   get_ecdc:
+    if: github.repository == 'covid19-forecast-hub-europe'
     runs-on: ubuntu-20.04
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
