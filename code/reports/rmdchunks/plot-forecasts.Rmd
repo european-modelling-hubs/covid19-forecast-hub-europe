@@ -82,19 +82,34 @@ for (fcast_date in as.character(forecast_dates)) {
     plot_data <- scaled_data |>
       filter(
         target_variable == target_variables[[target]],
-        model == compare_model,
+        is.na(model) | model == compare_model,
         target_end_date >= fcast_date - weeks(10),
         target_end_date < fcast_date + weeks(4)
       ) |> 
       group_by(model) |> 
       filter(
-        any(forecast_date == fcast_date)
+        is.na(model) | any(forecast_date == fcast_date)
       ) |> 
       ungroup() |>
       mutate(prediction = ifelse(forecast_date == fcast_date, prediction, NA))
 
+    truncated_data <- plot_data |>
+      filter(
+        !is.na(true_value),
+        weeks_since <= cutoff
+      ) |>
+      group_by(location) |>
+      mutate(n_weeks = n_distinct(weeks_since)) |>
+      ungroup() |>
+      filter(n_weeks > 1)
+
+    plot_data <- plot_data |>
+      filter(
+        is.na(cutoff) | weeks_since >= cutoff
+      )
+
     if (nrow(plot_data) == 0) {
-      cat("No forecasts available, possibly because of recent anomalies in the available data." )
+      cat("No forecasts available, possibly because of recent anomalies in the available data.")
     } else {
       plot <- scoringutils::plot_predictions(
           plot_data, 
@@ -113,7 +128,8 @@ for (fcast_date in as.character(forecast_dates)) {
         scale_y_continuous("Values per week per 100,000",
                            labels = scales::comma) +
         scale_x_date("End of data/forecast week", date_breaks = "1 month",
-                     date_labels = "%b")
+                     date_labels = "%b") +
+        geom_line(data = truncated_data, aes(x = target_end_date, y = true_value), linetype = "dashed")
       print(plot)
     }
   }

@@ -59,9 +59,21 @@ raw_truth <- load_truth(
   hub = "ECDC"
 )
 
+cutoffs <- readr::read_csv(here::here(
+  "data-truth", "OWID", "recommended-cutoffs.csv"
+), show_col_types = FALSE) |>
+  mutate(target_variable = "inc hosp")
+
 truth <- raw_truth %>%
-  mutate(model = NULL) %>%
-  rename(true_value = value)
+  mutate(model = NA_character_) %>%
+  rename(true_value = value) |>
+  left_join(cutoffs, by = c("location", "location_name", "target_variable")) |>
+  replace_na(list(cutoff = 0)) |>
+  group_by(location, target_variable) |>
+  mutate(
+    weeks_since = interval(target_end_date, max(target_end_date)) / weeks(1)
+  ) |>
+  ungroup()
 
 # get anomalies
 anomalies <- read_csv(paste0(hub_repo, "/raw/main/data-truth/anomalies/anomalies.csv"),
@@ -84,14 +96,16 @@ forecasts <- raw_forecasts %>%
 horizon_0 <- forecasts |> 
   group_by(model, forecast_date, location, location_name, population, target_variable, quantile) |> 
   summarise(
-    horizon = 0L,
+    horizon = min(horizon) - 1L,
     target_end_date = unique(forecast_date) - 2,
-    type = "point"
-  )
+    type = "point",
+    .groups = "drop"
+    ) |>
+  filter(horizon == 0L)
 
 data <- full_join(horizon_0, forecasts) |> 
-  scoringutils::merge_pred_and_obs(truth, join = "full") |> 
-  mutate(prediction = ifelse(horizon == "0", true_value, prediction))
+  scoringutils::merge_pred_and_obs(truth, join = "full") |>
+  mutate(prediction = ifelse(horizon == "0" & is.na(prediction), true_value, prediction))
 ```
 
 ## {.unlisted .unnumbered}
