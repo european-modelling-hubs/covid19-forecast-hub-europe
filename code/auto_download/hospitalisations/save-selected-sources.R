@@ -125,6 +125,12 @@ hosp_data <- all %>%
 hosp_data <- hosp_data %>%
   mutate(date = date - 1)
 
+# add one row of missing data if dataframe is empty
+if (nrow(hosp_data) == 0) {
+  hosp_data <- hosp_data |>
+    add_row(date = NA)
+}
+
 # Save as "truth" file, covidHubUtils format
 write_csv(hosp_data,
           file = here("data-truth", "ECDC",
