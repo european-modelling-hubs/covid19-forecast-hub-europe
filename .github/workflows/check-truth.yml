@@ -8,6 +8,7 @@ on:
 
 jobs:
   build:
+    if: github.repository_owner == 'covid19-forecast-hub-europe'
     runs-on: ubuntu-latest
     env:
       RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
