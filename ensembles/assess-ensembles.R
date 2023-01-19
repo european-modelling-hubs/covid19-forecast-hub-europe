@@ -8,6 +8,10 @@
   # remotes::install_github("epiforecasts/scoringutils", dependencies = TRUE)
 # EuroForecastHub
   # remotes::install_github("covid19-forecast-hub-europe/EuroForecastHub")
+
+# remotes::install_github(repo = "covid19-forecast-hub-europe/EuroForecastHub",
+#                         ref = "mean-score-ratio")
+
 library(here)
 library(EuroForecastHub)
 
