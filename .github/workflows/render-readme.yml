@@ -9,7 +9,7 @@ name: Render README
 
 jobs:
   render:
-    if: github.repository == 'covid19-forecast-hub-europe'
+    if: github.repository_owner == 'covid19-forecast-hub-europe'
     name: Render README
     runs-on: ubuntu-latest
     env:
