@@ -6,6 +6,7 @@ on:
 
 jobs:
   release:
+    if: github.repository == 'covid19-forecast-hub-europe'
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2

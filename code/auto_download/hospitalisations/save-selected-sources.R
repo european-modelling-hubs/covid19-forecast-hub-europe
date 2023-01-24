@@ -118,6 +118,11 @@ hosp_data <- all %>%
   filter(selected_source) %>%
   select(location_name, location, date, value, source, type)
 
+# add one row of missing data if dataframe is empty
+if (nrow(hosp_data) == 0) {
+  stop("Stopped processing: <code/auto_download/hospitalisations/save-selected-sources.R> No hospitalisation data returned from selected sources.")
+}
+
 # Shift dates to represent Sun-Sat MMWR epiweek
 #   - all hosp data so far (daily/weekly) are consistently Mon-Sun aggregated
 #   - but case/death week definitions are Sat-Sun aggregated
