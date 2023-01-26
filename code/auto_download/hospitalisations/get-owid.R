@@ -7,6 +7,8 @@ library(lubridate)
 # Set up
 data_dir <- here("data-truth", "OWID")
 owid_filepath <- here(data_dir, paste0("covid-hospitalizations.csv"))
+owid_filepath_dated <-
+  here(data_dir, paste0("covid-hospitalizations_", today(), ".csv"))
 pop <- covidHubUtils::hub_locations_ecdc
 
 # Get ECDC published data
@@ -28,3 +30,4 @@ owid <- read_csv(
 
 # Save
 write_csv(owid, owid_filepath)
+write_csv(owid, owid_filepath_dated)

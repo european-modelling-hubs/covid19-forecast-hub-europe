@@ -3,10 +3,10 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "7 12 * * *"
-    - cron: "7 8-20 * * 4"
 
 jobs:
   get_ecdc:
+    if: github.repository_owner == 'covid19-forecast-hub-europe'
     runs-on: ubuntu-20.04
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -28,7 +28,6 @@ jobs:
     - name: ECDC Truth
       run: |
         Rscript 'code/auto_download/hospitalisations-download.R'
-        Rscript 'code/auto_download/hospitalisations/check-sources/select_hosp_sources.r'
       env:
         DATA_USERNAME: ${{secrets.DATA_USERNAME}}
         DATA_PASSWORD: ${{secrets.DATA_PASSWORD}}
@@ -49,7 +48,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        gh issue create \
-          --label bug \
-          --title "${{ env.GITHUB_WORKFLOW }} GitHub Action is failing" \
-          --body-file .github/action-issue-template.md
+        gh issue reopen 2628

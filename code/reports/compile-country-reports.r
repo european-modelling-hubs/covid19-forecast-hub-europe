@@ -17,6 +17,7 @@ wday(report_date) <- get_hub_config("forecast_week_day")
 suppressWarnings(dir.create(here::here("html")))
 
 for (country in c("Overall", hub_locations_ecdc$location_name)) {
+  message("Generating report for ", country)
   rmarkdown::render(here::here("code", "reports", "country",
                                "country-report.Rmd"),
                     output_format = "html_document",

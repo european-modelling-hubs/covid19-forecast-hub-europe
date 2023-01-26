@@ -18,7 +18,11 @@ library(EuroForecastHub)
 # Set parameters
 options(knitr.duplicate.label = "allow")
 
-report_date <- today()
+# Check the latest weekly evaluation
+eval_dates <- dir(here("evaluation", "weekly-summary"))
+eval_dates <- as.Date(gsub("(evaluation-)|(.csv)", "", eval_dates))
+
+report_date <- max(eval_dates)
 wday(report_date) <- get_hub_config("forecast_week_day")
 
 suppressWarnings(dir.create(here::here("html")))
@@ -33,6 +37,7 @@ models <- list.files(
 
 # Create function for rendering report for each model
 render_report <- function(model) {
+  message("Generating report for ", model)
 	rmarkdown::render(here::here("code", "reports", "models",
                                "model-report.Rmd"),
                     params = list(model = model,

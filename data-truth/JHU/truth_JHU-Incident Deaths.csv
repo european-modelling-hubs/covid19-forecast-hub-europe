@@ -1705,7 +1705,7 @@ DK,Denmark,2020-03-16,1
 EE,Estonia,2020-03-16,0
 FI,Finland,2020-03-16,0
 FR,France,2020-03-16,57
-DE,Germany,2020-03-16,0
+DE,Germany,2020-03-16,1
 GR,Greece,2020-03-16,0
 HU,Hungary,2020-03-16,0
 IS,Iceland,2020-03-16,-5
@@ -1737,7 +1737,7 @@ DK,Denmark,2020-03-17,1
 EE,Estonia,2020-03-17,0
 FI,Finland,2020-03-17,1
 FR,France,2020-03-17,0
-DE,Germany,2020-03-17,0
+DE,Germany,2020-03-17,-1
 GR,Greece,2020-03-17,1
 HU,Hungary,2020-03-17,0
 IS,Iceland,2020-03-17,1
@@ -10793,7 +10793,7 @@ DK,Denmark,2020-12-25,20
 EE,Estonia,2020-12-25,7
 FI,Finland,2020-12-25,3
 FR,France,2020-12-25,159
-DE,Germany,2020-12-25,412
+DE,Germany,2020-12-25,0
 GR,Greece,2020-12-25,50
 HU,Hungary,2020-12-25,104
 IS,Iceland,2020-12-25,0
@@ -10825,7 +10825,7 @@ DK,Denmark,2020-12-26,19
 EE,Estonia,2020-12-26,2
 FI,Finland,2020-12-26,2
 FR,France,2020-12-26,146
-DE,Germany,2020-12-26,240
+DE,Germany,2020-12-26,652
 GR,Greece,2020-12-26,46
 HU,Hungary,2020-12-26,118
 IS,Iceland,2020-12-26,0
@@ -11017,7 +11017,7 @@ DK,Denmark,2021-01-01,24
 EE,Estonia,2021-01-01,5
 FI,Finland,2021-01-01,6
 FR,France,2021-01-01,132
-DE,Germany,2021-01-01,553
+DE,Germany,2021-01-01,0
 GR,Greece,2021-01-01,43
 HU,Hungary,2021-01-01,130
 IS,Iceland,2021-01-01,0
@@ -11049,7 +11049,7 @@ DK,Denmark,2021-01-02,23
 EE,Estonia,2021-01-02,7
 FI,Finland,2021-01-02,3
 FR,France,2021-01-02,156
-DE,Germany,2021-01-02,336
+DE,Germany,2021-01-02,889
 GR,Greece,2021-01-02,40
 HU,Hungary,2021-01-02,114
 IS,Iceland,2021-01-02,0
@@ -11358,7 +11358,7 @@ SI,Slovenia,2021-01-11,24
 ES,Spain,2021-01-11,401
 SE,Sweden,2021-01-11,0
 CH,Switzerland,2021-01-11,63
-GB,United Kingdom,2021-01-11,1243
+GB,United Kingdom,2021-01-11,1244
 AT,Austria,2021-01-12,60
 BE,Belgium,2021-01-12,72
 BG,Bulgaria,2021-01-12,47
@@ -11742,7 +11742,7 @@ SI,Slovenia,2021-01-23,20
 ES,Spain,2021-01-23,0
 SE,Sweden,2021-01-23,0
 CH,Switzerland,2021-01-23,47
-GB,United Kingdom,2021-01-23,1287
+GB,United Kingdom,2021-01-23,1288
 AT,Austria,2021-01-24,52
 BE,Belgium,2021-01-24,53
 BG,Bulgaria,2021-01-24,9
@@ -11966,7 +11966,7 @@ SI,Slovenia,2021-01-30,22
 ES,Spain,2021-01-30,0
 SE,Sweden,2021-01-30,0
 CH,Switzerland,2021-01-30,7
-GB,United Kingdom,2021-01-30,1025
+GB,United Kingdom,2021-01-30,1026
 AT,Austria,2021-01-31,56
 BE,Belgium,2021-01-31,26
 BG,Bulgaria,2021-01-31,17
@@ -12734,7 +12734,7 @@ SI,Slovenia,2021-02-23,8
 ES,Spain,2021-02-23,443
 SE,Sweden,2021-02-23,64
 CH,Switzerland,2021-02-23,11
-GB,United Kingdom,2021-02-23,380
+GB,United Kingdom,2021-02-23,381
 AT,Austria,2021-02-24,36
 BE,Belgium,2021-02-24,32
 BG,Bulgaria,2021-02-24,48
@@ -13534,7 +13534,7 @@ SI,Slovenia,2021-03-20,6
 ES,Spain,2021-03-20,0
 SE,Sweden,2021-03-20,0
 CH,Switzerland,2021-03-20,6
-GB,United Kingdom,2021-03-20,100
+GB,United Kingdom,2021-03-20,101
 AT,Austria,2021-03-21,43
 BE,Belgium,2021-03-21,57
 BG,Bulgaria,2021-03-21,53
@@ -13790,7 +13790,7 @@ SI,Slovenia,2021-03-28,7
 ES,Spain,2021-03-28,0
 SE,Sweden,2021-03-28,0
 CH,Switzerland,2021-03-28,9
-GB,United Kingdom,2021-03-28,49
+GB,United Kingdom,2021-03-28,50
 AT,Austria,2021-03-29,29
 BE,Belgium,2021-03-29,24
 BG,Bulgaria,2021-03-29,203
@@ -14110,7 +14110,7 @@ SI,Slovenia,2021-04-07,3
 ES,Spain,2021-04-07,126
 SE,Sweden,2021-04-07,45
 CH,Switzerland,2021-04-07,13
-GB,United Kingdom,2021-04-07,45
+GB,United Kingdom,2021-04-07,46
 AT,Austria,2021-04-08,25
 BE,Belgium,2021-04-08,47
 BG,Bulgaria,2021-04-08,136
@@ -14270,7 +14270,7 @@ SI,Slovenia,2021-04-12,7
 ES,Spain,2021-04-12,197
 SE,Sweden,2021-04-12,0
 CH,Switzerland,2021-04-12,5
-GB,United Kingdom,2021-04-12,37
+GB,United Kingdom,2021-04-12,38
 AT,Austria,2021-04-13,39
 BE,Belgium,2021-04-13,63
 BG,Bulgaria,2021-04-13,127
@@ -15070,7 +15070,7 @@ SI,Slovenia,2021-05-07,3
 ES,Spain,2021-05-07,66
 SE,Sweden,2021-05-07,15
 CH,Switzerland,2021-05-07,10
-GB,United Kingdom,2021-05-07,17
+GB,United Kingdom,2021-05-07,18
 AT,Austria,2021-05-08,23
 BE,Belgium,2021-05-08,28
 BG,Bulgaria,2021-05-08,16
@@ -16425,7 +16425,7 @@ DK,Denmark,2021-06-19,2
 EE,Estonia,2021-06-19,0
 FI,Finland,2021-06-19,0
 FR,France,2021-06-19,22
-DE,Germany,2021-06-19,99
+DE,Germany,2021-06-19,0
 GR,Greece,2021-06-19,20
 HU,Hungary,2021-06-19,0
 IS,Iceland,2021-06-19,0
@@ -16457,7 +16457,7 @@ DK,Denmark,2021-06-20,0
 EE,Estonia,2021-06-20,1
 FI,Finland,2021-06-20,0
 FR,France,2021-06-20,14
-DE,Germany,2021-06-20,16
+DE,Germany,2021-06-20,115
 GR,Greece,2021-06-20,14
 HU,Hungary,2021-06-20,0
 IS,Iceland,2021-06-20,0
@@ -16873,7 +16873,7 @@ DK,Denmark,2021-07-03,1
 EE,Estonia,2021-07-03,0
 FI,Finland,2021-07-03,0
 FR,France,2021-07-03,17
-DE,Germany,2021-07-03,16
+DE,Germany,2021-07-03,0
 GR,Greece,2021-07-03,9
 HU,Hungary,2021-07-03,0
 IS,Iceland,2021-07-03,0
@@ -16905,7 +16905,7 @@ DK,Denmark,2021-07-04,0
 EE,Estonia,2021-07-04,0
 FI,Finland,2021-07-04,0
 FR,France,2021-07-04,9
-DE,Germany,2021-07-04,7
+DE,Germany,2021-07-04,0
 GR,Greece,2021-07-04,6
 HU,Hungary,2021-07-04,0
 IS,Iceland,2021-07-04,0
@@ -16937,7 +16937,7 @@ DK,Denmark,2021-07-05,0
 EE,Estonia,2021-07-05,1
 FI,Finland,2021-07-05,0
 FR,France,2021-07-05,31
-DE,Germany,2021-07-05,1
+DE,Germany,2021-07-05,24
 GR,Greece,2021-07-05,6
 HU,Hungary,2021-07-05,4
 IS,Iceland,2021-07-05,0
@@ -17086,7 +17086,7 @@ SI,Slovenia,2021-07-09,0
 ES,Spain,2021-07-09,6
 SE,Sweden,2021-07-09,1
 CH,Switzerland,2021-07-09,0
-GB,United Kingdom,2021-07-09,52
+GB,United Kingdom,2021-07-09,53
 AT,Austria,2021-07-10,2
 BE,Belgium,2021-07-10,0
 BG,Bulgaria,2021-07-10,2
@@ -17097,7 +17097,7 @@ DK,Denmark,2021-07-10,1
 EE,Estonia,2021-07-10,0
 FI,Finland,2021-07-10,0
 FR,France,2021-07-10,19
-DE,Germany,2021-07-10,35
+DE,Germany,2021-07-10,0
 GR,Greece,2021-07-10,2
 HU,Hungary,2021-07-10,0
 IS,Iceland,2021-07-10,0
@@ -17129,7 +17129,7 @@ DK,Denmark,2021-07-11,0
 EE,Estonia,2021-07-11,0
 FI,Finland,2021-07-11,0
 FR,France,2021-07-11,4
-DE,Germany,2021-07-11,6
+DE,Germany,2021-07-11,0
 GR,Greece,2021-07-11,5
 HU,Hungary,2021-07-11,0
 IS,Iceland,2021-07-11,0
@@ -17161,7 +17161,7 @@ DK,Denmark,2021-07-12,0
 EE,Estonia,2021-07-12,0
 FI,Finland,2021-07-12,2
 FR,France,2021-07-12,23
-DE,Germany,2021-07-12,2
+DE,Germany,2021-07-12,43
 GR,Greece,2021-07-12,10
 HU,Hungary,2021-07-12,3
 IS,Iceland,2021-07-12,0
@@ -17321,7 +17321,7 @@ DK,Denmark,2021-07-17,1
 EE,Estonia,2021-07-17,0
 FI,Finland,2021-07-17,0
 FR,France,2021-07-17,16
-DE,Germany,2021-07-17,22
+DE,Germany,2021-07-17,0
 GR,Greece,2021-07-17,7
 HU,Hungary,2021-07-17,0
 IS,Iceland,2021-07-17,0
@@ -17353,7 +17353,7 @@ DK,Denmark,2021-07-18,0
 EE,Estonia,2021-07-18,0
 FI,Finland,2021-07-18,0
 FR,France,2021-07-18,5
-DE,Germany,2021-07-18,3
+DE,Germany,2021-07-18,0
 GR,Greece,2021-07-18,10
 HU,Hungary,2021-07-18,0
 IS,Iceland,2021-07-18,0
@@ -17385,7 +17385,7 @@ DK,Denmark,2021-07-19,0
 EE,Estonia,2021-07-19,0
 FI,Finland,2021-07-19,0
 FR,France,2021-07-19,12
-DE,Germany,2021-07-19,1
+DE,Germany,2021-07-19,26
 GR,Greece,2021-07-19,8
 HU,Hungary,2021-07-19,2
 IS,Iceland,2021-07-19,0
@@ -17502,7 +17502,7 @@ SI,Slovenia,2021-07-22,1
 ES,Spain,2021-07-22,28
 SE,Sweden,2021-07-22,0
 CH,Switzerland,2021-07-22,0
-GB,United Kingdom,2021-07-22,85
+GB,United Kingdom,2021-07-22,86
 AT,Austria,2021-07-23,1
 BE,Belgium,2021-07-23,0
 BG,Bulgaria,2021-07-23,4
@@ -17545,7 +17545,7 @@ DK,Denmark,2021-07-24,0
 EE,Estonia,2021-07-24,0
 FI,Finland,2021-07-24,2
 FR,France,2021-07-24,22
-DE,Germany,2021-07-24,28
+DE,Germany,2021-07-24,0
 GR,Greece,2021-07-24,8
 HU,Hungary,2021-07-24,0
 IS,Iceland,2021-07-24,0
@@ -17577,7 +17577,7 @@ DK,Denmark,2021-07-25,0
 EE,Estonia,2021-07-25,0
 FI,Finland,2021-07-25,1
 FR,France,2021-07-25,6
-DE,Germany,2021-07-25,4
+DE,Germany,2021-07-25,0
 GR,Greece,2021-07-25,8
 HU,Hungary,2021-07-25,0
 IS,Iceland,2021-07-25,0
@@ -17609,7 +17609,7 @@ DK,Denmark,2021-07-26,1
 EE,Estonia,2021-07-26,0
 FI,Finland,2021-07-26,1
 FR,France,2021-07-26,37
-DE,Germany,2021-07-26,3
+DE,Germany,2021-07-26,35
 GR,Greece,2021-07-26,5
 HU,Hungary,2021-07-26,0
 IS,Iceland,2021-07-26,0
@@ -17769,7 +17769,7 @@ DK,Denmark,2021-07-31,1
 EE,Estonia,2021-07-31,0
 FI,Finland,2021-07-31,0
 FR,France,2021-07-31,43
-DE,Germany,2021-07-31,21
+DE,Germany,2021-07-31,0
 GR,Greece,2021-07-31,17
 HU,Hungary,2021-07-31,0
 IS,Iceland,2021-07-31,0
@@ -17801,7 +17801,7 @@ DK,Denmark,2021-08-01,0
 EE,Estonia,2021-08-01,0
 FI,Finland,2021-08-01,1
 FR,France,2021-08-01,18
-DE,Germany,2021-08-01,1
+DE,Germany,2021-08-01,0
 GR,Greece,2021-08-01,10
 HU,Hungary,2021-08-01,0
 IS,Iceland,2021-08-01,0
@@ -17833,7 +17833,7 @@ DK,Denmark,2021-08-02,1
 EE,Estonia,2021-08-02,0
 FI,Finland,2021-08-02,0
 FR,France,2021-08-02,23
-DE,Germany,2021-08-02,1
+DE,Germany,2021-08-02,23
 GR,Greece,2021-08-02,8
 HU,Hungary,2021-08-02,1
 IS,Iceland,2021-08-02,0
@@ -17993,7 +17993,7 @@ DK,Denmark,2021-08-07,0
 EE,Estonia,2021-08-07,0
 FI,Finland,2021-08-07,2
 FR,France,2021-08-07,32
-DE,Germany,2021-08-07,24
+DE,Germany,2021-08-07,0
 GR,Greece,2021-08-07,10
 HU,Hungary,2021-08-07,0
 IS,Iceland,2021-08-07,0
@@ -18025,7 +18025,7 @@ DK,Denmark,2021-08-08,0
 EE,Estonia,2021-08-08,0
 FI,Finland,2021-08-08,4
 FR,France,2021-08-08,28
-DE,Germany,2021-08-08,4
+DE,Germany,2021-08-08,0
 GR,Greece,2021-08-08,17
 HU,Hungary,2021-08-08,0
 IS,Iceland,2021-08-08,0
@@ -18057,7 +18057,7 @@ DK,Denmark,2021-08-09,0
 EE,Estonia,2021-08-09,0
 FI,Finland,2021-08-09,0
 FR,France,2021-08-09,61
-DE,Germany,2021-08-09,2
+DE,Germany,2021-08-09,30
 GR,Greece,2021-08-09,22
 HU,Hungary,2021-08-09,4
 IS,Iceland,2021-08-09,0
@@ -18217,7 +18217,7 @@ DK,Denmark,2021-08-14,1
 EE,Estonia,2021-08-14,0
 FI,Finland,2021-08-14,2
 FR,France,2021-08-14,53
-DE,Germany,2021-08-14,11
+DE,Germany,2021-08-14,0
 GR,Greece,2021-08-14,24
 HU,Hungary,2021-08-14,0
 IS,Iceland,2021-08-14,0
@@ -18249,7 +18249,7 @@ DK,Denmark,2021-08-15,1
 EE,Estonia,2021-08-15,0
 FI,Finland,2021-08-15,0
 FR,France,2021-08-15,44
-DE,Germany,2021-08-15,3
+DE,Germany,2021-08-15,0
 GR,Greece,2021-08-15,17
 HU,Hungary,2021-08-15,0
 IS,Iceland,2021-08-15,0
@@ -18281,7 +18281,7 @@ DK,Denmark,2021-08-16,0
 EE,Estonia,2021-08-16,0
 FI,Finland,2021-08-16,2
 FR,France,2021-08-16,25
-DE,Germany,2021-08-16,4
+DE,Germany,2021-08-16,18
 GR,Greece,2021-08-16,14
 HU,Hungary,2021-08-16,3
 IS,Iceland,2021-08-16,0
@@ -18441,7 +18441,7 @@ DK,Denmark,2021-08-21,1
 EE,Estonia,2021-08-21,0
 FI,Finland,2021-08-21,1
 FR,France,2021-08-21,129
-DE,Germany,2021-08-21,17
+DE,Germany,2021-08-21,0
 GR,Greece,2021-08-21,23
 HU,Hungary,2021-08-21,0
 IS,Iceland,2021-08-21,0
@@ -18473,7 +18473,7 @@ DK,Denmark,2021-08-22,2
 EE,Estonia,2021-08-22,0
 FI,Finland,2021-08-22,0
 FR,France,2021-08-22,115
-DE,Germany,2021-08-22,3
+DE,Germany,2021-08-22,0
 GR,Greece,2021-08-22,33
 HU,Hungary,2021-08-22,0
 IS,Iceland,2021-08-22,0
@@ -18505,7 +18505,7 @@ DK,Denmark,2021-08-23,1
 EE,Estonia,2021-08-23,4
 FI,Finland,2021-08-23,2
 FR,France,2021-08-23,62
-DE,Germany,2021-08-23,4
+DE,Germany,2021-08-23,24
 GR,Greece,2021-08-23,38
 HU,Hungary,2021-08-23,6
 IS,Iceland,2021-08-23,0
@@ -18665,7 +18665,7 @@ DK,Denmark,2021-08-28,1
 EE,Estonia,2021-08-28,0
 FI,Finland,2021-08-28,2
 FR,France,2021-08-28,-46
-DE,Germany,2021-08-28,22
+DE,Germany,2021-08-28,0
 GR,Greece,2021-08-28,38
 HU,Hungary,2021-08-28,0
 IS,Iceland,2021-08-28,0
@@ -18697,7 +18697,7 @@ DK,Denmark,2021-08-29,3
 EE,Estonia,2021-08-29,2
 FI,Finland,2021-08-29,0
 FR,France,2021-08-29,53
-DE,Germany,2021-08-29,12
+DE,Germany,2021-08-29,0
 GR,Greece,2021-08-29,37
 HU,Hungary,2021-08-29,0
 IS,Iceland,2021-08-29,1
@@ -18729,7 +18729,7 @@ DK,Denmark,2021-08-30,0
 EE,Estonia,2021-08-30,2
 FI,Finland,2021-08-30,1
 FR,France,2021-08-30,37
-DE,Germany,2021-08-30,10
+DE,Germany,2021-08-30,44
 GR,Greece,2021-08-30,20
 HU,Hungary,2021-08-30,0
 IS,Iceland,2021-08-30,0
@@ -18889,7 +18889,7 @@ DK,Denmark,2021-09-04,3
 EE,Estonia,2021-09-04,1
 FI,Finland,2021-09-04,1
 FR,France,2021-09-04,83
-DE,Germany,2021-09-04,24
+DE,Germany,2021-09-04,0
 GR,Greece,2021-09-04,30
 HU,Hungary,2021-09-04,0
 IS,Iceland,2021-09-04,0
@@ -18921,7 +18921,7 @@ DK,Denmark,2021-09-05,0
 EE,Estonia,2021-09-05,4
 FI,Finland,2021-09-05,0
 FR,France,2021-09-05,49
-DE,Germany,2021-09-05,21
+DE,Germany,2021-09-05,0
 GR,Greece,2021-09-05,43
 HU,Hungary,2021-09-05,0
 IS,Iceland,2021-09-05,0
@@ -18953,7 +18953,7 @@ DK,Denmark,2021-09-06,2
 EE,Estonia,2021-09-06,1
 FI,Finland,2021-09-06,0
 FR,France,2021-09-06,117
-DE,Germany,2021-09-06,8
+DE,Germany,2021-09-06,53
 GR,Greece,2021-09-06,47
 HU,Hungary,2021-09-06,9
 IS,Iceland,2021-09-06,0
@@ -19113,7 +19113,7 @@ DK,Denmark,2021-09-11,3
 EE,Estonia,2021-09-11,1
 FI,Finland,2021-09-11,0
 FR,France,2021-09-11,46
-DE,Germany,2021-09-11,45
+DE,Germany,2021-09-11,0
 GR,Greece,2021-09-11,39
 HU,Hungary,2021-09-11,0
 IS,Iceland,2021-09-11,0
@@ -19134,7 +19134,7 @@ SI,Slovenia,2021-09-11,3
 ES,Spain,2021-09-11,0
 SE,Sweden,2021-09-11,0
 CH,Switzerland,2021-09-11,-1
-GB,United Kingdom,2021-09-11,144
+GB,United Kingdom,2021-09-11,145
 AT,Austria,2021-09-12,11
 BE,Belgium,2021-09-12,0
 BG,Bulgaria,2021-09-12,53
@@ -19145,7 +19145,7 @@ DK,Denmark,2021-09-12,0
 EE,Estonia,2021-09-12,2
 FI,Finland,2021-09-12,1
 FR,France,2021-09-12,29
-DE,Germany,2021-09-12,8
+DE,Germany,2021-09-12,0
 GR,Greece,2021-09-12,28
 HU,Hungary,2021-09-12,0
 IS,Iceland,2021-09-12,0
@@ -19177,7 +19177,7 @@ DK,Denmark,2021-09-13,3
 EE,Estonia,2021-09-13,1
 FI,Finland,2021-09-13,5
 FR,France,2021-09-13,67
-DE,Germany,2021-09-13,12
+DE,Germany,2021-09-13,65
 GR,Greece,2021-09-13,54
 HU,Hungary,2021-09-13,12
 IS,Iceland,2021-09-13,0
@@ -19198,7 +19198,7 @@ SI,Slovenia,2021-09-13,1
 ES,Spain,2021-09-13,103
 SE,Sweden,2021-09-13,0
 CH,Switzerland,2021-09-13,15
-GB,United Kingdom,2021-09-13,118
+GB,United Kingdom,2021-09-13,119
 AT,Austria,2021-09-14,3
 BE,Belgium,2021-09-14,4
 BG,Bulgaria,2021-09-14,83
@@ -19337,7 +19337,7 @@ DK,Denmark,2021-09-18,3
 EE,Estonia,2021-09-18,3
 FI,Finland,2021-09-18,1
 FR,France,2021-09-18,42
-DE,Germany,2021-09-18,63
+DE,Germany,2021-09-18,0
 GR,Greece,2021-09-18,39
 HU,Hungary,2021-09-18,0
 IS,Iceland,2021-09-18,0
@@ -19369,7 +19369,7 @@ DK,Denmark,2021-09-19,3
 EE,Estonia,2021-09-19,1
 FI,Finland,2021-09-19,0
 FR,France,2021-09-19,28
-DE,Germany,2021-09-19,38
+DE,Germany,2021-09-19,0
 GR,Greece,2021-09-19,33
 HU,Hungary,2021-09-19,0
 IS,Iceland,2021-09-19,0
@@ -19390,7 +19390,7 @@ SI,Slovenia,2021-09-19,4
 ES,Spain,2021-09-19,0
 SE,Sweden,2021-09-19,0
 CH,Switzerland,2021-09-19,1
-GB,United Kingdom,2021-09-19,136
+GB,United Kingdom,2021-09-19,137
 AT,Austria,2021-09-20,7
 BE,Belgium,2021-09-20,20
 BG,Bulgaria,2021-09-20,138
@@ -19401,7 +19401,7 @@ DK,Denmark,2021-09-20,2
 EE,Estonia,2021-09-20,2
 FI,Finland,2021-09-20,5
 FR,France,2021-09-20,0
-DE,Germany,2021-09-20,13
+DE,Germany,2021-09-20,114
 GR,Greece,2021-09-20,39
 HU,Hungary,2021-09-20,13
 IS,Iceland,2021-09-20,0
@@ -19561,7 +19561,7 @@ DK,Denmark,2021-09-25,0
 EE,Estonia,2021-09-25,0
 FI,Finland,2021-09-25,3
 FR,France,2021-09-25,0
-DE,Germany,2021-09-25,62
+DE,Germany,2021-09-25,0
 GR,Greece,2021-09-25,16
 HU,Hungary,2021-09-25,0
 IS,Iceland,2021-09-25,0
@@ -19593,7 +19593,7 @@ DK,Denmark,2021-09-26,2
 EE,Estonia,2021-09-26,1
 FI,Finland,2021-09-26,1
 FR,France,2021-09-26,14
-DE,Germany,2021-09-26,28
+DE,Germany,2021-09-26,0
 GR,Greece,2021-09-26,24
 HU,Hungary,2021-09-26,0
 IS,Iceland,2021-09-26,0
@@ -19625,7 +19625,7 @@ DK,Denmark,2021-09-27,4
 EE,Estonia,2021-09-27,2
 FI,Finland,2021-09-27,3
 FR,France,2021-09-27,71
-DE,Germany,2021-09-27,10
+DE,Germany,2021-09-27,100
 GR,Greece,2021-09-27,48
 HU,Hungary,2021-09-27,20
 IS,Iceland,2021-09-27,0
@@ -19678,7 +19678,7 @@ SI,Slovenia,2021-09-28,9
 ES,Spain,2021-09-28,60
 SE,Sweden,2021-09-28,29
 CH,Switzerland,2021-09-28,13
-GB,United Kingdom,2021-09-28,120
+GB,United Kingdom,2021-09-28,121
 AT,Austria,2021-09-29,8
 BE,Belgium,2021-09-29,14
 BG,Bulgaria,2021-09-29,87
@@ -19785,7 +19785,7 @@ DK,Denmark,2021-10-02,4
 EE,Estonia,2021-10-02,3
 FI,Finland,2021-10-02,5
 FR,France,2021-10-02,30
-DE,Germany,2021-10-02,66
+DE,Germany,2021-10-02,0
 GR,Greece,2021-10-02,29
 HU,Hungary,2021-10-02,0
 IS,Iceland,2021-10-02,0
@@ -19817,7 +19817,7 @@ DK,Denmark,2021-10-03,0
 EE,Estonia,2021-10-03,3
 FI,Finland,2021-10-03,3
 FR,France,2021-10-03,9
-DE,Germany,2021-10-03,9
+DE,Germany,2021-10-03,0
 GR,Greece,2021-10-03,31
 HU,Hungary,2021-10-03,0
 IS,Iceland,2021-10-03,0
@@ -19849,7 +19849,7 @@ DK,Denmark,2021-10-04,1
 EE,Estonia,2021-10-04,7
 FI,Finland,2021-10-04,5
 FR,France,2021-10-04,43
-DE,Germany,2021-10-04,7
+DE,Germany,2021-10-04,82
 GR,Greece,2021-10-04,36
 HU,Hungary,2021-10-04,31
 IS,Iceland,2021-10-04,0
@@ -20009,7 +20009,7 @@ DK,Denmark,2021-10-09,0
 EE,Estonia,2021-10-09,3
 FI,Finland,2021-10-09,8
 FR,France,2021-10-09,15
-DE,Germany,2021-10-09,65
+DE,Germany,2021-10-09,0
 GR,Greece,2021-10-09,36
 HU,Hungary,2021-10-09,0
 IS,Iceland,2021-10-09,0
@@ -20041,7 +20041,7 @@ DK,Denmark,2021-10-10,0
 EE,Estonia,2021-10-10,0
 FI,Finland,2021-10-10,5
 FR,France,2021-10-10,8
-DE,Germany,2021-10-10,24
+DE,Germany,2021-10-10,0
 GR,Greece,2021-10-10,30
 HU,Hungary,2021-10-10,0
 IS,Iceland,2021-10-10,0
@@ -20073,7 +20073,7 @@ DK,Denmark,2021-10-11,2
 EE,Estonia,2021-10-11,6
 FI,Finland,2021-10-11,3
 FR,France,2021-10-11,35
-DE,Germany,2021-10-11,7
+DE,Germany,2021-10-11,96
 GR,Greece,2021-10-11,42
 HU,Hungary,2021-10-11,28
 IS,Iceland,2021-10-11,0
@@ -20233,7 +20233,7 @@ DK,Denmark,2021-10-16,1
 EE,Estonia,2021-10-16,7
 FI,Finland,2021-10-16,2
 FR,France,2021-10-16,15
-DE,Germany,2021-10-16,75
+DE,Germany,2021-10-16,0
 GR,Greece,2021-10-16,31
 HU,Hungary,2021-10-16,0
 IS,Iceland,2021-10-16,0
@@ -20265,7 +20265,7 @@ DK,Denmark,2021-10-17,5
 EE,Estonia,2021-10-17,4
 FI,Finland,2021-10-17,1
 FR,France,2021-10-17,5
-DE,Germany,2021-10-17,17
+DE,Germany,2021-10-17,0
 GR,Greece,2021-10-17,27
 HU,Hungary,2021-10-17,0
 IS,Iceland,2021-10-17,0
@@ -20297,7 +20297,7 @@ DK,Denmark,2021-10-18,3
 EE,Estonia,2021-10-18,3
 FI,Finland,2021-10-18,4
 FR,France,2021-10-18,46
-DE,Germany,2021-10-18,10
+DE,Germany,2021-10-18,102
 GR,Greece,2021-10-18,43
 HU,Hungary,2021-10-18,51
 IS,Iceland,2021-10-18,0
@@ -20457,7 +20457,7 @@ DK,Denmark,2021-10-23,1
 EE,Estonia,2021-10-23,5
 FI,Finland,2021-10-23,8
 FR,France,2021-10-23,23
-DE,Germany,2021-10-23,86
+DE,Germany,2021-10-23,0
 GR,Greece,2021-10-23,43
 HU,Hungary,2021-10-23,0
 IS,Iceland,2021-10-23,0
@@ -20489,7 +20489,7 @@ DK,Denmark,2021-10-24,2
 EE,Estonia,2021-10-24,7
 FI,Finland,2021-10-24,4
 FR,France,2021-10-24,4
-DE,Germany,2021-10-24,23
+DE,Germany,2021-10-24,0
 GR,Greece,2021-10-24,30
 HU,Hungary,2021-10-24,0
 IS,Iceland,2021-10-24,0
@@ -20521,7 +20521,7 @@ DK,Denmark,2021-10-25,0
 EE,Estonia,2021-10-25,8
 FI,Finland,2021-10-25,2
 FR,France,2021-10-25,43
-DE,Germany,2021-10-25,17
+DE,Germany,2021-10-25,126
 GR,Greece,2021-10-25,54
 HU,Hungary,2021-10-25,75
 IS,Iceland,2021-10-25,0
@@ -20574,7 +20574,7 @@ SI,Slovenia,2021-10-26,11
 ES,Spain,2021-10-26,52
 SE,Sweden,2021-10-26,9
 CH,Switzerland,2021-10-26,11
-GB,United Kingdom,2021-10-26,178
+GB,United Kingdom,2021-10-26,179
 AT,Austria,2021-10-27,12
 BE,Belgium,2021-10-27,32
 BG,Bulgaria,2021-10-27,154
@@ -20681,7 +20681,7 @@ DK,Denmark,2021-10-30,4
 EE,Estonia,2021-10-30,14
 FI,Finland,2021-10-30,2
 FR,France,2021-10-30,22
-DE,Germany,2021-10-30,90
+DE,Germany,2021-10-30,0
 GR,Greece,2021-10-30,38
 HU,Hungary,2021-10-30,0
 IS,Iceland,2021-10-30,0
@@ -20702,7 +20702,7 @@ SI,Slovenia,2021-10-30,9
 ES,Spain,2021-10-30,0
 SE,Sweden,2021-10-30,0
 CH,Switzerland,2021-10-30,0
-GB,United Kingdom,2021-10-30,164
+GB,United Kingdom,2021-10-30,165
 AT,Austria,2021-10-31,14
 BE,Belgium,2021-10-31,0
 BG,Bulgaria,2021-10-31,81
@@ -20713,7 +20713,7 @@ DK,Denmark,2021-10-31,1
 EE,Estonia,2021-10-31,15
 FI,Finland,2021-10-31,3
 FR,France,2021-10-31,12
-DE,Germany,2021-10-31,33
+DE,Germany,2021-10-31,0
 GR,Greece,2021-10-31,44
 HU,Hungary,2021-10-31,0
 IS,Iceland,2021-10-31,0
@@ -20745,7 +20745,7 @@ DK,Denmark,2021-11-01,2
 EE,Estonia,2021-11-01,9
 FI,Finland,2021-11-01,5
 FR,France,2021-11-01,2
-DE,Germany,2021-11-01,23
+DE,Germany,2021-11-01,146
 GR,Greece,2021-11-01,52
 HU,Hungary,2021-11-01,152
 IS,Iceland,2021-11-01,0
@@ -20905,7 +20905,7 @@ DK,Denmark,2021-11-06,10
 EE,Estonia,2021-11-06,17
 FI,Finland,2021-11-06,11
 FR,France,2021-11-06,25
-DE,Germany,2021-11-06,142
+DE,Germany,2021-11-06,0
 GR,Greece,2021-11-06,43
 HU,Hungary,2021-11-06,0
 IS,Iceland,2021-11-06,0
@@ -20937,7 +20937,7 @@ DK,Denmark,2021-11-07,3
 EE,Estonia,2021-11-07,12
 FI,Finland,2021-11-07,9
 FR,France,2021-11-07,10
-DE,Germany,2021-11-07,37
+DE,Germany,2021-11-07,0
 GR,Greece,2021-11-07,52
 HU,Hungary,2021-11-07,0
 IS,Iceland,2021-11-07,0
@@ -20969,7 +20969,7 @@ DK,Denmark,2021-11-08,2
 EE,Estonia,2021-11-08,7
 FI,Finland,2021-11-08,4
 FR,France,2021-11-08,42
-DE,Germany,2021-11-08,33
+DE,Germany,2021-11-08,212
 GR,Greece,2021-11-08,66
 HU,Hungary,2021-11-08,214
 IS,Iceland,2021-11-08,0
@@ -21129,7 +21129,7 @@ DK,Denmark,2021-11-13,7
 EE,Estonia,2021-11-13,6
 FI,Finland,2021-11-13,5
 FR,France,2021-11-13,16
-DE,Germany,2021-11-13,228
+DE,Germany,2021-11-13,0
 GR,Greece,2021-11-13,70
 HU,Hungary,2021-11-13,0
 IS,Iceland,2021-11-13,0
@@ -21161,7 +21161,7 @@ DK,Denmark,2021-11-14,7
 EE,Estonia,2021-11-14,5
 FI,Finland,2021-11-14,3
 FR,France,2021-11-14,17
-DE,Germany,2021-11-14,55
+DE,Germany,2021-11-14,0
 GR,Greece,2021-11-14,80
 HU,Hungary,2021-11-14,0
 IS,Iceland,2021-11-14,0
@@ -21182,7 +21182,7 @@ SI,Slovenia,2021-11-14,21
 ES,Spain,2021-11-14,0
 SE,Sweden,2021-11-14,0
 CH,Switzerland,2021-11-14,1
-GB,United Kingdom,2021-11-14,133
+GB,United Kingdom,2021-11-14,134
 AT,Austria,2021-11-15,60
 BE,Belgium,2021-11-15,82
 BG,Bulgaria,2021-11-15,276
@@ -21193,7 +21193,7 @@ DK,Denmark,2021-11-15,5
 EE,Estonia,2021-11-15,17
 FI,Finland,2021-11-15,6
 FR,France,2021-11-15,71
-DE,Germany,2021-11-15,43
+DE,Germany,2021-11-15,326
 GR,Greece,2021-11-15,72
 HU,Hungary,2021-11-15,304
 IS,Iceland,2021-11-15,0
@@ -21353,7 +21353,7 @@ DK,Denmark,2021-11-20,10
 EE,Estonia,2021-11-20,5
 FI,Finland,2021-11-20,6
 FR,France,2021-11-20,23
-DE,Germany,2021-11-20,248
+DE,Germany,2021-11-20,0
 GR,Greece,2021-11-20,69
 HU,Hungary,2021-11-20,0
 IS,Iceland,2021-11-20,0
@@ -21385,7 +21385,7 @@ DK,Denmark,2021-11-21,3
 EE,Estonia,2021-11-21,7
 FI,Finland,2021-11-21,8
 FR,France,2021-11-21,15
-DE,Germany,2021-11-21,75
+DE,Germany,2021-11-21,0
 GR,Greece,2021-11-21,76
 HU,Hungary,2021-11-21,0
 IS,Iceland,2021-11-21,0
@@ -21417,7 +21417,7 @@ DK,Denmark,2021-11-22,6
 EE,Estonia,2021-11-22,11
 FI,Finland,2021-11-22,5
 FR,France,2021-11-22,95
-DE,Germany,2021-11-22,62
+DE,Germany,2021-11-22,385
 GR,Greece,2021-11-22,112
 HU,Hungary,2021-11-22,392
 IS,Iceland,2021-11-22,0
@@ -21577,7 +21577,7 @@ DK,Denmark,2021-11-27,13
 EE,Estonia,2021-11-27,8
 FI,Finland,2021-11-27,8
 FR,France,2021-11-27,32
-DE,Germany,2021-11-27,303
+DE,Germany,2021-11-27,0
 GR,Greece,2021-11-27,82
 HU,Hungary,2021-11-27,0
 IS,Iceland,2021-11-27,0
@@ -21609,7 +21609,7 @@ DK,Denmark,2021-11-28,9
 EE,Estonia,2021-11-28,2
 FI,Finland,2021-11-28,8
 FR,France,2021-11-28,21
-DE,Germany,2021-11-28,104
+DE,Germany,2021-11-28,0
 GR,Greece,2021-11-28,98
 HU,Hungary,2021-11-28,0
 IS,Iceland,2021-11-28,0
@@ -21641,7 +21641,7 @@ DK,Denmark,2021-11-29,11
 EE,Estonia,2021-11-29,7
 FI,Finland,2021-11-29,3
 FR,France,2021-11-29,122
-DE,Germany,2021-11-29,73
+DE,Germany,2021-11-29,480
 GR,Greece,2021-11-29,108
 HU,Hungary,2021-11-29,460
 IS,Iceland,2021-11-29,0
@@ -21801,7 +21801,7 @@ DK,Denmark,2021-12-04,12
 EE,Estonia,2021-12-04,5
 FI,Finland,2021-12-04,6
 FR,France,2021-12-04,48
-DE,Germany,2021-12-04,378
+DE,Germany,2021-12-04,0
 GR,Greece,2021-12-04,89
 HU,Hungary,2021-12-04,0
 IS,Iceland,2021-12-04,0
@@ -21833,7 +21833,7 @@ DK,Denmark,2021-12-05,7
 EE,Estonia,2021-12-05,8
 FI,Finland,2021-12-05,7
 FR,France,2021-12-05,27
-DE,Germany,2021-12-05,94
+DE,Germany,2021-12-05,0
 GR,Greece,2021-12-05,79
 HU,Hungary,2021-12-05,0
 IS,Iceland,2021-12-05,0
@@ -21865,7 +21865,7 @@ DK,Denmark,2021-12-06,10
 EE,Estonia,2021-12-06,2
 FI,Finland,2021-12-06,5
 FR,France,2021-12-06,192
-DE,Germany,2021-12-06,81
+DE,Germany,2021-12-06,553
 GR,Greece,2021-12-06,121
 HU,Hungary,2021-12-06,489
 IS,Iceland,2021-12-06,0
@@ -22014,7 +22014,7 @@ SI,Slovenia,2021-12-10,19
 ES,Spain,2021-12-10,59
 SE,Sweden,2021-12-10,6
 CH,Switzerland,2021-12-10,30
-GB,United Kingdom,2021-12-10,121
+GB,United Kingdom,2021-12-10,122
 AT,Austria,2021-12-11,59
 BE,Belgium,2021-12-11,0
 BG,Bulgaria,2021-12-11,27
@@ -22025,7 +22025,7 @@ DK,Denmark,2021-12-11,9
 EE,Estonia,2021-12-11,3
 FI,Finland,2021-12-11,6
 FR,France,2021-12-11,67
-DE,Germany,2021-12-11,510
+DE,Germany,2021-12-11,0
 GR,Greece,2021-12-11,72
 HU,Hungary,2021-12-11,0
 IS,Iceland,2021-12-11,0
@@ -22057,7 +22057,7 @@ DK,Denmark,2021-12-12,9
 EE,Estonia,2021-12-12,4
 FI,Finland,2021-12-12,7
 FR,France,2021-12-12,48
-DE,Germany,2021-12-12,132
+DE,Germany,2021-12-12,0
 GR,Greece,2021-12-12,91
 HU,Hungary,2021-12-12,0
 IS,Iceland,2021-12-12,0
@@ -22089,7 +22089,7 @@ DK,Denmark,2021-12-13,9
 EE,Estonia,2021-12-13,13
 FI,Finland,2021-12-13,5
 FR,France,2021-12-13,235
-DE,Germany,2021-12-13,116
+DE,Germany,2021-12-13,758
 GR,Greece,2021-12-13,97
 HU,Hungary,2021-12-13,455
 IS,Iceland,2021-12-13,1
@@ -22249,7 +22249,7 @@ DK,Denmark,2021-12-18,13
 EE,Estonia,2021-12-18,8
 FI,Finland,2021-12-18,8
 FR,France,2021-12-18,85
-DE,Germany,2021-12-18,414
+DE,Germany,2021-12-18,0
 GR,Greece,2021-12-18,63
 HU,Hungary,2021-12-18,0
 IS,Iceland,2021-12-18,0
@@ -22281,7 +22281,7 @@ DK,Denmark,2021-12-19,9
 EE,Estonia,2021-12-19,2
 FI,Finland,2021-12-19,2
 FR,France,2021-12-19,75
-DE,Germany,2021-12-19,180
+DE,Germany,2021-12-19,0
 GR,Greece,2021-12-19,92
 HU,Hungary,2021-12-19,0
 IS,Iceland,2021-12-19,0
@@ -22313,7 +22313,7 @@ DK,Denmark,2021-12-20,8
 EE,Estonia,2021-12-20,4
 FI,Finland,2021-12-20,5
 FR,France,2021-12-20,216
-DE,Germany,2021-12-20,119
+DE,Germany,2021-12-20,713
 GR,Greece,2021-12-20,85
 HU,Hungary,2021-12-20,366
 IS,Iceland,2021-12-20,1
@@ -22441,7 +22441,7 @@ DK,Denmark,2021-12-24,14
 EE,Estonia,2021-12-24,8
 FI,Finland,2021-12-24,7
 FR,France,2021-12-24,167
-DE,Germany,2021-12-24,370
+DE,Germany,2021-12-24,0
 GR,Greece,2021-12-24,94
 HU,Hungary,2021-12-24,0
 IS,Iceland,2021-12-24,0
@@ -22473,7 +22473,7 @@ DK,Denmark,2021-12-25,0
 EE,Estonia,2021-12-25,0
 FI,Finland,2021-12-25,6
 FR,France,2021-12-25,84
-DE,Germany,2021-12-25,157
+DE,Germany,2021-12-25,0
 GR,Greece,2021-12-25,58
 HU,Hungary,2021-12-25,0
 IS,Iceland,2021-12-25,0
@@ -22505,7 +22505,7 @@ DK,Denmark,2021-12-26,0
 EE,Estonia,2021-12-26,2
 FI,Finland,2021-12-26,4
 FR,France,2021-12-26,96
-DE,Germany,2021-12-26,88
+DE,Germany,2021-12-26,0
 GR,Greece,2021-12-26,79
 HU,Hungary,2021-12-26,0
 IS,Iceland,2021-12-26,0
@@ -22537,7 +22537,7 @@ DK,Denmark,2021-12-27,30
 EE,Estonia,2021-12-27,7
 FI,Finland,2021-12-27,9
 FR,France,2021-12-27,245
-DE,Germany,2021-12-27,69
+DE,Germany,2021-12-27,684
 GR,Greece,2021-12-27,67
 HU,Hungary,2021-12-27,436
 IS,Iceland,2021-12-27,0
@@ -22558,7 +22558,7 @@ SI,Slovenia,2021-12-27,9
 ES,Spain,2021-12-27,120
 SE,Sweden,2021-12-27,0
 CH,Switzerland,2021-12-27,49
-GB,United Kingdom,2021-12-27,132
+GB,United Kingdom,2021-12-27,133
 AT,Austria,2021-12-28,24
 BE,Belgium,2021-12-28,32
 BG,Bulgaria,2021-12-28,34
@@ -22622,7 +22622,7 @@ SI,Slovenia,2021-12-29,10
 ES,Spain,2021-12-29,78
 SE,Sweden,2021-12-29,11
 CH,Switzerland,2021-12-29,20
-GB,United Kingdom,2021-12-29,131
+GB,United Kingdom,2021-12-29,132
 AT,Austria,2021-12-30,25
 BE,Belgium,2021-12-30,41
 BG,Bulgaria,2021-12-30,71
@@ -22665,7 +22665,7 @@ DK,Denmark,2021-12-31,11
 EE,Estonia,2021-12-31,4
 FI,Finland,2021-12-31,16
 FR,France,2021-12-31,189
-DE,Germany,2021-12-31,323
+DE,Germany,2021-12-31,0
 GR,Greece,2021-12-31,82
 HU,Hungary,2021-12-31,82
 IS,Iceland,2021-12-31,0
@@ -22697,7 +22697,7 @@ DK,Denmark,2022-01-01,5
 EE,Estonia,2022-01-01,6
 FI,Finland,2022-01-01,14
 FR,France,2022-01-01,110
-DE,Germany,2022-01-01,184
+DE,Germany,2022-01-01,0
 GR,Greece,2022-01-01,59
 HU,Hungary,2022-01-01,0
 IS,Iceland,2022-01-01,0
@@ -22729,7 +22729,7 @@ DK,Denmark,2022-01-02,15
 EE,Estonia,2022-01-02,0
 FI,Finland,2022-01-02,11
 FR,France,2022-01-02,91
-DE,Germany,2022-01-02,46
+DE,Germany,2022-01-02,0
 GR,Greece,2022-01-02,61
 HU,Hungary,2022-01-02,0
 IS,Iceland,2022-01-02,0
@@ -22761,7 +22761,7 @@ DK,Denmark,2022-01-03,5
 EE,Estonia,2022-01-03,1
 FI,Finland,2022-01-03,12
 FR,France,2022-01-03,270
-DE,Germany,2022-01-03,68
+DE,Germany,2022-01-03,0
 GR,Greece,2022-01-03,80
 HU,Hungary,2022-01-03,248
 IS,Iceland,2022-01-03,1
@@ -22793,7 +22793,7 @@ DK,Denmark,2022-01-04,15
 EE,Estonia,2022-01-04,1
 FI,Finland,2022-01-04,13
 FR,France,2022-01-04,342
-DE,Germany,2022-01-04,356
+DE,Germany,2022-01-04,977
 GR,Greece,2022-01-04,63
 HU,Hungary,2022-01-04,83
 IS,Iceland,2022-01-04,0
@@ -22910,7 +22910,7 @@ SI,Slovenia,2022-01-07,10
 ES,Spain,2022-01-07,97
 SE,Sweden,2022-01-07,8
 CH,Switzerland,2022-01-07,14
-GB,United Kingdom,2022-01-07,226
+GB,United Kingdom,2022-01-07,227
 AT,Austria,2022-01-08,9
 BE,Belgium,2022-01-08,0
 BG,Bulgaria,2022-01-08,45
@@ -22921,7 +22921,7 @@ DK,Denmark,2022-01-08,28
 EE,Estonia,2022-01-08,3
 FI,Finland,2022-01-08,11
 FR,France,2022-01-08,142
-DE,Germany,2022-01-08,268
+DE,Germany,2022-01-08,0
 GR,Greece,2022-01-08,65
 HU,Hungary,2022-01-08,0
 IS,Iceland,2022-01-08,0
@@ -22953,7 +22953,7 @@ DK,Denmark,2022-01-09,14
 EE,Estonia,2022-01-09,1
 FI,Finland,2022-01-09,10
 FR,France,2022-01-09,90
-DE,Germany,2022-01-09,77
+DE,Germany,2022-01-09,0
 GR,Greece,2022-01-09,66
 HU,Hungary,2022-01-09,0
 IS,Iceland,2022-01-09,0
@@ -22985,7 +22985,7 @@ DK,Denmark,2022-01-10,9
 EE,Estonia,2022-01-10,1
 FI,Finland,2022-01-10,8
 FR,France,2022-01-10,279
-DE,Germany,2022-01-10,52
+DE,Germany,2022-01-10,397
 GR,Greece,2022-01-10,85
 HU,Hungary,2022-01-10,167
 IS,Iceland,2022-01-10,0
@@ -23102,7 +23102,7 @@ SI,Slovenia,2022-01-13,7
 ES,Spain,2022-01-13,112
 SE,Sweden,2022-01-13,20
 CH,Switzerland,2022-01-13,20
-GB,United Kingdom,2022-01-13,240
+GB,United Kingdom,2022-01-13,241
 AT,Austria,2022-01-14,9
 BE,Belgium,2022-01-14,46
 BG,Bulgaria,2022-01-14,80
@@ -23145,7 +23145,7 @@ DK,Denmark,2022-01-15,16
 EE,Estonia,2022-01-15,6
 FI,Finland,2022-01-15,6
 FR,France,2022-01-15,148
-DE,Germany,2022-01-15,235
+DE,Germany,2022-01-15,0
 GR,Greece,2022-01-15,79
 HU,Hungary,2022-01-15,0
 IS,Iceland,2022-01-15,0
@@ -23177,7 +23177,7 @@ DK,Denmark,2022-01-16,10
 EE,Estonia,2022-01-16,3
 FI,Finland,2022-01-16,7
 FR,France,2022-01-16,81
-DE,Germany,2022-01-16,47
+DE,Germany,2022-01-16,0
 GR,Greece,2022-01-16,96
 HU,Hungary,2022-01-16,0
 IS,Iceland,2022-01-16,0
@@ -23198,7 +23198,7 @@ SI,Slovenia,2022-01-16,2
 ES,Spain,2022-01-16,0
 SE,Sweden,2022-01-16,0
 CH,Switzerland,2022-01-16,0
-GB,United Kingdom,2022-01-16,255
+GB,United Kingdom,2022-01-16,256
 AT,Austria,2022-01-17,8
 BE,Belgium,2022-01-17,49
 BG,Bulgaria,2022-01-17,161
@@ -23209,7 +23209,7 @@ DK,Denmark,2022-01-17,11
 EE,Estonia,2022-01-17,5
 FI,Finland,2022-01-17,4
 FR,France,2022-01-17,296
-DE,Germany,2022-01-17,30
+DE,Germany,2022-01-17,312
 GR,Greece,2022-01-17,103
 HU,Hungary,2022-01-17,270
 IS,Iceland,2022-01-17,0
@@ -23358,7 +23358,7 @@ SI,Slovenia,2022-01-21,11
 ES,Spain,2022-01-21,142
 SE,Sweden,2022-01-21,43
 CH,Switzerland,2022-01-21,10
-GB,United Kingdom,2022-01-21,247
+GB,United Kingdom,2022-01-21,248
 AT,Austria,2022-01-22,8
 BE,Belgium,2022-01-22,0
 BG,Bulgaria,2022-01-22,32
@@ -23369,7 +23369,7 @@ DK,Denmark,2022-01-22,25
 EE,Estonia,2022-01-22,4
 FI,Finland,2022-01-22,1
 FR,France,2022-01-22,167
-DE,Germany,2022-01-22,179
+DE,Germany,2022-01-22,0
 GR,Greece,2022-01-22,73
 HU,Hungary,2022-01-22,0
 IS,Iceland,2022-01-22,0
@@ -23401,7 +23401,7 @@ DK,Denmark,2022-01-23,12
 EE,Estonia,2022-01-23,2
 FI,Finland,2022-01-23,0
 FR,France,2022-01-23,115
-DE,Germany,2022-01-23,54
+DE,Germany,2022-01-23,0
 GR,Greece,2022-01-23,86
 HU,Hungary,2022-01-23,0
 IS,Iceland,2022-01-23,0
@@ -23433,7 +23433,7 @@ DK,Denmark,2022-01-24,13
 EE,Estonia,2022-01-24,3
 FI,Finland,2022-01-24,0
 FR,France,2022-01-24,386
-DE,Germany,2022-01-24,28
+DE,Germany,2022-01-24,261
 GR,Greece,2022-01-24,113
 HU,Hungary,2022-01-24,122
 IS,Iceland,2022-01-24,0
@@ -23518,7 +23518,7 @@ SI,Slovenia,2022-01-26,15
 ES,Spain,2022-01-26,215
 SE,Sweden,2022-01-26,75
 CH,Switzerland,2022-01-26,14
-GB,United Kingdom,2022-01-26,195
+GB,United Kingdom,2022-01-26,196
 AT,Austria,2022-01-27,15
 BE,Belgium,2022-01-27,36
 BG,Bulgaria,2022-01-27,78
@@ -23593,7 +23593,7 @@ DK,Denmark,2022-01-29,17
 EE,Estonia,2022-01-29,0
 FI,Finland,2022-01-29,0
 FR,France,2022-01-29,178
-DE,Germany,2022-01-29,182
+DE,Germany,2022-01-29,0
 GR,Greece,2022-01-29,80
 HU,Hungary,2022-01-29,0
 IS,Iceland,2022-01-29,0
@@ -23625,7 +23625,7 @@ DK,Denmark,2022-01-30,21
 EE,Estonia,2022-01-30,11
 FI,Finland,2022-01-30,0
 FR,France,2022-01-30,127
-DE,Germany,2022-01-30,59
+DE,Germany,2022-01-30,0
 GR,Greece,2022-01-30,97
 HU,Hungary,2022-01-30,0
 IS,Iceland,2022-01-30,0
@@ -23657,7 +23657,7 @@ DK,Denmark,2022-01-31,17
 EE,Estonia,2022-01-31,-3
 FI,Finland,2022-01-31,48
 FR,France,2022-01-31,348
-DE,Germany,2022-01-31,61
+DE,Germany,2022-01-31,302
 GR,Greece,2022-01-31,128
 HU,Hungary,2022-01-31,176
 IS,Iceland,2022-01-31,0
@@ -23817,7 +23817,7 @@ DK,Denmark,2022-02-05,35
 EE,Estonia,2022-02-05,3
 FI,Finland,2022-02-05,0
 FR,France,2022-02-05,170
-DE,Germany,2022-02-05,172
+DE,Germany,2022-02-05,0
 GR,Greece,2022-02-05,72
 HU,Hungary,2022-02-05,0
 IS,Iceland,2022-02-05,0
@@ -23838,7 +23838,7 @@ SI,Slovenia,2022-02-05,26
 ES,Spain,2022-02-05,0
 SE,Sweden,2022-02-05,0
 CH,Switzerland,2022-02-05,3
-GB,United Kingdom,2022-02-05,171
+GB,United Kingdom,2022-02-05,172
 AT,Austria,2022-02-06,17
 BE,Belgium,2022-02-06,0
 BG,Bulgaria,2022-02-06,42
@@ -23849,7 +23849,7 @@ DK,Denmark,2022-02-06,18
 EE,Estonia,2022-02-06,3
 FI,Finland,2022-02-06,0
 FR,France,2022-02-06,129
-DE,Germany,2022-02-06,41
+DE,Germany,2022-02-06,0
 GR,Greece,2022-02-06,95
 HU,Hungary,2022-02-06,0
 IS,Iceland,2022-02-06,0
@@ -23881,7 +23881,7 @@ DK,Denmark,2022-02-07,28
 EE,Estonia,2022-02-07,6
 FI,Finland,2022-02-07,37
 FR,France,2022-02-07,415
-DE,Germany,2022-02-07,49
+DE,Germany,2022-02-07,262
 GR,Greece,2022-02-07,116
 HU,Hungary,2022-02-07,234
 IS,Iceland,2022-02-07,1
@@ -24041,7 +24041,7 @@ DK,Denmark,2022-02-12,37
 EE,Estonia,2022-02-12,6
 FI,Finland,2022-02-12,0
 FR,France,2022-02-12,161
-DE,Germany,2022-02-12,198
+DE,Germany,2022-02-12,0
 GR,Greece,2022-02-12,70
 HU,Hungary,2022-02-12,0
 IS,Iceland,2022-02-12,0
@@ -24073,7 +24073,7 @@ DK,Denmark,2022-02-13,30
 EE,Estonia,2022-02-13,7
 FI,Finland,2022-02-13,0
 FR,France,2022-02-13,107
-DE,Germany,2022-02-13,58
+DE,Germany,2022-02-13,0
 GR,Greece,2022-02-13,75
 HU,Hungary,2022-02-13,0
 IS,Iceland,2022-02-13,0
@@ -24105,7 +24105,7 @@ DK,Denmark,2022-02-14,41
 EE,Estonia,2022-02-14,2
 FI,Finland,2022-02-14,44
 FR,France,2022-02-14,383
-DE,Germany,2022-02-14,42
+DE,Germany,2022-02-14,298
 GR,Greece,2022-02-14,82
 HU,Hungary,2022-02-14,271
 IS,Iceland,2022-02-14,1
@@ -24265,7 +24265,7 @@ DK,Denmark,2022-02-19,28
 EE,Estonia,2022-02-19,6
 FI,Finland,2022-02-19,0
 FR,France,2022-02-19,147
-DE,Germany,2022-02-19,210
+DE,Germany,2022-02-19,0
 GR,Greece,2022-02-19,77
 HU,Hungary,2022-02-19,0
 IS,Iceland,2022-02-19,0
@@ -24297,7 +24297,7 @@ DK,Denmark,2022-02-20,34
 EE,Estonia,2022-02-20,4
 FI,Finland,2022-02-20,0
 FR,France,2022-02-20,1
-DE,Germany,2022-02-20,73
+DE,Germany,2022-02-20,0
 GR,Greece,2022-02-20,67
 HU,Hungary,2022-02-20,0
 IS,Iceland,2022-02-20,0
@@ -24318,7 +24318,7 @@ SI,Slovenia,2022-02-20,19
 ES,Spain,2022-02-20,0
 SE,Sweden,2022-02-20,0
 CH,Switzerland,2022-02-20,0
-GB,United Kingdom,2022-02-20,125
+GB,United Kingdom,2022-02-20,126
 AT,Austria,2022-02-21,28
 BE,Belgium,2022-02-21,95
 BG,Bulgaria,2022-02-21,143
@@ -24329,7 +24329,7 @@ DK,Denmark,2022-02-21,29
 EE,Estonia,2022-02-21,8
 FI,Finland,2022-02-21,52
 FR,France,2022-02-21,0
-DE,Germany,2022-02-21,22
+DE,Germany,2022-02-21,305
 GR,Greece,2022-02-21,90
 HU,Hungary,2022-02-21,233
 IS,Iceland,2022-02-21,0
@@ -24446,7 +24446,7 @@ SI,Slovenia,2022-02-24,11
 ES,Spain,2022-02-24,226
 SE,Sweden,2022-02-24,19
 CH,Switzerland,2022-02-24,11
-GB,United Kingdom,2022-02-24,124
+GB,United Kingdom,2022-02-24,125
 AT,Austria,2022-02-25,25
 BE,Belgium,2022-02-25,20
 BG,Bulgaria,2022-02-25,76
@@ -24489,7 +24489,7 @@ DK,Denmark,2022-02-26,37
 EE,Estonia,2022-02-26,9
 FI,Finland,2022-02-26,0
 FR,France,2022-02-26,101
-DE,Germany,2022-02-26,250
+DE,Germany,2022-02-26,0
 GR,Greece,2022-02-26,51
 HU,Hungary,2022-02-26,0
 IS,Iceland,2022-02-26,0
@@ -24521,7 +24521,7 @@ DK,Denmark,2022-02-27,46
 EE,Estonia,2022-02-27,12
 FI,Finland,2022-02-27,0
 FR,France,2022-02-27,76
-DE,Germany,2022-02-27,57
+DE,Germany,2022-02-27,0
 GR,Greece,2022-02-27,66
 HU,Hungary,2022-02-27,0
 IS,Iceland,2022-02-27,0
@@ -24553,7 +24553,7 @@ DK,Denmark,2022-02-28,28
 EE,Estonia,2022-02-28,11
 FI,Finland,2022-02-28,2
 FR,France,2022-02-28,223
-DE,Germany,2022-02-28,24
+DE,Germany,2022-02-28,331
 GR,Greece,2022-02-28,75
 HU,Hungary,2022-02-28,197
 IS,Iceland,2022-02-28,1
@@ -24713,7 +24713,7 @@ DK,Denmark,2022-03-05,58
 EE,Estonia,2022-03-05,15
 FI,Finland,2022-03-05,0
 FR,France,2022-03-05,120
-DE,Germany,2022-03-05,255
+DE,Germany,2022-03-05,0
 GR,Greece,2022-03-05,51
 HU,Hungary,2022-03-05,0
 IS,Iceland,2022-03-05,0
@@ -24745,7 +24745,7 @@ DK,Denmark,2022-03-06,38
 EE,Estonia,2022-03-06,0
 FI,Finland,2022-03-06,0
 FR,France,2022-03-06,32
-DE,Germany,2022-03-06,51
+DE,Germany,2022-03-06,0
 GR,Greece,2022-03-06,51
 HU,Hungary,2022-03-06,0
 IS,Iceland,2022-03-06,0
@@ -24777,7 +24777,7 @@ DK,Denmark,2022-03-07,37
 EE,Estonia,2022-03-07,9
 FI,Finland,2022-03-07,184
 FR,France,2022-03-07,174
-DE,Germany,2022-03-07,24
+DE,Germany,2022-03-07,330
 GR,Greece,2022-03-07,52
 HU,Hungary,2022-03-07,150
 IS,Iceland,2022-03-07,3
@@ -24809,7 +24809,7 @@ DK,Denmark,2022-03-08,43
 EE,Estonia,2022-03-08,9
 FI,Finland,2022-03-08,0
 FR,France,2022-03-08,148
-DE,Germany,2022-03-08,324
+DE,Germany,2022-03-08,0
 GR,Greece,2022-03-08,57
 HU,Hungary,2022-03-08,59
 IS,Iceland,2022-03-08,2
@@ -24841,7 +24841,7 @@ DK,Denmark,2022-03-09,60
 EE,Estonia,2022-03-09,12
 FI,Finland,2022-03-09,2
 FR,France,2022-03-09,155
-DE,Germany,2022-03-09,314
+DE,Germany,2022-03-09,638
 GR,Greece,2022-03-09,63
 HU,Hungary,2022-03-09,54
 IS,Iceland,2022-03-09,3
@@ -24937,7 +24937,7 @@ DK,Denmark,2022-03-12,52
 EE,Estonia,2022-03-12,9
 FI,Finland,2022-03-12,0
 FR,France,2022-03-12,50
-DE,Germany,2022-03-12,249
+DE,Germany,2022-03-12,0
 GR,Greece,2022-03-12,40
 HU,Hungary,2022-03-12,0
 IS,Iceland,2022-03-12,0
@@ -24958,7 +24958,7 @@ SI,Slovenia,2022-03-12,8
 ES,Spain,2022-03-12,0
 SE,Sweden,2022-03-12,0
 CH,Switzerland,2022-03-12,1
-GB,United Kingdom,2022-03-12,119
+GB,United Kingdom,2022-03-12,120
 AT,Austria,2022-03-13,29
 BE,Belgium,2022-03-13,0
 BG,Bulgaria,2022-03-13,14
@@ -24969,7 +24969,7 @@ DK,Denmark,2022-03-13,47
 EE,Estonia,2022-03-13,7
 FI,Finland,2022-03-13,0
 FR,France,2022-03-13,28
-DE,Germany,2022-03-13,50
+DE,Germany,2022-03-13,0
 GR,Greece,2022-03-13,49
 HU,Hungary,2022-03-13,0
 IS,Iceland,2022-03-13,0
@@ -24990,7 +24990,7 @@ SI,Slovenia,2022-03-13,6
 ES,Spain,2022-03-13,0
 SE,Sweden,2022-03-13,0
 CH,Switzerland,2022-03-13,0
-GB,United Kingdom,2022-03-13,110
+GB,United Kingdom,2022-03-13,111
 AT,Austria,2022-03-14,28
 BE,Belgium,2022-03-14,37
 BG,Bulgaria,2022-03-14,64
@@ -25001,7 +25001,7 @@ DK,Denmark,2022-03-14,21
 EE,Estonia,2022-03-14,6
 FI,Finland,2022-03-14,64
 FR,France,2022-03-14,185
-DE,Germany,2022-03-14,19
+DE,Germany,2022-03-14,318
 GR,Greece,2022-03-14,73
 HU,Hungary,2022-03-14,0
 IS,Iceland,2022-03-14,2
@@ -25161,7 +25161,7 @@ DK,Denmark,2022-03-19,37
 EE,Estonia,2022-03-19,0
 FI,Finland,2022-03-19,0
 FR,France,2022-03-19,62
-DE,Germany,2022-03-19,221
+DE,Germany,2022-03-19,0
 GR,Greece,2022-03-19,46
 HU,Hungary,2022-03-19,0
 IS,Iceland,2022-03-19,0
@@ -25193,7 +25193,7 @@ DK,Denmark,2022-03-20,27
 EE,Estonia,2022-03-20,7
 FI,Finland,2022-03-20,0
 FR,France,2022-03-20,30
-DE,Germany,2022-03-20,49
+DE,Germany,2022-03-20,0
 GR,Greece,2022-03-20,44
 HU,Hungary,2022-03-20,0
 IS,Iceland,2022-03-20,0
@@ -25214,7 +25214,7 @@ SI,Slovenia,2022-03-20,7
 ES,Spain,2022-03-20,0
 SE,Sweden,2022-03-20,0
 CH,Switzerland,2022-03-20,95
-GB,United Kingdom,2022-03-20,171
+GB,United Kingdom,2022-03-20,173
 AT,Austria,2022-03-21,34
 BE,Belgium,2022-03-21,46
 BG,Bulgaria,2022-03-21,48
@@ -25225,7 +25225,7 @@ DK,Denmark,2022-03-21,28
 EE,Estonia,2022-03-21,5
 FI,Finland,2022-03-21,98
 FR,France,2022-03-21,147
-DE,Germany,2022-03-21,13
+DE,Germany,2022-03-21,283
 GR,Greece,2022-03-21,58
 HU,Hungary,2022-03-21,134
 IS,Iceland,2022-03-21,0
@@ -25246,7 +25246,7 @@ SI,Slovenia,2022-03-21,7
 ES,Spain,2022-03-21,0
 SE,Sweden,2022-03-21,0
 CH,Switzerland,2022-03-21,22
-GB,United Kingdom,2022-03-21,160
+GB,United Kingdom,2022-03-21,161
 AT,Austria,2022-03-22,36
 BE,Belgium,2022-03-22,30
 BG,Bulgaria,2022-03-22,20
@@ -25310,7 +25310,7 @@ SI,Slovenia,2022-03-23,3
 ES,Spain,2022-03-23,0
 SE,Sweden,2022-03-23,0
 CH,Switzerland,2022-03-23,27
-GB,United Kingdom,2022-03-23,157
+GB,United Kingdom,2022-03-23,158
 AT,Austria,2022-03-24,35
 BE,Belgium,2022-03-24,27
 BG,Bulgaria,2022-03-24,21
@@ -25374,7 +25374,7 @@ SI,Slovenia,2022-03-25,8
 ES,Spain,2022-03-25,339
 SE,Sweden,2022-03-25,0
 CH,Switzerland,2022-03-25,9
-GB,United Kingdom,2022-03-25,180
+GB,United Kingdom,2022-03-25,181
 AT,Austria,2022-03-26,41
 BE,Belgium,2022-03-26,0
 BG,Bulgaria,2022-03-26,4
@@ -25385,7 +25385,7 @@ DK,Denmark,2022-03-26,41
 EE,Estonia,2022-03-26,7
 FI,Finland,2022-03-26,0
 FR,France,2022-03-26,67
-DE,Germany,2022-03-26,278
+DE,Germany,2022-03-26,0
 GR,Greece,2022-03-26,56
 HU,Hungary,2022-03-26,0
 IS,Iceland,2022-03-26,0
@@ -25417,7 +25417,7 @@ DK,Denmark,2022-03-27,2
 EE,Estonia,2022-03-27,3
 FI,Finland,2022-03-27,0
 FR,France,2022-03-27,41
-DE,Germany,2022-03-27,49
+DE,Germany,2022-03-27,0
 GR,Greece,2022-03-27,52
 HU,Hungary,2022-03-27,0
 IS,Iceland,2022-03-27,0
@@ -25449,7 +25449,7 @@ DK,Denmark,2022-03-28,0
 EE,Estonia,2022-03-28,5
 FI,Finland,2022-03-28,69
 FR,France,2022-03-28,144
-DE,Germany,2022-03-28,20
+DE,Germany,2022-03-28,347
 GR,Greece,2022-03-28,73
 HU,Hungary,2022-03-28,84
 IS,Iceland,2022-03-28,0
@@ -25502,7 +25502,7 @@ SI,Slovenia,2022-03-29,1
 ES,Spain,2022-03-29,-174
 SE,Sweden,2022-03-29,0
 CH,Switzerland,2022-03-29,10
-GB,United Kingdom,2022-03-29,192
+GB,United Kingdom,2022-03-29,193
 AT,Austria,2022-03-30,36
 BE,Belgium,2022-03-30,0
 BG,Bulgaria,2022-03-30,14
@@ -25545,7 +25545,7 @@ DK,Denmark,2022-03-31,30
 EE,Estonia,2022-03-31,8
 FI,Finland,2022-03-31,39
 FR,France,2022-03-31,139
-DE,Germany,2022-03-31,596
+DE,Germany,2022-03-31,279
 GR,Greece,2022-03-31,56
 HU,Hungary,2022-03-31,40
 IS,Iceland,2022-03-31,3
@@ -25566,7 +25566,7 @@ SI,Slovenia,2022-03-31,5
 ES,Spain,2022-03-31,0
 SE,Sweden,2022-03-31,176
 CH,Switzerland,2022-03-31,6
-GB,United Kingdom,2022-03-31,191
+GB,United Kingdom,2022-03-31,192
 AT,Austria,2022-04-01,49
 BE,Belgium,2022-04-01,0
 BG,Bulgaria,2022-04-01,25
@@ -25577,7 +25577,7 @@ DK,Denmark,2022-04-01,25
 EE,Estonia,2022-04-01,4
 FI,Finland,2022-04-01,34
 FR,France,2022-04-01,133
-DE,Germany,2022-04-01,-13
+DE,Germany,2022-04-01,304
 GR,Greece,2022-04-01,61
 HU,Hungary,2022-04-01,40
 IS,Iceland,2022-04-01,0
@@ -25609,7 +25609,7 @@ DK,Denmark,2022-04-02,22
 EE,Estonia,2022-04-02,3
 FI,Finland,2022-04-02,0
 FR,France,2022-04-02,68
-DE,Germany,2022-04-02,292
+DE,Germany,2022-04-02,0
 GR,Greece,2022-04-02,52
 HU,Hungary,2022-04-02,0
 IS,Iceland,2022-04-02,0
@@ -25641,7 +25641,7 @@ DK,Denmark,2022-04-03,17
 EE,Estonia,2022-04-03,2
 FI,Finland,2022-04-03,0
 FR,France,2022-04-03,31
-DE,Germany,2022-04-03,65
+DE,Germany,2022-04-03,0
 GR,Greece,2022-04-03,61
 HU,Hungary,2022-04-03,0
 IS,Iceland,2022-04-03,0
@@ -25673,7 +25673,7 @@ DK,Denmark,2022-04-04,15
 EE,Estonia,2022-04-04,1
 FI,Finland,2022-04-04,74
 FR,France,2022-04-04,149
-DE,Germany,2022-04-04,0
+DE,Germany,2022-04-04,357
 GR,Greece,2022-04-04,62
 HU,Hungary,2022-04-04,0
 IS,Iceland,2022-04-04,0
@@ -25737,7 +25737,7 @@ DK,Denmark,2022-04-06,15
 EE,Estonia,2022-04-06,4
 FI,Finland,2022-04-06,53
 FR,France,2022-04-06,115
-DE,Germany,2022-04-06,668
+DE,Germany,2022-04-06,340
 GR,Greece,2022-04-06,76
 HU,Hungary,2022-04-06,36
 IS,Iceland,2022-04-06,0
@@ -25769,7 +25769,7 @@ DK,Denmark,2022-04-07,24
 EE,Estonia,2022-04-07,2
 FI,Finland,2022-04-07,27
 FR,France,2022-04-07,105
-DE,Germany,2022-04-07,334
+DE,Germany,2022-04-07,328
 GR,Greece,2022-04-07,76
 HU,Hungary,2022-04-07,37
 IS,Iceland,2022-04-07,0
@@ -25801,7 +25801,7 @@ DK,Denmark,2022-04-08,24
 EE,Estonia,2022-04-08,5
 FI,Finland,2022-04-08,0
 FR,France,2022-04-08,139
-DE,Germany,2022-04-08,309
+DE,Germany,2022-04-08,334
 GR,Greece,2022-04-08,57
 HU,Hungary,2022-04-08,37
 IS,Iceland,2022-04-08,3
@@ -25833,7 +25833,7 @@ DK,Denmark,2022-04-09,24
 EE,Estonia,2022-04-09,4
 FI,Finland,2022-04-09,0
 FR,France,2022-04-09,87
-DE,Germany,2022-04-09,36
+DE,Germany,2022-04-09,0
 GR,Greece,2022-04-09,51
 HU,Hungary,2022-04-09,0
 IS,Iceland,2022-04-09,0
@@ -25865,7 +25865,7 @@ DK,Denmark,2022-04-10,23
 EE,Estonia,2022-04-10,4
 FI,Finland,2022-04-10,0
 FR,France,2022-04-10,45
-DE,Germany,2022-04-10,13
+DE,Germany,2022-04-10,0
 GR,Greece,2022-04-10,54
 HU,Hungary,2022-04-10,0
 IS,Iceland,2022-04-10,0
@@ -25886,7 +25886,7 @@ SI,Slovenia,2022-04-10,4
 ES,Spain,2022-04-10,0
 SE,Sweden,2022-04-10,0
 CH,Switzerland,2022-04-10,0
-GB,United Kingdom,2022-04-10,196
+GB,United Kingdom,2022-04-10,197
 AT,Austria,2022-04-11,30
 BE,Belgium,2022-04-11,82
 BG,Bulgaria,2022-04-11,30
@@ -25897,7 +25897,7 @@ DK,Denmark,2022-04-11,13
 EE,Estonia,2022-04-11,1
 FI,Finland,2022-04-11,0
 FR,France,2022-04-11,176
-DE,Germany,2022-04-11,289
+DE,Germany,2022-04-11,358
 GR,Greece,2022-04-11,75
 HU,Hungary,2022-04-11,60
 IS,Iceland,2022-04-11,0
@@ -25929,7 +25929,7 @@ DK,Denmark,2022-04-12,11
 EE,Estonia,2022-04-12,3
 FI,Finland,2022-04-12,0
 FR,France,2022-04-12,159
-DE,Germany,2022-04-12,361
+DE,Germany,2022-04-12,289
 GR,Greece,2022-04-12,69
 HU,Hungary,2022-04-12,31
 IS,Iceland,2022-04-12,5
@@ -25950,7 +25950,7 @@ SI,Slovenia,2022-04-12,3
 ES,Spain,2022-04-12,0
 SE,Sweden,2022-04-12,0
 CH,Switzerland,2022-04-12,4
-GB,United Kingdom,2022-04-12,196
+GB,United Kingdom,2022-04-12,197
 AT,Austria,2022-04-13,29
 BE,Belgium,2022-04-13,0
 BG,Bulgaria,2022-04-13,16
@@ -25961,7 +25961,7 @@ DK,Denmark,2022-04-13,13
 EE,Estonia,2022-04-13,3
 FI,Finland,2022-04-13,0
 FR,France,2022-04-13,141
-DE,Germany,2022-04-13,310
+DE,Germany,2022-04-13,361
 GR,Greece,2022-04-13,70
 HU,Hungary,2022-04-13,26
 IS,Iceland,2022-04-13,0
@@ -25993,7 +25993,7 @@ DK,Denmark,2022-04-14,16
 EE,Estonia,2022-04-14,4
 FI,Finland,2022-04-14,183
 FR,France,2022-04-14,133
-DE,Germany,2022-04-14,212
+DE,Germany,2022-04-14,310
 GR,Greece,2022-04-14,62
 HU,Hungary,2022-04-14,27
 IS,Iceland,2022-04-14,0
@@ -26025,7 +26025,7 @@ DK,Denmark,2022-04-15,13
 EE,Estonia,2022-04-15,3
 FI,Finland,2022-04-15,0
 FR,France,2022-04-15,151
-DE,Germany,2022-04-15,29
+DE,Germany,2022-04-15,0
 GR,Greece,2022-04-15,82
 HU,Hungary,2022-04-15,0
 IS,Iceland,2022-04-15,0
@@ -26046,7 +26046,7 @@ SI,Slovenia,2022-04-15,3
 ES,Spain,2022-04-15,0
 SE,Sweden,2022-04-15,0
 CH,Switzerland,2022-04-15,2
-GB,United Kingdom,2022-04-15,169
+GB,United Kingdom,2022-04-15,170
 AT,Austria,2022-04-16,16
 BE,Belgium,2022-04-16,0
 BG,Bulgaria,2022-04-16,1
@@ -26057,7 +26057,7 @@ DK,Denmark,2022-04-16,11
 EE,Estonia,2022-04-16,3
 FI,Finland,2022-04-16,0
 FR,France,2022-04-16,61
-DE,Germany,2022-04-16,13
+DE,Germany,2022-04-16,0
 GR,Greece,2022-04-16,49
 HU,Hungary,2022-04-16,0
 IS,Iceland,2022-04-16,0
@@ -26089,7 +26089,7 @@ DK,Denmark,2022-04-17,12
 EE,Estonia,2022-04-17,5
 FI,Finland,2022-04-17,0
 FR,France,2022-04-17,35
-DE,Germany,2022-04-17,11
+DE,Germany,2022-04-17,0
 GR,Greece,2022-04-17,51
 HU,Hungary,2022-04-17,0
 IS,Iceland,2022-04-17,0
@@ -26121,7 +26121,7 @@ DK,Denmark,2022-04-18,0
 EE,Estonia,2022-04-18,6
 FI,Finland,2022-04-18,0
 FR,France,2022-04-18,48
-DE,Germany,2022-04-18,7
+DE,Germany,2022-04-18,0
 GR,Greece,2022-04-18,64
 HU,Hungary,2022-04-18,0
 IS,Iceland,2022-04-18,0
@@ -26153,7 +26153,7 @@ DK,Denmark,2022-04-19,22
 EE,Estonia,2022-04-19,3
 FI,Finland,2022-04-19,0
 FR,France,2022-04-19,181
-DE,Germany,2022-04-19,348
+DE,Germany,2022-04-19,272
 GR,Greece,2022-04-19,49
 HU,Hungary,2022-04-19,106
 IS,Iceland,2022-04-19,2
@@ -26174,7 +26174,7 @@ SI,Slovenia,2022-04-19,4
 ES,Spain,2022-04-19,0
 SE,Sweden,2022-04-19,0
 CH,Switzerland,2022-04-19,17
-GB,United Kingdom,2022-04-19,156
+GB,United Kingdom,2022-04-19,157
 AT,Austria,2022-04-20,16
 BE,Belgium,2022-04-20,0
 BG,Bulgaria,2022-04-20,11
@@ -26185,7 +26185,7 @@ DK,Denmark,2022-04-20,11
 EE,Estonia,2022-04-20,1
 FI,Finland,2022-04-20,0
 FR,France,2022-04-20,227
-DE,Germany,2022-04-20,324
+DE,Germany,2022-04-20,348
 GR,Greece,2022-04-20,64
 HU,Hungary,2022-04-20,29
 IS,Iceland,2022-04-20,0
@@ -26217,7 +26217,7 @@ DK,Denmark,2022-04-21,17
 EE,Estonia,2022-04-21,2
 FI,Finland,2022-04-21,121
 FR,France,2022-04-21,185
-DE,Germany,2022-04-21,289
+DE,Germany,2022-04-21,324
 GR,Greece,2022-04-21,43
 HU,Hungary,2022-04-21,24
 IS,Iceland,2022-04-21,0
@@ -26249,7 +26249,7 @@ DK,Denmark,2022-04-22,13
 EE,Estonia,2022-04-22,3
 FI,Finland,2022-04-22,0
 FR,France,2022-04-22,135
-DE,Germany,2022-04-22,234
+DE,Germany,2022-04-22,289
 GR,Greece,2022-04-22,31
 HU,Hungary,2022-04-22,24
 IS,Iceland,2022-04-22,2
@@ -26270,7 +26270,7 @@ SI,Slovenia,2022-04-22,1
 ES,Spain,2022-04-22,187
 SE,Sweden,2022-04-22,0
 CH,Switzerland,2022-04-22,4
-GB,United Kingdom,2022-04-22,150
+GB,United Kingdom,2022-04-22,151
 AT,Austria,2022-04-23,26
 BE,Belgium,2022-04-23,0
 BG,Bulgaria,2022-04-23,7
@@ -26281,7 +26281,7 @@ DK,Denmark,2022-04-23,12
 EE,Estonia,2022-04-23,0
 FI,Finland,2022-04-23,0
 FR,France,2022-04-23,75
-DE,Germany,2022-04-23,24
+DE,Germany,2022-04-23,0
 GR,Greece,2022-04-23,28
 HU,Hungary,2022-04-23,0
 IS,Iceland,2022-04-23,0
@@ -26313,7 +26313,7 @@ DK,Denmark,2022-04-24,12
 EE,Estonia,2022-04-24,0
 FI,Finland,2022-04-24,0
 FR,France,2022-04-24,40
-DE,Germany,2022-04-24,6
+DE,Germany,2022-04-24,0
 GR,Greece,2022-04-24,0
 HU,Hungary,2022-04-24,0
 IS,Iceland,2022-04-24,0
@@ -26345,7 +26345,7 @@ DK,Denmark,2022-04-25,21
 EE,Estonia,2022-04-25,2
 FI,Finland,2022-04-25,0
 FR,France,2022-04-25,196
-DE,Germany,2022-04-25,304
+DE,Germany,2022-04-25,264
 GR,Greece,2022-04-25,66
 HU,Hungary,2022-04-25,53
 IS,Iceland,2022-04-25,0
@@ -26377,7 +26377,7 @@ DK,Denmark,2022-04-26,11
 EE,Estonia,2022-04-26,0
 FI,Finland,2022-04-26,0
 FR,France,2022-04-26,170
-DE,Germany,2022-04-26,0
+DE,Germany,2022-04-26,304
 GR,Greece,2022-04-26,43
 HU,Hungary,2022-04-26,32
 IS,Iceland,2022-04-26,5
@@ -26409,7 +26409,7 @@ DK,Denmark,2022-04-27,9
 EE,Estonia,2022-04-27,0
 FI,Finland,2022-04-27,0
 FR,France,2022-04-27,145
-DE,Germany,2022-04-27,589
+DE,Germany,2022-04-27,343
 GR,Greece,2022-04-27,46
 HU,Hungary,2022-04-27,29
 IS,Iceland,2022-04-27,0
@@ -26441,7 +26441,7 @@ DK,Denmark,2022-04-28,10
 EE,Estonia,2022-04-28,4
 FI,Finland,2022-04-28,301
 FR,France,2022-04-28,132
-DE,Germany,2022-04-28,214
+DE,Germany,2022-04-28,246
 GR,Greece,2022-04-28,51
 HU,Hungary,2022-04-28,27
 IS,Iceland,2022-04-28,0
@@ -26473,7 +26473,7 @@ DK,Denmark,2022-04-29,14
 EE,Estonia,2022-04-29,1
 FI,Finland,2022-04-29,0
 FR,France,2022-04-29,157
-DE,Germany,2022-04-29,159
+DE,Germany,2022-04-29,214
 GR,Greece,2022-04-29,41
 HU,Hungary,2022-04-29,12
 IS,Iceland,2022-04-29,0
@@ -26494,7 +26494,7 @@ SI,Slovenia,2022-04-29,4
 ES,Spain,2022-04-29,229
 SE,Sweden,2022-04-29,0
 CH,Switzerland,2022-04-29,2
-GB,United Kingdom,2022-04-29,107
+GB,United Kingdom,2022-04-29,108
 AT,Austria,2022-04-30,13
 BE,Belgium,2022-04-30,0
 BG,Bulgaria,2022-04-30,2
@@ -26505,7 +26505,7 @@ DK,Denmark,2022-04-30,9
 EE,Estonia,2022-04-30,1
 FI,Finland,2022-04-30,0
 FR,France,2022-04-30,61
-DE,Germany,2022-04-30,10
+DE,Germany,2022-04-30,0
 GR,Greece,2022-04-30,39
 HU,Hungary,2022-04-30,0
 IS,Iceland,2022-04-30,0
@@ -26558,7 +26558,7 @@ SI,Slovenia,2022-05-01,1
 ES,Spain,2022-05-01,0
 SE,Sweden,2022-05-01,0
 CH,Switzerland,2022-05-01,0
-GB,United Kingdom,2022-05-01,112
+GB,United Kingdom,2022-05-01,113
 AT,Austria,2022-05-02,6
 BE,Belgium,2022-05-02,55
 BG,Bulgaria,2022-05-02,2
@@ -26569,7 +26569,7 @@ DK,Denmark,2022-05-02,13
 EE,Estonia,2022-05-02,0
 FI,Finland,2022-05-02,0
 FR,France,2022-05-02,180
-DE,Germany,2022-05-02,240
+DE,Germany,2022-05-02,169
 GR,Greece,2022-05-02,30
 HU,Hungary,2022-05-02,65
 IS,Iceland,2022-05-02,0
@@ -26601,7 +26601,7 @@ DK,Denmark,2022-05-03,8
 EE,Estonia,2022-05-03,9
 FI,Finland,2022-05-03,0
 FR,France,2022-05-03,111
-DE,Germany,2022-05-03,241
+DE,Germany,2022-05-03,240
 GR,Greece,2022-05-03,44
 HU,Hungary,2022-05-03,0
 IS,Iceland,2022-05-03,0
@@ -26622,7 +26622,7 @@ SI,Slovenia,2022-05-03,3
 ES,Spain,2022-05-03,212
 SE,Sweden,2022-05-03,0
 CH,Switzerland,2022-05-03,4
-GB,United Kingdom,2022-05-03,104
+GB,United Kingdom,2022-05-03,105
 AT,Austria,2022-05-04,13
 BE,Belgium,2022-05-04,0
 BG,Bulgaria,2022-05-04,6
@@ -26633,7 +26633,7 @@ DK,Denmark,2022-05-04,16
 EE,Estonia,2022-05-04,0
 FI,Finland,2022-05-04,0
 FR,France,2022-05-04,114
-DE,Germany,2022-05-04,183
+DE,Germany,2022-05-04,241
 GR,Greece,2022-05-04,35
 HU,Hungary,2022-05-04,0
 IS,Iceland,2022-05-04,0
@@ -26665,7 +26665,7 @@ DK,Denmark,2022-05-05,11
 EE,Estonia,2022-05-05,0
 FI,Finland,2022-05-05,211
 FR,France,2022-05-05,122
-DE,Germany,2022-05-05,214
+DE,Germany,2022-05-05,183
 GR,Greece,2022-05-05,31
 HU,Hungary,2022-05-05,0
 IS,Iceland,2022-05-05,0
@@ -26697,7 +26697,7 @@ DK,Denmark,2022-05-06,8
 EE,Estonia,2022-05-06,0
 FI,Finland,2022-05-06,0
 FR,France,2022-05-06,110
-DE,Germany,2022-05-06,184
+DE,Germany,2022-05-06,214
 GR,Greece,2022-05-06,34
 HU,Hungary,2022-05-06,0
 IS,Iceland,2022-05-06,0
@@ -26718,7 +26718,7 @@ SI,Slovenia,2022-05-06,3
 ES,Spain,2022-05-06,201
 SE,Sweden,2022-05-06,0
 CH,Switzerland,2022-05-06,1
-GB,United Kingdom,2022-05-06,95
+GB,United Kingdom,2022-05-06,96
 AT,Austria,2022-05-07,5
 BE,Belgium,2022-05-07,0
 BG,Bulgaria,2022-05-07,1
@@ -26729,7 +26729,7 @@ DK,Denmark,2022-05-07,8
 EE,Estonia,2022-05-07,0
 FI,Finland,2022-05-07,0
 FR,France,2022-05-07,62
-DE,Germany,2022-05-07,10
+DE,Germany,2022-05-07,0
 GR,Greece,2022-05-07,20
 HU,Hungary,2022-05-07,0
 IS,Iceland,2022-05-07,0
@@ -26761,7 +26761,7 @@ DK,Denmark,2022-05-08,4
 EE,Estonia,2022-05-08,0
 FI,Finland,2022-05-08,0
 FR,France,2022-05-08,54
-DE,Germany,2022-05-08,5
+DE,Germany,2022-05-08,0
 GR,Greece,2022-05-08,23
 HU,Hungary,2022-05-08,0
 IS,Iceland,2022-05-08,0
@@ -26793,7 +26793,7 @@ DK,Denmark,2022-05-09,6
 EE,Estonia,2022-05-09,0
 FI,Finland,2022-05-09,0
 FR,France,2022-05-09,131
-DE,Germany,2022-05-09,218
+DE,Germany,2022-05-09,199
 GR,Greece,2022-05-09,25
 HU,Hungary,2022-05-09,0
 IS,Iceland,2022-05-09,0
@@ -26825,7 +26825,7 @@ DK,Denmark,2022-05-10,8
 EE,Estonia,2022-05-10,8
 FI,Finland,2022-05-10,0
 FR,France,2022-05-10,117
-DE,Germany,2022-05-10,231
+DE,Germany,2022-05-10,218
 GR,Greece,2022-05-10,27
 HU,Hungary,2022-05-10,0
 IS,Iceland,2022-05-10,1
@@ -26857,7 +26857,7 @@ DK,Denmark,2022-05-11,8
 EE,Estonia,2022-05-11,0
 FI,Finland,2022-05-11,0
 FR,France,2022-05-11,96
-DE,Germany,2022-05-11,197
+DE,Germany,2022-05-11,231
 GR,Greece,2022-05-11,27
 HU,Hungary,2022-05-11,77
 IS,Iceland,2022-05-11,0
@@ -26889,7 +26889,7 @@ DK,Denmark,2022-05-12,11
 EE,Estonia,2022-05-12,0
 FI,Finland,2022-05-12,134
 FR,France,2022-05-12,84
-DE,Germany,2022-05-12,164
+DE,Germany,2022-05-12,197
 GR,Greece,2022-05-12,20
 HU,Hungary,2022-05-12,0
 IS,Iceland,2022-05-12,0
@@ -26921,7 +26921,7 @@ DK,Denmark,2022-05-13,7
 EE,Estonia,2022-05-13,0
 FI,Finland,2022-05-13,0
 FR,France,2022-05-13,96
-DE,Germany,2022-05-13,144
+DE,Germany,2022-05-13,164
 GR,Greece,2022-05-13,30
 HU,Hungary,2022-05-13,0
 IS,Iceland,2022-05-13,0
@@ -26953,7 +26953,7 @@ DK,Denmark,2022-05-14,7
 EE,Estonia,2022-05-14,0
 FI,Finland,2022-05-14,0
 FR,France,2022-05-14,11
-DE,Germany,2022-05-14,7
+DE,Germany,2022-05-14,0
 GR,Greece,2022-05-14,15
 HU,Hungary,2022-05-14,0
 IS,Iceland,2022-05-14,0
@@ -27006,7 +27006,7 @@ SI,Slovenia,2022-05-15,0
 ES,Spain,2022-05-15,0
 SE,Sweden,2022-05-15,0
 CH,Switzerland,2022-05-15,0
-GB,United Kingdom,2022-05-15,71
+GB,United Kingdom,2022-05-15,72
 AT,Austria,2022-05-16,0
 BE,Belgium,2022-05-16,43
 BG,Bulgaria,2022-05-16,11
@@ -27017,7 +27017,7 @@ DK,Denmark,2022-05-16,6
 EE,Estonia,2022-05-16,0
 FI,Finland,2022-05-16,0
 FR,France,2022-05-16,203
-DE,Germany,2022-05-16,215
+DE,Germany,2022-05-16,151
 GR,Greece,2022-05-16,29
 HU,Hungary,2022-05-16,0
 IS,Iceland,2022-05-16,0
@@ -27049,7 +27049,7 @@ DK,Denmark,2022-05-17,3
 EE,Estonia,2022-05-17,5
 FI,Finland,2022-05-17,0
 FR,France,2022-05-17,82
-DE,Germany,2022-05-17,174
+DE,Germany,2022-05-17,215
 GR,Greece,2022-05-17,23
 HU,Hungary,2022-05-17,0
 IS,Iceland,2022-05-17,33
@@ -27070,7 +27070,7 @@ SI,Slovenia,2022-05-17,1
 ES,Spain,2022-05-17,198
 SE,Sweden,2022-05-17,0
 CH,Switzerland,2022-05-17,6
-GB,United Kingdom,2022-05-17,71
+GB,United Kingdom,2022-05-17,72
 AT,Austria,2022-05-18,8
 BE,Belgium,2022-05-18,19
 BG,Bulgaria,2022-05-18,6
@@ -27081,7 +27081,7 @@ DK,Denmark,2022-05-18,8
 EE,Estonia,2022-05-18,0
 FI,Finland,2022-05-18,0
 FR,France,2022-05-18,80
-DE,Germany,2022-05-18,165
+DE,Germany,2022-05-18,174
 GR,Greece,2022-05-18,20
 HU,Hungary,2022-05-18,103
 IS,Iceland,2022-05-18,0
@@ -27113,7 +27113,7 @@ DK,Denmark,2022-05-19,8
 EE,Estonia,2022-05-19,0
 FI,Finland,2022-05-19,122
 FR,France,2022-05-19,67
-DE,Germany,2022-05-19,151
+DE,Germany,2022-05-19,165
 GR,Greece,2022-05-19,23
 HU,Hungary,2022-05-19,0
 IS,Iceland,2022-05-19,0
@@ -27134,7 +27134,7 @@ SI,Slovenia,2022-05-19,1
 ES,Spain,2022-05-19,0
 SE,Sweden,2022-05-19,44
 CH,Switzerland,2022-05-19,0
-GB,United Kingdom,2022-05-19,45
+GB,United Kingdom,2022-05-19,46
 AT,Austria,2022-05-20,7
 BE,Belgium,2022-05-20,0
 BG,Bulgaria,2022-05-20,9
@@ -27145,7 +27145,7 @@ DK,Denmark,2022-05-20,0
 EE,Estonia,2022-05-20,0
 FI,Finland,2022-05-20,0
 FR,France,2022-05-20,65
-DE,Germany,2022-05-20,120
+DE,Germany,2022-05-20,151
 GR,Greece,2022-05-20,16
 HU,Hungary,2022-05-20,0
 IS,Iceland,2022-05-20,0
@@ -27177,7 +27177,7 @@ DK,Denmark,2022-05-21,0
 EE,Estonia,2022-05-21,0
 FI,Finland,2022-05-21,0
 FR,France,2022-05-21,2
-DE,Germany,2022-05-21,1
+DE,Germany,2022-05-21,0
 GR,Greece,2022-05-21,21
 HU,Hungary,2022-05-21,0
 IS,Iceland,2022-05-21,0
@@ -27209,7 +27209,7 @@ DK,Denmark,2022-05-22,0
 EE,Estonia,2022-05-22,0
 FI,Finland,2022-05-22,0
 FR,France,2022-05-22,3
-DE,Germany,2022-05-22,1
+DE,Germany,2022-05-22,0
 GR,Greece,2022-05-22,11
 HU,Hungary,2022-05-22,0
 IS,Iceland,2022-05-22,0
@@ -27241,7 +27241,7 @@ DK,Denmark,2022-05-23,0
 EE,Estonia,2022-05-23,0
 FI,Finland,2022-05-23,0
 FR,France,2022-05-23,132
-DE,Germany,2022-05-23,159
+DE,Germany,2022-05-23,122
 GR,Greece,2022-05-23,21
 HU,Hungary,2022-05-23,0
 IS,Iceland,2022-05-23,0
@@ -27273,7 +27273,7 @@ DK,Denmark,2022-05-24,23
 EE,Estonia,2022-05-24,0
 FI,Finland,2022-05-24,0
 FR,France,2022-05-24,79
-DE,Germany,2022-05-24,158
+DE,Germany,2022-05-24,159
 GR,Greece,2022-05-24,14
 HU,Hungary,2022-05-24,0
 IS,Iceland,2022-05-24,0
@@ -27305,7 +27305,7 @@ DK,Denmark,2022-05-25,4
 EE,Estonia,2022-05-25,0
 FI,Finland,2022-05-25,0
 FR,France,2022-05-25,51
-DE,Germany,2022-05-25,136
+DE,Germany,2022-05-25,158
 GR,Greece,2022-05-25,18
 HU,Hungary,2022-05-25,61
 IS,Iceland,2022-05-25,0
@@ -27337,7 +27337,7 @@ DK,Denmark,2022-05-26,4
 EE,Estonia,2022-05-26,0
 FI,Finland,2022-05-26,116
 FR,France,2022-05-26,28
-DE,Germany,2022-05-26,2
+DE,Germany,2022-05-26,0
 GR,Greece,2022-05-26,13
 HU,Hungary,2022-05-26,0
 IS,Iceland,2022-05-26,0
@@ -27369,7 +27369,7 @@ DK,Denmark,2022-05-27,1
 EE,Estonia,2022-05-27,0
 FI,Finland,2022-05-27,0
 FR,France,2022-05-27,45
-DE,Germany,2022-05-27,73
+DE,Germany,2022-05-27,138
 GR,Greece,2022-05-27,15
 HU,Hungary,2022-05-27,0
 IS,Iceland,2022-05-27,0
@@ -27390,7 +27390,7 @@ SI,Slovenia,2022-05-27,0
 ES,Spain,2022-05-27,236
 SE,Sweden,2022-05-27,0
 CH,Switzerland,2022-05-27,0
-GB,United Kingdom,2022-05-27,43
+GB,United Kingdom,2022-05-27,45
 AT,Austria,2022-05-28,0
 BE,Belgium,2022-05-28,0
 BG,Bulgaria,2022-05-28,1
@@ -27401,7 +27401,7 @@ DK,Denmark,2022-05-28,6
 EE,Estonia,2022-05-28,0
 FI,Finland,2022-05-28,0
 FR,France,2022-05-28,0
-DE,Germany,2022-05-28,8
+DE,Germany,2022-05-28,83
 GR,Greece,2022-05-28,13
 HU,Hungary,2022-05-28,0
 IS,Iceland,2022-05-28,0
@@ -27433,7 +27433,7 @@ DK,Denmark,2022-05-29,0
 EE,Estonia,2022-05-29,0
 FI,Finland,2022-05-29,0
 FR,France,2022-05-29,1
-DE,Germany,2022-05-29,2
+DE,Germany,2022-05-29,0
 GR,Greece,2022-05-29,19
 HU,Hungary,2022-05-29,0
 IS,Iceland,2022-05-29,0
@@ -27465,7 +27465,7 @@ DK,Denmark,2022-05-30,8
 EE,Estonia,2022-05-30,0
 FI,Finland,2022-05-30,0
 FR,France,2022-05-30,121
-DE,Germany,2022-05-30,136
+DE,Germany,2022-05-30,0
 GR,Greece,2022-05-30,25
 HU,Hungary,2022-05-30,0
 IS,Iceland,2022-05-30,0
@@ -27497,7 +27497,7 @@ DK,Denmark,2022-05-31,5
 EE,Estonia,2022-05-31,13
 FI,Finland,2022-05-31,0
 FR,France,2022-05-31,76
-DE,Germany,2022-05-31,91
+DE,Germany,2022-05-31,136
 GR,Greece,2022-05-31,17
 HU,Hungary,2022-05-31,0
 IS,Iceland,2022-05-31,0
@@ -27529,7 +27529,7 @@ DK,Denmark,2022-06-01,5
 EE,Estonia,2022-06-01,0
 FI,Finland,2022-06-01,0
 FR,France,2022-06-01,37
-DE,Germany,2022-06-01,131
+DE,Germany,2022-06-01,91
 GR,Greece,2022-06-01,12
 HU,Hungary,2022-06-01,40
 IS,Iceland,2022-06-01,0
@@ -27561,7 +27561,7 @@ DK,Denmark,2022-06-02,4
 EE,Estonia,2022-06-02,0
 FI,Finland,2022-06-02,105
 FR,France,2022-06-02,34
-DE,Germany,2022-06-02,91
+DE,Germany,2022-06-02,131
 GR,Greece,2022-06-02,12
 HU,Hungary,2022-06-02,0
 IS,Iceland,2022-06-02,0
@@ -27593,7 +27593,7 @@ DK,Denmark,2022-06-03,4
 EE,Estonia,2022-06-03,0
 FI,Finland,2022-06-03,0
 FR,France,2022-06-03,38
-DE,Germany,2022-06-03,73
+DE,Germany,2022-06-03,91
 GR,Greece,2022-06-03,17
 HU,Hungary,2022-06-03,0
 IS,Iceland,2022-06-03,0
@@ -27689,7 +27689,7 @@ DK,Denmark,2022-06-06,0
 EE,Estonia,2022-06-06,0
 FI,Finland,2022-06-06,0
 FR,France,2022-06-06,0
-DE,Germany,2022-06-06,2
+DE,Germany,2022-06-06,0
 GR,Greece,2022-06-06,14
 HU,Hungary,2022-06-06,0
 IS,Iceland,2022-06-06,0
@@ -27721,7 +27721,7 @@ DK,Denmark,2022-06-07,12
 EE,Estonia,2022-06-07,0
 FI,Finland,2022-06-07,0
 FR,France,2022-06-07,116
-DE,Germany,2022-06-07,145
+DE,Germany,2022-06-07,75
 GR,Greece,2022-06-07,24
 HU,Hungary,2022-06-07,0
 IS,Iceland,2022-06-07,0
@@ -27753,7 +27753,7 @@ DK,Denmark,2022-06-08,4
 EE,Estonia,2022-06-08,0
 FI,Finland,2022-06-08,0
 FR,France,2022-06-08,77
-DE,Germany,2022-06-08,90
+DE,Germany,2022-06-08,145
 GR,Greece,2022-06-08,15
 HU,Hungary,2022-06-08,24
 IS,Iceland,2022-06-08,0
@@ -27785,7 +27785,7 @@ DK,Denmark,2022-06-09,3
 EE,Estonia,2022-06-09,0
 FI,Finland,2022-06-09,87
 FR,France,2022-06-09,30
-DE,Germany,2022-06-09,106
+DE,Germany,2022-06-09,90
 GR,Greece,2022-06-09,10
 HU,Hungary,2022-06-09,0
 IS,Iceland,2022-06-09,0
@@ -27817,7 +27817,7 @@ DK,Denmark,2022-06-10,9
 EE,Estonia,2022-06-10,0
 FI,Finland,2022-06-10,0
 FR,France,2022-06-10,0
-DE,Germany,2022-06-10,77
+DE,Germany,2022-06-10,106
 GR,Greece,2022-06-10,21
 HU,Hungary,2022-06-10,0
 IS,Iceland,2022-06-10,0
@@ -27881,7 +27881,7 @@ DK,Denmark,2022-06-12,0
 EE,Estonia,2022-06-12,0
 FI,Finland,2022-06-12,0
 FR,France,2022-06-12,0
-DE,Germany,2022-06-12,1
+DE,Germany,2022-06-12,0
 GR,Greece,2022-06-12,8
 HU,Hungary,2022-06-12,0
 IS,Iceland,2022-06-12,0
@@ -27913,7 +27913,7 @@ DK,Denmark,2022-06-13,10
 EE,Estonia,2022-06-13,0
 FI,Finland,2022-06-13,0
 FR,France,2022-06-13,0
-DE,Germany,2022-06-13,107
+DE,Germany,2022-06-13,78
 GR,Greece,2022-06-13,0
 HU,Hungary,2022-06-13,0
 IS,Iceland,2022-06-13,0
@@ -27945,7 +27945,7 @@ DK,Denmark,2022-06-14,3
 EE,Estonia,2022-06-14,12
 FI,Finland,2022-06-14,0
 FR,France,2022-06-14,135
-DE,Germany,2022-06-14,112
+DE,Germany,2022-06-14,107
 GR,Greece,2022-06-14,13
 HU,Hungary,2022-06-14,0
 IS,Iceland,2022-06-14,0
@@ -27977,7 +27977,7 @@ DK,Denmark,2022-06-15,2
 EE,Estonia,2022-06-15,0
 FI,Finland,2022-06-15,0
 FR,France,2022-06-15,49
-DE,Germany,2022-06-15,73
+DE,Germany,2022-06-15,112
 GR,Greece,2022-06-15,16
 HU,Hungary,2022-06-15,23
 IS,Iceland,2022-06-15,0
@@ -28009,7 +28009,7 @@ DK,Denmark,2022-06-16,2
 EE,Estonia,2022-06-16,0
 FI,Finland,2022-06-16,57
 FR,France,2022-06-16,49
-DE,Germany,2022-06-16,19
+DE,Germany,2022-06-16,73
 GR,Greece,2022-06-16,8
 HU,Hungary,2022-06-16,0
 IS,Iceland,2022-06-16,0
@@ -28041,7 +28041,7 @@ DK,Denmark,2022-06-17,0
 EE,Estonia,2022-06-17,0
 FI,Finland,2022-06-17,0
 FR,France,2022-06-17,43
-DE,Germany,2022-06-17,58
+DE,Germany,2022-06-17,19
 GR,Greece,2022-06-17,13
 HU,Hungary,2022-06-17,0
 IS,Iceland,2022-06-17,0
@@ -28137,7 +28137,7 @@ DK,Denmark,2022-06-20,8
 EE,Estonia,2022-06-20,0
 FI,Finland,2022-06-20,0
 FR,France,2022-06-20,67
-DE,Germany,2022-06-20,182
+DE,Germany,2022-06-20,58
 GR,Greece,2022-06-20,12
 HU,Hungary,2022-06-20,0
 IS,Iceland,2022-06-20,0
@@ -28169,7 +28169,7 @@ DK,Denmark,2022-06-21,3
 EE,Estonia,2022-06-21,2
 FI,Finland,2022-06-21,0
 FR,France,2022-06-21,48
-DE,Germany,2022-06-21,104
+DE,Germany,2022-06-21,182
 GR,Greece,2022-06-21,16
 HU,Hungary,2022-06-21,0
 IS,Iceland,2022-06-21,0
@@ -28190,7 +28190,7 @@ SI,Slovenia,2022-06-21,0
 ES,Spain,2022-06-21,122
 SE,Sweden,2022-06-21,0
 CH,Switzerland,2022-06-21,0
-GB,United Kingdom,2022-06-21,57
+GB,United Kingdom,2022-06-21,58
 AT,Austria,2022-06-22,12
 BE,Belgium,2022-06-22,0
 BG,Bulgaria,2022-06-22,5
@@ -28201,7 +28201,7 @@ DK,Denmark,2022-06-22,2
 EE,Estonia,2022-06-22,0
 FI,Finland,2022-06-22,0
 FR,France,2022-06-22,58
-DE,Germany,2022-06-22,98
+DE,Germany,2022-06-22,104
 GR,Greece,2022-06-22,9
 HU,Hungary,2022-06-22,32
 IS,Iceland,2022-06-22,0
@@ -28222,7 +28222,7 @@ SI,Slovenia,2022-06-22,1
 ES,Spain,2022-06-22,0
 SE,Sweden,2022-06-22,0
 CH,Switzerland,2022-06-22,2
-GB,United Kingdom,2022-06-22,70
+GB,United Kingdom,2022-06-22,71
 AT,Austria,2022-06-23,1
 BE,Belgium,2022-06-23,15
 BG,Bulgaria,2022-06-23,3
@@ -28233,7 +28233,7 @@ DK,Denmark,2022-06-23,2
 EE,Estonia,2022-06-23,0
 FI,Finland,2022-06-23,61
 FR,France,2022-06-23,40
-DE,Germany,2022-06-23,90
+DE,Germany,2022-06-23,98
 GR,Greece,2022-06-23,17
 HU,Hungary,2022-06-23,0
 IS,Iceland,2022-06-23,0
@@ -28265,7 +28265,7 @@ DK,Denmark,2022-06-24,2
 EE,Estonia,2022-06-24,0
 FI,Finland,2022-06-24,0
 FR,France,2022-06-24,49
-DE,Germany,2022-06-24,84
+DE,Germany,2022-06-24,90
 GR,Greece,2022-06-24,13
 HU,Hungary,2022-06-24,0
 IS,Iceland,2022-06-24,0
@@ -28361,7 +28361,7 @@ DK,Denmark,2022-06-27,10
 EE,Estonia,2022-06-27,0
 FI,Finland,2022-06-27,0
 FR,France,2022-06-27,89
-DE,Germany,2022-06-27,113
+DE,Germany,2022-06-27,84
 GR,Greece,2022-06-27,12
 HU,Hungary,2022-06-27,0
 IS,Iceland,2022-06-27,0
@@ -28393,7 +28393,7 @@ DK,Denmark,2022-06-28,6
 EE,Estonia,2022-06-28,3
 FI,Finland,2022-06-28,0
 FR,France,2022-06-28,18
-DE,Germany,2022-06-28,175
+DE,Germany,2022-06-28,113
 GR,Greece,2022-06-28,16
 HU,Hungary,2022-06-28,0
 IS,Iceland,2022-06-28,0
@@ -28425,7 +28425,7 @@ DK,Denmark,2022-06-29,9
 EE,Estonia,2022-06-29,0
 FI,Finland,2022-06-29,0
 FR,France,2022-06-29,48
-DE,Germany,2022-06-29,83
+DE,Germany,2022-06-29,175
 GR,Greece,2022-06-29,12
 HU,Hungary,2022-06-29,21
 IS,Iceland,2022-06-29,0
@@ -28457,7 +28457,7 @@ DK,Denmark,2022-06-30,6
 EE,Estonia,2022-06-30,0
 FI,Finland,2022-06-30,43
 FR,France,2022-06-30,42
-DE,Germany,2022-06-30,84
+DE,Germany,2022-06-30,83
 GR,Greece,2022-06-30,14
 HU,Hungary,2022-06-30,0
 IS,Iceland,2022-06-30,0
@@ -28489,7 +28489,7 @@ DK,Denmark,2022-07-01,2
 EE,Estonia,2022-07-01,0
 FI,Finland,2022-07-01,0
 FR,France,2022-07-01,52
-DE,Germany,2022-07-01,103
+DE,Germany,2022-07-01,84
 GR,Greece,2022-07-01,18
 HU,Hungary,2022-07-01,0
 IS,Iceland,2022-07-01,26
@@ -28542,7 +28542,7 @@ SI,Slovenia,2022-07-02,0
 ES,Spain,2022-07-02,0
 SE,Sweden,2022-07-02,0
 CH,Switzerland,2022-07-02,0
-GB,United Kingdom,2022-07-02,89
+GB,United Kingdom,2022-07-02,90
 AT,Austria,2022-07-03,0
 BE,Belgium,2022-07-03,0
 BG,Bulgaria,2022-07-03,0
@@ -28553,7 +28553,7 @@ DK,Denmark,2022-07-03,0
 EE,Estonia,2022-07-03,0
 FI,Finland,2022-07-03,0
 FR,France,2022-07-03,0
-DE,Germany,2022-07-03,3
+DE,Germany,2022-07-03,0
 GR,Greece,2022-07-03,26
 HU,Hungary,2022-07-03,0
 IS,Iceland,2022-07-03,0
@@ -28585,7 +28585,7 @@ DK,Denmark,2022-07-04,16
 EE,Estonia,2022-07-04,0
 FI,Finland,2022-07-04,0
 FR,France,2022-07-04,141
-DE,Germany,2022-07-04,102
+DE,Germany,2022-07-04,106
 GR,Greece,2022-07-04,25
 HU,Hungary,2022-07-04,0
 IS,Iceland,2022-07-04,0
@@ -28617,7 +28617,7 @@ DK,Denmark,2022-07-05,7
 EE,Estonia,2022-07-05,0
 FI,Finland,2022-07-05,0
 FR,France,2022-07-05,67
-DE,Germany,2022-07-05,122
+DE,Germany,2022-07-05,102
 GR,Greece,2022-07-05,22
 HU,Hungary,2022-07-05,0
 IS,Iceland,2022-07-05,0
@@ -28649,7 +28649,7 @@ DK,Denmark,2022-07-06,5
 EE,Estonia,2022-07-06,8
 FI,Finland,2022-07-06,0
 FR,France,2022-07-06,53
-DE,Germany,2022-07-06,108
+DE,Germany,2022-07-06,122
 GR,Greece,2022-07-06,22
 HU,Hungary,2022-07-06,14
 IS,Iceland,2022-07-06,0
@@ -28670,7 +28670,7 @@ SI,Slovenia,2022-07-06,0
 ES,Spain,2022-07-06,0
 SE,Sweden,2022-07-06,0
 CH,Switzerland,2022-07-06,6
-GB,United Kingdom,2022-07-06,111
+GB,United Kingdom,2022-07-06,113
 AT,Austria,2022-07-07,11
 BE,Belgium,2022-07-07,25
 BG,Bulgaria,2022-07-07,1
@@ -28681,7 +28681,7 @@ DK,Denmark,2022-07-07,6
 EE,Estonia,2022-07-07,0
 FI,Finland,2022-07-07,66
 FR,France,2022-07-07,89
-DE,Germany,2022-07-07,131
+DE,Germany,2022-07-07,108
 GR,Greece,2022-07-07,29
 HU,Hungary,2022-07-07,0
 IS,Iceland,2022-07-07,0
@@ -28713,7 +28713,7 @@ DK,Denmark,2022-07-08,5
 EE,Estonia,2022-07-08,0
 FI,Finland,2022-07-08,0
 FR,France,2022-07-08,67
-DE,Germany,2022-07-08,104
+DE,Germany,2022-07-08,131
 GR,Greece,2022-07-08,22
 HU,Hungary,2022-07-08,0
 IS,Iceland,2022-07-08,0
@@ -28734,7 +28734,7 @@ SI,Slovenia,2022-07-08,2
 ES,Spain,2022-07-08,471
 SE,Sweden,2022-07-08,0
 CH,Switzerland,2022-07-08,0
-GB,United Kingdom,2022-07-08,107
+GB,United Kingdom,2022-07-08,108
 AT,Austria,2022-07-09,0
 BE,Belgium,2022-07-09,0
 BG,Bulgaria,2022-07-09,0
@@ -28777,7 +28777,7 @@ DK,Denmark,2022-07-10,0
 EE,Estonia,2022-07-10,0
 FI,Finland,2022-07-10,0
 FR,France,2022-07-10,0
-DE,Germany,2022-07-10,8
+DE,Germany,2022-07-10,0
 GR,Greece,2022-07-10,28
 HU,Hungary,2022-07-10,0
 IS,Iceland,2022-07-10,0
@@ -28809,7 +28809,7 @@ DK,Denmark,2022-07-11,19
 EE,Estonia,2022-07-11,0
 FI,Finland,2022-07-11,0
 FR,France,2022-07-11,162
-DE,Germany,2022-07-11,165
+DE,Germany,2022-07-11,112
 GR,Greece,2022-07-11,0
 HU,Hungary,2022-07-11,0
 IS,Iceland,2022-07-11,0
@@ -28830,7 +28830,7 @@ SI,Slovenia,2022-07-11,0
 ES,Spain,2022-07-11,0
 SE,Sweden,2022-07-11,0
 CH,Switzerland,2022-07-11,2
-GB,United Kingdom,2022-07-11,124
+GB,United Kingdom,2022-07-11,125
 AT,Austria,2022-07-12,15
 BE,Belgium,2022-07-12,0
 BG,Bulgaria,2022-07-12,2
@@ -28841,7 +28841,7 @@ DK,Denmark,2022-07-12,1
 EE,Estonia,2022-07-12,9
 FI,Finland,2022-07-12,0
 FR,France,2022-07-12,114
-DE,Germany,2022-07-12,104
+DE,Germany,2022-07-12,165
 GR,Greece,2022-07-12,0
 HU,Hungary,2022-07-12,0
 IS,Iceland,2022-07-12,0
@@ -28873,7 +28873,7 @@ DK,Denmark,2022-07-13,0
 EE,Estonia,2022-07-13,0
 FI,Finland,2022-07-13,0
 FR,France,2022-07-13,109
-DE,Germany,2022-07-13,145
+DE,Germany,2022-07-13,104
 GR,Greece,2022-07-13,0
 HU,Hungary,2022-07-13,35
 IS,Iceland,2022-07-13,0
@@ -28905,7 +28905,7 @@ DK,Denmark,2022-07-14,13
 EE,Estonia,2022-07-14,0
 FI,Finland,2022-07-14,71
 FR,France,2022-07-14,0
-DE,Germany,2022-07-14,115
+DE,Germany,2022-07-14,145
 GR,Greece,2022-07-14,0
 HU,Hungary,2022-07-14,0
 IS,Iceland,2022-07-14,0
@@ -28926,7 +28926,7 @@ SI,Slovenia,2022-07-14,3
 ES,Spain,2022-07-14,0
 SE,Sweden,2022-07-14,59
 CH,Switzerland,2022-07-14,0
-GB,United Kingdom,2022-07-14,122
+GB,United Kingdom,2022-07-14,124
 AT,Austria,2022-07-15,7
 BE,Belgium,2022-07-15,0
 BG,Bulgaria,2022-07-15,6
@@ -28937,7 +28937,7 @@ DK,Denmark,2022-07-15,8
 EE,Estonia,2022-07-15,0
 FI,Finland,2022-07-15,0
 FR,France,2022-07-15,0
-DE,Germany,2022-07-15,134
+DE,Germany,2022-07-15,115
 GR,Greece,2022-07-15,0
 HU,Hungary,2022-07-15,0
 IS,Iceland,2022-07-15,0
@@ -29033,7 +29033,7 @@ DK,Denmark,2022-07-18,12
 EE,Estonia,2022-07-18,0
 FI,Finland,2022-07-18,0
 FR,France,2022-07-18,415
-DE,Germany,2022-07-18,102
+DE,Germany,2022-07-18,134
 GR,Greece,2022-07-18,0
 HU,Hungary,2022-07-18,0
 IS,Iceland,2022-07-18,0
@@ -29065,7 +29065,7 @@ DK,Denmark,2022-07-19,4
 EE,Estonia,2022-07-19,4
 FI,Finland,2022-07-19,0
 FR,France,2022-07-19,137
-DE,Germany,2022-07-19,136
+DE,Germany,2022-07-19,102
 GR,Greece,2022-07-19,231
 HU,Hungary,2022-07-19,0
 IS,Iceland,2022-07-19,0
@@ -29086,7 +29086,7 @@ SI,Slovenia,2022-07-19,0
 ES,Spain,2022-07-19,294
 SE,Sweden,2022-07-19,0
 CH,Switzerland,2022-07-19,2
-GB,United Kingdom,2022-07-19,216
+GB,United Kingdom,2022-07-19,219
 AT,Austria,2022-07-20,15
 BE,Belgium,2022-07-20,29
 BG,Bulgaria,2022-07-20,6
@@ -29097,7 +29097,7 @@ DK,Denmark,2022-07-20,4
 EE,Estonia,2022-07-20,0
 FI,Finland,2022-07-20,0
 FR,France,2022-07-20,125
-DE,Germany,2022-07-20,177
+DE,Germany,2022-07-20,136
 GR,Greece,2022-07-20,0
 HU,Hungary,2022-07-20,40
 IS,Iceland,2022-07-20,0
@@ -29118,7 +29118,7 @@ SI,Slovenia,2022-07-20,2
 ES,Spain,2022-07-20,0
 SE,Sweden,2022-07-20,0
 CH,Switzerland,2022-07-20,11
-GB,United Kingdom,2022-07-20,187
+GB,United Kingdom,2022-07-20,188
 AT,Austria,2022-07-21,19
 BE,Belgium,2022-07-21,0
 BG,Bulgaria,2022-07-21,6
@@ -29129,7 +29129,7 @@ DK,Denmark,2022-07-21,10
 EE,Estonia,2022-07-21,0
 FI,Finland,2022-07-21,0
 FR,France,2022-07-21,133
-DE,Germany,2022-07-21,113
+DE,Germany,2022-07-21,177
 GR,Greece,2022-07-21,0
 HU,Hungary,2022-07-21,0
 IS,Iceland,2022-07-21,0
@@ -29150,7 +29150,7 @@ SI,Slovenia,2022-07-21,3
 ES,Spain,2022-07-21,0
 SE,Sweden,2022-07-21,46
 CH,Switzerland,2022-07-21,1
-GB,United Kingdom,2022-07-21,123
+GB,United Kingdom,2022-07-21,125
 AT,Austria,2022-07-22,9
 BE,Belgium,2022-07-22,0
 BG,Bulgaria,2022-07-22,10
@@ -29161,7 +29161,7 @@ DK,Denmark,2022-07-22,10
 EE,Estonia,2022-07-22,0
 FI,Finland,2022-07-22,0
 FR,France,2022-07-22,113
-DE,Germany,2022-07-22,116
+DE,Germany,2022-07-22,113
 GR,Greece,2022-07-22,0
 HU,Hungary,2022-07-22,0
 IS,Iceland,2022-07-22,0
@@ -29214,7 +29214,7 @@ SI,Slovenia,2022-07-23,3
 ES,Spain,2022-07-23,0
 SE,Sweden,2022-07-23,0
 CH,Switzerland,2022-07-23,0
-GB,United Kingdom,2022-07-23,124
+GB,United Kingdom,2022-07-23,125
 AT,Austria,2022-07-24,0
 BE,Belgium,2022-07-24,0
 BG,Bulgaria,2022-07-24,1
@@ -29246,7 +29246,7 @@ SI,Slovenia,2022-07-24,0
 ES,Spain,2022-07-24,0
 SE,Sweden,2022-07-24,0
 CH,Switzerland,2022-07-24,0
-GB,United Kingdom,2022-07-24,129
+GB,United Kingdom,2022-07-24,130
 AT,Austria,2022-07-25,28
 BE,Belgium,2022-07-25,61
 BG,Bulgaria,2022-07-25,12
@@ -29257,7 +29257,7 @@ DK,Denmark,2022-07-25,0
 EE,Estonia,2022-07-25,0
 FI,Finland,2022-07-25,0
 FR,France,2022-07-25,210
-DE,Germany,2022-07-25,187
+DE,Germany,2022-07-25,116
 GR,Greece,2022-07-25,0
 HU,Hungary,2022-07-25,0
 IS,Iceland,2022-07-25,0
@@ -29289,7 +29289,7 @@ DK,Denmark,2022-07-26,27
 EE,Estonia,2022-07-26,8
 FI,Finland,2022-07-26,0
 FR,France,2022-07-26,106
-DE,Germany,2022-07-26,181
+DE,Germany,2022-07-26,187
 GR,Greece,2022-07-26,0
 HU,Hungary,2022-07-26,0
 IS,Iceland,2022-07-26,0
@@ -29321,7 +29321,7 @@ DK,Denmark,2022-07-27,5
 EE,Estonia,2022-07-27,0
 FI,Finland,2022-07-27,0
 FR,France,2022-07-27,103
-DE,Germany,2022-07-27,157
+DE,Germany,2022-07-27,181
 GR,Greece,2022-07-27,292
 HU,Hungary,2022-07-27,54
 IS,Iceland,2022-07-27,0
@@ -29342,7 +29342,7 @@ SI,Slovenia,2022-07-27,2
 ES,Spain,2022-07-27,0
 SE,Sweden,2022-07-27,0
 CH,Switzerland,2022-07-27,9
-GB,United Kingdom,2022-07-27,113
+GB,United Kingdom,2022-07-27,114
 AT,Austria,2022-07-28,32
 BE,Belgium,2022-07-28,49
 BG,Bulgaria,2022-07-28,4
@@ -29353,7 +29353,7 @@ DK,Denmark,2022-07-28,5
 EE,Estonia,2022-07-28,0
 FI,Finland,2022-07-28,0
 FR,France,2022-07-28,105
-DE,Germany,2022-07-28,153
+DE,Germany,2022-07-28,157
 GR,Greece,2022-07-28,0
 HU,Hungary,2022-07-28,0
 IS,Iceland,2022-07-28,0
@@ -29374,7 +29374,7 @@ SI,Slovenia,2022-07-28,2
 ES,Spain,2022-07-28,0
 SE,Sweden,2022-07-28,109
 CH,Switzerland,2022-07-28,0
-GB,United Kingdom,2022-07-28,121
+GB,United Kingdom,2022-07-28,122
 AT,Austria,2022-07-29,7
 BE,Belgium,2022-07-29,0
 BG,Bulgaria,2022-07-29,12
@@ -29385,7 +29385,7 @@ DK,Denmark,2022-07-29,11
 EE,Estonia,2022-07-29,0
 FI,Finland,2022-07-29,0
 FR,France,2022-07-29,89
-DE,Germany,2022-07-29,117
+DE,Germany,2022-07-29,153
 GR,Greece,2022-07-29,0
 HU,Hungary,2022-07-29,0
 IS,Iceland,2022-07-29,0
@@ -29406,7 +29406,7 @@ SI,Slovenia,2022-07-29,1
 ES,Spain,2022-07-29,325
 SE,Sweden,2022-07-29,0
 CH,Switzerland,2022-07-29,0
-GB,United Kingdom,2022-07-29,113
+GB,United Kingdom,2022-07-29,114
 AT,Austria,2022-07-30,0
 BE,Belgium,2022-07-30,0
 BG,Bulgaria,2022-07-30,5
@@ -29449,7 +29449,7 @@ DK,Denmark,2022-07-31,0
 EE,Estonia,2022-07-31,0
 FI,Finland,2022-07-31,0
 FR,France,2022-07-31,0
-DE,Germany,2022-07-31,7
+DE,Germany,2022-07-31,0
 GR,Greece,2022-07-31,0
 HU,Hungary,2022-07-31,0
 IS,Iceland,2022-07-31,0
@@ -29481,7 +29481,7 @@ DK,Denmark,2022-08-01,32
 EE,Estonia,2022-08-01,0
 FI,Finland,2022-08-01,0
 FR,France,2022-08-01,196
-DE,Germany,2022-08-01,171
+DE,Germany,2022-08-01,124
 GR,Greece,2022-08-01,0
 HU,Hungary,2022-08-01,0
 IS,Iceland,2022-08-01,0
@@ -29502,7 +29502,7 @@ SI,Slovenia,2022-08-01,2
 ES,Spain,2022-08-01,0
 SE,Sweden,2022-08-01,0
 CH,Switzerland,2022-08-01,0
-GB,United Kingdom,2022-08-01,92
+GB,United Kingdom,2022-08-01,93
 AT,Austria,2022-08-02,49
 BE,Belgium,2022-08-02,0
 BG,Bulgaria,2022-08-02,10
@@ -29513,7 +29513,7 @@ DK,Denmark,2022-08-02,11
 EE,Estonia,2022-08-02,8
 FI,Finland,2022-08-02,0
 FR,France,2022-08-02,86
-DE,Germany,2022-08-02,210
+DE,Germany,2022-08-02,171
 GR,Greece,2022-08-02,378
 HU,Hungary,2022-08-02,0
 IS,Iceland,2022-08-02,0
@@ -29545,7 +29545,7 @@ DK,Denmark,2022-08-03,5
 EE,Estonia,2022-08-03,0
 FI,Finland,2022-08-03,0
 FR,France,2022-08-03,90
-DE,Germany,2022-08-03,192
+DE,Germany,2022-08-03,210
 GR,Greece,2022-08-03,0
 HU,Hungary,2022-08-03,96
 IS,Iceland,2022-08-03,0
@@ -29577,7 +29577,7 @@ DK,Denmark,2022-08-04,13
 EE,Estonia,2022-08-04,0
 FI,Finland,2022-08-04,239
 FR,France,2022-08-04,80
-DE,Germany,2022-08-04,165
+DE,Germany,2022-08-04,192
 GR,Greece,2022-08-04,0
 HU,Hungary,2022-08-04,0
 IS,Iceland,2022-08-04,0
@@ -29609,7 +29609,7 @@ DK,Denmark,2022-08-05,1
 EE,Estonia,2022-08-05,0
 FI,Finland,2022-08-05,0
 FR,France,2022-08-05,80
-DE,Germany,2022-08-05,141
+DE,Germany,2022-08-05,165
 GR,Greece,2022-08-05,0
 HU,Hungary,2022-08-05,0
 IS,Iceland,2022-08-05,0
@@ -29705,7 +29705,7 @@ DK,Denmark,2022-08-08,50
 EE,Estonia,2022-08-08,0
 FI,Finland,2022-08-08,0
 FR,France,2022-08-08,174
-DE,Germany,2022-08-08,170
+DE,Germany,2022-08-08,141
 GR,Greece,2022-08-08,0
 HU,Hungary,2022-08-08,0
 IS,Iceland,2022-08-08,0
@@ -29737,7 +29737,7 @@ DK,Denmark,2022-08-09,7
 EE,Estonia,2022-08-09,6
 FI,Finland,2022-08-09,0
 FR,France,2022-08-09,111
-DE,Germany,2022-08-09,213
+DE,Germany,2022-08-09,170
 GR,Greece,2022-08-09,345
 HU,Hungary,2022-08-09,0
 IS,Iceland,2022-08-09,0
@@ -29769,7 +29769,7 @@ DK,Denmark,2022-08-10,16
 EE,Estonia,2022-08-10,0
 FI,Finland,2022-08-10,0
 FR,France,2022-08-10,88
-DE,Germany,2022-08-10,153
+DE,Germany,2022-08-10,213
 GR,Greece,2022-08-10,0
 HU,Hungary,2022-08-10,80
 IS,Iceland,2022-08-10,0
@@ -29801,7 +29801,7 @@ DK,Denmark,2022-08-11,6
 EE,Estonia,2022-08-11,0
 FI,Finland,2022-08-11,99
 FR,France,2022-08-11,80
-DE,Germany,2022-08-11,167
+DE,Germany,2022-08-11,153
 GR,Greece,2022-08-11,0
 HU,Hungary,2022-08-11,0
 IS,Iceland,2022-08-11,0
@@ -29822,7 +29822,7 @@ SI,Slovenia,2022-08-11,3
 ES,Spain,2022-08-11,0
 SE,Sweden,2022-08-11,95
 CH,Switzerland,2022-08-11,0
-GB,United Kingdom,2022-08-11,98
+GB,United Kingdom,2022-08-11,99
 AT,Austria,2022-08-12,13
 BE,Belgium,2022-08-12,0
 BG,Bulgaria,2022-08-12,10
@@ -29833,7 +29833,7 @@ DK,Denmark,2022-08-12,12
 EE,Estonia,2022-08-12,0
 FI,Finland,2022-08-12,0
 FR,France,2022-08-12,60
-DE,Germany,2022-08-12,137
+DE,Germany,2022-08-12,167
 GR,Greece,2022-08-12,0
 HU,Hungary,2022-08-12,0
 IS,Iceland,2022-08-12,0
@@ -29886,7 +29886,7 @@ SI,Slovenia,2022-08-13,2
 ES,Spain,2022-08-13,0
 SE,Sweden,2022-08-13,0
 CH,Switzerland,2022-08-13,0
-GB,United Kingdom,2022-08-13,88
+GB,United Kingdom,2022-08-13,89
 AT,Austria,2022-08-14,0
 BE,Belgium,2022-08-14,0
 BG,Bulgaria,2022-08-14,2
@@ -29929,7 +29929,7 @@ DK,Denmark,2022-08-15,24
 EE,Estonia,2022-08-15,0
 FI,Finland,2022-08-15,0
 FR,France,2022-08-15,0
-DE,Germany,2022-08-15,140
+DE,Germany,2022-08-15,137
 GR,Greece,2022-08-15,0
 HU,Hungary,2022-08-15,0
 IS,Iceland,2022-08-15,0
@@ -29950,7 +29950,7 @@ SI,Slovenia,2022-08-15,3
 ES,Spain,2022-08-15,0
 SE,Sweden,2022-08-15,0
 CH,Switzerland,2022-08-15,0
-GB,United Kingdom,2022-08-15,87
+GB,United Kingdom,2022-08-15,88
 AT,Austria,2022-08-16,2
 BE,Belgium,2022-08-16,46
 BG,Bulgaria,2022-08-16,13
@@ -29961,7 +29961,7 @@ DK,Denmark,2022-08-16,10
 EE,Estonia,2022-08-16,8
 FI,Finland,2022-08-16,0
 FR,France,2022-08-16,159
-DE,Germany,2022-08-16,192
+DE,Germany,2022-08-16,140
 GR,Greece,2022-08-16,306
 HU,Hungary,2022-08-16,0
 IS,Iceland,2022-08-16,0
@@ -29993,7 +29993,7 @@ DK,Denmark,2022-08-17,7
 EE,Estonia,2022-08-17,0
 FI,Finland,2022-08-17,0
 FR,France,2022-08-17,93
-DE,Germany,2022-08-17,184
+DE,Germany,2022-08-17,192
 GR,Greece,2022-08-17,0
 HU,Hungary,2022-08-17,117
 IS,Iceland,2022-08-17,0
@@ -30025,7 +30025,7 @@ DK,Denmark,2022-08-18,3
 EE,Estonia,2022-08-18,0
 FI,Finland,2022-08-18,117
 FR,France,2022-08-18,92
-DE,Germany,2022-08-18,169
+DE,Germany,2022-08-18,184
 GR,Greece,2022-08-18,0
 HU,Hungary,2022-08-18,0
 IS,Iceland,2022-08-18,0
@@ -30057,7 +30057,7 @@ DK,Denmark,2022-08-19,10
 EE,Estonia,2022-08-19,0
 FI,Finland,2022-08-19,0
 FR,France,2022-08-19,72
-DE,Germany,2022-08-19,121
+DE,Germany,2022-08-19,169
 GR,Greece,2022-08-19,0
 HU,Hungary,2022-08-19,0
 IS,Iceland,2022-08-19,0
@@ -30142,7 +30142,7 @@ SI,Slovenia,2022-08-21,1
 ES,Spain,2022-08-21,0
 SE,Sweden,2022-08-21,0
 CH,Switzerland,2022-08-21,0
-GB,United Kingdom,2022-08-21,58
+GB,United Kingdom,2022-08-21,59
 AT,Austria,2022-08-22,27
 BE,Belgium,2022-08-22,27
 BG,Bulgaria,2022-08-22,16
@@ -30153,7 +30153,7 @@ DK,Denmark,2022-08-22,19
 EE,Estonia,2022-08-22,0
 FI,Finland,2022-08-22,0
 FR,France,2022-08-22,116
-DE,Germany,2022-08-22,146
+DE,Germany,2022-08-22,121
 GR,Greece,2022-08-22,0
 HU,Hungary,2022-08-22,0
 IS,Iceland,2022-08-22,0
@@ -30174,7 +30174,7 @@ SI,Slovenia,2022-08-22,1
 ES,Spain,2022-08-22,0
 SE,Sweden,2022-08-22,0
 CH,Switzerland,2022-08-22,2
-GB,United Kingdom,2022-08-22,62
+GB,United Kingdom,2022-08-22,63
 AT,Austria,2022-08-23,5
 BE,Belgium,2022-08-23,0
 BG,Bulgaria,2022-08-23,2
@@ -30185,7 +30185,7 @@ DK,Denmark,2022-08-23,6
 EE,Estonia,2022-08-23,5
 FI,Finland,2022-08-23,0
 FR,France,2022-08-23,88
-DE,Germany,2022-08-23,147
+DE,Germany,2022-08-23,146
 GR,Greece,2022-08-23,307
 HU,Hungary,2022-08-23,0
 IS,Iceland,2022-08-23,0
@@ -30206,7 +30206,7 @@ SI,Slovenia,2022-08-23,3
 ES,Spain,2022-08-23,118
 SE,Sweden,2022-08-23,0
 CH,Switzerland,2022-08-23,3
-GB,United Kingdom,2022-08-23,77
+GB,United Kingdom,2022-08-23,78
 AT,Austria,2022-08-24,15
 BE,Belgium,2022-08-24,0
 BG,Bulgaria,2022-08-24,8
@@ -30217,7 +30217,7 @@ DK,Denmark,2022-08-24,13
 EE,Estonia,2022-08-24,0
 FI,Finland,2022-08-24,0
 FR,France,2022-08-24,57
-DE,Germany,2022-08-24,0
+DE,Germany,2022-08-24,147
 GR,Greece,2022-08-24,0
 HU,Hungary,2022-08-24,108
 IS,Iceland,2022-08-24,0
@@ -30249,7 +30249,7 @@ DK,Denmark,2022-08-25,4
 EE,Estonia,2022-08-25,0
 FI,Finland,2022-08-25,110
 FR,France,2022-08-25,44
-DE,Germany,2022-08-25,206
+DE,Germany,2022-08-25,116
 GR,Greece,2022-08-25,0
 HU,Hungary,2022-08-25,0
 IS,Iceland,2022-08-25,0
@@ -30281,7 +30281,7 @@ DK,Denmark,2022-08-26,5
 EE,Estonia,2022-08-26,0
 FI,Finland,2022-08-26,0
 FR,France,2022-08-26,45
-DE,Germany,2022-08-26,101
+DE,Germany,2022-08-26,90
 GR,Greece,2022-08-26,0
 HU,Hungary,2022-08-26,0
 IS,Iceland,2022-08-26,0
@@ -30377,7 +30377,7 @@ DK,Denmark,2022-08-29,19
 EE,Estonia,2022-08-29,0
 FI,Finland,2022-08-29,0
 FR,France,2022-08-29,110
-DE,Germany,2022-08-29,119
+DE,Germany,2022-08-29,101
 GR,Greece,2022-08-29,0
 HU,Hungary,2022-08-29,0
 IS,Iceland,2022-08-29,0
@@ -30409,7 +30409,7 @@ DK,Denmark,2022-08-30,8
 EE,Estonia,2022-08-30,4
 FI,Finland,2022-08-30,0
 FR,France,2022-08-30,51
-DE,Germany,2022-08-30,0
+DE,Germany,2022-08-30,119
 GR,Greece,2022-08-30,217
 HU,Hungary,2022-08-30,0
 IS,Iceland,2022-08-30,34
@@ -30430,7 +30430,7 @@ SI,Slovenia,2022-08-30,0
 ES,Spain,2022-08-30,146
 SE,Sweden,2022-08-30,0
 CH,Switzerland,2022-08-30,2
-GB,United Kingdom,2022-08-30,41
+GB,United Kingdom,2022-08-30,42
 AT,Austria,2022-08-31,11
 BE,Belgium,2022-08-31,0
 BG,Bulgaria,2022-08-31,3
@@ -30441,7 +30441,7 @@ DK,Denmark,2022-08-31,3
 EE,Estonia,2022-08-31,0
 FI,Finland,2022-08-31,0
 FR,France,2022-08-31,54
-DE,Germany,2022-08-31,271
+DE,Germany,2022-08-31,181
 GR,Greece,2022-08-31,0
 HU,Hungary,2022-08-31,100
 IS,Iceland,2022-08-31,0
@@ -30462,7 +30462,7 @@ SI,Slovenia,2022-08-31,1
 ES,Spain,2022-08-31,0
 SE,Sweden,2022-08-31,0
 CH,Switzerland,2022-08-31,5
-GB,United Kingdom,2022-08-31,73
+GB,United Kingdom,2022-08-31,74
 AT,Austria,2022-09-01,9
 BE,Belgium,2022-09-01,18
 BG,Bulgaria,2022-09-01,4
@@ -30473,7 +30473,7 @@ DK,Denmark,2022-09-01,11
 EE,Estonia,2022-09-01,0
 FI,Finland,2022-09-01,113
 FR,France,2022-09-01,41
-DE,Germany,2022-09-01,148
+DE,Germany,2022-09-01,90
 GR,Greece,2022-09-01,0
 HU,Hungary,2022-09-01,0
 IS,Iceland,2022-09-01,0
@@ -30505,7 +30505,7 @@ DK,Denmark,2022-09-02,2
 EE,Estonia,2022-09-02,0
 FI,Finland,2022-09-02,0
 FR,France,2022-09-02,42
-DE,Germany,2022-09-02,120
+DE,Germany,2022-09-02,148
 GR,Greece,2022-09-02,0
 HU,Hungary,2022-09-02,0
 IS,Iceland,2022-09-02,0
@@ -30601,7 +30601,7 @@ DK,Denmark,2022-09-05,17
 EE,Estonia,2022-09-05,0
 FI,Finland,2022-09-05,0
 FR,France,2022-09-05,84
-DE,Germany,2022-09-05,99
+DE,Germany,2022-09-05,120
 GR,Greece,2022-09-05,0
 HU,Hungary,2022-09-05,0
 IS,Iceland,2022-09-05,0
@@ -30633,7 +30633,7 @@ DK,Denmark,2022-09-06,7
 EE,Estonia,2022-09-06,6
 FI,Finland,2022-09-06,0
 FR,France,2022-09-06,60
-DE,Germany,2022-09-06,120
+DE,Germany,2022-09-06,99
 GR,Greece,2022-09-06,205
 HU,Hungary,2022-09-06,0
 IS,Iceland,2022-09-06,0
@@ -30665,7 +30665,7 @@ DK,Denmark,2022-09-07,3
 EE,Estonia,2022-09-07,0
 FI,Finland,2022-09-07,0
 FR,France,2022-09-07,46
-DE,Germany,2022-09-07,117
+DE,Germany,2022-09-07,120
 GR,Greece,2022-09-07,0
 HU,Hungary,2022-09-07,76
 IS,Iceland,2022-09-07,0
@@ -30697,7 +30697,7 @@ DK,Denmark,2022-09-08,2
 EE,Estonia,2022-09-08,0
 FI,Finland,2022-09-08,78
 FR,France,2022-09-08,58
-DE,Germany,2022-09-08,119
+DE,Germany,2022-09-08,117
 GR,Greece,2022-09-08,0
 HU,Hungary,2022-09-08,0
 IS,Iceland,2022-09-08,0
@@ -30729,7 +30729,7 @@ DK,Denmark,2022-09-09,3
 EE,Estonia,2022-09-09,0
 FI,Finland,2022-09-09,0
 FR,France,2022-09-09,31
-DE,Germany,2022-09-09,82
+DE,Germany,2022-09-09,119
 GR,Greece,2022-09-09,0
 HU,Hungary,2022-09-09,0
 IS,Iceland,2022-09-09,0
@@ -30814,7 +30814,7 @@ SI,Slovenia,2022-09-11,1
 ES,Spain,2022-09-11,0
 SE,Sweden,2022-09-11,0
 CH,Switzerland,2022-09-11,0
-GB,United Kingdom,2022-09-11,29
+GB,United Kingdom,2022-09-11,30
 AT,Austria,2022-09-12,33
 BE,Belgium,2022-09-12,0
 BG,Bulgaria,2022-09-12,0
@@ -30825,7 +30825,7 @@ DK,Denmark,2022-09-12,14
 EE,Estonia,2022-09-12,0
 FI,Finland,2022-09-12,0
 FR,France,2022-09-12,56
-DE,Germany,2022-09-12,90
+DE,Germany,2022-09-12,82
 GR,Greece,2022-09-12,0
 HU,Hungary,2022-09-12,0
 IS,Iceland,2022-09-12,0
@@ -30857,7 +30857,7 @@ DK,Denmark,2022-09-13,1
 EE,Estonia,2022-09-13,4
 FI,Finland,2022-09-13,0
 FR,France,2022-09-13,49
-DE,Germany,2022-09-13,109
+DE,Germany,2022-09-13,90
 GR,Greece,2022-09-13,137
 HU,Hungary,2022-09-13,0
 IS,Iceland,2022-09-13,0
@@ -30889,7 +30889,7 @@ DK,Denmark,2022-09-14,4
 EE,Estonia,2022-09-14,0
 FI,Finland,2022-09-14,0
 FR,France,2022-09-14,18
-DE,Germany,2022-09-14,230
+DE,Germany,2022-09-14,109
 GR,Greece,2022-09-14,0
 HU,Hungary,2022-09-14,42
 IS,Iceland,2022-09-14,0
@@ -30921,7 +30921,7 @@ DK,Denmark,2022-09-15,3
 EE,Estonia,2022-09-15,0
 FI,Finland,2022-09-15,90
 FR,France,2022-09-15,28
-DE,Germany,2022-09-15,117
+DE,Germany,2022-09-15,230
 GR,Greece,2022-09-15,0
 HU,Hungary,2022-09-15,0
 IS,Iceland,2022-09-15,0
@@ -30953,7 +30953,7 @@ DK,Denmark,2022-09-16,3
 EE,Estonia,2022-09-16,0
 FI,Finland,2022-09-16,0
 FR,France,2022-09-16,27
-DE,Germany,2022-09-16,88
+DE,Germany,2022-09-16,117
 GR,Greece,2022-09-16,0
 HU,Hungary,2022-09-16,0
 IS,Iceland,2022-09-16,0
@@ -31049,7 +31049,7 @@ DK,Denmark,2022-09-19,11
 EE,Estonia,2022-09-19,0
 FI,Finland,2022-09-19,0
 FR,France,2022-09-19,71
-DE,Germany,2022-09-19,146
+DE,Germany,2022-09-19,88
 GR,Greece,2022-09-19,0
 HU,Hungary,2022-09-19,0
 IS,Iceland,2022-09-19,0
@@ -31081,7 +31081,7 @@ DK,Denmark,2022-09-20,2
 EE,Estonia,2022-09-20,6
 FI,Finland,2022-09-20,0
 FR,France,2022-09-20,48
-DE,Germany,2022-09-20,90
+DE,Germany,2022-09-20,146
 GR,Greece,2022-09-20,116
 HU,Hungary,2022-09-20,0
 IS,Iceland,2022-09-20,0
@@ -31102,7 +31102,7 @@ SI,Slovenia,2022-09-20,3
 ES,Spain,2022-09-20,120
 SE,Sweden,2022-09-20,0
 CH,Switzerland,2022-09-20,1
-GB,United Kingdom,2022-09-20,47
+GB,United Kingdom,2022-09-20,48
 AT,Austria,2022-09-21,7
 BE,Belgium,2022-09-21,0
 BG,Bulgaria,2022-09-21,6
@@ -31113,7 +31113,7 @@ DK,Denmark,2022-09-21,10
 EE,Estonia,2022-09-21,0
 FI,Finland,2022-09-21,0
 FR,France,2022-09-21,33
-DE,Germany,2022-09-21,106
+DE,Germany,2022-09-21,90
 GR,Greece,2022-09-21,0
 HU,Hungary,2022-09-21,48
 IS,Iceland,2022-09-21,0
@@ -31145,7 +31145,7 @@ DK,Denmark,2022-09-22,5
 EE,Estonia,2022-09-22,0
 FI,Finland,2022-09-22,70
 FR,France,2022-09-22,30
-DE,Germany,2022-09-22,93
+DE,Germany,2022-09-22,106
 GR,Greece,2022-09-22,0
 HU,Hungary,2022-09-22,0
 IS,Iceland,2022-09-22,0
@@ -31177,7 +31177,7 @@ DK,Denmark,2022-09-23,5
 EE,Estonia,2022-09-23,0
 FI,Finland,2022-09-23,0
 FR,France,2022-09-23,25
-DE,Germany,2022-09-23,90
+DE,Germany,2022-09-23,93
 GR,Greece,2022-09-23,0
 HU,Hungary,2022-09-23,0
 IS,Iceland,2022-09-23,0
@@ -31198,7 +31198,7 @@ SI,Slovenia,2022-09-23,0
 ES,Spain,2022-09-23,164
 SE,Sweden,2022-09-23,0
 CH,Switzerland,2022-09-23,0
-GB,United Kingdom,2022-09-23,52
+GB,United Kingdom,2022-09-23,53
 AT,Austria,2022-09-24,5
 BE,Belgium,2022-09-24,0
 BG,Bulgaria,2022-09-24,0
@@ -31230,7 +31230,7 @@ SI,Slovenia,2022-09-24,1
 ES,Spain,2022-09-24,0
 SE,Sweden,2022-09-24,0
 CH,Switzerland,2022-09-24,0
-GB,United Kingdom,2022-09-24,48
+GB,United Kingdom,2022-09-24,49
 AT,Austria,2022-09-25,0
 BE,Belgium,2022-09-25,0
 BG,Bulgaria,2022-09-25,1
@@ -31273,7 +31273,7 @@ DK,Denmark,2022-09-26,13
 EE,Estonia,2022-09-26,0
 FI,Finland,2022-09-26,0
 FR,France,2022-09-26,73
-DE,Germany,2022-09-26,118
+DE,Germany,2022-09-26,90
 GR,Greece,2022-09-26,0
 HU,Hungary,2022-09-26,0
 IS,Iceland,2022-09-26,0
@@ -31305,7 +31305,7 @@ DK,Denmark,2022-09-27,4
 EE,Estonia,2022-09-27,14
 FI,Finland,2022-09-27,0
 FR,France,2022-09-27,40
-DE,Germany,2022-09-27,138
+DE,Germany,2022-09-27,118
 GR,Greece,2022-09-27,101
 HU,Hungary,2022-09-27,0
 IS,Iceland,2022-09-27,0
@@ -31337,7 +31337,7 @@ DK,Denmark,2022-09-28,14
 EE,Estonia,2022-09-28,0
 FI,Finland,2022-09-28,0
 FR,France,2022-09-28,36
-DE,Germany,2022-09-28,94
+DE,Germany,2022-09-28,138
 GR,Greece,2022-09-28,0
 HU,Hungary,2022-09-28,46
 IS,Iceland,2022-09-28,0
@@ -31358,7 +31358,7 @@ SI,Slovenia,2022-09-28,1
 ES,Spain,2022-09-28,0
 SE,Sweden,2022-09-28,0
 CH,Switzerland,2022-09-28,7
-GB,United Kingdom,2022-09-28,57
+GB,United Kingdom,2022-09-28,58
 AT,Austria,2022-09-29,4
 BE,Belgium,2022-09-29,14
 BG,Bulgaria,2022-09-29,3
@@ -31369,7 +31369,7 @@ DK,Denmark,2022-09-29,8
 EE,Estonia,2022-09-29,0
 FI,Finland,2022-09-29,53
 FR,France,2022-09-29,30
-DE,Germany,2022-09-29,140
+DE,Germany,2022-09-29,94
 GR,Greece,2022-09-29,0
 HU,Hungary,2022-09-29,0
 IS,Iceland,2022-09-29,0
@@ -31390,7 +31390,7 @@ SI,Slovenia,2022-09-29,5
 ES,Spain,2022-09-29,0
 SE,Sweden,2022-09-29,47
 CH,Switzerland,2022-09-29,0
-GB,United Kingdom,2022-09-29,66
+GB,United Kingdom,2022-09-29,67
 AT,Austria,2022-09-30,5
 BE,Belgium,2022-09-30,0
 BG,Bulgaria,2022-09-30,4
@@ -31401,7 +31401,7 @@ DK,Denmark,2022-09-30,9
 EE,Estonia,2022-09-30,0
 FI,Finland,2022-09-30,0
 FR,France,2022-09-30,34
-DE,Germany,2022-09-30,116
+DE,Germany,2022-09-30,140
 GR,Greece,2022-09-30,0
 HU,Hungary,2022-09-30,0
 IS,Iceland,2022-09-30,0
@@ -31529,7 +31529,7 @@ DK,Denmark,2022-10-04,1
 EE,Estonia,2022-10-04,11
 FI,Finland,2022-10-04,0
 FR,France,2022-10-04,72
-DE,Germany,2022-10-04,128
+DE,Germany,2022-10-04,116
 GR,Greece,2022-10-04,89
 HU,Hungary,2022-10-04,0
 IS,Iceland,2022-10-04,0
@@ -31561,7 +31561,7 @@ DK,Denmark,2022-10-05,15
 EE,Estonia,2022-10-05,0
 FI,Finland,2022-10-05,0
 FR,France,2022-10-05,47
-DE,Germany,2022-10-05,97
+DE,Germany,2022-10-05,128
 GR,Greece,2022-10-05,0
 HU,Hungary,2022-10-05,73
 IS,Iceland,2022-10-05,0
@@ -31582,7 +31582,7 @@ SI,Slovenia,2022-10-05,2
 ES,Spain,2022-10-05,0
 SE,Sweden,2022-10-05,0
 CH,Switzerland,2022-10-05,7
-GB,United Kingdom,2022-10-05,95
+GB,United Kingdom,2022-10-05,98
 AT,Austria,2022-10-06,15
 BE,Belgium,2022-10-06,26
 BG,Bulgaria,2022-10-06,4
@@ -31593,7 +31593,7 @@ DK,Denmark,2022-10-06,9
 EE,Estonia,2022-10-06,0
 FI,Finland,2022-10-06,44
 FR,France,2022-10-06,50
-DE,Germany,2022-10-06,117
+DE,Germany,2022-10-06,97
 GR,Greece,2022-10-06,0
 HU,Hungary,2022-10-06,0
 IS,Iceland,2022-10-06,0
@@ -31625,7 +31625,7 @@ DK,Denmark,2022-10-07,9
 EE,Estonia,2022-10-07,0
 FI,Finland,2022-10-07,124
 FR,France,2022-10-07,54
-DE,Germany,2022-10-07,129
+DE,Germany,2022-10-07,117
 GR,Greece,2022-10-07,0
 HU,Hungary,2022-10-07,0
 IS,Iceland,2022-10-07,0
@@ -31678,7 +31678,7 @@ SI,Slovenia,2022-10-08,3
 ES,Spain,2022-10-08,0
 SE,Sweden,2022-10-08,0
 CH,Switzerland,2022-10-08,0
-GB,United Kingdom,2022-10-08,88
+GB,United Kingdom,2022-10-08,90
 AT,Austria,2022-10-09,1
 BE,Belgium,2022-10-09,0
 BG,Bulgaria,2022-10-09,1
@@ -31710,7 +31710,7 @@ SI,Slovenia,2022-10-09,0
 ES,Spain,2022-10-09,0
 SE,Sweden,2022-10-09,0
 CH,Switzerland,2022-10-09,0
-GB,United Kingdom,2022-10-09,96
+GB,United Kingdom,2022-10-09,97
 AT,Austria,2022-10-10,1
 BE,Belgium,2022-10-10,30
 BG,Bulgaria,2022-10-10,11
@@ -31721,7 +31721,7 @@ DK,Denmark,2022-10-10,20
 EE,Estonia,2022-10-10,0
 FI,Finland,2022-10-10,0
 FR,France,2022-10-10,113
-DE,Germany,2022-10-10,185
+DE,Germany,2022-10-10,129
 GR,Greece,2022-10-10,0
 HU,Hungary,2022-10-10,0
 IS,Iceland,2022-10-10,0
@@ -31742,7 +31742,7 @@ SI,Slovenia,2022-10-10,6
 ES,Spain,2022-10-10,0
 SE,Sweden,2022-10-10,0
 CH,Switzerland,2022-10-10,2
-GB,United Kingdom,2022-10-10,88
+GB,United Kingdom,2022-10-10,89
 AT,Austria,2022-10-11,32
 BE,Belgium,2022-10-11,0
 BG,Bulgaria,2022-10-11,6
@@ -31753,7 +31753,7 @@ DK,Denmark,2022-10-11,10
 EE,Estonia,2022-10-11,21
 FI,Finland,2022-10-11,0
 FR,France,2022-10-11,83
-DE,Germany,2022-10-11,199
+DE,Germany,2022-10-11,185
 GR,Greece,2022-10-11,113
 HU,Hungary,2022-10-11,0
 IS,Iceland,2022-10-11,0
@@ -31774,7 +31774,7 @@ SI,Slovenia,2022-10-11,3
 ES,Spain,2022-10-11,0
 SE,Sweden,2022-10-11,0
 CH,Switzerland,2022-10-11,1
-GB,United Kingdom,2022-10-11,100
+GB,United Kingdom,2022-10-11,101
 AT,Austria,2022-10-12,23
 BE,Belgium,2022-10-12,0
 BG,Bulgaria,2022-10-12,7
@@ -31785,7 +31785,7 @@ DK,Denmark,2022-10-12,7
 EE,Estonia,2022-10-12,0
 FI,Finland,2022-10-12,0
 FR,France,2022-10-12,52
-DE,Germany,2022-10-12,176
+DE,Germany,2022-10-12,199
 GR,Greece,2022-10-12,0
 HU,Hungary,2022-10-12,104
 IS,Iceland,2022-10-12,0
@@ -31817,7 +31817,7 @@ DK,Denmark,2022-10-13,7
 EE,Estonia,2022-10-13,0
 FI,Finland,2022-10-13,93
 FR,France,2022-10-13,62
-DE,Germany,2022-10-13,165
+DE,Germany,2022-10-13,176
 GR,Greece,2022-10-13,0
 HU,Hungary,2022-10-13,0
 IS,Iceland,2022-10-13,0
@@ -31849,7 +31849,7 @@ DK,Denmark,2022-10-14,8
 EE,Estonia,2022-10-14,0
 FI,Finland,2022-10-14,0
 FR,France,2022-10-14,80
-DE,Germany,2022-10-14,160
+DE,Germany,2022-10-14,165
 GR,Greece,2022-10-14,0
 HU,Hungary,2022-10-14,0
 IS,Iceland,2022-10-14,0
@@ -31870,7 +31870,7 @@ SI,Slovenia,2022-10-14,0
 ES,Spain,2022-10-14,173
 SE,Sweden,2022-10-14,0
 CH,Switzerland,2022-10-14,0
-GB,United Kingdom,2022-10-14,108
+GB,United Kingdom,2022-10-14,112
 AT,Austria,2022-10-15,10
 BE,Belgium,2022-10-15,0
 BG,Bulgaria,2022-10-15,2
@@ -31902,7 +31902,7 @@ SI,Slovenia,2022-10-15,1
 ES,Spain,2022-10-15,0
 SE,Sweden,2022-10-15,0
 CH,Switzerland,2022-10-15,0
-GB,United Kingdom,2022-10-15,104
+GB,United Kingdom,2022-10-15,106
 AT,Austria,2022-10-16,4
 BE,Belgium,2022-10-16,0
 BG,Bulgaria,2022-10-16,0
@@ -31934,7 +31934,7 @@ SI,Slovenia,2022-10-16,3
 ES,Spain,2022-10-16,0
 SE,Sweden,2022-10-16,0
 CH,Switzerland,2022-10-16,0
-GB,United Kingdom,2022-10-16,103
+GB,United Kingdom,2022-10-16,104
 AT,Austria,2022-10-17,2
 BE,Belgium,2022-10-17,34
 BG,Bulgaria,2022-10-17,11
@@ -31945,7 +31945,7 @@ DK,Denmark,2022-10-17,22
 EE,Estonia,2022-10-17,0
 FI,Finland,2022-10-17,0
 FR,France,2022-10-17,162
-DE,Germany,2022-10-17,209
+DE,Germany,2022-10-17,160
 GR,Greece,2022-10-17,0
 HU,Hungary,2022-10-17,0
 IS,Iceland,2022-10-17,0
@@ -31977,7 +31977,7 @@ DK,Denmark,2022-10-18,11
 EE,Estonia,2022-10-18,16
 FI,Finland,2022-10-18,0
 FR,France,2022-10-18,101
-DE,Germany,2022-10-18,248
+DE,Germany,2022-10-18,209
 GR,Greece,2022-10-18,113
 HU,Hungary,2022-10-18,0
 IS,Iceland,2022-10-18,0
@@ -31998,7 +31998,7 @@ SI,Slovenia,2022-10-18,3
 ES,Spain,2022-10-18,0
 SE,Sweden,2022-10-18,0
 CH,Switzerland,2022-10-18,6
-GB,United Kingdom,2022-10-18,104
+GB,United Kingdom,2022-10-18,106
 AT,Austria,2022-10-19,10
 BE,Belgium,2022-10-19,0
 BG,Bulgaria,2022-10-19,11
@@ -32009,7 +32009,7 @@ DK,Denmark,2022-10-19,16
 EE,Estonia,2022-10-19,0
 FI,Finland,2022-10-19,0
 FR,France,2022-10-19,106
-DE,Germany,2022-10-19,223
+DE,Germany,2022-10-19,248
 GR,Greece,2022-10-19,0
 HU,Hungary,2022-10-19,118
 IS,Iceland,2022-10-19,0
@@ -32041,7 +32041,7 @@ DK,Denmark,2022-10-20,12
 EE,Estonia,2022-10-20,0
 FI,Finland,2022-10-20,165
 FR,France,2022-10-20,69
-DE,Germany,2022-10-20,178
+DE,Germany,2022-10-20,223
 GR,Greece,2022-10-20,0
 HU,Hungary,2022-10-20,0
 IS,Iceland,2022-10-20,0
@@ -32062,7 +32062,7 @@ SI,Slovenia,2022-10-20,1
 ES,Spain,2022-10-20,0
 SE,Sweden,2022-10-20,124
 CH,Switzerland,2022-10-20,0
-GB,United Kingdom,2022-10-20,116
+GB,United Kingdom,2022-10-20,118
 AT,Austria,2022-10-21,9
 BE,Belgium,2022-10-21,0
 BG,Bulgaria,2022-10-21,4
@@ -32073,7 +32073,7 @@ DK,Denmark,2022-10-21,13
 EE,Estonia,2022-10-21,0
 FI,Finland,2022-10-21,0
 FR,France,2022-10-21,79
-DE,Germany,2022-10-21,204
+DE,Germany,2022-10-21,178
 GR,Greece,2022-10-21,0
 HU,Hungary,2022-10-21,0
 IS,Iceland,2022-10-21,0
@@ -32094,7 +32094,7 @@ SI,Slovenia,2022-10-21,3
 ES,Spain,2022-10-21,221
 SE,Sweden,2022-10-21,0
 CH,Switzerland,2022-10-21,1
-GB,United Kingdom,2022-10-21,100
+GB,United Kingdom,2022-10-21,102
 AT,Austria,2022-10-22,0
 BE,Belgium,2022-10-22,0
 BG,Bulgaria,2022-10-22,1
@@ -32126,7 +32126,7 @@ SI,Slovenia,2022-10-22,2
 ES,Spain,2022-10-22,0
 SE,Sweden,2022-10-22,0
 CH,Switzerland,2022-10-22,0
-GB,United Kingdom,2022-10-22,107
+GB,United Kingdom,2022-10-22,111
 AT,Austria,2022-10-23,0
 BE,Belgium,2022-10-23,0
 BG,Bulgaria,2022-10-23,0
@@ -32169,7 +32169,7 @@ DK,Denmark,2022-10-24,39
 EE,Estonia,2022-10-24,0
 FI,Finland,2022-10-24,0
 FR,France,2022-10-24,172
-DE,Germany,2022-10-24,273
+DE,Germany,2022-10-24,204
 GR,Greece,2022-10-24,0
 HU,Hungary,2022-10-24,0
 IS,Iceland,2022-10-24,0
@@ -32190,7 +32190,7 @@ SI,Slovenia,2022-10-24,3
 ES,Spain,2022-10-24,-4
 SE,Sweden,2022-10-24,0
 CH,Switzerland,2022-10-24,4
-GB,United Kingdom,2022-10-24,101
+GB,United Kingdom,2022-10-24,102
 AT,Austria,2022-10-25,23
 BE,Belgium,2022-10-25,0
 BG,Bulgaria,2022-10-25,7
@@ -32201,7 +32201,7 @@ DK,Denmark,2022-10-25,9
 EE,Estonia,2022-10-25,10
 FI,Finland,2022-10-25,0
 FR,France,2022-10-25,127
-DE,Germany,2022-10-25,242
+DE,Germany,2022-10-25,273
 GR,Greece,2022-10-25,148
 HU,Hungary,2022-10-25,0
 IS,Iceland,2022-10-25,0
@@ -32222,7 +32222,7 @@ SI,Slovenia,2022-10-25,1
 ES,Spain,2022-10-25,0
 SE,Sweden,2022-10-25,0
 CH,Switzerland,2022-10-25,9
-GB,United Kingdom,2022-10-25,109
+GB,United Kingdom,2022-10-25,110
 AT,Austria,2022-10-26,21
 BE,Belgium,2022-10-26,0
 BG,Bulgaria,2022-10-26,6
@@ -32233,7 +32233,7 @@ DK,Denmark,2022-10-26,10
 EE,Estonia,2022-10-26,0
 FI,Finland,2022-10-26,0
 FR,France,2022-10-26,60
-DE,Germany,2022-10-26,196
+DE,Germany,2022-10-26,242
 GR,Greece,2022-10-26,0
 HU,Hungary,2022-10-26,140
 IS,Iceland,2022-10-26,0
@@ -32254,7 +32254,7 @@ SI,Slovenia,2022-10-26,1
 ES,Spain,2022-10-26,0
 SE,Sweden,2022-10-26,0
 CH,Switzerland,2022-10-26,6
-GB,United Kingdom,2022-10-26,89
+GB,United Kingdom,2022-10-26,90
 AT,Austria,2022-10-27,3
 BE,Belgium,2022-10-27,19
 BG,Bulgaria,2022-10-27,4
@@ -32265,7 +32265,7 @@ DK,Denmark,2022-10-27,7
 EE,Estonia,2022-10-27,0
 FI,Finland,2022-10-27,161
 FR,France,2022-10-27,71
-DE,Germany,2022-10-27,184
+DE,Germany,2022-10-27,196
 GR,Greece,2022-10-27,0
 HU,Hungary,2022-10-27,0
 IS,Iceland,2022-10-27,0
@@ -32286,7 +32286,7 @@ SI,Slovenia,2022-10-27,1
 ES,Spain,2022-10-27,0
 SE,Sweden,2022-10-27,97
 CH,Switzerland,2022-10-27,1
-GB,United Kingdom,2022-10-27,103
+GB,United Kingdom,2022-10-27,105
 AT,Austria,2022-10-28,17
 BE,Belgium,2022-10-28,0
 BG,Bulgaria,2022-10-28,3
@@ -32297,7 +32297,7 @@ DK,Denmark,2022-10-28,9
 EE,Estonia,2022-10-28,0
 FI,Finland,2022-10-28,0
 FR,France,2022-10-28,60
-DE,Germany,2022-10-28,167
+DE,Germany,2022-10-28,184
 GR,Greece,2022-10-28,0
 HU,Hungary,2022-10-28,0
 IS,Iceland,2022-10-28,0
@@ -32350,7 +32350,7 @@ SI,Slovenia,2022-10-29,3
 ES,Spain,2022-10-29,0
 SE,Sweden,2022-10-29,0
 CH,Switzerland,2022-10-29,0
-GB,United Kingdom,2022-10-29,92
+GB,United Kingdom,2022-10-29,93
 AT,Austria,2022-10-30,3
 BE,Belgium,2022-10-30,0
 BG,Bulgaria,2022-10-30,0
@@ -32382,7 +32382,7 @@ SI,Slovenia,2022-10-30,2
 ES,Spain,2022-10-30,0
 SE,Sweden,2022-10-30,0
 CH,Switzerland,2022-10-30,0
-GB,United Kingdom,2022-10-30,93
+GB,United Kingdom,2022-10-30,97
 AT,Austria,2022-10-31,2
 BE,Belgium,2022-10-31,0
 BG,Bulgaria,2022-10-31,20
@@ -32393,7 +32393,7 @@ DK,Denmark,2022-10-31,26
 EE,Estonia,2022-10-31,0
 FI,Finland,2022-10-31,0
 FR,France,2022-10-31,162
-DE,Germany,2022-10-31,150
+DE,Germany,2022-10-31,167
 GR,Greece,2022-10-31,0
 HU,Hungary,2022-10-31,0
 IS,Iceland,2022-10-31,0
@@ -32425,7 +32425,7 @@ DK,Denmark,2022-11-01,7
 EE,Estonia,2022-11-01,9
 FI,Finland,2022-11-01,0
 FR,France,2022-11-01,0
-DE,Germany,2022-11-01,120
+DE,Germany,2022-11-01,150
 GR,Greece,2022-11-01,176
 HU,Hungary,2022-11-01,0
 IS,Iceland,2022-11-01,6
@@ -32457,7 +32457,7 @@ DK,Denmark,2022-11-02,9
 EE,Estonia,2022-11-02,0
 FI,Finland,2022-11-02,0
 FR,France,2022-11-02,150
-DE,Germany,2022-11-02,281
+DE,Germany,2022-11-02,120
 GR,Greece,2022-11-02,0
 HU,Hungary,2022-11-02,0
 IS,Iceland,2022-11-02,0
@@ -32478,7 +32478,7 @@ SI,Slovenia,2022-11-02,1
 ES,Spain,2022-11-02,0
 SE,Sweden,2022-11-02,0
 CH,Switzerland,2022-11-02,10
-GB,United Kingdom,2022-11-02,74
+GB,United Kingdom,2022-11-02,77
 AT,Austria,2022-11-03,22
 BE,Belgium,2022-11-03,39
 BG,Bulgaria,2022-11-03,5
@@ -32489,7 +32489,7 @@ DK,Denmark,2022-11-03,12
 EE,Estonia,2022-11-03,0
 FI,Finland,2022-11-03,173
 FR,France,2022-11-03,55
-DE,Germany,2022-11-03,233
+DE,Germany,2022-11-03,281
 GR,Greece,2022-11-03,0
 HU,Hungary,2022-11-03,0
 IS,Iceland,2022-11-03,0
@@ -32521,7 +32521,7 @@ DK,Denmark,2022-11-04,12
 EE,Estonia,2022-11-04,0
 FI,Finland,2022-11-04,0
 FR,France,2022-11-04,78
-DE,Germany,2022-11-04,207
+DE,Germany,2022-11-04,233
 GR,Greece,2022-11-04,0
 HU,Hungary,2022-11-04,0
 IS,Iceland,2022-11-04,0
@@ -32542,7 +32542,7 @@ SI,Slovenia,2022-11-04,1
 ES,Spain,2022-11-04,161
 SE,Sweden,2022-11-04,0
 CH,Switzerland,2022-11-04,0
-GB,United Kingdom,2022-11-04,91
+GB,United Kingdom,2022-11-04,93
 AT,Austria,2022-11-05,7
 BE,Belgium,2022-11-05,0
 BG,Bulgaria,2022-11-05,13
@@ -32574,7 +32574,7 @@ SI,Slovenia,2022-11-05,1
 ES,Spain,2022-11-05,0
 SE,Sweden,2022-11-05,0
 CH,Switzerland,2022-11-05,0
-GB,United Kingdom,2022-11-05,74
+GB,United Kingdom,2022-11-05,75
 AT,Austria,2022-11-06,1
 BE,Belgium,2022-11-06,0
 BG,Bulgaria,2022-11-06,4
@@ -32606,7 +32606,7 @@ SI,Slovenia,2022-11-06,2
 ES,Spain,2022-11-06,0
 SE,Sweden,2022-11-06,0
 CH,Switzerland,2022-11-06,0
-GB,United Kingdom,2022-11-06,55
+GB,United Kingdom,2022-11-06,56
 AT,Austria,2022-11-07,3
 BE,Belgium,2022-11-07,18
 BG,Bulgaria,2022-11-07,11
@@ -32617,7 +32617,7 @@ DK,Denmark,2022-11-07,26
 EE,Estonia,2022-11-07,0
 FI,Finland,2022-11-07,0
 FR,France,2022-11-07,152
-DE,Germany,2022-11-07,250
+DE,Germany,2022-11-07,207
 GR,Greece,2022-11-07,0
 HU,Hungary,2022-11-07,0
 IS,Iceland,2022-11-07,0
@@ -32638,7 +32638,7 @@ SI,Slovenia,2022-11-07,5
 ES,Spain,2022-11-07,0
 SE,Sweden,2022-11-07,0
 CH,Switzerland,2022-11-07,4
-GB,United Kingdom,2022-11-07,75
+GB,United Kingdom,2022-11-07,76
 AT,Austria,2022-11-08,9
 BE,Belgium,2022-11-08,0
 BG,Bulgaria,2022-11-08,0
@@ -32649,7 +32649,7 @@ DK,Denmark,2022-11-08,7
 EE,Estonia,2022-11-08,0
 FI,Finland,2022-11-08,0
 FR,France,2022-11-08,117
-DE,Germany,2022-11-08,227
+DE,Germany,2022-11-08,250
 GR,Greece,2022-11-08,138
 HU,Hungary,2022-11-08,0
 IS,Iceland,2022-11-08,0
@@ -32681,7 +32681,7 @@ DK,Denmark,2022-11-09,3
 EE,Estonia,2022-11-09,9
 FI,Finland,2022-11-09,0
 FR,France,2022-11-09,72
-DE,Germany,2022-11-09,175
+DE,Germany,2022-11-09,227
 GR,Greece,2022-11-09,0
 HU,Hungary,2022-11-09,173
 IS,Iceland,2022-11-09,0
@@ -32702,7 +32702,7 @@ SI,Slovenia,2022-11-09,3
 ES,Spain,2022-11-09,0
 SE,Sweden,2022-11-09,0
 CH,Switzerland,2022-11-09,8
-GB,United Kingdom,2022-11-09,60
+GB,United Kingdom,2022-11-09,62
 AT,Austria,2022-11-10,10
 BE,Belgium,2022-11-10,17
 BG,Bulgaria,2022-11-10,4
@@ -32713,7 +32713,7 @@ DK,Denmark,2022-11-10,7
 EE,Estonia,2022-11-10,0
 FI,Finland,2022-11-10,172
 FR,France,2022-11-10,53
-DE,Germany,2022-11-10,216
+DE,Germany,2022-11-10,175
 GR,Greece,2022-11-10,0
 HU,Hungary,2022-11-10,0
 IS,Iceland,2022-11-10,0
@@ -32734,7 +32734,7 @@ SI,Slovenia,2022-11-10,2
 ES,Spain,2022-11-10,0
 SE,Sweden,2022-11-10,104
 CH,Switzerland,2022-11-10,0
-GB,United Kingdom,2022-11-10,51
+GB,United Kingdom,2022-11-10,53
 AT,Austria,2022-11-11,13
 BE,Belgium,2022-11-11,0
 BG,Bulgaria,2022-11-11,12
@@ -32745,7 +32745,7 @@ DK,Denmark,2022-11-11,4
 EE,Estonia,2022-11-11,0
 FI,Finland,2022-11-11,0
 FR,France,2022-11-11,0
-DE,Germany,2022-11-11,185
+DE,Germany,2022-11-11,216
 GR,Greece,2022-11-11,0
 HU,Hungary,2022-11-11,0
 IS,Iceland,2022-11-11,0
@@ -32766,7 +32766,7 @@ SI,Slovenia,2022-11-11,1
 ES,Spain,2022-11-11,183
 SE,Sweden,2022-11-11,0
 CH,Switzerland,2022-11-11,0
-GB,United Kingdom,2022-11-11,68
+GB,United Kingdom,2022-11-11,70
 AT,Austria,2022-11-12,8
 BE,Belgium,2022-11-12,0
 BG,Bulgaria,2022-11-12,1
@@ -32798,7 +32798,7 @@ SI,Slovenia,2022-11-12,-10
 ES,Spain,2022-11-12,-65
 SE,Sweden,2022-11-12,0
 CH,Switzerland,2022-11-12,0
-GB,United Kingdom,2022-11-12,40
+GB,United Kingdom,2022-11-12,44
 AT,Austria,2022-11-13,3
 BE,Belgium,2022-11-13,0
 BG,Bulgaria,2022-11-13,1
@@ -32830,7 +32830,7 @@ SI,Slovenia,2022-11-13,0
 ES,Spain,2022-11-13,0
 SE,Sweden,2022-11-13,0
 CH,Switzerland,2022-11-13,0
-GB,United Kingdom,2022-11-13,55
+GB,United Kingdom,2022-11-13,56
 AT,Austria,2022-11-14,1
 BE,Belgium,2022-11-14,24
 BG,Bulgaria,2022-11-14,11
@@ -32841,7 +32841,7 @@ DK,Denmark,2022-11-14,18
 EE,Estonia,2022-11-14,0
 FI,Finland,2022-11-14,0
 FR,France,2022-11-14,150
-DE,Germany,2022-11-14,219
+DE,Germany,2022-11-14,185
 GR,Greece,2022-11-14,0
 HU,Hungary,2022-11-14,0
 IS,Iceland,2022-11-14,0
@@ -32862,7 +32862,7 @@ SI,Slovenia,2022-11-14,2
 ES,Spain,2022-11-14,0
 SE,Sweden,2022-11-14,0
 CH,Switzerland,2022-11-14,1
-GB,United Kingdom,2022-11-14,55
+GB,United Kingdom,2022-11-14,58
 AT,Austria,2022-11-15,11
 BE,Belgium,2022-11-15,0
 BG,Bulgaria,2022-11-15,5
@@ -32873,7 +32873,7 @@ DK,Denmark,2022-11-15,11
 EE,Estonia,2022-11-15,0
 FI,Finland,2022-11-15,0
 FR,France,2022-11-15,110
-DE,Germany,2022-11-15,223
+DE,Germany,2022-11-15,219
 GR,Greece,2022-11-15,136
 HU,Hungary,2022-11-15,0
 IS,Iceland,2022-11-15,0
@@ -32894,7 +32894,7 @@ SI,Slovenia,2022-11-15,2
 ES,Spain,2022-11-15,0
 SE,Sweden,2022-11-15,0
 CH,Switzerland,2022-11-15,3
-GB,United Kingdom,2022-11-15,61
+GB,United Kingdom,2022-11-15,63
 AT,Austria,2022-11-16,11
 BE,Belgium,2022-11-16,0
 BG,Bulgaria,2022-11-16,8
@@ -32905,7 +32905,7 @@ DK,Denmark,2022-11-16,6
 EE,Estonia,2022-11-16,0
 FI,Finland,2022-11-16,0
 FR,France,2022-11-16,61
-DE,Germany,2022-11-16,162
+DE,Germany,2022-11-16,223
 GR,Greece,2022-11-16,0
 HU,Hungary,2022-11-16,73
 IS,Iceland,2022-11-16,0
@@ -32926,7 +32926,7 @@ SI,Slovenia,2022-11-16,0
 ES,Spain,2022-11-16,0
 SE,Sweden,2022-11-16,0
 CH,Switzerland,2022-11-16,9
-GB,United Kingdom,2022-11-16,50
+GB,United Kingdom,2022-11-16,54
 AT,Austria,2022-11-17,8
 BE,Belgium,2022-11-17,21
 BG,Bulgaria,2022-11-17,10
@@ -32937,7 +32937,7 @@ DK,Denmark,2022-11-17,1
 EE,Estonia,2022-11-17,0
 FI,Finland,2022-11-17,260
 FR,France,2022-11-17,87
-DE,Germany,2022-11-17,218
+DE,Germany,2022-11-17,162
 GR,Greece,2022-11-17,0
 HU,Hungary,2022-11-17,0
 IS,Iceland,2022-11-17,0
@@ -32958,7 +32958,7 @@ SI,Slovenia,2022-11-17,2
 ES,Spain,2022-11-17,0
 SE,Sweden,2022-11-17,71
 CH,Switzerland,2022-11-17,0
-GB,United Kingdom,2022-11-17,48
+GB,United Kingdom,2022-11-17,52
 AT,Austria,2022-11-18,10
 BE,Belgium,2022-11-18,0
 BG,Bulgaria,2022-11-18,8
@@ -32969,7 +32969,7 @@ DK,Denmark,2022-11-18,0
 EE,Estonia,2022-11-18,0
 FI,Finland,2022-11-18,0
 FR,France,2022-11-18,71
-DE,Germany,2022-11-18,203
+DE,Germany,2022-11-18,218
 GR,Greece,2022-11-18,0
 HU,Hungary,2022-11-18,0
 IS,Iceland,2022-11-18,0
@@ -32990,7 +32990,7 @@ SI,Slovenia,2022-11-18,0
 ES,Spain,2022-11-18,284
 SE,Sweden,2022-11-18,0
 CH,Switzerland,2022-11-18,0
-GB,United Kingdom,2022-11-18,51
+GB,United Kingdom,2022-11-18,57
 AT,Austria,2022-11-19,9
 BE,Belgium,2022-11-19,0
 BG,Bulgaria,2022-11-19,1
@@ -33022,7 +33022,7 @@ SI,Slovenia,2022-11-19,2
 ES,Spain,2022-11-19,0
 SE,Sweden,2022-11-19,0
 CH,Switzerland,2022-11-19,0
-GB,United Kingdom,2022-11-19,46
+GB,United Kingdom,2022-11-19,54
 AT,Austria,2022-11-20,1
 BE,Belgium,2022-11-20,0
 BG,Bulgaria,2022-11-20,0
@@ -33054,7 +33054,7 @@ SI,Slovenia,2022-11-20,2
 ES,Spain,2022-11-20,0
 SE,Sweden,2022-11-20,0
 CH,Switzerland,2022-11-20,0
-GB,United Kingdom,2022-11-20,56
+GB,United Kingdom,2022-11-20,60
 AT,Austria,2022-11-21,0
 BE,Belgium,2022-11-21,0
 BG,Bulgaria,2022-11-21,13
@@ -33065,7 +33065,7 @@ DK,Denmark,2022-11-21,24
 EE,Estonia,2022-11-21,0
 FI,Finland,2022-11-21,0
 FR,France,2022-11-21,175
-DE,Germany,2022-11-21,199
+DE,Germany,2022-11-21,203
 GR,Greece,2022-11-21,0
 HU,Hungary,2022-11-21,0
 IS,Iceland,2022-11-21,0
@@ -33086,7 +33086,7 @@ SI,Slovenia,2022-11-21,2
 ES,Spain,2022-11-21,0
 SE,Sweden,2022-11-21,0
 CH,Switzerland,2022-11-21,0
-GB,United Kingdom,2022-11-21,48
+GB,United Kingdom,2022-11-21,52
 AT,Austria,2022-11-22,5
 BE,Belgium,2022-11-22,6
 BG,Bulgaria,2022-11-22,5
@@ -33097,7 +33097,7 @@ DK,Denmark,2022-11-22,2
 EE,Estonia,2022-11-22,0
 FI,Finland,2022-11-22,0
 FR,France,2022-11-22,89
-DE,Germany,2022-11-22,139
+DE,Germany,2022-11-22,199
 GR,Greece,2022-11-22,154
 HU,Hungary,2022-11-22,0
 IS,Iceland,2022-11-22,0
@@ -33118,7 +33118,7 @@ SI,Slovenia,2022-11-22,4
 ES,Spain,2022-11-22,0
 SE,Sweden,2022-11-22,0
 CH,Switzerland,2022-11-22,4
-GB,United Kingdom,2022-11-22,45
+GB,United Kingdom,2022-11-22,54
 AT,Austria,2022-11-23,10
 BE,Belgium,2022-11-23,0
 BG,Bulgaria,2022-11-23,5
@@ -33129,7 +33129,7 @@ DK,Denmark,2022-11-23,4
 EE,Estonia,2022-11-23,0
 FI,Finland,2022-11-23,0
 FR,France,2022-11-23,84
-DE,Germany,2022-11-23,163
+DE,Germany,2022-11-23,139
 GR,Greece,2022-11-23,0
 HU,Hungary,2022-11-23,61
 IS,Iceland,2022-11-23,0
@@ -33150,7 +33150,7 @@ SI,Slovenia,2022-11-23,2
 ES,Spain,2022-11-23,0
 SE,Sweden,2022-11-23,0
 CH,Switzerland,2022-11-23,2
-GB,United Kingdom,2022-11-23,34
+GB,United Kingdom,2022-11-23,57
 AT,Austria,2022-11-24,6
 BE,Belgium,2022-11-24,15
 BG,Bulgaria,2022-11-24,2
@@ -33161,7 +33161,7 @@ DK,Denmark,2022-11-24,8
 EE,Estonia,2022-11-24,0
 FI,Finland,2022-11-24,92
 FR,France,2022-11-24,60
-DE,Germany,2022-11-24,274
+DE,Germany,2022-11-24,163
 GR,Greece,2022-11-24,0
 HU,Hungary,2022-11-24,0
 IS,Iceland,2022-11-24,0
@@ -33182,7 +33182,7 @@ SI,Slovenia,2022-11-24,6
 ES,Spain,2022-11-24,0
 SE,Sweden,2022-11-24,106
 CH,Switzerland,2022-11-24,0
-GB,United Kingdom,2022-11-24,23
+GB,United Kingdom,2022-11-24,47
 AT,Austria,2022-11-25,14
 BE,Belgium,2022-11-25,0
 BG,Bulgaria,2022-11-25,5
@@ -33193,7 +33193,7 @@ DK,Denmark,2022-11-25,5
 EE,Estonia,2022-11-25,24
 FI,Finland,2022-11-25,0
 FR,France,2022-11-25,68
-DE,Germany,2022-11-25,107
+DE,Germany,2022-11-25,274
 GR,Greece,2022-11-25,0
 HU,Hungary,2022-11-25,0
 IS,Iceland,2022-11-25,0
@@ -33214,7 +33214,7 @@ SI,Slovenia,2022-11-25,5
 ES,Spain,2022-11-25,260
 SE,Sweden,2022-11-25,0
 CH,Switzerland,2022-11-25,0
-GB,United Kingdom,2022-11-25,11
+GB,United Kingdom,2022-11-25,43
 AT,Austria,2022-11-26,8
 BE,Belgium,2022-11-26,0
 BG,Bulgaria,2022-11-26,0
@@ -33246,7 +33246,7 @@ SI,Slovenia,2022-11-26,0
 ES,Spain,2022-11-26,0
 SE,Sweden,2022-11-26,0
 CH,Switzerland,2022-11-26,0
-GB,United Kingdom,2022-11-26,0
+GB,United Kingdom,2022-11-26,44
 AT,Austria,2022-11-27,0
 BE,Belgium,2022-11-27,0
 BG,Bulgaria,2022-11-27,0
@@ -33278,7 +33278,7 @@ SI,Slovenia,2022-11-27,0
 ES,Spain,2022-11-27,0
 SE,Sweden,2022-11-27,0
 CH,Switzerland,2022-11-27,0
-GB,United Kingdom,2022-11-27,0
+GB,United Kingdom,2022-11-27,54
 AT,Austria,2022-11-28,2
 BE,Belgium,2022-11-28,15
 BG,Bulgaria,2022-11-28,6
@@ -33289,7 +33289,7 @@ DK,Denmark,2022-11-28,11
 EE,Estonia,2022-11-28,0
 FI,Finland,2022-11-28,0
 FR,France,2022-11-28,132
-DE,Germany,2022-11-28,162
+DE,Germany,2022-11-28,107
 GR,Greece,2022-11-28,0
 HU,Hungary,2022-11-28,0
 IS,Iceland,2022-11-28,0
@@ -33310,7 +33310,7 @@ SI,Slovenia,2022-11-28,2
 ES,Spain,2022-11-28,0
 SE,Sweden,2022-11-28,0
 CH,Switzerland,2022-11-28,8
-GB,United Kingdom,2022-11-28,0
+GB,United Kingdom,2022-11-28,59
 AT,Austria,2022-11-29,13
 BE,Belgium,2022-11-29,0
 BG,Bulgaria,2022-11-29,6
@@ -33321,7 +33321,7 @@ DK,Denmark,2022-11-29,4
 EE,Estonia,2022-11-29,9
 FI,Finland,2022-11-29,0
 FR,France,2022-11-29,88
-DE,Germany,2022-11-29,134
+DE,Germany,2022-11-29,162
 GR,Greece,2022-11-29,131
 HU,Hungary,2022-11-29,0
 IS,Iceland,2022-11-29,0
@@ -33342,7 +33342,7 @@ SI,Slovenia,2022-11-29,2
 ES,Spain,2022-11-29,0
 SE,Sweden,2022-11-29,0
 CH,Switzerland,2022-11-29,6
-GB,United Kingdom,2022-11-29,0
+GB,United Kingdom,2022-11-29,52
 AT,Austria,2022-11-30,8
 BE,Belgium,2022-11-30,4
 BG,Bulgaria,2022-11-30,0
@@ -33353,7 +33353,7 @@ DK,Denmark,2022-11-30,4
 EE,Estonia,2022-11-30,0
 FI,Finland,2022-11-30,0
 FR,France,2022-11-30,75
-DE,Germany,2022-11-30,152
+DE,Germany,2022-11-30,134
 GR,Greece,2022-11-30,0
 HU,Hungary,2022-11-30,42
 IS,Iceland,2022-11-30,0
@@ -33374,7 +33374,7 @@ SI,Slovenia,2022-11-30,1
 ES,Spain,2022-11-30,0
 SE,Sweden,2022-11-30,0
 CH,Switzerland,2022-11-30,7
-GB,United Kingdom,2022-11-30,0
+GB,United Kingdom,2022-11-30,44
 AT,Austria,2022-12-01,6
 BE,Belgium,2022-12-01,0
 BG,Bulgaria,2022-12-01,5
@@ -33385,7 +33385,7 @@ DK,Denmark,2022-12-01,5
 EE,Estonia,2022-12-01,0
 FI,Finland,2022-12-01,183
 FR,France,2022-12-01,75
-DE,Germany,2022-12-01,166
+DE,Germany,2022-12-01,152
 GR,Greece,2022-12-01,0
 HU,Hungary,2022-12-01,0
 IS,Iceland,2022-12-01,0
@@ -33406,7 +33406,7 @@ SI,Slovenia,2022-12-01,3
 ES,Spain,2022-12-01,0
 SE,Sweden,2022-12-01,93
 CH,Switzerland,2022-12-01,0
-GB,United Kingdom,2022-12-01,0
+GB,United Kingdom,2022-12-01,53
 AT,Austria,2022-12-02,9
 BE,Belgium,2022-12-02,0
 BG,Bulgaria,2022-12-02,4
@@ -33417,7 +33417,7 @@ DK,Denmark,2022-12-02,4
 EE,Estonia,2022-12-02,0
 FI,Finland,2022-12-02,0
 FR,France,2022-12-02,67
-DE,Germany,2022-12-02,89
+DE,Germany,2022-12-02,166
 GR,Greece,2022-12-02,0
 HU,Hungary,2022-12-02,0
 IS,Iceland,2022-12-02,0
@@ -33438,7 +33438,7 @@ SI,Slovenia,2022-12-02,2
 ES,Spain,2022-12-02,207
 SE,Sweden,2022-12-02,0
 CH,Switzerland,2022-12-02,0
-GB,United Kingdom,2022-12-02,0
+GB,United Kingdom,2022-12-02,49
 AT,Austria,2022-12-03,6
 BE,Belgium,2022-12-03,0
 BG,Bulgaria,2022-12-03,1
@@ -33470,7 +33470,7 @@ SI,Slovenia,2022-12-03,1
 ES,Spain,2022-12-03,0
 SE,Sweden,2022-12-03,0
 CH,Switzerland,2022-12-03,0
-GB,United Kingdom,2022-12-03,0
+GB,United Kingdom,2022-12-03,52
 AT,Austria,2022-12-04,1
 BE,Belgium,2022-12-04,0
 BG,Bulgaria,2022-12-04,1
@@ -33502,7 +33502,7 @@ SI,Slovenia,2022-12-04,1
 ES,Spain,2022-12-04,0
 SE,Sweden,2022-12-04,0
 CH,Switzerland,2022-12-04,0
-GB,United Kingdom,2022-12-04,0
+GB,United Kingdom,2022-12-04,47
 AT,Austria,2022-12-05,0
 BE,Belgium,2022-12-05,25
 BG,Bulgaria,2022-12-05,3
@@ -33513,7 +33513,7 @@ DK,Denmark,2022-12-05,14
 EE,Estonia,2022-12-05,0
 FI,Finland,2022-12-05,0
 FR,France,2022-12-05,152
-DE,Germany,2022-12-05,188
+DE,Germany,2022-12-05,89
 GR,Greece,2022-12-05,0
 HU,Hungary,2022-12-05,0
 IS,Iceland,2022-12-05,0
@@ -33534,7 +33534,7 @@ SI,Slovenia,2022-12-05,3
 ES,Spain,2022-12-05,0
 SE,Sweden,2022-12-05,0
 CH,Switzerland,2022-12-05,1
-GB,United Kingdom,2022-12-05,0
+GB,United Kingdom,2022-12-05,57
 AT,Austria,2022-12-06,10
 BE,Belgium,2022-12-06,0
 BG,Bulgaria,2022-12-06,0
@@ -33545,7 +33545,7 @@ DK,Denmark,2022-12-06,2
 EE,Estonia,2022-12-06,9
 FI,Finland,2022-12-06,0
 FR,France,2022-12-06,117
-DE,Germany,2022-12-06,173
+DE,Germany,2022-12-06,188
 GR,Greece,2022-12-06,173
 HU,Hungary,2022-12-06,0
 IS,Iceland,2022-12-06,0
@@ -33566,7 +33566,7 @@ SI,Slovenia,2022-12-06,1
 ES,Spain,2022-12-06,0
 SE,Sweden,2022-12-06,0
 CH,Switzerland,2022-12-06,4
-GB,United Kingdom,2022-12-06,0
+GB,United Kingdom,2022-12-06,70
 AT,Austria,2022-12-07,5
 BE,Belgium,2022-12-07,0
 BG,Bulgaria,2022-12-07,1
@@ -33577,7 +33577,7 @@ DK,Denmark,2022-12-07,0
 EE,Estonia,2022-12-07,0
 FI,Finland,2022-12-07,0
 FR,France,2022-12-07,93
-DE,Germany,2022-12-07,125
+DE,Germany,2022-12-07,173
 GR,Greece,2022-12-07,0
 HU,Hungary,2022-12-07,50
 IS,Iceland,2022-12-07,0
@@ -33598,7 +33598,7 @@ SI,Slovenia,2022-12-07,1
 ES,Spain,2022-12-07,0
 SE,Sweden,2022-12-07,0
 CH,Switzerland,2022-12-07,5
-GB,United Kingdom,2022-12-07,0
+GB,United Kingdom,2022-12-07,59
 AT,Austria,2022-12-08,10
 BE,Belgium,2022-12-08,14
 BG,Bulgaria,2022-12-08,2
@@ -33609,7 +33609,7 @@ DK,Denmark,2022-12-08,16
 EE,Estonia,2022-12-08,0
 FI,Finland,2022-12-08,124
 FR,France,2022-12-08,62
-DE,Germany,2022-12-08,167
+DE,Germany,2022-12-08,125
 GR,Greece,2022-12-08,0
 HU,Hungary,2022-12-08,0
 IS,Iceland,2022-12-08,0
@@ -33630,7 +33630,7 @@ SI,Slovenia,2022-12-08,1
 ES,Spain,2022-12-08,0
 SE,Sweden,2022-12-08,107
 CH,Switzerland,2022-12-08,0
-GB,United Kingdom,2022-12-08,0
+GB,United Kingdom,2022-12-08,67
 AT,Austria,2022-12-09,0
 BE,Belgium,2022-12-09,0
 BG,Bulgaria,2022-12-09,4
@@ -33641,7 +33641,7 @@ DK,Denmark,2022-12-09,6
 EE,Estonia,2022-12-09,0
 FI,Finland,2022-12-09,0
 FR,France,2022-12-09,92
-DE,Germany,2022-12-09,120
+DE,Germany,2022-12-09,167
 GR,Greece,2022-12-09,0
 HU,Hungary,2022-12-09,0
 IS,Iceland,2022-12-09,0
@@ -33662,7 +33662,7 @@ SI,Slovenia,2022-12-09,1
 ES,Spain,2022-12-09,314
 SE,Sweden,2022-12-09,0
 CH,Switzerland,2022-12-09,0
-GB,United Kingdom,2022-12-09,0
+GB,United Kingdom,2022-12-09,70
 AT,Austria,2022-12-10,8
 BE,Belgium,2022-12-10,0
 BG,Bulgaria,2022-12-10,1
@@ -33694,7 +33694,7 @@ SI,Slovenia,2022-12-10,2
 ES,Spain,2022-12-10,0
 SE,Sweden,2022-12-10,0
 CH,Switzerland,2022-12-10,0
-GB,United Kingdom,2022-12-10,0
+GB,United Kingdom,2022-12-10,62
 AT,Austria,2022-12-11,0
 BE,Belgium,2022-12-11,0
 BG,Bulgaria,2022-12-11,1
@@ -33726,7 +33726,7 @@ SI,Slovenia,2022-12-11,3
 ES,Spain,2022-12-11,0
 SE,Sweden,2022-12-11,0
 CH,Switzerland,2022-12-11,0
-GB,United Kingdom,2022-12-11,0
+GB,United Kingdom,2022-12-11,66
 AT,Austria,2022-12-12,0
 BE,Belgium,2022-12-12,33
 BG,Bulgaria,2022-12-12,5
@@ -33737,7 +33737,7 @@ DK,Denmark,2022-12-12,17
 EE,Estonia,2022-12-12,0
 FI,Finland,2022-12-12,0
 FR,France,2022-12-12,259
-DE,Germany,2022-12-12,206
+DE,Germany,2022-12-12,115
 GR,Greece,2022-12-12,0
 HU,Hungary,2022-12-12,0
 IS,Iceland,2022-12-12,0
@@ -33758,7 +33758,7 @@ SI,Slovenia,2022-12-12,3
 ES,Spain,2022-12-12,0
 SE,Sweden,2022-12-12,0
 CH,Switzerland,2022-12-12,1
-GB,United Kingdom,2022-12-12,0
+GB,United Kingdom,2022-12-12,64
 AT,Austria,2022-12-13,7
 BE,Belgium,2022-12-13,0
 BG,Bulgaria,2022-12-13,5
@@ -33769,7 +33769,7 @@ DK,Denmark,2022-12-13,12
 EE,Estonia,2022-12-13,0
 FI,Finland,2022-12-13,0
 FR,France,2022-12-13,136
-DE,Germany,2022-12-13,190
+DE,Germany,2022-12-13,211
 GR,Greece,2022-12-13,132
 HU,Hungary,2022-12-13,0
 IS,Iceland,2022-12-13,0
@@ -33790,7 +33790,7 @@ SI,Slovenia,2022-12-13,3
 ES,Spain,2022-12-13,0
 SE,Sweden,2022-12-13,0
 CH,Switzerland,2022-12-13,5
-GB,United Kingdom,2022-12-13,0
+GB,United Kingdom,2022-12-13,64
 AT,Austria,2022-12-14,14
 BE,Belgium,2022-12-14,0
 BG,Bulgaria,2022-12-14,4
@@ -33801,7 +33801,7 @@ DK,Denmark,2022-12-14,12
 EE,Estonia,2022-12-14,0
 FI,Finland,2022-12-14,0
 FR,France,2022-12-14,109
-DE,Germany,2022-12-14,227
+DE,Germany,2022-12-14,187
 GR,Greece,2022-12-14,0
 HU,Hungary,2022-12-14,43
 IS,Iceland,2022-12-14,0
@@ -33822,7 +33822,7 @@ SI,Slovenia,2022-12-14,4
 ES,Spain,2022-12-14,0
 SE,Sweden,2022-12-14,0
 CH,Switzerland,2022-12-14,3
-GB,United Kingdom,2022-12-14,0
+GB,United Kingdom,2022-12-14,91
 AT,Austria,2022-12-15,5
 BE,Belgium,2022-12-15,22
 BG,Bulgaria,2022-12-15,1
@@ -33833,7 +33833,7 @@ DK,Denmark,2022-12-15,6
 EE,Estonia,2022-12-15,15
 FI,Finland,2022-12-15,211
 FR,France,2022-12-15,106
-DE,Germany,2022-12-15,143
+DE,Germany,2022-12-15,230
 GR,Greece,2022-12-15,0
 HU,Hungary,2022-12-15,0
 IS,Iceland,2022-12-15,0
@@ -33854,7 +33854,7 @@ SI,Slovenia,2022-12-15,2
 ES,Spain,2022-12-15,0
 SE,Sweden,2022-12-15,130
 CH,Switzerland,2022-12-15,1
-GB,United Kingdom,2022-12-15,382
+GB,United Kingdom,2022-12-15,55
 AT,Austria,2022-12-16,15
 BE,Belgium,2022-12-16,0
 BG,Bulgaria,2022-12-16,0
@@ -33865,7 +33865,7 @@ DK,Denmark,2022-12-16,9
 EE,Estonia,2022-12-16,0
 FI,Finland,2022-12-16,0
 FR,France,2022-12-16,131
-DE,Germany,2022-12-16,147
+DE,Germany,2022-12-16,143
 GR,Greece,2022-12-16,0
 HU,Hungary,2022-12-16,0
 IS,Iceland,2022-12-16,0
@@ -33886,7 +33886,7 @@ SI,Slovenia,2022-12-16,2
 ES,Spain,2022-12-16,236
 SE,Sweden,2022-12-16,0
 CH,Switzerland,2022-12-16,0
-GB,United Kingdom,2022-12-16,0
+GB,United Kingdom,2022-12-16,85
 AT,Austria,2022-12-17,10
 BE,Belgium,2022-12-17,0
 BG,Bulgaria,2022-12-17,4
@@ -33918,7 +33918,7 @@ SI,Slovenia,2022-12-17,2
 ES,Spain,2022-12-17,0
 SE,Sweden,2022-12-17,0
 CH,Switzerland,2022-12-17,0
-GB,United Kingdom,2022-12-17,0
+GB,United Kingdom,2022-12-17,82
 AT,Austria,2022-12-18,1
 BE,Belgium,2022-12-18,0
 BG,Bulgaria,2022-12-18,1
@@ -33950,7 +33950,7 @@ SI,Slovenia,2022-12-18,2
 ES,Spain,2022-12-18,0
 SE,Sweden,2022-12-18,0
 CH,Switzerland,2022-12-18,0
-GB,United Kingdom,2022-12-18,0
+GB,United Kingdom,2022-12-18,89
 AT,Austria,2022-12-19,1
 BE,Belgium,2022-12-19,0
 BG,Bulgaria,2022-12-19,0
@@ -33961,7 +33961,7 @@ DK,Denmark,2022-12-19,27
 EE,Estonia,2022-12-19,0
 FI,Finland,2022-12-19,0
 FR,France,2022-12-19,258
-DE,Germany,2022-12-19,161
+DE,Germany,2022-12-19,147
 GR,Greece,2022-12-19,0
 HU,Hungary,2022-12-19,0
 IS,Iceland,2022-12-19,0
@@ -33982,4 +33982,1188 @@ SI,Slovenia,2022-12-19,3
 ES,Spain,2022-12-19,0
 SE,Sweden,2022-12-19,0
 CH,Switzerland,2022-12-19,1
-GB,United Kingdom,2022-12-19,0
+GB,United Kingdom,2022-12-19,106
+AT,Austria,2022-12-20,14
+BE,Belgium,2022-12-20,56
+BG,Bulgaria,2022-12-20,0
+HR,Croatia,2022-12-20,12
+CY,Cyprus,2022-12-20,0
+CZ,Czechia,2022-12-20,14
+DK,Denmark,2022-12-20,10
+EE,Estonia,2022-12-20,23
+FI,Finland,2022-12-20,0
+FR,France,2022-12-20,130
+DE,Germany,2022-12-20,161
+GR,Greece,2022-12-20,165
+HU,Hungary,2022-12-20,0
+IS,Iceland,2022-12-20,10
+IE,Ireland,2022-12-20,0
+IT,Italy,2022-12-20,0
+LV,Latvia,2022-12-20,7
+LI,Liechtenstein,2022-12-20,0
+LT,Lithuania,2022-12-20,0
+LU,Luxembourg,2022-12-20,3
+MT,Malta,2022-12-20,0
+NL,Netherlands,2022-12-20,10
+NO,Norway,2022-12-20,0
+PL,Poland,2022-12-20,7
+PT,Portugal,2022-12-20,50
+RO,Romania,2022-12-20,0
+SK,Slovakia,2022-12-20,3
+SI,Slovenia,2022-12-20,3
+ES,Spain,2022-12-20,0
+SE,Sweden,2022-12-20,0
+CH,Switzerland,2022-12-20,2
+GB,United Kingdom,2022-12-20,97
+AT,Austria,2022-12-21,13
+BE,Belgium,2022-12-21,0
+BG,Bulgaria,2022-12-21,2
+HR,Croatia,2022-12-21,10
+CY,Cyprus,2022-12-21,0
+CZ,Czechia,2022-12-21,18
+DK,Denmark,2022-12-21,8
+EE,Estonia,2022-12-21,0
+FI,Finland,2022-12-21,0
+FR,France,2022-12-21,127
+DE,Germany,2022-12-21,201
+GR,Greece,2022-12-21,0
+HU,Hungary,2022-12-21,59
+IS,Iceland,2022-12-21,0
+IE,Ireland,2022-12-21,23
+IT,Italy,2022-12-21,0
+LV,Latvia,2022-12-21,6
+LI,Liechtenstein,2022-12-21,0
+LT,Lithuania,2022-12-21,1
+LU,Luxembourg,2022-12-21,0
+MT,Malta,2022-12-21,0
+NL,Netherlands,2022-12-21,0
+NO,Norway,2022-12-21,0
+PL,Poland,2022-12-21,12
+PT,Portugal,2022-12-21,0
+RO,Romania,2022-12-21,0
+SK,Slovakia,2022-12-21,4
+SI,Slovenia,2022-12-21,1
+ES,Spain,2022-12-21,0
+SE,Sweden,2022-12-21,0
+CH,Switzerland,2022-12-21,6
+GB,United Kingdom,2022-12-21,101
+AT,Austria,2022-12-22,3
+BE,Belgium,2022-12-22,17
+BG,Bulgaria,2022-12-22,5
+HR,Croatia,2022-12-22,9
+CY,Cyprus,2022-12-22,0
+CZ,Czechia,2022-12-22,10
+DK,Denmark,2022-12-22,11
+EE,Estonia,2022-12-22,0
+FI,Finland,2022-12-22,150
+FR,France,2022-12-22,120
+DE,Germany,2022-12-22,178
+GR,Greece,2022-12-22,0
+HU,Hungary,2022-12-22,0
+IS,Iceland,2022-12-22,0
+IE,Ireland,2022-12-22,0
+IT,Italy,2022-12-22,0
+LV,Latvia,2022-12-22,1
+LI,Liechtenstein,2022-12-22,0
+LT,Lithuania,2022-12-22,0
+LU,Luxembourg,2022-12-22,2
+MT,Malta,2022-12-22,1
+NL,Netherlands,2022-12-22,0
+NO,Norway,2022-12-22,99
+PL,Poland,2022-12-22,4
+PT,Portugal,2022-12-22,21
+RO,Romania,2022-12-22,0
+SK,Slovakia,2022-12-22,2
+SI,Slovenia,2022-12-22,3
+ES,Spain,2022-12-22,0
+SE,Sweden,2022-12-22,263
+CH,Switzerland,2022-12-22,0
+GB,United Kingdom,2022-12-22,108
+AT,Austria,2022-12-23,12
+BE,Belgium,2022-12-23,0
+BG,Bulgaria,2022-12-23,1
+HR,Croatia,2022-12-23,10
+CY,Cyprus,2022-12-23,5
+CZ,Czechia,2022-12-23,9
+DK,Denmark,2022-12-23,10
+EE,Estonia,2022-12-23,0
+FI,Finland,2022-12-23,0
+FR,France,2022-12-23,157
+DE,Germany,2022-12-23,187
+GR,Greece,2022-12-23,0
+HU,Hungary,2022-12-23,0
+IS,Iceland,2022-12-23,0
+IE,Ireland,2022-12-23,0
+IT,Italy,2022-12-23,798
+LV,Latvia,2022-12-23,3
+LI,Liechtenstein,2022-12-23,0
+LT,Lithuania,2022-12-23,0
+LU,Luxembourg,2022-12-23,1
+MT,Malta,2022-12-23,1
+NL,Netherlands,2022-12-23,15
+NO,Norway,2022-12-23,0
+PL,Poland,2022-12-23,15
+PT,Portugal,2022-12-23,0
+RO,Romania,2022-12-23,0
+SK,Slovakia,2022-12-23,3
+SI,Slovenia,2022-12-23,5
+ES,Spain,2022-12-23,241
+SE,Sweden,2022-12-23,0
+CH,Switzerland,2022-12-23,0
+GB,United Kingdom,2022-12-23,107
+AT,Austria,2022-12-24,10
+BE,Belgium,2022-12-24,0
+BG,Bulgaria,2022-12-24,0
+HR,Croatia,2022-12-24,13
+CY,Cyprus,2022-12-24,0
+CZ,Czechia,2022-12-24,12
+DK,Denmark,2022-12-24,0
+EE,Estonia,2022-12-24,0
+FI,Finland,2022-12-24,0
+FR,France,2022-12-24,0
+DE,Germany,2022-12-24,0
+GR,Greece,2022-12-24,0
+HU,Hungary,2022-12-24,0
+IS,Iceland,2022-12-24,0
+IE,Ireland,2022-12-24,0
+IT,Italy,2022-12-24,0
+LV,Latvia,2022-12-24,0
+LI,Liechtenstein,2022-12-24,0
+LT,Lithuania,2022-12-24,0
+LU,Luxembourg,2022-12-24,0
+MT,Malta,2022-12-24,0
+NL,Netherlands,2022-12-24,0
+NO,Norway,2022-12-24,0
+PL,Poland,2022-12-24,8
+PT,Portugal,2022-12-24,0
+RO,Romania,2022-12-24,0
+SK,Slovakia,2022-12-24,2
+SI,Slovenia,2022-12-24,2
+ES,Spain,2022-12-24,0
+SE,Sweden,2022-12-24,0
+CH,Switzerland,2022-12-24,0
+GB,United Kingdom,2022-12-24,127
+AT,Austria,2022-12-25,0
+BE,Belgium,2022-12-25,0
+BG,Bulgaria,2022-12-25,1
+HR,Croatia,2022-12-25,6
+CY,Cyprus,2022-12-25,0
+CZ,Czechia,2022-12-25,2
+DK,Denmark,2022-12-25,0
+EE,Estonia,2022-12-25,0
+FI,Finland,2022-12-25,0
+FR,France,2022-12-25,0
+DE,Germany,2022-12-25,0
+GR,Greece,2022-12-25,0
+HU,Hungary,2022-12-25,0
+IS,Iceland,2022-12-25,0
+IE,Ireland,2022-12-25,0
+IT,Italy,2022-12-25,0
+LV,Latvia,2022-12-25,0
+LI,Liechtenstein,2022-12-25,0
+LT,Lithuania,2022-12-25,0
+LU,Luxembourg,2022-12-25,0
+MT,Malta,2022-12-25,0
+NL,Netherlands,2022-12-25,0
+NO,Norway,2022-12-25,0
+PL,Poland,2022-12-25,0
+PT,Portugal,2022-12-25,0
+RO,Romania,2022-12-25,0
+SK,Slovakia,2022-12-25,4
+SI,Slovenia,2022-12-25,3
+ES,Spain,2022-12-25,0
+SE,Sweden,2022-12-25,0
+CH,Switzerland,2022-12-25,0
+GB,United Kingdom,2022-12-25,110
+AT,Austria,2022-12-26,3
+BE,Belgium,2022-12-26,0
+BG,Bulgaria,2022-12-26,6
+HR,Croatia,2022-12-26,5
+CY,Cyprus,2022-12-26,0
+CZ,Czechia,2022-12-26,6
+DK,Denmark,2022-12-26,0
+EE,Estonia,2022-12-26,0
+FI,Finland,2022-12-26,0
+FR,France,2022-12-26,0
+DE,Germany,2022-12-26,0
+GR,Greece,2022-12-26,0
+HU,Hungary,2022-12-26,0
+IS,Iceland,2022-12-26,0
+IE,Ireland,2022-12-26,0
+IT,Italy,2022-12-26,0
+LV,Latvia,2022-12-26,0
+LI,Liechtenstein,2022-12-26,0
+LT,Lithuania,2022-12-26,0
+LU,Luxembourg,2022-12-26,0
+MT,Malta,2022-12-26,0
+NL,Netherlands,2022-12-26,0
+NO,Norway,2022-12-26,0
+PL,Poland,2022-12-26,0
+PT,Portugal,2022-12-26,0
+RO,Romania,2022-12-26,33
+SK,Slovakia,2022-12-26,3
+SI,Slovenia,2022-12-26,5
+ES,Spain,2022-12-26,0
+SE,Sweden,2022-12-26,0
+CH,Switzerland,2022-12-26,0
+GB,United Kingdom,2022-12-26,109
+AT,Austria,2022-12-27,3
+BE,Belgium,2022-12-27,0
+BG,Bulgaria,2022-12-27,0
+HR,Croatia,2022-12-27,16
+CY,Cyprus,2022-12-27,0
+CZ,Czechia,2022-12-27,4
+DK,Denmark,2022-12-27,46
+EE,Estonia,2022-12-27,0
+FI,Finland,2022-12-27,0
+FR,France,2022-12-27,423
+DE,Germany,2022-12-27,157
+GR,Greece,2022-12-27,0
+HU,Hungary,2022-12-27,0
+IS,Iceland,2022-12-27,0
+IE,Ireland,2022-12-27,0
+IT,Italy,2022-12-27,0
+LV,Latvia,2022-12-27,2
+LI,Liechtenstein,2022-12-27,0
+LT,Lithuania,2022-12-27,15
+LU,Luxembourg,2022-12-27,0
+MT,Malta,2022-12-27,0
+NL,Netherlands,2022-12-27,3
+NO,Norway,2022-12-27,0
+PL,Poland,2022-12-27,0
+PT,Portugal,2022-12-27,0
+RO,Romania,2022-12-27,0
+SK,Slovakia,2022-12-27,2
+SI,Slovenia,2022-12-27,3
+ES,Spain,2022-12-27,0
+SE,Sweden,2022-12-27,0
+CH,Switzerland,2022-12-27,0
+GB,United Kingdom,2022-12-27,121
+AT,Austria,2022-12-28,31
+BE,Belgium,2022-12-28,0
+BG,Bulgaria,2022-12-28,0
+HR,Croatia,2022-12-28,15
+CY,Cyprus,2022-12-28,0
+CZ,Czechia,2022-12-28,7
+DK,Denmark,2022-12-28,11
+EE,Estonia,2022-12-28,17
+FI,Finland,2022-12-28,0
+FR,France,2022-12-28,140
+DE,Germany,2022-12-28,204
+GR,Greece,2022-12-28,0
+HU,Hungary,2022-12-28,56
+IS,Iceland,2022-12-28,0
+IE,Ireland,2022-12-28,0
+IT,Italy,2022-12-28,0
+LV,Latvia,2022-12-28,0
+LI,Liechtenstein,2022-12-28,0
+LT,Lithuania,2022-12-28,1
+LU,Luxembourg,2022-12-28,0
+MT,Malta,2022-12-28,0
+NL,Netherlands,2022-12-28,0
+NO,Norway,2022-12-28,0
+PL,Poland,2022-12-28,6
+PT,Portugal,2022-12-28,0
+RO,Romania,2022-12-28,0
+SK,Slovakia,2022-12-28,5
+SI,Slovenia,2022-12-28,3
+ES,Spain,2022-12-28,0
+SE,Sweden,2022-12-28,0
+CH,Switzerland,2022-12-28,7
+GB,United Kingdom,2022-12-28,108
+AT,Austria,2022-12-29,12
+BE,Belgium,2022-12-29,0
+BG,Bulgaria,2022-12-29,7
+HR,Croatia,2022-12-29,13
+CY,Cyprus,2022-12-29,0
+CZ,Czechia,2022-12-29,12
+DK,Denmark,2022-12-29,0
+EE,Estonia,2022-12-29,0
+FI,Finland,2022-12-29,0
+FR,France,2022-12-29,132
+DE,Germany,2022-12-29,349
+GR,Greece,2022-12-29,0
+HU,Hungary,2022-12-29,0
+IS,Iceland,2022-12-29,0
+IE,Ireland,2022-12-29,0
+IT,Italy,2022-12-29,0
+LV,Latvia,2022-12-29,7
+LI,Liechtenstein,2022-12-29,0
+LT,Lithuania,2022-12-29,5
+LU,Luxembourg,2022-12-29,0
+MT,Malta,2022-12-29,0
+NL,Netherlands,2022-12-29,0
+NO,Norway,2022-12-29,0
+PL,Poland,2022-12-29,22
+PT,Portugal,2022-12-29,0
+RO,Romania,2022-12-29,0
+SK,Slovakia,2022-12-29,4
+SI,Slovenia,2022-12-29,3
+ES,Spain,2022-12-29,0
+SE,Sweden,2022-12-29,200
+CH,Switzerland,2022-12-29,0
+GB,United Kingdom,2022-12-29,102
+AT,Austria,2022-12-30,3
+BE,Belgium,2022-12-30,0
+BG,Bulgaria,2022-12-30,2
+HR,Croatia,2022-12-30,13
+CY,Cyprus,2022-12-30,3
+CZ,Czechia,2022-12-30,10
+DK,Denmark,2022-12-30,0
+EE,Estonia,2022-12-30,0
+FI,Finland,2022-12-30,0
+FR,France,2022-12-30,115
+DE,Germany,2022-12-30,144
+GR,Greece,2022-12-30,0
+HU,Hungary,2022-12-30,0
+IS,Iceland,2022-12-30,0
+IE,Ireland,2022-12-30,0
+IT,Italy,2022-12-30,706
+LV,Latvia,2022-12-30,9
+LI,Liechtenstein,2022-12-30,0
+LT,Lithuania,2022-12-30,1
+LU,Luxembourg,2022-12-30,0
+MT,Malta,2022-12-30,2
+NL,Netherlands,2022-12-30,19
+NO,Norway,2022-12-30,0
+PL,Poland,2022-12-30,9
+PT,Portugal,2022-12-30,0
+RO,Romania,2022-12-30,0
+SK,Slovakia,2022-12-30,4
+SI,Slovenia,2022-12-30,2
+ES,Spain,2022-12-30,196
+SE,Sweden,2022-12-30,0
+CH,Switzerland,2022-12-30,0
+GB,United Kingdom,2022-12-30,106
+AT,Austria,2022-12-31,21
+BE,Belgium,2022-12-31,0
+BG,Bulgaria,2022-12-31,2
+HR,Croatia,2022-12-31,13
+CY,Cyprus,2022-12-31,0
+CZ,Czechia,2022-12-31,15
+DK,Denmark,2022-12-31,0
+EE,Estonia,2022-12-31,0
+FI,Finland,2022-12-31,0
+FR,France,2022-12-31,0
+DE,Germany,2022-12-31,0
+GR,Greece,2022-12-31,0
+HU,Hungary,2022-12-31,0
+IS,Iceland,2022-12-31,0
+IE,Ireland,2022-12-31,0
+IT,Italy,2022-12-31,0
+LV,Latvia,2022-12-31,0
+LI,Liechtenstein,2022-12-31,0
+LT,Lithuania,2022-12-31,0
+LU,Luxembourg,2022-12-31,0
+MT,Malta,2022-12-31,0
+NL,Netherlands,2022-12-31,0
+NO,Norway,2022-12-31,0
+PL,Poland,2022-12-31,21
+PT,Portugal,2022-12-31,0
+RO,Romania,2022-12-31,0
+SK,Slovakia,2022-12-31,2
+SI,Slovenia,2022-12-31,2
+ES,Spain,2022-12-31,0
+SE,Sweden,2022-12-31,0
+CH,Switzerland,2022-12-31,0
+GB,United Kingdom,2022-12-31,98
+AT,Austria,2023-01-01,0
+BE,Belgium,2023-01-01,0
+BG,Bulgaria,2023-01-01,0
+HR,Croatia,2023-01-01,11
+CY,Cyprus,2023-01-01,0
+CZ,Czechia,2023-01-01,3
+DK,Denmark,2023-01-01,0
+EE,Estonia,2023-01-01,0
+FI,Finland,2023-01-01,0
+FR,France,2023-01-01,0
+DE,Germany,2023-01-01,0
+GR,Greece,2023-01-01,0
+HU,Hungary,2023-01-01,0
+IS,Iceland,2023-01-01,0
+IE,Ireland,2023-01-01,0
+IT,Italy,2023-01-01,0
+LV,Latvia,2023-01-01,0
+LI,Liechtenstein,2023-01-01,0
+LT,Lithuania,2023-01-01,0
+LU,Luxembourg,2023-01-01,0
+MT,Malta,2023-01-01,2
+NL,Netherlands,2023-01-01,0
+NO,Norway,2023-01-01,0
+PL,Poland,2023-01-01,0
+PT,Portugal,2023-01-01,0
+RO,Romania,2023-01-01,0
+SK,Slovakia,2023-01-01,0
+SI,Slovenia,2023-01-01,4
+ES,Spain,2023-01-01,0
+SE,Sweden,2023-01-01,0
+CH,Switzerland,2023-01-01,1
+GB,United Kingdom,2023-01-01,83
+AT,Austria,2023-01-02,1
+BE,Belgium,2023-01-02,0
+BG,Bulgaria,2023-01-02,0
+HR,Croatia,2023-01-02,16
+CY,Cyprus,2023-01-02,0
+CZ,Czechia,2023-01-02,6
+DK,Denmark,2023-01-02,0
+EE,Estonia,2023-01-02,0
+FI,Finland,2023-01-02,0
+FR,France,2023-01-02,252
+DE,Germany,2023-01-02,249
+GR,Greece,2023-01-02,0
+HU,Hungary,2023-01-02,0
+IS,Iceland,2023-01-02,0
+IE,Ireland,2023-01-02,0
+IT,Italy,2023-01-02,0
+LV,Latvia,2023-01-02,4
+LI,Liechtenstein,2023-01-02,0
+LT,Lithuania,2023-01-02,4
+LU,Luxembourg,2023-01-02,0
+MT,Malta,2023-01-02,0
+NL,Netherlands,2023-01-02,0
+NO,Norway,2023-01-02,0
+PL,Poland,2023-01-02,0
+PT,Portugal,2023-01-02,0
+RO,Romania,2023-01-02,34
+SK,Slovakia,2023-01-02,2
+SI,Slovenia,2023-01-02,1
+ES,Spain,2023-01-02,0
+SE,Sweden,2023-01-02,0
+CH,Switzerland,2023-01-02,0
+GB,United Kingdom,2023-01-02,80
+AT,Austria,2023-01-03,4
+BE,Belgium,2023-01-03,0
+BG,Bulgaria,2023-01-03,5
+HR,Croatia,2023-01-03,15
+CY,Cyprus,2023-01-03,0
+CZ,Czechia,2023-01-03,18
+DK,Denmark,2023-01-03,90
+EE,Estonia,2023-01-03,18
+FI,Finland,2023-01-03,0
+FR,France,2023-01-03,157
+DE,Germany,2023-01-03,307
+GR,Greece,2023-01-03,0
+HU,Hungary,2023-01-03,0
+IS,Iceland,2023-01-03,0
+IE,Ireland,2023-01-03,0
+IT,Italy,2023-01-03,0
+LV,Latvia,2023-01-03,0
+LI,Liechtenstein,2023-01-03,0
+LT,Lithuania,2023-01-03,3
+LU,Luxembourg,2023-01-03,11
+MT,Malta,2023-01-03,0
+NL,Netherlands,2023-01-03,0
+NO,Norway,2023-01-03,100
+PL,Poland,2023-01-03,13
+PT,Portugal,2023-01-03,91
+RO,Romania,2023-01-03,0
+SK,Slovakia,2023-01-03,2
+SI,Slovenia,2023-01-03,3
+ES,Spain,2023-01-03,0
+SE,Sweden,2023-01-03,0
+CH,Switzerland,2023-01-03,8
+GB,United Kingdom,2023-01-03,75
+AT,Austria,2023-01-04,18
+BE,Belgium,2023-01-04,0
+BG,Bulgaria,2023-01-04,3
+HR,Croatia,2023-01-04,8
+CY,Cyprus,2023-01-04,0
+CZ,Czechia,2023-01-04,10
+DK,Denmark,2023-01-04,16
+EE,Estonia,2023-01-04,0
+FI,Finland,2023-01-04,0
+FR,France,2023-01-04,123
+DE,Germany,2023-01-04,235
+GR,Greece,2023-01-04,0
+HU,Hungary,2023-01-04,0
+IS,Iceland,2023-01-04,0
+IE,Ireland,2023-01-04,46
+IT,Italy,2023-01-04,0
+LV,Latvia,2023-01-04,0
+LI,Liechtenstein,2023-01-04,0
+LT,Lithuania,2023-01-04,3
+LU,Luxembourg,2023-01-04,0
+MT,Malta,2023-01-04,1
+NL,Netherlands,2023-01-04,0
+NO,Norway,2023-01-04,0
+PL,Poland,2023-01-04,9
+PT,Portugal,2023-01-04,0
+RO,Romania,2023-01-04,0
+SK,Slovakia,2023-01-04,3
+SI,Slovenia,2023-01-04,5
+ES,Spain,2023-01-04,0
+SE,Sweden,2023-01-04,0
+CH,Switzerland,2023-01-04,8
+GB,United Kingdom,2023-01-04,72
+AT,Austria,2023-01-05,7
+BE,Belgium,2023-01-05,167
+BG,Bulgaria,2023-01-05,0
+HR,Croatia,2023-01-05,6
+CY,Cyprus,2023-01-05,0
+CZ,Czechia,2023-01-05,10
+DK,Denmark,2023-01-05,12
+EE,Estonia,2023-01-05,0
+FI,Finland,2023-01-05,330
+FR,France,2023-01-05,141
+DE,Germany,2023-01-05,262
+GR,Greece,2023-01-05,0
+HU,Hungary,2023-01-05,51
+IS,Iceland,2023-01-05,0
+IE,Ireland,2023-01-05,0
+IT,Italy,2023-01-05,0
+LV,Latvia,2023-01-05,10
+LI,Liechtenstein,2023-01-05,0
+LT,Lithuania,2023-01-05,3
+LU,Luxembourg,2023-01-05,2
+MT,Malta,2023-01-05,2
+NL,Netherlands,2023-01-05,0
+NO,Norway,2023-01-05,0
+PL,Poland,2023-01-05,12
+PT,Portugal,2023-01-05,0
+RO,Romania,2023-01-05,0
+SK,Slovakia,2023-01-05,3
+SI,Slovenia,2023-01-05,0
+ES,Spain,2023-01-05,318
+SE,Sweden,2023-01-05,315
+CH,Switzerland,2023-01-05,0
+GB,United Kingdom,2023-01-05,53
+AT,Austria,2023-01-06,9
+BE,Belgium,2023-01-06,0
+BG,Bulgaria,2023-01-06,6
+HR,Croatia,2023-01-06,8
+CY,Cyprus,2023-01-06,4
+CZ,Czechia,2023-01-06,8
+DK,Denmark,2023-01-06,13
+EE,Estonia,2023-01-06,0
+FI,Finland,2023-01-06,0
+FR,France,2023-01-06,3
+DE,Germany,2023-01-06,170
+GR,Greece,2023-01-06,0
+HU,Hungary,2023-01-06,0
+IS,Iceland,2023-01-06,0
+IE,Ireland,2023-01-06,0
+IT,Italy,2023-01-06,775
+LV,Latvia,2023-01-06,2
+LI,Liechtenstein,2023-01-06,0
+LT,Lithuania,2023-01-06,3
+LU,Luxembourg,2023-01-06,4
+MT,Malta,2023-01-06,0
+NL,Netherlands,2023-01-06,0
+NO,Norway,2023-01-06,89
+PL,Poland,2023-01-06,19
+PT,Portugal,2023-01-06,0
+RO,Romania,2023-01-06,0
+SK,Slovakia,2023-01-06,5
+SI,Slovenia,2023-01-06,2
+ES,Spain,2023-01-06,0
+SE,Sweden,2023-01-06,0
+CH,Switzerland,2023-01-06,0
+GB,United Kingdom,2023-01-06,27
+AT,Austria,2023-01-07,2
+BE,Belgium,2023-01-07,0
+BG,Bulgaria,2023-01-07,0
+HR,Croatia,2023-01-07,9
+CY,Cyprus,2023-01-07,0
+CZ,Czechia,2023-01-07,10
+DK,Denmark,2023-01-07,0
+EE,Estonia,2023-01-07,0
+FI,Finland,2023-01-07,0
+FR,France,2023-01-07,0
+DE,Germany,2023-01-07,0
+GR,Greece,2023-01-07,0
+HU,Hungary,2023-01-07,0
+IS,Iceland,2023-01-07,0
+IE,Ireland,2023-01-07,0
+IT,Italy,2023-01-07,0
+LV,Latvia,2023-01-07,0
+LI,Liechtenstein,2023-01-07,0
+LT,Lithuania,2023-01-07,0
+LU,Luxembourg,2023-01-07,0
+MT,Malta,2023-01-07,1
+NL,Netherlands,2023-01-07,0
+NO,Norway,2023-01-07,0
+PL,Poland,2023-01-07,0
+PT,Portugal,2023-01-07,0
+RO,Romania,2023-01-07,0
+SK,Slovakia,2023-01-07,3
+SI,Slovenia,2023-01-07,2
+ES,Spain,2023-01-07,0
+SE,Sweden,2023-01-07,0
+CH,Switzerland,2023-01-07,0
+GB,United Kingdom,2023-01-07,0
+AT,Austria,2023-01-08,3
+BE,Belgium,2023-01-08,0
+BG,Bulgaria,2023-01-08,0
+HR,Croatia,2023-01-08,13
+CY,Cyprus,2023-01-08,0
+CZ,Czechia,2023-01-08,4
+DK,Denmark,2023-01-08,0
+EE,Estonia,2023-01-08,0
+FI,Finland,2023-01-08,0
+FR,France,2023-01-08,0
+DE,Germany,2023-01-08,0
+GR,Greece,2023-01-08,0
+HU,Hungary,2023-01-08,0
+IS,Iceland,2023-01-08,0
+IE,Ireland,2023-01-08,0
+IT,Italy,2023-01-08,0
+LV,Latvia,2023-01-08,0
+LI,Liechtenstein,2023-01-08,0
+LT,Lithuania,2023-01-08,0
+LU,Luxembourg,2023-01-08,0
+MT,Malta,2023-01-08,0
+NL,Netherlands,2023-01-08,0
+NO,Norway,2023-01-08,0
+PL,Poland,2023-01-08,0
+PT,Portugal,2023-01-08,0
+RO,Romania,2023-01-08,0
+SK,Slovakia,2023-01-08,4
+SI,Slovenia,2023-01-08,0
+ES,Spain,2023-01-08,0
+SE,Sweden,2023-01-08,0
+CH,Switzerland,2023-01-08,0
+GB,United Kingdom,2023-01-08,0
+AT,Austria,2023-01-09,3
+BE,Belgium,2023-01-09,0
+BG,Bulgaria,2023-01-09,5
+HR,Croatia,2023-01-09,24
+CY,Cyprus,2023-01-09,0
+CZ,Czechia,2023-01-09,5
+DK,Denmark,2023-01-09,42
+EE,Estonia,2023-01-09,0
+FI,Finland,2023-01-09,0
+FR,France,2023-01-09,340
+DE,Germany,2023-01-09,287
+GR,Greece,2023-01-09,0
+HU,Hungary,2023-01-09,0
+IS,Iceland,2023-01-09,0
+IE,Ireland,2023-01-09,0
+IT,Italy,2023-01-09,0
+LV,Latvia,2023-01-09,2
+LI,Liechtenstein,2023-01-09,0
+LT,Lithuania,2023-01-09,4
+LU,Luxembourg,2023-01-09,0
+MT,Malta,2023-01-09,0
+NL,Netherlands,2023-01-09,0
+NO,Norway,2023-01-09,0
+PL,Poland,2023-01-09,0
+PT,Portugal,2023-01-09,0
+RO,Romania,2023-01-09,52
+SK,Slovakia,2023-01-09,4
+SI,Slovenia,2023-01-09,3
+ES,Spain,2023-01-09,0
+SE,Sweden,2023-01-09,0
+CH,Switzerland,2023-01-09,3
+GB,United Kingdom,2023-01-09,0
+AT,Austria,2023-01-10,27
+BE,Belgium,2023-01-10,0
+BG,Bulgaria,2023-01-10,3
+HR,Croatia,2023-01-10,13
+CY,Cyprus,2023-01-10,0
+CZ,Czechia,2023-01-10,15
+DK,Denmark,2023-01-10,10
+EE,Estonia,2023-01-10,13
+FI,Finland,2023-01-10,0
+FR,France,2023-01-10,105
+DE,Germany,2023-01-10,269
+GR,Greece,2023-01-10,0
+HU,Hungary,2023-01-10,0
+IS,Iceland,2023-01-10,0
+IE,Ireland,2023-01-10,0
+IT,Italy,2023-01-10,0
+LV,Latvia,2023-01-10,2
+LI,Liechtenstein,2023-01-10,0
+LT,Lithuania,2023-01-10,4
+LU,Luxembourg,2023-01-10,3
+MT,Malta,2023-01-10,1
+NL,Netherlands,2023-01-10,0
+NO,Norway,2023-01-10,0
+PL,Poland,2023-01-10,15
+PT,Portugal,2023-01-10,0
+RO,Romania,2023-01-10,0
+SK,Slovakia,2023-01-10,6
+SI,Slovenia,2023-01-10,1
+ES,Spain,2023-01-10,0
+SE,Sweden,2023-01-10,0
+CH,Switzerland,2023-01-10,0
+GB,United Kingdom,2023-01-10,0
+AT,Austria,2023-01-11,19
+BE,Belgium,2023-01-11,0
+BG,Bulgaria,2023-01-11,5
+HR,Croatia,2023-01-11,10
+CY,Cyprus,2023-01-11,0
+CZ,Czechia,2023-01-11,9
+DK,Denmark,2023-01-11,19
+EE,Estonia,2023-01-11,0
+FI,Finland,2023-01-11,0
+FR,France,2023-01-11,88
+DE,Germany,2023-01-11,181
+GR,Greece,2023-01-11,0
+HU,Hungary,2023-01-11,32
+IS,Iceland,2023-01-11,0
+IE,Ireland,2023-01-11,49
+IT,Italy,2023-01-11,0
+LV,Latvia,2023-01-11,7
+LI,Liechtenstein,2023-01-11,0
+LT,Lithuania,2023-01-11,6
+LU,Luxembourg,2023-01-11,1
+MT,Malta,2023-01-11,0
+NL,Netherlands,2023-01-11,0
+NO,Norway,2023-01-11,0
+PL,Poland,2023-01-11,14
+PT,Portugal,2023-01-11,0
+RO,Romania,2023-01-11,0
+SK,Slovakia,2023-01-11,4
+SI,Slovenia,2023-01-11,1
+ES,Spain,2023-01-11,0
+SE,Sweden,2023-01-11,0
+CH,Switzerland,2023-01-11,8
+GB,United Kingdom,2023-01-11,0
+AT,Austria,2023-01-12,10
+BE,Belgium,2023-01-12,83
+BG,Bulgaria,2023-01-12,1
+HR,Croatia,2023-01-12,13
+CY,Cyprus,2023-01-12,0
+CZ,Czechia,2023-01-12,6
+DK,Denmark,2023-01-12,11
+EE,Estonia,2023-01-12,0
+FI,Finland,2023-01-12,168
+FR,France,2023-01-12,53
+DE,Germany,2023-01-12,200
+GR,Greece,2023-01-12,0
+HU,Hungary,2023-01-12,0
+IS,Iceland,2023-01-12,0
+IE,Ireland,2023-01-12,0
+IT,Italy,2023-01-12,0
+LV,Latvia,2023-01-12,4
+LI,Liechtenstein,2023-01-12,0
+LT,Lithuania,2023-01-12,-1
+LU,Luxembourg,2023-01-12,1
+MT,Malta,2023-01-12,0
+NL,Netherlands,2023-01-12,0
+NO,Norway,2023-01-12,0
+PL,Poland,2023-01-12,18
+PT,Portugal,2023-01-12,0
+RO,Romania,2023-01-12,0
+SK,Slovakia,2023-01-12,3
+SI,Slovenia,2023-01-12,2
+ES,Spain,2023-01-12,0
+SE,Sweden,2023-01-12,503
+CH,Switzerland,2023-01-12,0
+GB,United Kingdom,2023-01-12,0
+AT,Austria,2023-01-13,12
+BE,Belgium,2023-01-13,0
+BG,Bulgaria,2023-01-13,2
+HR,Croatia,2023-01-13,10
+CY,Cyprus,2023-01-13,8
+CZ,Czechia,2023-01-13,7
+DK,Denmark,2023-01-13,11
+EE,Estonia,2023-01-13,0
+FI,Finland,2023-01-13,0
+FR,France,2023-01-13,97
+DE,Germany,2023-01-13,150
+GR,Greece,2023-01-13,0
+HU,Hungary,2023-01-13,0
+IS,Iceland,2023-01-13,0
+IE,Ireland,2023-01-13,0
+IT,Italy,2023-01-13,576
+LV,Latvia,2023-01-13,3
+LI,Liechtenstein,2023-01-13,0
+LT,Lithuania,2023-01-13,4
+LU,Luxembourg,2023-01-13,0
+MT,Malta,2023-01-13,0
+NL,Netherlands,2023-01-13,0
+NO,Norway,2023-01-13,104
+PL,Poland,2023-01-13,7
+PT,Portugal,2023-01-13,0
+RO,Romania,2023-01-13,0
+SK,Slovakia,2023-01-13,4
+SI,Slovenia,2023-01-13,2
+ES,Spain,2023-01-13,346
+SE,Sweden,2023-01-13,0
+CH,Switzerland,2023-01-13,33
+GB,United Kingdom,2023-01-13,0
+AT,Austria,2023-01-14,6
+BE,Belgium,2023-01-14,0
+BG,Bulgaria,2023-01-14,0
+HR,Croatia,2023-01-14,7
+CY,Cyprus,2023-01-14,0
+CZ,Czechia,2023-01-14,11
+DK,Denmark,2023-01-14,0
+EE,Estonia,2023-01-14,0
+FI,Finland,2023-01-14,0
+FR,France,2023-01-14,0
+DE,Germany,2023-01-14,0
+GR,Greece,2023-01-14,0
+HU,Hungary,2023-01-14,0
+IS,Iceland,2023-01-14,0
+IE,Ireland,2023-01-14,0
+IT,Italy,2023-01-14,0
+LV,Latvia,2023-01-14,0
+LI,Liechtenstein,2023-01-14,0
+LT,Lithuania,2023-01-14,0
+LU,Luxembourg,2023-01-14,0
+MT,Malta,2023-01-14,0
+NL,Netherlands,2023-01-14,0
+NO,Norway,2023-01-14,0
+PL,Poland,2023-01-14,11
+PT,Portugal,2023-01-14,0
+RO,Romania,2023-01-14,0
+SK,Slovakia,2023-01-14,4
+SI,Slovenia,2023-01-14,2
+ES,Spain,2023-01-14,0
+SE,Sweden,2023-01-14,0
+CH,Switzerland,2023-01-14,0
+GB,United Kingdom,2023-01-14,0
+AT,Austria,2023-01-15,0
+BE,Belgium,2023-01-15,0
+BG,Bulgaria,2023-01-15,1
+HR,Croatia,2023-01-15,6
+CY,Cyprus,2023-01-15,0
+CZ,Czechia,2023-01-15,1
+DK,Denmark,2023-01-15,0
+EE,Estonia,2023-01-15,0
+FI,Finland,2023-01-15,0
+FR,France,2023-01-15,0
+DE,Germany,2023-01-15,0
+GR,Greece,2023-01-15,0
+HU,Hungary,2023-01-15,0
+IS,Iceland,2023-01-15,0
+IE,Ireland,2023-01-15,0
+IT,Italy,2023-01-15,0
+LV,Latvia,2023-01-15,0
+LI,Liechtenstein,2023-01-15,0
+LT,Lithuania,2023-01-15,0
+LU,Luxembourg,2023-01-15,0
+MT,Malta,2023-01-15,0
+NL,Netherlands,2023-01-15,0
+NO,Norway,2023-01-15,0
+PL,Poland,2023-01-15,0
+PT,Portugal,2023-01-15,0
+RO,Romania,2023-01-15,0
+SK,Slovakia,2023-01-15,5
+SI,Slovenia,2023-01-15,0
+ES,Spain,2023-01-15,0
+SE,Sweden,2023-01-15,0
+CH,Switzerland,2023-01-15,0
+GB,United Kingdom,2023-01-15,0
+AT,Austria,2023-01-16,1
+BE,Belgium,2023-01-16,0
+BG,Bulgaria,2023-01-16,7
+HR,Croatia,2023-01-16,10
+CY,Cyprus,2023-01-16,0
+CZ,Czechia,2023-01-16,4
+DK,Denmark,2023-01-16,0
+EE,Estonia,2023-01-16,0
+FI,Finland,2023-01-16,0
+FR,France,2023-01-16,116
+DE,Germany,2023-01-16,190
+GR,Greece,2023-01-16,0
+HU,Hungary,2023-01-16,0
+IS,Iceland,2023-01-16,0
+IE,Ireland,2023-01-16,0
+IT,Italy,2023-01-16,0
+LV,Latvia,2023-01-16,2
+LI,Liechtenstein,2023-01-16,0
+LT,Lithuania,2023-01-16,7
+LU,Luxembourg,2023-01-16,0
+MT,Malta,2023-01-16,0
+NL,Netherlands,2023-01-16,0
+NO,Norway,2023-01-16,0
+PL,Poland,2023-01-16,0
+PT,Portugal,2023-01-16,0
+RO,Romania,2023-01-16,44
+SK,Slovakia,2023-01-16,3
+SI,Slovenia,2023-01-16,1
+ES,Spain,2023-01-16,0
+SE,Sweden,2023-01-16,0
+CH,Switzerland,2023-01-16,0
+GB,United Kingdom,2023-01-16,0
+AT,Austria,2023-01-17,11
+BE,Belgium,2023-01-17,0
+BG,Bulgaria,2023-01-17,4
+HR,Croatia,2023-01-17,7
+CY,Cyprus,2023-01-17,0
+CZ,Czechia,2023-01-17,6
+DK,Denmark,2023-01-17,50
+EE,Estonia,2023-01-17,0
+FI,Finland,2023-01-17,0
+FR,France,2023-01-17,99
+DE,Germany,2023-01-17,188
+GR,Greece,2023-01-17,0
+HU,Hungary,2023-01-17,0
+IS,Iceland,2023-01-17,9
+IE,Ireland,2023-01-17,0
+IT,Italy,2023-01-17,0
+LV,Latvia,2023-01-17,3
+LI,Liechtenstein,2023-01-17,0
+LT,Lithuania,2023-01-17,3
+LU,Luxembourg,2023-01-17,1
+MT,Malta,2023-01-17,0
+NL,Netherlands,2023-01-17,0
+NO,Norway,2023-01-17,0
+PL,Poland,2023-01-17,9
+PT,Portugal,2023-01-17,0
+RO,Romania,2023-01-17,0
+SK,Slovakia,2023-01-17,4
+SI,Slovenia,2023-01-17,1
+ES,Spain,2023-01-17,0
+SE,Sweden,2023-01-17,0
+CH,Switzerland,2023-01-17,3
+GB,United Kingdom,2023-01-17,0
+AT,Austria,2023-01-18,13
+BE,Belgium,2023-01-18,0
+BG,Bulgaria,2023-01-18,4
+HR,Croatia,2023-01-18,8
+CY,Cyprus,2023-01-18,0
+CZ,Czechia,2023-01-18,2
+DK,Denmark,2023-01-18,7
+EE,Estonia,2023-01-18,11
+FI,Finland,2023-01-18,0
+FR,France,2023-01-18,82
+DE,Germany,2023-01-18,238
+GR,Greece,2023-01-18,0
+HU,Hungary,2023-01-18,51
+IS,Iceland,2023-01-18,0
+IE,Ireland,2023-01-18,43
+IT,Italy,2023-01-18,0
+LV,Latvia,2023-01-18,3
+LI,Liechtenstein,2023-01-18,0
+LT,Lithuania,2023-01-18,-3
+LU,Luxembourg,2023-01-18,1
+MT,Malta,2023-01-18,0
+NL,Netherlands,2023-01-18,0
+NO,Norway,2023-01-18,0
+PL,Poland,2023-01-18,6
+PT,Portugal,2023-01-18,0
+RO,Romania,2023-01-18,0
+SK,Slovakia,2023-01-18,6
+SI,Slovenia,2023-01-18,1
+ES,Spain,2023-01-18,0
+SE,Sweden,2023-01-18,0
+CH,Switzerland,2023-01-18,6
+GB,United Kingdom,2023-01-18,0
+AT,Austria,2023-01-19,6
+BE,Belgium,2023-01-19,47
+BG,Bulgaria,2023-01-19,3
+HR,Croatia,2023-01-19,11
+CY,Cyprus,2023-01-19,0
+CZ,Czechia,2023-01-19,3
+DK,Denmark,2023-01-19,14
+EE,Estonia,2023-01-19,0
+FI,Finland,2023-01-19,126
+FR,France,2023-01-19,64
+DE,Germany,2023-01-19,194
+GR,Greece,2023-01-19,0
+HU,Hungary,2023-01-19,0
+IS,Iceland,2023-01-19,0
+IE,Ireland,2023-01-19,0
+IT,Italy,2023-01-19,0
+LV,Latvia,2023-01-19,2
+LI,Liechtenstein,2023-01-19,0
+LT,Lithuania,2023-01-19,4
+LU,Luxembourg,2023-01-19,2
+MT,Malta,2023-01-19,1
+NL,Netherlands,2023-01-19,0
+NO,Norway,2023-01-19,0
+PL,Poland,2023-01-19,9
+PT,Portugal,2023-01-19,137
+RO,Romania,2023-01-19,0
+SK,Slovakia,2023-01-19,6
+SI,Slovenia,2023-01-19,1
+ES,Spain,2023-01-19,0
+SE,Sweden,2023-01-19,375
+CH,Switzerland,2023-01-19,0
+GB,United Kingdom,2023-01-19,0
+AT,Austria,2023-01-20,14
+BE,Belgium,2023-01-20,0
+BG,Bulgaria,2023-01-20,3
+HR,Croatia,2023-01-20,6
+CY,Cyprus,2023-01-20,10
+CZ,Czechia,2023-01-20,6
+DK,Denmark,2023-01-20,19
+EE,Estonia,2023-01-20,0
+FI,Finland,2023-01-20,0
+FR,France,2023-01-20,43
+DE,Germany,2023-01-20,118
+GR,Greece,2023-01-20,0
+HU,Hungary,2023-01-20,0
+IS,Iceland,2023-01-20,0
+IE,Ireland,2023-01-20,0
+IT,Italy,2023-01-20,495
+LV,Latvia,2023-01-20,1
+LI,Liechtenstein,2023-01-20,1
+LT,Lithuania,2023-01-20,1
+LU,Luxembourg,2023-01-20,0
+MT,Malta,2023-01-20,0
+NL,Netherlands,2023-01-20,0
+NO,Norway,2023-01-20,73
+PL,Poland,2023-01-20,3
+PT,Portugal,2023-01-20,0
+RO,Romania,2023-01-20,0
+SK,Slovakia,2023-01-20,3
+SI,Slovenia,2023-01-20,2
+ES,Spain,2023-01-20,424
+SE,Sweden,2023-01-20,0
+CH,Switzerland,2023-01-20,0
+GB,United Kingdom,2023-01-20,0
+AT,Austria,2023-01-21,4
+BE,Belgium,2023-01-21,0
+BG,Bulgaria,2023-01-21,0
+HR,Croatia,2023-01-21,2
+CY,Cyprus,2023-01-21,0
+CZ,Czechia,2023-01-21,5
+DK,Denmark,2023-01-21,0
+EE,Estonia,2023-01-21,0
+FI,Finland,2023-01-21,0
+FR,France,2023-01-21,0
+DE,Germany,2023-01-21,0
+GR,Greece,2023-01-21,0
+HU,Hungary,2023-01-21,0
+IS,Iceland,2023-01-21,0
+IE,Ireland,2023-01-21,0
+IT,Italy,2023-01-21,0
+LV,Latvia,2023-01-21,0
+LI,Liechtenstein,2023-01-21,0
+LT,Lithuania,2023-01-21,0
+LU,Luxembourg,2023-01-21,0
+MT,Malta,2023-01-21,0
+NL,Netherlands,2023-01-21,0
+NO,Norway,2023-01-21,0
+PL,Poland,2023-01-21,3
+PT,Portugal,2023-01-21,0
+RO,Romania,2023-01-21,0
+SK,Slovakia,2023-01-21,4
+SI,Slovenia,2023-01-21,1
+ES,Spain,2023-01-21,0
+SE,Sweden,2023-01-21,0
+CH,Switzerland,2023-01-21,0
+GB,United Kingdom,2023-01-21,0
+AT,Austria,2023-01-22,13
+BE,Belgium,2023-01-22,0
+BG,Bulgaria,2023-01-22,3
+HR,Croatia,2023-01-22,6
+CY,Cyprus,2023-01-22,0
+CZ,Czechia,2023-01-22,0
+DK,Denmark,2023-01-22,0
+EE,Estonia,2023-01-22,0
+FI,Finland,2023-01-22,0
+FR,France,2023-01-22,0
+DE,Germany,2023-01-22,0
+GR,Greece,2023-01-22,0
+HU,Hungary,2023-01-22,0
+IS,Iceland,2023-01-22,0
+IE,Ireland,2023-01-22,0
+IT,Italy,2023-01-22,0
+LV,Latvia,2023-01-22,0
+LI,Liechtenstein,2023-01-22,0
+LT,Lithuania,2023-01-22,0
+LU,Luxembourg,2023-01-22,0
+MT,Malta,2023-01-22,0
+NL,Netherlands,2023-01-22,0
+NO,Norway,2023-01-22,0
+PL,Poland,2023-01-22,0
+PT,Portugal,2023-01-22,0
+RO,Romania,2023-01-22,0
+SK,Slovakia,2023-01-22,5
+SI,Slovenia,2023-01-22,2
+ES,Spain,2023-01-22,0
+SE,Sweden,2023-01-22,0
+CH,Switzerland,2023-01-22,0
+GB,United Kingdom,2023-01-22,0
+AT,Austria,2023-01-23,0
+BE,Belgium,2023-01-23,0
+BG,Bulgaria,2023-01-23,4
+HR,Croatia,2023-01-23,13
+CY,Cyprus,2023-01-23,0
+CZ,Czechia,2023-01-23,3
+DK,Denmark,2023-01-23,20
+EE,Estonia,2023-01-23,0
+FI,Finland,2023-01-23,0
+FR,France,2023-01-23,197
+DE,Germany,2023-01-23,141
+GR,Greece,2023-01-23,0
+HU,Hungary,2023-01-23,0
+IS,Iceland,2023-01-23,0
+IE,Ireland,2023-01-23,0
+IT,Italy,2023-01-23,0
+LV,Latvia,2023-01-23,0
+LI,Liechtenstein,2023-01-23,0
+LT,Lithuania,2023-01-23,4
+LU,Luxembourg,2023-01-23,0
+MT,Malta,2023-01-23,0
+NL,Netherlands,2023-01-23,0
+NO,Norway,2023-01-23,0
+PL,Poland,2023-01-23,0
+PT,Portugal,2023-01-23,0
+RO,Romania,2023-01-23,38
+SK,Slovakia,2023-01-23,5
+SI,Slovenia,2023-01-23,2
+ES,Spain,2023-01-23,0
+SE,Sweden,2023-01-23,0
+CH,Switzerland,2023-01-23,0
+GB,United Kingdom,2023-01-23,0
+AT,Austria,2023-01-24,14
+BE,Belgium,2023-01-24,0
+BG,Bulgaria,2023-01-24,2
+HR,Croatia,2023-01-24,10
+CY,Cyprus,2023-01-24,0
+CZ,Czechia,2023-01-24,4
+DK,Denmark,2023-01-24,11
+EE,Estonia,2023-01-24,8
+FI,Finland,2023-01-24,0
+FR,France,2023-01-24,51
+DE,Germany,2023-01-24,157
+GR,Greece,2023-01-24,0
+HU,Hungary,2023-01-24,0
+IS,Iceland,2023-01-24,0
+IE,Ireland,2023-01-24,0
+IT,Italy,2023-01-24,0
+LV,Latvia,2023-01-24,0
+LI,Liechtenstein,2023-01-24,0
+LT,Lithuania,2023-01-24,5
+LU,Luxembourg,2023-01-24,2
+MT,Malta,2023-01-24,1
+NL,Netherlands,2023-01-24,0
+NO,Norway,2023-01-24,0
+PL,Poland,2023-01-24,15
+PT,Portugal,2023-01-24,45
+RO,Romania,2023-01-24,0
+SK,Slovakia,2023-01-24,4
+SI,Slovenia,2023-01-24,1
+ES,Spain,2023-01-24,0
+SE,Sweden,2023-01-24,0
+CH,Switzerland,2023-01-24,0
+GB,United Kingdom,2023-01-24,0
+AT,Austria,2023-01-25,6
+BE,Belgium,2023-01-25,0
+BG,Bulgaria,2023-01-25,1
+HR,Croatia,2023-01-25,5
+CY,Cyprus,2023-01-25,0
+CZ,Czechia,2023-01-25,6
+DK,Denmark,2023-01-25,5
+EE,Estonia,2023-01-25,0
+FI,Finland,2023-01-25,0
+FR,France,2023-01-25,-22
+DE,Germany,2023-01-25,138
+GR,Greece,2023-01-25,0
+HU,Hungary,2023-01-25,29
+IS,Iceland,2023-01-25,-39
+IE,Ireland,2023-01-25,31
+IT,Italy,2023-01-25,0
+LV,Latvia,2023-01-25,5
+LI,Liechtenstein,2023-01-25,0
+LT,Lithuania,2023-01-25,-4
+LU,Luxembourg,2023-01-25,1
+MT,Malta,2023-01-25,0
+NL,Netherlands,2023-01-25,0
+NO,Norway,2023-01-25,0
+PL,Poland,2023-01-25,6
+PT,Portugal,2023-01-25,0
+RO,Romania,2023-01-25,0
+SK,Slovakia,2023-01-25,3
+SI,Slovenia,2023-01-25,2
+ES,Spain,2023-01-25,0
+SE,Sweden,2023-01-25,0
+CH,Switzerland,2023-01-25,1
+GB,United Kingdom,2023-01-25,0

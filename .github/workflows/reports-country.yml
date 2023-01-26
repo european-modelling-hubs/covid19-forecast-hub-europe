@@ -14,6 +14,7 @@ on:
 
 jobs:
   country_reports:
+    if: github.repository_owner == 'covid19-forecast-hub-europe'
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
@@ -65,7 +66,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh issue create \
-            --label bug \
-            --title "${{ env.GITHUB_WORKFLOW }} GitHub Action is failing" \
-            --body-file .github/action-issue-template.md
+          gh issue reopen 2633

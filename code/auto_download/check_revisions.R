@@ -13,7 +13,7 @@ sources <-
     Deaths = "JHU",
     Hospitalizations = "ECDC")
 
-target_variables <- 
+target_variables <-
   c(Cases = "inc case",
     Deaths = "inc death",
     Hospitalizations = "inc hosp")
@@ -61,6 +61,10 @@ for (source in names(sources)) {
                  show_col_types = FALSE) %>%
         mutate(commit_date = dates[id])
     )
+  # remove empty dataframes
+  if (class(data[[source]]) == "list") {
+    data[[source]] <- data[[source]][sapply(data[[source]], function(x) nrow(x)>0)]
+  }
 
   data[[source]] <- data[[source]] %>%
     bind_rows() %>%
@@ -164,7 +168,7 @@ for (source in names(sources)) {
            commit_date >= max(commit_date) - weeks(10)) %>% ## plot 10 weeks
     mutate(target_variable = target_variables[type]) %>%
     anti_join(
-      all_anomalies, 
+      all_anomalies,
       by = c("target_end_date", "target_variable", "location", "location_name")
     )
   p <- ggplot(cleaned, aes(x = target_end_date, y = value,
