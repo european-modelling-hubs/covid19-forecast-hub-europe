@@ -1,7 +1,7 @@
 ---
 title: Ensemble performance
 author: Sebastian Funk & Kath Sherratt
-date: 15 December, 2022
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: ioslides_presentation
 ---
 
