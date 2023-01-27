@@ -11,7 +11,7 @@ library("covidHubUtils")
 data_dir <- here::here("data-truth", "ECDC")
 ecdc_scraped_filepath <- here(data_dir, "raw", paste0("scraped.csv"))
 ecdc_scraped_filepath_dated <-
-  here(data_dir, "raw", paste0("scraped_", today(), ".csv"))
+  here(data_dir, "raw", "snapshots", paste0("scraped_", today(), ".csv"))
 pop <- covidHubUtils::hub_locations_ecdc %>%
   select(-population)
 

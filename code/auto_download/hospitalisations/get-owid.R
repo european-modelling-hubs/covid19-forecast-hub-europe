@@ -8,7 +8,7 @@ library(lubridate)
 data_dir <- here("data-truth", "OWID")
 owid_filepath <- here(data_dir, paste0("covid-hospitalizations.csv"))
 owid_filepath_dated <-
-  here(data_dir, paste0("covid-hospitalizations_", today(), ".csv"))
+  here(data_dir, "snapshots", paste0("covid-hospitalizations_", today(), ".csv"))
 pop <- covidHubUtils::hub_locations_ecdc
 
 # Get ECDC published data
