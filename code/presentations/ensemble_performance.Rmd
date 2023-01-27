@@ -69,7 +69,7 @@ ggplot(cov, aes(x = forecast_date, y = cov_50)) +
   facet_grid(target_variable ~ horizon) +
   theme_bw() +
   geom_hline(yintercept = 0.5, linetype = "dashed") +
-  geom_hline(data = overall, aes(yintercept = cov_50), linetype = "dotted") +
+  geom_hline(data = cov_overall, aes(yintercept = cov_50), linetype = "dotted") +
   ylab("50% coverage") +
   scale_x_date(
     "Forecast date",
@@ -85,7 +85,7 @@ ggplot(cov, aes(x = forecast_date, y = cov_95)) +
   facet_grid(target_variable ~ horizon) +
   theme_bw() +
   geom_hline(yintercept = 0.95, linetype = "dashed") +
-  geom_hline(data = overall, aes(yintercept = cov_95), linetype = "dotted") +
+  geom_hline(data = cov_overall, aes(yintercept = cov_95), linetype = "dotted") +
   ylab("95% coverage") +
   scale_x_date(
     "Forecast date",
