@@ -26,15 +26,19 @@ scores <- data |>
   filter(
     !is.na(true_value),
     horizon != 0
-  ) |> 
-  scoringutils::score(
-    metrics = "coverage"
-  ) %>%
-  filter(!is.na(range), range %in% ranges) %>%
-  scoringutils::summarise_scores(
-    by = c("model", "range", "target_variable", "horizon")
-  ) %>%
-  mutate(variable = forcats::fct_recode(target_variable, !!!target_variables))
+  )
+
+if (nrow(scores) > 0) {
+  scores <- scores |>
+    scoringutils::score(
+      metrics = "coverage"
+    ) |>
+    filter(!is.na(range), range %in% ranges) |>
+    scoringutils::summarise_scores(
+      by = c("model", "range", "target_variable", "horizon")
+    ) |>
+    mutate(variable = forcats::fct_recode(target_variable, !!!target_variables))
+}
 
 if (any(scores$model == params$model)) {
   ## only show targets provided by the model (but all horizons)
