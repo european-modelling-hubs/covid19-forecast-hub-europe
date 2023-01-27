@@ -14,6 +14,7 @@ library(forcats)
 library(RColorBrewer)
 library(cowplot)
 library(EuroForecastHub)
+library(covidHubUtils)
 
 # Set parameters
 options(knitr.duplicate.label = "allow")
@@ -34,6 +35,18 @@ models <- list.files(
 ) |>
   purrr::map(yaml::read_yaml) |>
   purrr::map_chr("model_abbr")
+
+last_4_forecast_dates <- report_date - weeks(seq(1, 4))
+
+recently_submitted <- models |>
+  purrr::map_lgl(\(model) any(file.exists(
+    here::here("data-processed", model, paste0(
+      last_4_forecast_dates, "-", model, ".csv"
+    )
+  )))
+)
+
+models <- models[recently_submitted]
 
 # Create function for rendering report for each model
 render_report <- function(model) {
