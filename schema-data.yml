@@ -1,6 +1,6 @@
 $schema: "http://json-schema.org/draft-07/schema"
 title: ForecastHub model data
-escription: >
+description: >
   This is the schema of the forecasts files, please refer to
   https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Forecast-format
   for more info.
