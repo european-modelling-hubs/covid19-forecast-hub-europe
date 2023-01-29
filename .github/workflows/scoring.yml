@@ -2,7 +2,7 @@ name: "Score forecasts"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 9 * * 0"
+    - cron: "0 9 * * 1"
 jobs:
   scores:
     if: github.repository_owner == 'covid19-forecast-hub-europe'
