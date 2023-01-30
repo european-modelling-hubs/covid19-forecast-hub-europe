@@ -7,7 +7,6 @@ script_dir <- here("code", "auto_download", "hospitalisations")
 # Download and save minimally processed data files
 source(here(script_dir, "get-ecdc-official.R"))
 source(here(script_dir, "get-owid.R"))
-source(here(script_dir, "get-non-eu.R"))
 
 # Combine sources across countries, plot, and save as "Hospitalizations - truth"
 source(here(script_dir, "save-selected-sources.R"))
