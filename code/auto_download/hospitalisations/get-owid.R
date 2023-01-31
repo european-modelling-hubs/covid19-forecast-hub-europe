@@ -7,8 +7,9 @@ library(lubridate)
 # Set up
 data_dir <- here("data-truth", "OWID")
 owid_filepath <- here(data_dir, paste0("covid-hospitalizations.csv"))
-owid_filepath_dated <-
-  here(data_dir, paste0("covid-hospitalizations_", today(), ".csv"))
+owid_filepath_dated <- here(
+  data_dir, "snapshots", paste0("covid-hospitalizations_", today(), ".csv")
+)
 pop <- covidHubUtils::hub_locations_ecdc
 
 # Get ECDC published data
@@ -25,8 +26,7 @@ owid <- read_csv(
              by = "location_name") %>%
   # Rescale to count from per 100k
   select(location_name, location, date, value) %>%
-  mutate(source = "OWID",
-         type = "Scraped")
+  mutate(source = "OWID")
 
 # Save
 write_csv(owid, owid_filepath)

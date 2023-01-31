@@ -2,7 +2,7 @@ name: "Create country reports"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 16 * * 0"
+    - cron: "0 16 * * 1"
   push:
     branches: main
     paths:
@@ -14,7 +14,7 @@ on:
 
 jobs:
   country_reports:
-    if: github.repository == 'covid19-forecast-hub-europe'
+    if: github.repository_owner == 'covid19-forecast-hub-europe'
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2

@@ -37,7 +37,7 @@ scraped_weekly <- scraped %>%
 # using ISO weeks (Monday-Sunday), to match official data source
 owid_weekly <- owid |>
   filter(lubridate::wday(date, week_start = 1) == 7) |>
-  select(location_name, location, date, value, source, type)
+  select(location_name, location, date, value, source)
 
 # Select appropriate source (pre-set)
 sources <- read_csv(here("code", "auto_download", "hospitalisations",

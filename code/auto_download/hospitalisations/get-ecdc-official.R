@@ -9,7 +9,7 @@ library(lubridate)
 data_dir <- here("data-truth", "ECDC")
 ecdc_official_filepath <- here(data_dir, "raw", paste0("official.csv"))
 ecdc_official_filepath_dated <-
-  here(data_dir, "raw", paste0("official_", today(), ".csv"))
+  here(data_dir, "raw", "snapshots", paste0("official_", today(), ".csv"))
 pop <- covidHubUtils::hub_locations_ecdc
 
 # Get ECDC published data
