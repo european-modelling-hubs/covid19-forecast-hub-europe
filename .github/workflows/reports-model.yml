@@ -17,9 +17,9 @@ jobs:
     if: github.repository_owner == 'covid19-forecast-hub-europe'
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - uses: r-lib/actions/setup-r@v1
+      - uses: r-lib/actions/setup-r@v2
         with:
           install-r: false
           use-public-rspm: true
@@ -36,7 +36,7 @@ jobs:
       - name: Create model reports
         run: Rscript 'code/reports/compile-model-reports.r'
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: github.event_name != 'pull_request'
         with:
           name: model-reports
@@ -44,7 +44,7 @@ jobs:
           path: |
             html/
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         # If we are in a PR, we want to access the artifacts but we don't want
         # them to be used to build the site
         if: github.event_name == 'pull_request'
