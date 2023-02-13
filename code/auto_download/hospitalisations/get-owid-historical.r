@@ -22,7 +22,7 @@ get_owid_historical <- function(earliest_date = lubridate::today()) {
            owner = owner,
            repo = repo,
            path = path,
-           date = earliest_date,
+           date = earliest_date - 1,
            .limit = Inf)
 
   ## extract dates of commits
