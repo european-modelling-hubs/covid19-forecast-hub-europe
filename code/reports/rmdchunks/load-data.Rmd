@@ -65,7 +65,7 @@ cutoffs <- readr::read_csv(here::here(
   mutate(target_variable = "inc hosp")
 
 truth <- raw_truth %>%
-  mutate(model = NA_character_) %>%
+  select(-model) |>
   rename(true_value = value) |>
   left_join(cutoffs, by = c("location", "location_name", "target_variable")) |>
   replace_na(list(cutoff = 0)) |>
@@ -104,7 +104,10 @@ horizon_0 <- forecasts |>
   filter(horizon == 0L)
 
 data <- full_join(horizon_0, forecasts) |> 
-  scoringutils::merge_pred_and_obs(truth, join = "full") |>
+  scoringutils::merge_pred_and_obs(
+    truth, join = "full",
+    by = c("location", "target_end_date", "target_variable", "location_name",
+           "population")) |>
   mutate(prediction = ifelse(horizon == "0" & is.na(prediction), true_value, prediction))
 ```
 

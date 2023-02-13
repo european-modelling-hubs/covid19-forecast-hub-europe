@@ -11,6 +11,10 @@ library(EuroForecastHub)
 
 options(knitr.duplicate.label = "allow")
 
+# Check the latest weekly evaluation
+eval_dates <- dir(here("evaluation", "weekly-summary"))
+eval_dates <- as.Date(gsub("(evaluation-)|(.csv)", "", eval_dates))
+
 report_date <- today()
 wday(report_date) <- get_hub_config("forecast_week_day")
 
