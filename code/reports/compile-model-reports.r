@@ -36,7 +36,7 @@ models <- list.files(
   purrr::map(yaml::read_yaml) |>
   purrr::map_chr("model_abbr")
 
-last_4_forecast_dates <- report_date - weeks(seq(1, 4))
+last_4_forecast_dates <- report_date - days(seq(1, 34))
 
 recently_submitted <- models |>
   purrr::map_lgl(\(model) any(file.exists(
