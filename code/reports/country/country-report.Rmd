@@ -4,6 +4,7 @@ params:
   report_date: "2021-06-21"
   location_name: "Overall"
   plot_weeks: 4
+  report_models: "EuroCOVIDhub-ensemble"
   data_weeks: 10
   config: "https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/project-config.json"
 output:
@@ -40,6 +41,7 @@ include_countries <- include_forecast_plot ||
   include_ranks_over_time
 
 report_date <- ymd(params$report_date)
+report_models <- params$report_models
 facetting_var <- rlang::quo(model)
 ```
 
