@@ -1,6 +1,7 @@
 <!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
 ```{r}
 library(covidHubUtils)
+library(EuroForecastHub)
 library(readr)
 library(dplyr)
 library(here)
@@ -53,11 +54,13 @@ raw_forecasts <- arrow::open_dataset(
 
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(
-  truth_source = "JHU",
   temporal_resolution = "weekly",
   truth_end_date = report_date,
   hub = "ECDC"
 )
+
+raw_truth <- raw_truth |>
+  add_hosp_status()
 
 cutoffs <- readr::read_csv(here::here(
   "data-truth", "OWID", "recommended-cutoffs.csv"
