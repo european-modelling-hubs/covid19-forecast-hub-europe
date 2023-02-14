@@ -72,8 +72,23 @@ cutoff_truth_data <- vroom::vroom(
   tidyr::replace_na(list(cutoff_weeks = 0)) |>
   dplyr::filter(floor(as.integer(snapshot_date - date) / 7) >= cutoff_weeks)
 
+sources <- cutoff_truth_data |>
+  dplyr::mutate(
+    source = "OWID",
+    type = "Scraped"
+  ) |>
+  dplyr::select(location_name, source, type, truncate_weeks = cutoff_weeks) |>
+  dplyr::distinct()
 vroom::vroom_write(
-  cutoff_truth_data,
+  sources,
+  here::here(
+    "code", "auto_download", "hospitalisations", "check-sources", "sources.csv"
+  ),
+  delim = ","
+)
+
+vroom::vroom_write(
+  cutoff_truth_data |> dplyr::select(-cutoff_weeks),
   here::here(
     "data-truth", "OWID", "truncated_OWID-Incident Hospitalizations.csv"
   ),
