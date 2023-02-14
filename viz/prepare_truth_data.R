@@ -9,7 +9,7 @@ library(tidyr)
 truth <- c(
   "inc_death" = "JHU/truth_JHU-Incident Deaths.csv",
   "inc_case" = "JHU/truth_JHU-Incident Cases.csv",
-  "inc_hosp" = "ECDC/truth_ECDC-Incident Hospitalizations.csv"
+  "inc_hosp" = "OWID/truncated_OWID-Incident Hospitalizations.csv"
 ) |>
   imap(~ read_csv(here("data-truth", .x)) %>% mutate(name = .y)) |>
   bind_rows()

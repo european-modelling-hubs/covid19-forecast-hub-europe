@@ -70,10 +70,12 @@ cutoff_truth_data <- vroom::vroom(
 ) |>
   dplyr::left_join(recommended_cutoffs, by = c("location", "location_name")) |>
   tidyr::replace_na(list(cutoff_weeks = 0)) |>
-  filter(floor(as.integer(snapshot_date - date) / 7) >= cutoff_weeks)
+  dplyr::filter(floor(as.integer(snapshot_date - date) / 7) >= cutoff_weeks)
 
 vroom::vroom_write(
   cutoff_truth_data,
-  here::here("data-truth", "OWID", "truncated_OWID-Incident Hospitalizations.csv"),
+  here::here(
+    "data-truth", "OWID", "truncated_OWID-Incident Hospitalizations.csv"
+  ),
   delim = ","
 )

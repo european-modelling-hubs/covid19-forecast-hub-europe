@@ -32,7 +32,7 @@ if (length(final_files) > 0) {
 }
 
 if (length(final_dates) == 0) {
-  stop("No new data to process." )
+  stop("No new data to process.")
 }
 
 if (min(final_dates) == min(snapshot_dates) - days(28) + 1) {
