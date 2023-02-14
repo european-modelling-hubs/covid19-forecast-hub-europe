@@ -5,7 +5,8 @@ library("purrr")
 library("dplyr")
 library("vroom")
 
-get_owid_historical <- function(earliest_date = lubridate::today()) {
+get_owid_historical <- function(earliest_date = lubridate::today(),
+                                latest_date = lubridate::today()) {
   ## set path to covid data
   owner <- "owid"
   repo <- "covid-19-data"
@@ -35,6 +36,11 @@ get_owid_historical <- function(earliest_date = lubridate::today()) {
       date = lubridate::date(datetime)
     )
 
+  anomalies <- vroom::vroom(
+    here::here("data-truth", "OWID", "snapshots", "anomalies.csv"),
+    show_col_types = FALSE
+  )
+
   dl_snapshot <- function(x) {
     ## find latest commit at 12:07 each day
     data_commit <- commit_dates |>
@@ -54,7 +60,14 @@ get_owid_historical <- function(earliest_date = lubridate::today()) {
       dplyr::inner_join(pop, by = "location_name") |>
       dplyr::filter(grepl("hospital admissions$", indicator)) |>
       dplyr::select(location_name, location, date, value) %>%
-      dplyr::mutate(source = "OWID")
+      dplyr::mutate(
+        source = "OWID",
+        snapshot_date = x
+      ) |>
+      dplyr::anti_join(
+        anomalies, by = c("location", "location_name", "snapshot_date")
+      ) |>
+      select(-snapshot_date)
 
     data_dir <- here::here("data-truth", "OWID", "snapshots")
     owid_filepath_dated <- here::here(data_dir,
@@ -66,7 +79,7 @@ get_owid_historical <- function(earliest_date = lubridate::today()) {
 
   ## save snapshots
   snapshots <- purrr::map(
-    seq(earliest_date, lubridate::today(), by = "day"),
+    seq(earliest_date, latest_date, by = "day"),
     dl_snapshot
   )
 
