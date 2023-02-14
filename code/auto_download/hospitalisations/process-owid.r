@@ -127,8 +127,16 @@ new_data <- latest_snapshot |>
   dplyr::select(-cutoff_weeks)
 
 df <- latest_final |>
-  mutate(status = "final") |>
-  bind_rows(new_data) |>
-  arrange(location_name, location, date)
+  dplyr::mutate(status = "final") |>
+  dplyr::bind_rows(new_data) |>
+  dplyr::arrange(location_name, location, date)
+
+## remove countries with stale data (nothing for 4 weeks)
+df <- df |>
+  dplyr::group_by(location) |>
+  dplyr::mutate(max_loc_snapshot = max(snapshot_date)) |>
+  dplyr::ungroup() |>
+  dplyr::filter(max_loc_snapshot > max(snapshot_date) - days(28)) |>
+  dplyr::select(-max_loc_snapshot)
 
 write_csv(df, file.path(owid_dir, "truth_OWID-Incident Hospitalizations.csv"))

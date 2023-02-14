@@ -37,10 +37,10 @@ hosp_locations <- sort(unique(hosp_data$location_name))
 if (nrow(hosp_data > 0)) {
   gaps <- hosp_data %>%
     group_by(location_name) %>%
-    slice_max(date, n = 1) %>%
+    slice_max(snapshot_date, n = 1) %>%
     ungroup() %>%
-    mutate(date_diff = max(date) - date) %>%
-    filter(date < max(date) & date_diff > 14) %>%
+    mutate(date_diff = max(snapshot_date) - snapshot_date) %>%
+    filter(snapshot_date < max(snapshot_date) & date_diff > 14) %>%
     pull(location_name)
   show_text_gaps <- length(gaps) > 0
 } else {
