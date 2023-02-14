@@ -8,10 +8,13 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 library(gh)
 library(dplyr)
 library(stringr)
+library(lubridate)
 library(here)
 library(readr)
 library(tibble)
 library(countrycode)
+library(ggplot2)
+library(scales)
 ```
 
 ## Truth data
@@ -46,9 +49,10 @@ if (nrow(hosp_data > 0)) {
 ```
 
 ```{r, eval=show_text_gaps, results="asis"}
-cat(paste0(
-  "- **Data warning!** Recent missing data in: ", knitr::combine_words(gaps)
-))
+cat(
+  "- **Data warning!** Recent missing data in:",
+  knitr::combine_words(gaps), "\n"
+)
 ```
 
 The Hub validates and evaluates forecasts against data collated by [Our World in Data](https://ourworldindata.org/covid-hospitalizations).
@@ -68,14 +72,68 @@ The files in this directory are the ones used for scoring the forecasts for thei
 The single dataset in [OWID/truth_OWID-Incident Hospitalizations.csv](OWID/truth_OWID-Incident Hospitalizations.csv) contains the latest data, where the final versions of the data are included for dates more than 28 days before the latest snapshot date, and the most recent version for any subsequent data.
 This is the dataset recommended for use in models that can take into account the truncation of the data.
 
-We further provide a set of [recommended_cutoffs.csv](recommended cutoffs) for use with these data.
+We further provide a set of [recommended cutoffs](recommended-cutoffs.csv) for use with these data.
 These are estimates of the truncation in the number of weeks that should be cut off the data set if the aim is to have a data set that is not further revised by more than 5%.
 
 The corresponding dataset in [OWID/truncated_OWID-Incident Hospitalizations.csv](OWID/truth_OWID-Incident Hospitalizations.csv) has these recent weeks removed and is recommended for use in models that cannot take into account the truncation of the data.
 
+The latest hospitalisation data is plotted below, with the dashed line indicating data expecting to be substanially revised.
+
+```{r weekly_hosp_data, echo = FALSE}
+status_factors <- c("final", "near final", "expecting revisions")
+weekly_hosp_data <- hosp_data |>
+  dplyr::mutate(status = factor(
+      status, levels = status_factors
+    ),
+    week = floor_date(x = date, unit = "week", week_start = 1)
+  ) |>
+  dplyr::group_by(location_name, location, source, week) |>
+  dplyr::summarise(
+    value = sum(value),
+    status = factor(max(as.integer(status)),
+                    levels = seq_along(status_factors), 
+                    labels = status_factors),
+    n = n(),
+    .groups = "drop"
+  ) |>
+  dplyr::group_by(location_name, location, source) |>
+  dplyr::mutate(frequency = dplyr::if_else(all(n == 1), "weekly", "daily")) |>
+  dplyr::ungroup() |>
+  dplyr::filter(frequency ==  "weekly" | n == 7,
+                week >= max(week) - lubridate::weeks(8)) |>
+  dplyr::select(-n, -frequency)
+duplicate_final <- weekly_hosp_data |>
+  dplyr::group_by(location, location_name, source) |>
+  dplyr::filter(any(status == "expecting revisions"),
+                status != "expecting revisions") |>
+  dplyr::filter(week == max(week)) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(status = "expecting revisions")
+weekly_hosp_data <- weekly_hosp_data |>
+  bind_rows(duplicate_final)
+  
+p <- ggplot2::ggplot(
+       weekly_hosp_data |> filter(status != "expecting revisions"),
+       ggplot2::aes(x = week, y = value)
+  ) +
+  ggplot2::geom_line() +
+  ggplot2::geom_line(
+    data = weekly_hosp_data |> filter(status == "expecting revisions"),
+    linetype = "dashed"
+  ) +
+  ggplot2::scale_y_continuous(labels = scales::comma) +
+  ggplot2::scale_x_date(breaks = scales::breaks_pretty(4),
+                        labels = scales::label_date_short()) +
+  ggplot2::facet_wrap(. ~ location_name, scales = "free_y") +
+  ggplot2::theme_bw() +
+  ggplot2::ylab("Hospitalisations") +
+  ggplot2::xlab("")
+```
+
+
 ### Cases and deaths
 
-We evaluate forecasts of cases and deaths against [Johns Hopkins University data](https://github.com/CSSEGISandData/COVID-19), and we recommend using this dataset as the basis for forecasts.
+We further evaluate forecasts of cases and deaths against [Johns Hopkins University data](https://github.com/CSSEGISandData/COVID-19), and we recommend using this dataset as the basis for forecasts.
 
 -   Daily numbers of cases and deaths are available to download from [JHU](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series), or from [our repository](https://github.com/epiforecasts/covid19-forecast-hub-europe/data-truth).
 -   JHU also provide [country metadata](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv), including population counts and ISO-3 codes.
@@ -142,4 +200,5 @@ We do not use or evaluate against these data, but the following might be useful 
 | Vaccination         | Number of vaccine doses distributed by manufacturers, number of first, second and unspecified doses administered                         | ECDC   | [Data on COVID-19 vaccination in the EU/EEA](https://www.ecdc.europa.eu/en/publications-data/data-covid-19-vaccination-eu-eea)  |
 | Variants of concern | Volume of COVID-19 sequencing, the number and percentage distribution of VOC for each country, week and variant submitted since 2020-W40 | ECDC   | [Data on SARS-CoV-2 variants in the EU/EEA](https://www.ecdc.europa.eu/en/publications-data/data-virus-variants-covid-19-eueea) |
 | Testing             | Weekly testing rate and weekly test positivity                                                                                           | ECDC   | [Data on testing for COVID-19 by week and country](https://www.ecdc.europa.eu/en/publications-data/covid-19-testing)            |
+
 
