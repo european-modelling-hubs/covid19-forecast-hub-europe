@@ -20,12 +20,12 @@ properties:
       pattern: ^forecast$
   target:
     description: >
-      '"# wk ahead inc case" or "# wk ahead inc death" where # is usually
-      between 1 and 4'
+      '"# wk ahead inc hosp" or "# wk ahead inc case" or "# wk ahead inc death" where # is usually
+      between -3 and 4'
     type: array
     items:
       type: string
-      pattern: ^\d+ wk ahead inc
+      pattern: ^-?\d+ wk ahead inc (hosp|case|death)
   target_end_date:
     description: Date as YYYY-MM-DD, the last day (Saturday) of the target week
     type: array
