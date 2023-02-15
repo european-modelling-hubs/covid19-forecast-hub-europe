@@ -11,7 +11,8 @@ library(arrow)
 
 ```{r}
 locations <- read_csv(
-  here::here("data-locations", "locations_eu.csv")
+  here::here("data-locations", "locations_eu.csv"),
+  show_col_types = FALSE
 ) |> 
   dplyr::select(location, location_name, population)
 ```
@@ -62,21 +63,9 @@ raw_truth <- load_truth(
 raw_truth <- raw_truth |>
   add_hosp_status()
 
-cutoffs <- readr::read_csv(here::here(
-  "data-truth", "OWID", "recommended-cutoffs.csv"
-), show_col_types = FALSE) |>
-  mutate(target_variable = "inc hosp")
-
 truth <- raw_truth %>%
   select(-model) |>
-  rename(true_value = value) |>
-  left_join(cutoffs, by = c("location", "location_name", "target_variable")) |>
-  replace_na(list(cutoff = 0)) |>
-  group_by(location, target_variable) |>
-  mutate(
-    weeks_since = interval(target_end_date, max(target_end_date)) / weeks(1)
-  ) |>
-  ungroup()
+  rename(true_value = value)
 
 # get anomalies
 anomalies <- read_csv(paste0(hub_repo, "/raw/main/data-truth/anomalies/anomalies.csv"),
