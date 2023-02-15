@@ -36,7 +36,7 @@ raw_forecasts <- arrow::open_dataset(
   # Ideally, we would handle this with separate() but it's not yet implemented 
   # in arrow
   dplyr::mutate(
-    horizon = as.integer(gsub("^(\\d+) .*", "\\1", target)),
+    horizon = as.integer(gsub("^-?(\\d+) .*", "\\1", target)),
     target_variable = gsub(".* (\\w+ \\w+)$", "\\1", target),
     .keep = "unused"
   ) |> 
@@ -89,7 +89,7 @@ horizon_0 <- forecasts |>
   group_by(model, forecast_date, location, location_name, population, target_variable, quantile) |> 
   summarise(
     horizon = min(horizon) - 1L,
-    target_end_date = unique(forecast_date) - 2,
+    target_end_date = min(target_end_date) - 7,
     type = "point",
     .groups = "drop",
     connector = TRUE

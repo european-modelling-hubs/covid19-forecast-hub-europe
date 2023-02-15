@@ -102,25 +102,29 @@ for (fcast_date in as.character(forecast_dates)) {
         location, target_end_date, target_variable, location_name, true_value
       ) |>
       distinct()
-     
+
     plot_data <- plot_data |>
       filter(
-        status != "expecting revisions"
+        is.na(status) | status != "expecting revisions"
       )
 
-    plot_data_connect <- plot_data |>
-      filter(!is.na(true_value),
-        location %in% unique(truncated_data$location)) |>
-      dplyr::select(
-      location, target_end_date, target_variable, location_name, true_value
-      ) |>
-      dplyr::distinct() |>
-      dplyr::group_by(location) |>
-      dplyr::filter(target_end_date == max(target_end_date)) |>
-      dplyr::ungroup()
+    if (nrow(truncated_data) > 0) {
+      plot_data_connect <- plot_data |>
+        filter(
+          !is.na(true_value),
+          location %in% unique(truncated_data$location)
+        ) |>
+        dplyr::select(
+          location, target_end_date, target_variable, location_name, true_value
+        ) |>
+        dplyr::distinct() |>
+        dplyr::group_by(location) |>
+        dplyr::filter(target_end_date == max(target_end_date)) |>
+        dplyr::ungroup()
 
-    truncated_data <- truncated_data |>
-      bind_rows(plot_data_connect)
+      truncated_data <- truncated_data |>
+        bind_rows(plot_data_connect)
+    }
 
     if (nrow(plot_data) == 0) {
       cat("No forecasts available, possibly because of recent anomalies in the available data.")
