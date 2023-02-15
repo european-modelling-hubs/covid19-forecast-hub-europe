@@ -91,16 +91,17 @@ horizon_0 <- forecasts |>
     horizon = min(horizon) - 1L,
     target_end_date = unique(forecast_date) - 2,
     type = "point",
-    .groups = "drop"
-    ) |>
-  filter(horizon == 0L)
+    .groups = "drop",
+    connector = TRUE
+  )
 
 data <- full_join(horizon_0, forecasts) |> 
   scoringutils::merge_pred_and_obs(
     truth, join = "full",
     by = c("location", "target_end_date", "target_variable", "location_name",
            "population")) |>
-  mutate(prediction = ifelse(horizon == "0" & is.na(prediction), true_value, prediction))
+  mutate(prediction = ifelse(connector & is.na(prediction), true_value, prediction)) |>
+  select(-connector) )
 ```
 
 ## {.unlisted .unnumbered}
