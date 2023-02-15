@@ -128,7 +128,7 @@ p <- ggplot2::ggplot(
   ggplot2::theme_bw() +
   ggplot2::ylab("Hospitalisations") +
   ggplot2::xlab("")
-ggsave("plots/hospitalisations.svg", p)
+ggsave("plots/hospitalisations.svg", p, width = 14, height = 10)
 ```
 
 ![Plot of hospitalisations](plots/hospitalisations.svg)
