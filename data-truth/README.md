@@ -5,13 +5,9 @@ European data status
 
 ### Hospitalisations
 
-- Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark, Estonia, France,
-  Germany, Greece, Iceland, Ireland, Italy, Latvia, Liechtenstein,
-  Luxembourg, Malta, Netherlands, Norway, Slovakia, Slovenia, Spain,
-  Switzerland, United Kingdom
-
-- **Data warning!** Recent missing data in: Bulgaria, Croatia, Norway,
-  Slovakia, Switzerland, and United Kingdom
+- Belgium, Cyprus, Czechia, Denmark, Estonia, France, Germany, Greece,
+  Iceland, Ireland, Italy, Latvia, Liechtenstein, Luxembourg, Malta,
+  Netherlands, Slovakia, Slovenia, Spain, Switzerland
 
 The Hub validates and evaluates forecasts against data collated by [Our
 World in Data](https://ourworldindata.org/covid-hospitalizations). These
@@ -46,20 +42,23 @@ and the most recent version for any subsequent data. This is the dataset
 recommended for use in models that can take into account the truncation
 of the data.
 
-We further provide a set of
-[recommended_cutoffs.csv](recommended%20cutoffs) for use with these
-data. These are estimates of the truncation in the number of weeks that
-should be cut off the data set if the aim is to have a data set that is
-not further revised by more than 5%.
+We further provide a set of [recommended
+cutoffs](recommended-cutoffs.csv) for use with these data. These are
+estimates of the truncation in the number of weeks that should be cut
+off the data set if the aim is to have a data set that is not further
+revised by more than 5%.
 
 The corresponding dataset in [OWID/truncated_OWID-Incident
 Hospitalizations.csv](OWID/truth_OWID-Incident%20Hospitalizations.csv)
 has these recent weeks removed and is recommended for use in models that
 cannot take into account the truncation of the data.
 
+The latest hospitalisation data is plotted below, with the dashed line
+indicating data expecting to be substanially revised.
+
 ### Cases and deaths
 
-We evaluate forecasts of cases and deaths against [Johns Hopkins
+We further evaluate forecasts of cases and deaths against [Johns Hopkins
 University data](https://github.com/CSSEGISandData/COVID-19), and we
 recommend using this dataset as the basis for forecasts.
 
