@@ -101,7 +101,7 @@ data <- full_join(horizon_0, forecasts) |>
     by = c("location", "target_end_date", "target_variable", "location_name",
            "population")) |>
   mutate(prediction = ifelse(connector & is.na(prediction), true_value, prediction)) |>
-  select(-connector) )
+  select(-connector)
 ```
 
 ## {.unlisted .unnumbered}
