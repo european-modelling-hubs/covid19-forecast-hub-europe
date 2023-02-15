@@ -126,9 +126,10 @@ p <- ggplot2::ggplot(
                         labels = scales::label_date_short()) +
   ggplot2::facet_wrap(. ~ location_name, scales = "free_y") +
   ggplot2::theme_bw() +
-  ggplot2::ylab("Hospitalisations") +
-  ggplot2::xlab("")
-ggsave("plots/hospitalisations.svg", p, width = 14, height = 10)
+  ggplot2::ylab("Weekly number of hospitalisations") +
+  ggplot2::xlab("") +
+  ggplot2::expand_limits(y = 0)
+ggsave("plots/hospitalisations.svg", p, width = 10.5, height = 7.5)
 ```
 
 ![Plot of hospitalisations](plots/hospitalisations.svg)

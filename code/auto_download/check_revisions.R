@@ -11,14 +11,14 @@ min_data <- as.Date("2021-03-08") ## earliest date to pot in data
 sources <-
   c(Cases = "JHU",
     Deaths = "JHU",
-    Hospitalizations = "ECDC")
+    Hospitalizations = "OWID")
 
 target_variables <-
   c(Cases = "inc case",
     Deaths = "inc death",
     Hospitalizations = "inc hosp")
 
-owner <- "epiforecasts"
+owner <- "covid19-forecast-hub-europe"
 repo <- "covid19-forecast-hub-europe"
 path <- vapply(names(sources), function(x) {
   paste("data-truth", sources[[x]],
@@ -33,7 +33,6 @@ for (source in names(sources)) {
   if (!is.null(earliest_date)) {
     query <- paste0(query, "&since={date}")
   }
-
   commits <-
     gh::gh(query,
       owner = owner,
@@ -42,14 +41,11 @@ for (source in names(sources)) {
       date = earliest_date,
       .limit = Inf
     )
-
   shas <- vapply(commits, "[[", "", "sha")
   dates <- vapply(commits, function(x) x[["commit"]][["author"]][["date"]], "")
   dates <- as_date(ymd_hms(dates))
-
   ## keep multiples of 7 since today
   select_commits <- which(as.integer(max(dates) - dates) %% 7 == 0)
-
   data[[source]] <-
     lapply(
       select_commits,
@@ -65,7 +61,6 @@ for (source in names(sources)) {
   if (class(data[[source]]) == "list") {
     data[[source]] <- data[[source]][sapply(data[[source]], function(x) nrow(x)>0)]
   }
-
   data[[source]] <- data[[source]] %>%
     bind_rows() %>%
     mutate(type = {{ source }})
@@ -128,6 +123,7 @@ anomalies_sources <- data |>
   select(-commit_date)
 
 anomalies_raw <- data %>%
+  filter(type != "Hospitalizations") %>%
   group_by(location, location_name, target_end_date, type) %>%
   summarise(abs_diff = max(value) - min(value),
             rel_diff = abs_diff / max(value),
@@ -143,11 +139,6 @@ anomalies <- bind_rows(anomalies_sources, anomalies_revisions) |>
   group_by(target_end_date, target_variable, location, location_name) |>
   slice(1) |>
   ungroup()
-
-hosp_sources <-
-  read_csv(here::here("code", "auto_download", "hospitalisations",
-                      "check-sources", "sources.csv"),
-           show_col_types = FALSE)
 
 anomalies_file <- here::here("data-truth", "anomalies", "anomalies.csv")
 existing_anomalies <- read_csv(anomalies_file, show_col_types = FALSE)
