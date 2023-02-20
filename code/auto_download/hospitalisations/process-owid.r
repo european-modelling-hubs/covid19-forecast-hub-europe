@@ -1,6 +1,7 @@
 library("readr")
 library("lubridate")
 library("purrr")
+library("dplyr")
 
 cat("Processing OWID data.\n")
 
@@ -14,7 +15,10 @@ snapshot_files <- list.files(snapshot_dir)
 final_files <- list.files(final_dir)
 
 snapshot_dates <- as.Date(
-  sub("^covid-hospitalizations_(.*)\\.csv", "\\1", snapshot_files)
+  sub(
+    "^covid-hospitalizations_(.*)\\.csv", "\\1",
+    grep("^covid-hospitalizations_", snapshot_files, value = TRUE)
+  )
 )
 
 final_dates <- seq(
@@ -95,7 +99,6 @@ for (final_date_chr in as.character(final_dates)) {
 }
 
 ## create master data file
-
 recommended_cutoffs <- readr::read_csv(
   file.path(owid_dir, "recommended-cutoffs.csv"),
   show_col_types = FALSE
@@ -139,4 +142,31 @@ df <- df |>
   dplyr::filter(max_loc_snapshot > max(snapshot_date) - days(28)) |>
   dplyr::select(-max_loc_snapshot)
 
-write_csv(df, file.path(owid_dir, "truth_OWID-Incident Hospitalizations.csv"))
+
+## identify and shift weekly data
+df <- df |>
+  dplyr::mutate(sat_date = lubridate::ceiling_date(
+    lubridate::ymd(date), unit = "week"
+  ) - 1) |>
+  dplyr::group_by(
+    location_name, location, source, sat_date
+  )  |>
+  dplyr::mutate(n = dplyr::n())  |> ## count observations per Saturday date
+  dplyr::group_by(
+    location_name, location, source,
+  )  |>
+  ## check if data is weekly or daily
+  dplyr::mutate(
+    frequency = dplyr::if_else(all(n == 1), "weekly", "daily")
+  ) |>
+  dplyr::ungroup() |>
+  ## if weekly and end date is previous Sunday, make end date the Saturday
+  ## instead, i.e. interpret Mon-Sun as Sun-Sat
+  dplyr::mutate(date = dplyr::if_else(
+    frequency == "weekly" & date + 6 == sat_date, date + 6, date
+  )) |>
+  dplyr::select(-sat_date, -n)
+
+readr::write_csv(
+  df, file.path(owid_dir, "truth_OWID-Incident Hospitalizations.csv")
+)

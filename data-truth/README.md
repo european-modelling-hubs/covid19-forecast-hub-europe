@@ -40,7 +40,11 @@ contains the latest data, where the final versions of the data are
 included for dates more than 28 days before the latest snapshot date,
 and the most recent version for any subsequent data. This is the dataset
 recommended for use in models that can take into account the truncation
-of the data.
+of the data. Please note that the data in this file is a mixture of
+daily and weekly data (indicated in the `frequency` column), where
+weekly data has been shifted back one day to Saturday (instead of
+Sunday) to compley with the Hub definition of an epidemiological week
+(Sunday-Saturday).
 
 We further provide a set of [recommended
 cutoffs](recommended-cutoffs.csv) for use with these data. These are
