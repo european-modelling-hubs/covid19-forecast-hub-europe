@@ -5,6 +5,7 @@ params:
   plot_weeks: 1
   data_weeks: "10"
   model: "EuroCOVIDhub-ensemble"
+  report_models: "EuroCOVIDhub-ensemble"
   config: "https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/project-config.json"
 output:
   html_document:
@@ -36,6 +37,7 @@ restrict_weeks <- params$restrict_weeks
 
 report_date <- params$report_date
 model <- params$model
+report_models <- params$report_models
 facetting_var <- rlang::quo(location_name)
 
 ## first model (ensemble) always in blue, others in red

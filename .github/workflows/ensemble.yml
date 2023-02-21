@@ -2,7 +2,7 @@ name: "Ensemble"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 11 * * 2,3"
+    - cron: "15 11,23 * * 2,3"
 
 jobs:
   ensemble:

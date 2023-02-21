@@ -11,10 +11,8 @@ metadata_files <- list.files(
 )
 metadata <- purrr::map(metadata_files, yaml::read_yaml)
 
-models <- purrr::map_chr(metadata, "model_abbr")
-
 l <- tags$ul(class = "dropdown-menu", `aria-labelledby` = "dropdownMenuButton")
-l$children <- lapply(models, function(m) {
+l$children <- lapply(report_models, function(m) {
   tags$li(
     class = "dropdown-item", 
     a(href = paste0("model-report-", m, ".html"), m)

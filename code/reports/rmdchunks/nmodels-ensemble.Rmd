@@ -2,12 +2,18 @@
 
 <!--- Number of models included in the ensemble for each country and target --->
 ```{r}
-nmodels <- paste0(hub_repo, "/raw/main/code/ensemble/EuroCOVIDhub/criteria/criteria-", report_date, ".csv") |> 
+# Check the latest weekly evaluation
+ensemble_dir <- here("code", "ensemble", "EuroCOVIDhub", "criteria")
+ensemble_dates <- dir(ensemble_dir)
+ensemble_dates <- as.Date(gsub("(criteria-)|(.csv)", "", ensemble_dates))
+
+latest_ensemble_date <- max(ensemble_dates)
+
+nmodels <- here(ensemble_dir, paste0("criteria-", latest_ensemble_date, ".csv")) |>
   read_csv(show_col_types = FALSE) |>
   group_by(location, target_variable) |> 
   count() |> 
   pivot_wider(names_from = target_variable, values_from = n) 
-```
 
 ```{r}
 nmodels |> 

@@ -36,7 +36,7 @@ models <- list.files(
   purrr::map(yaml::read_yaml) |>
   purrr::map_chr("model_abbr")
 
-last_4_forecast_dates <- report_date - weeks(seq(1, 4))
+last_4_forecast_dates <- report_date - days(seq(1, 34))
 
 recently_submitted <- models |>
   purrr::map_lgl(\(model) any(file.exists(
@@ -56,7 +56,8 @@ render_report <- function(model) {
                     params = list(model = model,
                                   report_date = report_date,
                                   plot_weeks = 1,
-                                  data_weeks = 10),
+                                  data_weeks = 10,
+                                  report_models = models),
                     output_format = "html_document",
                     output_file =
                       here::here("html",
