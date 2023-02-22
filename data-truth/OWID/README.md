@@ -1,8 +1,6 @@
 Hospitalisation data
 ================
 
-# Hospitalisation data
-
 The files in this directory are listed below. For more details on these
 see also the [data-truth](..) directory.
 
