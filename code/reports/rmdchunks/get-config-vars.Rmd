@@ -1,6 +1,7 @@
 <!--- Fetch various values from the config file --->
 ```{r}
 horizons <- get_hub_config("horizon", config_file = params$config)$values
+horizons <- horizons[horizons > 0]
 data_types <- get_hub_config("target_variables", config_file = params$config)
 quantiles <- get_hub_config("forecast_type", config_file = params$config)$quantiles
 ensemble_model <- get_hub_config("ensemble", config_file = params$config)[["name"]]
