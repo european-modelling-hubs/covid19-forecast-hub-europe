@@ -7,13 +7,15 @@ European data status
 
 - Belgium, Cyprus, Czechia, Denmark, Estonia, France, Germany, Greece,
   Iceland, Ireland, Italy, Latvia, Liechtenstein, Luxembourg, Malta,
-  Netherlands, Slovakia, Slovenia, Spain, Switzerland
+  Slovakia, Slovenia, Spain, Switzerland
+
+- **Data warning!** Recent missing data in: Switzerland
 
 The Hub validates and evaluates forecasts against data collated by [Our
-World in Data](https://ourworldindata.org/covid-hospitalizations). These
-data are provided as reported by national health authorities and
-therefore are not consistent in definition, and care needs to be taken
-in interpreting them.
+World in Data](https://ourworldindata.org/covid-hospitalizations),
+provided in the [OWID](OWID) directory. These data are provided as
+reported by national health authorities and therefore are not consistent
+in definition, and care needs to be taken in interpreting them.
 
 One particular issue that affects several of the hospitalisation data
 streams it the one of right truncation. This occurs when these are
@@ -27,12 +29,12 @@ revisions will be ignored for the purposes of the Hub.
 
 We provide multiple views of the data in order to facilitate modelling
 of COVID-19 hospitalisations with a 28 day cutoff. In the
-[snapshot](snapshot) directory we provide daily snapshots of the
+[snapshot](OWID/snapshot) directory we provide daily snapshots of the
 COVID-19 hospitalisation data as collated by Our World in Data, before
-any further processing is applied. In the [final](final) directory we
-provide data that are considered “final”, i.e. they stop 28 days before
-the latest date. The files in this directory are the ones used for
-scoring the forecasts for their performance against observed data.
+any further processing is applied. In the [final](OWID/final) directory
+we provide data that are considered “final”, i.e. they stop 28 days
+before the latest date. The files in this directory are the ones used
+for scoring the forecasts for their performance against observed data.
 
 The single dataset in [OWID/truth_OWID-Incident
 Hospitalizations.csv](OWID/truth_OWID-Incident%20Hospitalizations.csv)
@@ -43,22 +45,24 @@ recommended for use in models that can take into account the truncation
 of the data. Please note that the data in this file is a mixture of
 daily and weekly data (indicated in the `frequency` column), where
 weekly data has been shifted back one day to Saturday (instead of
-Sunday) to compley with the Hub definition of an epidemiological week
+Sunday) to comply with the Hub definition of an epidemiological week
 (Sunday-Saturday).
 
 We further provide a set of [recommended
-cutoffs](recommended-cutoffs.csv) for use with these data. These are
-estimates of the truncation in the number of weeks that should be cut
-off the data set if the aim is to have a data set that is not further
-revised by more than 5%.
-
-The corresponding dataset in [OWID/truncated_OWID-Incident
+cutoffs](OWID/recommended-cutoffs.csv) for use with these data. These
+are estimates of the truncation in the number of weeks that should be
+cut off the data set if the aim is to have a data set that is not
+further revised by more than 5%. The corresponding dataset in
+[OWID/truncated_OWID-Incident
 Hospitalizations.csv](OWID/truth_OWID-Incident%20Hospitalizations.csv)
 has these recent weeks removed and is recommended for use in models that
 cannot take into account the truncation of the data.
 
-The latest hospitalisation data is plotted below, with the dashed line
-indicating data expecting to be substanially revised.
+We also provide weekly version of the data files (labelled
+`...Weekly Incident Hospitalizations.csv`), where any daily data is
+aggregated into weeks according to the Hub definition (Sunday-Saturday).
+The latest weekly hospitalisation data is plotted below, with the dashed
+line indicating data expecting to be substanially revised.
 
 <figure>
 <img src="plots/hospitalisations.svg" alt="Plot of hospitalisations" />
@@ -86,7 +90,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2023-02-21
+As of 2023-02-22
 
 | country     | created    | updated    | issue                                                               | message                                             | url                                                      |
 |:------------|:-----------|:-----------|:--------------------------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------------|

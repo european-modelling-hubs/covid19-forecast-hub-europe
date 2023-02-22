@@ -129,6 +129,8 @@ new_data <- latest_snapshot |>
   )) |>
   dplyr::select(-cutoff_weeks)
 
+status_factors <- c("final", "near final", "expecting revisions")
+
 df <- latest_final |>
   dplyr::mutate(status = "final") |>
   dplyr::bind_rows(new_data) |>
@@ -142,12 +144,9 @@ df <- df |>
   dplyr::filter(max_loc_snapshot > max(snapshot_date) - days(28)) |>
   dplyr::select(-max_loc_snapshot)
 
-
 ## identify and shift weekly data
 df <- df |>
-  dplyr::mutate(sat_date = lubridate::ceiling_date(
-    lubridate::ymd(date), unit = "week"
-  ) - 1) |>
+  dplyr::mutate(sat_date = EuroForecastHub::date_to_week_end(date)) |>
   dplyr::group_by(
     location_name, location, source, sat_date
   )  |>
@@ -164,9 +163,48 @@ df <- df |>
   ## instead, i.e. interpret Mon-Sun as Sun-Sat
   dplyr::mutate(date = dplyr::if_else(
     frequency == "weekly" & date + 6 == sat_date, date + 6, date
+  ))
+
+df_weekly <- df |>
+  dplyr::mutate(status = factor(
+    status, levels = status_factors
   )) |>
+  dplyr::filter(frequency ==  "weekly" | n == 7) |>
+  dplyr::group_by(
+    location_name, location, source, target_end_date = sat_date
+  ) |>
+  dplyr::summarise(
+    value = sum(value),
+    snapshot_date = max(snapshot_date),
+    status = factor(max(as.integer(status)),
+                    levels = seq_along(status_factors),
+                    labels = status_factors),
+    .groups = "drop"
+  )
+
+df <- df |>
   dplyr::select(-sat_date, -n)
 
 readr::write_csv(
-  df, file.path(owid_dir, "truth_OWID-Incident Hospitalizations.csv")
+  df,
+  file.path(owid_dir, "truth_OWID-Incident Hospitalizations.csv")
+)
+
+readr::write_csv(
+  df_weekly,
+  file.path(owid_dir, "truth_OWID-Weekly Incident Hospitalizations.csv")
+)
+
+readr::write_csv(
+  df |> dplyr::filter(status != "expecting revisions"),
+  here::here(
+    "data-truth", "OWID", "truncated_OWID-Incident Hospitalizations.csv"
+  )
+)
+
+readr::write_csv(
+  df_weekly |> dplyr::filter(status != "expecting revisions"),
+  here::here(
+    "data-truth", "OWID", "truncated_OWID-Weekly Incident Hospitalizations.csv"
+  )
 )

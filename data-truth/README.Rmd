@@ -15,6 +15,7 @@ library(tibble)
 library(countrycode)
 library(ggplot2)
 library(scales)
+library(scales)
 ```
 
 ## Truth data
@@ -23,10 +24,11 @@ library(scales)
 
 ```{r hospitalisations, echo=FALSE, message=FALSE}
 hosp_data <- readr::read_csv(here::here(
-  "data-truth", "OWID", "truth_OWID-Incident Hospitalizations.csv"
+  "data-truth", "OWID", "truth_OWID-Weekly Incident Hospitalizations.csv"
   ),
   show_col_types = FALSE
-)
+) |>
+  filter(target_end_date >= max(snapshot_date) - lubridate::weeks(8))
 hosp_locations <- sort(unique(hosp_data$location_name))
 ```
 
@@ -49,13 +51,15 @@ if (nrow(hosp_data > 0)) {
 ```
 
 ```{r, eval=show_text_gaps, results="asis"}
-cat(
-  "- **Data warning!** Recent missing data in:",
-  knitr::combine_words(gaps), "\n"
-)
+if (length(gaps) > 0) {
+  cat(
+    "- **Data warning!** Recent missing data in:",
+    knitr::combine_words(gaps), "\n"
+  )
+}
 ```
 
-The Hub validates and evaluates forecasts against data collated by [Our World in Data](https://ourworldindata.org/covid-hospitalizations).
+The Hub validates and evaluates forecasts against data collated by [Our World in Data](https://ourworldindata.org/covid-hospitalizations), provided in the [OWID](OWID) directory.
 These data are provided as reported by national health authorities and therefore are not consistent in definition, and care needs to be taken in interpreting them.
 
 One particular issue that affects several of the hospitalisation data streams it the one of right truncation.
@@ -65,60 +69,37 @@ For our visualisations and assesments of forecast performance we treat hospitali
 Any further revisions will be ignored for the purposes of the Hub.
 
 We provide multiple views of the data in order to facilitate modelling of COVID-19 hospitalisations with a 28 day cutoff.
-In the [snapshot](snapshot) directory we provide daily snapshots of the COVID-19 hospitalisation data as collated by Our World in Data, before any further processing is applied.
-In the [final](final) directory we provide data that are considered "final", i.e. they stop 28 days before the latest date.
+In the [snapshot](OWID/snapshot) directory we provide daily snapshots of the COVID-19 hospitalisation data as collated by Our World in Data, before any further processing is applied.
+In the [final](OWID/final) directory we provide data that are considered "final", i.e. they stop 28 days before the latest date.
 The files in this directory are the ones used for scoring the forecasts for their performance against observed data.
 
 The single dataset in [OWID/truth_OWID-Incident Hospitalizations.csv](OWID/truth_OWID-Incident Hospitalizations.csv) contains the latest data, where the final versions of the data are included for dates more than 28 days before the latest snapshot date, and the most recent version for any subsequent data.
-This is the dataset recommended for use in models that can take into account the truncation of the data. Please note that the data in this file is a mixture of daily and weekly data (indicated in the `frequency` column), where weekly data has been shifted back one day to Saturday (instead of Sunday) to compley with the Hub definition of an epidemiological week (Sunday-Saturday).
+This is the dataset recommended for use in models that can take into account the truncation of the data. Please note that the data in this file is a mixture of daily and weekly data (indicated in the `frequency` column), where weekly data has been shifted back one day to Saturday (instead of Sunday) to comply with the Hub definition of an epidemiological week (Sunday-Saturday).
 
-We further provide a set of [recommended cutoffs](recommended-cutoffs.csv) for use with these data.
+We further provide a set of [recommended cutoffs](OWID/recommended-cutoffs.csv) for use with these data.
 These are estimates of the truncation in the number of weeks that should be cut off the data set if the aim is to have a data set that is not further revised by more than 5%.
-
 The corresponding dataset in [OWID/truncated_OWID-Incident Hospitalizations.csv](OWID/truth_OWID-Incident Hospitalizations.csv) has these recent weeks removed and is recommended for use in models that cannot take into account the truncation of the data.
 
-The latest hospitalisation data is plotted below, with the dashed line indicating data expecting to be substanially revised.
+We also provide weekly version of the data files (labelled `...Weekly Incident Hospitalizations.csv`), where any daily data is aggregated into weeks according to the Hub definition (Sunday-Saturday). The latest weekly hospitalisation data is plotted below, with the dashed line indicating data expecting to be substanially revised.
 
 ```{r weekly_hosp_data, echo = FALSE}
-status_factors <- c("final", "near final", "expecting revisions")
-weekly_hosp_data <- hosp_data |>
-  dplyr::mutate(status = factor(
-      status, levels = status_factors
-    ),
-    week = floor_date(x = date, unit = "week", week_start = 1)
-  ) |>
-  dplyr::group_by(location_name, location, source, week) |>
-  dplyr::summarise(
-    value = sum(value),
-    status = factor(max(as.integer(status)),
-                    levels = seq_along(status_factors), 
-                    labels = status_factors),
-    n = n(),
-    .groups = "drop"
-  ) |>
-  dplyr::group_by(location_name, location, source) |>
-  dplyr::mutate(frequency = dplyr::if_else(all(n == 1), "weekly", "daily")) |>
-  dplyr::ungroup() |>
-  dplyr::filter(frequency ==  "weekly" | n == 7,
-                week >= max(week) - lubridate::weeks(8)) |>
-  dplyr::select(-n, -frequency)
-duplicate_final <- weekly_hosp_data |>
+duplicate_final <- hosp_data |>
   dplyr::group_by(location, location_name, source) |>
   dplyr::filter(any(status == "expecting revisions"),
                 status != "expecting revisions") |>
-  dplyr::filter(week == max(week)) |>
+  dplyr::filter(target_end_date == max(target_end_date)) |>
   dplyr::ungroup() |>
   dplyr::mutate(status = "expecting revisions")
-weekly_hosp_data <- weekly_hosp_data |>
+hosp_data <- hosp_data |>
   bind_rows(duplicate_final)
-  
+
 p <- ggplot2::ggplot(
-       weekly_hosp_data |> filter(status != "expecting revisions"),
-       ggplot2::aes(x = week, y = value)
+       hosp_data |> filter(status != "expecting revisions"),
+       ggplot2::aes(x = target_end_date, y = value)
   ) +
   ggplot2::geom_line() +
   ggplot2::geom_line(
-    data = weekly_hosp_data |> filter(status == "expecting revisions"),
+    data = hosp_data |> filter(status == "expecting revisions"),
     linetype = "dashed"
   ) +
   ggplot2::scale_y_continuous(labels = scales::comma) +
@@ -127,9 +108,9 @@ p <- ggplot2::ggplot(
   ggplot2::facet_wrap(. ~ location_name, scales = "free_y") +
   ggplot2::theme_bw() +
   ggplot2::ylab("Weekly number of hospitalisations") +
-  ggplot2::xlab("") +
+  ggplot2::xlab("End date of week") +
   ggplot2::expand_limits(y = 0)
-ggsave("plots/hospitalisations.svg", p, width = 10.5, height = 7.5)
+ggplot2::ggsave("plots/hospitalisations.svg", p, width = 10.5, height = 7.5)
 ```
 
 ![Plot of hospitalisations](plots/hospitalisations.svg)
@@ -180,7 +161,7 @@ issues <- tibble::tibble("issue" = vapply(issues, "[[", "", "title"),
                          "created" = as.Date(vapply(issues, "[[", "", "created_at")),
                          "updated" = as.Date(vapply(issues, "[[", "", "updated_at"))) %>%
   mutate(issue = str_to_lower(issue),
-         message = str_replace_all(message, "\\r\\n", " "),
+         message = str_replace_all(unlistmessage, "\\r\\n", " "),
          message = str_c(str_sub(message, start = 1, end = 50), "..."),
          country = str_extract(issue, country_ch)) %>%
   filter(str_detect(issue, country_ch) &
