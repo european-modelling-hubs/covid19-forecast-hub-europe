@@ -161,7 +161,7 @@ issues <- tibble::tibble("issue" = vapply(issues, "[[", "", "title"),
                          "created" = as.Date(vapply(issues, "[[", "", "created_at")),
                          "updated" = as.Date(vapply(issues, "[[", "", "updated_at"))) %>%
   mutate(issue = str_to_lower(issue),
-         message = str_replace_all(unlistmessage, "\\r\\n", " "),
+         message = str_replace_all(message, "\\r\\n", " "),
          message = str_c(str_sub(message, start = 1, end = 50), "..."),
          country = str_extract(issue, country_ch)) %>%
   filter(str_detect(issue, country_ch) &
