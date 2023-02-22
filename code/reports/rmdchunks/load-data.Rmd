@@ -4,7 +4,6 @@ library(covidHubUtils)
 library(EuroForecastHub)
 library(readr)
 library(dplyr)
-library(tidyr)
 library(here)
 library(lubridate)
 library(arrow)
@@ -55,24 +54,16 @@ raw_forecasts <- arrow::open_dataset(
   )
 
 ## load truth data -------------------------------------------------------------
-hosp_status <- readr::read_csv(here::here(
-    "data-truth", "OWID", "truth_OWID-Weekly Incident hospitalizations.csv"
-    ), show_col_types = FALSE) |>
-  dplyr::select(location, target_end_date, status) |>
-  dplyr::mutate(target_variable = "inc hosp")
 raw_truth <- load_truth(
   temporal_resolution = "weekly",
   truth_end_date = report_date,
   hub = "ECDC"
 )
 
-truth <- raw_truth |>
-  dplyr::left_join(
-    hosp_status,
-    by = c(
-      "target_variable", "location", "target_end_date")
-    ) |>
-  tidyr::replace_na(list(status = "final")) |>
+raw_truth <- raw_truth |>
+  add_hosp_status()
+
+truth <- raw_truth %>%
   select(-model) |>
   rename(true_value = value)
 
