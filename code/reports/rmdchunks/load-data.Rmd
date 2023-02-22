@@ -1,6 +1,7 @@
 <!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
 ```{r}
 library(covidHubUtils)
+library(EuroForecastHub)
 library(readr)
 library(dplyr)
 library(here)
@@ -10,7 +11,8 @@ library(arrow)
 
 ```{r}
 locations <- read_csv(
-  here::here("data-locations", "locations_eu.csv")
+  here::here("data-locations", "locations_eu.csv"),
+  show_col_types = FALSE
 ) |> 
   dplyr::select(location, location_name, population)
 ```
@@ -34,7 +36,7 @@ raw_forecasts <- arrow::open_dataset(
   # Ideally, we would handle this with separate() but it's not yet implemented 
   # in arrow
   dplyr::mutate(
-    horizon = as.integer(gsub("^(\\d+) .*", "\\1", target)),
+    horizon = as.integer(gsub("^-?(\\d+) .*", "\\1", target)),
     target_variable = gsub(".* (\\w+ \\w+)$", "\\1", target),
     .keep = "unused"
   ) |> 
@@ -53,27 +55,17 @@ raw_forecasts <- arrow::open_dataset(
 
 ## load truth data -------------------------------------------------------------
 raw_truth <- load_truth(
-  truth_source = "JHU",
   temporal_resolution = "weekly",
   truth_end_date = report_date,
   hub = "ECDC"
 )
 
-cutoffs <- readr::read_csv(here::here(
-  "data-truth", "OWID", "recommended-cutoffs.csv"
-), show_col_types = FALSE) |>
-  mutate(target_variable = "inc hosp")
+raw_truth <- raw_truth |>
+  add_hosp_status()
 
 truth <- raw_truth %>%
   select(-model) |>
-  rename(true_value = value) |>
-  left_join(cutoffs, by = c("location", "location_name", "target_variable")) |>
-  replace_na(list(cutoff = 0)) |>
-  group_by(location, target_variable) |>
-  mutate(
-    weeks_since = interval(target_end_date, max(target_end_date)) / weeks(1)
-  ) |>
-  ungroup()
+  rename(true_value = value)
 
 # get anomalies
 anomalies <- read_csv(paste0(hub_repo, "/raw/main/data-truth/anomalies/anomalies.csv"),
@@ -97,18 +89,19 @@ horizon_0 <- forecasts |>
   group_by(model, forecast_date, location, location_name, population, target_variable, quantile) |> 
   summarise(
     horizon = min(horizon) - 1L,
-    target_end_date = unique(forecast_date) - 2,
+    target_end_date = min(target_end_date) - 7,
     type = "point",
-    .groups = "drop"
-    ) |>
-  filter(horizon == 0L)
+    .groups = "drop",
+    connector = TRUE
+  )
 
 data <- full_join(horizon_0, forecasts) |> 
   scoringutils::merge_pred_and_obs(
     truth, join = "full",
     by = c("location", "target_end_date", "target_variable", "location_name",
            "population")) |>
-  mutate(prediction = ifelse(horizon == "0" & is.na(prediction), true_value, prediction))
+  mutate(prediction = ifelse(connector & is.na(prediction), true_value, prediction)) |>
+  select(-connector)
 ```
 
 ## {.unlisted .unnumbered}

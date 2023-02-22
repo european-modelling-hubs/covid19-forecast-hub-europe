@@ -18,7 +18,7 @@ nmodels <- here(ensemble_dir, paste0("criteria-", latest_ensemble_date, ".csv"))
 ```{r}
 nmodels |> 
   dplyr::full_join(locations) |> 
-  dplyr::select(location = location_name, target_variables) |> 
+  dplyr::select(location = location_name, all_of(target_variables)) |>
   DT::datatable(
     nmodels, 
     caption = "Number of models included in ensemble for each location and target",

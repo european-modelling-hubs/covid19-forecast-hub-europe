@@ -27,22 +27,23 @@ forecast_data <- adjusted_data %>%
   filter(target_variable == target_variables[variable],
          horizon == {{horizon}},
          location %in% unique(panels$location)) %>%
+  mutate(quantile = round(quantile, 3)) %>%
   pivot_wider(names_from = "quantile", values_from = "prediction") %>%
   mutate(variable = variable)
-score_data <- model_scores %>%
-  filter(target_variable == target_variables[variable],
-         horizon == {{horizon}},
-         location %in% unique(panels$location)) %>%
-  select(location, target_variable, target_end_date, location_name,
-         value = skill, model) %>%
-  mutate(variable = skill)
-plot_data <- truth_data %>%
-  filter(location %in% unique(panels$location)) %>%
-  mutate(model = "truth") %>%
-  rbind(score_data) %>%
-  mutate(model = factor(model)) %>%
-  mutate(model = forcats::fct_relevel(model, "truth", ensemble_model))
 if (any(forecast_data$model == params$model)) {
+  score_data <- model_scores %>%
+    filter(target_variable == target_variables[variable],
+           horizon == {{horizon}},
+           location %in% unique(panels$location)) %>%
+    select(location, target_variable, target_end_date, location_name,
+           value = skill, model) %>%
+    mutate(variable = skill)
+  plot_data <- truth_data %>%
+    filter(location %in% unique(panels$location)) %>%
+    mutate(model = "truth") %>%
+    rbind(score_data) %>%
+    mutate(model = factor(model)) %>%
+    mutate(model = forcats::fct_relevel(model, "truth", ensemble_model))
   p <- ggplot(plot_data, aes(x = target_end_date, colour = model)) +
     geom_point(mapping = aes(y = value)) +
     geom_line(aes(y = value))

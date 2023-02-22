@@ -9,7 +9,7 @@
     "name": "EuroCOVIDhub-baseline"
   },
   "horizon": {
-    "values": [1, 2, 3, 4],
+    "values": [-3, -2, -1, 0, 1, 2, 3, 4],
     "unit": "weeks"
   },
   "launch_date": "2021-03-08",

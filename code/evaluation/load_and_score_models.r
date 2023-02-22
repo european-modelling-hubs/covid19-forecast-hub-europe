@@ -25,6 +25,10 @@ load_and_score_models <- function(subdir = "") {
   raw_truth <- load_truth(truth_source = "JHU",
                           temporal_resolution = "weekly",
                           hub = "ECDC")
+  raw_truth <- raw_truth %>%
+    EuroForecastHub::add_hosp_status() %>%
+    filter(status == "final")
+
   ## get anomalies
   anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
   truth <- anti_join(raw_truth, anomalies) %>%

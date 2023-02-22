@@ -51,7 +51,7 @@ models <- models[recently_submitted]
 # Create function for rendering report for each model
 render_report <- function(model) {
   message("Generating report for ", model)
-	rmarkdown::render(here::here("code", "reports", "models",
+  rmarkdown::render(here::here("code", "reports", "models",
                                "model-report.Rmd"),
                     params = list(model = model,
                                   report_date = report_date,
@@ -63,7 +63,7 @@ render_report <- function(model) {
                       here::here("html",
                                  paste0("model-report-",
                                         model, ".html")),
-	                  output_options = list(lib_dir = here::here("html", "libs")),
+                    output_options = list(lib_dir = here::here("html", "libs")),
                     envir = new.env())
 }
 

@@ -3,9 +3,75 @@ European data status
 
 ## Truth data
 
+### Hospitalisations
+
+- Belgium, Cyprus, Czechia, Denmark, Estonia, France, Germany, Greece,
+  Iceland, Ireland, Italy, Latvia, Liechtenstein, Luxembourg, Malta,
+  Slovakia, Slovenia, Spain, Switzerland
+
+- **Data warning!** Recent missing data in: Switzerland
+
+The Hub validates and evaluates forecasts against data collated by [Our
+World in Data](https://ourworldindata.org/covid-hospitalizations),
+provided in the [OWID](OWID) directory. These data are provided as
+reported by national health authorities and therefore are not consistent
+in definition, and care needs to be taken in interpreting them.
+
+One particular issue that affects several of the hospitalisation data
+streams it the one of right truncation. This occurs when these are
+reported with a delay, and therefore recent data need to be treated as
+incomplete, posing additional challenges to forecasting such data
+streams and validating forecasts.
+
+For our visualisations and assesments of forecast performance we treat
+hospitalisation as *final* 28 days after the reported date. Any further
+revisions will be ignored for the purposes of the Hub.
+
+We provide multiple views of the data in order to facilitate modelling
+of COVID-19 hospitalisations with a 28 day cutoff. In the
+[snapshot](OWID/snapshot) directory we provide daily snapshots of the
+COVID-19 hospitalisation data as collated by Our World in Data, before
+any further processing is applied. In the [final](OWID/final) directory
+we provide data that are considered “final”, i.e. they stop 28 days
+before the latest date. The files in this directory are the ones used
+for scoring the forecasts for their performance against observed data.
+
+The single dataset in [OWID/truth_OWID-Incident
+Hospitalizations.csv](OWID/truth_OWID-Incident%20Hospitalizations.csv)
+contains the latest data, where the final versions of the data are
+included for dates more than 28 days before the latest snapshot date,
+and the most recent version for any subsequent data. This is the dataset
+recommended for use in models that can take into account the truncation
+of the data. Please note that the data in this file is a mixture of
+daily and weekly data (indicated in the `frequency` column), where
+weekly data has been shifted back one day to Saturday (instead of
+Sunday) to comply with the Hub definition of an epidemiological week
+(Sunday-Saturday).
+
+We further provide a set of [recommended
+cutoffs](OWID/recommended-cutoffs.csv) for use with these data. These
+are estimates of the truncation in the number of weeks that should be
+cut off the data set if the aim is to have a data set that is not
+further revised by more than 5%. The corresponding dataset in
+[OWID/truncated_OWID-Incident
+Hospitalizations.csv](OWID/truth_OWID-Incident%20Hospitalizations.csv)
+has these recent weeks removed and is recommended for use in models that
+cannot take into account the truncation of the data.
+
+We also provide weekly version of the data files (labelled
+`...Weekly Incident Hospitalizations.csv`), where any daily data is
+aggregated into weeks according to the Hub definition (Sunday-Saturday).
+The latest weekly hospitalisation data is plotted below, with the dashed
+line indicating data expecting to be substanially revised.
+
+<figure>
+<img src="plots/hospitalisations.svg" alt="Plot of hospitalisations" />
+<figcaption aria-hidden="true">Plot of hospitalisations</figcaption>
+</figure>
+
 ### Cases and deaths
 
-We evaluate forecasts of cases and deaths against [Johns Hopkins
+We further evaluate forecasts of cases and deaths against [Johns Hopkins
 University data](https://github.com/CSSEGISandData/COVID-19), and we
 recommend using this dataset as the basis for forecasts.
 
@@ -24,7 +90,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2023-02-21
+As of 2023-02-22
 
 | country     | created    | updated    | issue                                                               | message                                             | url                                                      |
 |:------------|:-----------|:-----------|:--------------------------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------------|
@@ -35,44 +101,6 @@ As of 2023-02-21
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
-
-### Hospitalisations
-
-We gather general hospital admissions data from various sources. See
-separate [Hospitalisations
-README](https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/code/auto_download/hospitalisations#readme).
-
-Hospitalisation data can be difficult to produce and interpret, and is
-not consistent across all the countries in the ECDC Forecast Hub. To
-keep data and forecasts consistent, we include hospitalisations
-forecasts for the following locations only:
-
-- Belgium, France, Greece, Ireland, Latvia, Liechtenstein, Malta,
-  Slovakia, Slovenia
-
-![Plot of truth data from different sources for all countries covered by
-the forecast hub](plots/hospitalisations.svg)
-
-The Hub validates and evaluates forecasts against the single dataset in
-[ECDC/truth_ECDC-Incident
-Hospitalizations.csv](ECDC/truth_ECDC-Incident%20Hospitalizations.csv).
-While we provide raw data files with multiple sources for
-hospitalisation data in each location, this is for reference only to
-cover daily as well as weekly data.
-
-#### Data revisions
-
-##### Cases
-
-![Plot of revisions in case data](plots/revisions-Cases.svg)
-
-##### Deaths
-
-![Plot of revisions in case data](plots/revisions-Deaths.svg)
-
-##### Hospitalisations
-
-![Plot of revisions in case data](plots/revisions-Hospitalizations.svg)
 
 ## Additional data sources
 
