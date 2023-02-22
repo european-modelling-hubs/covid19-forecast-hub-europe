@@ -64,10 +64,7 @@ aggregated into weeks according to the Hub definition (Sunday-Saturday).
 The latest weekly hospitalisation data is plotted below, with the dashed
 line indicating data expecting to be substanially revised.
 
-<figure>
-<img src="plots/hospitalisations.svg" alt="Plot of hospitalisations" />
-<figcaption aria-hidden="true">Plot of hospitalisations</figcaption>
-</figure>
+![Plot of hospitalisations](plots/hospitalisations.svg)
 
 ### Cases and deaths
 
