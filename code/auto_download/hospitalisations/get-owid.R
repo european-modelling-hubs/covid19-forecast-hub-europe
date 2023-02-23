@@ -6,7 +6,6 @@ library(lubridate)
 
 # Set up
 data_dir <- here("data-truth", "OWID")
-owid_filepath <- here(data_dir, paste0("covid-hospitalizations.csv"))
 owid_filepath_dated <- here(
   data_dir, "snapshots", paste0("covid-hospitalizations_", today(), ".csv")
 )
@@ -29,5 +28,4 @@ owid <- read_csv(
   mutate(source = "OWID")
 
 # Save
-write_csv(owid, owid_filepath)
 write_csv(owid, owid_filepath_dated)
