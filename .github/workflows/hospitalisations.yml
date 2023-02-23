@@ -1,11 +1,11 @@
-name: "Get hospitalisation data"
+name: "Get data (ECDC/OWID)"
 on:
   workflow_dispatch:
   schedule:
     - cron: "7 12 * * *"
 
 jobs:
-  get_hospitalisations:
+  get_data:
     if: github.repository_owner == 'covid19-forecast-hub-europe'
     runs-on: ubuntu-20.04
     env:
@@ -30,17 +30,14 @@ jobs:
         Rscript 'code/auto_download/hospitalisations-download.R'
         Rscript 'code/auto_download/hospitalisations/process-owid.r'
         Rscript 'code/auto_download/hospitalisations/check-revisions-owid.r'
-      env:
-        DATA_USERNAME: ${{secrets.DATA_USERNAME}}
-        DATA_PASSWORD: ${{secrets.DATA_PASSWORD}}
-        DATA_URL: ${{secrets.DATA_URL}}
+        Rscript 'code/auto_download/cases-deaths/get-ecdc-cases-deaths.R'
 
     - name: Commit files
       run: |
         git config user.email "action@github.com"
-        git config user.name "GitHub Action - Hospitalisations"
+        git config user.name "GitHub Action - ECDC/OWID data"
         git add --all
-        git commit -m "Hospitalisations - daily" || echo "No changes to commit"
+        git commit -m "Data update - daily" || echo "No changes to commit"
         git pull --rebase origin main
         git push
         echo "pushed to github"
