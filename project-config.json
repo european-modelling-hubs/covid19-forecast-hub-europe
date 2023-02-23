@@ -12,6 +12,7 @@
     "values": [-2, -1, 0, 1, 2, 3, 4],
     "unit": "weeks"
   },
+  "ensemble_horizon": [1, 2, 3, 4],
   "launch_date": "2021-03-08",
   "week_end_day": "Saturday",
   "forecast_week_day": "Monday",
