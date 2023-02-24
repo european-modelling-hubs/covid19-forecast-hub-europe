@@ -1,31 +1,89 @@
-# Get official weekly ECDC hospitalisation data
-library(dplyr)
-library(readr)
-library(here)
-library(lubridate)
+library("gh")
+library("lubridate")
+library("covidHubUtils")
+library("purrr")
+library("dplyr")
+library("vroom")
 
-# Set up
-data_dir <- here("data-truth", "OWID")
-owid_filepath_dated <- here(
-  data_dir, "snapshots", paste0("covid-hospitalizations_", today(), ".csv")
-)
-pop <- covidHubUtils::hub_locations_ecdc
+get_owid <- function(earliest_date = lubridate::today(),
+                     latest_date = lubridate::today()) {
+  ## set path to covid data
+  owner <- "owid"
+  repo <- "covid-19-data"
+  path <- "public/data/hospitalizations/covid-hospitalizations.csv"
+  ## define locations we want to pull
+  pop <- covidHubUtils::hub_locations_ecdc |>
+    dplyr::select(location_name, location)
 
-# Get ECDC published data
-cat("Downloading OWID published data\n")
-owid <- read_csv(
-  paste0(
-    "https://raw.githubusercontent.com/owid/covid-19-data/master/",
-    "public/data/hospitalizations/covid-hospitalizations.csv"
-  ), show_col_types = FALSE) %>%
-  filter(grepl("hospital admissions$", indicator)) %>%
-  rename(location_name = entity) %>%
-  inner_join(pop |>
-             select(location_name, location),
-             by = "location_name") %>%
-  # Rescale to count from per 100k
-  select(location_name, location, date, value) %>%
-  mutate(source = "OWID")
+  ## query to receive past commits
+  query <- "/repos/{owner}/{repo}/commits?path={path}&since={date}"
 
-# Save
-write_csv(owid, owid_filepath_dated)
+  commits <-
+    gh::gh(query,
+           owner = owner,
+           repo = repo,
+           path = path,
+           date = earliest_date - 1,
+           .limit = Inf)
+
+  ## extract dates of commits
+  commit_dates <- purrr::map_df(
+    commits,
+    ~ tibble::tibble(sha = .x$sha, date = .x$commit$author$date)
+  ) |>
+    dplyr::mutate(
+      datetime = lubridate::ymd_hms(sub("T(.+)Z$", " \\1", date)),
+      date = lubridate::date(datetime)
+    )
+
+  anomalies <- vroom::vroom(
+    here::here("data-truth", "OWID", "snapshots", "anomalies.csv"),
+    show_col_types = FALSE
+  )
+
+  dl_snapshot <- function(x) {
+    ## find latest commit at 12:07 each day
+    data_commit <- commit_dates |>
+      dplyr::filter(datetime < lubridate::ymd_hms(paste(x, "12:07:00")))
+
+    if (nrow(data_commit) == 0) return(NULL)
+
+    data_commit <- data_commit |>
+      dplyr::filter(datetime == max(datetime))
+
+    data <- vroom::vroom(paste(
+      "https://raw.githubusercontent.com",
+      owner, repo, data_commit$sha,
+      path, sep = "/"
+    ), show_col_types = FALSE) |>
+      dplyr::rename(location_name = entity) |>
+      dplyr::inner_join(pop, by = "location_name") |>
+      dplyr::filter(grepl("hospital admissions$", indicator)) |>
+      dplyr::select(location_name, location, indicator, date, value) %>%
+      dplyr::mutate(
+        source = "OWID",
+        snapshot_date = x
+      ) |>
+      dplyr::anti_join(
+        anomalies, by = c("location", "location_name", "snapshot_date")
+      ) |>
+      dplyr::select(-snapshot_date)
+
+    ## identify daily/weekly data
+
+    data_dir <- here::here("data-truth", "OWID", "snapshots")
+    owid_filepath_dated <- here::here(data_dir,
+      paste0("covid-hospitalizations_", x, ".csv")
+    )
+    vroom::vroom_write(data, owid_filepath_dated, delim = ",")
+    return(data)
+  }
+
+  ## save snapshots
+  snapshots <- purrr::map(
+    seq(earliest_date, latest_date, by = "day"),
+    dl_snapshot
+  )
+
+  return(snapshots)
+}

@@ -8,5 +8,8 @@ script_dir <- here("code", "auto_download", "hospitalisations")
 source(here(script_dir, "get-ecdc-official.R"))
 source(here(script_dir, "get-owid.R"))
 
+cat("Downloading OWID data\n")
+owid <- get_owid()
+
 # Update countries with hosp data source (used by validation) in data-locations.csv
 source(here("code", "auto_download", "create-data-locations.R"))
