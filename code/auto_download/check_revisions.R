@@ -94,13 +94,16 @@ source_dates <- as_date(ymd_hms(source_dates))
 source_data <-
   lapply(
     seq_along(source_commits),
-    function(id)
-      readr::read_csv(
-               URLencode(
-                 paste("https://raw.githubusercontent.com", owner, repo,
-                       source_shas[id], source_path, sep = "/")),
-               show_col_types = FALSE) %>%
-      mutate(commit_date = source_dates[id])
+    function(id) {
+      tryCatch(
+        readr::read_csv(URLencode(
+          paste("https://raw.githubusercontent.com", owner, repo,
+            source_shas[id], source_path, sep = "/")),
+          show_col_types = FALSE) |>
+          mutate(commit_date = source_dates[id]),
+        error = function(e) NULL
+      )
+    }
   )
 
 source_data <- bind_rows(source_data) |>
