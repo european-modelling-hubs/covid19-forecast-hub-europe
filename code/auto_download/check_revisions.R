@@ -4,6 +4,7 @@ library("dplyr")
 library("ggplot2")
 library("here")
 library("readr")
+library("svglite")
 
 earliest_date <- NULL
 min_data <- as.Date("2021-03-08") ## earliest date to pot in data
