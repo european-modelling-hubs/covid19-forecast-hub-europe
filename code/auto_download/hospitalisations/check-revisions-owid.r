@@ -70,7 +70,9 @@ cutoff_truth_data <- vroom::vroom(
 ) |>
   dplyr::left_join(recommended_cutoffs, by = c("location", "location_name")) |>
   tidyr::replace_na(list(cutoff_weeks = 0)) |>
-  dplyr::filter(floor(as.integer(snapshot_date - date) / 7) >= cutoff_weeks)
+  dplyr::filter(
+    floor(as.integer(snapshot_date - target_end_date) / 7) >= cutoff_weeks
+  )
 
 sources <- cutoff_truth_data |>
   dplyr::mutate(
