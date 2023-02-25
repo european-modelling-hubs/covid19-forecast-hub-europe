@@ -24,7 +24,7 @@ library(scales)
 
 ```{r hospitalisations, echo=FALSE, message=FALSE}
 hosp_data <- readr::read_csv(here::here(
-  "data-truth", "OWID", "truth_OWID-Weekly Incident Hospitalizations.csv"
+  "data-truth", "OWID", "truth_OWID-Incident Hospitalizations.csv"
   ),
   show_col_types = FALSE
 ) |>
