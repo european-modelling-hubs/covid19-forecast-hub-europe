@@ -70,17 +70,18 @@ Any further revisions will be ignored for the purposes of the Hub.
 
 We provide multiple views of the data in order to facilitate modelling of COVID-19 hospitalisations with a 28 day cutoff.
 In the [snapshot](OWID/snapshot) directory we provide daily snapshots of the COVID-19 hospitalisation data as collated by Our World in Data, before any further processing is applied.
+The data in there are given either as rolling weekly sums of daily data, or weekly data.
 In the [final](OWID/final) directory we provide data that are considered "final", i.e. they stop 28 days before the latest date.
 The files in this directory are the ones used for scoring the forecasts for their performance against observed data.
 
 The single dataset in [OWID/truth_OWID-Incident Hospitalizations.csv](OWID/truth_OWID-Incident Hospitalizations.csv) contains the latest data, where the final versions of the data are included for dates more than 28 days before the latest snapshot date, and the most recent version for any subsequent data.
-This is the dataset recommended for use in models that can take into account the truncation of the data. Please note that the data in this file is a mixture of daily and weekly data (indicated in the `frequency` column), where weekly data has been shifted back one day to Saturday (instead of Sunday) to comply with the Hub definition of an epidemiological week (Sunday-Saturday).
+This is the dataset recommended for use in models that can take into account the truncation of the data. Please note that the data reported at weekly frequency has been shifted back one day to Saturday (instead of Sunday) in that file to comply with the Hub definition of an epidemiological week (Sunday-Saturday).
 
 We further provide a set of [recommended cutoffs](OWID/recommended-cutoffs.csv) for use with these data.
 These are estimates of the truncation in the number of weeks that should be cut off the data set if the aim is to have a data set that is not further revised by more than 5%.
 The corresponding dataset in [OWID/truncated_OWID-Incident Hospitalizations.csv](OWID/truth_OWID-Incident Hospitalizations.csv) has these recent weeks removed and is recommended for use in models that cannot take into account the truncation of the data.
 
-We also provide weekly version of the data files (labelled `...Weekly Incident Hospitalizations.csv`), where any daily data is aggregated into weeks according to the Hub definition (Sunday-Saturday). The latest weekly hospitalisation data is plotted below, with the dashed line indicating data expecting to be substanially revised.
+The latest hospitalisation data is plotted below, with the dashed line indicating data expecting to be substanially revised.
 
 ```{r weekly_hosp_data, echo = FALSE}
 duplicate_final <- hosp_data |>

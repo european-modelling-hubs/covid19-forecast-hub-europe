@@ -47,8 +47,8 @@ if (min(final_dates) == min(snapshot_dates) - days(28) + 1) {
     ), show_col_types = FALSE
   ) |>
     dplyr::mutate(snapshot_date = min(snapshot_dates)) |>
-    dplyr::filter(date <= min_snapshot - days(cutoff_days))
-  readr::write_csv(df, file.path(
+    dplyr::filter(date <= min(snapshot_dates) - days(cutoff_days))
+  readr::write_csv(init, file.path(
     final_dir, paste0(
       "covid-hospitalizations-final_",
       min(final_dates),
@@ -163,27 +163,12 @@ df <- df |>
   ## instead, i.e. interpret Mon-Sun as Sun-Sat
   dplyr::mutate(date = dplyr::if_else(
     frequency == "weekly" & date + 6 == sat_date, date + 6, date
-  ))
-
-df_weekly <- df |>
-  dplyr::mutate(status = factor(
-    status, levels = status_factors
   )) |>
-  dplyr::filter(frequency ==  "weekly" | n == 7) |>
-  dplyr::group_by(
-    location_name, location, source, target_end_date = sat_date
-  ) |>
-  dplyr::summarise(
-    value = sum(value),
-    snapshot_date = max(snapshot_date),
-    status = factor(max(as.integer(status)),
-                    levels = seq_along(status_factors),
-                    labels = status_factors),
-    .groups = "drop"
+  dplyr::filter(date == sat_date) |>
+  dplyr::select(
+    location_name, location, target_end_date = date, value, source,
+    snapshot_date, status
   )
-
-df <- df |>
-  dplyr::select(-sat_date, -n)
 
 readr::write_csv(
   df,
@@ -191,20 +176,8 @@ readr::write_csv(
 )
 
 readr::write_csv(
-  df_weekly,
-  file.path(owid_dir, "truth_OWID-Weekly Incident Hospitalizations.csv")
-)
-
-readr::write_csv(
   df |> dplyr::filter(status != "expecting revisions"),
   here::here(
     "data-truth", "OWID", "truncated_OWID-Incident Hospitalizations.csv"
-  )
-)
-
-readr::write_csv(
-  df_weekly |> dplyr::filter(status != "expecting revisions"),
-  here::here(
-    "data-truth", "OWID", "truncated_OWID-Weekly Incident Hospitalizations.csv"
   )
 )
