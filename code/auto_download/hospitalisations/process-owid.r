@@ -164,7 +164,11 @@ df <- df |>
   dplyr::mutate(date = dplyr::if_else(
     frequency == "weekly" & date + 6 == sat_date, date + 6, date
   )) |>
-  dplyr::filter(date == sat_date) |>
+  dplyr::group_by(
+    location, location_name, indicator, source, sat_date
+  ) |>
+  dplyr::filter(date == max(date)) |>
+  dplyr::ungroup() |>
   dplyr::select(
     location_name, location, target_end_date = date, value, source,
     snapshot_date, status
