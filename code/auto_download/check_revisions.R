@@ -166,16 +166,16 @@ for (source in names(sources)) {
       all_anomalies,
       by = c("target_end_date", "target_variable", "location", "location_name")
     )
-  p <- ggplot(cleaned, aes(x = target_end_date, y = value,
-                          colour = factor(commit_date), group = commit_date)) +
-    scale_colour_brewer("Commit date", palette = "Paired") +
-    facet_wrap(~ location_name, scales = "free") +
-    geom_line() +
-    theme_minimal() +
-    ylab(source) + xlab("End of MMWR week")
-  ggsave(here::here("data-truth", "plots",
-                    paste0("revisions-", source, ".svg")),
-         p,  width = 20, height = 12)
+  if (nrow(cleaned) > 0) {
+    p <- ggplot(cleaned, aes(x = target_end_date, y = value,
+      colour = factor(commit_date), group = commit_date)) +
+      scale_colour_brewer("Commit date", palette = "Paired") +
+      facet_wrap(~ location_name, scales = "free") +
+      geom_line() +
+      theme_minimal() +
+      ylab(source) + xlab("End of MMWR week")
+    ggsave(here::here("data-truth", "plots",
+      paste0("revisions-", source, ".svg")),
+      p,  width = 20, height = 12)
+  }
 }
-
-
