@@ -28,7 +28,7 @@ hosp_data <- readr::read_csv(here::here(
   ),
   show_col_types = FALSE
 ) |>
-  filter(target_end_date >= max(snapshot_date) - lubridate::weeks(8))
+  filter(date >= max(snapshot_date) - lubridate::weeks(8))
 hosp_locations <- sort(unique(hosp_data$location_name))
 ```
 
@@ -88,7 +88,7 @@ duplicate_final <- hosp_data |>
   dplyr::group_by(location, location_name, source) |>
   dplyr::filter(any(status == "expecting revisions"),
                 status != "expecting revisions") |>
-  dplyr::filter(target_end_date == max(target_end_date)) |>
+  dplyr::filter(date == max(date)) |>
   dplyr::ungroup() |>
   dplyr::mutate(status = "expecting revisions")
 hosp_data <- hosp_data |>
@@ -96,7 +96,7 @@ hosp_data <- hosp_data |>
 
 p <- ggplot2::ggplot(
        hosp_data |> filter(status != "expecting revisions"),
-       ggplot2::aes(x = target_end_date, y = value)
+       ggplot2::aes(x = date, y = value)
   ) +
   ggplot2::geom_line() +
   ggplot2::geom_line(
