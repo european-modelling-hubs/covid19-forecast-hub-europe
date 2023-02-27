@@ -5,9 +5,11 @@ The files in this directory are listed below. For more details on these
 see also the [data-truth](..) directory.
 
 - `truth-OWID-Incident Hospitalizations.csv`: truth data set as weekly
-  data, including data likely to be revised (see `status` column)
+  data, including data likely to be revised (see `status` column); the
+  `date` column corresponds to the last date in each week.
 - `truncated-OWID-Incident Hospitalizations.csv`: truth data set as
-  weekly data, likely not to be revised substantially
+  weekly data, likely not to be revised substantially; the `date` column
+  corresponds to the last date in each week.
 - `recommended-cutoffs.csv`: estimated number of weeks to cut off unless
   able to correct for right truncation, as reflected in the `status`
   column of the data files
