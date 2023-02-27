@@ -1,4 +1,4 @@
-location_name,location,target_end_date,value,source,snapshot_date,status
+location_name,location,date,value,source,snapshot_date,status
 Belgium,BE,2020-03-21,1291,OWID,2022-07-18,final
 Belgium,BE,2020-03-28,3232,OWID,2022-07-18,final
 Belgium,BE,2020-04-04,3756,OWID,2022-07-18,final
@@ -1592,8 +1592,6 @@ Italy,IT,2023-01-14,2691,OWID,2023-02-11,final
 Italy,IT,2023-01-21,1935,OWID,2023-02-18,final
 Italy,IT,2023-01-28,1709,OWID,2023-02-25,final
 Italy,IT,2023-02-04,1582,OWID,2023-02-26,near final
-Italy,IT,2023-02-11,1406,OWID,2023-02-26,expecting revisions
-Italy,IT,2023-02-15,1243,OWID,2023-02-26,expecting revisions
 Latvia,LV,2020-01-06,0,OWID,2022-07-18,final
 Latvia,LV,2020-01-18,0,OWID,2022-07-18,final
 Latvia,LV,2020-02-12,0,OWID,2022-07-18,final
