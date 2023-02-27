@@ -44,10 +44,11 @@ contains the latest data, where the final versions of the data are
 included for dates more than 28 days before the latest snapshot date,
 and the most recent version for any subsequent data. This is the dataset
 recommended for use in models that can take into account the truncation
-of the data. Please note that the data reported at weekly frequency has
-been shifted back one day to Saturday (instead of Sunday) in that file
-to comply with the Hub definition of an epidemiological week
-(Sunday-Saturday).
+of the data. Please note that the `date` field in this file corresponds
+to the final day of the week reported, and any data reported at weekly
+frequency has been shifted back one day to Saturday (instead of Sunday)
+in that file to comply with the Hub definition of an epidemiological
+week (Sunday-Saturday).
 
 We further provide a set of [recommended
 cutoffs](OWID/recommended-cutoffs.csv) for use with these data. These
@@ -85,11 +86,10 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2023-02-26
+As of 2023-02-27
 
 | country     | created    | updated    | issue                                                               | message                                             | url                                                      |
 |:------------|:-----------|:-----------|:--------------------------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------------|
-| czechia     | 2023-02-24 | 2023-02-24 | why time series for czechia decreases?                              | Hi, I’m looking in \`time_series_covid19_confirmed… | <https://github.com/CSSEGISandData/COVID-19/issues/6620> |
 | iceland     | 2023-01-11 | 2023-01-11 | patch iceland data from 11/01/2022 to 01/10/2023                    | November 1, 2022: 206571 cases November 8, 2022: 2… | <https://github.com/CSSEGISandData/COVID-19/issues/6462> |
 | france      | 2023-01-04 | 2023-01-06 | martinique (france) cases and deaths does not match source          | In the WHO report there are 225249 cases and 1079 … | <https://github.com/CSSEGISandData/COVID-19/issues/6432> |
 | netherlands | 2023-01-06 | 2023-01-06 | netherlands rivm ceases reporting covid-19 deaths as of jan 1, 2023 | Hello all, On January 1, 2023, the Netherlands’ R…  | <https://github.com/CSSEGISandData/COVID-19/issues/6446> |
