@@ -170,8 +170,7 @@ df <- df |>
   dplyr::filter(date == max(date)) |>
   dplyr::ungroup() |>
   dplyr::select(
-    location_name, location, target_end_date = date, value, source,
-    snapshot_date, status
+    location_name, location, date, value, source, snapshot_date, status
   )
 
 readr::write_csv(

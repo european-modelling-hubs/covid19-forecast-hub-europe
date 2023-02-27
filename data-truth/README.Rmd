@@ -75,7 +75,7 @@ In the [final](OWID/final) directory we provide data that are considered "final"
 The files in this directory are the ones used for scoring the forecasts for their performance against observed data.
 
 The single dataset in [OWID/truth_OWID-Incident Hospitalizations.csv](OWID/truth_OWID-Incident Hospitalizations.csv) contains the latest data, where the final versions of the data are included for dates more than 28 days before the latest snapshot date, and the most recent version for any subsequent data.
-This is the dataset recommended for use in models that can take into account the truncation of the data. Please note that the data reported at weekly frequency has been shifted back one day to Saturday (instead of Sunday) in that file to comply with the Hub definition of an epidemiological week (Sunday-Saturday).
+This is the dataset recommended for use in models that can take into account the truncation of the data. Please note that the `date` field in this file corresponds to the final day of the week reported, and any data reported at weekly frequency has been shifted back one day to Saturday (instead of Sunday) in that file to comply with the Hub definition of an epidemiological week (Sunday-Saturday).
 
 We further provide a set of [recommended cutoffs](OWID/recommended-cutoffs.csv) for use with these data.
 These are estimates of the truncation in the number of weeks that should be cut off the data set if the aim is to have a data set that is not further revised by more than 5%.
