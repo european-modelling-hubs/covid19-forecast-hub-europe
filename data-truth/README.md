@@ -86,14 +86,12 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2023-03-03
+As of 2023-03-04
 
-| country     | created    | updated    | issue                                                               | message                                             | url                                                      |
-|:------------|:-----------|:-----------|:--------------------------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------------|
-| iceland     | 2023-03-01 | 2023-03-02 | iceland publishes large spike in deaths                             | All, We published a large spike to our death tota…  | <https://github.com/CSSEGISandData/COVID-19/issues/6631> |
-| iceland     | 2023-01-11 | 2023-01-11 | patch iceland data from 11/01/2022 to 01/10/2023                    | November 1, 2022: 206571 cases November 8, 2022: 2… | <https://github.com/CSSEGISandData/COVID-19/issues/6462> |
-| france      | 2023-01-04 | 2023-01-06 | martinique (france) cases and deaths does not match source          | In the WHO report there are 225249 cases and 1079 … | <https://github.com/CSSEGISandData/COVID-19/issues/6432> |
-| netherlands | 2023-01-06 | 2023-01-06 | netherlands rivm ceases reporting covid-19 deaths as of jan 1, 2023 | Hello all, On January 1, 2023, the Netherlands’ R…  | <https://github.com/CSSEGISandData/COVID-19/issues/6446> |
+| country | created    | updated    | issue                                            | message                                             | url                                                      |
+|:--------|:-----------|:-----------|:-------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------------|
+| iceland | 2023-03-01 | 2023-03-02 | iceland publishes large spike in deaths          | All, We published a large spike to our death tota…  | <https://github.com/CSSEGISandData/COVID-19/issues/6631> |
+| iceland | 2023-01-11 | 2023-01-11 | patch iceland data from 11/01/2022 to 01/10/2023 | November 1, 2022: 206571 cases November 8, 2022: 2… | <https://github.com/CSSEGISandData/COVID-19/issues/6462> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
 Github](https://github.com/CSSEGISandData/COVID-19/)
