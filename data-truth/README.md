@@ -63,6 +63,9 @@ cannot take into account the truncation of the data.
 The latest hospitalisation data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
 
+    ## `geom_line()`: Each group consists of only one observation.
+    ## ℹ Do you need to adjust the group aesthetic?
+
 ![Plot of hospitalisations](plots/hospitalisations.svg)
 
 ### Cases and deaths
@@ -86,7 +89,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2023-03-04
+As of 2023-03-05
 
 | country | created    | updated    | issue                                            | message                                             | url                                                      |
 |:--------|:-----------|:-----------|:-------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------------|
