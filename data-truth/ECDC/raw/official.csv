@@ -1054,6 +1054,13 @@ Austria,AT,Daily hospital occupancy,2023-02-16,986,Public,ECDC
 Austria,AT,Daily hospital occupancy,2023-02-17,1010,Public,ECDC
 Austria,AT,Daily hospital occupancy,2023-02-18,1021,Public,ECDC
 Austria,AT,Daily hospital occupancy,2023-02-19,1021,Public,ECDC
+Austria,AT,Daily hospital occupancy,2023-02-20,1168,Public,ECDC
+Austria,AT,Daily hospital occupancy,2023-02-21,1304,Public,ECDC
+Austria,AT,Daily hospital occupancy,2023-02-22,1332,Public,ECDC
+Austria,AT,Daily hospital occupancy,2023-02-23,1362,Public,ECDC
+Austria,AT,Daily hospital occupancy,2023-02-24,1342,Public,ECDC
+Austria,AT,Daily hospital occupancy,2023-02-25,1342,Public,ECDC
+Austria,AT,Daily hospital occupancy,2023-02-26,1342,Public,ECDC
 Austria,AT,Daily ICU occupancy,2020-04-01,215,Public,ECDC
 Austria,AT,Daily ICU occupancy,2020-04-02,219,Public,ECDC
 Austria,AT,Daily ICU occupancy,2020-04-03,245,Public,ECDC
@@ -2109,6 +2116,13 @@ Austria,AT,Daily ICU occupancy,2023-02-16,49,Public,ECDC
 Austria,AT,Daily ICU occupancy,2023-02-17,54,Public,ECDC
 Austria,AT,Daily ICU occupancy,2023-02-18,54,Public,ECDC
 Austria,AT,Daily ICU occupancy,2023-02-19,54,Public,ECDC
+Austria,AT,Daily ICU occupancy,2023-02-20,55,Public,ECDC
+Austria,AT,Daily ICU occupancy,2023-02-21,66,Public,ECDC
+Austria,AT,Daily ICU occupancy,2023-02-22,72,Public,ECDC
+Austria,AT,Daily ICU occupancy,2023-02-23,72,Public,ECDC
+Austria,AT,Daily ICU occupancy,2023-02-24,75,Public,ECDC
+Austria,AT,Daily ICU occupancy,2023-02-25,75,Public,ECDC
+Austria,AT,Daily ICU occupancy,2023-02-26,75,Public,ECDC
 Belgium,BE,Daily hospital occupancy,2020-03-15,263,Public,ECDC
 Belgium,BE,Daily hospital occupancy,2020-03-16,370,Public,ECDC
 Belgium,BE,Daily hospital occupancy,2020-03-17,493,Public,ECDC
@@ -3175,8 +3189,15 @@ Belgium,BE,Daily hospital occupancy,2023-02-10,1011,Public,ECDC
 Belgium,BE,Daily hospital occupancy,2023-02-11,1010,Public,ECDC
 Belgium,BE,Daily hospital occupancy,2023-02-12,1070,Public,ECDC
 Belgium,BE,Daily hospital occupancy,2023-02-13,1164,Public,ECDC
-Belgium,BE,Daily hospital occupancy,2023-02-14,1216,Public,ECDC
-Belgium,BE,Daily hospital occupancy,2023-02-15,1222,Public,ECDC
+Belgium,BE,Daily hospital occupancy,2023-02-14,1215,Public,ECDC
+Belgium,BE,Daily hospital occupancy,2023-02-15,1231,Public,ECDC
+Belgium,BE,Daily hospital occupancy,2023-02-16,1261,Public,ECDC
+Belgium,BE,Daily hospital occupancy,2023-02-17,1295,Public,ECDC
+Belgium,BE,Daily hospital occupancy,2023-02-18,1323,Public,ECDC
+Belgium,BE,Daily hospital occupancy,2023-02-19,1387,Public,ECDC
+Belgium,BE,Daily hospital occupancy,2023-02-20,1481,Public,ECDC
+Belgium,BE,Daily hospital occupancy,2023-02-21,1522,Public,ECDC
+Belgium,BE,Daily hospital occupancy,2023-02-22,1570,Public,ECDC
 Belgium,BE,Daily ICU occupancy,2020-03-15,53,Public,ECDC
 Belgium,BE,Daily ICU occupancy,2020-03-16,79,Public,ECDC
 Belgium,BE,Daily ICU occupancy,2020-03-17,100,Public,ECDC
@@ -4244,7 +4265,14 @@ Belgium,BE,Daily ICU occupancy,2023-02-11,37,Public,ECDC
 Belgium,BE,Daily ICU occupancy,2023-02-12,43,Public,ECDC
 Belgium,BE,Daily ICU occupancy,2023-02-13,48,Public,ECDC
 Belgium,BE,Daily ICU occupancy,2023-02-14,43,Public,ECDC
-Belgium,BE,Daily ICU occupancy,2023-02-15,34,Public,ECDC
+Belgium,BE,Daily ICU occupancy,2023-02-15,36,Public,ECDC
+Belgium,BE,Daily ICU occupancy,2023-02-16,33,Public,ECDC
+Belgium,BE,Daily ICU occupancy,2023-02-17,40,Public,ECDC
+Belgium,BE,Daily ICU occupancy,2023-02-18,39,Public,ECDC
+Belgium,BE,Daily ICU occupancy,2023-02-19,42,Public,ECDC
+Belgium,BE,Daily ICU occupancy,2023-02-20,47,Public,ECDC
+Belgium,BE,Daily ICU occupancy,2023-02-21,54,Public,ECDC
+Belgium,BE,Daily ICU occupancy,2023-02-22,58,Public,ECDC
 Belgium,BE,Weekly new hospital admissions per 100k,2020-03-15,1500,TESSy,ECDC
 Belgium,BE,Weekly new hospital admissions per 100k,2020-03-22,1475,TESSy,ECDC
 Belgium,BE,Weekly new hospital admissions per 100k,2020-03-29,3444,TESSy,ECDC
@@ -4398,7 +4426,8 @@ Belgium,BE,Weekly new hospital admissions per 100k,2023-01-22,321,TESSy,ECDC
 Belgium,BE,Weekly new hospital admissions per 100k,2023-01-29,350,TESSy,ECDC
 Belgium,BE,Weekly new hospital admissions per 100k,2023-02-05,435,TESSy,ECDC
 Belgium,BE,Weekly new hospital admissions per 100k,2023-02-12,551,TESSy,ECDC
-Belgium,BE,Weekly new hospital admissions per 100k,2023-02-19,279,TESSy,ECDC
+Belgium,BE,Weekly new hospital admissions per 100k,2023-02-19,709,TESSy,ECDC
+Belgium,BE,Weekly new hospital admissions per 100k,2023-02-26,355,TESSy,ECDC
 Bulgaria,BG,Daily hospital occupancy,2020-04-26,262,TESSy,ECDC
 Bulgaria,BG,Daily hospital occupancy,2020-05-03,310,TESSy,ECDC
 Bulgaria,BG,Daily hospital occupancy,2020-05-10,353,TESSy,ECDC
@@ -4547,6 +4576,7 @@ Bulgaria,BG,Daily hospital occupancy,2023-01-29,312,TESSy,ECDC
 Bulgaria,BG,Daily hospital occupancy,2023-02-05,255,TESSy,ECDC
 Bulgaria,BG,Daily hospital occupancy,2023-02-12,212,TESSy,ECDC
 Bulgaria,BG,Daily hospital occupancy,2023-02-19,194,TESSy,ECDC
+Bulgaria,BG,Daily hospital occupancy,2023-02-26,190,TESSy,ECDC
 Bulgaria,BG,Daily ICU occupancy,2020-04-26,37,TESSy,ECDC
 Bulgaria,BG,Daily ICU occupancy,2020-05-03,38,TESSy,ECDC
 Bulgaria,BG,Daily ICU occupancy,2020-05-10,38,TESSy,ECDC
@@ -4694,6 +4724,7 @@ Bulgaria,BG,Daily ICU occupancy,2023-01-29,39,TESSy,ECDC
 Bulgaria,BG,Daily ICU occupancy,2023-02-05,30,TESSy,ECDC
 Bulgaria,BG,Daily ICU occupancy,2023-02-12,29,TESSy,ECDC
 Bulgaria,BG,Daily ICU occupancy,2023-02-19,22,TESSy,ECDC
+Bulgaria,BG,Daily ICU occupancy,2023-02-26,20,TESSy,ECDC
 Croatia,HR,Daily hospital occupancy,2020-04-15,341,Public,ECDC
 Croatia,HR,Daily hospital occupancy,2020-04-16,372,Public,ECDC
 Croatia,HR,Daily hospital occupancy,2020-04-17,372,Public,ECDC
@@ -6441,20 +6472,51 @@ Cyprus,CY,Daily hospital occupancy,2022-04-11,204,Public,ECDC
 Cyprus,CY,Daily hospital occupancy,2022-04-12,188,Public,ECDC
 Cyprus,CY,Daily hospital occupancy,2022-04-13,183,Public,ECDC
 Cyprus,CY,Daily hospital occupancy,2022-04-14,157,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-04-21,108,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-04-28,89,Public,ECDC
 Cyprus,CY,Daily hospital occupancy,2022-05-05,60,Public,ECDC
-Cyprus,CY,Daily hospital occupancy,2022-06-01,235,Public,ECDC
-Cyprus,CY,Daily hospital occupancy,2022-06-10,44,Public,ECDC
-Cyprus,CY,Daily hospital occupancy,2022-07-04,208,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-05-12,45,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-05-19,42,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-05-26,30,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-06-02,35,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-06-09,31,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-06-16,34,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-06-23,47,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-06-30,75,Public,ECDC
 Cyprus,CY,Daily hospital occupancy,2022-07-07,97,Public,ECDC
-Cyprus,CY,Daily hospital occupancy,2022-08-09,44,Public,ECDC
-Cyprus,CY,Daily hospital occupancy,2022-08-12,94,Public,ECDC
-Cyprus,CY,Daily hospital occupancy,2022-09-06,31,Public,ECDC
-Cyprus,CY,Daily hospital occupancy,2022-10-02,198,Public,ECDC
-Cyprus,CY,Daily hospital occupancy,2022-10-03,113,Public,ECDC
-Cyprus,CY,Daily hospital occupancy,2022-10-11,69,Public,ECDC
-Cyprus,CY,Daily hospital occupancy,2022-11-08,84,Public,ECDC
-Cyprus,CY,Daily hospital occupancy,2022-12-05,45,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-07-14,117,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-07-21,104,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-07-28,76,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-08-04,71,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-08-11,84,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-08-18,73,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-08-25,57,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-09-01,42,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-09-08,44,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-09-15,47,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-09-22,51,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-09-29,47,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-10-06,44,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-10-13,53,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-10-20,42,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-10-27,59,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-11-03,70,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-11-10,69,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-11-17,70,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-11-24,74,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-12-01,93,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-12-08,94,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-12-15,77,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-12-22,73,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2022-12-29,84,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2023-01-05,90,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2023-01-12,85,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2023-01-19,90,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2023-01-26,69,Public,ECDC
 Cyprus,CY,Daily hospital occupancy,2023-02-02,65,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2023-02-09,57,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2023-02-16,48,Public,ECDC
+Cyprus,CY,Daily hospital occupancy,2023-02-23,48,Public,ECDC
 Cyprus,CY,Daily ICU occupancy,2020-03-09,0,Public,ECDC
 Cyprus,CY,Daily ICU occupancy,2020-03-10,0,Public,ECDC
 Cyprus,CY,Daily ICU occupancy,2020-03-11,0,Public,ECDC
@@ -7222,20 +7284,51 @@ Cyprus,CY,Daily ICU occupancy,2022-04-11,9,Public,ECDC
 Cyprus,CY,Daily ICU occupancy,2022-04-12,9,Public,ECDC
 Cyprus,CY,Daily ICU occupancy,2022-04-13,11,Public,ECDC
 Cyprus,CY,Daily ICU occupancy,2022-04-14,9,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-04-21,10,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-04-28,10,Public,ECDC
 Cyprus,CY,Daily ICU occupancy,2022-05-05,7,Public,ECDC
-Cyprus,CY,Daily ICU occupancy,2022-06-01,31,Public,ECDC
-Cyprus,CY,Daily ICU occupancy,2022-06-10,2,Public,ECDC
-Cyprus,CY,Daily ICU occupancy,2022-07-04,7,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-05-12,2,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-05-19,4,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-05-26,5,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-06-02,1,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-06-09,2,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-06-16,1,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-06-23,1,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-06-30,1,Public,ECDC
 Cyprus,CY,Daily ICU occupancy,2022-07-07,1,Public,ECDC
-Cyprus,CY,Daily ICU occupancy,2022-08-09,2,Public,ECDC
-Cyprus,CY,Daily ICU occupancy,2022-08-12,3,Public,ECDC
-Cyprus,CY,Daily ICU occupancy,2022-09-06,2,Public,ECDC
-Cyprus,CY,Daily ICU occupancy,2022-10-02,18,Public,ECDC
-Cyprus,CY,Daily ICU occupancy,2022-10-03,8,Public,ECDC
-Cyprus,CY,Daily ICU occupancy,2022-10-11,2,Public,ECDC
-Cyprus,CY,Daily ICU occupancy,2022-11-08,6,Public,ECDC
-Cyprus,CY,Daily ICU occupancy,2022-12-05,2,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-07-14,4,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-07-21,6,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-07-28,4,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-08-04,7,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-08-11,6,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-08-18,7,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-08-25,5,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-09-01,4,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-09-08,2,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-09-15,1,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-09-22,0,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-09-29,1,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-10-06,2,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-10-13,3,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-10-20,3,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-10-27,4,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-11-03,2,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-11-10,2,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-11-17,1,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-11-24,1,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-12-01,2,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-12-08,3,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-12-15,2,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-12-22,3,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2022-12-29,3,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2023-01-05,5,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2023-01-12,7,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2023-01-19,5,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2023-01-26,8,Public,ECDC
 Cyprus,CY,Daily ICU occupancy,2023-02-02,8,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2023-02-09,7,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2023-02-16,6,Public,ECDC
+Cyprus,CY,Daily ICU occupancy,2023-02-23,10,Public,ECDC
 Cyprus,CY,Weekly new hospital admissions per 100k,2020-03-15,9,TESSy,ECDC
 Cyprus,CY,Weekly new hospital admissions per 100k,2020-03-22,24,TESSy,ECDC
 Cyprus,CY,Weekly new hospital admissions per 100k,2020-03-29,67,TESSy,ECDC
@@ -7385,7 +7478,8 @@ Cyprus,CY,Weekly new hospital admissions per 100k,2023-01-22,11,TESSy,ECDC
 Cyprus,CY,Weekly new hospital admissions per 100k,2023-01-29,4,TESSy,ECDC
 Cyprus,CY,Weekly new hospital admissions per 100k,2023-02-05,5,TESSy,ECDC
 Cyprus,CY,Weekly new hospital admissions per 100k,2023-02-12,9,TESSy,ECDC
-Cyprus,CY,Weekly new hospital admissions per 100k,2023-02-19,3,TESSy,ECDC
+Cyprus,CY,Weekly new hospital admissions per 100k,2023-02-19,4,TESSy,ECDC
+Cyprus,CY,Weekly new hospital admissions per 100k,2023-02-26,9,TESSy,ECDC
 Cyprus,CY,Weekly new ICU admissions per 100k,2020-03-22,8,TESSy,ECDC
 Cyprus,CY,Weekly new ICU admissions per 100k,2020-03-29,18,TESSy,ECDC
 Cyprus,CY,Weekly new ICU admissions per 100k,2020-04-05,14,TESSy,ECDC
@@ -9663,8 +9757,9 @@ Czechia,CZ,Weekly new hospital admissions per 100k,2023-01-15,197,TESSy,ECDC
 Czechia,CZ,Weekly new hospital admissions per 100k,2023-01-22,172,TESSy,ECDC
 Czechia,CZ,Weekly new hospital admissions per 100k,2023-01-29,172,TESSy,ECDC
 Czechia,CZ,Weekly new hospital admissions per 100k,2023-02-05,249,TESSy,ECDC
-Czechia,CZ,Weekly new hospital admissions per 100k,2023-02-12,326,TESSy,ECDC
-Czechia,CZ,Weekly new hospital admissions per 100k,2023-02-19,350,TESSy,ECDC
+Czechia,CZ,Weekly new hospital admissions per 100k,2023-02-12,328,TESSy,ECDC
+Czechia,CZ,Weekly new hospital admissions per 100k,2023-02-19,408,TESSy,ECDC
+Czechia,CZ,Weekly new hospital admissions per 100k,2023-02-26,493,TESSy,ECDC
 Czechia,CZ,Weekly new ICU admissions per 100k,2020-01-05,0,TESSy,ECDC
 Czechia,CZ,Weekly new ICU admissions per 100k,2020-01-12,0,TESSy,ECDC
 Czechia,CZ,Weekly new ICU admissions per 100k,2020-01-19,0,TESSy,ECDC
@@ -9827,8 +9922,9 @@ Czechia,CZ,Weekly new ICU admissions per 100k,2023-01-15,30,TESSy,ECDC
 Czechia,CZ,Weekly new ICU admissions per 100k,2023-01-22,23,TESSy,ECDC
 Czechia,CZ,Weekly new ICU admissions per 100k,2023-01-29,15,TESSy,ECDC
 Czechia,CZ,Weekly new ICU admissions per 100k,2023-02-05,9,TESSy,ECDC
-Czechia,CZ,Weekly new ICU admissions per 100k,2023-02-12,25,TESSy,ECDC
-Czechia,CZ,Weekly new ICU admissions per 100k,2023-02-19,23,TESSy,ECDC
+Czechia,CZ,Weekly new ICU admissions per 100k,2023-02-12,26,TESSy,ECDC
+Czechia,CZ,Weekly new ICU admissions per 100k,2023-02-19,28,TESSy,ECDC
+Czechia,CZ,Weekly new ICU admissions per 100k,2023-02-26,34,TESSy,ECDC
 Denmark,DK,Daily hospital occupancy,2020-04-02,527,Public,ECDC
 Denmark,DK,Daily hospital occupancy,2020-04-03,511,Public,ECDC
 Denmark,DK,Daily hospital occupancy,2020-04-04,498,Public,ECDC
@@ -12869,7 +12965,14 @@ Estonia,EE,Daily hospital occupancy,2023-02-15,122,Public,ECDC
 Estonia,EE,Daily hospital occupancy,2023-02-16,117,Public,ECDC
 Estonia,EE,Daily hospital occupancy,2023-02-17,124,Public,ECDC
 Estonia,EE,Daily hospital occupancy,2023-02-18,128,Public,ECDC
-Estonia,EE,Daily hospital occupancy,2023-02-19,119,Public,ECDC
+Estonia,EE,Daily hospital occupancy,2023-02-19,115,Public,ECDC
+Estonia,EE,Daily hospital occupancy,2023-02-20,117,Public,ECDC
+Estonia,EE,Daily hospital occupancy,2023-02-21,114,Public,ECDC
+Estonia,EE,Daily hospital occupancy,2023-02-22,109,Public,ECDC
+Estonia,EE,Daily hospital occupancy,2023-02-23,114,Public,ECDC
+Estonia,EE,Daily hospital occupancy,2023-02-24,133,Public,ECDC
+Estonia,EE,Daily hospital occupancy,2023-02-25,137,Public,ECDC
+Estonia,EE,Daily hospital occupancy,2023-02-26,136,Public,ECDC
 Estonia,EE,Daily ICU occupancy,2020-03-29,70,TESSy,ECDC
 Estonia,EE,Daily ICU occupancy,2020-11-22,14,TESSy,ECDC
 Estonia,EE,Daily ICU occupancy,2020-11-29,21,TESSy,ECDC
@@ -12987,6 +13090,7 @@ Estonia,EE,Daily ICU occupancy,2023-01-29,2,TESSy,ECDC
 Estonia,EE,Daily ICU occupancy,2023-02-05,4,TESSy,ECDC
 Estonia,EE,Daily ICU occupancy,2023-02-12,1,TESSy,ECDC
 Estonia,EE,Daily ICU occupancy,2023-02-19,1,TESSy,ECDC
+Estonia,EE,Daily ICU occupancy,2023-02-26,3,TESSy,ECDC
 Estonia,EE,Weekly new hospital admissions per 100k,2020-03-29,518,TESSy,ECDC
 Estonia,EE,Weekly new hospital admissions per 100k,2020-04-26,24,TESSy,ECDC
 Estonia,EE,Weekly new hospital admissions per 100k,2020-05-03,24,TESSy,ECDC
@@ -13133,6 +13237,7 @@ Estonia,EE,Weekly new hospital admissions per 100k,2023-01-29,131,TESSy,ECDC
 Estonia,EE,Weekly new hospital admissions per 100k,2023-02-05,108,TESSy,ECDC
 Estonia,EE,Weekly new hospital admissions per 100k,2023-02-12,112,TESSy,ECDC
 Estonia,EE,Weekly new hospital admissions per 100k,2023-02-19,107,TESSy,ECDC
+Estonia,EE,Weekly new hospital admissions per 100k,2023-02-26,114,TESSy,ECDC
 Estonia,EE,Weekly new ICU admissions per 100k,2020-03-29,51,TESSy,ECDC
 Estonia,EE,Weekly new ICU admissions per 100k,2020-04-26,8,TESSy,ECDC
 Estonia,EE,Weekly new ICU admissions per 100k,2020-05-03,8,TESSy,ECDC
@@ -13279,6 +13384,7 @@ Estonia,EE,Weekly new ICU admissions per 100k,2023-01-29,2,TESSy,ECDC
 Estonia,EE,Weekly new ICU admissions per 100k,2023-02-05,1,TESSy,ECDC
 Estonia,EE,Weekly new ICU admissions per 100k,2023-02-12,1,TESSy,ECDC
 Estonia,EE,Weekly new ICU admissions per 100k,2023-02-19,2,TESSy,ECDC
+Estonia,EE,Weekly new ICU admissions per 100k,2023-02-26,1,TESSy,ECDC
 Finland,FI,Daily hospital occupancy,2020-03-21,0,Public,ECDC
 Finland,FI,Daily hospital occupancy,2020-03-25,82,Public,ECDC
 Finland,FI,Daily hospital occupancy,2020-03-26,96,Public,ECDC
@@ -14948,110 +15054,111 @@ France,FR,Daily hospital occupancy,2021-01-31,28630,TESSy,ECDC
 France,FR,Daily hospital occupancy,2021-02-07,28943,TESSy,ECDC
 France,FR,Daily hospital occupancy,2021-02-14,27900,TESSy,ECDC
 France,FR,Daily hospital occupancy,2021-02-21,26414,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-02-28,25742,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-03-07,25349,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-03-14,25290,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-03-21,26231,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-03-28,28029,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-04-04,29750,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-04-11,31135,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-04-18,31152,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-04-25,30759,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-05-02,29117,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-05-09,25831,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-05-16,21957,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-05-23,18610,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-05-30,15648,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-06-06,13077,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-06-13,10950,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-06-20,9128,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-06-27,7674,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-07-04,6616,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-07-11,5897,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-07-18,5656,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-07-25,6017,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-08-01,7148,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-08-08,8633,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-08-15,10079,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-08-22,11058,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-08-29,11305,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-09-05,10915,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-09-12,10109,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-09-19,9058,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-09-26,7938,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-10-03,7152,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-10-10,6616,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-10-17,6309,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-10-24,6327,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-10-31,6599,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-11-07,6968,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-11-14,7600,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-11-21,8724,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-11-28,10399,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-12-05,12866,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-12-12,15607,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-12-19,17496,TESSy,ECDC
-France,FR,Daily hospital occupancy,2021-12-26,18726,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-01-02,21609,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-01-09,25534,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-02-28,25743,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-03-07,25350,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-03-14,25291,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-03-21,26232,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-03-28,28030,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-04-04,29751,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-04-11,31136,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-04-18,31153,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-04-25,30760,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-05-02,29118,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-05-09,25832,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-05-16,21958,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-05-23,18611,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-05-30,15649,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-06-06,13078,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-06-13,10951,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-06-20,9129,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-06-27,7675,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-07-04,6617,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-07-11,5898,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-07-18,5657,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-07-25,6018,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-08-01,7149,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-08-08,8634,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-08-15,10080,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-08-22,11059,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-08-29,11306,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-09-05,10916,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-09-12,10110,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-09-19,9059,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-09-26,7939,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-10-03,7153,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-10-10,6617,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-10-17,6310,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-10-24,6328,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-10-31,6600,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-11-07,6969,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-11-14,7601,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-11-21,8725,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-11-28,10400,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-12-05,12867,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-12-12,15608,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-12-19,17497,TESSy,ECDC
+France,FR,Daily hospital occupancy,2021-12-26,18727,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-01-02,21610,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-01-09,25535,TESSy,ECDC
 France,FR,Daily hospital occupancy,2022-01-16,29090,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-01-23,33121,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-01-30,35779,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-02-06,36437,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-02-13,34336,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-02-20,30578,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-02-27,26388,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-03-06,22890,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-03-13,21200,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-03-20,20970,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-03-27,21484,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-04-03,23170,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-01-23,33120,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-01-30,35778,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-02-06,36435,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-02-13,34335,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-02-20,30576,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-02-27,26389,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-03-06,22894,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-03-13,21205,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-03-20,20974,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-03-27,21487,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-04-03,23171,TESSy,ECDC
 France,FR,Daily hospital occupancy,2022-04-10,24590,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-04-17,25464,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-04-24,24999,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-05-01,22958,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-05-08,20198,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-05-15,17805,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-05-22,15597,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-05-29,13880,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-06-05,12809,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-06-12,12651,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-06-19,13049,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-06-26,14425,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-07-03,16215,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-07-10,18845,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-07-17,20927,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-07-24,21427,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-07-31,20128,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-08-07,18227,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-08-14,16540,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-08-21,15435,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-08-28,14278,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-04-17,25463,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-04-24,24997,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-05-01,22955,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-05-08,20195,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-05-15,17803,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-05-22,15596,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-05-29,13879,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-06-05,12808,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-06-12,12652,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-06-19,13050,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-06-26,14426,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-07-03,16219,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-07-10,18850,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-07-17,20932,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-07-24,21434,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-07-31,20133,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-08-07,18231,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-08-14,16544,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-08-21,15437,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-08-28,14280,TESSy,ECDC
 France,FR,Daily hospital occupancy,2022-09-04,13321,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-09-11,12726,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-09-18,12547,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-09-25,13182,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-10-02,15126,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-10-09,17609,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-10-16,19739,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-10-23,20805,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-10-30,19828,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-11-06,18624,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-11-13,17889,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-11-20,18248,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-11-27,19252,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-12-04,21231,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-12-11,23680,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-12-18,25886,TESSy,ECDC
-France,FR,Daily hospital occupancy,2022-12-25,26254,TESSy,ECDC
-France,FR,Daily hospital occupancy,2023-01-01,24373,TESSy,ECDC
-France,FR,Daily hospital occupancy,2023-01-08,21707,TESSy,ECDC
-France,FR,Daily hospital occupancy,2023-01-15,19116,TESSy,ECDC
-France,FR,Daily hospital occupancy,2023-01-22,17074,TESSy,ECDC
-France,FR,Daily hospital occupancy,2023-01-29,15617,TESSy,ECDC
-France,FR,Daily hospital occupancy,2023-02-05,14206,TESSy,ECDC
-France,FR,Daily hospital occupancy,2023-02-12,13618,TESSy,ECDC
-France,FR,Daily hospital occupancy,2023-02-19,13315,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-09-11,12723,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-09-18,12543,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-09-25,13178,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-10-02,15120,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-10-09,17600,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-10-16,19727,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-10-23,20789,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-10-30,19812,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-11-06,18613,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-11-13,17875,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-11-20,18231,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-11-27,19232,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-12-04,21210,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-12-11,23653,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-12-18,25848,TESSy,ECDC
+France,FR,Daily hospital occupancy,2022-12-25,26196,TESSy,ECDC
+France,FR,Daily hospital occupancy,2023-01-01,24294,TESSy,ECDC
+France,FR,Daily hospital occupancy,2023-01-08,21609,TESSy,ECDC
+France,FR,Daily hospital occupancy,2023-01-15,18995,TESSy,ECDC
+France,FR,Daily hospital occupancy,2023-01-22,16938,TESSy,ECDC
+France,FR,Daily hospital occupancy,2023-01-29,15471,TESSy,ECDC
+France,FR,Daily hospital occupancy,2023-02-05,14062,TESSy,ECDC
+France,FR,Daily hospital occupancy,2023-02-12,13499,TESSy,ECDC
+France,FR,Daily hospital occupancy,2023-02-19,13262,TESSy,ECDC
+France,FR,Daily hospital occupancy,2023-02-26,13256,TESSy,ECDC
 France,FR,Daily ICU occupancy,2020-03-08,31,TESSy,ECDC
 France,FR,Daily ICU occupancy,2020-03-15,329,TESSy,ECDC
 France,FR,Daily ICU occupancy,2020-03-22,1605,TESSy,ECDC
@@ -15152,9 +15259,9 @@ France,FR,Daily ICU occupancy,2022-01-09,4252,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-01-16,4344,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-01-23,4200,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-01-30,4060,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-02-06,3995,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-02-06,3996,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-02-13,3697,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-02-20,3247,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-02-20,3246,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-02-27,2723,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-03-06,2259,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-03-13,1942,TESSy,ECDC
@@ -15163,50 +15270,51 @@ France,FR,Daily ICU occupancy,2022-03-27,1618,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-04-03,1699,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-04-10,1723,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-04-17,1757,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-04-24,1780,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-04-24,1781,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-05-01,1635,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-05-08,1423,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-05-15,1242,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-05-22,1073,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-05-29,945,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-05-08,1424,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-05-15,1243,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-05-22,1075,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-05-29,946,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-06-05,857,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-06-12,833,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-06-19,827,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-06-26,900,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-07-03,999,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-07-03,998,TESSy,ECDC
 France,FR,Daily ICU occupancy,2022-07-10,1189,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-07-17,1345,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-07-24,1397,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-07-31,1273,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-08-07,1153,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-08-14,1025,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-08-21,942,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-08-28,833,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-09-04,804,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-09-11,744,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-09-18,740,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-09-25,766,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-10-02,867,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-10-09,992,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-10-16,1096,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-10-23,1170,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-10-30,1125,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-11-06,1076,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-11-13,1009,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-11-20,1051,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-11-27,1118,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-12-04,1231,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-12-11,1354,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-12-18,1547,TESSy,ECDC
-France,FR,Daily ICU occupancy,2022-12-25,1612,TESSy,ECDC
-France,FR,Daily ICU occupancy,2023-01-01,1551,TESSy,ECDC
-France,FR,Daily ICU occupancy,2023-01-08,1407,TESSy,ECDC
-France,FR,Daily ICU occupancy,2023-01-15,1245,TESSy,ECDC
-France,FR,Daily ICU occupancy,2023-01-22,1083,TESSy,ECDC
-France,FR,Daily ICU occupancy,2023-01-29,949,TESSy,ECDC
-France,FR,Daily ICU occupancy,2023-02-05,859,TESSy,ECDC
-France,FR,Daily ICU occupancy,2023-02-12,806,TESSy,ECDC
-France,FR,Daily ICU occupancy,2023-02-19,779,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-07-17,1344,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-07-24,1396,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-07-31,1272,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-08-07,1152,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-08-14,1024,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-08-21,940,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-08-28,830,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-09-04,802,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-09-11,741,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-09-18,737,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-09-25,763,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-10-02,862,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-10-09,986,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-10-16,1089,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-10-23,1163,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-10-30,1118,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-11-06,1071,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-11-13,1003,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-11-20,1045,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-11-27,1113,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-12-04,1227,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-12-11,1350,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-12-18,1543,TESSy,ECDC
+France,FR,Daily ICU occupancy,2022-12-25,1608,TESSy,ECDC
+France,FR,Daily ICU occupancy,2023-01-01,1547,TESSy,ECDC
+France,FR,Daily ICU occupancy,2023-01-08,1404,TESSy,ECDC
+France,FR,Daily ICU occupancy,2023-01-15,1240,TESSy,ECDC
+France,FR,Daily ICU occupancy,2023-01-22,1076,TESSy,ECDC
+France,FR,Daily ICU occupancy,2023-01-29,943,TESSy,ECDC
+France,FR,Daily ICU occupancy,2023-02-05,854,TESSy,ECDC
+France,FR,Daily ICU occupancy,2023-02-12,807,TESSy,ECDC
+France,FR,Daily ICU occupancy,2023-02-19,788,TESSy,ECDC
+France,FR,Daily ICU occupancy,2023-02-26,771,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2020-03-08,38,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2020-03-15,1151,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2020-03-22,7633,TESSy,ECDC
@@ -15307,7 +15415,7 @@ France,FR,Weekly new hospital admissions per 100k,2022-01-09,13474,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2022-01-16,14937,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2022-01-23,17555,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2022-01-30,18272,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-02-06,17922,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-02-06,17921,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2022-02-13,14264,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2022-02-20,10962,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2022-02-27,8006,TESSy,ECDC
@@ -15332,36 +15440,37 @@ France,FR,Weekly new hospital admissions per 100k,2022-07-03,6376,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2022-07-10,8604,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2022-07-17,9044,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2022-07-24,9466,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-07-31,7389,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-07-31,7387,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2022-08-07,5447,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-08-14,4450,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-08-14,4449,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2022-08-21,3561,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-08-28,3073,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-08-28,3071,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2022-09-04,2532,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-09-11,2451,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-09-11,2450,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2022-09-18,2517,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-09-25,2932,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-10-02,4790,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-10-09,6544,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-10-16,7463,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-10-23,7525,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-10-30,6030,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-09-25,2931,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-10-02,4788,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-10-09,6541,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-10-16,7460,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-10-23,7523,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-10-30,6029,TESSy,ECDC
 France,FR,Weekly new hospital admissions per 100k,2022-11-06,4245,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-11-13,3955,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-11-20,5243,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-11-27,5486,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-12-04,7162,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-12-11,8970,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-12-18,10089,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2022-12-25,9663,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2023-01-01,7092,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2023-01-08,5378,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2023-01-15,3513,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2023-01-22,2290,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2023-01-29,1826,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2023-02-05,1825,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2023-02-12,1722,TESSy,ECDC
-France,FR,Weekly new hospital admissions per 100k,2023-02-19,1721,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-11-13,3951,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-11-20,5240,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-11-27,5485,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-12-04,7158,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-12-11,8966,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-12-18,10086,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2022-12-25,9655,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2023-01-01,7091,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2023-01-08,5376,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2023-01-15,3508,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2023-01-22,2288,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2023-01-29,1824,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2023-02-05,1822,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2023-02-12,1720,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2023-02-19,1716,TESSy,ECDC
+France,FR,Weekly new hospital admissions per 100k,2023-02-26,1870,TESSy,ECDC
 France,FR,Weekly new ICU admissions per 100k,2020-03-08,2,TESSy,ECDC
 France,FR,Weekly new ICU admissions per 100k,2020-03-15,287,TESSy,ECDC
 France,FR,Weekly new ICU admissions per 100k,2020-03-22,1715,TESSy,ECDC
@@ -15505,18 +15614,19 @@ France,FR,Weekly new ICU admissions per 100k,2022-11-06,434,TESSy,ECDC
 France,FR,Weekly new ICU admissions per 100k,2022-11-13,350,TESSy,ECDC
 France,FR,Weekly new ICU admissions per 100k,2022-11-20,469,TESSy,ECDC
 France,FR,Weekly new ICU admissions per 100k,2022-11-27,524,TESSy,ECDC
-France,FR,Weekly new ICU admissions per 100k,2022-12-04,651,TESSy,ECDC
+France,FR,Weekly new ICU admissions per 100k,2022-12-04,650,TESSy,ECDC
 France,FR,Weekly new ICU admissions per 100k,2022-12-11,725,TESSy,ECDC
-France,FR,Weekly new ICU admissions per 100k,2022-12-18,876,TESSy,ECDC
-France,FR,Weekly new ICU admissions per 100k,2022-12-25,819,TESSy,ECDC
+France,FR,Weekly new ICU admissions per 100k,2022-12-18,875,TESSy,ECDC
+France,FR,Weekly new ICU admissions per 100k,2022-12-25,817,TESSy,ECDC
 France,FR,Weekly new ICU admissions per 100k,2023-01-01,727,TESSy,ECDC
 France,FR,Weekly new ICU admissions per 100k,2023-01-08,621,TESSy,ECDC
-France,FR,Weekly new ICU admissions per 100k,2023-01-15,453,TESSy,ECDC
-France,FR,Weekly new ICU admissions per 100k,2023-01-22,255,TESSy,ECDC
+France,FR,Weekly new ICU admissions per 100k,2023-01-15,452,TESSy,ECDC
+France,FR,Weekly new ICU admissions per 100k,2023-01-22,254,TESSy,ECDC
 France,FR,Weekly new ICU admissions per 100k,2023-01-29,200,TESSy,ECDC
 France,FR,Weekly new ICU admissions per 100k,2023-02-05,182,TESSy,ECDC
 France,FR,Weekly new ICU admissions per 100k,2023-02-12,173,TESSy,ECDC
-France,FR,Weekly new ICU admissions per 100k,2023-02-19,174,TESSy,ECDC
+France,FR,Weekly new ICU admissions per 100k,2023-02-19,173,TESSy,ECDC
+France,FR,Weekly new ICU admissions per 100k,2023-02-26,186,TESSy,ECDC
 Germany,DE,Daily ICU occupancy,2020-03-29,789,TESSy,ECDC
 Germany,DE,Daily ICU occupancy,2020-04-05,1787,TESSy,ECDC
 Germany,DE,Daily ICU occupancy,2020-04-12,2654,TESSy,ECDC
@@ -15668,7 +15778,8 @@ Germany,DE,Daily ICU occupancy,2023-01-22,843,TESSy,ECDC
 Germany,DE,Daily ICU occupancy,2023-01-29,662,TESSy,ECDC
 Germany,DE,Daily ICU occupancy,2023-02-05,590,TESSy,ECDC
 Germany,DE,Daily ICU occupancy,2023-02-12,674,TESSy,ECDC
-Germany,DE,Daily ICU occupancy,2023-02-19,758,TESSy,ECDC
+Germany,DE,Daily ICU occupancy,2023-02-19,760,TESSy,ECDC
+Germany,DE,Daily ICU occupancy,2023-02-26,973,TESSy,ECDC
 Germany,DE,Weekly new hospital admissions per 100k,2020-03-22,2223,Public,ECDC
 Germany,DE,Weekly new hospital admissions per 100k,2020-03-29,5120,Public,ECDC
 Germany,DE,Weekly new hospital admissions per 100k,2020-04-05,6069,Public,ECDC
@@ -15936,6 +16047,7 @@ Greece,GR,Weekly new hospital admissions per 100k,2023-01-29,1121,TESSy,ECDC
 Greece,GR,Weekly new hospital admissions per 100k,2023-02-05,971,TESSy,ECDC
 Greece,GR,Weekly new hospital admissions per 100k,2023-02-12,861,TESSy,ECDC
 Greece,GR,Weekly new hospital admissions per 100k,2023-02-19,958,TESSy,ECDC
+Greece,GR,Weekly new hospital admissions per 100k,2023-02-26,1071,TESSy,ECDC
 Greece,GR,Weekly new ICU admissions per 100k,2020-03-08,2,TESSy,ECDC
 Greece,GR,Weekly new ICU admissions per 100k,2020-03-15,13,TESSy,ECDC
 Greece,GR,Weekly new ICU admissions per 100k,2020-03-22,43,TESSy,ECDC
@@ -16091,6 +16203,7 @@ Greece,GR,Weekly new ICU admissions per 100k,2023-01-29,49,TESSy,ECDC
 Greece,GR,Weekly new ICU admissions per 100k,2023-02-05,33,TESSy,ECDC
 Greece,GR,Weekly new ICU admissions per 100k,2023-02-12,31,TESSy,ECDC
 Greece,GR,Weekly new ICU admissions per 100k,2023-02-19,20,TESSy,ECDC
+Greece,GR,Weekly new ICU admissions per 100k,2023-02-26,28,TESSy,ECDC
 Hungary,HU,Daily hospital occupancy,2020-03-03,0,Public,ECDC
 Hungary,HU,Daily hospital occupancy,2020-03-04,2,Public,ECDC
 Hungary,HU,Daily hospital occupancy,2020-03-05,4,Public,ECDC
@@ -17688,6 +17801,8 @@ Iceland,IS,Weekly new hospital admissions per 100k,2023-01-08,25,TESSy,ECDC
 Iceland,IS,Weekly new hospital admissions per 100k,2023-01-29,13,TESSy,ECDC
 Iceland,IS,Weekly new hospital admissions per 100k,2023-02-05,19,TESSy,ECDC
 Iceland,IS,Weekly new hospital admissions per 100k,2023-02-12,7,TESSy,ECDC
+Iceland,IS,Weekly new hospital admissions per 100k,2023-02-19,6,TESSy,ECDC
+Iceland,IS,Weekly new hospital admissions per 100k,2023-02-26,5,TESSy,ECDC
 Ireland,IE,Daily hospital occupancy,2020-03-07,18,Public,ECDC
 Ireland,IE,Daily hospital occupancy,2020-03-08,17,Public,ECDC
 Ireland,IE,Daily hospital occupancy,2020-03-09,18,Public,ECDC
@@ -18760,6 +18875,17 @@ Ireland,IE,Daily hospital occupancy,2023-02-11,161,Public,ECDC
 Ireland,IE,Daily hospital occupancy,2023-02-12,172,Public,ECDC
 Ireland,IE,Daily hospital occupancy,2023-02-13,183,Public,ECDC
 Ireland,IE,Daily hospital occupancy,2023-02-14,166,Public,ECDC
+Ireland,IE,Daily hospital occupancy,2023-02-15,169,Public,ECDC
+Ireland,IE,Daily hospital occupancy,2023-02-16,159,Public,ECDC
+Ireland,IE,Daily hospital occupancy,2023-02-17,169,Public,ECDC
+Ireland,IE,Daily hospital occupancy,2023-02-18,167,Public,ECDC
+Ireland,IE,Daily hospital occupancy,2023-02-19,174,Public,ECDC
+Ireland,IE,Daily hospital occupancy,2023-02-20,185,Public,ECDC
+Ireland,IE,Daily hospital occupancy,2023-02-21,171,Public,ECDC
+Ireland,IE,Daily hospital occupancy,2023-02-22,163,Public,ECDC
+Ireland,IE,Daily hospital occupancy,2023-02-23,163,Public,ECDC
+Ireland,IE,Daily hospital occupancy,2023-02-24,152,Public,ECDC
+Ireland,IE,Daily hospital occupancy,2023-02-25,142,Public,ECDC
 Ireland,IE,Daily ICU occupancy,2020-03-27,68,Public,ECDC
 Ireland,IE,Daily ICU occupancy,2020-03-28,80,Public,ECDC
 Ireland,IE,Daily ICU occupancy,2020-03-29,96,Public,ECDC
@@ -19818,6 +19944,13 @@ Ireland,IE,Daily ICU occupancy,2023-02-16,22,Public,ECDC
 Ireland,IE,Daily ICU occupancy,2023-02-17,21,Public,ECDC
 Ireland,IE,Daily ICU occupancy,2023-02-18,20,Public,ECDC
 Ireland,IE,Daily ICU occupancy,2023-02-19,17,Public,ECDC
+Ireland,IE,Daily ICU occupancy,2023-02-20,18,Public,ECDC
+Ireland,IE,Daily ICU occupancy,2023-02-21,14,Public,ECDC
+Ireland,IE,Daily ICU occupancy,2023-02-22,13,Public,ECDC
+Ireland,IE,Daily ICU occupancy,2023-02-23,11,Public,ECDC
+Ireland,IE,Daily ICU occupancy,2023-02-24,11,Public,ECDC
+Ireland,IE,Daily ICU occupancy,2023-02-25,14,Public,ECDC
+Ireland,IE,Daily ICU occupancy,2023-02-26,16,Public,ECDC
 Ireland,IE,Weekly new hospital admissions per 100k,2020-04-12,473,Public,ECDC
 Ireland,IE,Weekly new hospital admissions per 100k,2020-04-19,335,Public,ECDC
 Ireland,IE,Weekly new hospital admissions per 100k,2020-04-26,293,Public,ECDC
@@ -19966,6 +20099,7 @@ Ireland,IE,Weekly new hospital admissions per 100k,2023-01-22,248,Public,ECDC
 Ireland,IE,Weekly new hospital admissions per 100k,2023-01-29,228,Public,ECDC
 Ireland,IE,Weekly new hospital admissions per 100k,2023-02-05,187,Public,ECDC
 Ireland,IE,Weekly new hospital admissions per 100k,2023-02-12,207,Public,ECDC
+Ireland,IE,Weekly new hospital admissions per 100k,2023-02-19,195,Public,ECDC
 Ireland,IE,Weekly new ICU admissions per 100k,2020-04-05,4,Public,ECDC
 Ireland,IE,Weekly new ICU admissions per 100k,2020-04-12,45,Public,ECDC
 Ireland,IE,Weekly new ICU admissions per 100k,2020-04-19,57,Public,ECDC
@@ -20113,6 +20247,7 @@ Ireland,IE,Weekly new ICU admissions per 100k,2023-01-29,7,Public,ECDC
 Ireland,IE,Weekly new ICU admissions per 100k,2023-02-05,8,Public,ECDC
 Ireland,IE,Weekly new ICU admissions per 100k,2023-02-12,7,Public,ECDC
 Ireland,IE,Weekly new ICU admissions per 100k,2023-02-19,7,Public,ECDC
+Ireland,IE,Weekly new ICU admissions per 100k,2023-02-26,6,Public,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-02-02,2,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-02-09,1,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-02-23,495,TESSy,ECDC
@@ -20122,22 +20257,22 @@ Italy,IT,Weekly new hospital admissions per 100k,2020-03-15,13443,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-03-22,18919,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-03-29,15765,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-04-05,9801,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2020-04-12,6880,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2020-04-12,6881,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-04-19,4959,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-04-26,4039,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2020-05-03,2545,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2020-05-03,2546,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-05-10,1984,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2020-05-17,1456,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2020-05-24,1047,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2020-05-17,1457,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2020-05-24,1048,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-05-31,837,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-06-07,684,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-06-14,643,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2020-06-21,581,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2020-06-21,582,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-06-28,588,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-07-05,559,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2020-07-12,515,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2020-07-12,516,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-07-19,531,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2020-07-26,562,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2020-07-26,564,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-08-02,543,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-08-09,584,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2020-08-16,624,TESSy,ECDC
@@ -20216,10 +20351,10 @@ Italy,IT,Weekly new hospital admissions per 100k,2022-01-02,9070,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2022-01-09,11758,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2022-01-16,11483,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2022-01-23,11363,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2022-01-30,10157,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2022-01-30,10158,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2022-02-06,8848,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2022-02-13,7129,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2022-02-20,5647,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2022-02-13,7130,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2022-02-20,5649,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2022-02-27,4524,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2022-03-06,4177,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2022-03-13,4295,TESSy,ECDC
@@ -20256,22 +20391,23 @@ Italy,IT,Weekly new hospital admissions per 100k,2022-10-09,4045,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2022-10-16,4323,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2022-10-23,4125,TESSy,ECDC
 Italy,IT,Weekly new hospital admissions per 100k,2022-10-30,3675,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2022-11-06,3577,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2022-11-13,3803,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2022-11-20,4534,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2022-11-27,4770,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2022-12-04,5095,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2022-12-11,5231,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2022-12-18,4705,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2022-12-25,4270,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2023-01-01,3934,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2023-01-08,3349,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2023-01-15,2717,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2023-01-22,1970,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2023-01-29,1721,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2023-02-05,1645,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2023-02-12,1376,TESSy,ECDC
-Italy,IT,Weekly new hospital admissions per 100k,2023-02-19,916,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2022-11-06,3585,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2022-11-13,3815,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2022-11-20,4541,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2022-11-27,4787,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2022-12-04,5122,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2022-12-11,5253,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2022-12-18,4724,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2022-12-25,4294,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2023-01-01,3965,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2023-01-08,3392,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2023-01-15,2749,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2023-01-22,1998,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2023-01-29,1743,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2023-02-05,1677,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2023-02-12,1455,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2023-02-19,1446,TESSy,ECDC
+Italy,IT,Weekly new hospital admissions per 100k,2023-02-26,939,TESSy,ECDC
 Italy,IT,Weekly new ICU admissions per 100k,2020-02-23,15,TESSy,ECDC
 Italy,IT,Weekly new ICU admissions per 100k,2020-03-01,249,TESSy,ECDC
 Italy,IT,Weekly new ICU admissions per 100k,2020-03-08,789,TESSy,ECDC
@@ -20425,10 +20561,11 @@ Italy,IT,Weekly new ICU admissions per 100k,2023-01-01,229,TESSy,ECDC
 Italy,IT,Weekly new ICU admissions per 100k,2023-01-08,153,TESSy,ECDC
 Italy,IT,Weekly new ICU admissions per 100k,2023-01-15,131,TESSy,ECDC
 Italy,IT,Weekly new ICU admissions per 100k,2023-01-22,84,TESSy,ECDC
-Italy,IT,Weekly new ICU admissions per 100k,2023-01-29,66,TESSy,ECDC
-Italy,IT,Weekly new ICU admissions per 100k,2023-02-05,71,TESSy,ECDC
-Italy,IT,Weekly new ICU admissions per 100k,2023-02-12,58,TESSy,ECDC
-Italy,IT,Weekly new ICU admissions per 100k,2023-02-19,45,TESSy,ECDC
+Italy,IT,Weekly new ICU admissions per 100k,2023-01-29,64,TESSy,ECDC
+Italy,IT,Weekly new ICU admissions per 100k,2023-02-05,75,TESSy,ECDC
+Italy,IT,Weekly new ICU admissions per 100k,2023-02-12,59,TESSy,ECDC
+Italy,IT,Weekly new ICU admissions per 100k,2023-02-19,63,TESSy,ECDC
+Italy,IT,Weekly new ICU admissions per 100k,2023-02-26,48,TESSy,ECDC
 Latvia,LV,Daily hospital occupancy,2020-03-30,28,Public,ECDC
 Latvia,LV,Daily hospital occupancy,2020-03-31,27,Public,ECDC
 Latvia,LV,Daily hospital occupancy,2020-04-01,28,Public,ECDC
@@ -21299,6 +21436,7 @@ Latvia,LV,Daily ICU occupancy,2023-01-29,7,TESSy,ECDC
 Latvia,LV,Daily ICU occupancy,2023-02-05,4,TESSy,ECDC
 Latvia,LV,Daily ICU occupancy,2023-02-12,3,TESSy,ECDC
 Latvia,LV,Daily ICU occupancy,2023-02-19,2,TESSy,ECDC
+Latvia,LV,Daily ICU occupancy,2023-02-26,5,TESSy,ECDC
 Latvia,LV,Weekly new hospital admissions per 100k,2020-01-05,0,TESSy,ECDC
 Latvia,LV,Weekly new hospital admissions per 100k,2020-01-12,0,TESSy,ECDC
 Latvia,LV,Weekly new hospital admissions per 100k,2020-01-19,0,TESSy,ECDC
@@ -21463,6 +21601,7 @@ Latvia,LV,Weekly new hospital admissions per 100k,2023-01-29,149,TESSy,ECDC
 Latvia,LV,Weekly new hospital admissions per 100k,2023-02-05,123,TESSy,ECDC
 Latvia,LV,Weekly new hospital admissions per 100k,2023-02-12,131,TESSy,ECDC
 Latvia,LV,Weekly new hospital admissions per 100k,2023-02-19,137,TESSy,ECDC
+Latvia,LV,Weekly new hospital admissions per 100k,2023-02-26,118,TESSy,ECDC
 Latvia,LV,Weekly new ICU admissions per 100k,2020-01-05,0,TESSy,ECDC
 Latvia,LV,Weekly new ICU admissions per 100k,2020-01-12,0,TESSy,ECDC
 Latvia,LV,Weekly new ICU admissions per 100k,2020-01-19,0,TESSy,ECDC
@@ -21627,6 +21766,7 @@ Latvia,LV,Weekly new ICU admissions per 100k,2023-01-29,9,TESSy,ECDC
 Latvia,LV,Weekly new ICU admissions per 100k,2023-02-05,10,TESSy,ECDC
 Latvia,LV,Weekly new ICU admissions per 100k,2023-02-12,4,TESSy,ECDC
 Latvia,LV,Weekly new ICU admissions per 100k,2023-02-19,8,TESSy,ECDC
+Latvia,LV,Weekly new ICU admissions per 100k,2023-02-26,9,TESSy,ECDC
 Liechtenstein,LI,Weekly new hospital admissions per 100k,2022-06-05,1,TESSy,ECDC
 Liechtenstein,LI,Weekly new hospital admissions per 100k,2022-06-12,2,TESSy,ECDC
 Liechtenstein,LI,Weekly new hospital admissions per 100k,2022-06-19,2,TESSy,ECDC
@@ -22215,6 +22355,9 @@ Lithuania,LT,Daily hospital occupancy,2023-02-13,124,Public,ECDC
 Lithuania,LT,Daily hospital occupancy,2023-02-14,129,Public,ECDC
 Lithuania,LT,Daily hospital occupancy,2023-02-16,109,Public,ECDC
 Lithuania,LT,Daily hospital occupancy,2023-02-19,108,Public,ECDC
+Lithuania,LT,Daily hospital occupancy,2023-02-20,115,Public,ECDC
+Lithuania,LT,Daily hospital occupancy,2023-02-21,109,Public,ECDC
+Lithuania,LT,Daily hospital occupancy,2023-02-22,113,Public,ECDC
 Lithuania,LT,Weekly new ICU admissions per 100k,2020-12-27,125,TESSy,ECDC
 Lithuania,LT,Weekly new ICU admissions per 100k,2021-01-03,134,TESSy,ECDC
 Lithuania,LT,Weekly new ICU admissions per 100k,2021-09-05,50,TESSy,ECDC
@@ -22238,6 +22381,7 @@ Lithuania,LT,Weekly new ICU admissions per 100k,2023-01-29,37,TESSy,ECDC
 Lithuania,LT,Weekly new ICU admissions per 100k,2023-02-05,23,TESSy,ECDC
 Lithuania,LT,Weekly new ICU admissions per 100k,2023-02-12,4,TESSy,ECDC
 Lithuania,LT,Weekly new ICU admissions per 100k,2023-02-19,11,TESSy,ECDC
+Lithuania,LT,Weekly new ICU admissions per 100k,2023-02-26,12,TESSy,ECDC
 Luxembourg,LU,Daily hospital occupancy,2020-03-16,0,Public,ECDC
 Luxembourg,LU,Daily hospital occupancy,2020-03-17,0,Public,ECDC
 Luxembourg,LU,Daily hospital occupancy,2020-03-18,0,Public,ECDC
@@ -23309,6 +23453,10 @@ Luxembourg,LU,Daily hospital occupancy,2023-02-16,10,Public,ECDC
 Luxembourg,LU,Daily hospital occupancy,2023-02-17,12,Public,ECDC
 Luxembourg,LU,Daily hospital occupancy,2023-02-18,10,Public,ECDC
 Luxembourg,LU,Daily hospital occupancy,2023-02-19,11,Public,ECDC
+Luxembourg,LU,Daily hospital occupancy,2023-02-20,10,Public,ECDC
+Luxembourg,LU,Daily hospital occupancy,2023-02-21,10,Public,ECDC
+Luxembourg,LU,Daily hospital occupancy,2023-02-22,11,Public,ECDC
+Luxembourg,LU,Daily hospital occupancy,2023-02-23,8,Public,ECDC
 Luxembourg,LU,Daily ICU occupancy,2020-02-24,0,Public,ECDC
 Luxembourg,LU,Daily ICU occupancy,2020-02-25,0,Public,ECDC
 Luxembourg,LU,Daily ICU occupancy,2020-02-26,0,Public,ECDC
@@ -24401,6 +24549,10 @@ Luxembourg,LU,Daily ICU occupancy,2023-02-16,0,Public,ECDC
 Luxembourg,LU,Daily ICU occupancy,2023-02-17,0,Public,ECDC
 Luxembourg,LU,Daily ICU occupancy,2023-02-18,1,Public,ECDC
 Luxembourg,LU,Daily ICU occupancy,2023-02-19,1,Public,ECDC
+Luxembourg,LU,Daily ICU occupancy,2023-02-20,1,Public,ECDC
+Luxembourg,LU,Daily ICU occupancy,2023-02-21,1,Public,ECDC
+Luxembourg,LU,Daily ICU occupancy,2023-02-22,0,Public,ECDC
+Luxembourg,LU,Daily ICU occupancy,2023-02-23,1,Public,ECDC
 Luxembourg,LU,Weekly new hospital admissions per 100k,2020-02-16,1,TESSy,ECDC
 Luxembourg,LU,Weekly new hospital admissions per 100k,2020-02-23,1,TESSy,ECDC
 Luxembourg,LU,Weekly new hospital admissions per 100k,2020-03-01,2,TESSy,ECDC
@@ -24559,6 +24711,7 @@ Luxembourg,LU,Weekly new hospital admissions per 100k,2023-01-29,6,TESSy,ECDC
 Luxembourg,LU,Weekly new hospital admissions per 100k,2023-02-05,16,TESSy,ECDC
 Luxembourg,LU,Weekly new hospital admissions per 100k,2023-02-12,11,TESSy,ECDC
 Luxembourg,LU,Weekly new hospital admissions per 100k,2023-02-19,12,TESSy,ECDC
+Luxembourg,LU,Weekly new hospital admissions per 100k,2023-02-26,20,TESSy,ECDC
 Luxembourg,LU,Weekly new ICU admissions per 100k,2020-03-01,1,TESSy,ECDC
 Luxembourg,LU,Weekly new ICU admissions per 100k,2020-03-15,3,TESSy,ECDC
 Luxembourg,LU,Weekly new ICU admissions per 100k,2020-03-22,10,TESSy,ECDC
@@ -24700,6 +24853,7 @@ Luxembourg,LU,Weekly new ICU admissions per 100k,2023-01-15,1,TESSy,ECDC
 Luxembourg,LU,Weekly new ICU admissions per 100k,2023-01-22,1,TESSy,ECDC
 Luxembourg,LU,Weekly new ICU admissions per 100k,2023-01-29,1,TESSy,ECDC
 Luxembourg,LU,Weekly new ICU admissions per 100k,2023-02-19,1,TESSy,ECDC
+Luxembourg,LU,Weekly new ICU admissions per 100k,2023-02-26,2,TESSy,ECDC
 Malta,MT,Daily hospital occupancy,2020-03-05,0,Public,ECDC
 Malta,MT,Daily hospital occupancy,2020-03-06,0,Public,ECDC
 Malta,MT,Daily hospital occupancy,2020-03-07,0,Public,ECDC
@@ -25545,6 +25699,7 @@ Malta,MT,Daily ICU occupancy,2023-01-29,0,TESSy,ECDC
 Malta,MT,Daily ICU occupancy,2023-02-05,0,TESSy,ECDC
 Malta,MT,Daily ICU occupancy,2023-02-12,0,TESSy,ECDC
 Malta,MT,Daily ICU occupancy,2023-02-19,0,TESSy,ECDC
+Malta,MT,Daily ICU occupancy,2023-02-26,0,TESSy,ECDC
 Malta,MT,Weekly new hospital admissions per 100k,2020-03-08,0,TESSy,ECDC
 Malta,MT,Weekly new hospital admissions per 100k,2020-03-15,6,TESSy,ECDC
 Malta,MT,Weekly new hospital admissions per 100k,2020-03-22,4,TESSy,ECDC
@@ -25700,6 +25855,7 @@ Malta,MT,Weekly new hospital admissions per 100k,2023-01-29,14,TESSy,ECDC
 Malta,MT,Weekly new hospital admissions per 100k,2023-02-05,4,TESSy,ECDC
 Malta,MT,Weekly new hospital admissions per 100k,2023-02-12,10,TESSy,ECDC
 Malta,MT,Weekly new hospital admissions per 100k,2023-02-19,16,TESSy,ECDC
+Malta,MT,Weekly new hospital admissions per 100k,2023-02-26,16,TESSy,ECDC
 Malta,MT,Weekly new ICU admissions per 100k,2020-09-20,5,TESSy,ECDC
 Malta,MT,Weekly new ICU admissions per 100k,2020-09-27,4,TESSy,ECDC
 Malta,MT,Weekly new ICU admissions per 100k,2020-10-04,4,TESSy,ECDC
@@ -25921,6 +26077,7 @@ Netherlands,NL,Daily hospital occupancy,2023-01-29,293,TESSy,ECDC
 Netherlands,NL,Daily hospital occupancy,2023-02-05,274,TESSy,ECDC
 Netherlands,NL,Daily hospital occupancy,2023-02-12,314,TESSy,ECDC
 Netherlands,NL,Daily hospital occupancy,2023-02-19,386,TESSy,ECDC
+Netherlands,NL,Daily hospital occupancy,2023-02-26,534,TESSy,ECDC
 Netherlands,NL,Daily ICU occupancy,2020-03-01,9,TESSy,ECDC
 Netherlands,NL,Daily ICU occupancy,2020-03-08,17,TESSy,ECDC
 Netherlands,NL,Daily ICU occupancy,2020-03-15,69,TESSy,ECDC
@@ -26077,6 +26234,7 @@ Netherlands,NL,Daily ICU occupancy,2023-01-29,20,TESSy,ECDC
 Netherlands,NL,Daily ICU occupancy,2023-02-05,17,TESSy,ECDC
 Netherlands,NL,Daily ICU occupancy,2023-02-12,17,TESSy,ECDC
 Netherlands,NL,Daily ICU occupancy,2023-02-19,18,TESSy,ECDC
+Netherlands,NL,Daily ICU occupancy,2023-02-26,22,TESSy,ECDC
 Netherlands,NL,Weekly new hospital admissions per 100k,2020-03-01,30,TESSy,ECDC
 Netherlands,NL,Weekly new hospital admissions per 100k,2020-03-08,106,TESSy,ECDC
 Netherlands,NL,Weekly new hospital admissions per 100k,2020-03-15,491,TESSy,ECDC
@@ -26181,7 +26339,7 @@ Netherlands,NL,Weekly new hospital admissions per 100k,2022-01-30,1066,TESSy,ECD
 Netherlands,NL,Weekly new hospital admissions per 100k,2022-02-06,1196,TESSy,ECDC
 Netherlands,NL,Weekly new hospital admissions per 100k,2022-02-13,1120,TESSy,ECDC
 Netherlands,NL,Weekly new hospital admissions per 100k,2022-02-20,1122,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2022-02-27,942,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2022-02-27,943,TESSy,ECDC
 Netherlands,NL,Weekly new hospital admissions per 100k,2022-03-06,1044,TESSy,ECDC
 Netherlands,NL,Weekly new hospital admissions per 100k,2022-03-13,1352,TESSy,ECDC
 Netherlands,NL,Weekly new hospital admissions per 100k,2022-03-20,1473,TESSy,ECDC
@@ -26214,25 +26372,26 @@ Netherlands,NL,Weekly new hospital admissions per 100k,2022-09-18,297,TESSy,ECDC
 Netherlands,NL,Weekly new hospital admissions per 100k,2022-09-25,429,TESSy,ECDC
 Netherlands,NL,Weekly new hospital admissions per 100k,2022-10-02,678,TESSy,ECDC
 Netherlands,NL,Weekly new hospital admissions per 100k,2022-10-09,781,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2022-10-16,786,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2022-10-23,727,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2022-10-30,572,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2022-11-06,422,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2022-11-13,357,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2022-11-20,305,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2022-11-27,364,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2022-12-04,373,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2022-12-11,489,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2022-12-18,514,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2022-12-25,628,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2023-01-01,693,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2023-01-08,575,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2023-01-15,382,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2023-01-22,286,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2023-01-29,233,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2023-02-05,289,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2023-02-12,306,TESSy,ECDC
-Netherlands,NL,Weekly new hospital admissions per 100k,2023-02-19,310,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2022-10-16,787,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2022-10-23,728,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2022-10-30,573,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2022-11-06,425,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2022-11-13,363,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2022-11-20,310,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2022-11-27,373,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2022-12-04,380,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2022-12-11,499,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2022-12-18,524,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2022-12-25,642,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2023-01-01,699,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2023-01-08,588,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2023-01-15,390,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2023-01-22,292,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2023-01-29,238,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2023-02-05,299,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2023-02-12,330,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2023-02-19,405,TESSy,ECDC
+Netherlands,NL,Weekly new hospital admissions per 100k,2023-02-26,433,TESSy,ECDC
 Netherlands,NL,Weekly new ICU admissions per 100k,2020-03-01,2,TESSy,ECDC
 Netherlands,NL,Weekly new ICU admissions per 100k,2020-03-08,18,TESSy,ECDC
 Netherlands,NL,Weekly new ICU admissions per 100k,2020-03-15,7,TESSy,ECDC
@@ -26374,7 +26533,7 @@ Netherlands,NL,Weekly new ICU admissions per 100k,2022-10-16,38,TESSy,ECDC
 Netherlands,NL,Weekly new ICU admissions per 100k,2022-10-23,42,TESSy,ECDC
 Netherlands,NL,Weekly new ICU admissions per 100k,2022-10-30,37,TESSy,ECDC
 Netherlands,NL,Weekly new ICU admissions per 100k,2022-11-06,29,TESSy,ECDC
-Netherlands,NL,Weekly new ICU admissions per 100k,2022-11-13,17,TESSy,ECDC
+Netherlands,NL,Weekly new ICU admissions per 100k,2022-11-13,18,TESSy,ECDC
 Netherlands,NL,Weekly new ICU admissions per 100k,2022-11-20,14,TESSy,ECDC
 Netherlands,NL,Weekly new ICU admissions per 100k,2022-11-27,26,TESSy,ECDC
 Netherlands,NL,Weekly new ICU admissions per 100k,2022-12-04,25,TESSy,ECDC
@@ -26387,8 +26546,9 @@ Netherlands,NL,Weekly new ICU admissions per 100k,2023-01-15,23,TESSy,ECDC
 Netherlands,NL,Weekly new ICU admissions per 100k,2023-01-22,14,TESSy,ECDC
 Netherlands,NL,Weekly new ICU admissions per 100k,2023-01-29,15,TESSy,ECDC
 Netherlands,NL,Weekly new ICU admissions per 100k,2023-02-05,16,TESSy,ECDC
-Netherlands,NL,Weekly new ICU admissions per 100k,2023-02-12,20,TESSy,ECDC
-Netherlands,NL,Weekly new ICU admissions per 100k,2023-02-19,20,TESSy,ECDC
+Netherlands,NL,Weekly new ICU admissions per 100k,2023-02-12,21,TESSy,ECDC
+Netherlands,NL,Weekly new ICU admissions per 100k,2023-02-19,22,TESSy,ECDC
+Netherlands,NL,Weekly new ICU admissions per 100k,2023-02-26,34,TESSy,ECDC
 Norway,NO,Daily hospital occupancy,2020-03-08,0,Public,ECDC
 Norway,NO,Daily hospital occupancy,2020-03-09,2,Public,ECDC
 Norway,NO,Daily hospital occupancy,2020-03-10,8,Public,ECDC
@@ -29575,25 +29735,25 @@ Portugal,PT,Weekly new hospital admissions per 100k,2020-09-06,270,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2020-09-13,334,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2020-09-20,342,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2020-09-27,443,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2020-10-04,451,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2020-10-04,450,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2020-10-11,653,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2020-10-18,860,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2020-10-25,1251,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2020-11-01,1627,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2020-11-08,1960,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2020-11-15,2140,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2020-11-15,2139,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2020-11-22,2261,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2020-11-29,2233,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2020-12-06,2099,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2020-12-13,1952,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2020-12-13,1951,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2020-12-20,1913,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2020-12-27,1936,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-01-03,1451,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-01-10,3196,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-01-17,3772,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-01-24,4336,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2021-01-31,4638,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2021-02-07,3735,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2021-01-31,4637,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2021-02-07,3734,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-02-14,2413,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-02-21,1354,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-02-28,838,TESSy,ECDC
@@ -29604,7 +29764,7 @@ Portugal,PT,Weekly new hospital admissions per 100k,2021-03-28,312,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-04-04,277,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-04-11,232,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-04-18,231,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2021-04-25,181,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2021-04-25,182,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-05-02,199,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-05-09,168,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-05-16,142,TESSy,ECDC
@@ -29628,78 +29788,79 @@ Portugal,PT,Weekly new hospital admissions per 100k,2021-09-12,326,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-09-19,268,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-09-26,242,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-10-03,215,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2021-10-10,206,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2021-10-10,205,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-10-17,211,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-10-24,215,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2021-10-31,288,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2021-10-31,289,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-11-07,287,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2021-11-14,409,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2021-11-14,408,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-11-21,503,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-11-28,521,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2021-12-05,640,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2021-12-05,641,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-12-12,683,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-12-19,757,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2021-12-26,757,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-01-02,824,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-01-09,1591,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-01-16,1768,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-01-02,825,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-01-09,1594,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-01-16,1771,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2022-01-23,2009,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-01-30,2119,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-01-30,2124,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2022-02-06,2001,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-02-13,1698,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-02-20,1315,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-02-27,1137,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-03-06,909,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-03-13,957,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-02-13,1699,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-02-20,1316,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-02-27,1138,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-03-06,910,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-03-13,959,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2022-03-20,1075,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-03-27,1059,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-04-03,973,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-03-27,1062,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-04-03,978,TESSy,ECDC
 Portugal,PT,Weekly new hospital admissions per 100k,2022-04-10,1052,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-04-17,1006,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-04-24,1025,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-05-01,1098,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-05-08,1272,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-05-15,1599,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-05-22,1936,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-05-29,1978,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-06-05,1869,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-06-12,1647,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-06-19,1399,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-06-26,1085,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-07-03,1023,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-07-10,907,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-07-17,822,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-07-24,639,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-07-31,532,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-08-07,484,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-08-14,428,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-08-21,392,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-08-28,410,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-09-04,382,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-09-11,367,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-09-18,383,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-09-25,385,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-10-02,348,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-10-09,348,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-10-16,453,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-10-23,439,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-10-30,397,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-11-06,428,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-11-13,392,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-11-20,401,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-11-27,360,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-12-04,338,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-12-11,235,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-12-18,215,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2022-12-25,178,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2023-01-01,395,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2023-01-08,80,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2023-01-15,53,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2023-01-22,33,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2023-01-29,25,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2023-02-05,8,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2023-02-12,4,TESSy,ECDC
-Portugal,PT,Weekly new hospital admissions per 100k,2023-02-19,0,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-04-17,1012,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-04-24,1029,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-05-01,1109,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-05-08,1281,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-05-15,1604,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-05-22,1951,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-05-29,1990,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-06-05,1881,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-06-12,1665,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-06-19,1405,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-06-26,1094,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-07-03,1035,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-07-10,920,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-07-17,832,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-07-24,654,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-07-31,542,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-08-07,480,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-08-14,437,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-08-21,400,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-08-28,419,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-09-04,394,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-09-11,373,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-09-18,391,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-09-25,390,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-10-02,351,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-10-09,352,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-10-16,457,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-10-23,451,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-10-30,415,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-11-06,436,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-11-13,408,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-11-20,414,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-11-27,370,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-12-04,344,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-12-11,247,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-12-18,226,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2022-12-25,214,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2023-01-01,426,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2023-01-08,103,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2023-01-15,75,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2023-01-22,36,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2023-01-29,38,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2023-02-05,18,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2023-02-12,11,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2023-02-19,1,TESSy,ECDC
+Portugal,PT,Weekly new hospital admissions per 100k,2023-02-26,0,TESSy,ECDC
 Romania,RO,Daily hospital occupancy,2021-03-01,476,Public,ECDC
 Romania,RO,Daily hospital occupancy,2021-03-02,429,Public,ECDC
 Romania,RO,Daily hospital occupancy,2021-03-03,1795,Public,ECDC
@@ -30421,6 +30582,10 @@ Romania,RO,Daily hospital occupancy,2023-02-16,1004,Public,ECDC
 Romania,RO,Daily hospital occupancy,2023-02-17,980,Public,ECDC
 Romania,RO,Daily hospital occupancy,2023-02-18,1017,Public,ECDC
 Romania,RO,Daily hospital occupancy,2023-02-19,1086,Public,ECDC
+Romania,RO,Daily hospital occupancy,2023-02-20,1144,Public,ECDC
+Romania,RO,Daily hospital occupancy,2023-02-21,1171,Public,ECDC
+Romania,RO,Daily hospital occupancy,2023-02-22,1199,Public,ECDC
+Romania,RO,Daily hospital occupancy,2023-02-23,1222,Public,ECDC
 Romania,RO,Daily ICU occupancy,2021-01-10,1106,TESSy,ECDC
 Romania,RO,Daily ICU occupancy,2021-01-17,1101,TESSy,ECDC
 Romania,RO,Daily ICU occupancy,2021-01-24,1005,TESSy,ECDC
@@ -30532,6 +30697,7 @@ Romania,RO,Daily ICU occupancy,2023-01-29,104,TESSy,ECDC
 Romania,RO,Daily ICU occupancy,2023-02-05,99,TESSy,ECDC
 Romania,RO,Daily ICU occupancy,2023-02-12,91,TESSy,ECDC
 Romania,RO,Daily ICU occupancy,2023-02-19,102,TESSy,ECDC
+Romania,RO,Daily ICU occupancy,2023-02-26,126,TESSy,ECDC
 Slovakia,SK,Daily hospital occupancy,2020-03-06,1,Public,ECDC
 Slovakia,SK,Daily hospital occupancy,2020-03-07,2,Public,ECDC
 Slovakia,SK,Daily hospital occupancy,2020-03-08,5,Public,ECDC
@@ -31508,111 +31674,115 @@ Slovakia,SK,Daily hospital occupancy,2022-11-03,505,Public,ECDC
 Slovakia,SK,Daily hospital occupancy,2022-11-04,479,Public,ECDC
 Slovakia,SK,Daily hospital occupancy,2022-11-05,491,Public,ECDC
 Slovakia,SK,Daily hospital occupancy,2022-11-06,500,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-07,483,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-08,459,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-09,441,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-10,398,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-11,377,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-12,386,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-13,399,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-14,381,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-15,369,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-16,350,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-17,372,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-18,353,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-19,367,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-20,377,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-21,373,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-22,363,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-23,349,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-24,338,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-25,342,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-26,364,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-27,388,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-28,392,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-29,407,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-11-30,418,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-01,440,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-02,429,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-03,434,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-04,470,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-05,458,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-06,457,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-07,467,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-08,472,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-09,480,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-10,506,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-11,547,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-12,537,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-13,519,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-14,522,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-15,517,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-16,481,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-17,496,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-18,522,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-19,530,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-20,522,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-21,492,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-22,445,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-23,369,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-24,368,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-25,402,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-26,431,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-27,443,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-28,442,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-29,468,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-30,456,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2022-12-31,463,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-07,484,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-08,460,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-09,442,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-10,399,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-11,378,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-12,387,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-13,400,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-14,383,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-15,371,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-16,352,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-17,374,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-18,355,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-19,369,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-20,379,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-21,375,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-22,365,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-23,351,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-24,340,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-25,344,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-26,366,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-27,390,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-28,394,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-29,409,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-11-30,420,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-01,442,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-02,431,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-03,436,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-04,472,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-05,460,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-06,459,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-07,469,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-08,474,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-09,482,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-10,508,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-11,549,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-12,540,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-13,522,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-14,525,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-15,520,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-16,484,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-17,499,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-18,525,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-19,534,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-20,526,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-21,496,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-22,449,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-23,373,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-24,372,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-25,406,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-26,435,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-27,447,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-28,446,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-29,472,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-30,460,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2022-12-31,467,Public,ECDC
 Slovakia,SK,Daily hospital occupancy,2023-01-01,8,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-02,428,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-03,413,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-04,409,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-05,388,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-06,395,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-07,393,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-08,405,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-09,373,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-10,360,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-11,345,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-12,342,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-13,300,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-14,307,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-15,311,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-16,293,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-17,291,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-18,292,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-19,304,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-20,290,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-21,296,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-22,305,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-23,295,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-24,275,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-25,270,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-26,271,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-27,258,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-28,260,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-29,263,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-30,256,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-01-31,250,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-01,266,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-02,263,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-03,272,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-04,286,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-05,297,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-06,297,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-07,304,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-08,302,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-09,320,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-10,322,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-11,347,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-12,364,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-13,371,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-14,386,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-15,357,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-16,368,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-17,340,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-18,357,Public,ECDC
-Slovakia,SK,Daily hospital occupancy,2023-02-19,364,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-02,433,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-03,418,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-04,414,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-05,393,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-06,400,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-07,398,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-08,410,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-09,378,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-10,366,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-11,351,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-12,348,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-13,306,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-14,313,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-15,317,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-16,299,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-17,297,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-18,298,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-19,310,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-20,296,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-21,302,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-22,311,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-23,301,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-24,281,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-25,277,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-26,278,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-27,266,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-28,268,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-29,271,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-30,264,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-01-31,258,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-01,275,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-02,273,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-03,284,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-04,298,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-05,309,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-06,310,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-07,318,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-08,316,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-09,334,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-10,337,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-11,363,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-12,380,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-13,391,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-14,409,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-15,380,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-16,393,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-17,365,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-18,388,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-19,400,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-20,397,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-21,395,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-22,385,Public,ECDC
+Slovakia,SK,Daily hospital occupancy,2023-02-23,383,Public,ECDC
 Slovakia,SK,Daily ICU occupancy,2020-03-08,2,Public,ECDC
 Slovakia,SK,Daily ICU occupancy,2020-03-09,2,Public,ECDC
 Slovakia,SK,Daily ICU occupancy,2020-03-10,2,Public,ECDC
@@ -32686,9 +32856,13 @@ Slovakia,SK,Daily ICU occupancy,2023-02-13,17,Public,ECDC
 Slovakia,SK,Daily ICU occupancy,2023-02-14,16,Public,ECDC
 Slovakia,SK,Daily ICU occupancy,2023-02-15,13,Public,ECDC
 Slovakia,SK,Daily ICU occupancy,2023-02-16,13,Public,ECDC
-Slovakia,SK,Daily ICU occupancy,2023-02-17,13,Public,ECDC
-Slovakia,SK,Daily ICU occupancy,2023-02-18,13,Public,ECDC
-Slovakia,SK,Daily ICU occupancy,2023-02-19,14,Public,ECDC
+Slovakia,SK,Daily ICU occupancy,2023-02-17,14,Public,ECDC
+Slovakia,SK,Daily ICU occupancy,2023-02-18,14,Public,ECDC
+Slovakia,SK,Daily ICU occupancy,2023-02-19,15,Public,ECDC
+Slovakia,SK,Daily ICU occupancy,2023-02-20,16,Public,ECDC
+Slovakia,SK,Daily ICU occupancy,2023-02-21,16,Public,ECDC
+Slovakia,SK,Daily ICU occupancy,2023-02-22,16,Public,ECDC
+Slovakia,SK,Daily ICU occupancy,2023-02-23,16,Public,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2020-03-08,7,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2020-03-15,23,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2020-03-22,32,TESSy,ECDC
@@ -32783,23 +32957,23 @@ Slovakia,SK,Weekly new hospital admissions per 100k,2021-12-12,1141,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2021-12-19,940,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2021-12-26,670,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-01-02,661,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-01-09,504,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-01-16,391,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-01-23,414,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-01-30,670,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-01-09,503,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-01-16,389,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-01-23,412,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-01-30,667,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-02-06,1015,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-02-13,1087,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-02-20,1201,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-02-27,1045,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-03-06,938,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-03-13,875,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-03-20,920,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-03-27,832,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-04-03,724,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-04-10,587,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-02-20,1200,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-02-27,1044,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-03-06,937,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-03-13,874,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-03-20,919,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-03-27,827,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-04-03,722,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-04-10,585,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-04-17,298,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-04-24,331,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-05-01,289,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-04-24,330,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-05-01,288,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-05-08,156,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-05-15,115,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-05-22,65,TESSy,ECDC
@@ -32809,39 +32983,40 @@ Slovakia,SK,Weekly new hospital admissions per 100k,2022-06-12,50,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-06-19,73,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-06-26,156,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-07-03,154,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-07-10,163,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-07-10,162,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-07-17,238,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-07-24,369,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-07-31,418,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-08-07,300,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-08-14,282,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-08-07,299,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-08-14,280,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-08-21,270,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-08-28,245,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-09-04,192,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-08-28,243,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-09-04,190,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-09-11,182,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-09-18,220,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-09-18,221,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-09-25,318,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-10-02,562,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-10-09,522,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-10-16,467,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-10-16,466,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-10-23,365,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-10-30,314,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-10-30,311,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-11-06,264,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-11-13,183,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-11-20,168,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-11-20,169,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-11-27,170,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-12-04,247,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-12-11,315,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2022-12-18,250,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-12-11,316,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2022-12-18,249,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2022-12-25,238,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2023-01-01,230,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2023-01-08,145,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2023-01-01,231,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2023-01-08,146,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2023-01-15,157,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2023-01-22,147,TESSy,ECDC
 Slovakia,SK,Weekly new hospital admissions per 100k,2023-01-29,117,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2023-02-05,175,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2023-02-12,262,TESSy,ECDC
-Slovakia,SK,Weekly new hospital admissions per 100k,2023-02-19,219,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2023-02-05,184,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2023-02-12,268,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2023-02-19,268,TESSy,ECDC
+Slovakia,SK,Weekly new hospital admissions per 100k,2023-02-26,192,TESSy,ECDC
 Slovakia,SK,Weekly new ICU admissions per 100k,2020-03-08,2,TESSy,ECDC
 Slovakia,SK,Weekly new ICU admissions per 100k,2020-03-15,4,TESSy,ECDC
 Slovakia,SK,Weekly new ICU admissions per 100k,2020-03-22,3,TESSy,ECDC
@@ -32978,6 +33153,7 @@ Slovakia,SK,Weekly new ICU admissions per 100k,2023-01-22,3,TESSy,ECDC
 Slovakia,SK,Weekly new ICU admissions per 100k,2023-01-29,1,TESSy,ECDC
 Slovakia,SK,Weekly new ICU admissions per 100k,2023-02-05,1,TESSy,ECDC
 Slovakia,SK,Weekly new ICU admissions per 100k,2023-02-12,1,TESSy,ECDC
+Slovakia,SK,Weekly new ICU admissions per 100k,2023-02-26,1,TESSy,ECDC
 Slovenia,SI,Daily hospital occupancy,2020-03-10,18,Public,ECDC
 Slovenia,SI,Daily hospital occupancy,2020-03-11,18,Public,ECDC
 Slovenia,SI,Daily hospital occupancy,2020-03-12,17,Public,ECDC
@@ -34055,6 +34231,11 @@ Slovenia,SI,Daily hospital occupancy,2023-02-16,28,Public,ECDC
 Slovenia,SI,Daily hospital occupancy,2023-02-17,32,Public,ECDC
 Slovenia,SI,Daily hospital occupancy,2023-02-18,31,Public,ECDC
 Slovenia,SI,Daily hospital occupancy,2023-02-19,33,Public,ECDC
+Slovenia,SI,Daily hospital occupancy,2023-02-20,34,Public,ECDC
+Slovenia,SI,Daily hospital occupancy,2023-02-21,34,Public,ECDC
+Slovenia,SI,Daily hospital occupancy,2023-02-22,33,Public,ECDC
+Slovenia,SI,Daily hospital occupancy,2023-02-23,33,Public,ECDC
+Slovenia,SI,Daily hospital occupancy,2023-02-24,29,Public,ECDC
 Slovenia,SI,Daily ICU occupancy,2020-03-10,1,Public,ECDC
 Slovenia,SI,Daily ICU occupancy,2020-03-11,1,Public,ECDC
 Slovenia,SI,Daily ICU occupancy,2020-03-12,2,Public,ECDC
@@ -35132,6 +35313,11 @@ Slovenia,SI,Daily ICU occupancy,2023-02-16,5,Public,ECDC
 Slovenia,SI,Daily ICU occupancy,2023-02-17,5,Public,ECDC
 Slovenia,SI,Daily ICU occupancy,2023-02-18,6,Public,ECDC
 Slovenia,SI,Daily ICU occupancy,2023-02-19,6,Public,ECDC
+Slovenia,SI,Daily ICU occupancy,2023-02-20,6,Public,ECDC
+Slovenia,SI,Daily ICU occupancy,2023-02-21,5,Public,ECDC
+Slovenia,SI,Daily ICU occupancy,2023-02-22,6,Public,ECDC
+Slovenia,SI,Daily ICU occupancy,2023-02-23,4,Public,ECDC
+Slovenia,SI,Daily ICU occupancy,2023-02-24,6,Public,ECDC
 Slovenia,SI,Weekly new hospital admissions per 100k,2020-03-22,40,Public,ECDC
 Slovenia,SI,Weekly new hospital admissions per 100k,2020-03-29,75,Public,ECDC
 Slovenia,SI,Weekly new hospital admissions per 100k,2020-04-05,51,Public,ECDC
@@ -35872,6 +36058,7 @@ Spain,ES,Daily hospital occupancy,2023-01-27,2341,Public,ECDC
 Spain,ES,Daily hospital occupancy,2023-02-03,2056,Public,ECDC
 Spain,ES,Daily hospital occupancy,2023-02-10,1880,Public,ECDC
 Spain,ES,Daily hospital occupancy,2023-02-17,1830,Public,ECDC
+Spain,ES,Daily hospital occupancy,2023-02-24,1888,Public,ECDC
 Spain,ES,Daily ICU occupancy,2020-10-04,1566,TESSy,ECDC
 Spain,ES,Daily ICU occupancy,2020-10-11,1590,TESSy,ECDC
 Spain,ES,Daily ICU occupancy,2020-10-18,1739,TESSy,ECDC
@@ -35997,12 +36184,13 @@ Spain,ES,Daily ICU occupancy,2023-01-29,172,TESSy,ECDC
 Spain,ES,Daily ICU occupancy,2023-02-05,138,TESSy,ECDC
 Spain,ES,Daily ICU occupancy,2023-02-12,109,TESSy,ECDC
 Spain,ES,Daily ICU occupancy,2023-02-19,112,TESSy,ECDC
+Spain,ES,Daily ICU occupancy,2023-02-26,90,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-01-19,1,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-02-02,1,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-02-09,1,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-03-01,109,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-03-08,1586,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2020-03-15,6922,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2020-03-15,6923,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-03-22,21605,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-03-29,30986,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-04-05,19345,TESSy,ECDC
@@ -36015,147 +36203,148 @@ Spain,ES,Weekly new hospital admissions per 100k,2020-05-17,792,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-05-24,473,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-05-31,429,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-06-07,391,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2020-06-14,282,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2020-06-14,281,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-06-21,238,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-06-28,240,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2020-07-05,237,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2020-07-05,236,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-07-12,297,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-07-19,485,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-07-26,678,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-08-02,1191,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-08-09,1633,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-08-16,2408,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2020-08-23,3283,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2020-08-23,3282,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-08-30,4170,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-09-06,4659,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-09-13,5355,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-09-20,5688,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2020-09-27,5583,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2020-09-27,5582,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-10-04,5269,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-10-11,5574,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-10-18,6500,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-10-25,8492,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-11-01,9729,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-11-08,9852,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2020-11-15,9194,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2020-11-22,7345,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2020-11-29,5632,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2020-11-15,9195,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2020-11-22,7344,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2020-11-29,5633,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-12-06,4472,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2020-12-13,4215,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2020-12-13,4213,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-12-20,4570,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2020-12-27,4884,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-01-03,5940,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-01-10,8595,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-01-17,13744,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-01-24,17288,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-01-31,15822,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-02-07,11578,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-02-14,7432,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-02-21,4874,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-01-03,5941,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-01-10,8593,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-01-17,13743,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-01-24,17289,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-01-31,15821,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-02-07,11577,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-02-14,7431,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-02-21,4873,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-02-28,3829,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-03-07,3298,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-03-07,3299,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-03-14,3135,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-03-21,2991,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-03-28,3381,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-03-21,2990,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-03-28,3383,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-04-04,3875,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-04-11,4599,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-04-18,5023,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-04-25,4869,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-05-02,4409,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-04-25,4868,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-05-02,4412,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-05-09,3497,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-05-16,2767,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-05-23,2178,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-05-30,2003,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-06-06,1728,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-05-30,2002,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-06-06,1730,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-06-13,1505,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-06-20,1170,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-06-27,1095,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-06-27,1094,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-07-04,1355,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-07-11,2263,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-07-11,2262,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-07-18,3904,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-07-25,5810,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-08-01,5944,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-08-01,5940,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-08-08,5375,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-08-15,4609,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-08-22,3677,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-08-29,3036,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-09-05,2279,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-09-12,1654,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-08-29,3035,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-09-05,2278,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-09-12,1653,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-09-19,1193,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-09-26,892,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-10-03,731,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-10-10,654,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-10-10,655,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-10-17,783,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-10-24,793,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-10-24,792,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-10-31,858,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-11-07,969,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-11-14,1241,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-11-21,1629,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-11-21,1628,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-11-28,2150,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-12-05,2600,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-12-12,3082,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2021-12-19,3833,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2021-12-26,5101,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2021-12-26,5100,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2022-01-02,7572,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-01-09,9497,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-01-16,10431,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-01-23,10055,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-01-30,8520,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-01-09,9498,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-01-16,10438,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-01-23,10058,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-01-30,8519,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2022-02-06,6743,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-02-13,4883,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-02-20,3640,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-02-27,2572,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-03-06,2256,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-03-13,2233,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-02-13,4884,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-02-20,3641,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-02-27,2571,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-03-06,2257,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-03-13,2230,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2022-03-20,2390,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2022-03-27,2499,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-04-03,2665,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-04-10,2863,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-04-17,3456,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-04-03,2664,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-04-10,2862,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-04-17,3460,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2022-04-24,4071,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-05-01,4495,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-05-01,4494,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2022-05-08,4803,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-05-15,5006,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-05-22,4542,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-05-15,5007,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-05-22,4543,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2022-05-29,3960,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2022-06-05,3969,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-06-12,4161,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-06-19,5147,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-06-12,4159,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-06-19,5148,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2022-06-26,6194,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-07-03,7482,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-07-10,7578,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-07-17,6579,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-07-24,5320,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-07-03,7487,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-07-10,7580,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-07-17,6580,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-07-24,5321,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2022-07-31,3793,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-08-07,2976,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-08-14,2330,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-08-21,1857,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-08-28,1714,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-09-04,1441,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-09-11,1299,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-09-18,1344,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-09-25,1333,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-10-02,1542,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-10-09,1999,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-10-16,1977,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-10-23,1889,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-10-30,1871,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-11-06,1679,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-11-13,1899,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-11-20,1981,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-08-07,2982,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-08-14,2342,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-08-21,1873,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-08-28,1718,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-09-04,1446,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-09-11,1309,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-09-18,1353,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-09-25,1372,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-10-02,1585,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-10-09,2073,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-10-16,2035,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-10-23,1910,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-10-30,1872,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-11-06,1683,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-11-13,1901,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-11-20,1982,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2022-11-27,1914,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-12-04,2101,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-12-04,2102,TESSy,ECDC
 Spain,ES,Weekly new hospital admissions per 100k,2022-12-11,2211,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-12-18,2274,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2022-12-25,2011,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2023-01-01,2040,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2023-01-08,2036,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2023-01-15,1812,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2023-01-22,1279,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2023-01-29,1026,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2023-02-05,932,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2023-02-12,888,TESSy,ECDC
-Spain,ES,Weekly new hospital admissions per 100k,2023-02-19,297,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-12-18,2275,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2022-12-25,2016,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2023-01-01,2039,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2023-01-08,2045,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2023-01-15,1817,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2023-01-22,1289,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2023-01-29,1044,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2023-02-05,965,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2023-02-12,963,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2023-02-19,868,TESSy,ECDC
+Spain,ES,Weekly new hospital admissions per 100k,2023-02-26,296,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2020-03-01,38,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2020-03-08,148,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2020-03-15,733,TESSy,ECDC
@@ -36197,15 +36386,15 @@ Spain,ES,Weekly new ICU admissions per 100k,2020-11-15,952,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2020-11-22,711,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2020-11-29,629,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2020-12-06,429,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2020-12-13,438,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2020-12-20,424,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2020-12-13,439,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2020-12-20,423,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2020-12-27,515,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2021-01-03,579,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2021-01-10,861,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2021-01-17,1302,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2021-01-24,1676,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2021-01-31,1560,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2021-02-07,1227,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2021-02-07,1228,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2021-02-14,801,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2021-02-21,572,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2021-02-28,464,TESSy,ECDC
@@ -36217,7 +36406,7 @@ Spain,ES,Weekly new ICU admissions per 100k,2021-04-04,516,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2021-04-11,602,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2021-04-18,684,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2021-04-25,690,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2021-05-02,575,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2021-05-02,576,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2021-05-09,506,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2021-05-16,334,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2021-05-23,316,TESSy,ECDC
@@ -36255,9 +36444,9 @@ Spain,ES,Weekly new ICU admissions per 100k,2021-12-26,526,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-01-02,615,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-01-09,699,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-01-16,690,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2022-01-23,637,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2022-01-23,638,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-01-30,542,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2022-02-06,425,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2022-02-06,424,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-02-13,275,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-02-20,199,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-02-27,152,TESSy,ECDC
@@ -36272,32 +36461,32 @@ Spain,ES,Weekly new ICU admissions per 100k,2022-04-24,175,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-05-01,183,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-05-08,216,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-05-15,209,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2022-05-22,171,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2022-05-22,172,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-05-29,194,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-06-05,153,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-06-12,157,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-06-19,166,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2022-06-26,235,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2022-06-26,236,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-07-03,297,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-07-10,261,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-07-17,271,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-07-24,208,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-07-31,145,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2022-08-07,102,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2022-08-07,103,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-08-14,93,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2022-08-21,92,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2022-08-21,93,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-08-28,74,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-09-04,76,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-09-11,61,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-09-18,61,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-09-25,50,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2022-10-02,64,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2022-10-09,81,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2022-10-16,64,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2022-10-02,67,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2022-10-09,83,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2022-10-16,66,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-10-23,93,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-10-30,76,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-11-06,88,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2022-11-13,71,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2022-11-13,73,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-11-20,117,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-11-27,93,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2022-12-04,101,TESSy,ECDC
@@ -36309,9 +36498,10 @@ Spain,ES,Weekly new ICU admissions per 100k,2023-01-08,85,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2023-01-15,78,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2023-01-22,62,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2023-01-29,45,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2023-02-05,37,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2023-02-05,40,TESSy,ECDC
 Spain,ES,Weekly new ICU admissions per 100k,2023-02-12,32,TESSy,ECDC
-Spain,ES,Weekly new ICU admissions per 100k,2023-02-19,10,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2023-02-19,33,TESSy,ECDC
+Spain,ES,Weekly new ICU admissions per 100k,2023-02-26,12,TESSy,ECDC
 Sweden,SE,Daily hospital occupancy,2020-02-27,1,Public,ECDC
 Sweden,SE,Daily hospital occupancy,2020-02-28,1,Public,ECDC
 Sweden,SE,Daily hospital occupancy,2020-02-29,1,Public,ECDC
@@ -38174,4 +38364,5 @@ Sweden,SE,Weekly new ICU admissions per 100k,2023-01-22,12,TESSy,ECDC
 Sweden,SE,Weekly new ICU admissions per 100k,2023-01-29,5,TESSy,ECDC
 Sweden,SE,Weekly new ICU admissions per 100k,2023-02-05,9,TESSy,ECDC
 Sweden,SE,Weekly new ICU admissions per 100k,2023-02-12,9,TESSy,ECDC
-Sweden,SE,Weekly new ICU admissions per 100k,2023-02-19,5,TESSy,ECDC
+Sweden,SE,Weekly new ICU admissions per 100k,2023-02-19,7,TESSy,ECDC
+Sweden,SE,Weekly new ICU admissions per 100k,2023-02-26,6,TESSy,ECDC
