@@ -23,7 +23,7 @@ table <- table %>%
 
 if (!is.null(params$model)) {
   data <- data %>%
-    filter(model %in% c(params$model, ensemble_model))
+    filter(is.na(model) | model %in% c(params$model, ensemble_model))
 }
 if (!is.null(params$data_weeks) && params$data_weeks != "All") {
   data <- data %>%

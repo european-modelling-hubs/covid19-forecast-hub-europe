@@ -21,7 +21,7 @@ forecast_dates <- forecast_dates %>%
 
 ```{r forecast-plot-test, results='asis'}
 if (length(forecast_dates) > 0) {
-  cat("Forecasts of cases/deaths per week per 100,000.")
+  cat("Forecasts of hospitalisations/cases/deaths per week per 100,000.")
   if (length(forecast_dates) > 1) {
     cat(" The date of the tab marks the date on which a forecast was made",
         "(only the latest forecasts and the previous", params$plot_weeks,
