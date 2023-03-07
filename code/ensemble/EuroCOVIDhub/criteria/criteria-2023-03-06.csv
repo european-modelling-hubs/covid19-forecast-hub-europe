@@ -127,6 +127,10 @@ epiforecasts-weeklygrowth,inc case,RO,TRUE,TRUE,TRUE,TRUE,TRUE
 epiforecasts-weeklygrowth,inc case,SE,TRUE,TRUE,TRUE,TRUE,TRUE
 epiforecasts-weeklygrowth,inc case,SI,TRUE,TRUE,TRUE,TRUE,TRUE
 epiforecasts-weeklygrowth,inc case,SK,TRUE,TRUE,TRUE,TRUE,TRUE
+fjordhest-ensemble,inc case,NO,TRUE,TRUE,TRUE,TRUE,TRUE
+fjordhest-ensemble,inc death,NO,TRUE,TRUE,TRUE,TRUE,TRUE
+HZI-AgeExtendedSEIR,inc case,DE,TRUE,TRUE,TRUE,TRUE,TRUE
+HZI-AgeExtendedSEIR,inc death,DE,TRUE,TRUE,TRUE,TRUE,TRUE
 ICM-agentModel,inc case,PL,TRUE,TRUE,TRUE,TRUE,TRUE
 ICM-agentModel,inc death,PL,TRUE,TRUE,TRUE,TRUE,TRUE
 ILM-EKF,inc case,AT,TRUE,TRUE,TRUE,TRUE,TRUE
