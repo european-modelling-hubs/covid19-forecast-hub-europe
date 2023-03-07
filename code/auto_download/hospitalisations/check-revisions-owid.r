@@ -25,9 +25,11 @@ combine_files <- function(date) {
   snapshot <- readr::read_csv(file.path(
     snapshot_dir, paste0("covid-hospitalizations_", date, ".csv")
   ), show_col_types = FALSE) |>
-    filter(date > {{ date }} - days(28)) |>
-    mutate(snapshot_date = {{ date }})
-  return(list(dplyr::bind_rows(final, snapshot)))
+    dplyr::filter(date > {{ date }} - days(28)) |>
+    dplyr::mutate(snapshot_date = {{ date }})
+  combined <- dplyr::bind_rows(final, snapshot) |>
+    EuroForecastHub::convert_owid_to_weekly()
+  return(list(combined))
 }
 
 owid_revisions <- tibble::tibble(dl_date = snapshot_dates) |>
