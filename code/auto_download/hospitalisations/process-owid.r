@@ -146,29 +146,7 @@ df <- df |>
 
 ## identify and shift weekly data
 df <- df |>
-  dplyr::mutate(sat_date = EuroForecastHub::date_to_week_end(date)) |>
-  dplyr::group_by(
-    location_name, location, source, sat_date
-  )  |>
-  dplyr::mutate(n = dplyr::n())  |> ## count observations per Saturday date
-  dplyr::group_by(
-    location_name, location, source,
-  )  |>
-  ## check if data is weekly or daily
-  dplyr::mutate(
-    frequency = dplyr::if_else(all(n == 1), "weekly", "daily")
-  ) |>
-  dplyr::ungroup() |>
-  ## if weekly and end date is previous Sunday, make end date the Saturday
-  ## instead, i.e. interpret Mon-Sun as Sun-Sat
-  dplyr::mutate(date = dplyr::if_else(
-    frequency == "weekly" & date + 6 == sat_date, date + 6, date
-  )) |>
-  dplyr::group_by(
-    location, location_name, indicator, source, sat_date
-  ) |>
-  dplyr::filter(date == max(date)) |>
-  dplyr::ungroup() |>
+  EuroForecastHub::convert_owid_to_weekly() |>
   dplyr::select(
     location_name, location, date, value, source, snapshot_date, status
   )
