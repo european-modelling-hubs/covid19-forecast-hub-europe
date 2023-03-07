@@ -1,0 +1,19 @@
+team_name: fjordhest
+model_name: ensemble
+model_abbr: fjordhest-ensemble
+model_contributors:
+  - name: Sasi Kandula
+    affiliation: Norwegian Institute of Public Health
+    email: sasikiran.kandula@fhi.no
+  - name: Gunnar Rø
+    affiliation: Norwegian Institute of Public Health
+    email: GunnarOyvindIsaksson.Ro@fhi.no
+  - name: Birgitte de Blasio
+    affiliation: Norwegian Institute of Public Health
+    email: Birgitte.Freiesleben.DeBlasio@fhi.no
+website_url: https://www.fhi.no/en/
+license: cc-by-4.0
+team_model_designation: primary
+methods: An inverse-WIS weighted ensemble of a mechanistic model, two time series models (ARIMA, ETS) and a random walk with drift model.
+data_inputs: Weekly incidence of cases and weekly incidence of deaths from the European Covid-19 forecast hub.
+methods_long: An ensemble of a mechanistic model (based on EpiEstim R package), two time series models and a random walk with drift model, as implemented in the fable R package. Model weights are the inverse of the model weighted-interval scores (WIS) over the last 3 forecasts that could be evaluated. The model and its estimates are solely the work of the contributors and do not necessarily represent, nor are endorsed by, the Norwegian Institute of Public Health. 
