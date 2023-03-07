@@ -7,9 +7,7 @@ European data status
 
 - Belgium, Cyprus, Czechia, Denmark, Estonia, France, Germany, Greece,
   Iceland, Ireland, Italy, Latvia, Liechtenstein, Luxembourg, Malta,
-  Netherlands, Slovakia, Slovenia, Spain, Switzerland
-
-- **Data warning!** Recent missing data in: Switzerland
+  Slovakia, Slovenia, Spain
 
 The Hub validates and evaluates forecasts against data collated by [Our
 World in Data](https://ourworldindata.org/covid-hospitalizations),
@@ -63,9 +61,6 @@ cannot take into account the truncation of the data.
 The latest hospitalisation data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
 
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-
 ![Plot of hospitalisations](plots/hospitalisations.svg)
 
 ### Cases and deaths
@@ -89,7 +84,7 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2023-03-06
+As of 2023-03-07
 
 | country | created    | updated    | issue                                            | message                                             | url                                                      |
 |:--------|:-----------|:-----------|:-------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------------|
