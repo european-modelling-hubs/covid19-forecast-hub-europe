@@ -30,7 +30,6 @@ jobs:
         Rscript 'code/auto_download/hospitalisations-download.R'
         Rscript 'code/auto_download/hospitalisations/process-owid.r'
         Rscript 'code/auto_download/hospitalisations/check-revisions-owid.r'
-        Rscript 'code/auto_download/cases-deaths/get-ecdc-cases-deaths.R'
 
     - name: Commit files
       run: |
