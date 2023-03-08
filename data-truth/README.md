@@ -84,11 +84,11 @@ for more on forecast formatting.
 
 #### Potential issues in the JHU dataset
 
-As of 2023-03-07
+As of 2023-03-08
 
 | country | created    | updated    | issue                                            | message                                             | url                                                      |
 |:--------|:-----------|:-----------|:-------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------------|
-| iceland | 2023-03-01 | 2023-03-02 | iceland publishes large spike in deaths          | All, We published a large spike to our death tota…  | <https://github.com/CSSEGISandData/COVID-19/issues/6631> |
+| iceland | 2023-03-01 | 2023-03-07 | iceland publishes large spike in deaths          | All, We published a large spike to our death tota…  | <https://github.com/CSSEGISandData/COVID-19/issues/6631> |
 | iceland | 2023-01-11 | 2023-01-11 | patch iceland data from 11/01/2022 to 01/10/2023 | November 1, 2022: 206571 cases November 8, 2022: 2… | <https://github.com/CSSEGISandData/COVID-19/issues/6462> |
 
 Open issues updated over the last eight weeks: from [JHU CSSEGISandData
