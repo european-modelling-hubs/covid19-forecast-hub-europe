@@ -1,14 +1,18 @@
 # Create data-locations.csv
-library(here)
-library(readr)
-library(dplyr)
-library(covidHubUtils)
+library("here")
+library("readr")
+library("dplyr")
+library("covidHubUtils")
 
-hosp <- read_csv(here("data-truth", "OWID", "truth_OWID-Incident Hospitalizations.csv"))
+hosp <- readr::read_csv(
+  here::here("data-truth", "OWID", "truth_OWID-Incident Hospitalizations.csv")
+)
 
 locs <- covidHubUtils::hub_locations_ecdc %>%
-  mutate(inc_hosp = case_when(location_name %in% hosp$location_name ~ "OWID"),
-         inc_case = "JHU",
-         inc_death = "JHU")
+  dplyr::mutate(
+    inc_hosp = case_when(location_name %in% hosp$location_name ~ "OWID"),
+    inc_case = "ECDC",
+    inc_death = "ECDC"
+  )
 
-write_csv(locs, here("data-locations", "locations_eu.csv"))
+readr::write_csv(locs, here::here("data-locations", "locations_eu.csv"))
