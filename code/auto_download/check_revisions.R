@@ -55,30 +55,26 @@ for (source in names(sources)) {
                  URLencode(
                       paste("https://raw.githubusercontent.com", owner, repo,
                             shas[id], path[source], sep = "/")),
-                 show_col_types = FALSE) %>%
+                 show_col_types = FALSE) |>
         mutate(commit_date = dates[id])
     )
   # remove empty dataframes
   if (class(data[[source]]) == "list") {
     data[[source]] <- data[[source]][sapply(data[[source]], function(x) nrow(x)>0)]
   }
-  data[[source]] <- data[[source]] %>%
-    bind_rows() %>%
+  data[[source]] <- data[[source]] |>
+    bind_rows() |>
     mutate(type = {{ source }})
 }
 
-data <- data %>%
-  bind_rows() %>%
-  filter(date >= min_data) %>%
-  mutate(target_end_date = ceiling_date(date, "week", week_start = 6),
-         source = if_else(is.na(source), "JHU", source)) %>%
-  group_by(location, location_name, target_end_date, commit_date, type) %>%
-  summarise(value = sum(value), n = n(), .groups = "drop") %>%
-  filter(n == 7 | type == "Hospitalizations") %>% ## only complete weeks
-  select(-n)
+data <- data |>
+  dplyr::bind_rows(.id = "variable") |>
+  dplyr::mutate(target_variable = target_variables[variable]) |>
+  dplyr::filter(date >= min_data) |>
+  dplyr::rename(target_end_date = "date")
 
 source_path <-
-  "code/auto_download/hospitalisations/check-sources/sources.csv"
+  "data-locations/locations_eu.csv"
 source_commits <-
   gh::gh(query,
     owner = owner,
@@ -107,49 +103,48 @@ source_data <-
     }
   )
 
-source_data <- bind_rows(source_data) |>
-  group_by(location_name, source, type, truncate_weeks) |>
-  filter(commit_date == min(commit_date)) |>
-  group_by(location_name) |>
-  filter(commit_date == max(commit_date)) |>
-  ungroup() |>
-  select(location_name, commit_date) |>
-  distinct()
+source_data <- dplyr::bind_rows(source_data) |>
+  tidyr::pivot_longer(
+    dplyr::starts_with("inc_"), names_to = "target_variable"
+  ) |>
+  dplyr::mutate(target_variable = sub("_", " ", target_variable)) |>
+  dplyr::group_by(location_name, location, target_variable) |>
+  dplyr::filter(value == value[1]) |>
+  dplyr::slice_min(commit_date) |>
+  dplyr::ungroup() |>
+  dplyr::select(location_name, target_variable, commit_date)
 
 anomalies_sources <- data |>
-  filter(type == "Hospitalizations") |>
-  mutate(target_variable = "inc hosp",
-         anomaly = "Replaced data source") |>
-  select(target_end_date, target_variable, location, location_name, anomaly) |>
-  inner_join(source_data, by = "location_name") |>
-  filter(target_end_date <= commit_date) |>
-  distinct() |>
-  select(-commit_date)
-
-anomalies <- anomalies_sources |>
-  group_by(target_end_date, target_variable, location, location_name) |>
-  slice(1) |>
-  ungroup()
+  dplyr::mutate(anomaly = "Replaced data source") |>
+  dplyr::select(
+    target_end_date, target_variable, location, location_name, anomaly
+  ) |>
+  dplyr::inner_join(source_data, by = c("location_name", "target_variable")) |>
+  dplyr::filter(target_end_date <= commit_date) |>
+  dplyr::distinct() |>
+  dplyr::select(-commit_date)
 
 anomalies_file <- here::here("data-truth", "anomalies", "anomalies.csv")
 existing_anomalies <- read_csv(anomalies_file, show_col_types = FALSE)
 
-new_anomalies <- anomalies %>%
+new_anomalies <- anomalies_sources |>
   anti_join(existing_anomalies,
             by = c("target_end_date", "target_variable", "location",
                    "location_name"))
 
-all_anomalies <- rbind(existing_anomalies, new_anomalies) %>%
+all_anomalies <- rbind(existing_anomalies, new_anomalies) |>
   arrange(target_end_date, target_variable, location, location_name)
 
 write_csv(all_anomalies, anomalies_file)
 
 for (source in names(sources)) {
-  cleaned <- data %>%
-    filter(type == {{ source }},
-           commit_date >= max(commit_date) - weeks(10)) %>% ## plot 10 weeks
-    mutate(target_variable = target_variables[type]) %>%
-    anti_join(
+  cleaned <- data |>
+    dplyr::filter(
+      type == {{ source }},
+      commit_date >= max(commit_date) - weeks(10)
+    ) |> ## plot 10 weeks
+    dplyr::mutate(target_variable = target_variables[type]) |>
+    dplyr::anti_join(
       all_anomalies,
       by = c("target_end_date", "target_variable", "location", "location_name")
     )
