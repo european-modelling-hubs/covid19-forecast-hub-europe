@@ -28,8 +28,9 @@ jobs:
     - name: Hospitalisation Truth
       run: |
         Rscript 'code/auto_download/hospitalisations-download.R'
-        Rscript 'code/auto_download/hospitalisations/process-owid.r'
-        Rscript 'code/auto_download/hospitalisations/check-revisions-owid.r'
+        Rscript 'code/auto_download/cases-deaths/get-ecdc-cases-deaths.R'
+        Rscript 'code/auto_download/process-owid-ecdc.r'
+        Rscript 'code/auto_download/check-revisions-owid-ecdc.r'
 
     - name: Commit files
       run: |

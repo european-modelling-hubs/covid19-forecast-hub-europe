@@ -22,11 +22,9 @@ load_and_score_models <- function(subdir = "") {
     rename(prediction = value)
 
   ## load truth data -------------------------------------------------------------
-  raw_truth <- load_truth(truth_source = "JHU",
-                          temporal_resolution = "weekly",
-                          hub = "ECDC")
+  raw_truth <- load_truth(temporal_resolution = "weekly", hub = "ECDC")
   raw_truth <- raw_truth %>%
-    EuroForecastHub::add_hosp_status() %>%
+    EuroForecastHub::add_status() %>%
     filter(status == "final")
 
   ## get anomalies

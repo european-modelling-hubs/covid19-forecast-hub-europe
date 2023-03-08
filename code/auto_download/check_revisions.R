@@ -10,8 +10,8 @@ earliest_date <- NULL
 min_data <- as.Date("2021-03-08") ## earliest date to pot in data
 
 sources <-
-  c(Cases = "JHU",
-    Deaths = "JHU",
+  c(Cases = "ECDC",
+    Deaths = "ECDC",
     Hospitalizations = "OWID")
 
 target_variables <-
@@ -126,20 +126,7 @@ anomalies_sources <- data |>
   distinct() |>
   select(-commit_date)
 
-anomalies_raw <- data %>%
-  filter(type != "Hospitalizations") %>%
-  group_by(location, location_name, target_end_date, type) %>%
-  summarise(abs_diff = max(value) - min(value),
-            rel_diff = abs_diff / max(value),
-            .groups = "drop") %>%
-  filter(target_end_date >= min_data, !is.na(rel_diff), rel_diff > 0.05)
-anomalies_revisions <- anomalies_raw %>%
-  group_by(location, location_name, target_end_date, type) %>%
-  summarise(anomaly = "large data revision", .groups = "drop") %>%
-  mutate(target_variable = target_variables[type]) %>%
-  select(target_end_date, target_variable, location, location_name, anomaly)
-
-anomalies <- bind_rows(anomalies_sources, anomalies_revisions) |>
+anomalies <- anomalies_sources |>
   group_by(target_end_date, target_variable, location, location_name) |>
   slice(1) |>
   ungroup()

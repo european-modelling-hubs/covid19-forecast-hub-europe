@@ -14,7 +14,8 @@ from datetime import datetime
 
 # all possible locations
 locations = dict()
-locations['JHU'] = pd.read_csv(here('./data-truth/JHU/truth_JHU-Incident Deaths.csv')).location_name.unique()
+locations['ECDC'] = pd.read_csv(here('./data-truth/ECDC/truth_ECDC-Incident Deaths.csv')).location_name.unique()
+locations['OWID'] = pd.read_csv(here('./data-truth/OWID/truth_OWID-Incident Hospitalizations.csv')).location_name.unique()
 
 with open(here('./code/validation/check_truth.txt'), 'a', encoding='utf-8') as txtfile:
   
@@ -23,7 +24,7 @@ with open(here('./code/validation/check_truth.txt'), 'a', encoding='utf-8') as t
 
     error_count = 0
 
-    for source in ['JHU']:
+    for source in ['ECDC', 'OWID']:
         list_of_files = glob.glob(str(here() / 'data-truth/{}/*Incident*.csv').format(source))
 
         for file in list_of_files:
