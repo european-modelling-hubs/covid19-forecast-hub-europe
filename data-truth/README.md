@@ -62,7 +62,10 @@ cannot take into account the truncation of the data.
 The latest hospitalisation data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
 
-![Plot of hospitalisations](plots/hospitalisations.svg)
+<figure>
+<img src="plots/hospitalisations.svg" alt="Plot of hospitalisations" />
+<figcaption aria-hidden="true">Plot of hospitalisations</figcaption>
+</figure>
 
 ### Cases and deaths
 
