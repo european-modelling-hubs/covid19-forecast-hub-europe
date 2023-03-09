@@ -143,9 +143,11 @@ death_locations <- sort(unique(case_death_data[["deaths"]]$location_name))
 for (indicator in indicators) {
   if (nrow(case_death_data[[tolower(indicator)]] > 0)) {
     gaps <- case_death_data[[tolower(indicator)]] |>
-      dplyr::filter(!is.na(value)) |>
+      dplyr::arrange(date) |>
       dplyr::group_by(location_name) |>
-      dplyr::slice_max(date, n = 1) |>
+      dplyr::slice(
+        index = ifelse(all(is.na(value)), 1L, max(which(!is.na(value))))
+      ) |>
       dplyr::ungroup() |>
       dplyr::mutate(date_diff = max(date) - date) |>
       dplyr::filter(date_diff > 6) |>
@@ -180,7 +182,7 @@ The files in this directory are the ones used for scoring the forecasts for thei
 The single datasets in [ECDC/truth_ECDC-Incident Cases](ECDC/truth_ECDC-Incident Cases) and [ECDC/truth_ECDC-Incident Deaths](ECDC/truth_ECDC-Incident Deaths) contain the latest data, where the final versions of the data are included for dates more than 28 days before the latest snapshot date, and the most recent version for any subsequent data.
 These are the dataset recommended for use in models that can take into account the truncation of the data. Please note that the `date` field in this file corresponds to the final day of the week reported, and the data has been shifted back one day to Saturday (instead of Sunday) in that file to comply with the Hub definition of an epidemiological week (Sunday-Saturday).
 
-We further provide a set of [ECDC/recommended cutoffs](ECDC/recommended-cutoffs.csv) for use with these data.
+We further provide a set of [recommended cutoffs](ECDC/recommended-cutoffs.csv) for use with these data.
 These are estimates of the truncation in the number of weeks that should be cut off the data set if the aim is to have a data set that is not further revised by more than 5%.
 The corresponding datasets in [ECDC/truncated_ECDC-Incident Cases.csv](ECDC/truth_ECDC-Incident Cases.csv) and [ECDC/truncated_ECDC-Incident Deaths.csv](ECDC/truth_ECDC-Incident Deaths.csv) have these recent weeks removed and is recommended for use in models that cannot take into account the truncation of the data.
 

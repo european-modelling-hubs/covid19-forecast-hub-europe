@@ -28,7 +28,9 @@ for (source in names(sources)) {
   combine_files <- function(date) {
     final <- readr::read_csv(file.path(
       final_dir,
-      paste0("covid-", file_pattern, "-final_", date - days(cutoff_days), ".csv")
+      paste0(
+        "covid-", file_pattern, "-final_", date - days(cutoff_days), ".csv"
+      )
     ), show_col_types = FALSE)
     snapshot <- readr::read_csv(file.path(
       snapshot_dir,
@@ -74,7 +76,8 @@ for (source in names(sources)) {
     dplyr::filter(cum_weeks_back == sum_seq_weeks_back) |>
     dplyr::group_by(
       across(c(
-        -weeks_back, -mean_relative_revision, -cum_weeks_back, -sum_seq_weeks_back
+        -weeks_back, -mean_relative_revision,
+        -cum_weeks_back, -sum_seq_weeks_back
       ))
     ) |>
     dplyr::filter(weeks_back == max(weeks_back)) |>

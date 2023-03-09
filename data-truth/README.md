@@ -7,7 +7,7 @@ European data status
 
 - Belgium, Cyprus, Czechia, Denmark, Estonia, France, Germany, Greece,
   Iceland, Ireland, Italy, Latvia, Liechtenstein, Luxembourg, Malta,
-  Slovakia, Slovenia, Spain
+  Netherlands, Slovakia, Slovenia, Spain
 
 The Hub validates and evaluates hospitalisation forecasts against data
 collated by [Our World in
@@ -62,6 +62,9 @@ cannot take into account the truncation of the data.
 The latest hospitalisation data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
 
+    ## `geom_line()`: Each group consists of only one observation.
+    ## ℹ Do you need to adjust the group aesthetic?
+
 <figure>
 <img src="plots/hospitalisations.svg" alt="Plot of hospitalisations" />
 <figcaption aria-hidden="true">Plot of hospitalisations</figcaption>
@@ -84,8 +87,8 @@ indicating data expecting to be substanially revised.
 - **Data warning!** Recent missing data for cases in: Croatia and
   Denmark
 
-- **Data warning!** Recent missing data for deaths in: Croatia and
-  Denmark
+- **Data warning!** Recent missing data for deaths in: Croatia, Denmark,
+  Iceland, and Norway
 
 We further evaluate forecasts of cases and deaths against data provided
 [ECDC](https://www.ecdc.europa.eu/), which we recommend using as the
@@ -125,7 +128,7 @@ reported, and the data has been shifted back one day to Saturday
 (instead of Sunday) in that file to comply with the Hub definition of an
 epidemiological week (Sunday-Saturday).
 
-We further provide a set of [ECDC/recommended
+We further provide a set of [recommended
 cutoffs](ECDC/recommended-cutoffs.csv) for use with these data. These
 are estimates of the truncation in the number of weeks that should be
 cut off the data set if the aim is to have a data set that is not
