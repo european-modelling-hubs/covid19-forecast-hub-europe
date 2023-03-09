@@ -120,7 +120,10 @@ new_data <- latest_snapshot |>
   dplyr::anti_join(
     latest_final, by = c("location_name", "location", "date", "source")
   ) |>
-  dplyr::left_join(recommended_cutoffs, by = c("location_name", "location")) |>
+  dplyr::left_join(
+    recommended_cutoffs,
+    by = c("location_name", "location", "indicator", "source")
+  ) |>
   tidyr::replace_na(list(cutoff_weeks = 0)) |>
   dplyr::group_by(location_name, location, source) |>
   dplyr::mutate(status = dplyr::if_else(
@@ -146,7 +149,7 @@ df <- df |>
 
 ## identify and shift weekly data
 df <- df |>
-  EuroForecastHub::convert_owid_to_weekly() |>
+  EuroForecastHub::convert_to_weekly() |>
   dplyr::select(
     location_name, location, date, value, source, snapshot_date, status
   )
