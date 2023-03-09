@@ -66,7 +66,7 @@ indicating data expecting to be substanially revised.
     ## ℹ Do you need to adjust the group aesthetic?
 
 <figure>
-<img src="plots/hospitalisations.svg" alt="Plot of hospitalisations" />
+<img src="plots/Hospitalisations.svg" alt="Plot of hospitalisations" />
 <figcaption aria-hidden="true">Plot of hospitalisations</figcaption>
 </figure>
 
@@ -143,7 +143,7 @@ account the truncation of the data.
 The latest case/death data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
 
-![Plot of cases](plots/cases.svg) ![Plot of deaths](plots/deaths.svg)
+![Plot of cases](plots/Cases.svg) ![Plot of deaths](plots/Deaths.svg)
 
 ## Additional data sources
 

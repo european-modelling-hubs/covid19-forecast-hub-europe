@@ -111,10 +111,10 @@ p <- ggplot2::ggplot(
   ggplot2::ylab("Weekly number of hospitalisations") +
   ggplot2::xlab("End date of week") +
   ggplot2::expand_limits(y = 0)
-ggplot2::ggsave("plots/hospitalisations.svg", p, width = 10.5, height = 7.5)
+ggplot2::ggsave("plots/Hospitalisations.svg", p, width = 10.5, height = 7.5)
 ```
 
-![Plot of hospitalisations](plots/hospitalisations.svg)
+![Plot of hospitalisations](plots/Hospitalisations.svg)
 
 
 ### Cases and deaths
@@ -224,8 +224,8 @@ for (indicator in indicators) {
 }
 ```
 
-![Plot of cases](plots/cases.svg)
-![Plot of deaths](plots/deaths.svg)
+![Plot of cases](plots/Cases.svg)
+![Plot of deaths](plots/Deaths.svg)
 
 
 ## Additional data sources
