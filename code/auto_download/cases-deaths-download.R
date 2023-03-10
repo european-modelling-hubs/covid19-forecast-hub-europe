@@ -6,7 +6,7 @@ script_dir <- here("code", "auto_download")
 
 # Download and save minimally processed data files
 source(here(script_dir, "hospitalisations", "get-owid.R"))
-source(here(script_dir, "cases-deaths", "get-ecdc.R"))
+source(here(script_dir, "cases-deaths", "get-ecdc.r"))
 
 cat("Downloading OWID data\n")
 owid <- get_owid()
