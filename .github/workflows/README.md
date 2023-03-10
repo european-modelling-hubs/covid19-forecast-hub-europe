@@ -2,8 +2,7 @@
 
 | Action name                                    | Language   | Scheduled at (UTC time)                                       | Function                                           |
 |------------------------------------------------|------------|----------------------------------------------------------------|----------------------------------------------------|
-| [`ECDC.yml`](ECDC.yml)                         | R          | [12:00 every day](https://crontab.guru/#0_12_*_*_*), and [every hour from 8am to 7pm on Thursday](https://crontab.guru/#7_8-20_*_*_4)       | Get recorded cases from ECDC                       |
-| [`JHU.yml`](JHU.yml)                           | Python     | [7:00 every day](https://crontab.guru/#0_7_*_*_*)              | Get recorded cases from JHU                        |
+| [`ecdc_owid_data.yml`](ecdc_owid_data.yml)                         | R          | [12:07 every day](https://crontab.guru/#7_12_*_*_*)       | Get recorded cases and deaths from ECDC, and hospitalisations from OWID                       |
 | [`check-truth.yml`](check-truth.yml)           | Python & R | [13:00 every day](https://crontab.guru/#0_13_*_*_*)            | Check truth data                   |
 | [`ensemble.yml`](ensemble.yml)                 | R          | [11:15 every Tuesday and Wednesday](https://crontab.guru/#15_11_*_*_2,3)       | Create weekly ensemble                             |
 | [`release.yml`](release.yml) | R | [11:15 every Thursday](https://crontab.guru/#15_11_*_*_4) | Create GitHub release |

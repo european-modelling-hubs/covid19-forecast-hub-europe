@@ -3,7 +3,7 @@ library("lubridate")
 library("purrr")
 library("dplyr")
 
-cat("Processing OWID data.\n")
+cat("Processing ECDC data.\n")
 
 cutoff_days <- 28
 

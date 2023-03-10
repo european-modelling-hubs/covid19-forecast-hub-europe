@@ -7,8 +7,8 @@ library(tidyr)
 # FIXME: find a way to get this information directly from the config file
 # without hardcoding target types
 truth <- c(
-  "inc_death" = "JHU/truth_JHU-Incident Deaths.csv",
-  "inc_case" = "JHU/truth_JHU-Incident Cases.csv",
+  "inc_death" = "ECDC/truth_ECDC-Incident Deaths.csv",
+  "inc_case" = "ECDC/truth_ECDC-Incident Cases.csv",
   "inc_hosp" = "OWID/truncated_OWID-Incident Hospitalizations.csv"
 ) |>
   imap(~ read_csv(here("data-truth", .x)) %>% mutate(name = .y)) |>
