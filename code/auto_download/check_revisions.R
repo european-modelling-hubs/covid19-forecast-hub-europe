@@ -65,6 +65,13 @@ for (source in names(sources)) {
   data[[source]] <- data[[source]] |>
     bind_rows() |>
     mutate(type = {{ source }})
+
+  ## fix needed as some hospitalisation data had a target_end_date variable
+  if ("target_end_date" %in% colnames(data[[source]])) {
+    data[[source]] <- data[[source]] |>
+      dplyr::mutate(date = dplyr::if_else(is.na(date), target_end_date, date)) |>
+      dplyr::select(-target_end_date)
+  }
 }
 
 data <- data |>
