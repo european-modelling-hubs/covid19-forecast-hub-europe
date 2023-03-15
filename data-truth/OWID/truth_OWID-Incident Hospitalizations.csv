@@ -1,5 +1,4 @@
 location_name,location,date,value,source,snapshot_date,status
-Belgium,BE,2020-03-21,1291,OWID,2022-07-18,final
 Belgium,BE,2020-03-28,3232,OWID,2022-07-18,final
 Belgium,BE,2020-04-04,3756,OWID,2022-07-18,final
 Belgium,BE,2020-04-11,2913,OWID,2022-07-18,final
@@ -151,6 +150,7 @@ Belgium,BE,2023-01-21,336,OWID,2023-02-18,final
 Belgium,BE,2023-01-28,345,OWID,2023-02-25,final
 Belgium,BE,2023-02-04,429,OWID,2023-03-04,final
 Belgium,BE,2023-02-11,538,OWID,2023-03-11,final
+Belgium,BE,2023-02-18,709,OWID,2023-03-14,near final
 Belgium,BE,2023-02-25,870,OWID,2023-03-14,near final
 Belgium,BE,2023-03-04,899,OWID,2023-03-14,near final
 Cyprus,CY,2020-03-14,1,OWID,2022-07-18,final
@@ -307,7 +307,6 @@ Cyprus,CY,2023-02-11,4,OWID,2023-03-05,final
 Cyprus,CY,2023-02-18,7,OWID,2023-03-12,final
 Cyprus,CY,2023-02-25,3,OWID,2023-03-14,near final
 Cyprus,CY,2023-03-04,7,OWID,2023-03-14,expecting revisions
-Czechia,CZ,2020-03-07,0,OWID,2022-07-18,final
 Czechia,CZ,2020-03-14,6,OWID,2022-07-18,final
 Czechia,CZ,2020-03-21,96,OWID,2022-07-18,final
 Czechia,CZ,2020-03-28,255,OWID,2022-07-18,final
@@ -461,6 +460,7 @@ Czechia,CZ,2023-01-21,347,OWID,2023-02-18,final
 Czechia,CZ,2023-01-28,353,OWID,2023-02-25,final
 Czechia,CZ,2023-02-04,446,OWID,2023-03-04,final
 Czechia,CZ,2023-02-11,587,OWID,2023-03-11,final
+Czechia,CZ,2023-02-18,808,OWID,2023-03-14,near final
 Czechia,CZ,2023-02-25,1009,OWID,2023-03-14,near final
 Czechia,CZ,2023-03-04,889,OWID,2023-03-14,expecting revisions
 Czechia,CZ,2023-03-11,780,OWID,2023-03-14,expecting revisions
@@ -614,6 +614,7 @@ Denmark,DK,2023-01-21,250,OWID,2023-02-18,final
 Denmark,DK,2023-01-28,155,OWID,2023-02-25,final
 Denmark,DK,2023-02-04,170,OWID,2023-03-04,final
 Denmark,DK,2023-02-11,193,OWID,2023-03-11,final
+Denmark,DK,2023-02-18,189,OWID,2023-03-14,near final
 Denmark,DK,2023-02-25,185,OWID,2023-03-14,near final
 Denmark,DK,2023-03-04,207,OWID,2023-03-14,near final
 Denmark,DK,2023-03-11,253,OWID,2023-03-14,expecting revisions
@@ -924,6 +925,7 @@ France,FR,2023-01-21,2406,OWID,2023-02-18,final
 France,FR,2023-01-28,1940,OWID,2023-02-25,final
 France,FR,2023-02-04,1963,OWID,2023-03-04,final
 France,FR,2023-02-11,4894,OWID,2023-03-11,final
+France,FR,2023-02-18,1791,OWID,2023-03-14,near final
 France,FR,2023-02-25,2028,OWID,2023-03-14,near final
 France,FR,2023-03-04,1846,OWID,2023-03-14,near final
 France,FR,2023-03-11,2270,OWID,2023-03-14,near final
@@ -1081,7 +1083,9 @@ Germany,DE,2023-01-21,4800,OWID,2023-02-18,final
 Germany,DE,2023-01-28,4967,OWID,2023-02-25,final
 Germany,DE,2023-02-04,5939,OWID,2023-03-04,final
 Germany,DE,2023-02-11,7098,OWID,2023-03-11,final
+Germany,DE,2023-02-18,8950,OWID,2023-03-14,near final
 Germany,DE,2023-02-25,9537,OWID,2023-03-14,near final
+Germany,DE,2023-03-04,8423,OWID,2023-03-14,expecting revisions
 Germany,DE,2023-03-11,7031,OWID,2023-03-14,expecting revisions
 Greece,GR,2020-09-12,204,OWID,2022-07-18,final
 Greece,GR,2020-09-19,254,OWID,2022-07-18,final
@@ -1620,6 +1624,7 @@ Italy,IT,2023-01-21,1935,OWID,2023-02-18,final
 Italy,IT,2023-01-28,1709,OWID,2023-02-25,final
 Italy,IT,2023-02-04,1610,OWID,2023-03-04,final
 Italy,IT,2023-02-11,1519,OWID,2023-03-11,final
+Italy,IT,2023-02-18,1500,OWID,2023-03-14,expecting revisions
 Italy,IT,2023-02-25,1473,OWID,2023-03-14,expecting revisions
 Latvia,LV,2020-01-06,0,OWID,2022-07-18,final
 Latvia,LV,2020-01-18,0,OWID,2022-07-18,final
@@ -2161,84 +2166,47 @@ Malta,MT,2023-02-18,11,OWID,2023-03-12,final
 Malta,MT,2023-02-25,19,OWID,2023-03-14,near final
 Malta,MT,2023-03-04,19,OWID,2023-03-14,near final
 Malta,MT,2023-03-11,20,OWID,2023-03-14,near final
-Netherlands,NL,2020-10-31,1939,OWID,2022-07-18,final
-Netherlands,NL,2020-11-07,1765,OWID,2022-07-18,final
-Netherlands,NL,2020-11-14,1367,OWID,2022-07-18,final
-Netherlands,NL,2020-11-21,1397,OWID,2022-07-18,final
-Netherlands,NL,2020-11-28,1240,OWID,2022-07-18,final
-Netherlands,NL,2020-12-05,1106,OWID,2022-07-18,final
-Netherlands,NL,2020-12-12,1354,OWID,2022-07-18,final
-Netherlands,NL,2020-12-19,1529,OWID,2022-07-18,final
-Netherlands,NL,2020-12-26,1930,OWID,2022-07-18,final
-Netherlands,NL,2021-01-02,2016,OWID,2022-07-18,final
-Netherlands,NL,2021-01-09,1770,OWID,2022-07-18,final
-Netherlands,NL,2021-01-16,1500,OWID,2022-07-18,final
-Netherlands,NL,2021-01-23,1459,OWID,2022-07-18,final
-Netherlands,NL,2021-01-30,1332,OWID,2022-07-18,final
-Netherlands,NL,2021-02-06,1206,OWID,2022-07-18,final
-Netherlands,NL,2021-02-13,1148,OWID,2022-07-18,final
-Netherlands,NL,2021-02-20,1225,OWID,2022-07-18,final
-Netherlands,NL,2021-02-27,1162,OWID,2022-07-18,final
-Netherlands,NL,2021-03-06,1238,OWID,2022-07-18,final
-Netherlands,NL,2021-03-13,1351,OWID,2022-07-18,final
-Netherlands,NL,2021-03-20,1497,OWID,2022-07-18,final
-Netherlands,NL,2021-03-27,1647,OWID,2022-07-18,final
-Netherlands,NL,2021-04-03,1715,OWID,2022-07-18,final
-Netherlands,NL,2021-04-10,1709,OWID,2022-07-18,final
-Netherlands,NL,2021-04-17,1678,OWID,2022-07-18,final
-Netherlands,NL,2021-04-24,1838,OWID,2022-07-18,final
-Netherlands,NL,2021-05-01,1853,OWID,2022-07-18,final
-Netherlands,NL,2021-05-08,1625,OWID,2022-07-18,final
-Netherlands,NL,2021-05-15,1388,OWID,2022-07-18,final
-Netherlands,NL,2021-05-22,1021,OWID,2022-07-18,final
-Netherlands,NL,2021-05-29,641,OWID,2022-07-18,final
-Netherlands,NL,2021-06-05,489,OWID,2022-07-18,final
-Netherlands,NL,2021-06-12,333,OWID,2022-07-18,final
-Netherlands,NL,2021-06-19,215,OWID,2023-03-14,near final
-Netherlands,NL,2021-06-26,126,OWID,2023-03-14,near final
-Netherlands,NL,2021-07-03,71,OWID,2022-07-18,final
-Netherlands,NL,2021-07-10,63,OWID,2022-07-18,final
-Netherlands,NL,2021-07-17,189,OWID,2022-07-18,final
-Netherlands,NL,2021-07-24,447,OWID,2022-07-18,final
-Netherlands,NL,2021-07-31,581,OWID,2022-07-18,final
-Netherlands,NL,2021-08-07,482,OWID,2022-07-18,final
-Netherlands,NL,2021-08-14,447,OWID,2022-07-18,final
-Netherlands,NL,2021-08-21,437,OWID,2022-07-18,final
-Netherlands,NL,2021-08-28,442,OWID,2022-07-18,final
-Netherlands,NL,2021-09-04,444,OWID,2022-07-18,final
-Netherlands,NL,2021-09-11,402,OWID,2022-07-18,final
-Netherlands,NL,2021-09-18,339,OWID,2022-07-18,final
-Netherlands,NL,2021-09-25,242,OWID,2022-07-18,final
-Netherlands,NL,2021-10-02,243,OWID,2022-07-18,final
-Netherlands,NL,2021-10-09,319,OWID,2022-07-18,final
-Netherlands,NL,2021-10-16,376,OWID,2022-07-18,final
-Netherlands,NL,2021-10-23,575,OWID,2022-07-18,final
-Netherlands,NL,2021-10-30,838,OWID,2022-07-18,final
-Netherlands,NL,2021-11-06,1138,OWID,2022-07-18,final
-Netherlands,NL,2021-11-13,1368,OWID,2022-07-18,final
-Netherlands,NL,2021-11-20,1759,OWID,2022-07-18,final
-Netherlands,NL,2021-11-27,2123,OWID,2022-07-18,final
-Netherlands,NL,2021-12-04,2032,OWID,2022-07-18,final
-Netherlands,NL,2021-12-11,1939,OWID,2022-07-18,final
-Netherlands,NL,2021-12-18,1469,OWID,2022-07-18,final
-Netherlands,NL,2021-12-25,1151,OWID,2022-07-18,final
-Netherlands,NL,2022-01-01,1041,OWID,2022-07-18,final
-Netherlands,NL,2022-01-08,888,OWID,2022-07-18,final
-Netherlands,NL,2022-01-15,797,OWID,2022-07-18,final
-Netherlands,NL,2022-01-22,754,OWID,2022-07-18,final
-Netherlands,NL,2022-01-29,960,OWID,2022-07-18,final
-Netherlands,NL,2022-02-05,1257,OWID,2022-07-18,final
-Netherlands,NL,2022-02-12,1268,OWID,2022-07-18,final
-Netherlands,NL,2022-02-19,1255,OWID,2022-07-18,final
-Netherlands,NL,2022-02-26,1055,OWID,2022-07-18,final
-Netherlands,NL,2022-03-05,1002,OWID,2022-07-18,final
-Netherlands,NL,2022-03-12,1432,OWID,2022-07-18,final
-Netherlands,NL,2022-03-19,1658,OWID,2022-07-18,final
-Netherlands,NL,2022-03-26,1575,OWID,2022-07-18,final
-Netherlands,NL,2022-04-02,1372,OWID,2022-07-18,final
-Netherlands,NL,2022-04-09,1012,OWID,2022-07-18,final
-Netherlands,NL,2022-12-12,532,OWID,2023-03-14,near final
-Netherlands,NL,2023-03-13,1186,OWID,2023-03-14,near final
+Netherlands,NL,2022-05-13,325,OWID,2022-07-18,final
+Netherlands,NL,2022-05-20,288,OWID,2022-07-18,final
+Netherlands,NL,2022-06-03,235,OWID,2022-07-18,final
+Netherlands,NL,2022-06-17,361,OWID,2022-07-18,final
+Netherlands,NL,2022-06-24,539,OWID,2022-07-22,final
+Netherlands,NL,2022-07-01,680,OWID,2022-07-29,final
+Netherlands,NL,2022-07-08,804,OWID,2022-08-05,final
+Netherlands,NL,2022-07-15,969,OWID,2022-08-12,final
+Netherlands,NL,2022-07-22,1012,OWID,2022-08-19,final
+Netherlands,NL,2022-07-29,927,OWID,2022-08-26,final
+Netherlands,NL,2022-08-05,739,OWID,2022-09-02,final
+Netherlands,NL,2022-08-12,625,OWID,2022-09-09,final
+Netherlands,NL,2022-08-19,542,OWID,2022-09-16,final
+Netherlands,NL,2022-08-26,442,OWID,2022-09-23,final
+Netherlands,NL,2022-09-02,334,OWID,2022-09-30,final
+Netherlands,NL,2022-09-09,325,OWID,2022-10-07,final
+Netherlands,NL,2022-09-16,370,OWID,2022-10-14,final
+Netherlands,NL,2022-09-23,437,OWID,2022-10-21,final
+Netherlands,NL,2022-09-30,708,OWID,2022-10-28,final
+Netherlands,NL,2022-10-07,961,OWID,2022-11-04,final
+Netherlands,NL,2022-10-14,1044,OWID,2022-11-11,final
+Netherlands,NL,2022-10-21,1114,OWID,2022-11-18,final
+Netherlands,NL,2022-10-28,940,OWID,2022-11-25,final
+Netherlands,NL,2022-11-04,706,OWID,2022-12-02,final
+Netherlands,NL,2022-11-11,565,OWID,2022-12-09,final
+Netherlands,NL,2022-11-18,437,OWID,2022-12-16,final
+Netherlands,NL,2022-11-25,463,OWID,2022-12-23,final
+Netherlands,NL,2022-12-02,528,OWID,2022-12-30,final
+Netherlands,NL,2022-12-09,517,OWID,2023-01-06,final
+Netherlands,NL,2022-12-16,638,OWID,2023-01-13,final
+Netherlands,NL,2022-12-23,772,OWID,2023-01-20,final
+Netherlands,NL,2023-01-06,923,OWID,2023-02-03,final
+Netherlands,NL,2023-01-13,698,OWID,2023-02-10,final
+Netherlands,NL,2023-01-20,500,OWID,2023-02-17,final
+Netherlands,NL,2023-01-27,410,OWID,2023-02-24,final
+Netherlands,NL,2023-02-03,402,OWID,2023-03-03,final
+Netherlands,NL,2023-02-10,400,OWID,2023-03-10,final
+Netherlands,NL,2023-02-17,531,OWID,2023-03-14,near final
+Netherlands,NL,2023-02-24,731,OWID,2023-03-14,near final
+Netherlands,NL,2023-03-03,957,OWID,2023-03-14,near final
+Netherlands,NL,2023-03-10,1158,OWID,2023-03-14,near final
 Slovakia,SK,2020-03-14,7,OWID,2023-03-14,near final
 Slovakia,SK,2020-03-21,24,OWID,2023-03-14,near final
 Slovakia,SK,2020-03-28,33,OWID,2023-03-14,near final
@@ -2644,7 +2612,9 @@ Spain,ES,2022-05-14,6660,OWID,2022-07-18,final
 Spain,ES,2022-05-21,6359,OWID,2022-07-18,final
 Spain,ES,2022-05-28,5497,OWID,2022-07-18,final
 Spain,ES,2022-06-04,5317,OWID,2022-07-18,final
+Spain,ES,2022-06-11,5532,OWID,2023-03-14,near final
 Spain,ES,2022-06-18,6219,OWID,2023-03-14,near final
+Spain,ES,2022-06-25,8161,OWID,2022-07-23,final
 Spain,ES,2022-07-02,10049,OWID,2022-07-30,final
 Spain,ES,2022-07-09,10915,OWID,2022-08-06,final
 Spain,ES,2022-07-16,9914,OWID,2022-08-13,final
@@ -2658,7 +2628,8 @@ Spain,ES,2022-09-03,2040,OWID,2022-10-01,final
 Spain,ES,2022-09-10,2018,OWID,2022-10-08,final
 Spain,ES,2022-09-17,1862,OWID,2022-10-15,final
 Spain,ES,2022-09-24,1775,OWID,2022-10-22,final
-Spain,ES,2022-09-29,1857,OWID,2023-03-14,near final
+Spain,ES,2022-10-01,2011,OWID,2022-10-29,final
+Spain,ES,2022-10-08,2487,OWID,2022-11-05,final
 Spain,ES,2022-10-15,2892,OWID,2022-11-12,final
 Spain,ES,2022-10-22,2820,OWID,2022-11-19,final
 Spain,ES,2022-10-29,2713,OWID,2022-11-26,final
@@ -2677,5 +2648,6 @@ Spain,ES,2023-01-21,1970,OWID,2023-02-18,final
 Spain,ES,2023-01-28,1595,OWID,2023-02-25,final
 Spain,ES,2023-02-04,1475,OWID,2023-03-04,final
 Spain,ES,2023-02-11,1300,OWID,2023-03-11,final
+Spain,ES,2023-02-18,1345,OWID,2023-03-14,near final
 Spain,ES,2023-02-25,1393,OWID,2023-03-14,near final
 Spain,ES,2023-03-04,1451,OWID,2023-03-14,near final
