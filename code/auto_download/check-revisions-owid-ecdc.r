@@ -31,12 +31,14 @@ for (source in names(sources)) {
       paste0(
         "covid-", file_pattern, "-final_", date - days(cutoff_days), ".csv"
       )
-    ), show_col_types = FALSE)
+      ), show_col_types = FALSE) |>
+      dplyr::mutate(status = "final")
     snapshot <- readr::read_csv(file.path(
       snapshot_dir,
       paste0("covid-", file_pattern, "_", date, ".csv")
     ), show_col_types = FALSE) |>
-      dplyr::mutate(snapshot_date = {{ date }}) |>
+      dplyr::mutate(snapshot_date = {{ date }},
+                    status = "final") |>
       dplyr::filter(date > {{ date }} - days(cutoff_days))
     combined <- dplyr::bind_rows(final, snapshot) |>
       EuroForecastHub::convert_to_weekly()
