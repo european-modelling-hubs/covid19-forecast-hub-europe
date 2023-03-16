@@ -7,7 +7,7 @@ European data status
 
 - Belgium, Cyprus, Czechia, Denmark, Estonia, France, Germany, Greece,
   Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Luxembourg,
-  Malta, Netherlands, Slovakia, Slovenia, Spain
+  Malta, Slovakia, Slovenia, Spain
 
 The Hub validates and evaluates hospitalisation forecasts against data
 collated by [Our World in
