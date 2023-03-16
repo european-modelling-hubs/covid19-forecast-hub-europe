@@ -86,7 +86,7 @@ for (source in names(sources)) {
     dplyr::ungroup() |>
     dplyr::mutate(cutoff_weeks = weeks_back + 1) |>
     dplyr::select(
-      -mean_relative_revision, -cum_weeks_back, -sum_seq_weeks_back, -weeks_back
+      -mean_relative_revision, -cum_weeks_back, -sum_seq_weeks_back, -weeks_back, -status
     )
 
   vroom::vroom_write(
