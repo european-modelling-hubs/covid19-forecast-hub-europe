@@ -169,15 +169,15 @@ Data:
 > Alexander Ullrich, Graham Gibson, Evan L Ray, Nicholas G Reich, Daniel
 > Sheldon, Yijin Wang, Nutcha Wattanachit, Lijing Wang, Jan Trnka,
 > Guillaume Obozinski, … Sebastian Funk. (2023). European Covid-19
-> Forecast Hub (v2023.03.09) \[Data set\]. Zenodo.
-> <https://doi.org/10.5281/zenodo.7712062>
+> Forecast Hub (v2023.03.16) \[Data set\]. Zenodo.
+> <https://doi.org/10.5281/zenodo.7740656>
 
 <details>
 
 <summary>Bibtex</summary>
 
 ``` bibtex
-@dataset{katharine_sherratt_2023_7712062,
+@dataset{katharine_sherratt_2023_7740656,
   author       = {Katharine Sherratt and
                   Hugo Gruson and
                   Helen Johnson and
@@ -304,9 +304,9 @@ Data:
   month        = mar,
   year         = 2023,
   publisher    = {Zenodo},
-  version      = {v2023.03.09},
-  doi          = {10.5281/zenodo.7712062},
-  url          = {https://doi.org/10.5281/zenodo.7712062}
+  version      = {v2023.03.16},
+  doi          = {10.5281/zenodo.7740656},
+  url          = {https://doi.org/10.5281/zenodo.7740656}
 }
 ```
 
