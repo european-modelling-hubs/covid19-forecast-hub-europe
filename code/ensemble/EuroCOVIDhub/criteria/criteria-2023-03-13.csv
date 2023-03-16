@@ -1,4 +1,21 @@
 model,target_variable,location,all_quantiles_all_horizons,all_horizons,not_excluded_manually,rel_wis,included_in_ensemble
+epiforecasts-tsensemble,inc hosp,BE,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,CY,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,CZ,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,DE,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,DK,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,EE,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,ES,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,FR,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,GR,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,IE,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,IT,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,LI,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,LU,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,LV,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,MT,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,SI,TRUE,TRUE,TRUE,TRUE,TRUE
+epiforecasts-tsensemble,inc hosp,SK,TRUE,TRUE,TRUE,TRUE,TRUE
 fjordhest-ensemble,inc case,NO,TRUE,TRUE,TRUE,TRUE,TRUE
 fjordhest-ensemble,inc death,NO,TRUE,TRUE,TRUE,TRUE,TRUE
 ICM-agentModel,inc case,PL,TRUE,TRUE,TRUE,TRUE,TRUE
