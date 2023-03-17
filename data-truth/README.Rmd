@@ -28,7 +28,7 @@ hosp_data <- readr::read_csv(here::here(
   ),
   show_col_types = FALSE
 ) |>
-  filter(date >= max(snapshot_date) - lubridate::weeks(8))
+  dplyr::filter(date >= max(snapshot_date) - lubridate::weeks(8))
 hosp_locations <- sort(unique(hosp_data$location_name))
 ```
 
@@ -38,12 +38,12 @@ hosp_locations <- sort(unique(hosp_data$location_name))
 ```{r hosp-data-warnings}
 if (nrow(hosp_data > 0)) {
   gaps <- hosp_data |>
-    group_by(location_name) |>
-    slice_max(snapshot_date, n = 1) |>
-    ungroup() |>
-    mutate(date_diff = max(snapshot_date) - snapshot_date) |>
-    filter(snapshot_date < max(snapshot_date) & date_diff > 7) |>
-    pull(location_name)
+    dplyr::group_by(location_name) |>
+    dplyr::slice_max(snapshot_date, n = 1) |>
+    dplyr::ungroup() |>
+    dplyr::mutate(date_diff = max(snapshot_date) - snapshot_date) |>
+    dplyr::filter(snapshot_date < max(snapshot_date) & date_diff > 7) |>
+    dplyr::pull(location_name)
   show_text_gaps <- length(gaps) > 0
 } else {
   cat("--- Recent data unavailable ---")
@@ -76,6 +76,7 @@ The files in this directory are the ones used for scoring the forecasts for thei
 
 The single dataset in [OWID/truth_OWID-Incident Hospitalizations.csv](OWID/truth_OWID-Incident Hospitalizations.csv) contains the latest data, where the final versions of the data are included for dates more than 28 days before the latest snapshot date, and the most recent version for any subsequent data.
 This is the dataset recommended for use in models that can take into account the truncation of the data. Please note that the `date` field in this file corresponds to the final day of the week reported, and any data reported at weekly frequency has been shifted back one day to Saturday (instead of Sunday) in that file to comply with the Hub definition of an epidemiological week (Sunday-Saturday).
+Past versions of this data set are in the [OWID/truth](OWID/truth) directory.
 
 We further provide a set of [recommended cutoffs](OWID/recommended-cutoffs.csv) for use with these data.
 These are estimates of the truncation in the number of weeks that should be cut off the data set if the aim is to have a data set that is not further revised by more than 5%.
@@ -92,15 +93,15 @@ duplicate_final <- hosp_data |>
   dplyr::ungroup() |>
   dplyr::mutate(status = "expecting revisions")
 hosp_data <- hosp_data |>
-  bind_rows(duplicate_final)
+  dplyr::bind_rows(duplicate_final)
 
 p <- ggplot2::ggplot(
-       hosp_data |> filter(status != "expecting revisions"),
+       hosp_data |> dplyr::filter(status != "expecting revisions"),
        ggplot2::aes(x = date, y = value)
   ) +
   ggplot2::geom_line() +
   ggplot2::geom_line(
-    data = hosp_data |> filter(status == "expecting revisions"),
+    data = hosp_data |> dplyr::filter(status == "expecting revisions"),
     linetype = "dashed"
   ) +
   ggplot2::scale_y_continuous(labels = scales::comma) +
@@ -181,6 +182,7 @@ The files in this directory are the ones used for scoring the forecasts for thei
 
 The single datasets in [ECDC/truth_ECDC-Incident Cases](ECDC/truth_ECDC-Incident Cases) and [ECDC/truth_ECDC-Incident Deaths](ECDC/truth_ECDC-Incident Deaths) contain the latest data, where the final versions of the data are included for dates more than 28 days before the latest snapshot date, and the most recent version for any subsequent data.
 These are the dataset recommended for use in models that can take into account the truncation of the data. Please note that the `date` field in this file corresponds to the final day of the week reported, and the data has been shifted back one day to Saturday (instead of Sunday) in that file to comply with the Hub definition of an epidemiological week (Sunday-Saturday).
+Past versions of this data set are in the [ECDC/truth](ECDC/truth) directory.
 
 We further provide a set of [recommended cutoffs](ECDC/recommended-cutoffs.csv) for use with these data.
 These are estimates of the truncation in the number of weeks that should be cut off the data set if the aim is to have a data set that is not further revised by more than 5%.
