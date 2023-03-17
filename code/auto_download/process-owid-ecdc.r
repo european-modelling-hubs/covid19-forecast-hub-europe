@@ -12,6 +12,7 @@ for (source in names(sources)) {
   source_dir <- here::here("data-truth", source)
   snapshot_dir <- file.path(source_dir, "snapshots")
   final_dir <- file.path(source_dir, "final")
+  truth_dir <- file.path(source_dir, "truth")
 
   if (!dir.exists(final_dir)) dir.create(final_dir)
 
@@ -94,13 +95,40 @@ for (source in names(sources)) {
       dplyr::bind_rows(snapshots) |>
       dplyr::filter(
         snapshot_date <= final_date + days(cutoff_days),
-        snapshot_date >= date + days(cutoff_days)
       ) |>
-      dplyr::group_by(date) |>
+      dplyr::group_by_at(vars(-snapshot_date, -value)) |>
       dplyr::filter(snapshot_date == min(snapshot_date)) |>
       dplyr::ungroup() |>
       dplyr::distinct()
-    readr::write_csv(df, file.path(
+    weekly_df <- df |>
+      dplyr::mutate(status = "final") |>
+      EuroForecastHub::convert_to_weekly() |>
+      dplyr::select(
+        location_name, location, date, value, source, snapshot_date
+      ) |>
+      dplyr::arrange(location_name, date, value)
+    for (variable in sources[[source]]) {
+      if ("target_variable" %in% colnames(weekly_df)) {
+        weekly_df <- weekly_df |>
+          dplyr::filter(
+            target_variable ==
+              paste("inc", substr(tolower(variable), 1, nchar(variable) - 1))
+          )
+      }
+      readr::write_csv(
+        weekly_df,
+        file.path(
+          truth_dir,
+          paste0(
+            "truth_", source, "-Incident ", variable, "-",
+            final_date + days(cutoff_days), ".csv"
+          )
+        )
+      )
+    }
+    final <- df |>
+      dplyr::filter(snapshot_date >= date + days(cutoff_days))
+    readr::write_csv(final, file.path(
       final_dir, paste0(
         "covid-", file_pattern, "-final_", final_date, ".csv"
       )
