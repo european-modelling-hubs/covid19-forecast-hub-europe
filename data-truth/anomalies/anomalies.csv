@@ -12417,6 +12417,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2022-09-03,inc hosp,EE,Estonia,Replaced data source
 2022-09-03,inc hosp,ES,Spain,Replaced data source
 2022-09-03,inc hosp,FR,France,Replaced data source
+2022-09-03,inc hosp,GB,United Kingdom,Replaced data source
 2022-09-03,inc hosp,GR,Greece,large data revision
 2022-09-03,inc hosp,IE,Ireland,Replaced data source
 2022-09-03,inc hosp,IT,Italy,Replaced data source
@@ -12562,6 +12563,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2022-09-10,inc hosp,EE,Estonia,Replaced data source
 2022-09-10,inc hosp,ES,Spain,Replaced data source
 2022-09-10,inc hosp,FR,France,Replaced data source
+2022-09-10,inc hosp,GB,United Kingdom,Replaced data source
 2022-09-10,inc hosp,GR,Greece,large data revision
 2022-09-10,inc hosp,IE,Ireland,Replaced data source
 2022-09-10,inc hosp,IT,Italy,Replaced data source
@@ -13006,6 +13008,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2022-10-01,inc hosp,LV,Latvia,large data revision
 2022-10-01,inc hosp,MT,Malta,large data revision
 2022-10-01,inc hosp,NL,Netherlands,Replaced data source
+2022-10-01,inc hosp,NO,Norway,Replaced data source
 2022-10-01,inc hosp,SI,Slovenia,Replaced data source
 2022-10-01,inc hosp,SK,Slovakia,large data revision
 2022-10-02,inc hosp,BE,Belgium,Replaced data source
@@ -13150,6 +13153,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2022-10-08,inc hosp,LV,Latvia,large data revision
 2022-10-08,inc hosp,MT,Malta,large data revision
 2022-10-08,inc hosp,NL,Netherlands,Replaced data source
+2022-10-08,inc hosp,NO,Norway,Replaced data source
 2022-10-08,inc hosp,SI,Slovenia,Replaced data source
 2022-10-08,inc hosp,SK,Slovakia,large data revision
 2022-10-09,inc hosp,BE,Belgium,Replaced data source
@@ -13293,6 +13297,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2022-10-15,inc hosp,LV,Latvia,large data revision
 2022-10-15,inc hosp,MT,Malta,large data revision
 2022-10-15,inc hosp,NL,Netherlands,Replaced data source
+2022-10-15,inc hosp,NO,Norway,Replaced data source
 2022-10-15,inc hosp,SI,Slovenia,large data revision
 2022-10-15,inc hosp,SK,Slovakia,large data revision
 2022-10-16,inc hosp,BE,Belgium,Replaced data source
@@ -13435,6 +13440,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2022-10-22,inc hosp,LV,Latvia,large data revision
 2022-10-22,inc hosp,MT,Malta,large data revision
 2022-10-22,inc hosp,NL,Netherlands,Replaced data source
+2022-10-22,inc hosp,NO,Norway,Replaced data source
 2022-10-22,inc hosp,SI,Slovenia,Replaced data source
 2022-10-22,inc hosp,SK,Slovakia,large data revision
 2022-10-23,inc hosp,BE,Belgium,Replaced data source
@@ -13577,6 +13583,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2022-10-29,inc hosp,LV,Latvia,large data revision
 2022-10-29,inc hosp,MT,Malta,large data revision
 2022-10-29,inc hosp,NL,Netherlands,Replaced data source
+2022-10-29,inc hosp,NO,Norway,Replaced data source
 2022-10-29,inc hosp,SI,Slovenia,Replaced data source
 2022-10-29,inc hosp,SK,Slovakia,large data revision
 2022-10-30,inc hosp,BE,Belgium,Replaced data source
@@ -13720,6 +13727,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2022-11-05,inc hosp,LV,Latvia,large data revision
 2022-11-05,inc hosp,MT,Malta,large data revision
 2022-11-05,inc hosp,NL,Netherlands,Replaced data source
+2022-11-05,inc hosp,NO,Norway,Replaced data source
 2022-11-05,inc hosp,SI,Slovenia,Replaced data source
 2022-11-05,inc hosp,SK,Slovakia,large data revision
 2022-11-06,inc hosp,BE,Belgium,Replaced data source
@@ -13863,6 +13871,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2022-11-12,inc hosp,LV,Latvia,large data revision
 2022-11-12,inc hosp,MT,Malta,large data revision
 2022-11-12,inc hosp,NL,Netherlands,Replaced data source
+2022-11-12,inc hosp,NO,Norway,Replaced data source
 2022-11-12,inc hosp,SI,Slovenia,Replaced data source
 2022-11-12,inc hosp,SK,Slovakia,large data revision
 2022-11-13,inc hosp,BE,Belgium,Replaced data source
@@ -14006,6 +14015,7 @@ target_end_date,target_variable,location,location_name,anomaly
 2022-11-19,inc hosp,LV,Latvia,large data revision
 2022-11-19,inc hosp,MT,Malta,large data revision
 2022-11-19,inc hosp,NL,Netherlands,Replaced data source
+2022-11-19,inc hosp,NO,Norway,Replaced data source
 2022-11-19,inc hosp,SI,Slovenia,Replaced data source
 2022-11-19,inc hosp,SK,Slovakia,large data revision
 2022-11-20,inc hosp,BE,Belgium,Replaced data source
@@ -15742,12 +15752,14 @@ target_end_date,target_variable,location,location_name,anomaly
 2023-02-15,inc hosp,FR,France,Replaced data source
 2023-02-15,inc hosp,IT,Italy,Replaced data source
 2023-02-15,inc hosp,NL,Netherlands,Replaced data source
+2023-02-16,inc hosp,BE,Belgium,Replaced data source
 2023-02-16,inc hosp,CZ,Czechia,Replaced data source
 2023-02-16,inc hosp,DE,Germany,Replaced data source
 2023-02-16,inc hosp,DK,Denmark,Replaced data source
 2023-02-16,inc hosp,ES,Spain,Replaced data source
 2023-02-16,inc hosp,FR,France,Replaced data source
 2023-02-16,inc hosp,NL,Netherlands,Replaced data source
+2023-02-17,inc hosp,BE,Belgium,Replaced data source
 2023-02-17,inc hosp,CZ,Czechia,Replaced data source
 2023-02-17,inc hosp,DE,Germany,Replaced data source
 2023-02-17,inc hosp,DK,Denmark,Replaced data source
@@ -15834,17 +15846,21 @@ target_end_date,target_variable,location,location_name,anomaly
 2023-02-18,inc hosp,NL,Netherlands,Replaced data source
 2023-02-18,inc hosp,SI,Slovenia,Replaced data source
 2023-02-18,inc hosp,SK,Slovakia,Replaced data source
+2023-02-19,inc hosp,BE,Belgium,Replaced data source
 2023-02-19,inc hosp,DE,Germany,Replaced data source
 2023-02-19,inc hosp,DK,Denmark,Replaced data source
 2023-02-19,inc hosp,ES,Spain,Replaced data source
 2023-02-19,inc hosp,FR,France,Replaced data source
+2023-02-20,inc hosp,BE,Belgium,Replaced data source
 2023-02-20,inc hosp,DE,Germany,Replaced data source
 2023-02-20,inc hosp,DK,Denmark,Replaced data source
 2023-02-20,inc hosp,ES,Spain,Replaced data source
 2023-02-20,inc hosp,FR,France,Replaced data source
 2023-02-20,inc hosp,NL,Netherlands,Replaced data source
+2023-02-21,inc hosp,BE,Belgium,Replaced data source
 2023-02-21,inc hosp,DE,Germany,Replaced data source
 2023-02-21,inc hosp,DK,Denmark,Replaced data source
+2023-02-21,inc hosp,ES,Spain,Replaced data source
 2023-02-21,inc hosp,FR,France,Replaced data source
 2023-02-21,inc hosp,IT,Italy,Replaced data source
 2023-02-21,inc hosp,NL,Netherlands,Replaced data source

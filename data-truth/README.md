@@ -7,7 +7,7 @@ European data status
 
 - Belgium, Cyprus, Czechia, Denmark, Estonia, France, Germany, Greece,
   Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Luxembourg,
-  Malta, Slovakia, Slovenia, Spain
+  Malta, Netherlands, Slovakia, Slovenia, Spain
 
 The Hub validates and evaluates hospitalisation forecasts against data
 collated by [Our World in
@@ -47,7 +47,8 @@ of the data. Please note that the `date` field in this file corresponds
 to the final day of the week reported, and any data reported at weekly
 frequency has been shifted back one day to Saturday (instead of Sunday)
 in that file to comply with the Hub definition of an epidemiological
-week (Sunday-Saturday).
+week (Sunday-Saturday). Past versions of this data set are in the
+[OWID/truth](OWID/truth) directory.
 
 We further provide a set of [recommended
 cutoffs](OWID/recommended-cutoffs.csv) for use with these data. These
@@ -120,7 +121,8 @@ that can take into account the truncation of the data. Please note that
 the `date` field in this file corresponds to the final day of the week
 reported, and the data has been shifted back one day to Saturday
 (instead of Sunday) in that file to comply with the Hub definition of an
-epidemiological week (Sunday-Saturday).
+epidemiological week (Sunday-Saturday). Past versions of this data set
+are in the [ECDC/truth](ECDC/truth) directory.
 
 We further provide a set of [recommended
 cutoffs](ECDC/recommended-cutoffs.csv) for use with these data. These
