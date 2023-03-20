@@ -61,7 +61,7 @@ raw_truth <- load_truth(
 )
 
 raw_truth <- raw_truth |>
-  add_hosp_status()
+  add_status()
 
 truth <- raw_truth %>%
   select(-model) |>

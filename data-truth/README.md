@@ -6,14 +6,15 @@ European data status
 ### Hospitalisations
 
 - Belgium, Cyprus, Czechia, Denmark, Estonia, France, Germany, Greece,
-  Iceland, Ireland, Italy, Latvia, Liechtenstein, Luxembourg, Malta,
-  Slovakia, Slovenia, Spain
+  Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Luxembourg,
+  Malta, Netherlands, Slovakia, Slovenia, Spain
 
-The Hub validates and evaluates forecasts against data collated by [Our
-World in Data](https://ourworldindata.org/covid-hospitalizations),
-provided in the [OWID](OWID) directory. These data are provided as
-reported by national health authorities and therefore are not consistent
-in definition, and care needs to be taken in interpreting them.
+The Hub validates and evaluates hospitalisation forecasts against data
+collated by [Our World in
+Data](https://ourworldindata.org/covid-hospitalizations), provided in
+the [OWID](OWID) directory. These data are provided as reported by
+national health authorities and therefore are not consistent in
+definition, and care needs to be taken in interpreting them.
 
 One particular issue that affects several of the hospitalisation data
 streams it the one of right truncation. This occurs when these are
@@ -27,11 +28,11 @@ revisions will be ignored for the purposes of the Hub.
 
 We provide multiple views of the data in order to facilitate modelling
 of COVID-19 hospitalisations with a 28 day cutoff. In the
-[snapshot](OWID/snapshot) directory we provide daily snapshots of the
-COVID-19 hospitalisation data as collated by Our World in Data, before
-any further processing is applied. The data in there are given either as
-rolling weekly sums of daily data, or weekly data. In the
-[final](OWID/final) directory we provide data that are considered
+[OWID/snapshot](OWID/snapshot) directory we provide daily snapshots of
+the COVID-19 hospitalisation data as collated by Our World in Data,
+before any further processing is applied. The data in there are given
+either as rolling weekly sums of daily data, or weekly data. In the
+[OWID/final](OWID/final) directory we provide data that are considered
 “final”, i.e. they stop 28 days before the latest date. The files in
 this directory are the ones used for scoring the forecasts for their
 performance against observed data.
@@ -46,7 +47,8 @@ of the data. Please note that the `date` field in this file corresponds
 to the final day of the week reported, and any data reported at weekly
 frequency has been shifted back one day to Saturday (instead of Sunday)
 in that file to comply with the Hub definition of an epidemiological
-week (Sunday-Saturday).
+week (Sunday-Saturday). Past versions of this data set are in the
+[OWID/truth](OWID/truth) directory.
 
 We further provide a set of [recommended
 cutoffs](OWID/recommended-cutoffs.csv) for use with these data. These
@@ -61,38 +63,86 @@ cannot take into account the truncation of the data.
 The latest hospitalisation data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
 
-![Plot of hospitalisations](plots/hospitalisations.svg)
+    ## `geom_line()`: Each group consists of only one observation.
+    ## ℹ Do you need to adjust the group aesthetic?
+
+![Plot of hospitalisations](plots/Hospitalisations.svg)
 
 ### Cases and deaths
 
-We further evaluate forecasts of cases and deaths against [Johns Hopkins
-University data](https://github.com/CSSEGISandData/COVID-19), and we
-recommend using this dataset as the basis for forecasts.
+- Cases: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark,
+  Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland,
+  Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta,
+  Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia,
+  Spain, Sweden
 
-- Daily numbers of cases and deaths are available to download from
-  [JHU](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series),
-  or from [our
-  repository](https://github.com/epiforecasts/covid19-forecast-hub-europe/data-truth).
-- JHU also provide [country
-  metadata](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv),
-  including population counts and ISO-3 codes.
+- Deaths: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark,
+  Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland,
+  Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta,
+  Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia,
+  Spain, Sweden
 
-Note there are some differences between the format of the JHU data and
-what we require in a forecast. Please check the
-[Wiki](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Targets-and-horizons#truth-data)
-for more on forecast formatting.
+- **Data warning!** Recent missing data for cases in: Croatia, Denmark,
+  and Germany
 
-#### Potential issues in the JHU dataset
+- **Data warning!** Recent missing data for deaths in: Croatia, Denmark,
+  Germany, Iceland, Netherlands, and Norway
 
-As of 2023-03-07
+We further evaluate forecasts of cases and deaths against data provided
+[ECDC](https://www.ecdc.europa.eu/), which we recommend using as the
+basis for corresponding forecasts. These data are provided as reported
+by national health authorities and therefore are not consistent in
+definition, and care needs to be taken in interpreting them.
 
-| country | created    | updated    | issue                                            | message                                             | url                                                      |
-|:--------|:-----------|:-----------|:-------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------------|
-| iceland | 2023-03-01 | 2023-03-02 | iceland publishes large spike in deaths          | All, We published a large spike to our death tota…  | <https://github.com/CSSEGISandData/COVID-19/issues/6631> |
-| iceland | 2023-01-11 | 2023-01-11 | patch iceland data from 11/01/2022 to 01/10/2023 | November 1, 2022: 206571 cases November 8, 2022: 2… | <https://github.com/CSSEGISandData/COVID-19/issues/6462> |
+One particular issue that affects several of the case/death data streams
+it the one of right truncation. This occurs when these are reported with
+a delay, and therefore recent data need to be treated as incomplete,
+posing additional challenges to forecasting such data streams and
+validating forecasts.
 
-Open issues updated over the last eight weeks: from [JHU CSSEGISandData
-Github](https://github.com/CSSEGISandData/COVID-19/)
+For our visualisations and assesments of forecast performance we treat
+cases and deaths as *final* 28 days after the reported date. Any further
+revisions will be ignored for the purposes of the Hub.
+
+We provide multiple views of the data in order to facilitate modelling
+of COVID-19 cases and deaths with a 28 day cutoff. In the
+[ECDC/snapshot](ECDC/snapshot) directory we provide weekly snapshots of
+the COVID-19 case and death data as collated by ECDC, before any further
+processing is applied. The data in there are given either as weekly sums
+of cases/deaths. In the [ECDC/final](OWID/final) directory we provide
+data that are considered “final”, i.e. they stop 28 days before the
+latest date. The files in this directory are the ones used for scoring
+the forecasts for their performance against observed data.
+
+The single datasets in [ECDC/truth_ECDC-Incident
+Cases](ECDC/truth_ECDC-Incident%20Cases) and [ECDC/truth_ECDC-Incident
+Deaths](ECDC/truth_ECDC-Incident%20Deaths) contain the latest data,
+where the final versions of the data are included for dates more than 28
+days before the latest snapshot date, and the most recent version for
+any subsequent data. These are the dataset recommended for use in models
+that can take into account the truncation of the data. Please note that
+the `date` field in this file corresponds to the final day of the week
+reported, and the data has been shifted back one day to Saturday
+(instead of Sunday) in that file to comply with the Hub definition of an
+epidemiological week (Sunday-Saturday). Past versions of this data set
+are in the [ECDC/truth](ECDC/truth) directory.
+
+We further provide a set of [recommended
+cutoffs](ECDC/recommended-cutoffs.csv) for use with these data. These
+are estimates of the truncation in the number of weeks that should be
+cut off the data set if the aim is to have a data set that is not
+further revised by more than 5%. The corresponding datasets in
+[ECDC/truncated_ECDC-Incident
+Cases.csv](ECDC/truth_ECDC-Incident%20Cases.csv) and
+[ECDC/truncated_ECDC-Incident
+Deaths.csv](ECDC/truth_ECDC-Incident%20Deaths.csv) have these recent
+weeks removed and is recommended for use in models that cannot take into
+account the truncation of the data.
+
+The latest case/death data is plotted below, with the dashed line
+indicating data expecting to be substanially revised.
+
+![Plot of cases](plots/Cases.svg) ![Plot of deaths](plots/Deaths.svg)
 
 ## Additional data sources
 

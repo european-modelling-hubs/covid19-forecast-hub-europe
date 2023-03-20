@@ -1,0 +1,49 @@
+name: "Get data (ECDC/OWID)"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7 12 * * *"
+
+jobs:
+  get_data:
+    if: github.repository_owner == 'covid19-forecast-hub-europe'
+    runs-on: ubuntu-20.04
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: r-lib/actions/setup-r@v2
+      with:
+        install-r: false
+        use-public-rspm: true
+
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
+
+    - uses: r-lib/actions/setup-renv@v2
+
+    - name: Hospitalisation Truth
+      run: |
+        Rscript 'code/auto_download/data-download.R'
+        Rscript 'code/auto_download/process-owid-ecdc.r'
+        Rscript 'code/auto_download/check-revisions-owid-ecdc.r'
+
+    - name: Commit files
+      run: |
+        git config user.email "action@github.com"
+        git config user.name "GitHub Action - ECDC/OWID data"
+        git add --all
+        git commit -m "Data update - daily" || echo "No changes to commit"
+        git pull --rebase origin main
+        git push
+        echo "pushed to github"
+
+    - name: Create issue about failure
+      if: failure() && github.event_name != 'workflow_dispatch'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh issue reopen 2628
