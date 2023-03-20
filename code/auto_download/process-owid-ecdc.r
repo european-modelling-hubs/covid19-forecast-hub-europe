@@ -78,7 +78,8 @@ for (source in names(sources)) {
     ) |>
       dplyr::mutate(snapshot_date = x)
   ) |>
-    dplyr::bind_rows()
+    dplyr::bind_rows() |>
+    dplyr::mutate(type = "snapshot")
 
   for (final_date_chr in as.character(process_final_dates)) {
     final_date <- as.Date(final_date_chr)
@@ -90,23 +91,26 @@ for (source in names(sources)) {
         )
       ),
       show_col_types = FALSE
-    )
+    ) |>
+      dplyr::mutate(type = "final")
     df <- init |>
       dplyr::bind_rows(snapshots) |>
       dplyr::filter(
         snapshot_date <= final_date + days(cutoff_days),
       ) |>
-      dplyr::group_by_at(vars(-snapshot_date, -value)) |>
-      dplyr::filter(snapshot_date == min(snapshot_date)) |>
+      dplyr::group_by_at(vars(-snapshot_date, -value, -type)) |>
+      dplyr::filter(
+        any(type == "final") & type == "final" | !any(type == "final")
+      ) |>
+      dplyr::filter(snapshot_date == max(snapshot_date)) |>
       dplyr::ungroup() |>
-      dplyr::distinct()
+      dplyr::select(-type) |>
+      dplyr::distinct() |>
+      dplyr::arrange(location_name, date, value)
     weekly_df <- df |>
       dplyr::mutate(status = "final") |>
       EuroForecastHub::convert_to_weekly() |>
-      dplyr::select(
-        location_name, location, date, value, source, snapshot_date
-      ) |>
-      dplyr::arrange(location_name, date, value)
+      dplyr::select(-status)
     for (variable in sources[[source]]) {
       if ("target_variable" %in% colnames(weekly_df)) {
         weekly_df <- weekly_df |>

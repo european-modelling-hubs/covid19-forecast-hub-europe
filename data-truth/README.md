@@ -63,6 +63,9 @@ cannot take into account the truncation of the data.
 The latest hospitalisation data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
 
+    ## `geom_line()`: Each group consists of only one observation.
+    ## ℹ Do you need to adjust the group aesthetic?
+
 ![Plot of hospitalisations](plots/Hospitalisations.svg)
 
 ### Cases and deaths
@@ -79,11 +82,11 @@ indicating data expecting to be substanially revised.
   Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia,
   Spain, Sweden
 
-- **Data warning!** Recent missing data for cases in: Croatia, Cyprus,
-  and Denmark
+- **Data warning!** Recent missing data for cases in: Croatia, Denmark,
+  and Germany
 
-- **Data warning!** Recent missing data for deaths in: Croatia, Cyprus,
-  Denmark, Hungary, Iceland, Netherlands, and Norway
+- **Data warning!** Recent missing data for deaths in: Croatia, Denmark,
+  Germany, Iceland, Netherlands, and Norway
 
 We further evaluate forecasts of cases and deaths against data provided
 [ECDC](https://www.ecdc.europa.eu/), which we recommend using as the
