@@ -133,9 +133,9 @@ are estimates of the truncation in the number of weeks that should be
 cut off the data set if the aim is to have a data set that is not
 further revised by more than 5%. The corresponding datasets in
 [ECDC/truncated_ECDC-Incident
-Cases.csv](ECDC/truth_ECDC-Incident%20Cases.csv) and
+Cases.csv](ECDC/truncated_ECDC-Incident%20Cases.csv) and
 [ECDC/truncated_ECDC-Incident
-Deaths.csv](ECDC/truth_ECDC-Incident%20Deaths.csv) have these recent
+Deaths.csv](ECDC/truncated_ECDC-Incident%20Deaths.csv) have these recent
 weeks removed and is recommended for use in models that cannot take into
 account the truncation of the data.
 
