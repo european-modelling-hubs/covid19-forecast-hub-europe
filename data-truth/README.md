@@ -9,6 +9,8 @@ European data status
   Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Luxembourg,
   Malta, Netherlands, Slovakia, Slovenia, Spain
 
+- **Data warning!** Recent missing data in: Liechtenstein
+
 The Hub validates and evaluates hospitalisation forecasts against data
 collated by [Our World in
 Data](https://ourworldindata.org/covid-hospitalizations), provided in
@@ -63,9 +65,6 @@ cannot take into account the truncation of the data.
 The latest hospitalisation data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
 
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-
 ![Plot of hospitalisations](plots/Hospitalisations.svg)
 
 ### Cases and deaths
@@ -115,8 +114,8 @@ latest date. The files in this directory are the ones used for scoring
 the forecasts for their performance against observed data.
 
 The single datasets in [ECDC/truth_ECDC-Incident
-Cases](ECDC/truth_ECDC-Incident%20Cases.csv) and [ECDC/truth_ECDC-Incident
-Deaths](ECDC/truth_ECDC-Incident%20Deaths.csv) contain the latest data,
+Cases](ECDC/truth_ECDC-Incident%20Cases) and [ECDC/truth_ECDC-Incident
+Deaths](ECDC/truth_ECDC-Incident%20Deaths) contain the latest data,
 where the final versions of the data are included for dates more than 28
 days before the latest snapshot date, and the most recent version for
 any subsequent data. These are the dataset recommended for use in models
@@ -133,9 +132,9 @@ are estimates of the truncation in the number of weeks that should be
 cut off the data set if the aim is to have a data set that is not
 further revised by more than 5%. The corresponding datasets in
 [ECDC/truncated_ECDC-Incident
-Cases.csv](ECDC/truncated_ECDC-Incident%20Cases.csv) and
+Cases.csv](ECDC/truth_ECDC-Incident%20Cases.csv) and
 [ECDC/truncated_ECDC-Incident
-Deaths.csv](ECDC/truncated_ECDC-Incident%20Deaths.csv) have these recent
+Deaths.csv](ECDC/truth_ECDC-Incident%20Deaths.csv) have these recent
 weeks removed and is recommended for use in models that cannot take into
 account the truncation of the data.
 
