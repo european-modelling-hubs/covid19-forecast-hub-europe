@@ -115,8 +115,8 @@ latest date. The files in this directory are the ones used for scoring
 the forecasts for their performance against observed data.
 
 The single datasets in [ECDC/truth_ECDC-Incident
-Cases](ECDC/truth_ECDC-Incident%20Cases) and [ECDC/truth_ECDC-Incident
-Deaths](ECDC/truth_ECDC-Incident%20Deaths) contain the latest data,
+Cases](ECDC/truth_ECDC-Incident%20Cases.csv) and [ECDC/truth_ECDC-Incident
+Deaths](ECDC/truth_ECDC-Incident%20Deaths.csv) contain the latest data,
 where the final versions of the data are included for dates more than 28
 days before the latest snapshot date, and the most recent version for
 any subsequent data. These are the dataset recommended for use in models
