@@ -80,12 +80,16 @@ for (chr_report_date in as.character(report_dates)) {
     )
   }
 
-  combined_table <- bind_rows(tables, .id = "weeks_included") %>%
-    mutate(weeks_included = recode(weeks_included, `Inf` = "All"))
-  eval_filename <-
-    here::here(subdir, "evaluation", "weekly-summary",
-	       paste0("evaluation-", report_date, ".csv"))
+  combined_table <- bind_rows(tables, .id = "weeks_included")
+  if (nrow(combined_table) > 0) {
+    combined_table <- combined_table |>
+      mutate(weeks_included = recode(weeks_included, `Inf` = "All"))
+  }
+
+  eval_filename <- here::here(
+    subdir, "evaluation", "weekly-summary",
+    paste0("evaluation-", report_date, ".csv")
+  )
 
   write_csv(combined_table, eval_filename)
 }
-
