@@ -460,3 +460,25 @@ Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-
 
 - The following locations are missing: ['Belgium', 'Cyprus', 'Hungary', 'Iceland', 'Italy', 'Liechtenstein'].
 
+Latest check of truth data: 2023-03-31
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truncated_ECDC-Incident Cases.csv' at 2023-03-18:
+
+- The following locations are missing: ['Belgium', 'Cyprus', 'Denmark', 'Finland', 'Germany', 'Iceland', 'Italy', 'Lithuania', 'Luxembourg', 'Netherlands', 'Portugal', 'Spain'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truncated_ECDC-Incident Deaths.csv' at 2023-03-18:
+
+- The following locations are missing: ['Austria', 'Belgium', 'Cyprus', 'Czechia', 'Denmark', 'Finland', 'Germany', 'Greece', 'Hungary', 'Ireland', 'Italy', 'Lithuania', 'Luxembourg', 'Slovakia', 'Slovenia', 'Spain', 'Sweden'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/OWID/truncated_OWID-Incident Hospitalizations.csv' at 2023-04-01:
+
+- The following locations are missing: ['Belgium', 'Cyprus', 'Czechia', 'Denmark', 'France', 'Germany', 'Hungary', 'Ireland', 'Italy', 'Liechtenstein', 'Netherlands', 'Slovakia', 'Spain'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/OWID/truth_OWID-Incident Hospitalizations.csv' at 2023-04-01:
+
+- The following locations are missing: ['Belgium', 'Cyprus', 'Czechia', 'Denmark', 'France', 'Germany', 'Hungary', 'Italy', 'Liechtenstein', 'Netherlands', 'Spain'].
+
