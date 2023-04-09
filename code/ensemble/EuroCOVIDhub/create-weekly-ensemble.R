@@ -26,8 +26,8 @@ exclude_models <-
 hub_ensemble <- run_ensemble(
   method = method,
   forecast_date = forecast_date,
-  exclude_models = c(exclude_models, "EuroCOVIDhub-baseline"),
-  min_nmodels = 3,
+  exclude_models = exclude_models,
+  min_nmodels = 4,
   return_criteria = TRUE
 )
 
@@ -74,7 +74,7 @@ methods_by_date %>%
 hub_ensemble_all <- run_ensemble(
   method = method,
   forecast_date = forecast_date,
-  exclude_models = c(exclude_models, "EuroCOVIDhub-baseline"),
+  exclude_models = exclude_models,
   min_nmodels = 0,
   return_criteria = TRUE
 )
