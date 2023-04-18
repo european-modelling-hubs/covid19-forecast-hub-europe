@@ -1,0 +1,164 @@
+---
+title: 'The European COVID-19 Forecasting Hub: Participation'
+output:
+  html_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+library(gh)
+library(purrr)
+library(dplyr)
+library(lubridate)
+library(ggplot2)
+library(ggrepel)
+library(stringr)
+library(yaml)
+library(fs)
+```
+
+##### As of `r format.Date(Sys.Date(), "%d %B %Y")`
+
+
+```{r get-data}
+# Get model names / dates from github ---------------------------
+model_names <- gh(paste0("/repos/covid19-forecast-hub-europe/covid19-",
+                         "forecast-hub-europe/contents/data-processed/?recursive=1"))
+model_names <- transpose(model_names)
+model_names <- model_names[["name"]]
+model_files <- map(model_names,
+                   ~ gh(paste0("/repos/covid19-forecast-hub-europe/covid19-",
+                               "forecast-hub-europe/contents/data-processed/",
+                               .x, "?recursive=1")))
+model_names_dates <- unlist(model_files)
+model_names_dates <- model_names_dates[names(model_names_dates) == "name"]
+
+models <- tibble("file" = model_names_dates) |>
+  mutate(model = substr(file, 12, nchar(file)-4),
+         date = floor_date(as.Date(substr(file, 1, 10)),
+                           unit="week")) |>
+  select(-file) |>
+  # exclude Hub own models
+  filter(!grepl("EuroCOVIDhub", model))
+
+models <- models |>
+  tidyr::separate(col = model, 
+                  sep = "-", into = c("team_name", "model_name"), 
+                  extra = "warn", remove = FALSE) |> 
+  mutate(model = as.factor(model)) |>
+  arrange(desc(date)) |>
+  mutate(model_freq = forcats::fct_inorder(model, ordered = TRUE))
+
+### Count over time ---------------------------------------------------------
+# tally unique models
+tally_model <- models |>
+  group_by(date) |>
+  summarise(n = n(),
+            type = "models") |>
+  ungroup() 
+
+# tally unique teams
+tally_team <- models |>
+  distinct(date, team_name) |> 
+  group_by(date) |>
+  summarise(n = n(),
+            type = "teams") |>
+  ungroup()
+
+tally <- bind_rows(tally_model, tally_team) |>
+  # remove dates before hub launched
+  filter(date >= as.Date("2021-03-07"))
+
+# Model recency -------------------------------------------------------------
+models_latest <- models |>
+  group_by(model) |>
+  summarise(latest_date = max(date)) |>
+  mutate(most_recent = case_when(latest_date > Sys.Date() - 13 ~ "current",
+                                 latest_date > Sys.Date() - 36 ~ "last month",
+                                 latest_date > Sys.Date() - 120 ~ "older",
+                                 TRUE ~ "older"),
+         most_recent = factor(most_recent, c("current", "last month", "older")))
+
+```
+
+
+We report on teams' involvement in the European COVID-19 Forecast Hub between 7 March 2021 and `r format.Date(max(models$date), "%d %B %Y")`. We exclude two models created by the Hub each week.
+
+A total `r n_distinct(models$team_name)` independent teams have participated in the Hub over time, contributing `r n_distinct(models$model)` unique models. At most, `r max(tally_team$n)` teams were contributing one or more models to the Hub in any one week. In the last month, we collected forecasts from `r n_distinct(filter(models_latest, most_recent != "older"))` unique models. 
+
+#### Participating teams and models over time
+
+```{r tally-plot}
+tally |>
+  ggplot(aes(x = date, y = n, col = type, label = type)) +
+  geom_point() +
+  geom_line() +
+  labs(x = NULL, y = NULL, col = "Contributing",
+       subtitle = "European COVID-19 Forecast Hub participation",
+       caption = "Excludes Hub-generated models") +
+  scale_color_brewer(type = "qual", palette = 2) +
+  scale_x_date(date_breaks = "2 months",
+               labels = scales::label_date_short()) +
+  scale_y_continuous(limits = c(0, 40)) +
+  theme_bw() +
+  theme(legend.position = "bottom")
+```
+
+##### Individual teams' participation
+
+```{r names-by-recency, fig.height=9, fig.width=7}
+# Plot 
+models |>
+  left_join(select(models_latest, -latest_date)) |>
+  ggplot(aes(x = date, y = model_freq)) +
+  geom_vline(aes(xintercept = floor_date(Sys.Date(), week_start = 2, unit = "week")), lty = 3) +
+  geom_line(aes(col = most_recent)) +
+  labs(x = NULL, y = NULL, col = "Last submission") +
+  scale_colour_viridis_d(direction = 1) +
+  scale_x_date(date_labels = "%b '%y", limits = c(as.Date("2021-03-08"), NA)) +
+  scale_y_discrete(limits = rev) +
+  theme_bw() +
+  theme(legend.position = "bottom")
+```
+
+### Complete model information
+
+```{r table-metadata}
+github_repo <- "epiforecasts/covid19-forecast-hub-europe"
+team_df <-
+  gh::gh(
+    "/repos/{github_repo}/contents/{path}", 
+    github_repo = github_repo, 
+    path = "model-metadata"
+  )  |>
+  map_chr("download_url") |> 
+  set_names() |> 
+  map(read_yaml) |> 
+  imap_dfr(~ list(
+    link = .y,
+    authors = toString(purrr::map_chr(.x$model_contributors, "name")),
+    model_abbr = .x$model_abbr,
+    website_url = .x$website_url,
+    team_name = .x$team_name,
+    methods = .x$methods
+  )) |> 
+  mutate(
+    md_link = glue::glue("[Metadata]({link})"),
+    model_abbr = glue::glue("[{model_abbr}]({website_url})")
+  ) |> 
+  select(authors, model_abbr, team_name, md_link, methods) |> 
+  arrange(tolower(model_abbr))
+
+team_df  |> 
+  relocate(
+    "Model name" = model_abbr,
+    "Authors" = authors,
+    "Team" = team_name,
+    "Methods" = methods,
+    "Complete metadata" = md_link
+  ) |> 
+  knitr::kable(format = "markdown")
+```
