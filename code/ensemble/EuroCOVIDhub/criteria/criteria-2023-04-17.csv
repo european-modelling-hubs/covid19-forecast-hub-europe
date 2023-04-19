@@ -267,6 +267,8 @@ HZI-AgeExtendedSEIR,inc case,DE,TRUE,TRUE,TRUE,TRUE,TRUE
 HZI-AgeExtendedSEIR,inc death,DE,TRUE,TRUE,TRUE,TRUE,TRUE
 ICM-agentModel,inc case,PL,TRUE,TRUE,TRUE,TRUE,TRUE
 ICM-agentModel,inc death,PL,TRUE,TRUE,TRUE,TRUE,TRUE
+MOCOS-agent1,inc case,PL,TRUE,TRUE,TRUE,TRUE,TRUE
+MOCOS-agent1,inc death,PL,TRUE,TRUE,TRUE,TRUE,TRUE
 PL_GRedlarski-DistrictsSum,inc case,PL,TRUE,TRUE,TRUE,TRUE,TRUE
 SGroup-RandomForest,inc case,AT,TRUE,TRUE,TRUE,TRUE,TRUE
 SGroup-RandomForest,inc case,BE,TRUE,TRUE,TRUE,TRUE,TRUE
