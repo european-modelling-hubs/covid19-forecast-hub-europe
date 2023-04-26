@@ -36,7 +36,7 @@ raw_forecasts <- arrow::open_dataset(
   # Ideally, we would handle this with separate() but it's not yet implemented 
   # in arrow
   dplyr::mutate(
-    horizon = as.integer(gsub("^-?(\\d+) .*", "\\1", target)),
+    horizon = as.integer(gsub("^(-?\\d+) .*", "\\1", target)),
     target_variable = gsub(".* (\\w+ \\w+)$", "\\1", target),
     .keep = "unused"
   ) |> 
@@ -49,45 +49,57 @@ raw_forecasts <- arrow::open_dataset(
   dplyr::rename(prediction = value) |> 
   dplyr::left_join(locations) |> 
   # set forecast date to corresponding submission date
-  mutate(
-    forecast_date = ceiling_date(forecast_date, "week", week_start = 3)
+  dplyr::mutate(
+    forecast_date = lubridate::ceiling_date(
+      forecast_date, "week", week_start = 1, change_on_boundary = FALSE
+    )
   )
 
 ## load truth data -------------------------------------------------------------
-raw_truth <- load_truth(
+raw_truth <- covidHubUtils::load_truth(
   temporal_resolution = "weekly",
   truth_end_date = report_date,
   hub = "ECDC"
 )
 
 raw_truth <- raw_truth |>
-  add_status()
+  EuroForecastHub::add_status()
 
 truth <- raw_truth %>%
-  select(-model) |>
-  rename(true_value = value)
+  dplyr::select(-model) |>
+  dplyr::rename(true_value = value)
 
 # get anomalies
-anomalies <- read_csv(paste0(hub_repo, "/raw/main/data-truth/anomalies/anomalies.csv"),
-                      show_col_types = FALSE)
+anomalies <- readr::read_csv(
+  paste0(hub_repo, "/raw/main/data-truth/anomalies/anomalies.csv"),
+  show_col_types = FALSE
+)
 
 # remove forecasts made directly after a data anomaly
 forecasts <- raw_forecasts %>%
-  mutate(previous_end_date = floor_date(forecast_date, "week", week_start = 1)) %>%
-  left_join(anomalies %>%
-            rename(previous_end_date = target_end_date),
-            by = c("target_variable",
-                   "location", "location_name",
-                   "previous_end_date")) %>%
-  filter(is.na(anomaly)) %>%
-  select(-anomaly, -previous_end_date) |> 
-  collect()
+  dplyr::mutate(
+    previous_end_date =
+      lubridate::floor_date(forecast_date, "week", week_start = 6)
+  ) |>
+  dplyr::left_join(
+    anomalies |>
+      dplyr::rename(previous_end_date = target_end_date),
+    by = c("target_variable",
+      "location", "location_name",
+      "previous_end_date")
+  ) |>
+  dplyr::filter(is.na(anomaly)) |>
+  dplyr::select(-anomaly, -previous_end_date) |>
+  dplyr::collect()
 
 # Horizon 0 data that will be filled with truth data as prediction later. This
 # is useful to connect truth data and predictions in the plots.
 horizon_0 <- forecasts |> 
-  group_by(model, forecast_date, location, location_name, population, target_variable, quantile) |> 
-  summarise(
+  dplyr::group_by(
+    model, forecast_date, location, location_name, population, target_variable,
+    quantile
+  ) |> 
+  dplyr::summarise(
     horizon = min(horizon) - 1L,
     target_end_date = min(target_end_date) - 7,
     type = "point",

@@ -66,6 +66,8 @@ properties:
     type: boolean
   citation:
     type: string
+  institution_affil:
+    type: string
   team_funding:
     type: string
   data_inputs:

@@ -82,7 +82,7 @@ for (fcast_date in as.character(forecast_dates)) {
     plot_data <- scaled_data |>
       filter(
         target_variable == target_variables[[target]],
-        model == compare_model,
+        is.na(model) | model == compare_model,
         target_end_date >= fcast_date - weeks(10),
         target_end_date < fcast_date + weeks(4)
       ) |> 
