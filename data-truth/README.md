@@ -9,6 +9,8 @@ European data status
   Hungary, Iceland, Ireland, Italy, Latvia, Luxembourg, Malta,
   Netherlands, Slovakia, Slovenia, Spain
 
+- **Data warning!** Recent missing data in: France
+
 The Hub validates and evaluates hospitalisation forecasts against data
 collated by [Our World in
 Data](https://ourworldindata.org/covid-hospitalizations), provided in
