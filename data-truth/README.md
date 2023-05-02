@@ -9,6 +9,9 @@ European data status
   Hungary, Iceland, Ireland, Italy, Latvia, Luxembourg, Malta,
   Netherlands, Slovakia, Slovenia, Spain
 
+- **Data warning!** Recent missing data in: Cyprus, France, Luxembourg,
+  and Slovenia
+
 The Hub validates and evaluates hospitalisation forecasts against data
 collated by [Our World in
 Data](https://ourworldindata.org/covid-hospitalizations), provided in
@@ -79,10 +82,11 @@ indicating data expecting to be substanially revised.
   Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia,
   Spain, Sweden
 
-- **Data warning!** Recent missing data for cases in: Denmark
+- **Data warning!** Recent missing data for cases in: Denmark, Germany,
+  and Portugal
 
-- **Data warning!** Recent missing data for deaths in: Denmark, Iceland,
-  Luxembourg, Netherlands, and Norway
+- **Data warning!** Recent missing data for deaths in: Denmark, Germany,
+  Hungary, Iceland, Luxembourg, Netherlands, Norway, and Portugal
 
 We further evaluate forecasts of cases and deaths against data provided
 [ECDC](https://www.ecdc.europa.eu/), which we recommend using as the
