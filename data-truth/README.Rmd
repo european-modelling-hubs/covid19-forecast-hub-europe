@@ -36,7 +36,7 @@ hosp_locations <- sort(unique(hosp_data$location_name))
 - `r hosp_locations`
 
 ```{r hosp-data-warnings}
-if (nrow(hosp_data > 0)) {
+if (nrow(hosp_data) > 0) {
   gaps <- hosp_data |>
     dplyr::group_by(location_name) |>
     dplyr::slice_max(snapshot_date, n = 1) |>
@@ -147,7 +147,7 @@ for (indicator in indicators) {
       dplyr::arrange(date) |>
       dplyr::group_by(location_name) |>
       dplyr::slice(
-        index = ifelse(all(is.na(value)), 1L, max(which(!is.na(value))))
+        ifelse(all(is.na(value)), 1L, max(which(!is.na(value))))
       ) |>
       dplyr::ungroup() |>
       dplyr::mutate(date_diff = max(date) - date) |>
