@@ -114,14 +114,14 @@ for (source in names(sources)) {
       dplyr::select(-status)
     for (variable in sources[[source]]) {
       if ("target_variable" %in% colnames(weekly_df)) {
-        weekly_df <- weekly_df |>
+        write_weekly_df <- weekly_df |>
           dplyr::filter(
             target_variable ==
               paste("inc", substr(tolower(variable), 1, nchar(variable) - 1))
           )
       }
       readr::write_csv(
-        weekly_df,
+        write_weekly_df,
         file.path(
           truth_dir,
           paste0(
