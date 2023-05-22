@@ -13,7 +13,7 @@ Usage:
 
 Options:
     -h, --help                   Show this screen
-    -s --histories <histories>   Weeks of history to produce, separated by commas (default: 10,Inf)
+    -s --histories <histories>   Weeks of history to produce, separated by commas (default: 10,52)
     -w --restrict-weeks <weeks>  Number of recent weeks of submission to require (default: 4)
     -r --re-run                  If given, will re-run all dates instead of just the latest
 
@@ -29,7 +29,7 @@ if (interactive()) {
 }
 
 ## default options
-histories_str <- ifelse(is.null(opts$histories), "10,Inf", opts$histories)
+histories_str <- ifelse(is.null(opts$histories), "10,52", opts$histories)
 histories <- as.numeric(unlist(strsplit(histories_str, split = ",")))
 restrict_weeks <-
   ifelse(is.null(opts$restrict_weeks), 4L, as.integer(opts$restrict_weeks))
