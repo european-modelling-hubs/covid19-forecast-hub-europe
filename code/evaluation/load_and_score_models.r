@@ -36,7 +36,7 @@ load_and_score_models <- function(subdir = "", limit = NULL) {
 
   if (!is.null(limit)) {
     raw_truth <- raw_truth |>
-      filter(target_end_date > today() - limit)
+      filter(target_end_date > today() - weeks(limit))
   }
 
   ## get anomalies
