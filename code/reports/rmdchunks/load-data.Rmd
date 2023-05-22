@@ -55,20 +55,6 @@ raw_forecasts <- arrow::open_dataset(
     )
   )
 
-## load truth data -------------------------------------------------------------
-raw_truth <- covidHubUtils::load_truth(
-  temporal_resolution = "weekly",
-  truth_end_date = report_date,
-  hub = "ECDC"
-)
-
-raw_truth <- raw_truth |>
-  EuroForecastHub::add_status()
-
-truth <- raw_truth %>%
-  dplyr::select(-model) |>
-  dplyr::rename(true_value = value)
-
 # get anomalies
 anomalies <- readr::read_csv(
   paste0(hub_repo, "/raw/main/data-truth/anomalies/anomalies.csv"),
@@ -107,11 +93,24 @@ horizon_0 <- forecasts |>
     connector = TRUE
   )
 
-data <- full_join(horizon_0, forecasts) |> 
+## load truth data -------------------------------------------------------------
+raw_truth <- covidHubUtils::load_truth(
+  temporal_resolution = "weekly",
+  truth_end_date = report_date,
+  hub = "ECDC"
+)
+
+truth <- raw_truth %>%
+  EuroForecastHub::add_status() |>
+  dplyr::select(-model) |>
+  tidyr::expand_grid(model = unique(forecasts$model)) |>
+  dplyr::rename(true_value = value)
+
+data <- full_join(horizon_0, forecasts) |>
   scoringutils::merge_pred_and_obs(
     truth, join = "full",
     by = c("location", "target_end_date", "target_variable", "location_name",
-           "population")) |>
+           "population", "model")) |>
   mutate(prediction = ifelse(connector & is.na(prediction), true_value, prediction)) |>
   select(-connector)
 ```
