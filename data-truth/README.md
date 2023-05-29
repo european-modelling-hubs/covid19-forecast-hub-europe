@@ -5,12 +5,10 @@ European data status
 
 ### Hospitalisations
 
-- Belgium, Cyprus, Czechia, Denmark, Estonia, France, Germany, Greece,
-  Hungary, Iceland, Ireland, Italy, Latvia, Luxembourg, Malta,
-  Netherlands, Slovakia, Slovenia, Spain
+- Belgium, Czechia, Denmark, Estonia, Germany, Greece, Hungary, Iceland,
+  Ireland, Italy, Latvia, Malta, Netherlands, Slovakia, Spain
 
-- **Data warning!** Recent missing data in: Cyprus, France, Luxembourg,
-  and Slovenia
+- **Data warning!** Recent missing data in: Iceland
 
 The Hub validates and evaluates hospitalisation forecasts against data
 collated by [Our World in
@@ -66,11 +64,6 @@ cannot take into account the truncation of the data.
 The latest hospitalisation data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
 
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-
 ![Plot of hospitalisations](plots/Hospitalisations.svg)
 
 ### Cases and deaths
@@ -87,12 +80,11 @@ indicating data expecting to be substanially revised.
   Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia,
   Spain, Sweden
 
-- **Data warning!** Recent missing data for cases in: Croatia, Denmark,
-  Liechtenstein, Luxembourg, and Slovakia
+- **Data warning!** Recent missing data for cases in: Belgium, Cyprus,
+  Denmark, and Netherlands
 
-- **Data warning!** Recent missing data for deaths in: Croatia, Denmark,
-  Hungary, Iceland, Liechtenstein, Luxembourg, Netherlands, Norway, and
-  Slovakia
+- **Data warning!** Recent missing data for deaths in: Belgium, Cyprus,
+  Denmark, Iceland, Luxembourg, Netherlands, and Norway
 
 We further evaluate forecasts of cases and deaths against data provided
 [ECDC](https://www.ecdc.europa.eu/), which we recommend using as the

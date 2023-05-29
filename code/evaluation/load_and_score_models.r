@@ -6,15 +6,22 @@ suppressMessages(library(scoringutils))
 suppressMessages(library(covidHubUtils))
 suppressMessages(library(EuroForecastHub))
 
-load_and_score_models <- function(subdir = "") {
+load_and_score_models <- function(subdir = "", limit = NULL) {
 
   data_types <- get_hub_config("target_variables")
+
+  if (is.null(limit)) {
+    dates <- NULL
+  } else {
+    dates <- seq(today() - weeks(limit), today(), by = "day")
+  }
 
   ## load forecasts --------------------------------------------------------------
   forecasts <- load_forecasts(
     source = "local_hub_repo",
     hub_repo_path = here(subdir),
-    hub = "ECDC"
+    hub = "ECDC",
+    dates = dates
   ) %>%
     ## set forecast date to corresponding submission date
     mutate(forecast_date = ceiling_date(forecast_date, "week", week_start = 2) - 1) %>%
@@ -26,6 +33,11 @@ load_and_score_models <- function(subdir = "") {
   raw_truth <- raw_truth %>%
     EuroForecastHub::add_status() %>%
     filter(status == "final")
+
+  if (!is.null(limit)) {
+    raw_truth <- raw_truth |>
+      filter(target_end_date > today() - weeks(limit))
+  }
 
   ## get anomalies
   anomalies <- read_csv(here("data-truth", "anomalies", "anomalies.csv"))
