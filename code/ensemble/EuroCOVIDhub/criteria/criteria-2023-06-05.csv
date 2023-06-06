@@ -141,6 +141,7 @@ SGroup-RandomForest,inc death,RO,TRUE,TRUE,TRUE,TRUE,TRUE
 SGroup-RandomForest,inc death,SE,TRUE,TRUE,TRUE,TRUE,TRUE
 SGroup-RandomForest,inc death,SI,TRUE,TRUE,TRUE,TRUE,TRUE
 SGroup-RandomForest,inc death,SK,TRUE,TRUE,TRUE,TRUE,TRUE
+UC3M-EpiGraph,inc case,ES,TRUE,FALSE,TRUE,TRUE,FALSE
 UpgUmibUsi-MultiBayes,inc case,IT,TRUE,FALSE,TRUE,TRUE,FALSE
 UpgUmibUsi-MultiBayes,inc death,IT,TRUE,FALSE,TRUE,TRUE,FALSE
 epiforecasts-EpiNow2,inc case,AT,TRUE,TRUE,TRUE,TRUE,TRUE
