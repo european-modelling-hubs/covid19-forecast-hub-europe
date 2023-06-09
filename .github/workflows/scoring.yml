@@ -25,7 +25,7 @@ jobs:
     - uses: r-lib/actions/setup-renv@v2
 
     - name: Create score csv
-      run: Rscript 'code/evaluation/score_models.r'
+      run: Rscript 'code/evaluation/score_models.r' -l 52
 
     - name: Create summary csv
       run: Rscript 'code/evaluation/aggregate_scores.r'
