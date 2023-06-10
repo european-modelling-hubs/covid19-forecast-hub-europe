@@ -1,0 +1,12 @@
+{
+    "schema_version": "https://raw.githubusercontent.com/Infectious-Disease-Modeling-Hubs/schemas/main/v1.0.0/admin-schema.json",
+    "name": "European COVID-19 Forecast Hub",
+    "maintainer": "European COVID-19 Forecast Hub",
+    "contact": {
+        "name": "Kath Sherratt",
+        "email": "katharine.sherratt@lshtm.ac.uk"
+    },
+    "repository_url": "https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe",
+    "file_format": ["csv"],
+    "timezone": "London"
+}

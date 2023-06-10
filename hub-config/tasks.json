@@ -1,0 +1,119 @@
+{
+    "schema_version": "https://raw.githubusercontent.com/Infectious-Disease-Modeling-Hubs/schemas/main/v1.0.0/tasks-schema.json",
+    "rounds": [{
+            "round_id_from_variable": true,
+            "round_id": "forecast_date",
+            "model_tasks": [{
+                "task_ids": {
+                    "forecast_date": {
+                        "required": null,
+                        "optional": [
+                                "2022-01-16",
+                                "???"
+                                ]
+                    },
+                    "target": {
+                        "required": null,
+                        "optional": [
+                                  "1 wk ahead inc case"
+                                ]
+                    },
+                    "location": {
+                        "required": null,
+                        "optional": [
+                                "BE",
+                                "BG",
+                                "CZ",
+                                "DK",
+                                "DE",
+                                "EE",
+                                "IE",
+                                "GR",
+                                "ES",
+                                "FR",
+                                "HR",
+                                "IT",
+                                "CY",
+                                "LV",
+                                "LT",
+                                "LU",
+                                "HU",
+                                "MT",
+                                "NL",
+                                "AT",
+                                "PL",
+                                "PT",
+                                "RO",
+                                "SI",
+                                "SK",
+                                "FI",
+                                "SE",
+                                "GB",
+                                "IS",
+                                "LI",
+                                "NO",
+                                "CH"
+                        ]
+                    }
+                },
+                "output_type": {
+                    "quantile": {
+                        "type_id": {
+                            "required": null,
+                            "optional": [
+                                0.010,
+                                0.025,
+                                0.050,
+                                0.100,
+                                0.150,
+                                0.200,
+                                0.250,
+                                0.300,
+                                0.350,
+                                0.400,
+                                0.450,
+                                0.500,
+                                0.550,
+                                0.600,
+                                0.650,
+                                0.700,
+                                0.750,
+                                0.800,
+                                0.850,
+                                0.900,
+                                0.950,
+                                0.975,
+                                0.990
+                            ]
+                        },
+                        "value": {
+                            "type": "integer",
+                            "minimum": 0
+                        }
+                    },
+                    "target_metadata": [
+                        {
+                            "target_id": "inc case",
+                            "target_name": "weekly incident cases",
+                            "target_units": "count",
+                            "target_keys": {
+                                "target": [
+                                  "4 wk ahead inc case"
+                                ]
+                            },
+                            "description": "case target",
+                            "is_step_ahead": true,
+                            "time_unit": "week"
+                        }
+                    ]
+                }
+            }],
+            "submissions_due": {
+                "relative_to": "forecast_date",
+                "start": -6,
+                "end": 6
+            }
+        }
+
+    ]
+}
