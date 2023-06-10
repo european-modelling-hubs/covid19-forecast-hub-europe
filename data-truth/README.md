@@ -83,12 +83,12 @@ indicating data expecting to be substanially revised.
   Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia,
   Spain, Sweden
 
-- **Data warning!** Recent missing data for cases in: Croatia, Cyprus,
-  Ireland, Latvia, and Spain
+- **Data warning!** Recent missing data for cases in: Croatia, Denmark,
+  Estonia, Latvia, Luxembourg, and Slovakia
 
-- **Data warning!** Recent missing data for deaths in: Belgium, Croatia,
-  Cyprus, Hungary, Iceland, Ireland, Latvia, Luxembourg, Netherlands,
-  Norway, and Spain
+- **Data warning!** Recent missing data for deaths in: Croatia, Denmark,
+  Estonia, Hungary, Iceland, Latvia, Luxembourg, Netherlands, Norway,
+  and Slovakia
 
 We further evaluate forecasts of cases and deaths against data provided
 [ECDC](https://www.ecdc.europa.eu/), which we recommend using as the
