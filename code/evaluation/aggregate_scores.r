@@ -73,6 +73,13 @@ for (chr_report_date in as.character(report_dates)) {
     }
     message(paste0(str, "."))
 
+    ## only retain combinations of target_Variable, horizon, location and
+    ## forecast_date that have the baseline model
+    use_scores <- use_scores |>
+      group_by(target_variable, horizon, location, forecast_date) |>
+      filter(get_hub_config("baseline")[["name"]] %in% model) |>
+      ungroup()
+
     tables[[as.character(history)]] <- summarise_scores(
       scores = use_scores,
       report_date = report_date,
