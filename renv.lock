@@ -114,11 +114,11 @@
       "RemoteUsername": "covid19-forecast-hub-europe",
       "RemoteRepo": "EuroForecastHub",
       "RemoteRef": "main",
-      "RemoteSha": "577f349e91e9bd060d6771baecd16e4c54e9d2ed",
+      "RemoteSha": "404046706b0799a002969644e6e691b564f92fd1",
       "RemoteHost": "api.github.com",
       "Remotes": "reichlab/covidHubUtils, anthonynorth/roxyglobals",
-      "Remotes": "reichlab/covidHubUtils, anthonynorth/roxyglobals",
       "Requirements": [
+        "R",
         "cNORM",
         "covidHubUtils",
         "dplyr",
@@ -133,7 +133,7 @@
         "vroom",
         "yaml"
       ],
-      "Hash": "00d0b03fdd27f69a69439f4edf2c37a0"
+      "Hash": "f2e1e48dd60747fe6392325c7bb615b2"
     },
     "HDInterval": {
       "Package": "HDInterval",
