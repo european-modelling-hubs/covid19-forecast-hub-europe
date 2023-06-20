@@ -12,12 +12,14 @@ library("dplyr")
 library("tidyr")
 library("ggplot2")
 library("scales")
+library("lubridate")
 ```
 
 ```{r load_data, include = FALSE}
 scores <- read_csv(
   here::here("evaluation", "scores.csv"), show_col_types = FALSE
-)
+) |>
+  filter(forecast_date > today() - years(2))
 
 ensemble_scores <- scores |>
   filter(model == "EuroCOVIDhub-ensemble")
@@ -61,9 +63,12 @@ evaluation <- bind_rows(evaluation, .id = "evaluation_date") |>
   mutate(evaluation_date = as.Date(evaluation_date))
 
 ensemble_evaluation <- evaluation |>
-  filter(model == "EuroCOVIDhub-ensemble",
-         location != "Overall",
-         weeks_included == 10) |> ## 10 weeks of history
+  filter(
+    model == "EuroCOVIDhub-ensemble",
+    location != "Overall",
+    weeks_included == 10, ## 10 weeks of history
+    evaluation_date > today() - years(2)
+  ) |>
   pivot_longer(starts_with("rel_")) |>
   group_by(evaluation_date, horizon, target_variable, name) |>
   summarise(
