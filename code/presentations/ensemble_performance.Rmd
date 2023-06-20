@@ -1,0 +1,183 @@
+---
+title: Ensemble performance
+author: Sebastian Funk & Kath Sherratt
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: ioslides_presentation
+---
+
+```{r setup, include = FALSE}
+library("readr")
+library("here")
+library("dplyr")
+library("tidyr")
+library("ggplot2")
+library("scales")
+library("lubridate")
+```
+
+```{r load_data, include = FALSE}
+scores <- read_csv(
+  here::here("evaluation", "scores.csv"), show_col_types = FALSE
+) |>
+  filter(forecast_date > today() - years(2))
+
+ensemble_scores <- scores |>
+  filter(model == "EuroCOVIDhub-ensemble")
+n_models <- scores |>
+  group_by(forecast_date) |>
+  summarise(models = n_distinct(model))
+cov <- ensemble_scores |>
+  group_by(forecast_date, target_variable, horizon) |>
+  summarise(cov_50 = mean(cov_50),
+            cov_95 = mean(cov_95), .groups = "drop")
+cov_overall <- ensemble_scores |>
+  group_by(target_variable, horizon) |>
+  summarise(cov_50 = mean(cov_50),
+            cov_95 = mean(cov_95), .groups = "drop")
+
+evaluation_files <- list.files(
+  here::here("evaluation", "weekly-summary"),
+  full.names = TRUE
+)
+evaluation_dates <- sub(
+  "^.*(202[0-9]-[0-9]{2}-[0-9]{2}).csv$", "\\1", evaluation_files
+)
+evaluation <- lapply(evaluation_files, read_csv, show_col_types = FALSE)
+## convert weeks_included column to character in all
+evaluation <- lapply(evaluation, function(x) {
+  x$weeks_included <- as.character(x$weeks_included)
+  return(x)
+})
+
+names(evaluation) <- evaluation_dates
+## remove empty data frames
+evaluation <- lapply(evaluation, function(x) {
+  if (nrow(x) == 0) {
+    return(NULL)
+  } else {
+    return(x)
+  }
+})
+
+evaluation <- bind_rows(evaluation, .id = "evaluation_date") |>
+  mutate(evaluation_date = as.Date(evaluation_date))
+
+ensemble_evaluation <- evaluation |>
+  filter(
+    model == "EuroCOVIDhub-ensemble",
+    location != "Overall",
+    weeks_included == 10, ## 10 weeks of history
+    evaluation_date > today() - years(2)
+  ) |>
+  pivot_longer(starts_with("rel_")) |>
+  group_by(evaluation_date, horizon, target_variable, name) |>
+  summarise(
+    central = median(value, na.rm = TRUE),
+    lower = quantile(value, 0.05, na.rm = TRUE),
+    upper = quantile(value, 0.95, na.rm = TRUE),
+    n = n(), 
+    .groups = "drop"
+  )
+
+criteria_files <- list.files(
+  here::here("code", "ensemble", "EuroCOVIDhub", "criteria"),
+  full.names = TRUE
+)
+criteria_dates <- sub(
+  "^.*(202[0-9]-[0-9]{2}-[0-9]{2}).csv$", "\\1", criteria_files
+)
+criteria <- lapply(criteria_files, read_csv, show_col_types = FALSE)
+names(criteria) <- criteria_dates
+criteria <- bind_rows(criteria, .id = "ensemble_date") |>
+  mutate(ensemble_date = as.Date(ensemble_date))
+```
+
+## 50% Coverage
+```{r coverage_50, echo = FALSE}
+ggplot(cov, aes(x = forecast_date, y = cov_50)) +
+  geom_line() +
+  facet_grid(target_variable ~ horizon) +
+  theme_bw() +
+  geom_hline(yintercept = 0.5, linetype = "dashed") +
+  geom_hline(
+    data = cov_overall, aes(yintercept = cov_50), linetype = "dotted"
+  ) +
+  ylab("50% coverage") +
+  scale_x_date(
+    "Forecast date",
+    labels = scales::label_date_short()
+  ) +
+  expand_limits(y = c(0, 1))
+```
+
+## 95% Coverage
+```{r coverage_95, echo = FALSE}
+ggplot(cov, aes(x = forecast_date, y = cov_95)) +
+  geom_line() +
+  facet_grid(target_variable ~ horizon) +
+  theme_bw() +
+  geom_hline(yintercept = 0.95, linetype = "dashed") +
+  geom_hline(data = cov_overall, aes(yintercept = cov_95), linetype = "dotted") +
+  ylab("95% coverage") +
+  scale_x_date(
+    "Forecast date",
+    labels = scales::label_date_short()
+  ) +
+  expand_limits(y = c(0, 1))
+
+```
+
+## Relative WIS (10 weeks)
+```{r wis, echo = FALSE}
+ensemble_wis <- ensemble_evaluation |>
+  filter(name == "rel_wis")
+ggplot(ensemble_wis, aes(x = evaluation_date, y = central, ymin = lower, ymax = upper)) +
+  geom_line() +
+  geom_ribbon(alpha = 0.25) +
+  facet_grid(target_variable ~ horizon) +
+  theme_bw() +
+  scale_x_date(
+    "Evaluation date",
+    labels = scales::label_date_short()
+  ) +
+  ylab("Relative WIS") +
+  geom_hline(yintercept = 1, linetype = "dashed") +
+  coord_cartesian(ylim = c(NA_real_, 2))
+```
+
+## Relative AE (10 weeks)
+```{r ae, echo = FALSE}
+ensemble_ae <- ensemble_evaluation |>
+  filter(name == "rel_ae")
+ggplot(ensemble_ae, aes(x = evaluation_date, y = central, ymin = lower, ymax = upper)) +
+  geom_line() +
+  geom_ribbon(alpha = 0.25) +
+  facet_grid(target_variable ~ horizon) +
+  theme_bw() +
+  scale_x_date(
+    "Evaluation date",
+    labels = scales::label_date_short()
+  ) +
+  ylab("Relative WIS") +
+  geom_hline(yintercept = 1, linetype = "dashed") +
+  coord_cartesian(ylim = c(NA_real_, 2))
+```
+
+## Number of models in ensemble
+
+```{r nmodels, echo = FALSE}
+nmodels <- criteria |>
+  group_by(ensemble_date, location, target_variable) |>
+  count() |> group_by(ensemble_date, target_variable) |>
+  summarise(avg = mean(n), .groups = "drop")
+
+ggplot(nmodels, aes(x = ensemble_date, y = avg)) +
+  geom_line() +
+  facet_grid( ~ target_variable) +
+  theme_bw() +
+  scale_x_date(
+    "Ensemble date",
+    labels = scales::label_date_short()
+  ) +
+  ylab("Average number of models")
+```
