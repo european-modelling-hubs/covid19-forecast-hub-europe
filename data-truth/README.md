@@ -80,12 +80,14 @@ indicating data expecting to be substanially revised.
   Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia,
   Spain, Sweden
 
-- **Data warning!** Recent missing data for cases in: Austria, Denmark,
-  Estonia, Finland, France, Luxembourg, and Sweden
+- **Data warning!** Recent missing data for cases in: Austria, Belgium,
+  Croatia, Cyprus, Denmark, Estonia, Finland, France, Germany, Latvia,
+  Slovakia, Spain, and Sweden
 
 - **Data warning!** Recent missing data for deaths in: Austria, Belgium,
-  Denmark, Estonia, Finland, France, Hungary, Iceland, Luxembourg,
-  Netherlands, Norway, and Sweden
+  Croatia, Cyprus, Denmark, Estonia, Finland, France, Germany, Hungary,
+  Iceland, Latvia, Luxembourg, Netherlands, Norway, Slovakia, Spain, and
+  Sweden
 
 We further evaluate forecasts of cases and deaths against data provided
 [ECDC](https://www.ecdc.europa.eu/), which we recommend using as the
@@ -140,9 +142,6 @@ account the truncation of the data.
 
 The latest case/death data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
-
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
 
 ![Plot of cases](plots/Cases.svg) ![Plot of deaths](plots/Deaths.svg)
 
