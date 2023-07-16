@@ -5,10 +5,10 @@ European data status
 
 ### Hospitalisations
 
-- Belgium, Czechia, Denmark, Estonia, Germany, Greece, Hungary, Ireland,
-  Italy, Latvia, Malta, Netherlands, Slovakia, Spain
+- Belgium, Czechia, Denmark, Estonia, Germany, Greece, Ireland, Italy,
+  Latvia, Malta, Netherlands, Slovakia, Spain
 
-- **Data warning!** Recent missing data in: Hungary
+- **Data warning!** Recent missing data in: Denmark and Spain
 
 The Hub validates and evaluates hospitalisation forecasts against data
 collated by [Our World in
