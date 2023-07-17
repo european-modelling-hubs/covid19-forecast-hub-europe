@@ -1,5 +1,5 @@
 ---
-title: Ensemble performance
+title: Evaluation
 author: Sebastian Funk & Kath Sherratt
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: github_document
@@ -99,6 +99,7 @@ The files `scores.csv` contains "raw" scores for each data/forecast point based 
 The `weekly-summary` folder contains weekly evaluations that enter the [weekly performance reports](https://covid19forecasthub.eu/reports.html).
 
 # Ensemble performance
+
 ## Number of models in ensemble
 
 The number of models used in the ensemble (average across all available locations).
@@ -163,7 +164,7 @@ ggplot(cov, aes(x = forecast_date, y = cov_95)) +
 
 Performance is relative to a baseline (a flat constant projection with expanding uncertainty over time). Performance is shown over the preceding 10 weeks.
 
-## Relative WIS (10 weeks)
+### Relative WIS (10 weeks)
 
 ```{r wis, echo = FALSE}
 ensemble_wis <- ensemble_evaluation |>
@@ -182,7 +183,7 @@ ggplot(ensemble_wis, aes(x = evaluation_date, y = central, ymin = lower, ymax = 
   coord_cartesian(ylim = c(NA_real_, 2))
 ```
 
-## Relative AE (10 weeks)
+### Relative AE (10 weeks)
 
 ```{r ae, echo = FALSE}
 ensemble_ae <- ensemble_evaluation |>
