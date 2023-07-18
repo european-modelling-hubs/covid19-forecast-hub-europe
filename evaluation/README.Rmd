@@ -1,8 +1,8 @@
 ---
-title: Ensemble performance
+title: Evaluation
 author: Sebastian Funk & Kath Sherratt
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: ioslides_presentation
+output: github_document
 ---
 
 ```{r setup, include = FALSE}
@@ -92,7 +92,41 @@ criteria <- bind_rows(criteria, .id = "ensemble_date") |>
   mutate(ensemble_date = as.Date(ensemble_date))
 ```
 
-## 50% Coverage
+# Data files of forecast scores
+
+The files `scores.csv` contains "raw" scores for each data/forecast point based on the predictive quantiles and where the data ended up relative to them. For each combination of date, target variable and location we report the [Weighted Interval Score](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008618) (`wis`) as well as its components of `sharpness`, `underprediction` and `overprediction`, the absolute error of the median (`aem`), [Bias](https://doi.org/10.1371/journal.pcbi.1006785) (`bias`), coverage at the 50 and 95% levels (`cov_50`/`cov_95`), and the number of quantiles supplied (`n_quantiles`).
+
+The `weekly-summary` folder contains weekly evaluations that enter the [weekly performance reports](https://covid19forecasthub.eu/reports.html).
+
+# Ensemble performance
+
+## Number of models in ensemble
+
+The number of models used in the ensemble (average across all available locations).
+
+```{r nmodels, echo = FALSE}
+nmodels <- criteria |>
+  group_by(ensemble_date, location, target_variable) |>
+  count() |> group_by(ensemble_date, target_variable) |>
+  summarise(avg = mean(n), .groups = "drop")
+
+ggplot(nmodels, aes(x = ensemble_date, y = avg)) +
+  geom_line() +
+  facet_grid( ~ target_variable) +
+  theme_bw() +
+  scale_x_date(
+    "Ensemble date",
+    labels = scales::label_date_short()
+  ) +
+  ylab("Average number of models")
+```
+
+
+## Coverage
+
+Ensemble coverage at 50% and 95% (dashed reference line), showing coverage at each one to four week horizon over time (black line) and average coverage across the four horizons (dotted reference line).
+
+### 50% Coverage
 ```{r coverage_50, echo = FALSE}
 ggplot(cov, aes(x = forecast_date, y = cov_50)) +
   geom_line() +
@@ -110,7 +144,7 @@ ggplot(cov, aes(x = forecast_date, y = cov_50)) +
   expand_limits(y = c(0, 1))
 ```
 
-## 95% Coverage
+### 95% Coverage
 ```{r coverage_95, echo = FALSE}
 ggplot(cov, aes(x = forecast_date, y = cov_95)) +
   geom_line() +
@@ -124,10 +158,14 @@ ggplot(cov, aes(x = forecast_date, y = cov_95)) +
     labels = scales::label_date_short()
   ) +
   expand_limits(y = c(0, 1))
-
 ```
 
-## Relative WIS (10 weeks)
+## Relative performance
+
+Performance is relative to a baseline (a flat constant projection with expanding uncertainty over time). Performance is shown over the preceding 10 weeks.
+
+### Relative WIS (10 weeks)
+
 ```{r wis, echo = FALSE}
 ensemble_wis <- ensemble_evaluation |>
   filter(name == "rel_wis")
@@ -145,7 +183,8 @@ ggplot(ensemble_wis, aes(x = evaluation_date, y = central, ymin = lower, ymax = 
   coord_cartesian(ylim = c(NA_real_, 2))
 ```
 
-## Relative AE (10 weeks)
+### Relative AE (10 weeks)
+
 ```{r ae, echo = FALSE}
 ensemble_ae <- ensemble_evaluation |>
   filter(name == "rel_ae")
@@ -161,23 +200,4 @@ ggplot(ensemble_ae, aes(x = evaluation_date, y = central, ymin = lower, ymax = u
   ylab("Relative WIS") +
   geom_hline(yintercept = 1, linetype = "dashed") +
   coord_cartesian(ylim = c(NA_real_, 2))
-```
-
-## Number of models in ensemble
-
-```{r nmodels, echo = FALSE}
-nmodels <- criteria |>
-  group_by(ensemble_date, location, target_variable) |>
-  count() |> group_by(ensemble_date, target_variable) |>
-  summarise(avg = mean(n), .groups = "drop")
-
-ggplot(nmodels, aes(x = ensemble_date, y = avg)) +
-  geom_line() +
-  facet_grid( ~ target_variable) +
-  theme_bw() +
-  scale_x_date(
-    "Ensemble date",
-    labels = scales::label_date_short()
-  ) +
-  ylab("Average number of models")
 ```

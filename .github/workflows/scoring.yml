@@ -30,16 +30,15 @@ jobs:
     - name: Create summary csv
       run: Rscript 'code/evaluation/aggregate_scores.r'
 
-    - name: Create evaluation presentation
-      run: Rscript -e 'rmarkdown::render("code/presentations/ensemble_performance.Rmd")'
+    - name: Update evaluation README
+      run: Rscript -e 'rmarkdown::render("evaluation/README.Rmd")'
 
     - name: Push evaluation csv
       run: |
         git config user.email "action@github.com"
         git config user.name "GitHub Action - evaluation csv"
         git add evaluation/*
-        git add code/presentations/*.html
-        git diff-index --quiet HEAD || git commit -m "Upload evaluation csv"
+        git diff-index --quiet HEAD || git commit -m "Upload evaluation"
         git pull --rebase origin main
         git push
         echo "pushed to github"
