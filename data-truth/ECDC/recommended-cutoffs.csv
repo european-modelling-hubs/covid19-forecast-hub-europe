@@ -1,8 +1,8 @@
 location_name,location,target_variable,source,cutoff_weeks
 Austria,AT,inc case,ECDC,1
 Austria,AT,inc death,ECDC,2
-Belgium,BE,inc case,ECDC,1
-Belgium,BE,inc death,ECDC,2
+Belgium,BE,inc case,ECDC,2
+Belgium,BE,inc death,ECDC,3
 Cyprus,CY,inc death,ECDC,1
 Cyprus,CY,inc case,ECDC,3
 Czechia,CZ,inc death,ECDC,1
@@ -10,8 +10,8 @@ Germany,DE,inc case,ECDC,1
 Germany,DE,inc death,ECDC,4
 Denmark,DK,inc case,ECDC,3
 Denmark,DK,inc death,ECDC,4
-Estonia,EE,inc case,ECDC,1
 Estonia,EE,inc death,ECDC,1
+Estonia,EE,inc case,ECDC,2
 Spain,ES,inc case,ECDC,2
 Spain,ES,inc death,ECDC,3
 Finland,FI,inc case,ECDC,1
@@ -31,10 +31,12 @@ Latvia,LV,inc case,ECDC,2
 Latvia,LV,inc death,ECDC,2
 Netherlands,NL,inc case,ECDC,2
 Norway,NO,inc case,ECDC,1
+Poland,PL,inc death,ECDC,2
 Portugal,PT,inc case,ECDC,1
 Portugal,PT,inc death,ECDC,1
 Sweden,SE,inc case,ECDC,1
 Sweden,SE,inc death,ECDC,3
+Slovenia,SI,inc case,ECDC,1
 Slovenia,SI,inc death,ECDC,2
 Slovakia,SK,inc case,ECDC,2
 Slovakia,SK,inc death,ECDC,3
