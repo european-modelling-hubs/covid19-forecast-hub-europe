@@ -2,7 +2,9 @@
 title: Evaluation
 author: Sebastian Funk & Kath Sherratt
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: github_document
+output:
+  github_document:
+    html_preview: false
 ---
 
 ```{r setup, include = FALSE}
