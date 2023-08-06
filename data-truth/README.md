@@ -5,11 +5,10 @@ European data status
 
 ### Hospitalisations
 
-- Belgium, Czechia, Denmark, Estonia, Germany, Greece, Ireland, Italy,
-  Latvia, Malta, Netherlands, Slovakia, Spain
+- Belgium, Czechia, Estonia, Germany, Greece, Ireland, Italy, Latvia,
+  Malta, Netherlands, Slovakia
 
-- **Data warning!** Recent missing data in: Belgium, Denmark, Germany,
-  and Spain
+- **Data warning!** Recent missing data in: Belgium and Germany
 
 The Hub validates and evaluates hospitalisation forecasts against data
 collated by [Our World in
@@ -64,11 +63,6 @@ cannot take into account the truncation of the data.
 
 The latest hospitalisation data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
-
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
 
 ![Plot of hospitalisations](plots/Hospitalisations.svg)
 
