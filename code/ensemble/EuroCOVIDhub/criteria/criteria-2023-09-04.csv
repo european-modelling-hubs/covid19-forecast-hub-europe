@@ -133,6 +133,7 @@ SGroup-RandomForest,inc death,RO,TRUE,TRUE,TRUE,TRUE,TRUE
 SGroup-RandomForest,inc death,SE,TRUE,TRUE,TRUE,TRUE,TRUE
 SGroup-RandomForest,inc death,SI,TRUE,TRUE,TRUE,TRUE,TRUE
 SGroup-RandomForest,inc death,SK,TRUE,TRUE,TRUE,TRUE,TRUE
+UC3M-EpiGraph,inc case,ES,TRUE,FALSE,TRUE,TRUE,FALSE
 epiforecasts-EpiNow2,inc case,BE,TRUE,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiNow2,inc case,BG,TRUE,TRUE,TRUE,TRUE,TRUE
 epiforecasts-EpiNow2,inc case,CY,TRUE,TRUE,TRUE,TRUE,TRUE
