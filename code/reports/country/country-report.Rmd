@@ -6,7 +6,7 @@ params:
   plot_weeks: 4
   report_models: "EuroCOVIDhub-ensemble"
   data_weeks: 10
-  config: "https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/project-config.json"
+  config: "https://raw.githubusercontent.com/european-modelling-hubs/covid19-forecast-hub-europe/main/project-config.json"
 output:
   html_document:
     theme: yeti

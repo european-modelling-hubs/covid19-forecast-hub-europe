@@ -2,7 +2,7 @@ $schema: "http://json-schema.org/draft-07/schema"
 title: ForecastHub model metadata
 description: >
   This is the schema of the metadata file, please refer to
-  https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Metadata for
+  https://github.com/european-modelling-hubs/covid19-forecast-hub-europe/wiki/Metadata for
   more info.
 type: object
 properties:

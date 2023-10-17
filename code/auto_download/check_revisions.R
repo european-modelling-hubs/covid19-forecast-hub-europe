@@ -19,7 +19,7 @@ target_variables <-
     Deaths = "inc death",
     Hospitalizations = "inc hosp")
 
-owner <- "covid19-forecast-hub-europe"
+owner <- "european-modelling-hubs"
 repo <- "covid19-forecast-hub-europe"
 path <- vapply(names(sources), function(x) {
   paste("data-truth", sources[[x]],

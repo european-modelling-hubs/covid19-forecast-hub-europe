@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
-        repository: 'epiforecasts/covid19-forecast-hub-europe-validations'
+        repository: 'european-modelling-hubs/covid19-forecast-hub-europe-validations'
 
     - name: Setup Python
       uses: actions/setup-python@v2

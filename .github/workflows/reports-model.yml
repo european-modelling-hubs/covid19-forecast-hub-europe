@@ -59,7 +59,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.FORECASTHUB_TOKEN }}
         run: |
-           gh workflow run build-and-deploy.yml -R covid19-forecast-hub-europe/covid19-forecast-hub-europe-website
+           gh workflow run build-and-deploy.yml -R european-modelling-hubs/covid19-forecast-hub-europe-website
 
       - name: Create issue about failure
         if: failure() && github.event_name != 'workflow_dispatch' && github.event_name != 'pull_request'
