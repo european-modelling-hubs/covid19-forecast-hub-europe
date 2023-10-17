@@ -1,0 +1,14 @@
+team_name: Lydia
+model_name: simpleARIMA
+model_abbr: Lydia-simpleARIMA
+model_contributors:
+  - name: Lydia Champezou
+    email: lhabezou@gmail.com
+website_url: https://github.com/LydiaChamp/simpleARIMA
+license: cc-by-4.0
+team_model_designation: primary
+methods: A simple ARIMA model with seasonality
+data_inputs: JHU
+methods_long: I use the auto.arima function from the forecast package in R to retrieve 
+  p (AutoRegression) and q (MovingAverage) orders by minimizing the AICc criterion and 
+  the d order using a unit root test. 
