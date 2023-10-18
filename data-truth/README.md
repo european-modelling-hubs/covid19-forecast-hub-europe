@@ -79,11 +79,11 @@ indicating data expecting to be substanially revised.
   Spain, Sweden
 
 - **Data warning!** Recent missing data for cases in: Austria, Cyprus,
-  Finland, France, Germany, Liechtenstein, Netherlands, and Spain
+  Denmark, Finland, France, Germany, Latvia, Liechtenstein, and Spain
 
 - **Data warning!** Recent missing data for deaths in: Austria, Belgium,
-  Cyprus, Finland, France, Germany, Hungary, Iceland, Liechtenstein,
-  Luxembourg, Netherlands, Norway, and Spain
+  Cyprus, Denmark, Finland, France, Germany, Hungary, Iceland, Latvia,
+  Liechtenstein, Luxembourg, Netherlands, Norway, and Spain
 
 We further evaluate forecasts of cases and deaths against data provided
 [ECDC](https://www.ecdc.europa.eu/), which we recommend using as the
