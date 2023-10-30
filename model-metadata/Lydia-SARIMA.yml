@@ -1,10 +1,10 @@
 team_name: Lydia
-model_name: simpleARIMA
-model_abbr: Lydia-simpleARIMA
+model_name: SARIMA
+model_abbr: Lydia-SARIMA
 model_contributors:
   - name: Lydia Champezou
     email: lhabezou@gmail.com
-website_url: https://github.com/LydiaChamp/simpleARIMA
+website_url: https://github.com/LydiaChamp/SARIMA
 license: cc-by-4.0
 team_model_designation: primary
 methods: A simple ARIMA model with seasonality
