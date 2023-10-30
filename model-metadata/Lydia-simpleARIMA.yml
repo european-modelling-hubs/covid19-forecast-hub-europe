@@ -6,7 +6,7 @@ model_contributors:
     email: lhabezou@gmail.com
 website_url: https://github.com/LydiaChamp/simpleARIMA
 license: cc-by-4.0
-team_model_designation: primary
+team_model_designation: secondary
 methods: A simple ARIMA model 
 data_inputs: JHU
 methods_long: I use the auto.arima function from the forecast package in R to retrieve 
