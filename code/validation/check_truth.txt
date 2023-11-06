@@ -5124,3 +5124,25 @@ Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-
 
 - The following locations are missing: ['Estonia', 'Greece', 'Hungary', 'Ireland', 'Italy', 'Latvia', 'Malta', 'Slovakia'].
 
+Latest check of truth data: 2023-11-06
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truncated_ECDC-Incident Cases.csv' at 2023-10-21:
+
+- The following locations are missing: ['Belgium', 'Croatia', 'Cyprus', 'Denmark', 'Finland', 'Hungary', 'Ireland', 'Italy', 'Lithuania', 'Luxembourg', 'Malta', 'Netherlands', 'Norway', 'Portugal', 'Slovakia', 'Slovenia'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truncated_ECDC-Incident Deaths.csv' at 2023-10-21:
+
+- The following locations are missing: ['Croatia', 'Denmark', 'Finland', 'Greece', 'Hungary', 'Ireland', 'Italy', 'Lithuania', 'Malta', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Sweden'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/OWID/truncated_OWID-Incident Hospitalizations.csv' at 2023-11-04:
+
+- The following locations are missing: ['Czechia', 'Estonia', 'Greece', 'Hungary', 'Ireland', 'Italy', 'Latvia', 'Malta', 'Slovakia'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/OWID/truth_OWID-Incident Hospitalizations.csv' at 2023-11-04:
+
+- The following locations are missing: ['Estonia', 'Greece', 'Hungary', 'Ireland', 'Italy', 'Latvia', 'Malta', 'Slovakia'].
+
