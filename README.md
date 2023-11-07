@@ -14,7 +14,7 @@ over the next four weeks in countries across Europe and the UK.
     [evaluation](https://covid19forecasthub.eu/reports) of current
     forecasts
   - Raw forecast files are in the
-    [data-processed](https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/data-processed)
+    [data-processed](https://github.com/european-modelling-hubs/covid19-forecast-hub-europe/tree/main/data-processed)
     folder
 
 ##### README contents

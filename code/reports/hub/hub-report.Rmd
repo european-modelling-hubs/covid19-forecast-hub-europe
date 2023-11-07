@@ -127,7 +127,7 @@ models |>
 ### Complete model information
 
 ```{r table-metadata}
-github_repo <- "epiforecasts/covid19-forecast-hub-europe"
+github_repo <- "european-modelling-hubs/covid19-forecast-hub-europe"
 team_df <-
   gh::gh(
     "/repos/{github_repo}/contents/{path}", 
