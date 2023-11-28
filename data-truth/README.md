@@ -8,7 +8,8 @@ European data status
 - Czechia, Estonia, Greece, Hungary, Ireland, Italy, Malta, Netherlands,
   Slovakia
 
-- **Data warning!** Recent missing data in: Hungary and Malta
+- **Data warning!** Recent missing data in: Estonia, Greece, Hungary,
+  Ireland, Malta, and Slovakia
 
 The Hub validates and evaluates hospitalisation forecasts against data
 collated by [Our World in
