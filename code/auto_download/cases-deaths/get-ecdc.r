@@ -5,13 +5,14 @@ library("purrr")
 library("tidyr")
 library("dplyr")
 library("vroom")
+library("tibble")
 library("ISOweek")
 
 get_ecdc <- function(earliest_date = lubridate::today() - 7,
                      latest_date = lubridate::today()) {
   ## set path to covid data
   owner <- "EU-ECDC"
-  repo <- "COVID-19_weekly-data"
+  repo <- "Respiratory_viruses_weekly_data"
   snapshots_path <- "data/snapshots"
   local_path <- here::here("data-truth/ECDC/snapshots")
   if (!dir.exists(local_path)) dir.create(local_path)
@@ -25,11 +26,11 @@ get_ecdc <- function(earliest_date = lubridate::today() - 7,
            repo = repo,
            path = snapshots_path,
            .limit = Inf)
-  file_names <- vapply(files, `[[`, "name", FUN.VALUE = "")
-
+  file_names <- vapply(files, `[[`, "name", FUN.VALUE = "") |>
+    grep(pattern = "nonSentinel", value = TRUE)
   existing_files <- list.files(
     here::here("data-truth", "ECDC", "snapshots"),
-    pattern = "COVID_19_weekly_cases_and_deaths"
+    pattern = "nonSentinel"
   )
 
   process_files <- setdiff(file_names, existing_files)
@@ -44,23 +45,23 @@ get_ecdc <- function(earliest_date = lubridate::today() - 7,
     )
     if (file_date > earliest_date && file_date <= latest_date)  {
       df <- vroom::vroom(paste0(
-        "https://raw.githubusercontent.com/EU-ECDC/COVID-19_weekly-data/",
-        "main/data/snapshots/", file
+        "https://raw.githubusercontent.com/EU-ECDC/",
+        "Respiratory_viruses_weekly_data/main/data/snapshots/", file
       ), show_col_types = FALSE) |>
-        tidyr::separate(year_week, c("year", "week"), sep = "-") |>
+        dplyr::filter(pathogen == "SARS-CoV-2", age == "total") |>
         dplyr::mutate(
-          target_variable = paste(
-            "inc", substr(indicator, 1, nchar(indicator) - 1)
+          target_variable = recode(indicator,
+            "deaths" = "inc death",
+            "detections" = "inc case",
           ),
-          date = ISOweek::ISOweek2date(paste0(year, "-W", week, "-6")),
+          date = ISOweek::ISOweek2date(paste0(yearweek, "-6")),
           source = "ECDC"
         ) |>
-        dplyr::inner_join(pop, by = c("location_name", "location")) |>
+        dplyr::rename(location_name = countryname) |>
+        dplyr::inner_join(pop, by = c("location_name")) |>
         dplyr::select(
           location_name, location, target_variable, date, value, source
         )
-      file_name <- paste0("covid-cases-deaths_", file_date, ".csv")
-      vroom::vroom_write(df, file.path(local_path, file_name), delim = ",")
       return(df)
     } else {
       return(NULL)
@@ -68,7 +69,21 @@ get_ecdc <- function(earliest_date = lubridate::today() - 7,
   }
 
   ## save snapshots
-  snapshots <- purrr::map(process_files, dl_snapshot)
+  snapshots <- tibble(
+    file_name = process_files,
+    data = purrr::map(process_files, dl_snapshot)
+  ) |>
+    dplyr::mutate(
+      file_date = as.Date(
+        sub("^.*([0-9]{4}-[0-9]{2}-[0-9]{2}).*$", "\\1", file_name)
+      ),
+      file = file.path(
+        local_path, paste0("covid-cases-deaths_", file_date, ".csv")
+      )
+    ) |>
+    dplyr::group_by(file) |>
+    dplyr::summarise(x = list(bind_rows(data)), .groups = "keep") |>
+    purrr::pmap(vroom::vroom_write, delim = ", ")
 
   return(snapshots)
 }
