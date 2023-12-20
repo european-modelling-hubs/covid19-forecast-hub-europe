@@ -27,7 +27,7 @@ hub_ensemble <- run_ensemble(
   method = method,
   forecast_date = forecast_date,
   exclude_models = exclude_models,
-  min_nmodels = 4,
+  min_nmodels = 3,
   return_criteria = TRUE
 )
 
