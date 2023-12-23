@@ -65,24 +65,20 @@ indicating data expecting to be substanially revised.
 
 ### Cases and deaths
 
-- Cases: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark,
-  Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland,
-  Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta,
-  Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia,
-  Spain, Sweden
+- Cases: Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark, Estonia,
+  Greece, Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein,
+  Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal,
+  Romania, Slovakia, Slovenia, Sweden
 
-- Deaths: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark,
-  Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland,
-  Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta,
-  Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia,
-  Spain, Sweden
+- Deaths: Bulgaria, Croatia, Cyprus, Czechia, Denmark, Estonia, Finland,
+  Greece, Hungary, Ireland, Italy, Latvia, Liechtenstein, Lithuania,
+  Malta, Poland, Portugal, Romania, Slovakia, Slovenia, Sweden
 
-- **Data warning!** Recent missing data for cases in: Austria, Croatia,
-  Cyprus, Finland, France, Germany, Latvia, and Spain
+- **Data warning!** Recent missing data for cases in: Croatia, Cyprus,
+  Denmark, Iceland, Latvia, and Lithuania
 
-- **Data warning!** Recent missing data for deaths in: Austria, Belgium,
-  Croatia, Cyprus, France, Germany, Hungary, Iceland, Latvia,
-  Luxembourg, Netherlands, Norway, and Spain
+- **Data warning!** Recent missing data for deaths in: Croatia, Cyprus,
+  Denmark, Latvia, and Lithuania
 
 We further evaluate forecasts of cases and deaths against data provided
 [ECDC](https://www.ecdc.europa.eu/), which we recommend using as the
@@ -137,29 +133,6 @@ account the truncation of the data.
 
 The latest case/death data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
-
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
 
 ![Plot of cases](plots/Cases.svg) ![Plot of deaths](plots/Deaths.svg)
 
