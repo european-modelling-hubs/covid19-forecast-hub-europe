@@ -1,0 +1,12 @@
+team_name: European Centre for Disease Prevention and Control
+model_name: Norrsken Piecewise Linear Bayesian Model
+model_abbr: ECDC-norrsken_green
+model_contributors:
+  - name: Rene Niehus
+    affiliation: European Centre for Disease Prevention and Control
+    email: rene.niehus@ecdc.europa.eu
+website_url: https://www.ecdc.europa.eu/en
+license: cc-by-4.0
+team_model_designation: primary
+methods: "A Bayesian piece-wise log-linear model fit."
+methods_long: "Model consists of 1) scaling of the data (convert to log-scale), 2) assigning data points into groups such that neighbouring data points belong to the same group, and simultaneously in Stan 3) fitting piece-wise intercept-slope models in each group, 4) regularizing the difference between neighbouring slopes to be close to 0, 5) generating a future slope based on the last slope plus fitted noise."
