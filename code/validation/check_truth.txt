@@ -6630,3 +6630,35 @@ Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-
 
 - The following locations are missing: ['Italy'].
 
+Latest check of truth data: 2024-01-04
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truncated_ECDC-Incident Deaths.csv' at 2023-12-16:
+
+- The following locations are missing: ['Austria', 'Belgium', 'Croatia', 'Cyprus', 'Czechia', 'Denmark', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Ireland', 'Italy', 'Latvia', 'Lithuania', 'Luxembourg', 'Malta', 'Netherlands', 'Norway', 'Slovakia', 'Slovenia', 'Spain', 'Sweden'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truncated_ECDC-Incident Cases.csv' at 2023-12-16:
+
+- The following locations are missing: ['Austria', 'Croatia', 'Cyprus', 'Denmark', 'Finland', 'France', 'Germany', 'Hungary', 'Iceland', 'Italy', 'Latvia', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Malta', 'Netherlands', 'Norway', 'Slovenia', 'Spain'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truth_ECDC-Incident Deaths.csv' at 2023-12-16:
+
+- The following locations are missing: ['Austria', 'Belgium', 'Croatia', 'Cyprus', 'Denmark', 'France', 'Germany', 'Iceland', 'Latvia', 'Lithuania', 'Luxembourg', 'Netherlands', 'Norway', 'Spain'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truth_ECDC-Incident Cases.csv' at 2023-12-16:
+
+- The following locations are missing: ['Austria', 'Croatia', 'Cyprus', 'Denmark', 'Finland', 'France', 'Germany', 'Iceland', 'Latvia', 'Lithuania', 'Spain'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/OWID/truncated_OWID-Incident Hospitalizations.csv' at 2023-12-23:
+
+- The following locations are missing: ['Czechia', 'Italy'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/OWID/truth_OWID-Incident Hospitalizations.csv' at 2023-12-23:
+
+- The following locations are missing: ['Italy'].
+
