@@ -1,7 +1,7 @@
 Evaluation
 ================
 Sebastian Funk & Kath Sherratt
-01 January, 2024
+08 January, 2024
 
 # Data files of forecast scores
 
