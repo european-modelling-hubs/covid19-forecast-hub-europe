@@ -4,7 +4,7 @@
 # European COVID-19 Forecast Hub
 
 We are aggregating forecasts of new cases and deaths due to Covid-19
-over the next four weeks in countries across Europe and the UK.
+over the next four weeks in countries across Europe.
 
 ##### Latest forecasts
 
