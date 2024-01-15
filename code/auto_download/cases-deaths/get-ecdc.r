@@ -43,7 +43,7 @@ get_ecdc <- function(earliest_date = lubridate::today() - 7,
     file_date <- as.Date(
       sub("^.*([0-9]{4}-[0-9]{2}-[0-9]{2}).*$", "\\1", file)
     )
-    if (file_date > earliest_date && file_date <= latest_date)  {
+    if (file_date >= earliest_date && file_date <= latest_date)  {
       df <- vroom::vroom(paste0(
         "https://raw.githubusercontent.com/EU-ECDC/",
         "Respiratory_viruses_weekly_data/main/data/snapshots/", file
@@ -82,7 +82,13 @@ get_ecdc <- function(earliest_date = lubridate::today() - 7,
       )
     ) |>
     dplyr::group_by(file) |>
-    dplyr::summarise(x = list(bind_rows(data)), .groups = "keep") |>
+    dplyr::summarise(
+      x = list(bind_rows(data)),
+      n = nrow(x[[1]]),
+      .groups = "keep"
+    ) |>
+    dplyr::filter(n > 0) |>
+    dplyr::select(-n) |>
     purrr::pmap(vroom::vroom_write, delim = ", ")
 
   return(snapshots)
