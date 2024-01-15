@@ -37,50 +37,6 @@ to submit](../../wiki/Preparing-to-submit) - Create a [team
 directory](../../wiki/Creating-a-team-directory) - Add your
 [metadata](../../wiki/Metadata) and a [license](../../wiki/Licensing)
 
-#### Forecasting
-
-We require some forecast parameters so that we can compare and ensemble
-forecasts. All forecasts should use the following structure:
-
-| Parameter | Description                           |
-| --------- | ------------------------------------- |
-| Target    | Cases, hospitalisations and/or deaths |
-| Count     | Incident                              |
-| Geography | EU/EFTA/UK nations (any/all)          |
-| Frequency | Weekly                                |
-| Horizon   | 1 to 4 weeks                          |
-
-There is no obligation to submit forecasts for all suggested targets or
-horizons, and it is up to you to decide which you are comfortable
-forecasting with your model.
-
-We have written more about forecast targets, horizons, and locations in
-the [guide](../../wiki/Targets-and-horizons).
-
-###### Dates
-
-We use Epidemiological Weeks (EW) defined by the [US
-CDC](https://wwwn.cdc.gov/nndss/document/MMWR_Week_overview.pdf). Each
-week starts on Sunday and ends on Saturday. We provide more details
-[here](../../wiki/Targets-and-horizons#date-format), and
-[templates](../../template) to convert dates to EW weeks (and vice
-versa).
-
-###### Truth data
-
-We base evaluations on country level data from [Johns Hopkins
-University](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series).
-
-#### Submitting
-
-Forecasts should be submitted on Monday by opening a pull request in
-this repository. So that we can evaluate and ensemble forecasts, we ask
-for a specific file structure and naming format: our wiki contains a
-detailed [guide](../../wiki/Forecast-format). If you have technical
-difficulties with submission, try
-[troubleshooting](../..wiki/Troubleshooting-pull-requests) or get in
-touch by raising an [issue](../issues).
-
 ###### Evaluating and ensembling
 
 After teams have submitted their forecasts, we create an ensemble
