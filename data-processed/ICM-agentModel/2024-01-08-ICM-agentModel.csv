@@ -191,4 +191,3 @@ forecast_date,target,target_end_date,location,type,quantile,value,scenario_id
 2024-01-08,4 wk ahead inc death,2024-02-03,PL,quantile,0.95,68,forecast
 2024-01-08,4 wk ahead inc death,2024-02-03,PL,quantile,0.975,73,forecast
 2024-01-08,4 wk ahead inc death,2024-02-03,PL,quantile,0.99,79,forecast
-       
