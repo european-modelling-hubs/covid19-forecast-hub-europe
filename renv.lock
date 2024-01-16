@@ -221,13 +221,6 @@
       ],
       "Hash": "8c7115cd3a0e048bda2a7cd110549f7a"
     },
-    "Metrics": {
-      "Package": "Metrics",
-      "Version": "0.1.4",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "1fdc9b3adfe2e2f8f77c22a59cf322ec"
-    },
     "R6": {
       "Package": "R6",
       "Version": "2.5.1",
@@ -525,18 +518,6 @@
         "tibble"
       ],
       "Hash": "f61dbaec772ccd2e17705c1e872e9e7c"
-    },
-    "checkmate": {
-      "Package": "checkmate",
-      "Version": "2.3.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "backports",
-        "utils"
-      ],
-      "Hash": "c01cab1cb0f9125211a6fc99d540e315"
     },
     "class": {
       "Package": "class",
@@ -1968,18 +1949,11 @@
     },
     "scoringutils": {
       "Package": "scoringutils",
-      "Version": "1.2.2.9000",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "epiforecasts",
-      "RemoteRepo": "scoringutils",
-      "RemoteRef": "main",
-      "RemoteSha": "c523ee14745a96184ce04974a6b3352552f2ede3",
+      "Version": "1.2.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
       "Requirements": [
-        "Metrics",
         "R",
-        "checkmate",
         "data.table",
         "ggdist",
         "ggplot2",
@@ -1989,7 +1963,7 @@
         "scoringRules",
         "stats"
       ],
-      "Hash": "50a805b43d1046bb265c28881dd4d1b7"
+      "Hash": "6192f6fd1c85fc9bccd070eb46f6adf0"
     },
     "selectr": {
       "Package": "selectr",
