@@ -108,29 +108,6 @@ for (source in names(sources)) {
       dplyr::select(-type) |>
       dplyr::distinct() |>
       dplyr::arrange(location_name, date, value)
-    weekly_df <- df |>
-      dplyr::mutate(status = "final") |>
-      EuroForecastHub::convert_to_weekly() |>
-      dplyr::select(-status)
-    for (variable in sources[[source]]) {
-      if ("target_variable" %in% colnames(weekly_df)) {
-        write_weekly_df <- weekly_df |>
-          dplyr::filter(
-            target_variable ==
-              paste("inc", substr(tolower(variable), 1, nchar(variable) - 1))
-          )
-      }
-      readr::write_csv(
-        write_weekly_df,
-        file.path(
-          truth_dir,
-          paste0(
-            "truth_", source, "-Incident ", variable, "-",
-            final_date + days(cutoff_days), ".csv"
-          )
-        )
-      )
-    }
     final <- df |>
       dplyr::filter(snapshot_date >= date + days(cutoff_days))
     readr::write_csv(final, file.path(
