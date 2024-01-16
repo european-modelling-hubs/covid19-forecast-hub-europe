@@ -31,7 +31,7 @@ for (source in names(sources)) {
       paste0(
         "covid-", file_pattern, "-final_", date - days(cutoff_days), ".csv"
       )
-      ), show_col_types = FALSE) |>
+    ), show_col_types = FALSE) |>
       dplyr::mutate(status = "final")
     snapshot <- readr::read_csv(file.path(
       snapshot_dir,
