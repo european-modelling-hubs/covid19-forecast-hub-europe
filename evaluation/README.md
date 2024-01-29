@@ -1,7 +1,7 @@
 Evaluation
 ================
 Sebastian Funk & Kath Sherratt
-22 January, 2024
+29 January, 2024
 
 # Data files of forecast scores
 
@@ -37,9 +37,13 @@ average coverage across the four horizons (dotted reference line).
 
 ### 50% Coverage
 
+    ## Warning: Removed 1 rows containing missing values (`geom_hline()`).
+
 ![](README_files/figure-gfm/coverage_50-1.png)<!-- -->
 
 ### 95% Coverage
+
+    ## Warning: Removed 1 rows containing missing values (`geom_hline()`).
 
 ![](README_files/figure-gfm/coverage_95-1.png)<!-- -->
 
