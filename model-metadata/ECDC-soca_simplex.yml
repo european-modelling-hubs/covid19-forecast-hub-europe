@@ -1,0 +1,12 @@
+team_name: European Centre for Disease Prevention and Control
+model_name: Historical simplex pattern
+model_abbr: ECDC-soca_simplex
+model_contributors:
+  - name: Rok Grah
+    affiliation: European Centre for Disease Prevention and Control
+    email: rok.grah@ecdc.europa.eu
+website_url: https://www.ecdc.europa.eu/en
+license: cc-by-4.0
+team_model_designation: secondary
+methods: "Using historical data patterns with highest similarity to current data to foreast the future values"
+methods_long: "Model consists of 1) taking 'm' latest data points, 2) find 'n' closest neighbours from all historical data using L2-norm, 3) use the next data time point from each historical data points, 4) use data from point 3 to fit a log-normal distribution , 5) use the log-normal distirbution to estimate the quantiles/distribution, 6) return to step 3 but use two data points ahead for estimations of horizon 2, etc for horizon 3 and 4, 7) find optimal values of 'n' and 'm for a given country, using past 4 weeks of forecasts."
