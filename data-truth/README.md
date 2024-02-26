@@ -7,6 +7,8 @@ European data status
 
 - Czechia, Italy, Netherlands
 
+- **Data warning!** Recent missing data in: Italy
+
 The Hub validates and evaluates hospitalisation forecasts against data
 collated by [Our World in
 Data](https://ourworldindata.org/covid-hospitalizations), provided in
@@ -75,10 +77,10 @@ indicating data expecting to be substanially revised.
   Poland, Portugal, Romania, Slovakia, Slovenia, Sweden
 
 - **Data warning!** Recent missing data for cases in: Croatia, Cyprus,
-  Denmark, Iceland, Liechtenstein, and Malta
+  and Denmark
 
 - **Data warning!** Recent missing data for deaths in: Croatia, Cyprus,
-  Denmark, Finland, Hungary, and Liechtenstein
+  Denmark, Finland, and Hungary
 
 We further evaluate forecasts of cases and deaths against data provided
 [ECDC](https://www.ecdc.europa.eu/), which we recommend using as the
@@ -133,6 +135,11 @@ account the truncation of the data.
 
 The latest case/death data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
+
+    ## `geom_line()`: Each group consists of only one observation.
+    ## ℹ Do you need to adjust the group aesthetic?
+    ## `geom_line()`: Each group consists of only one observation.
+    ## ℹ Do you need to adjust the group aesthetic?
 
 ![Plot of cases](plots/Cases.svg) ![Plot of deaths](plots/Deaths.svg)
 
