@@ -7,8 +7,6 @@ European data status
 
 - Czechia, Italy, Netherlands
 
-- **Data warning!** Recent missing data in: Italy
-
 The Hub validates and evaluates hospitalisation forecasts against data
 collated by [Our World in
 Data](https://ourworldindata.org/covid-hospitalizations), provided in
@@ -63,7 +61,10 @@ cannot take into account the truncation of the data.
 The latest hospitalisation data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
 
-![Plot of hospitalisations](plots/Hospitalisations.svg)
+<figure>
+<img src="plots/Hospitalisations.svg" alt="Plot of hospitalisations" />
+<figcaption aria-hidden="true">Plot of hospitalisations</figcaption>
+</figure>
 
 ### Cases and deaths
 

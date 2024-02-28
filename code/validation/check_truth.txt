@@ -8390,3 +8390,35 @@ Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-
 
 - The following locations are missing: ['Estonia', 'Greece', 'Hungary', 'Ireland', 'Italy', 'Latvia', 'Malta', 'Slovakia'].
 
+Latest check of truth data: 2024-02-28
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truncated_ECDC-Incident Deaths.csv' at 2024-02-17:
+
+- The following locations are missing: ['Belgium', 'Croatia', 'Cyprus', 'Czechia', 'Denmark', 'Finland', 'Greece', 'Hungary', 'Iceland', 'Ireland', 'Italy', 'Liechtenstein', 'Luxembourg', 'Malta', 'Netherlands', 'Norway', 'Portugal', 'Slovakia', 'Slovenia', 'Sweden'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truth_ECDC-Incident Cases.csv' at 2024-02-17:
+
+- The following locations are missing: ['Croatia', 'Cyprus', 'Denmark', 'Finland'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truncated_ECDC-Incident Cases.csv' at 2024-02-17:
+
+- The following locations are missing: ['Croatia', 'Cyprus', 'Czechia', 'Denmark', 'Finland', 'Italy', 'Netherlands', 'Portugal', 'Slovenia'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truth_ECDC-Incident Deaths.csv' at 2024-02-17:
+
+- The following locations are missing: ['Belgium', 'Croatia', 'Cyprus', 'Denmark', 'Finland', 'Hungary', 'Iceland', 'Luxembourg', 'Netherlands', 'Norway'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/OWID/truncated_OWID-Incident Hospitalizations.csv' at 2024-02-24:
+
+- The following locations are missing: ['Czechia', 'Estonia', 'Greece', 'Hungary', 'Ireland', 'Italy', 'Latvia', 'Malta', 'Slovakia'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/OWID/truth_OWID-Incident Hospitalizations.csv' at 2024-02-24:
+
+- The following locations are missing: ['Estonia', 'Greece', 'Hungary', 'Ireland', 'Italy', 'Latvia', 'Malta', 'Slovakia'].
+
