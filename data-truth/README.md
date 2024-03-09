@@ -68,20 +68,20 @@ indicating data expecting to be substanially revised.
 
 ### Cases and deaths
 
-- Cases: Belgium, Bulgaria, Cyprus, Czechia, Denmark, Estonia, Greece,
-  Hungary, Iceland, Ireland, Italy, Liechtenstein, Lithuania,
-  Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania,
-  Slovakia, Slovenia, Sweden
+- Cases: Belgium, Bulgaria, Czechia, Denmark, Estonia, Greece, Hungary,
+  Iceland, Ireland, Italy, Liechtenstein, Lithuania, Luxembourg, Malta,
+  Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia,
+  Sweden
 
-- Deaths: Bulgaria, Cyprus, Czechia, Denmark, Estonia, Finland, Greece,
-  Hungary, Ireland, Italy, Liechtenstein, Lithuania, Malta, Poland,
-  Portugal, Romania, Slovakia, Slovenia, Sweden
+- Deaths: Bulgaria, Czechia, Denmark, Estonia, Finland, Greece, Hungary,
+  Ireland, Italy, Liechtenstein, Lithuania, Malta, Poland, Portugal,
+  Romania, Slovakia, Slovenia, Sweden
 
-- **Data warning!** Recent missing data for cases in: Cyprus, Denmark,
-  and Netherlands
+- **Data warning!** Recent missing data for cases in: Denmark and
+  Netherlands
 
-- **Data warning!** Recent missing data for deaths in: Cyprus, Denmark,
-  Finland, and Hungary
+- **Data warning!** Recent missing data for deaths in: Denmark, Finland,
+  and Hungary
 
 We further evaluate forecasts of cases and deaths against data provided
 [ECDC](https://www.ecdc.europa.eu/), which we recommend using as the
@@ -136,11 +136,6 @@ account the truncation of the data.
 
 The latest case/death data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
-
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
 
 ![Plot of cases](plots/Cases.svg) ![Plot of deaths](plots/Deaths.svg)
 
