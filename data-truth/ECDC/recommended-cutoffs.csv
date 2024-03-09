@@ -11,6 +11,7 @@ Greece,GR,inc death,ECDC,1
 Hungary,HU,inc death,ECDC,3
 Ireland,IE,tests,ECDC,1
 Ireland,IE,hospitaladmissions,ECDC,2
+Ireland,IE,ICUadmissions,ECDC,3
 Ireland,IE,inc death,ECDC,4
 Italy,IT,inc case,ECDC,1
 Italy,IT,ICUadmissions,ECDC,2
@@ -29,6 +30,7 @@ Sweden,SE,ICUadmissions,ECDC,2
 Sweden,SE,inc death,ECDC,2
 Slovenia,SI,tests,ECDC,1
 Slovenia,SI,inc death,ECDC,3
-Slovakia,SK,ICUadmissions,ECDC,2
+Slovakia,SK,ICUadmissions,ECDC,1
+Slovakia,SK,inc case,ECDC,1
 Slovakia,SK,hospitaladmissions,ECDC,2
 Slovakia,SK,inc death,ECDC,4
