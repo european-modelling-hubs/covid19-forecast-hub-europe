@@ -77,8 +77,7 @@ indicating data expecting to be substanially revised.
   Ireland, Italy, Liechtenstein, Lithuania, Malta, Poland, Portugal,
   Romania, Slovakia, Slovenia, Sweden
 
-- **Data warning!** Recent missing data for cases in: Denmark and
-  Netherlands
+- **Data warning!** Recent missing data for cases in: Denmark
 
 - **Data warning!** Recent missing data for deaths in: Denmark, Finland,
   and Hungary
