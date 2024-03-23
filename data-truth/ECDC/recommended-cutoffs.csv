@@ -1,4 +1,5 @@
 location_name,location,target_variable,source,cutoff_weeks
+Belgium,BE,tests,ECDC,1
 Czechia,CZ,ICUadmissions,ECDC,1
 Czechia,CZ,hospitaladmissions,ECDC,1
 Czechia,CZ,inc case,ECDC,4
@@ -30,7 +31,7 @@ Sweden,SE,ICUadmissions,ECDC,2
 Sweden,SE,inc death,ECDC,2
 Slovenia,SI,tests,ECDC,1
 Slovenia,SI,inc death,ECDC,3
-Slovakia,SK,ICUadmissions,ECDC,1
 Slovakia,SK,inc case,ECDC,1
 Slovakia,SK,hospitaladmissions,ECDC,2
+Slovakia,SK,ICUadmissions,ECDC,3
 Slovakia,SK,inc death,ECDC,4
