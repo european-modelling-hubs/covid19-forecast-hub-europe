@@ -2,10 +2,12 @@ team_name: European Centre for Disease Prevention and Control
 model_name: Norrsken Piecewise Linear Bayesian Model
 model_abbr: ECDC-norrsken_green
 model_contributors:
-  - name: Rene Niehus
+  - name: ECDC Mathematical Modelling Team
     affiliation: European Centre for Disease Prevention and Control
-    email: rene.niehus@ecdc.europa.eu
-website_url: https://www.ecdc.europa.eu/en
+    email: modellingh@ecdc.europa.eu
+team_model_designation: primary
+data_inputs: ECDC ERVISS
+website_url: https://github.com/EU-ECDC/ECDC-Mathematical-Models
 license: cc-by-4.0
 team_model_designation: primary
 methods: "A Bayesian piece-wise log-linear model fit."
