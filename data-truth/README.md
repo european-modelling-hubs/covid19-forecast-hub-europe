@@ -139,6 +139,11 @@ account the truncation of the data.
 The latest case/death data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
 
+    ## `geom_line()`: Each group consists of only one observation.
+    ## ℹ Do you need to adjust the group aesthetic?
+    ## `geom_line()`: Each group consists of only one observation.
+    ## ℹ Do you need to adjust the group aesthetic?
+
 ![Plot of cases](plots/Cases.svg) ![Plot of deaths](plots/Deaths.svg)
 
 ## Additional data sources
