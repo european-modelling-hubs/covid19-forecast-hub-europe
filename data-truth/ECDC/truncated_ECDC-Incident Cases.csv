@@ -219,10 +219,10 @@ Austria,AT,2024-02-24,3,ECDC,2024-04-19,final
 Austria,AT,2024-03-02,4,ECDC,2024-04-19,final
 Austria,AT,2024-03-09,2,ECDC,2024-04-19,final
 Austria,AT,2024-03-16,1,ECDC,2024-04-19,final
-Austria,AT,2024-03-23,2,ECDC,2024-04-19,near final
-Austria,AT,2024-03-30,2,ECDC,2024-04-19,near final
-Austria,AT,2024-04-06,0,ECDC,2024-04-19,near final
-Austria,AT,2024-04-13,1,ECDC,2024-04-19,near final
+Austria,AT,2024-03-23,2,ECDC,2024-04-26,final
+Austria,AT,2024-03-30,2,ECDC,2024-04-26,near final
+Austria,AT,2024-04-06,0,ECDC,2024-04-26,near final
+Austria,AT,2024-04-13,1,ECDC,2024-04-26,near final
 Belgium,BE,2020-01-04,0,ECDC,2022-08-12,final
 Belgium,BE,2020-01-11,0,ECDC,2022-08-12,final
 Belgium,BE,2020-01-18,0,ECDC,2022-08-12,final
@@ -443,8 +443,8 @@ Belgium,BE,2024-02-24,531,ECDC,2024-04-05,final
 Belgium,BE,2024-03-02,364,ECDC,2024-04-05,final
 Belgium,BE,2024-03-09,288,ECDC,2024-04-12,final
 Belgium,BE,2024-03-16,271,ECDC,2024-04-19,final
-Belgium,BE,2024-03-23,205,ECDC,2024-04-19,near final
-Belgium,BE,2024-03-30,190,ECDC,2024-04-19,near final
+Belgium,BE,2024-03-23,205,ECDC,2024-04-26,final
+Belgium,BE,2024-03-30,190,ECDC,2024-04-26,near final
 Bulgaria,BG,2020-01-04,0,ECDC,2022-08-12,final
 Bulgaria,BG,2020-01-11,0,ECDC,2022-08-12,final
 Bulgaria,BG,2020-01-18,0,ECDC,2022-08-12,final
@@ -665,9 +665,9 @@ Bulgaria,BG,2024-02-24,104,ECDC,2024-04-05,final
 Bulgaria,BG,2024-03-02,121,ECDC,2024-04-05,final
 Bulgaria,BG,2024-03-09,81,ECDC,2024-04-12,final
 Bulgaria,BG,2024-03-16,75,ECDC,2024-04-19,final
-Bulgaria,BG,2024-03-23,63,ECDC,2024-04-19,near final
-Bulgaria,BG,2024-03-30,67,ECDC,2024-04-19,near final
-Bulgaria,BG,2024-04-13,33,ECDC,2024-04-19,near final
+Bulgaria,BG,2024-03-23,63,ECDC,2024-04-26,final
+Bulgaria,BG,2024-03-30,67,ECDC,2024-04-26,near final
+Bulgaria,BG,2024-04-13,33,ECDC,2024-04-26,near final
 Croatia,HR,2020-01-04,0,ECDC,2022-08-12,final
 Croatia,HR,2020-01-11,0,ECDC,2022-08-12,final
 Croatia,HR,2020-01-18,0,ECDC,2022-08-12,final
@@ -888,10 +888,10 @@ Croatia,HR,2024-02-24,158,ECDC,2024-04-12,final
 Croatia,HR,2024-03-02,107,ECDC,2024-04-12,final
 Croatia,HR,2024-03-09,71,ECDC,2024-04-12,final
 Croatia,HR,2024-03-16,64,ECDC,2024-04-19,final
-Croatia,HR,2024-03-23,53,ECDC,2024-04-19,near final
-Croatia,HR,2024-03-30,33,ECDC,2024-04-19,near final
-Croatia,HR,2024-04-06,32,ECDC,2024-04-19,near final
-Croatia,HR,2024-04-13,17,ECDC,2024-04-19,near final
+Croatia,HR,2024-03-23,53,ECDC,2024-04-26,final
+Croatia,HR,2024-03-30,33,ECDC,2024-04-26,near final
+Croatia,HR,2024-04-06,32,ECDC,2024-04-26,near final
+Croatia,HR,2024-04-13,17,ECDC,2024-04-26,near final
 Cyprus,CY,2020-01-04,0,ECDC,2022-08-12,final
 Cyprus,CY,2020-01-11,0,ECDC,2022-08-12,final
 Cyprus,CY,2020-01-18,0,ECDC,2022-08-12,final
@@ -1112,7 +1112,7 @@ Cyprus,CY,2024-02-24,382,ECDC,2024-04-05,final
 Cyprus,CY,2024-03-02,320,ECDC,2024-04-05,final
 Cyprus,CY,2024-03-09,292,ECDC,2024-04-12,final
 Cyprus,CY,2024-03-16,177,ECDC,2024-04-19,final
-Cyprus,CY,2024-03-23,126,ECDC,2024-04-19,near final
+Cyprus,CY,2024-03-23,126,ECDC,2024-04-26,final
 Czechia,CZ,2020-01-04,0,ECDC,2022-08-12,final
 Czechia,CZ,2020-01-11,0,ECDC,2022-08-12,final
 Czechia,CZ,2020-01-18,0,ECDC,2022-08-12,final
@@ -1333,10 +1333,10 @@ Czechia,CZ,2024-02-24,251,ECDC,2024-04-05,final
 Czechia,CZ,2024-03-02,175,ECDC,2024-04-05,final
 Czechia,CZ,2024-03-09,168,ECDC,2024-04-12,final
 Czechia,CZ,2024-03-16,130,ECDC,2024-04-19,final
-Czechia,CZ,2024-03-23,95,ECDC,2024-04-19,near final
-Czechia,CZ,2024-03-30,90,ECDC,2024-04-19,near final
-Czechia,CZ,2024-04-06,87,ECDC,2024-04-19,near final
-Czechia,CZ,2024-04-13,71,ECDC,2024-04-19,near final
+Czechia,CZ,2024-03-23,95,ECDC,2024-04-26,final
+Czechia,CZ,2024-03-30,90,ECDC,2024-04-26,near final
+Czechia,CZ,2024-04-06,87,ECDC,2024-04-26,near final
+Czechia,CZ,2024-04-13,71,ECDC,2024-04-26,near final
 Denmark,DK,2020-01-04,10,ECDC,2022-08-12,final
 Denmark,DK,2020-01-11,12,ECDC,2022-08-12,final
 Denmark,DK,2020-01-18,8,ECDC,2022-08-12,final
@@ -1557,7 +1557,7 @@ Denmark,DK,2024-02-24,91,ECDC,2024-04-05,final
 Denmark,DK,2024-03-02,81,ECDC,2024-04-12,final
 Denmark,DK,2024-03-09,61,ECDC,2024-04-12,final
 Denmark,DK,2024-03-16,61,ECDC,2024-04-19,final
-Denmark,DK,2024-03-23,63,ECDC,2024-04-19,near final
+Denmark,DK,2024-03-23,63,ECDC,2024-04-26,final
 Estonia,EE,2020-01-04,0,ECDC,2022-08-12,final
 Estonia,EE,2020-01-11,0,ECDC,2022-08-12,final
 Estonia,EE,2020-01-18,0,ECDC,2022-08-12,final
@@ -1778,10 +1778,10 @@ Estonia,EE,2024-02-24,77,ECDC,2024-04-05,final
 Estonia,EE,2024-03-02,55,ECDC,2024-04-05,final
 Estonia,EE,2024-03-09,52,ECDC,2024-04-12,final
 Estonia,EE,2024-03-16,49,ECDC,2024-04-19,final
-Estonia,EE,2024-03-23,30,ECDC,2024-04-19,near final
-Estonia,EE,2024-03-30,38,ECDC,2024-04-19,near final
-Estonia,EE,2024-04-06,26,ECDC,2024-04-19,near final
-Estonia,EE,2024-04-13,8,ECDC,2024-04-19,near final
+Estonia,EE,2024-03-23,30,ECDC,2024-04-26,final
+Estonia,EE,2024-03-30,38,ECDC,2024-04-26,near final
+Estonia,EE,2024-04-06,26,ECDC,2024-04-26,near final
+Estonia,EE,2024-04-13,8,ECDC,2024-04-26,near final
 France,FR,2020-01-04,0,ECDC,2022-08-12,final
 France,FR,2020-01-11,0,ECDC,2022-08-12,final
 France,FR,2020-01-18,0,ECDC,2022-08-12,final
@@ -2200,10 +2200,10 @@ Greece,GR,2024-02-24,1958,ECDC,2024-04-05,final
 Greece,GR,2024-03-02,1421,ECDC,2024-04-05,final
 Greece,GR,2024-03-09,1084,ECDC,2024-04-12,final
 Greece,GR,2024-03-16,1264,ECDC,2024-04-19,final
-Greece,GR,2024-03-23,691,ECDC,2024-04-19,near final
-Greece,GR,2024-03-30,917,ECDC,2024-04-19,near final
-Greece,GR,2024-04-06,996,ECDC,2024-04-19,near final
-Greece,GR,2024-04-13,1156,ECDC,2024-04-19,near final
+Greece,GR,2024-03-23,691,ECDC,2024-04-26,final
+Greece,GR,2024-03-30,917,ECDC,2024-04-26,near final
+Greece,GR,2024-04-06,996,ECDC,2024-04-26,near final
+Greece,GR,2024-04-13,1156,ECDC,2024-04-26,near final
 Hungary,HU,2020-01-04,0,ECDC,2022-08-12,final
 Hungary,HU,2020-01-11,0,ECDC,2022-08-12,final
 Hungary,HU,2020-01-18,0,ECDC,2022-08-12,final
@@ -2424,10 +2424,10 @@ Hungary,HU,2024-02-24,65,ECDC,2024-04-05,final
 Hungary,HU,2024-03-02,43,ECDC,2024-04-05,final
 Hungary,HU,2024-03-09,30,ECDC,2024-04-12,final
 Hungary,HU,2024-03-16,17,ECDC,2024-04-19,final
-Hungary,HU,2024-03-23,25,ECDC,2024-04-19,near final
-Hungary,HU,2024-03-30,19,ECDC,2024-04-19,near final
-Hungary,HU,2024-04-06,19,ECDC,2024-04-19,near final
-Hungary,HU,2024-04-13,13,ECDC,2024-04-19,near final
+Hungary,HU,2024-03-23,25,ECDC,2024-04-26,final
+Hungary,HU,2024-03-30,19,ECDC,2024-04-26,near final
+Hungary,HU,2024-04-06,19,ECDC,2024-04-26,near final
+Hungary,HU,2024-04-13,13,ECDC,2024-04-26,near final
 Iceland,IS,2020-01-04,0,ECDC,2022-08-12,final
 Iceland,IS,2020-01-11,0,ECDC,2022-08-12,final
 Iceland,IS,2020-01-18,0,ECDC,2022-08-12,final
@@ -2648,9 +2648,9 @@ Iceland,IS,2024-02-24,4,ECDC,2024-04-05,final
 Iceland,IS,2024-03-02,4,ECDC,2024-04-05,final
 Iceland,IS,2024-03-09,3,ECDC,2024-04-12,final
 Iceland,IS,2024-03-16,7,ECDC,2024-04-19,final
-Iceland,IS,2024-03-23,1,ECDC,2024-04-19,near final
-Iceland,IS,2024-03-30,1,ECDC,2024-04-19,near final
-Iceland,IS,2024-04-13,5,ECDC,2024-04-19,near final
+Iceland,IS,2024-03-23,1,ECDC,2024-04-26,final
+Iceland,IS,2024-03-30,1,ECDC,2024-04-26,near final
+Iceland,IS,2024-04-13,5,ECDC,2024-04-26,near final
 Ireland,IE,2020-01-04,0,ECDC,2022-08-12,final
 Ireland,IE,2020-01-11,0,ECDC,2022-08-12,final
 Ireland,IE,2020-01-18,0,ECDC,2022-08-12,final
@@ -2871,10 +2871,10 @@ Ireland,IE,2024-02-24,264,ECDC,2024-04-05,final
 Ireland,IE,2024-03-02,222,ECDC,2024-04-05,final
 Ireland,IE,2024-03-09,167,ECDC,2024-04-12,final
 Ireland,IE,2024-03-16,168,ECDC,2024-04-19,final
-Ireland,IE,2024-03-23,169,ECDC,2024-04-19,near final
-Ireland,IE,2024-03-30,142,ECDC,2024-04-19,near final
-Ireland,IE,2024-04-06,145,ECDC,2024-04-19,near final
-Ireland,IE,2024-04-13,189,ECDC,2024-04-19,near final
+Ireland,IE,2024-03-23,169,ECDC,2024-04-26,final
+Ireland,IE,2024-03-30,142,ECDC,2024-04-26,near final
+Ireland,IE,2024-04-06,145,ECDC,2024-04-26,near final
+Ireland,IE,2024-04-13,189,ECDC,2024-04-26,near final
 Italy,IT,2020-01-04,0,ECDC,2022-08-12,final
 Italy,IT,2020-01-11,0,ECDC,2022-08-12,final
 Italy,IT,2020-01-18,0,ECDC,2022-08-12,final
@@ -3095,8 +3095,8 @@ Italy,IT,2024-02-24,1243,ECDC,2024-04-05,final
 Italy,IT,2024-03-02,939,ECDC,2024-04-05,final
 Italy,IT,2024-03-09,758,ECDC,2024-04-12,final
 Italy,IT,2024-03-16,685,ECDC,2024-04-19,final
-Italy,IT,2024-03-23,607,ECDC,2024-04-19,near final
-Italy,IT,2024-03-30,487,ECDC,2024-04-19,near final
+Italy,IT,2024-03-23,607,ECDC,2024-04-26,final
+Italy,IT,2024-03-30,487,ECDC,2024-04-26,near final
 Liechtenstein,LI,2020-01-04,0,ECDC,2022-08-12,final
 Liechtenstein,LI,2020-01-11,0,ECDC,2022-08-12,final
 Liechtenstein,LI,2020-01-18,0,ECDC,2022-08-12,final
@@ -3316,10 +3316,10 @@ Liechtenstein,LI,2024-02-24,0,ECDC,2024-04-05,final
 Liechtenstein,LI,2024-03-02,0,ECDC,2024-04-05,final
 Liechtenstein,LI,2024-03-09,0,ECDC,2024-04-12,final
 Liechtenstein,LI,2024-03-16,0,ECDC,2024-04-19,final
-Liechtenstein,LI,2024-03-23,1,ECDC,2024-04-19,near final
-Liechtenstein,LI,2024-03-30,0,ECDC,2024-04-19,near final
-Liechtenstein,LI,2024-04-06,0,ECDC,2024-04-19,near final
-Liechtenstein,LI,2024-04-13,0,ECDC,2024-04-19,near final
+Liechtenstein,LI,2024-03-23,1,ECDC,2024-04-26,final
+Liechtenstein,LI,2024-03-30,0,ECDC,2024-04-26,near final
+Liechtenstein,LI,2024-04-06,0,ECDC,2024-04-26,near final
+Liechtenstein,LI,2024-04-13,0,ECDC,2024-04-26,near final
 Lithuania,LT,2020-01-04,0,ECDC,2022-08-12,final
 Lithuania,LT,2020-01-11,0,ECDC,2022-08-12,final
 Lithuania,LT,2020-01-18,0,ECDC,2022-08-12,final
@@ -3535,10 +3535,10 @@ Lithuania,LT,2024-02-24,441,ECDC,2024-04-05,final
 Lithuania,LT,2024-03-02,310,ECDC,2024-04-05,final
 Lithuania,LT,2024-03-09,229,ECDC,2024-04-12,final
 Lithuania,LT,2024-03-16,240,ECDC,2024-04-19,final
-Lithuania,LT,2024-03-23,222,ECDC,2024-04-19,near final
-Lithuania,LT,2024-03-30,190,ECDC,2024-04-19,near final
-Lithuania,LT,2024-04-06,122,ECDC,2024-04-19,near final
-Lithuania,LT,2024-04-13,130,ECDC,2024-04-19,near final
+Lithuania,LT,2024-03-23,222,ECDC,2024-04-26,final
+Lithuania,LT,2024-03-30,190,ECDC,2024-04-26,near final
+Lithuania,LT,2024-04-06,122,ECDC,2024-04-26,near final
+Lithuania,LT,2024-04-13,130,ECDC,2024-04-26,near final
 Luxembourg,LU,2020-01-04,0,ECDC,2022-08-12,final
 Luxembourg,LU,2020-01-11,0,ECDC,2022-08-12,final
 Luxembourg,LU,2020-01-18,0,ECDC,2022-08-12,final
@@ -3759,10 +3759,10 @@ Luxembourg,LU,2024-02-24,41,ECDC,2024-04-05,final
 Luxembourg,LU,2024-03-02,42,ECDC,2024-04-05,final
 Luxembourg,LU,2024-03-09,32,ECDC,2024-04-12,final
 Luxembourg,LU,2024-03-16,21,ECDC,2024-04-19,final
-Luxembourg,LU,2024-03-23,22,ECDC,2024-04-19,near final
-Luxembourg,LU,2024-03-30,19,ECDC,2024-04-19,near final
-Luxembourg,LU,2024-04-06,11,ECDC,2024-04-19,near final
-Luxembourg,LU,2024-04-13,21,ECDC,2024-04-19,near final
+Luxembourg,LU,2024-03-23,22,ECDC,2024-04-26,final
+Luxembourg,LU,2024-03-30,19,ECDC,2024-04-26,near final
+Luxembourg,LU,2024-04-06,11,ECDC,2024-04-26,near final
+Luxembourg,LU,2024-04-13,21,ECDC,2024-04-26,near final
 Malta,MT,2020-01-04,0,ECDC,2022-08-12,final
 Malta,MT,2020-01-11,0,ECDC,2022-08-12,final
 Malta,MT,2020-01-18,0,ECDC,2022-08-12,final
@@ -3983,10 +3983,10 @@ Malta,MT,2024-02-24,13,ECDC,2024-04-05,final
 Malta,MT,2024-03-02,4,ECDC,2024-04-05,final
 Malta,MT,2024-03-09,0,ECDC,2024-04-12,final
 Malta,MT,2024-03-16,7,ECDC,2024-04-19,final
-Malta,MT,2024-03-23,2,ECDC,2024-04-19,near final
-Malta,MT,2024-03-30,3,ECDC,2024-04-19,near final
-Malta,MT,2024-04-06,1,ECDC,2024-04-19,near final
-Malta,MT,2024-04-13,3,ECDC,2024-04-19,near final
+Malta,MT,2024-03-23,2,ECDC,2024-04-26,final
+Malta,MT,2024-03-30,3,ECDC,2024-04-26,near final
+Malta,MT,2024-04-06,1,ECDC,2024-04-26,near final
+Malta,MT,2024-04-13,3,ECDC,2024-04-26,near final
 Netherlands,NL,2020-01-04,0,ECDC,2022-08-12,final
 Netherlands,NL,2020-01-11,0,ECDC,2022-08-12,final
 Netherlands,NL,2020-01-18,0,ECDC,2022-08-12,final
@@ -4207,8 +4207,8 @@ Netherlands,NL,2024-02-24,219,ECDC,2024-04-05,final
 Netherlands,NL,2024-03-02,170,ECDC,2024-04-05,final
 Netherlands,NL,2024-03-09,133,ECDC,2024-04-12,final
 Netherlands,NL,2024-03-16,107,ECDC,2024-04-19,final
-Netherlands,NL,2024-03-23,88,ECDC,2024-04-19,near final
-Netherlands,NL,2024-03-30,115,ECDC,2024-04-19,near final
+Netherlands,NL,2024-03-23,88,ECDC,2024-04-26,final
+Netherlands,NL,2024-03-30,115,ECDC,2024-04-26,near final
 Norway,NO,2020-01-04,0,ECDC,2022-08-12,final
 Norway,NO,2020-01-11,0,ECDC,2022-08-12,final
 Norway,NO,2020-01-18,0,ECDC,2022-08-12,final
@@ -4429,10 +4429,10 @@ Norway,NO,2024-02-24,125,ECDC,2024-04-05,final
 Norway,NO,2024-03-02,103,ECDC,2024-04-05,final
 Norway,NO,2024-03-09,80,ECDC,2024-04-12,final
 Norway,NO,2024-03-16,81,ECDC,2024-04-19,final
-Norway,NO,2024-03-23,56,ECDC,2024-04-19,near final
-Norway,NO,2024-03-30,42,ECDC,2024-04-19,near final
-Norway,NO,2024-04-06,73,ECDC,2024-04-19,near final
-Norway,NO,2024-04-13,60,ECDC,2024-04-19,near final
+Norway,NO,2024-03-23,56,ECDC,2024-04-26,final
+Norway,NO,2024-03-30,42,ECDC,2024-04-26,near final
+Norway,NO,2024-04-06,73,ECDC,2024-04-26,near final
+Norway,NO,2024-04-13,60,ECDC,2024-04-26,near final
 Poland,PL,2020-01-04,0,ECDC,2022-08-12,final
 Poland,PL,2020-01-11,0,ECDC,2022-08-12,final
 Poland,PL,2020-01-18,0,ECDC,2022-08-12,final
@@ -4653,10 +4653,10 @@ Poland,PL,2024-02-24,1107,ECDC,2024-04-05,final
 Poland,PL,2024-03-02,683,ECDC,2024-04-05,final
 Poland,PL,2024-03-09,467,ECDC,2024-04-12,final
 Poland,PL,2024-03-16,380,ECDC,2024-04-19,final
-Poland,PL,2024-03-23,277,ECDC,2024-04-19,near final
-Poland,PL,2024-03-30,253,ECDC,2024-04-19,near final
-Poland,PL,2024-04-06,171,ECDC,2024-04-19,near final
-Poland,PL,2024-04-13,136,ECDC,2024-04-19,near final
+Poland,PL,2024-03-23,277,ECDC,2024-04-26,final
+Poland,PL,2024-03-30,253,ECDC,2024-04-26,near final
+Poland,PL,2024-04-06,171,ECDC,2024-04-26,near final
+Poland,PL,2024-04-13,136,ECDC,2024-04-26,near final
 Portugal,PT,2020-01-04,0,ECDC,2022-08-12,final
 Portugal,PT,2020-01-11,0,ECDC,2022-08-12,final
 Portugal,PT,2020-01-18,0,ECDC,2022-08-12,final
@@ -4877,10 +4877,10 @@ Portugal,PT,2024-02-24,107,ECDC,2024-04-05,final
 Portugal,PT,2024-03-02,140,ECDC,2024-04-05,final
 Portugal,PT,2024-03-09,93,ECDC,2024-04-12,final
 Portugal,PT,2024-03-16,71,ECDC,2024-04-19,final
-Portugal,PT,2024-03-23,56,ECDC,2024-04-19,near final
-Portugal,PT,2024-03-30,61,ECDC,2024-04-19,near final
-Portugal,PT,2024-04-06,64,ECDC,2024-04-19,near final
-Portugal,PT,2024-04-13,85,ECDC,2024-04-19,near final
+Portugal,PT,2024-03-23,56,ECDC,2024-04-26,final
+Portugal,PT,2024-03-30,61,ECDC,2024-04-26,near final
+Portugal,PT,2024-04-06,64,ECDC,2024-04-26,near final
+Portugal,PT,2024-04-13,85,ECDC,2024-04-26,near final
 Romania,RO,2020-01-04,0,ECDC,2022-08-12,final
 Romania,RO,2020-01-11,0,ECDC,2022-08-12,final
 Romania,RO,2020-01-18,0,ECDC,2022-08-12,final
@@ -5101,10 +5101,10 @@ Romania,RO,2024-02-24,833,ECDC,2024-04-05,final
 Romania,RO,2024-03-02,558,ECDC,2024-04-05,final
 Romania,RO,2024-03-09,472,ECDC,2024-04-12,final
 Romania,RO,2024-03-16,395,ECDC,2024-04-19,final
-Romania,RO,2024-03-23,330,ECDC,2024-04-19,near final
-Romania,RO,2024-03-30,313,ECDC,2024-04-19,near final
-Romania,RO,2024-04-06,253,ECDC,2024-04-19,near final
-Romania,RO,2024-04-13,183,ECDC,2024-04-19,near final
+Romania,RO,2024-03-23,330,ECDC,2024-04-26,final
+Romania,RO,2024-03-30,313,ECDC,2024-04-26,near final
+Romania,RO,2024-04-06,253,ECDC,2024-04-26,near final
+Romania,RO,2024-04-13,183,ECDC,2024-04-26,near final
 Slovakia,SK,2020-01-04,0,ECDC,2022-08-12,final
 Slovakia,SK,2020-01-11,0,ECDC,2022-08-12,final
 Slovakia,SK,2020-01-18,0,ECDC,2022-08-12,final
@@ -5324,9 +5324,9 @@ Slovakia,SK,2024-02-24,53,ECDC,2024-04-05,final
 Slovakia,SK,2024-03-02,36,ECDC,2024-04-05,final
 Slovakia,SK,2024-03-09,38,ECDC,2024-04-12,final
 Slovakia,SK,2024-03-16,28,ECDC,2024-04-19,final
-Slovakia,SK,2024-03-23,32,ECDC,2024-04-19,near final
-Slovakia,SK,2024-03-30,10,ECDC,2024-04-19,near final
-Slovakia,SK,2024-04-06,12,ECDC,2024-04-19,near final
+Slovakia,SK,2024-03-23,32,ECDC,2024-04-26,final
+Slovakia,SK,2024-03-30,10,ECDC,2024-04-26,near final
+Slovakia,SK,2024-04-06,12,ECDC,2024-04-26,near final
 Slovenia,SI,2020-01-04,0,ECDC,2022-08-12,final
 Slovenia,SI,2020-01-11,0,ECDC,2022-08-12,final
 Slovenia,SI,2020-01-18,0,ECDC,2022-08-12,final
@@ -5547,10 +5547,10 @@ Slovenia,SI,2024-02-24,48,ECDC,2024-04-05,final
 Slovenia,SI,2024-03-02,22,ECDC,2024-04-05,final
 Slovenia,SI,2024-03-09,30,ECDC,2024-04-12,final
 Slovenia,SI,2024-03-16,14,ECDC,2024-04-19,final
-Slovenia,SI,2024-03-23,14,ECDC,2024-04-19,near final
-Slovenia,SI,2024-03-30,14,ECDC,2024-04-19,near final
-Slovenia,SI,2024-04-06,13,ECDC,2024-04-19,near final
-Slovenia,SI,2024-04-13,9,ECDC,2024-04-19,near final
+Slovenia,SI,2024-03-23,14,ECDC,2024-04-26,final
+Slovenia,SI,2024-03-30,14,ECDC,2024-04-26,near final
+Slovenia,SI,2024-04-06,13,ECDC,2024-04-26,near final
+Slovenia,SI,2024-04-13,9,ECDC,2024-04-26,near final
 Sweden,SE,2020-01-04,0,ECDC,2022-08-12,final
 Sweden,SE,2020-01-11,0,ECDC,2022-08-12,final
 Sweden,SE,2020-01-18,0,ECDC,2022-08-12,final
@@ -5771,7 +5771,7 @@ Sweden,SE,2024-02-24,208,ECDC,2024-04-05,final
 Sweden,SE,2024-03-02,168,ECDC,2024-04-05,final
 Sweden,SE,2024-03-09,113,ECDC,2024-04-12,final
 Sweden,SE,2024-03-16,116,ECDC,2024-04-19,final
-Sweden,SE,2024-03-23,96,ECDC,2024-04-19,near final
-Sweden,SE,2024-03-30,80,ECDC,2024-04-19,near final
-Sweden,SE,2024-04-06,72,ECDC,2024-04-19,near final
-Sweden,SE,2024-04-13,60,ECDC,2024-04-19,near final
+Sweden,SE,2024-03-23,96,ECDC,2024-04-26,final
+Sweden,SE,2024-03-30,80,ECDC,2024-04-26,near final
+Sweden,SE,2024-04-06,72,ECDC,2024-04-26,near final
+Sweden,SE,2024-04-13,60,ECDC,2024-04-26,near final
