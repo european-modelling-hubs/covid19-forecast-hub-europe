@@ -10310,3 +10310,35 @@ Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-
 
 - The following locations are missing: ['Czechia', 'Italy'].
 
+Latest check of truth data: 2024-04-28
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truth_ECDC-Incident Cases.csv' at 2024-04-20:
+
+- The following locations are missing: ['Austria', 'Cyprus', 'Denmark', 'Finland', 'France', 'Germany'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truncated_ECDC-Incident Deaths.csv' at 2024-04-20:
+
+- The following locations are missing: ['Austria', 'Belgium', 'Cyprus', 'Czechia', 'Denmark', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Ireland', 'Italy', 'Liechtenstein', 'Luxembourg', 'Malta', 'Netherlands', 'Norway', 'Poland', 'Slovakia', 'Slovenia', 'Sweden'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truth_ECDC-Incident Deaths.csv' at 2024-04-20:
+
+- The following locations are missing: ['Austria', 'Belgium', 'Cyprus', 'Denmark', 'Finland', 'France', 'Germany', 'Hungary', 'Iceland', 'Luxembourg', 'Netherlands', 'Norway'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truncated_ECDC-Incident Cases.csv' at 2024-04-20:
+
+- The following locations are missing: ['Austria', 'Belgium', 'Croatia', 'Cyprus', 'Denmark', 'Finland', 'France', 'Germany', 'Italy', 'Netherlands', 'Slovakia'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/OWID/truth_OWID-Incident Hospitalizations.csv' at 2024-04-27:
+
+- The following locations are missing: ['Italy', 'Netherlands'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/OWID/truncated_OWID-Incident Hospitalizations.csv' at 2024-04-20:
+
+- The following locations are missing: ['Czechia', 'Italy'].
+
