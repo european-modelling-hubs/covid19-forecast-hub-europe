@@ -5,21 +5,21 @@ Cyprus,CY,hospitaladmissions,ECDC,2
 Cyprus,CY,inc case,ECDC,3
 Czechia,CZ,ICUadmissions,ECDC,1
 Czechia,CZ,hospitaladmissions,ECDC,2
-Czechia,CZ,inc death,ECDC,4
-Denmark,DK,inc case,ECDC,1
+Czechia,CZ,inc death,ECDC,3
 Denmark,DK,inc death,ECDC,4
-Finland,FI,inc death,ECDC,4
+Finland,FI,inc death,ECDC,2
 France,FR,ICUadmissions,ECDC,3
 France,FR,hospitaladmissions,ECDC,4
 Greece,GR,ICUadmissions,ECDC,1
 Greece,GR,inc death,ECDC,1
 Croatia,HR,inc case,ECDC,1
+Croatia,HR,inc death,ECDC,2
 Hungary,HU,inc death,ECDC,2
 Ireland,IE,hospitaladmissions,ECDC,1
 Ireland,IE,ICUadmissions,ECDC,3
 Ireland,IE,inc death,ECDC,4
+Italy,IT,ICUadmissions,ECDC,2
 Italy,IT,inc case,ECDC,2
-Italy,IT,ICUadmissions,ECDC,3
 Italy,IT,hospitaladmissions,ECDC,3
 Italy,IT,inc death,ECDC,3
 Liechtenstein,LI,inc death,ECDC,1
@@ -27,6 +27,7 @@ Malta,MT,inc death,ECDC,1
 Malta,MT,ICUadmissions,ECDC,3
 Netherlands,NL,inc case,ECDC,2
 Poland,PL,inc death,ECDC,1
+Poland,PL,tests,ECDC,1
 Portugal,PT,hospitaladmissions,ECDC,4
 Sweden,SE,inc death,ECDC,1
 Sweden,SE,ICUadmissions,ECDC,2
