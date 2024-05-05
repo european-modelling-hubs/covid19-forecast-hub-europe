@@ -5,9 +5,7 @@ European data status
 
 ### Hospitalisations
 
-- Czechia, Italy, Netherlands
-
-- **Data warning!** Recent missing data in: Italy
+- Czechia, Netherlands
 
 The Hub validates and evaluates hospitalisation forecasts against data
 collated by [Our World in
@@ -62,9 +60,6 @@ cannot take into account the truncation of the data.
 
 The latest hospitalisation data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
-
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
 
 <figure>
 <img src="plots/Hospitalisations.svg" alt="Plot of hospitalisations" />
