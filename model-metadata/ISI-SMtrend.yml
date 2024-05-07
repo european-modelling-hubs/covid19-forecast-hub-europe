@@ -1,0 +1,11 @@
+team_name: ISI Foundation
+model_name: SMtrend
+model_abbr: SMtrend
+model_contributors:
+    - name: Stefania Fiandrino
+      affiliation: ISI Foundation
+      email: stefania.fiandrino@isi.it
+website_url: https://www.isi.it/
+license: cc-by-4.0
+team_model_designation: primary
+methods: The weighted average of two time series linear models, a medium trend model, and a short trend one.
