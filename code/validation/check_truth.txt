@@ -10689,3 +10689,30 @@ Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-
 
 - The following locations are missing: ['Czechia'].
 
+Latest check of truth data: 2024-05-10
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truth_ECDC-Incident Cases.csv' at 2024-04-27:
+
+- The following locations are missing: ['Austria', 'Belgium', 'Cyprus', 'Finland', 'France', 'Germany', 'Iceland', 'Italy', 'Luxembourg', 'Malta', 'Sweden'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truncated_ECDC-Incident Deaths.csv' at 2024-04-27:
+
+- The following locations are missing: ['Austria', 'Belgium', 'Croatia', 'Cyprus', 'Czechia', 'Denmark', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Ireland', 'Italy', 'Liechtenstein', 'Luxembourg', 'Malta', 'Netherlands', 'Norway', 'Poland', 'Slovakia', 'Slovenia', 'Sweden'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truth_ECDC-Incident Deaths.csv' at 2024-04-27:
+
+- The following locations are missing: ['Austria', 'Belgium', 'Cyprus', 'Finland', 'France', 'Germany', 'Hungary', 'Iceland', 'Italy', 'Luxembourg', 'Netherlands', 'Norway', 'Sweden'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/ECDC/truncated_ECDC-Incident Cases.csv' at 2024-04-27:
+
+- The following locations are missing: ['Austria', 'Belgium', 'Croatia', 'Cyprus', 'Finland', 'France', 'Germany', 'Iceland', 'Italy', 'Luxembourg', 'Malta', 'Netherlands', 'Slovakia', 'Sweden'].
+
+WARNING
+Error(s) in '/home/runner/work/covid19-forecast-hub-europe/covid19-forecast-hub-europe/data-truth/OWID/truncated_OWID-Incident Hospitalizations.csv' at 2024-05-04:
+
+- The following locations are missing: ['Czechia'].
+
