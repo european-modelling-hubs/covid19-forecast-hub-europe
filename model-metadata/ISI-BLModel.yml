@@ -1,0 +1,11 @@
+team_name: ISI Foundation
+model_name: BL-Model
+model_abbr: ISI-BLModel
+model_contributors:
+    - name: Valeria Marras
+      affiliation: ISI Foundation
+      email: valeria.marras@isi.it
+website_url: https://www.isi.it/
+license: cc-by-4.0
+team_model_designation: secondary
+methods: BL-Model (Bayesian Linear Model); Bayesian approach for linear regression, providing parameter estimates and uncertainty assessment in forecasting.
