@@ -68,20 +68,20 @@ indicating data expecting to be substanially revised.
 
 ### Cases and deaths
 
-- Cases: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark,
-  Estonia, Greece, Hungary, Iceland, Ireland, Italy, Liechtenstein,
-  Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal,
-  Romania, Slovakia, Slovenia, Sweden
+- Cases: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Estonia,
+  Greece, Hungary, Iceland, Ireland, Italy, Liechtenstein, Lithuania,
+  Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania,
+  Slovakia, Slovenia, Sweden
 
-- Deaths: Bulgaria, Croatia, Cyprus, Czechia, Denmark, Estonia, Greece,
-  Ireland, Italy, Liechtenstein, Lithuania, Malta, Poland, Portugal,
-  Romania, Slovakia, Slovenia, Sweden
+- Deaths: Bulgaria, Croatia, Cyprus, Czechia, Estonia, Greece, Ireland,
+  Italy, Liechtenstein, Lithuania, Malta, Poland, Portugal, Romania,
+  Slovakia, Slovenia, Sweden
 
-- **Data warning!** Recent missing data for cases in: Croatia, Cyprus,
-  Denmark, Estonia, Iceland, and Sweden
+- **Data warning!** Recent missing data for cases in: Austria, Belgium,
+  Croatia, Cyprus, Estonia, Italy, Lithuania, Malta, and Sweden
 
-- **Data warning!** Recent missing data for deaths in: Croatia, Cyprus,
-  Denmark, Estonia, and Sweden
+- **Data warning!** Recent missing data for deaths in: Cyprus, Estonia,
+  Italy, Lithuania, and Sweden
 
 We further evaluate forecasts of cases and deaths against data provided
 [ECDC](https://www.ecdc.europa.eu/), which we recommend using as the
@@ -136,11 +136,6 @@ account the truncation of the data.
 
 The latest case/death data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
-
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
 
 ![Plot of cases](plots/Cases.svg) ![Plot of deaths](plots/Deaths.svg)
 
