@@ -7,6 +7,8 @@ European data status
 
 - Czechia, Netherlands
 
+- **Data warning!** Recent missing data in: Netherlands
+
 The Hub validates and evaluates hospitalisation forecasts against data
 collated by [Our World in
 Data](https://ourworldindata.org/covid-hospitalizations), provided in
