@@ -63,6 +63,9 @@ cannot take into account the truncation of the data.
 The latest hospitalisation data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
 
+    ## `geom_line()`: Each group consists of only one observation.
+    ## ℹ Do you need to adjust the group aesthetic?
+
 <figure>
 <img src="plots/Hospitalisations.svg" alt="Plot of hospitalisations" />
 <figcaption aria-hidden="true">Plot of hospitalisations</figcaption>
