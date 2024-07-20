@@ -82,8 +82,8 @@ indicating data expecting to be substanially revised.
   Ireland, Italy, Liechtenstein, Lithuania, Malta, Poland, Portugal,
   Romania, Slovakia, Slovenia, Sweden
 
-- **Data warning!** Recent missing data for cases in: Austria, Belgium,
-  Croatia, Denmark, Estonia, and Italy
+- **Data warning!** Recent missing data for cases in: Belgium, Croatia,
+  Cyprus, Denmark, Estonia, Hungary, and Italy
 
 - **Data warning!** Recent missing data for deaths in: Croatia, Denmark,
   Estonia, and Italy
@@ -141,6 +141,13 @@ account the truncation of the data.
 
 The latest case/death data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
+
+    ## `geom_line()`: Each group consists of only one observation.
+    ## ℹ Do you need to adjust the group aesthetic?
+    ## `geom_line()`: Each group consists of only one observation.
+    ## ℹ Do you need to adjust the group aesthetic?
+    ## `geom_line()`: Each group consists of only one observation.
+    ## ℹ Do you need to adjust the group aesthetic?
 
 ![Plot of cases](plots/Cases.svg) ![Plot of deaths](plots/Deaths.svg)
 
