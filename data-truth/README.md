@@ -73,20 +73,20 @@ indicating data expecting to be substanially revised.
 
 ### Cases and deaths
 
-- Cases: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark,
-  Estonia, Greece, Hungary, Iceland, Ireland, Italy, Liechtenstein,
-  Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal,
-  Romania, Slovakia, Slovenia, Sweden
+- Cases: Austria, Belgium, Bulgaria, Cyprus, Czechia, Denmark, Estonia,
+  Greece, Hungary, Iceland, Ireland, Italy, Liechtenstein, Lithuania,
+  Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania,
+  Slovakia, Slovenia, Sweden
 
 - Deaths: Bulgaria, Croatia, Cyprus, Czechia, Denmark, Estonia, Greece,
   Ireland, Italy, Liechtenstein, Lithuania, Malta, Poland, Portugal,
   Romania, Slovakia, Slovenia, Sweden
 
-- **Data warning!** Recent missing data for cases in: Belgium, Croatia,
-  Cyprus, Denmark, Estonia, Hungary, and Italy
+- **Data warning!** Recent missing data for cases in: Denmark, Estonia,
+  Hungary, Iceland, Italy, and Malta
 
-- **Data warning!** Recent missing data for deaths in: Croatia, Denmark,
-  Estonia, and Italy
+- **Data warning!** Recent missing data for deaths in: Croatia, Cyprus,
+  Denmark, Estonia, and Italy
 
 We further evaluate forecasts of cases and deaths against data provided
 [ECDC](https://www.ecdc.europa.eu/), which we recommend using as the
@@ -142,8 +142,6 @@ account the truncation of the data.
 The latest case/death data is plotted below, with the dashed line
 indicating data expecting to be substanially revised.
 
-    ## `geom_line()`: Each group consists of only one observation.
-    ## ℹ Do you need to adjust the group aesthetic?
     ## `geom_line()`: Each group consists of only one observation.
     ## ℹ Do you need to adjust the group aesthetic?
     ## `geom_line()`: Each group consists of only one observation.
