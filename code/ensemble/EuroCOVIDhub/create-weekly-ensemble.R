@@ -13,8 +13,9 @@ library(tidyr)
 method <- get_hub_config("ensemble")[["method"]]
 
 # Set current submission date
-forecast_date <- today()
-wday(forecast_date) <- get_hub_config("forecast_week_day")
+# forecast_date <- today()
+# wday(forecast_date) <- get_hub_config("forecast_week_day")
+forecast_date <- "2024-07-01"
 
 # Get model names for manual exclusion
 exclude_models <-
