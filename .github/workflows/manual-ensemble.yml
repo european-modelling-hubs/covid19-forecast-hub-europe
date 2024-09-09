@@ -1,0 +1,59 @@
+
+name: "Manual Ensemble"
+on:
+  workflow_dispatch:
+
+jobs:
+  ensemble:
+    if: github.repository_owner == 'european-modelling-hubs'
+    runs-on: ubuntu-20.04
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: r-lib/actions/setup-r@v2
+      with:
+        install-r: false
+        use-public-rspm: true
+
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev libopenblas-base libopenblas-dev      
+
+    - uses: r-lib/actions/setup-renv@v2
+
+    # Define a list of dates for which to compute the ensemble
+    - name: Set dates list
+      id: dates
+      run: |
+          dates_list='["2024-07-08", "2024-07-15", "2024-07-22", "2024-07-29", "2024-08-05", "2024-08-12", "2024-08-19", "2024-08-26"]'
+          echo "dates_list=$dates_list" >> $GITHUB_ENV
+
+    - name: Loop over dates and create ensembles
+      run: |
+          dates=$(echo ${{ env.dates_list }} | jq -c '.[]')
+          for date in $dates; do
+              echo "Running ensemble script for date: $date"
+              Rscript code/ensemble/EuroCOVIDhub/manual-weekly-ensemble.R $date
+          done
+      env:
+          dates_list: ${{ env.dates_list }}
+
+    - name: Commit files
+      run: |
+        git config user.email "action@github.com"
+        git config user.name "GitHub Action - mean ensemble"
+        git add --all
+        git diff-index --quiet HEAD || git commit -m "Build ensemble"
+        git pull --rebase origin main
+        git push
+        echo "pushed to github"
+
+    - name: Create issue about failure
+      if: failure() && github.event_name != 'workflow_dispatch'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh issue reopen 2631
