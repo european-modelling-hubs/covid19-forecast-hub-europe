@@ -34,6 +34,7 @@ jobs:
       run: |
           dates=$(echo '${{ env.dates_list }}' | jq -c '.[]')
           for date in $dates; do
+              date=$(echo $date | tr -d '"')
               echo "Running ensemble script for date: $date"
               Rscript code/ensemble/EuroCOVIDhub/manual-weekly-ensemble.R $date
           done
