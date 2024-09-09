@@ -9,7 +9,7 @@ source(here(script_dir, "hospitalisations", "get-owid.R"))
 source(here(script_dir, "cases-deaths", "get-ecdc.r"))
 
 cat("Downloading OWID data\n")
-owid <- get_owid()
+#owid <- get_owid()
 cat("Downloading ECDC data\n")
 ecdc <- get_ecdc()
 
