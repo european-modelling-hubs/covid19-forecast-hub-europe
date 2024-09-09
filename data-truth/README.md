@@ -68,20 +68,19 @@ indicating data expecting to be substanially revised.
 
 ### Cases and deaths
 
-- Cases: Austria, Belgium, Bulgaria, Cyprus, Czechia, Denmark, Greece,
-  Hungary, Iceland, Ireland, Italy, Liechtenstein, Lithuania,
-  Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania,
-  Slovakia, Slovenia, Sweden
+- Cases: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark,
+  Greece, Hungary, Iceland, Ireland, Italy, Liechtenstein, Lithuania,
+  Luxembourg, Netherlands, Norway, Poland, Portugal, Romania, Slovakia,
+  Slovenia, Sweden
 
 - Deaths: Bulgaria, Croatia, Cyprus, Czechia, Denmark, Greece, Hungary,
   Ireland, Italy, Liechtenstein, Lithuania, Malta, Poland, Portugal,
   Romania, Slovakia, Slovenia, Sweden
 
-- **Data warning!** Recent missing data for cases in: Cyprus, Denmark,
-  Hungary, Iceland, Liechtenstein, and Portugal
+- **Data warning!** Recent missing data for cases in: Hungary and Italy
 
-- **Data warning!** Recent missing data for deaths in: Croatia, Cyprus,
-  Denmark, Hungary, Liechtenstein, and Portugal
+- **Data warning!** Recent missing data for deaths in: Hungary, Ireland,
+  and Italy
 
 We further evaluate forecasts of cases and deaths against data provided
 [ECDC](https://www.ecdc.europa.eu/), which we recommend using as the
