@@ -1,4 +1,3 @@
-
 name: "Manual Ensemble"
 on:
   workflow_dispatch:
@@ -34,6 +33,7 @@ jobs:
     - name: Loop over dates and create ensembles
       run: |
           dates=$(echo ${{ env.dates_list }} | jq -c '.[]')
+          echo "JSON dates: $dates"
           for date in $dates; do
               echo "Running ensemble script for date: $date"
               Rscript code/ensemble/EuroCOVIDhub/manual-weekly-ensemble.R $date
