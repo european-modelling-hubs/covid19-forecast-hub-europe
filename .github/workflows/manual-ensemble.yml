@@ -1,8 +1,6 @@
-name: "Ensemble"
+name: "Manual Ensemble"
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "15 11,23 * * 2,3"
 
 jobs:
   ensemble:
@@ -21,12 +19,27 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev libopenblas-base libopenblas-dev      
+        sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev libopenblas-base libopenblas-dev jq
 
     - uses: r-lib/actions/setup-renv@v2
 
-    - name: Create ensembles
-      run: Rscript 'code/ensemble/EuroCOVIDhub/create-weekly-ensemble.R'
+    # Define a list of dates for which to compute the ensemble
+    - name: Set dates list
+      id: dates
+      run: |
+          dates_list='["2024-07-08", "2024-07-15", "2024-07-22", "2024-07-29", "2024-08-05", "2024-08-12", "2024-08-19", "2024-08-26"]'
+          echo "dates_list=$dates_list" >> $GITHUB_ENV
+
+    - name: Loop over dates and create ensembles
+      run: |
+          dates=$(echo '${{ env.dates_list }}' | jq -c '.[]')
+          for date in $dates; do
+              date=$(echo $date | tr -d '"')
+              echo "Running ensemble script for date: $date"
+              Rscript code/ensemble/EuroCOVIDhub/manual-weekly-ensemble.R $date
+          done
+      env:
+          dates_list: ${{ env.dates_list }}
 
     - name: Commit files
       run: |
