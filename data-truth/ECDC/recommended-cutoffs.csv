@@ -1,5 +1,5 @@
 location_name,location,target_variable,source,cutoff_weeks
-Cyprus,CY,hospitaladmissions,ECDC,4
+Cyprus,CY,hospitaladmissions,ECDC,2
 Cyprus,CY,inc death,ECDC,4
 Czechia,CZ,hospitaladmissions,ECDC,1
 Greece,GR,ICUadmissions,ECDC,1
@@ -8,11 +8,9 @@ Ireland,IE,hospitaladmissions,ECDC,1
 Ireland,IE,ICUadmissions,ECDC,3
 Ireland,IE,inc death,ECDC,4
 Italy,IT,inc case,ECDC,1
-Italy,IT,hospitaladmissions,ECDC,2
 Italy,IT,inc death,ECDC,2
 Italy,IT,ICUadmissions,ECDC,3
 Malta,MT,ICUadmissions,ECDC,3
-Malta,MT,hospitaladmissions,ECDC,3
 Malta,MT,inc death,ECDC,4
 Netherlands,NL,inc case,ECDC,2
 Norway,NO,inc case,ECDC,1
