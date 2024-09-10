@@ -53,7 +53,7 @@ get_ecdc <- function(earliest_date = lubridate::today() - 7,
           target_variable = recode(indicator,
             "deaths" = "inc death",
             "detections" = "inc case",
-            "hospitalizations" = "inc hospitalization"
+            "hospitaladmissions" = "inc hospitalization"
           ),
           date = ISOweek::ISOweek2date(paste0(yearweek, "-6")),
           source = "ECDC"
