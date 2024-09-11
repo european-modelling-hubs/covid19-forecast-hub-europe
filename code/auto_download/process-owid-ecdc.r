@@ -5,7 +5,9 @@ library("dplyr")
 library("EuroForecastHub")
 
 cat("Processing ECDC/OWID data.\n")
-sources <- list(ECDC = c("Cases", "Deaths"), OWID = "Hospitalizations")
+sources <- list(ECDC = c("Cases", "Deaths", "Hospitalizations")
+                #, OWID = "Hospitalizations"
+               )
 
 cutoff_days <- 28
 
