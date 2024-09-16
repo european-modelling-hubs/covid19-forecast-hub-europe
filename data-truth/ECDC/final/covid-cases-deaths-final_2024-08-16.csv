@@ -1088,6 +1088,8 @@ Austria,AT,inc case,2024-07-27,15,ECDC,2024-09-06
 Austria,AT,tests,2024-07-27,103,ECDC,2024-09-06
 Austria,AT,inc case,2024-08-03,15,ECDC,2024-09-06
 Austria,AT,tests,2024-08-03,93,ECDC,2024-09-06
+Austria,AT,inc case,2024-08-10,21,ECDC,2024-09-13
+Austria,AT,tests,2024-08-10,87,ECDC,2024-09-13
 Belgium,BE,inc case,2020-01-04,0,ECDC,2022-08-12
 Belgium,BE,inc death,2020-01-04,0,ECDC,2022-08-12
 Belgium,BE,inc case,2020-01-11,0,ECDC,2022-08-12
@@ -2227,6 +2229,8 @@ Belgium,BE,inc case,2024-07-27,1393,ECDC,2024-09-06
 Belgium,BE,tests,2024-07-27,8253,ECDC,2024-09-06
 Belgium,BE,inc case,2024-08-03,1280,ECDC,2024-09-06
 Belgium,BE,tests,2024-08-03,7966,ECDC,2024-09-06
+Belgium,BE,inc case,2024-08-10,1114,ECDC,2024-09-13
+Belgium,BE,tests,2024-08-10,7028,ECDC,2024-09-13
 Bulgaria,BG,inc case,2020-01-04,0,ECDC,2022-08-12
 Bulgaria,BG,inc death,2020-01-04,0,ECDC,2022-08-12
 Bulgaria,BG,tests,2020-01-04,23370,ECDC,2024-01-26
@@ -3368,6 +3372,8 @@ Bulgaria,BG,inc death,2024-07-27,0,ECDC,2024-09-06
 Bulgaria,BG,inc case,2024-07-27,143,ECDC,2024-09-06
 Bulgaria,BG,inc death,2024-08-03,0,ECDC,2024-09-06
 Bulgaria,BG,inc case,2024-08-03,257,ECDC,2024-09-06
+Bulgaria,BG,inc death,2024-08-10,1,ECDC,2024-09-13
+Bulgaria,BG,inc case,2024-08-10,412,ECDC,2024-09-13
 Croatia,HR,inc case,2020-01-04,0,ECDC,2022-08-12
 Croatia,HR,inc death,2020-01-04,0,ECDC,2022-08-12
 Croatia,HR,inc case,2020-01-11,0,ECDC,2022-08-12
@@ -4082,6 +4088,9 @@ Croatia,HR,tests,2024-07-27,4400,ECDC,2024-09-06
 Croatia,HR,inc death,2024-08-03,1,ECDC,2024-09-06
 Croatia,HR,inc case,2024-08-03,925,ECDC,2024-09-06
 Croatia,HR,tests,2024-08-03,4279,ECDC,2024-09-06
+Croatia,HR,inc death,2024-08-10,1,ECDC,2024-09-13
+Croatia,HR,inc case,2024-08-10,918,ECDC,2024-09-13
+Croatia,HR,tests,2024-08-10,4039,ECDC,2024-09-13
 Cyprus,CY,inc case,2020-01-04,0,ECDC,2022-08-12
 Cyprus,CY,inc death,2020-01-04,0,ECDC,2022-08-12
 Cyprus,CY,hospitaladmissions,2020-01-04,1,ECDC,2024-01-26
@@ -5394,6 +5403,11 @@ Cyprus,CY,inc death,2024-08-03,3,ECDC,2024-09-06
 Cyprus,CY,inc hospitalization,2024-08-03,49,ECDC,2024-09-06
 Cyprus,CY,inc case,2024-08-03,955,ECDC,2024-09-06
 Cyprus,CY,tests,2024-08-03,7537,ECDC,2024-09-06
+Cyprus,CY,ICUadmissions,2024-08-10,1,ECDC,2024-09-13
+Cyprus,CY,inc death,2024-08-10,2,ECDC,2024-09-13
+Cyprus,CY,inc hospitalization,2024-08-10,54,ECDC,2024-09-13
+Cyprus,CY,inc case,2024-08-10,627,ECDC,2024-09-13
+Cyprus,CY,tests,2024-08-10,5695,ECDC,2024-09-13
 Czechia,CZ,hospitaladmissions,2019-12-21,3,ECDC,2024-01-26
 Czechia,CZ,inc hospitalization,2019-12-21,3,ECDC,2024-09-06
 Czechia,CZ,inc case,2020-01-04,0,ECDC,2022-08-12
@@ -6955,6 +6969,11 @@ Czechia,CZ,inc death,2024-08-03,1,ECDC,2024-09-06
 Czechia,CZ,inc hospitalization,2024-08-03,13,ECDC,2024-09-06
 Czechia,CZ,inc case,2024-08-03,575,ECDC,2024-09-06
 Czechia,CZ,tests,2024-08-03,4417,ECDC,2024-09-06
+Czechia,CZ,inc death,2024-08-10,2,ECDC,2024-09-13
+Czechia,CZ,ICUadmissions,2024-08-10,4,ECDC,2024-09-13
+Czechia,CZ,inc hospitalization,2024-08-10,32,ECDC,2024-09-13
+Czechia,CZ,inc case,2024-08-10,823,ECDC,2024-09-13
+Czechia,CZ,tests,2024-08-10,5032,ECDC,2024-09-13
 Denmark,DK,hospitaladmissions,2019-12-07,1,ECDC,2024-01-26
 Denmark,DK,inc hospitalization,2019-12-07,1,ECDC,2024-09-06
 Denmark,DK,inc death,2020-01-04,0,ECDC,2022-08-12
@@ -7973,6 +7992,9 @@ Denmark,DK,tests,2024-07-27,3506,ECDC,2024-09-06
 Denmark,DK,inc death,2024-08-03,16,ECDC,2024-09-06
 Denmark,DK,inc case,2024-08-03,335,ECDC,2024-09-06
 Denmark,DK,tests,2024-08-03,2929,ECDC,2024-09-06
+Denmark,DK,inc death,2024-08-10,15,ECDC,2024-09-13
+Denmark,DK,inc case,2024-08-10,343,ECDC,2024-09-13
+Denmark,DK,tests,2024-08-10,2992,ECDC,2024-09-13
 Estonia,EE,inc case,2020-01-04,0,ECDC,2022-08-12
 Estonia,EE,inc death,2020-01-04,0,ECDC,2022-08-12
 Estonia,EE,inc case,2020-01-11,0,ECDC,2022-08-12
@@ -14418,6 +14440,11 @@ Greece,GR,inc death,2024-08-03,41,ECDC,2024-09-06
 Greece,GR,inc hospitalization,2024-08-03,833,ECDC,2024-09-06
 Greece,GR,inc case,2024-08-03,5824,ECDC,2024-09-06
 Greece,GR,tests,2024-08-03,108525,ECDC,2024-09-06
+Greece,GR,ICUadmissions,2024-08-10,13,ECDC,2024-09-13
+Greece,GR,inc death,2024-08-10,40,ECDC,2024-09-13
+Greece,GR,inc hospitalization,2024-08-10,817,ECDC,2024-09-13
+Greece,GR,inc case,2024-08-10,5540,ECDC,2024-09-13
+Greece,GR,tests,2024-08-10,90147,ECDC,2024-09-13
 Hungary,HU,inc case,2020-01-04,0,ECDC,2022-08-12
 Hungary,HU,inc death,2020-01-04,0,ECDC,2022-08-12
 Hungary,HU,inc case,2020-01-11,0,ECDC,2022-08-12
@@ -15268,6 +15295,9 @@ Hungary,HU,inc case,2024-07-27,66,ECDC,2024-09-06
 Hungary,HU,tests,2024-07-27,411,ECDC,2024-09-06
 Hungary,HU,inc case,2024-08-03,143,ECDC,2024-09-06
 Hungary,HU,tests,2024-08-03,655,ECDC,2024-09-06
+Hungary,HU,inc death,2024-08-10,1,ECDC,2024-09-13
+Hungary,HU,inc case,2024-08-10,125,ECDC,2024-09-13
+Hungary,HU,tests,2024-08-10,764,ECDC,2024-09-13
 Iceland,IS,inc case,2020-01-04,0,ECDC,2022-08-12
 Iceland,IS,inc death,2020-01-04,0,ECDC,2022-08-12
 Iceland,IS,inc case,2020-01-11,0,ECDC,2022-08-12
@@ -16222,6 +16252,8 @@ Iceland,IS,inc case,2024-07-27,32,ECDC,2024-09-06
 Iceland,IS,tests,2024-07-27,217,ECDC,2024-09-06
 Iceland,IS,inc case,2024-08-03,27,ECDC,2024-09-06
 Iceland,IS,tests,2024-08-03,209,ECDC,2024-09-06
+Iceland,IS,inc case,2024-08-10,24,ECDC,2024-09-13
+Iceland,IS,tests,2024-08-10,173,ECDC,2024-09-13
 Ireland,IE,inc hospitalization,2018-02-24,1,ECDC,2024-09-06
 Ireland,IE,inc hospitalization,2018-06-16,1,ECDC,2024-09-06
 Ireland,IE,inc hospitalization,2018-07-21,1,ECDC,2024-09-06
@@ -18002,6 +18034,12 @@ Ireland,IE,inc death,2024-08-03,16,ECDC,2024-09-06
 Ireland,IE,hospitalinpatients,2024-08-03,308,ECDC,2024-09-06
 Ireland,IE,inc hospitalization,2024-08-03,325,ECDC,2024-09-06
 Ireland,IE,inc case,2024-08-03,761,ECDC,2024-09-06
+Ireland,IE,ICUadmissions,2024-08-10,1,ECDC,2024-09-13
+Ireland,IE,ICUinpatients,2024-08-10,6,ECDC,2024-09-13
+Ireland,IE,inc death,2024-08-10,8,ECDC,2024-09-13
+Ireland,IE,hospitalinpatients,2024-08-10,237,ECDC,2024-09-13
+Ireland,IE,inc hospitalization,2024-08-10,243,ECDC,2024-09-13
+Ireland,IE,inc case,2024-08-10,582,ECDC,2024-09-13
 Italy,IT,inc case,2020-01-04,0,ECDC,2022-08-12
 Italy,IT,inc death,2020-01-04,0,ECDC,2022-08-12
 Italy,IT,inc case,2020-01-11,0,ECDC,2022-08-12
@@ -19328,6 +19366,10 @@ Italy,IT,ICUadmissions,2024-08-03,21,ECDC,2024-09-06
 Italy,IT,inc death,2024-08-03,64,ECDC,2024-09-06
 Italy,IT,inc hospitalization,2024-08-03,1003,ECDC,2024-09-06
 Italy,IT,inc case,2024-08-03,17341,ECDC,2024-09-06
+Italy,IT,ICUadmissions,2024-08-10,25,ECDC,2024-09-13
+Italy,IT,inc death,2024-08-10,75,ECDC,2024-09-13
+Italy,IT,inc hospitalization,2024-08-10,937,ECDC,2024-09-13
+Italy,IT,inc case,2024-08-10,16706,ECDC,2024-09-13
 Latvia,LV,inc case,2020-01-04,0,ECDC,2022-08-12
 Latvia,LV,inc death,2020-01-04,0,ECDC,2022-08-12
 Latvia,LV,hospitaladmissions,2020-01-04,0,ECDC,2024-01-26
@@ -21578,6 +21620,9 @@ Liechtenstein,LI,tests,2024-07-27,3,ECDC,2024-09-06
 Liechtenstein,LI,inc death,2024-08-03,0,ECDC,2024-09-06
 Liechtenstein,LI,inc case,2024-08-03,0,ECDC,2024-09-06
 Liechtenstein,LI,tests,2024-08-03,4,ECDC,2024-09-06
+Liechtenstein,LI,inc death,2024-08-10,0,ECDC,2024-09-13
+Liechtenstein,LI,inc case,2024-08-10,0,ECDC,2024-09-13
+Liechtenstein,LI,tests,2024-08-10,9,ECDC,2024-09-13
 Lithuania,LT,inc case,2020-01-04,0,ECDC,2022-08-12
 Lithuania,LT,inc death,2020-01-04,0,ECDC,2022-08-12
 Lithuania,LT,inc case,2020-01-11,0,ECDC,2022-08-12
@@ -22844,6 +22889,9 @@ Lithuania,LT,tests,2024-07-27,1527,ECDC,2024-09-06
 Lithuania,LT,inc death,2024-08-03,0,ECDC,2024-09-06
 Lithuania,LT,inc case,2024-08-03,807,ECDC,2024-09-06
 Lithuania,LT,tests,2024-08-03,1690,ECDC,2024-09-06
+Lithuania,LT,inc death,2024-08-10,0,ECDC,2024-09-13
+Lithuania,LT,inc case,2024-08-10,1407,ECDC,2024-09-13
+Lithuania,LT,tests,2024-08-10,2653,ECDC,2024-09-13
 Luxembourg,LU,inc case,2020-01-04,0,ECDC,2022-08-12
 Luxembourg,LU,inc death,2020-01-04,0,ECDC,2022-08-12
 Luxembourg,LU,inc case,2020-01-11,0,ECDC,2022-08-12
@@ -23996,6 +24044,8 @@ Luxembourg,LU,inc case,2024-07-27,222,ECDC,2024-09-06
 Luxembourg,LU,tests,2024-07-27,1126,ECDC,2024-09-06
 Luxembourg,LU,inc case,2024-08-03,190,ECDC,2024-09-06
 Luxembourg,LU,tests,2024-08-03,1014,ECDC,2024-09-06
+Luxembourg,LU,inc case,2024-08-10,178,ECDC,2024-09-13
+Luxembourg,LU,tests,2024-08-10,860,ECDC,2024-09-13
 Malta,MT,inc case,2020-01-04,0,ECDC,2022-08-12
 Malta,MT,inc death,2020-01-04,0,ECDC,2022-08-12
 Malta,MT,inc case,2020-01-11,0,ECDC,2022-08-12
@@ -25468,6 +25518,8 @@ Malta,MT,inc hospitalization,2024-07-27,66,ECDC,2024-09-06
 Malta,MT,ICUadmissions,2024-08-03,2,ECDC,2024-09-06
 Malta,MT,inc death,2024-08-03,11,ECDC,2024-09-06
 Malta,MT,inc hospitalization,2024-08-03,60,ECDC,2024-09-06
+Malta,MT,inc death,2024-08-10,9,ECDC,2024-09-13
+Malta,MT,inc hospitalization,2024-08-10,32,ECDC,2024-09-13
 Netherlands,NL,inc case,2020-01-04,0,ECDC,2022-08-12
 Netherlands,NL,inc death,2020-01-04,0,ECDC,2022-08-12
 Netherlands,NL,inc case,2020-01-11,0,ECDC,2022-08-12
@@ -27221,6 +27273,7 @@ Netherlands,NL,inc case,2024-07-13,540,ECDC,2024-09-06
 Netherlands,NL,inc case,2024-07-20,520,ECDC,2024-09-06
 Netherlands,NL,inc case,2024-07-27,513,ECDC,2024-09-06
 Netherlands,NL,inc case,2024-08-03,448,ECDC,2024-09-06
+Netherlands,NL,inc case,2024-08-10,387,ECDC,2024-09-13
 Norway,NO,inc case,2020-01-04,0,ECDC,2022-08-12
 Norway,NO,inc death,2020-01-04,0,ECDC,2022-08-12
 Norway,NO,inc case,2020-01-11,0,ECDC,2022-08-12
@@ -28029,6 +28082,8 @@ Norway,NO,inc case,2024-07-27,682,ECDC,2024-09-06
 Norway,NO,tests,2024-07-27,5937,ECDC,2024-09-06
 Norway,NO,inc case,2024-08-03,747,ECDC,2024-09-06
 Norway,NO,tests,2024-08-03,6305,ECDC,2024-09-06
+Norway,NO,inc case,2024-08-10,728,ECDC,2024-09-13
+Norway,NO,tests,2024-08-10,6425,ECDC,2024-09-13
 Poland,PL,inc case,2020-01-04,0,ECDC,2022-08-12
 Poland,PL,inc death,2020-01-04,0,ECDC,2022-08-12
 Poland,PL,hospitaladmissions,2020-01-04,3,ECDC,2024-01-26
@@ -29276,6 +29331,9 @@ Poland,PL,tests,2024-07-27,6208,ECDC,2024-09-06
 Poland,PL,inc death,2024-08-03,4,ECDC,2024-09-06
 Poland,PL,inc case,2024-08-03,2463,ECDC,2024-09-06
 Poland,PL,tests,2024-08-03,7068,ECDC,2024-09-06
+Poland,PL,inc death,2024-08-10,8,ECDC,2024-09-13
+Poland,PL,inc case,2024-08-10,3243,ECDC,2024-09-13
+Poland,PL,tests,2024-08-10,8181,ECDC,2024-09-13
 Portugal,PT,inc case,2020-01-04,0,ECDC,2022-08-12
 Portugal,PT,inc death,2020-01-04,0,ECDC,2022-08-12
 Portugal,PT,inc case,2020-01-11,0,ECDC,2022-08-12
@@ -30505,6 +30563,10 @@ Portugal,PT,inc death,2024-08-03,5,ECDC,2024-09-06
 Portugal,PT,inc hospitalization,2024-08-03,38,ECDC,2024-09-06
 Portugal,PT,inc case,2024-08-03,1054,ECDC,2024-09-06
 Portugal,PT,tests,2024-08-03,6828,ECDC,2024-09-06
+Portugal,PT,inc death,2024-08-10,10,ECDC,2024-09-13
+Portugal,PT,inc hospitalization,2024-08-10,32,ECDC,2024-09-13
+Portugal,PT,inc case,2024-08-10,942,ECDC,2024-09-13
+Portugal,PT,tests,2024-08-10,6171,ECDC,2024-09-13
 Romania,RO,inc case,2020-01-04,0,ECDC,2022-08-12
 Romania,RO,inc death,2020-01-04,0,ECDC,2022-08-12
 Romania,RO,tests,2020-01-04,2,ECDC,2024-01-26
@@ -31468,6 +31530,10 @@ Romania,RO,inc death,2024-08-03,6,ECDC,2024-09-06
 Romania,RO,ICUinpatients,2024-08-03,19,ECDC,2024-09-06
 Romania,RO,inc case,2024-08-03,4633,ECDC,2024-09-06
 Romania,RO,tests,2024-08-03,15393,ECDC,2024-09-06
+Romania,RO,inc death,2024-08-10,16,ECDC,2024-09-13
+Romania,RO,ICUinpatients,2024-08-10,28,ECDC,2024-09-13
+Romania,RO,inc case,2024-08-10,5033,ECDC,2024-09-13
+Romania,RO,tests,2024-08-10,16422,ECDC,2024-09-13
 Slovakia,SK,inc case,2020-01-04,0,ECDC,2022-08-12
 Slovakia,SK,inc death,2020-01-04,0,ECDC,2022-08-12
 Slovakia,SK,hospitaladmissions,2020-01-04,15,ECDC,2024-01-26
@@ -32855,6 +32921,11 @@ Slovakia,SK,inc death,2024-08-03,2,ECDC,2024-09-06
 Slovakia,SK,inc hospitalization,2024-08-03,35,ECDC,2024-09-06
 Slovakia,SK,inc case,2024-08-03,65,ECDC,2024-09-06
 Slovakia,SK,tests,2024-08-03,174,ECDC,2024-09-06
+Slovakia,SK,inc death,2024-08-10,0,ECDC,2024-09-13
+Slovakia,SK,ICUadmissions,2024-08-10,0,ECDC,2024-09-13
+Slovakia,SK,inc hospitalization,2024-08-10,34,ECDC,2024-09-13
+Slovakia,SK,inc case,2024-08-10,95,ECDC,2024-09-13
+Slovakia,SK,tests,2024-08-10,221,ECDC,2024-09-13
 Slovenia,SI,inc case,2020-01-04,0,ECDC,2022-08-12
 Slovenia,SI,inc death,2020-01-04,0,ECDC,2022-08-12
 Slovenia,SI,inc case,2020-01-11,0,ECDC,2022-08-12
@@ -33734,6 +33805,9 @@ Slovenia,SI,tests,2024-07-27,1228,ECDC,2024-09-06
 Slovenia,SI,inc death,2024-08-03,4,ECDC,2024-09-06
 Slovenia,SI,inc case,2024-08-03,154,ECDC,2024-09-06
 Slovenia,SI,tests,2024-08-03,1377,ECDC,2024-09-06
+Slovenia,SI,inc death,2024-08-10,0,ECDC,2024-09-13
+Slovenia,SI,inc case,2024-08-10,160,ECDC,2024-09-13
+Slovenia,SI,tests,2024-08-10,1328,ECDC,2024-09-13
 Spain,ES,inc case,2020-01-04,0,ECDC,2022-08-12
 Spain,ES,inc death,2020-01-04,0,ECDC,2022-08-12
 Spain,ES,inc case,2020-01-11,0,ECDC,2022-08-12
@@ -36135,3 +36209,7 @@ Sweden,SE,ICUadmissions,2024-08-03,6,ECDC,2024-09-06
 Sweden,SE,inc death,2024-08-03,28,ECDC,2024-09-06
 Sweden,SE,inc case,2024-08-03,630,ECDC,2024-09-06
 Sweden,SE,tests,2024-08-03,4015,ECDC,2024-09-06
+Sweden,SE,ICUadmissions,2024-08-10,6,ECDC,2024-09-13
+Sweden,SE,inc death,2024-08-10,34,ECDC,2024-09-13
+Sweden,SE,inc case,2024-08-10,814,ECDC,2024-09-13
+Sweden,SE,tests,2024-08-10,4793,ECDC,2024-09-13

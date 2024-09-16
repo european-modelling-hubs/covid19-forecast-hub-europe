@@ -5,7 +5,14 @@ library("dplyr")
 library("EuroForecastHub")
 
 cat("Processing ECDC/OWID data.\n")
-sources <- list(ECDC = c("Cases", "Deaths"), OWID = "Hospitalizations")
+sources <- list(ECDC = c("Cases", "Deaths")
+                #, OWID = "Hospitalizations"
+               )
+
+
+sources_variables <- list(ECDC = c("Cases", "Deaths", "Hospitalizations")
+                #, OWID = "Hospitalizations"
+               )
 
 cutoff_days <- 28
 
@@ -162,7 +169,7 @@ for (source in names(sources)) {
     dplyr::filter(max_loc_snapshot > max(snapshot_date) - days(28)) |>
     dplyr::select(-max_loc_snapshot)
 
-  for (variable in sources[[source]]) {
+  for (variable in sources_variables[[source]]) {
     if ("target_variable" %in% colnames(df)) {
       var_df <- df |>
         dplyr::filter(
