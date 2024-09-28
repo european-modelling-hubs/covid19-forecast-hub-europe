@@ -77,11 +77,11 @@ indicating data expecting to be substanially revised.
   Ireland, Italy, Liechtenstein, Lithuania, Malta, Poland, Portugal,
   Romania, Slovakia, Slovenia, Sweden
 
-- **Data warning!** Recent missing data for cases in: Cyprus, Denmark,
-  Iceland, Ireland, Italy, and Malta
+- **Data warning!** Recent missing data for cases in: Denmark, Iceland,
+  and Italy
 
-- **Data warning!** Recent missing data for deaths in: Cyprus, Denmark,
-  Hungary, Ireland, and Italy
+- **Data warning!** Recent missing data for deaths in: Denmark, Hungary,
+  Ireland, and Italy
 
 We further evaluate forecasts of cases and deaths against data provided
 [ECDC](https://www.ecdc.europa.eu/), which we recommend using as the
