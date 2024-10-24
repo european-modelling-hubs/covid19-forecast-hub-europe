@@ -1,7 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# European COVID-19 Forecast Hub
+# European COVID-19 Forecast Hub - 2021/2024
+
+> [!NOTE]
+> This repository archives the forecasts computed from 2021 to the fall of 2024. To explore forecasts for the current season visit the new [RespiCast Covid19 repository](https://github.com/european-modelling-hubs/RespiCast-Covid19).
+
 
 We are aggregating forecasts of new cases and deaths due to Covid-19
 over the next four weeks in countries across Europe.
